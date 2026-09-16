@@ -1,8 +1,8 @@
-function main($exp, env) {
-    console.log($exp.toString());
-    match ($exp) {
+function main(exp, env) {
+    console.log(exp.toString());
+    match (exp) {
         case _@Num : 
-            return parseInt($1.toString());
+            return $1.toInteger();
 
         case _ + _ : 
             return main($1, env) + main($2, env);

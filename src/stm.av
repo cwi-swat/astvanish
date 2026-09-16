@@ -1,13 +1,13 @@
 
-function main($m, state, event) {
-    match ($m) {
+function main(m, state, event) {
+    match (m) {
         case machine _ end: 
-            for ($s in $1) {
-                match ($s) {
+            for (s in $1) {
+                match (s) {
                     case state _ _ end: 
                         if ($1.toString() === state.current) {
-                            for ($t in $2) {
-                                match ($t) {
+                            for (t in $2) {
+                                match (t) {
                                     case _ => _: 
                                         if ($1.toString() === event) {
                                             state.current = $2.toString();

@@ -6,14 +6,14 @@ import IO;
 import ParseTree;
 import String;
 
-tuple[Expression, start[Source]] peval(start[Source] code, Tree t, Expression theCall=(Expression)`main(event)`) {
-    if ((Expression)`<Id name>(<{Expression ","}* args>)` := theCall) {
+tuple[Expression, start[Source]] peval(start[Source] code, Tree t, Expression proto=(Expression)`main()`) {
+    if ((Expression)`<Id name>(<{Expression ","}* args>)` := proto) {
         Admin admin = newAdmin(code);
         Function f = admin.lookup(name);
         Expression e = peval(f, (firstParam(f): t), args, admin);
         return <e, admin.code()>;
     }
-    throw "bad call: <theCall>";
+    throw "bad call: <proto>";
 }
 
 void printIt(tuple[Expression, start[Source]] result) {
@@ -91,6 +91,10 @@ Statement peval(Statement s, Env env, Admin admin) {
 
         case (Expression)`<Id sub>.toString()` => [Expression]"\'<src>\'"
             when "<sub>" in env, str src := "<env["<sub>"]>"
+
+        // non-essential (but convenient?)
+        case (Expression)`<Id sub>.toInteger()` => [Expression]"<n>"
+            when "<sub>" in env, int n := toInt("<env["<sub>"]>")
 
         case (Statement)`for (<Id x> in <Id y>) <Statement s>` => unroll(x, s, env["<y>"], env, admin)
             when "<y>" in env
