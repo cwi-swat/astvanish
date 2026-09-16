@@ -1,13 +1,13 @@
-function eval($exp, env) {
+function main($exp, env) {
     console.log($exp.toString());
     match ($exp) {
         case _@Num : 
             return parseInt($1.toString());
 
         case _ + _ : 
-            return eval($1, env) + eval($2, env);
+            return main($1, env) + main($2, env);
 
         case _ * _ : 
-            return eval($1, env) * eval($2, env);
+            return main($1, env) * main($2, env);
     }
 }
