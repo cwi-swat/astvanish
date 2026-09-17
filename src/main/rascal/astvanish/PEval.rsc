@@ -22,8 +22,7 @@ as far as possible.
 start[Source] peval(start[Source] code, Env static, Id f) {
     Admin admin = newAdmin(code);
     Function func = admin.lookup(f);
-    // dummy dyn args
-    list[Expression] args = [ (Expression)`$$` | Id x <- func.parameters, "<x>" notin static ];
+    list[Expression] args = [ "<x>" in static ? (Expression)`<Id x>` : (Expression)`$$` | Id x <- func.parameters ];
     peval(func, static, makeArgs(args), admin);
     return admin.code();
 }
@@ -96,6 +95,9 @@ tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* a
 }
 
 Expression peval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`, Env env, {Expression ","}* args, Admin admin) {
+    println(f);
+    println(fs);
+    println(args);
     <newEnv, dynArgs> = partition(fs, args, env);
     Statement* newBody = peval(body, newEnv, admin);
 
@@ -124,12 +126,6 @@ Expression peval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`
     return dummy.params;
 }
 
-// Expression peval((Function)`function <Id f>(<Id z>, <{Id ","}* rest>) {<Statement* body>}`, Env env, {Expression ","}* args, Admin admin) {
-//     newBody = peval((Statement)`{<Statement* body>}`, env, admin).statements;
-//     Id newName = admin.declare(f, rest, newBody);
-//     return (Expression)`<Id newName>(<{Expression ","}* args>)`;
-// }
-
 
 Statement unroll(Id x, Statement s, Tree seq, Env env, Admin admin) {
     //println("PEVAL loop: <x> <s>");
@@ -152,10 +148,16 @@ Statement unroll(Id x, Statement s, Tree seq, Env env, Admin admin) {
 bool isStatic((Expression)`<Id x>`, Env env) = "<x>" in env;
 bool isStatic((Expression)`<Literal _>`, Env _) = true;
 bool isStatic((Expression)`(<Expression e>)`, Env env) = isStatic(e, env);
-
+// etc.
 default bool isStatic(Expression _, Env _) = false;
 
 bool isCode(Id x, Env env) = "<x>" in env && env["<x>"] is code;
+
+Statement* peval(Statement* ss, Env env, Admin admin) {
+    return top-down-break visit (ss) {
+        case Statement s => peval(s, env, admin)
+    }
+}
 
 Statement peval(Statement s, Env env, Admin admin) {
     println("PEVAL: <s>");
@@ -171,8 +173,8 @@ Statement peval(Statement s, Env env, Admin admin) {
             when isCode(sub, env), Tree src := env["<sub>"].code
 
 
-        case (Expression)`<Id sub>.src` => [Expression]toJSON(env["<sub>"].code.src)
-            when isCode(sub, env)
+        case (Expression)`<Id sub>.src` => [Expression]toJSON(src)
+            when isCode(sub, env), loc src := env["<sub>"].code.src
 
         case (Statement)`for (const <Id x> of <Id y>) <Statement s>` => unroll(x, s, env["<y>"].code, env, admin)
             when isCode(y, env)
