@@ -87,7 +87,7 @@ Statement unroll(Id x, Statement s, Tree seq, Env env, Admin admin) {
 }
 
 Statement peval(Statement s, Env env, Admin admin) {
-    //println("PEVAL: <s>");
+    println("PEVAL: <s>");
     return top-down-break visit (s) {
         case (Expression)`<Id f>(<Id sub>, <{Expression ","}* args>)` 
             => peval(func, (firstParam(func): env["<sub>"]), args, admin)

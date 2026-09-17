@@ -36,13 +36,13 @@ data MatchResult
 
 MatchResult matchPattern(Pattern p, Tree t) {
     list[Tree] bindings = [];
-    int i = 0;
     list[Token] toks = [ tok | Token tok <- p.tokens ];
 
     if (size(toks) * 2 - 1 != size(t.args)) {
         return failure();
     }
 
+    int i = 0;
     for (Token tok <- toks) {
         switch (tok) {
             case (Token)`_`: {
@@ -52,7 +52,7 @@ MatchResult matchPattern(Pattern p, Tree t) {
             
             case (Token)`_@<Id x>`: {
                 Tree kid = t.args[i];
-                if (kid.prod.def.name == "<x>") {
+                if (typeOf(kid) == "<x>") {
                     bindings += [kid];
                     i += 2;
                 }
@@ -72,6 +72,13 @@ MatchResult matchPattern(Pattern p, Tree t) {
 
     return success(bindings);
 }
+
+str typeOf(Tree t) = typeOf(s)
+    when prod(label(_, Symbol s), _, _) := t.prod;
+
+default str typeOf(Tree t) = typeOf(t.prod.def);
+
+str typeOf(Symbol s) = s.name;
 
 str unescapeToken(str tok) 
     = ( tok | replaceAll(it, x, m[x]) | str x <- m )

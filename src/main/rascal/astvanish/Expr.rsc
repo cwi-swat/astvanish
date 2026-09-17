@@ -8,6 +8,8 @@ syntax Expr
     > left add: Expr lhs "+" Expr rhs
     ;
 
-lexical Num = [0-9]+;
+lexical Num = digits: [0-9]+;
 
 Expr anExpr() = (Expr)`1 + 2 * 3`;
+
+
