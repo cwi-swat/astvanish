@@ -2,12 +2,12 @@
 function main(m, state, event) {
     match (m) {
         case machine _ end: 
-            for (s in $1) {
+            for (const s of $1) {
                 console.log(s.src);
                 match (s) {
                     case state _ _ end: 
                         if ($1.toString() === state.current) {
-                            for (t in $2) {
+                            for (const t of $2) {
                                 match (t) {
                                     case _ => _: 
                                         if ($1.toString() === event) {

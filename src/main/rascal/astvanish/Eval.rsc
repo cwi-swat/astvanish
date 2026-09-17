@@ -44,14 +44,14 @@ Statement toEval(Statement stmt, AEnv env, Id owner, type[&T<:Tree] grammar) {
                 when "<sub>" in env, Expression fld := toField(owner, sub, env)
 
         // how to obtain the yield generally from the AST?
-        case (Expression)`<Id sub>.toString()` => fld
-            when "<sub>" in env, Expression fld := toField(owner, sub, env)
+        case (Expression)`<Id sub>.toString()` => toField(owner, sub, env)
+            when "<sub>" in env
 
         case (Expression)`<Id sub>.src` => (Expression)`<Expression fld>.src`
             when "<sub>" in env, Expression fld := toField(owner, sub, env)
 
-        case (Statement)`for (<Id x> in <Id y>) <Statement s>` 
-            => (Statement)`for (<Id x> in <Expression fld>) <Statement s2>` 
+        case (Statement)`for (const <Id x> of <Id y>) <Statement s>` 
+            => (Statement)`for (const <Id x> of <Expression fld>) <Statement s2>` 
             when "<y>" in env, Expression fld := toField(owner, y, env),
                 Statement s2 := toEval(s, env + ("<x>": eltType(env["<y>"])), owner, grammar)
 
