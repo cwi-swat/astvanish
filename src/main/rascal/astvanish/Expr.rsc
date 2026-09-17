@@ -3,9 +3,9 @@ module astvanish::Expr
 extend lang::std::Layout;
 
 syntax Expr
-    = Num
-    | left Expr "*" Expr
-    > left Expr "+" Expr
+    = number: Num
+    | left mul: Expr lhs "*" Expr rhs
+    > left add: Expr lhs "+" Expr rhs
     ;
 
 lexical Num = [0-9]+;

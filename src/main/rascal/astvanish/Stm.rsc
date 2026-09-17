@@ -3,11 +3,11 @@ module astvanish::Stm
 extend lang::std::Layout;
 extend lang::std::Id;
 
-start syntax Machine = "machine" State* "end";
+start syntax Machine = machine: "machine" State* states "end";
 
-syntax State = "state" Id Trans* "end";
+syntax State = state: "state" Id name Trans* trans "end";
 
-syntax Trans = Id "=\>" Id;
+syntax Trans = trans: Id event "=\>" Id target;
 
 
 Machine doors() = (Machine)`machine 

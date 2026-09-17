@@ -72,6 +72,10 @@ Statement unroll(Id x, Statement s, Tree seq, Env env, Admin admin) {
     //println("PEVAL loop: <x> <s>");
     Statement unrolled = (Statement)`{}`;
 
+    if (!(seq.prod is regular)) {
+        throw "loop unrolling only over regulars, not <seq.prod>";
+    }
+
     for (int i <- [0,2..size(seq.args)]) {
         if ((Statement)`{<Statement* ss>}` := unrolled) {
             Statement new = peval(s, env + ("<x>": seq.args[i]), admin);
@@ -92,9 +96,9 @@ Statement peval(Statement s, Env env, Admin admin) {
         case (Expression)`<Id sub>.toString()` => [Expression]"\'<src>\'"
             when "<sub>" in env, str src := "<env["<sub>"]>"
 
-        // non-essential (but convenient?)
-        case (Expression)`<Id sub>.toInteger()` => [Expression]"<n>"
-            when "<sub>" in env, int n := toInt("<env["<sub>"]>")
+
+        case (Expression)`<Id sub>.src` => [Expression]toJSON(env["<sub>"].src)
+            when "<sub>" in env
 
         case (Statement)`for (<Id x> in <Id y>) <Statement s>` => unroll(x, s, env["<y>"], env, admin)
             when "<y>" in env
@@ -106,6 +110,7 @@ Statement peval(Statement s, Env env, Admin admin) {
 
             for ((MatchCase)`case <Pattern p>: <Statement* ss>` <- cases) {
                 if (success(list[Tree] bs) := matchPattern(p, env["<x>"])) {
+                    // todo: add $0 bound to env["<x>"] (?)
                     env += ( "$<i+1>": bs[i] | int i <- [0..size(bs)] );
                     insert peval((Statement)`{<Statement* ss>}`, env, admin);
                 }
@@ -116,4 +121,4 @@ Statement peval(Statement s, Env env, Admin admin) {
     }        
 }
 
-
+str toJSON(loc l) = "{offset: <l.offset>, length: <l.length>}";
