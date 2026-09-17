@@ -3,7 +3,7 @@ module astvanish::Expr
 extend lang::std::Layout;
 
 syntax Expr
-    = number: Num
+    = number: Num num
     | left mul: Expr lhs "*" Expr rhs
     > left add: Expr lhs "+" Expr rhs
     ;

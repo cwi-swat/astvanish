@@ -3,7 +3,7 @@ function main(exp, env) {
     console.log(exp.src);
     match (exp) {
         case _@Num : 
-            return $1.toInteger();
+            return parseInt($1.toString());
 
         case _ + _ : 
             return main($1, env) + main($2, env);

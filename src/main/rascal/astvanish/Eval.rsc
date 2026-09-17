@@ -19,7 +19,7 @@ alias AEnv = map[str, Symbol];
 str firstParam(Function f) = [ "<x>" | Id x <- f.parameters ][0]; 
 
 Function toEval((Function)`function <Id f>(<Id z>, <{Id ","}* rest>) {<Statement* body>}`, AEnv env, type[&T<:Tree] grammar) {
-    println("toEval: <f>");
+    //println("toEval: <f>");
     newBody = toEval(body, env, z, grammar);
     return (Function)`function <Id f>(<Id z>, <{Id ","}* rest>) {<Statement* newBody>}`;
 }
@@ -27,32 +27,32 @@ Function toEval((Function)`function <Id f>(<Id z>, <{Id ","}* rest>) {<Statement
 Statement* toEval(Statement* stmts, AEnv env, Id owner, type[&T<:Tree] grammar) {
     return top-down-break visit (stmts) {
         case Statement s => toEval(s, env, owner, grammar)
-            when bprintln("S*: <s>")
     }
 }
 
-Expression toField(Id owner, Id sub) {
-    if (/^\$<idx:[0-9]+>$/ := "<sub>") {
-        int i = toInt(idx);
-        return [Expression]"<owner>._arg<i>";
-    }
-    throw "cannot happen";
-}
+Expression toField(Id owner, Id sub, AEnv env) = [Expression]"<owner>.<nameOf(env["<sub>"])>"
+    when /^\$[0-9]+$/ := "<sub>";
+
+// this is ugly, $ vars always implicitly deref owner, but ordinary vars that represent asts don't 
+default Expression toField(Id owner, Id sub, AEnv env) = (Expression)`<Id sub>`;
 
 Statement toEval(Statement stmt, AEnv env, Id owner, type[&T<:Tree] grammar) {
-    println("toEval <stmt> / <env>");
+    //println("toEval <stmt> / <env>");
     return top-down-break visit (stmt) {
         case (Expression)`<Id f>(<Id sub>, <{Expression ","}* args>)` 
             => (Expression)`<Id f>(<Expression fld>, <{Expression ","}* args>)` 
-                when "<sub>" in env, Expression fld := toField(owner, sub)
+                when "<sub>" in env, Expression fld := toField(owner, sub, env)
 
         // how to obtain the yield generally from the AST?
-        case (Expression)`<Id sub>.toString()` => (Expression)`<Expression fld>._arg0`
-            when "<sub>" in env, Expression fld := toField(owner, sub)
+        case (Expression)`<Id sub>.toString()` => fld
+            when "<sub>" in env, Expression fld := toField(owner, sub, env)
+
+        case (Expression)`<Id sub>.src` => (Expression)`<Expression fld>.src`
+            when "<sub>" in env, Expression fld := toField(owner, sub, env)
 
         case (Statement)`for (<Id x> in <Id y>) <Statement s>` 
             => (Statement)`for (<Id x> in <Expression fld>) <Statement s2>` 
-            when bprintln("For env: <env>"), "<y>" in env, Expression fld := toField(owner, y), bprintln("FIELD: <fld>"),
+            when "<y>" in env, Expression fld := toField(owner, y, env),
                 Statement s2 := toEval(s, env + ("<x>": eltType(env["<y>"])), owner, grammar)
 
         case (Statement)`match (<Id x>) {<MatchCase* cases>}` => toSwitch(x, cases, env, grammar)                   
@@ -69,13 +69,10 @@ Symbol eltType(opt(Symbol s)) = s;
 
 
 Statement toSwitch(Id x, MatchCase* cases, AEnv env, type[&T<:Tree] grammar) {
-    println("toSwitch <x>");
-    Statement sw = (Statement)`switch (<Id x>._name) {}`;
+    Statement sw = (Statement)`switch (<Id x>.tag) {}`;
 
-    set[Production] alts = grammar.definitions[env["<x>"]].alternatives;
     
     void addCase(Expression guard, Statement* ss) {
-        println("adding case on <guard>");
         if ((Statement)`switch (<Expression cond>) {<CaseClause* cc>}` := sw) {
             sw = (Statement)`switch (<Expression cond>) {
                             '<CaseClause* cc>
@@ -85,6 +82,8 @@ Statement toSwitch(Id x, MatchCase* cases, AEnv env, type[&T<:Tree] grammar) {
         }
     }
 
+    set[Production] alts = grammar.definitions[env["<x>"]].alternatives;
+    
     for ((MatchCase)`case <Pattern p>: <Statement* ss>` <- cases) {
         if (/z:prod(_, _, _) := alts, aSuccess(str cons, map[int, Symbol] bs) := matchProd(p, z)) {
             addCase([Expression]"\'<cons>\'", toEval(ss, env + ("$<i>": bs[i] | int i <- bs ), x, grammar));
@@ -93,7 +92,6 @@ Statement toSwitch(Id x, MatchCase* cases, AEnv env, type[&T<:Tree] grammar) {
             throw "no production found for pattern `<p>`";
         }
     }
-    println("SWITCH: <sw>");
 
     return sw;
 }
@@ -102,6 +100,9 @@ data AMatchResult
     = aSuccess(str cons, map[int, Symbol] bindings)
     | aFailure()
     ;
+
+str nameOf(label(str n, _)) = n;
+default str nameOf(Symbol _) = "$unknown";
 
 AMatchResult matchProd(Pattern p, prod(label(str cons, Symbol _), list[Symbol] ss, _)) {
 
@@ -116,7 +117,7 @@ AMatchResult matchProd(Pattern p, prod(label(str cons, Symbol _), list[Symbol] s
     int i = 0;
     int j = 1;
     for (Token tok <- toks) {
-        println("tok = `<tok>` J = <j>");
+        //println("tok = `<tok>` J = <j>");
         switch (tok) {
             case (Token)`_`: {
                 bindings[j] = ss[i];
@@ -126,7 +127,7 @@ AMatchResult matchProd(Pattern p, prod(label(str cons, Symbol _), list[Symbol] s
             
             case (Token)`_@<Id x>`: {
                 Symbol kid = ss[i];
-                if (typeOf(kid) == "<x>") {
+                if (typeOf2(kid) == "<x>") {
                     bindings[j] = ss[i];
                     j += 1;
                     i += 2;

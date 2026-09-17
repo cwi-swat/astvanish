@@ -3,6 +3,7 @@ function main(m, state, event) {
     match (m) {
         case machine _ end: 
             for (s in $1) {
+                console.log(s.src);
                 match (s) {
                     case state _ _ end: 
                         if ($1.toString() === state.current) {

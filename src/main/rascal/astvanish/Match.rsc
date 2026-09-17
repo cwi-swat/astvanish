@@ -73,12 +73,17 @@ MatchResult matchPattern(Pattern p, Tree t) {
     return success(bindings);
 }
 
-str typeOf(Tree t) = typeOf(s)
-    when prod(label(_, Symbol s), _, _) := t.prod;
 
-default str typeOf(Tree t) = typeOf(t.prod.def);
+str typeOf(Tree t) = typeOf2(t.prod.def);
 
-str typeOf(Symbol s) = s.name;
+str typeOf(label(_, Symbol s)) = typeOf(s);
+
+default str typeOf(Symbol s) = s.name;
+
+
+str typeOf2(label(_, Symbol s)) = typeOf2(s);
+
+default str typeOf2(Symbol s) = s.name;
 
 str unescapeToken(str tok) 
     = ( tok | replaceAll(it, x, m[x]) | str x <- m )
