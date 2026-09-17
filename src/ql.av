@@ -1,0 +1,59 @@
+
+
+function render(ql) {
+    match (ql) {
+        case form _ { _ } :
+            for (const q of $2) {
+                renderQuestion(q);
+            }
+    }
+}
+
+function widget(type, label, readOnly, func) {
+    var elt;
+    page.append(label);
+    match (type) {
+        case int : 
+            elt = createElement("input", "type=number");
+        case bool :
+            elt = createElement("input", "type=checkbox");
+        case str :
+            elt = createElement("input", "type=text");
+    }
+    page.append(elt);
+    if (readOnly) {
+        elt.disabled = true;
+    }
+    else {
+        elt.onchange = func;
+    }
+}
+
+function renderQuestion(q) {
+    match (q) {
+        case _ _ \: _ :
+            widget($3, $1.toString(), false, function (x) { update($2.toString(), x.value); });
+
+        case _ _ \: _ = _ :
+            widget($3, $1.toString(), true);
+
+        case { _ } :
+            for (const q of $1) {
+                renderQuestion(q);
+            }
+
+        case if ( _ ) _ else _ : 
+            if (eval($1)) {
+                renderQuestion($2);
+            }
+            else {
+                renderQuestion($3);
+            }
+
+        case if ( _ ) _ : 
+            if (eval($1)) {
+                renderQuestion($2);
+            }
+        
+    }
+}
