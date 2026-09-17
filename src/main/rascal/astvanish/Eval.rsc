@@ -78,6 +78,7 @@ Statement toSwitch(Id x, MatchCase* cases, AEnv env, type[&T<:Tree] grammar) {
                             '<CaseClause* cc>
                             'case <Expression guard>: 
                             '   <Statement* ss>
+                            '   break;
                             '}`;
         }
     }
@@ -96,58 +97,3 @@ Statement toSwitch(Id x, MatchCase* cases, AEnv env, type[&T<:Tree] grammar) {
     return sw;
 }
 
-data AMatchResult
-    = aSuccess(str cons, map[int, Symbol] bindings)
-    | aFailure()
-    ;
-
-str nameOf(label(str n, _)) = n;
-default str nameOf(Symbol _) = "$unknown";
-
-AMatchResult matchProd(Pattern p, prod(label(str cons, Symbol _), list[Symbol] ss, _)) {
-
-    map[int, Symbol] bindings = ();
-    
-    list[Token] toks = [ tok | Token tok <- p.tokens ];
-
-    if (size(toks) * 2 - 1 != size(ss)) {
-        return aFailure();
-    }
-
-    int i = 0;
-    int j = 1;
-    for (Token tok <- toks) {
-        //println("tok = `<tok>` J = <j>");
-        switch (tok) {
-            case (Token)`_`: {
-                bindings[j] = ss[i];
-                j += 1;
-                i += 2;
-            }
-            
-            case (Token)`_@<Id x>`: {
-                Symbol kid = ss[i];
-                if (typeOf2(kid) == "<x>") {
-                    bindings[j] = ss[i];
-                    j += 1;
-                    i += 2;
-                }
-                else {
-                    return aFailure();
-                }
-            }
-            
-            default: {
-                if (ss[i].string != unescapeToken("<tok>")) {
-                    return aFailure();
-                }
-                i += 2;
-            }
-        }
-    }
-    println(bindings);
-    return aSuccess(cons, bindings);
-}
-
-default AMatchResult matchPattern(Pattern _, Production _) 
-    = aFailure();

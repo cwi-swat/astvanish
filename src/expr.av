@@ -1,4 +1,4 @@
-function main(exp, env) {
+function eval(exp, env) {
     console.log(exp.toString());
     console.log(exp.src);
     match (exp) {
@@ -6,9 +6,9 @@ function main(exp, env) {
             return parseInt($1.toString());
 
         case _ + _ : 
-            return main($1, env) + main($2, env);
+            return eval($1, env) + eval($2, env);
 
         case _ * _ : 
-            return main($1, env) * main($2, env);
+            return eval($1, env) * eval($2, env);
     }
 }

@@ -9,6 +9,8 @@ import IO;
 
 syntax Statement
     = "match" "(" Expression ")" "{" MatchCase* "}"
+    | "for" "(" "const" Id "of" Expression ")" Statement body
+    | "for" "(" "let" Id "of" Expression ")" Statement body
     ;
 
 syntax MatchCase
@@ -28,6 +30,9 @@ lexical Token
     | "_@" Id
     ;
 
+/*
+ * Concrete matching, against parse trees
+ */ 
 
 data MatchResult 
     = success(list[Tree] bindings)
@@ -52,7 +57,7 @@ MatchResult matchPattern(Pattern p, Tree t) {
             
             case (Token)`_@<Id x>`: {
                 Tree kid = t.args[i];
-                if (typeOf(kid) == "<x>") {
+                if (kindOf(kid) == "<x>") {
                     bindings += [kid];
                     i += 2;
                 }
@@ -74,16 +79,11 @@ MatchResult matchPattern(Pattern p, Tree t) {
 }
 
 
-str typeOf(Tree t) = typeOf2(t.prod.def);
+str kindOf(Tree t) = kindOf(t.prod.def);
 
-str typeOf(label(_, Symbol s)) = typeOf(s);
+str kindOf(label(_, Symbol s)) = kindOf(s);
 
-default str typeOf(Symbol s) = s.name;
-
-
-str typeOf2(label(_, Symbol s)) = typeOf2(s);
-
-default str typeOf2(Symbol s) = s.name;
+default str kindOf(Symbol s) = s.name;
 
 str unescapeToken(str tok) 
     = ( tok | replaceAll(it, x, m[x]) | str x <- m )
@@ -96,3 +96,63 @@ test bool matchType()
     = matchPattern((Pattern)`_@Id`, (Expression)`x`) is success;
 
 start[Source] parseAV(loc l) = parse(#start[Source], l);
+
+/*
+ * Abtract matching / against grammar prods 
+ */ 
+
+data AMatchResult
+    = aSuccess(str cons, map[int, Symbol] bindings)
+    | aFailure()
+    ;
+
+str nameOf(label(str n, _)) = n;
+default str nameOf(Symbol _) = "$unknown";
+
+AMatchResult matchProd(Pattern p, prod(label(str cons, Symbol _), list[Symbol] ss, _)) {
+
+    map[int, Symbol] bindings = ();
+    
+    list[Token] toks = [ tok | Token tok <- p.tokens ];
+
+    if (size(toks) * 2 - 1 != size(ss)) {
+        return aFailure();
+    }
+
+    int i = 0;
+    int j = 1;
+    for (Token tok <- toks) {
+        //println("tok = `<tok>` J = <j>");
+        switch (tok) {
+            case (Token)`_`: {
+                bindings[j] = ss[i];
+                j += 1;
+                i += 2;
+            }
+            
+            case (Token)`_@<Id x>`: {
+                Symbol kid = ss[i];
+                if (kindOf(kid) == "<x>") {
+                    bindings[j] = ss[i];
+                    j += 1;
+                    i += 2;
+                }
+                else {
+                    return aFailure();
+                }
+            }
+            
+            default: {
+                if (ss[i].string != unescapeToken("<tok>")) {
+                    return aFailure();
+                }
+                i += 2;
+            }
+        }
+    }
+    //println(bindings);
+    return aSuccess(cons, bindings);
+}
+
+default AMatchResult matchPattern(Pattern _, Production _) 
+    = aFailure();

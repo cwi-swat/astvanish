@@ -93,6 +93,7 @@ Statement peval(Statement s, Env env, Admin admin) {
             => peval(func, (firstParam(func): env["<sub>"]), args, admin)
                 when "<sub>" in env, Function func := admin.lookup(f)
 
+        // todo: escaping
         case (Expression)`<Id sub>.toString()` => [Expression]"\'<src>\'"
             when "<sub>" in env, str src := "<env["<sub>"]>"
 
