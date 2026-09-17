@@ -16,21 +16,16 @@ as far as possible.
 */
 
 
-data Value
-    = code(Tree src)
-    | expr(Expression e);
-
 //start[Source] peval(start[Source] code, map[str,Value] statics, Id f);
 
 
-tuple[Expression, start[Source]] peval(start[Source] code, Tree t, Expression proto=(Expression)`main()`) {
-    if ((Expression)`<Id name>(<{Expression ","}* args>)` := proto) {
-        Admin admin = newAdmin(code);
-        Function f = admin.lookup(name);
-        Expression e = peval(f, (firstParam(f): t), args, admin);
-        return <e, admin.code()>;
-    }
-    throw "bad call: <proto>";
+start[Source] peval(start[Source] code, Env static, Id f) {
+    Admin admin = newAdmin(code);
+    Function func = admin.lookup(f);
+    // dummy dyn args
+    list[Expression] args = [ (Expression)`$$` | Id x <- func.parameters, "<x>" notin static ];
+    peval(func, static, makeArgs(args), admin);
+    return admin.code();
 }
 
 void printIt(tuple[Expression, start[Source]] result) {
@@ -39,12 +34,10 @@ void printIt(tuple[Expression, start[Source]] result) {
     println("CALL: <result[0]>");
 }
 
-str firstParam(Function f) = [ "<x>" | Id x <- f.parameters ][0]; 
-
 
 alias Admin = tuple[
     Function(Id) lookup,
-    Id(Id, {Id ","}*, Statement*) declare,
+    Id(Id, list[Id], Statement*) declare,
     start[Source]() code
 ];
 
@@ -65,10 +58,13 @@ Admin newAdmin(start[Source] code) {
 
     int idCounter = 0;
 
-    Id declare_(Id prefix, {Id ","}* rest, Statement* body) {
+
+    Id declare_(Id prefix, list[Id] ids, Statement* body) {
         Id newId = [Id]"<prefix>$<idCounter>";
         idCounter += 1;
+    
         if ((start[Source])`<Statement* ss>` := gen) {
+            {Id ","}* rest = makeParams(ids);
             gen = (start[Source])`<Statement* ss>
                                  'function <Id newId>(<{Id ","}* rest>) {<Statement* body>}`;
         }
@@ -78,11 +74,16 @@ Admin newAdmin(start[Source] code) {
     return <lookup_, declare_, start[Source]() { return gen; }>;
 }
 
-alias Env = map[str, Tree];
+
+data Value
+    = code(Tree code)
+    | expr(Expression e);
+
+alias Env = map[str, Value];
 
 
 tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* args, Env env) {
-    Value toValue((Expression)`<Id x>`, Env env) = code(env["<x>"]);
+    Value toValue((Expression)`<Id x>`, Env env) = env["<x>"];
     default Value toValue(Expression e, Env _) = expr(e);
 
     list[Id] ps = [ p | Id p <- params ];
@@ -94,21 +95,40 @@ tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* a
     return <staticEnv, dynArgs>;
 }
 
-Expression peval2((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`, Env env, {Expression ","}* args, Admin admin) {
+Expression peval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`, Env env, {Expression ","}* args, Admin admin) {
     <newEnv, dynArgs> = partition(fs, args, env);
     Statement* newBody = peval(body, newEnv, admin);
 
-    Id newName = admin.declare(f, [ x | <Id x, _>  <- dynEnv ], newBody);
-    {Expression ","}* restArgs = makeArgs([ a | <_, Expression a> <- dynArgs ]);
+    Id newName = admin.declare(f, dynArgs<0>, newBody);
+    {Expression ","}* restArgs = makeArgs(dynArgs<1>);
     return (Expression)`<Id newName>(<{Expression ","}* restArgs>)`;
 }
 
-
-Expression peval((Function)`function <Id f>(<Id z>, <{Id ","}* rest>) {<Statement* body>}`, Env env, {Expression ","}* args, Admin admin) {
-    newBody = peval((Statement)`{<Statement* body>}`, env, admin).statements;
-    Id newName = admin.declare(f, rest, newBody);
-    return (Expression)`<Id newName>(<{Expression ","}* args>)`;
+{Id ","}* makeParams(list[Id] fs) {
+    Function dummy = (Function)`function (){}`;
+    for (Id f <- fs) {
+        if ((Function)`function (<{Id ","}* ids>) {}` := dummy) {
+            dummy = (Function)`function (<{Id ","}* ids>, <Id f>) {}`;
+        }
+    }
+    return dummy.parameters;
 }
+
+{Expression ","}* makeArgs(list[Expression] es) {
+    Expression dummy = (Expression)`f()`;
+    for (Expression e <- es) {
+        if ((Expression)`f(<{Expression ","}* args>)` := dummy) {
+            dummy = (Expression)`f(<{Expression ","}* args>, <Expression e>)`;
+        }
+    }
+    return dummy.params;
+}
+
+// Expression peval((Function)`function <Id f>(<Id z>, <{Id ","}* rest>) {<Statement* body>}`, Env env, {Expression ","}* args, Admin admin) {
+//     newBody = peval((Statement)`{<Statement* body>}`, env, admin).statements;
+//     Id newName = admin.declare(f, rest, newBody);
+//     return (Expression)`<Id newName>(<{Expression ","}* args>)`;
+// }
 
 
 Statement unroll(Id x, Statement s, Tree seq, Env env, Admin admin) {
@@ -121,7 +141,7 @@ Statement unroll(Id x, Statement s, Tree seq, Env env, Admin admin) {
 
     for (int i <- [0,2..size(seq.args)]) {
         if ((Statement)`{<Statement* ss>}` := unrolled) {
-            Statement new = peval(s, env + ("<x>": seq.args[i]), admin);
+            Statement new = peval(s, env + ("<x>": code(seq.args[i])), admin);
             unrolled = (Statement)`{<Statement* ss> <Statement new>}`;
         }
     }
@@ -135,35 +155,36 @@ bool isStatic((Expression)`(<Expression e>)`, Env env) = isStatic(e, env);
 
 default bool isStatic(Expression _, Env _) = false;
 
+bool isCode(Id x, Env env) = "<x>" in env && env["<x>"] is code;
+
 Statement peval(Statement s, Env env, Admin admin) {
     println("PEVAL: <s>");
     return top-down-break visit (s) {
-        case (Expression)`<Id f>(<Id sub>, <{Expression ","}* args>)` 
-            // => peval(func, ( "<x>": env["<x>"] | Id x <- func.params, "<x>" in env ), args, admin)
-            //     when "<sub>" in env, Function func := admin.lookup(f)
+        case (Expression)`<Id f>(<{Expression ","}* args>)` 
+            => peval(func, env, args, admin) 
+                when any(Expression e <- args, isStatic(e, env)), 
+                    Function func := admin.lookup(f)
 
-            => peval(func, (firstParam(func): env["<sub>"]), args, admin)
-                when "<sub>" in env, Function func := admin.lookup(f)
-
+            
         // todo: escaping
         case (Expression)`<Id sub>.toString()` => [Expression]"\'<src>\'"
-            when "<sub>" in env, str src := "<env["<sub>"]>"
+            when isCode(sub, env), Tree src := env["<sub>"].code
 
 
-        case (Expression)`<Id sub>.src` => [Expression]toJSON(env["<sub>"].src)
-            when "<sub>" in env
+        case (Expression)`<Id sub>.src` => [Expression]toJSON(env["<sub>"].code.src)
+            when isCode(sub, env)
 
-        case (Statement)`for (const <Id x> of <Id y>) <Statement s>` => unroll(x, s, env["<y>"], env, admin)
-            when "<y>" in env
+        case (Statement)`for (const <Id x> of <Id y>) <Statement s>` => unroll(x, s, env["<y>"].code, env, admin)
+            when isCode(y, env)
 
         case (Statement)`match (<Id x>) {<MatchCase* cases>}`: {                        
-            if ("<x>" notin env) {
+            if (!isCode(x, env)) {
                 throw "unbound variable in match: <x>";
             }
 
             for ((MatchCase)`case <Pattern p>: <Statement* ss>` <- cases) {
-                if (success(list[Tree] bs) := matchPattern(p, env["<x>"])) {
-                    env += ( "$<i+1>": bs[i] | int i <- [0..size(bs)] );
+                if (success(list[Tree] bs) := matchPattern(p, env["<x>"].code)) {
+                    env += ( "$<i+1>": code(bs[i]) | int i <- [0..size(bs)] );
                     insert peval((Statement)`{<Statement* ss>}`, env, admin);
                 }
             }
