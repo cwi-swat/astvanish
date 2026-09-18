@@ -5,6 +5,9 @@ function eval(exp, env) {
         case _@Num : 
             return parseInt($1.toString());
 
+        case ( _ ) :
+            return eval($1, env);
+
         case _ + _ : 
             return eval($1, env) + eval($2, env);
 

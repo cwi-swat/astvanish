@@ -7,56 +7,57 @@ import List;
 import String;
 import IO;
 
-start[Source] toEval(start[Source] src, type[&T<:Tree] grammar) {
-    Symbol root = grammar.symbol;
+start[Source] toEval(start[Source] src, AEnv statics, type[&T<:Tree] grammar) {
     return top-down-break visit (src) {
-         case Function f => toEval(f, (firstParam(f): root), grammar)
+         case Function f => toEval(f, statics, grammar)
     }
 }
 
 alias AEnv = map[str, Symbol];
 
-str firstParam(Function f) = [ "<x>" | Id x <- f.parameters ][0]; 
 
-Function toEval((Function)`function <Id f>(<Id z>, <{Id ","}* rest>) {<Statement* body>}`, AEnv env, type[&T<:Tree] grammar) {
+Function toEval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`, AEnv env, type[&T<:Tree] grammar) {
     //println("toEval: <f>");
-    newBody = toEval(body, env, z, grammar);
-    return (Function)`function <Id f>(<Id z>, <{Id ","}* rest>) {<Statement* newBody>}`;
+    newBody = toEval(body, env, grammar);
+    return (Function)`function <Id f>(<{Id ","}* fs>) {<Statement* newBody>}`;
 }
 
-Statement* toEval(Statement* stmts, AEnv env, Id owner, type[&T<:Tree] grammar) {
+Statement* toEval(Statement* stmts, AEnv env, type[&T<:Tree] grammar) {
     return top-down-break visit (stmts) {
-        case Statement s => toEval(s, env, owner, grammar)
+        case Statement s => toEval(s, env, grammar)
     }
 }
 
-Expression toField(Id owner, Id sub, AEnv env) = [Expression]"<owner>.<nameOf(env["<sub>"])>"
-    when /^\$[0-9]+$/ := "<sub>";
+Expression toField(Id x, AEnv env) = [Expression]"<owner>.<field>"
+    when str owner := env[""].name, 
+        str field := nameOf(env["<x>"]);
 
-// this is ugly, $ vars always implicitly deref owner, but ordinary vars that represent asts don't 
-default Expression toField(Id owner, Id sub, AEnv env) = (Expression)`<Id sub>`;
+bool isKid(Id x) = /^\$[0-9]+$/ := "<x>";
 
-Statement toEval(Statement stmt, AEnv env, Id owner, type[&T<:Tree] grammar) {
+Statement toEval(Statement stmt, AEnv env, type[&T<:Tree] grammar) {
     //println("toEval <stmt> / <env>");
     return top-down-break visit (stmt) {
-        case (Expression)`<Id f>(<Id sub>, <{Expression ","}* args>)` 
-            => (Expression)`<Id f>(<Expression fld>, <{Expression ","}* args>)` 
-                when "<sub>" in env, Expression fld := toField(owner, sub, env)
+        case (Expression)`<Id f>(<{Expression ","}* args>)`: {
+            args = visit (args) {
+                case (Expression)`<Id x>` => toField(x, env)
+                    when isKid(x)
+            }
+            insert (Expression)`<Id f>(<{Expression ","}* args>)`;   
+        }
 
-        // how to obtain the yield generally from the AST?
-        case (Expression)`<Id sub>.toString()` => toField(owner, sub, env)
-            when "<sub>" in env
+        case (Expression)`<Id sub>.toString()` => toField(sub, env)
+            when isKid(sub)
 
         case (Expression)`<Id sub>.src` => (Expression)`<Expression fld>.src`
-            when "<sub>" in env, Expression fld := toField(owner, sub, env)
+            when isKid(sub), Expression fld := toField(sub, env)
 
         case (Statement)`for (const <Id x> of <Id y>) <Statement s>` 
             => (Statement)`for (const <Id x> of <Expression fld>) <Statement s2>` 
-            when "<y>" in env, Expression fld := toField(owner, y, env),
-                Statement s2 := toEval(s, env + ("<x>": eltType(env["<y>"])), owner, grammar)
+            when isKid(y), Expression fld := toField(y, env),
+                Statement s2 := toEval(s, env + ("<x>": eltType(env["<y>"])), grammar)
 
-        case (Statement)`match (<Id x>) {<MatchCase* cases>}` => toSwitch(x, cases, env, grammar)                   
-            when "<x>" in env 
+        case (Statement)`match (<Id x>) {<MatchCase* cases>}` 
+            => toSwitch(x, cases, env + ("": sort("<x>")), grammar)                   
     }
 }
 
@@ -86,8 +87,8 @@ Statement toSwitch(Id x, MatchCase* cases, AEnv env, type[&T<:Tree] grammar) {
     set[Production] alts = grammar.definitions[env["<x>"]].alternatives;
     
     for ((MatchCase)`case <Pattern p>: <Statement* ss>` <- cases) {
-        if (/z:prod(_, _, _) := alts, aSuccess(str cons, map[int, Symbol] bs) := matchProd(p, z)) {
-            addCase([Expression]"\'<cons>\'", toEval(ss, env + ("$<i>": bs[i] | int i <- bs ), x, grammar));
+        if (/z:prod(_, _, _) := alts, success(str cons, list[Symbol] bs) := matchProd(p, z)) {
+            addCase([Expression]"\'<cons>\'", toEval(ss, env + ("$<i+1>": bs[i] | int i <- [0..size(bs)] ), grammar));
         }
         else {
             throw "no production found for pattern `<p>`";

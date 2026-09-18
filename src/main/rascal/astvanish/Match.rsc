@@ -34,8 +34,9 @@ lexical Token
  * Concrete matching, against parse trees
  */ 
 
-data MatchResult 
+data MatchResult // for both kinds of matching :D
     = success(list[Tree] bindings)
+    | success(str cons, list[Symbol] symbols)
     | failure()
     ;
 
@@ -101,58 +102,49 @@ start[Source] parseAV(loc l) = parse(#start[Source], l);
  * Abtract matching / against grammar prods 
  */ 
 
-data AMatchResult
-    = aSuccess(str cons, map[int, Symbol] bindings)
-    | aFailure()
-    ;
 
 str nameOf(label(str n, _)) = n;
 default str nameOf(Symbol _) = "$unknown";
 
-AMatchResult matchProd(Pattern p, prod(label(str cons, Symbol _), list[Symbol] ss, _)) {
-
-    map[int, Symbol] bindings = ();
+MatchResult matchProd(Pattern p, prod(label(str cons, Symbol _), list[Symbol] ss, _)) {
+    list[Symbol] bindings = [];
     
     list[Token] toks = [ tok | Token tok <- p.tokens ];
 
     if (size(toks) * 2 - 1 != size(ss)) {
-        return aFailure();
+        return failure();
     }
 
     int i = 0;
-    int j = 1;
     for (Token tok <- toks) {
-        //println("tok = `<tok>` J = <j>");
         switch (tok) {
             case (Token)`_`: {
-                bindings[j] = ss[i];
-                j += 1;
+                bindings += [ss[i]];
                 i += 2;
             }
             
             case (Token)`_@<Id x>`: {
-                Symbol kid = ss[i];
-                if (kindOf(kid) == "<x>") {
-                    bindings[j] = ss[i];
-                    j += 1;
+                if (kindOf(ss[i]) == "<x>") {
+                    bindings += [ss[i]];
                     i += 2;
                 }
                 else {
-                    return aFailure();
+                    return failure();
                 }
             }
             
             default: {
-                if (ss[i].string != unescapeToken("<tok>")) {
-                    return aFailure();
+                if (ss[i] is lit, ss[i].string == unescapeToken("<tok>")) {
+                    i += 2;
                 }
-                i += 2;
+                else {
+                    return failure();
+                }
             }
         }
     }
     //println(bindings);
-    return aSuccess(cons, bindings);
+    return success(cons, bindings);
 }
 
-default AMatchResult matchPattern(Pattern _, Production _) 
-    = aFailure();
+default MatchResult matchPattern(Pattern _, Production _) = failure();

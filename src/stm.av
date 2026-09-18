@@ -1,5 +1,5 @@
 
-function main(m, state, event) {
+function main(state, event, m) {
     match (m) {
         case machine _ end: 
             for (const s of $1) {
