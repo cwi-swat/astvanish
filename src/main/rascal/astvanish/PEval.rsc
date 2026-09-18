@@ -14,7 +14,27 @@ start[Source] peval(start[Source] code, Env static, str f) {
     Function func = admin.lookup(f)[0];
     list[Expression] args = [ "<x>" in static ? (Expression)`<Id x>` : (Expression)`$$` | Id x <- func.parameters ];
     peval(func, static, makeArgs(args), admin);
-    return admin.code();
+    return spliceBlocks(admin.code());
+}
+
+start[Source] spliceBlocks(start[Source] s) {
+    solve (s) {
+        s = visit (s) {
+            case (Statement)`{<Statement* s0> {<Statement* ss>} <Statement* s1>}`
+                => (Statement)`{<Statement* s0>
+                              '<Statement* ss> 
+                              '<Statement* s1>}`
+            case (Function)`function (<{Id ","}* fs>) {<Statement* s0> {<Statement* ss>} <Statement* s1>}`
+                => (Function)`function (<{Id ","}* fs>) {<Statement* s0> 
+                                                        '<Statement* ss> 
+                                                        '<Statement* s1>}`
+            case (Function)`function <Id f>(<{Id ","}* fs>) {<Statement* s0> {<Statement* ss>} <Statement* s1>}`
+                => (Function)`function <Id f>(<{Id ","}* fs>) {<Statement* s0> 
+                                                              '<Statement* ss> 
+                                                              '<Statement* s1>}`
+        }
+    }
+    return s;
 }
 
 @synopsis{Object interface to do code admin: lookup functions and declare new ones}
