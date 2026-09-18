@@ -40,7 +40,7 @@ data MatchResult // for both kinds of matching :D
     | failure()
     ;
 
-MatchResult matchPattern(Pattern p, Tree t) {
+MatchResult matchTree(Pattern p, Tree t) {
     list[Tree] bindings = [];
     list[Token] toks = [ tok | Token tok <- p.tokens ];
 
@@ -91,10 +91,10 @@ str unescapeToken(str tok)
     when map[str, str] m := ("\\:": ":", "\\\\": "\\", "\\@": "@");
 
 test bool matchTest() 
-    = matchPattern((Pattern)`case _ \\: _`, (MatchCase)`case _ : `) is success;
+    = matchTree((Pattern)`case _ \\: _`, (MatchCase)`case _ : `) is success;
 
 test bool matchType()
-    = matchPattern((Pattern)`_@Id`, (Expression)`x`) is success;
+    = matchTree((Pattern)`_@Id`, (Expression)`x`) is success;
 
 start[Source] parseAV(loc l) = parse(#start[Source], l);
 

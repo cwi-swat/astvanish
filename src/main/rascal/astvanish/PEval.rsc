@@ -11,7 +11,7 @@ import Set;
 @synopsis{Partial evaluate function `f`  in "match"-enhanced Javascript given `static` arguments}
 start[Source] peval(start[Source] code, Env static, str f) {
     Admin admin = newAdmin(code);
-    Function func = admin.lookup(f);
+    Function func = admin.lookup(f)[0];
     list[Expression] args = [ "<x>" in static ? (Expression)`<Id x>` : (Expression)`$$` | Id x <- func.parameters ];
     peval(func, static, makeArgs(args), admin);
     return admin.code();
@@ -19,7 +19,7 @@ start[Source] peval(start[Source] code, Env static, str f) {
 
 @synopsis{Object interface to do code admin: lookup functions and declare new ones}
 alias Admin = tuple[
-    Function(str) lookup,
+    list[Function](str) lookup,
     Id(Id, list[Id], Statement*, Env) declare,
     start[Source]() code
 ];
@@ -27,15 +27,15 @@ alias Admin = tuple[
 Admin newAdmin(start[Source] code) {
     start[Source] gen = (start[Source])``;
 
-    Function lookup_(str name) {
+    list[Function] lookup_(str name) {
         top-down visit (code) {
             case Function f: {
-                if (name := "<f.name>") {
-                    return f;
+                if (f has name, name := "<f.name>") {
+                    return [f];
                 }
             }
         }
-        throw "couldn\'t find function <name>";
+        return [];
     }
 
     int idCounter = 0;
@@ -70,7 +70,7 @@ Admin newAdmin(start[Source] code) {
 @synopsis{A `Value` represent a statically known value: either code, or a (constant) expression}
 data Value
     = code(Tree code)
-    | expr(Expression e);
+    | expr(Expression expr);
 
 @synopsis{The environment capturing statically known bindings}
 alias Env = map[str, Value];
@@ -118,12 +118,6 @@ Statement unroll(Id x, Statement s, Tree seq, Env env, Admin admin) {
     return unrolled;
 }
 
-@synopsis{Determine if an expression is statically known}
-bool isStatic((Expression)`<Id x>`, Env env) = "<x>" in env;
-bool isStatic((Expression)`<Literal _>`, Env _) = true;
-bool isStatic((Expression)`(<Expression e>)`, Env env) = isStatic(e, env);
-// etc.
-default bool isStatic(Expression _, Env _) = false;
 
 bool isCode(Id x, Env env) = "<x>" in env && env["<x>"] is code;
 
@@ -139,13 +133,16 @@ Statement peval(Statement s, Env env, Admin admin) {
         case (Expression)`<Id f>(<{Expression ","}* args>)` 
             => peval(func, env, args, admin) 
                 when any(Expression e <- args, isStatic(e, env)), 
-                    Function func := admin.lookup("<f>")
+                    [Function func] := admin.lookup("<f>")
 
             
-        // todo: complete the escaping 
-        case (Expression)`<Id sub>.toString()` => [Expression]"\'<txt>\'"
-            when isCode(sub, env), Tree src := env["<sub>"].code,
-                str txt := replaceAll("<src>", "\n", "\\n")
+        // // todo: complete the escaping 
+        // case (Expression)`<Id sub>.toString()` => [Expression]"\'<txt>\'"
+        //     when isCode(sub, env), Tree src := env["<sub>"].code,
+        //         str txt := replaceAll("<src>", "\n", "\\n")
+
+        case Expression e => eval(e, env).expr
+            when isStatic(e, env)
 
         case (Expression)`<Id x>` : {
             if (isCode(x, env)) {
@@ -153,8 +150,8 @@ Statement peval(Statement s, Env env, Admin admin) {
             }
         }
 
-        case (Expression)`<Id sub>.src` => [Expression]toJSON(src)
-            when isCode(sub, env), loc src := env["<sub>"].code.src
+        // case (Expression)`<Id sub>.src` => [Expression]toJSON(src)
+        //     when isCode(sub, env), loc src := env["<sub>"].code.src
 
         case (Statement)`for (const <Id x> of <Id y>) <Statement s>` => unroll(x, s, env["<y>"].code, env, admin)
             when isCode(y, env)
@@ -162,7 +159,7 @@ Statement peval(Statement s, Env env, Admin admin) {
         case (Statement)`match (<Expression e>) {<MatchCase* cases>}`: {
             if ((Expression)`<Id x>` := e, isCode(x, env)) {                        
                 for ((MatchCase)`case <Pattern p>: <Statement* ss>` <- cases) {
-                    if (success(list[Tree] bs) := matchPattern(p, env["<x>"].code)) {
+                    if (success(list[Tree] bs) := matchTree(p, env["<x>"].code)) {
                         insert peval((Statement)`{<Statement* ss>}`, 
                             env + ( "$<i+1>": code(bs[i]) | int i <- [0..size(bs)] ), admin);
                     }
@@ -196,3 +193,121 @@ str toJSON(loc l) = "{offset: <l.offset>, length: <l.length>}";
     }
     return dummy.params;
 }
+
+
+
+@synopsis{Determine if an expression is statically known}
+bool isStatic((Expression)`<Expression e>.toString()`, Env env) = isStatic(e, env);
+
+bool isStatic((Expression)`<Id x>.src`, Env env) = isStatic((Expression)`<Id x>`, env);
+
+bool isStatic((Expression)`<Id x>`, Env env) = "<x>" in env;
+
+bool isStatic((Expression)`<Literal _>`, Env _) = true;
+
+bool isStatic((Expression)`(<Expression e>)`, Env env) = isStatic(e, env);
+
+bool isStatic((Expression)`<Expression lhs> + <Expression rhs>`, Env env) =
+    isStatic(lhs, env) && isStatic(rhs, env);
+
+bool isStatic((Expression)`<Expression lhs> - <Expression rhs>`, Env env) =
+    isStatic(lhs, env) && isStatic(rhs, env);
+
+bool isStatic((Expression)`<Expression lhs> * <Expression rhs>`, Env env) =
+    isStatic(lhs, env) && isStatic(rhs, env);
+
+bool isStatic((Expression)`<Expression lhs> / <Expression rhs>`, Env env) =
+    isStatic(lhs, env) && isStatic(rhs, env);
+
+bool isStatic((Expression)`<Expression lhs> && <Expression rhs>`, Env env) =
+    isStatic(lhs, env) && isStatic(rhs, env);
+
+bool isStatic((Expression)`<Expression lhs> || <Expression rhs>`, Env env) =
+    isStatic(lhs, env) && isStatic(rhs, env);
+
+bool isStatic((Expression)`<Expression lhs> == <Expression rhs>`, Env env) =
+    isStatic(lhs, env) && isStatic(rhs, env);
+
+bool isStatic((Expression)`<Expression lhs> === <Expression rhs>`, Env env) =
+    isStatic(lhs, env) && isStatic(rhs, env);
+
+bool isStatic((Expression)`<Expression lhs> != <Expression rhs>`, Env env) =
+    isStatic(lhs, env) && isStatic(rhs, env);
+
+bool isStatic((Expression)`<Expression lhs> !== <Expression rhs>`, Env env) =
+    isStatic(lhs, env) && isStatic(rhs, env);
+    
+
+// etc.
+default bool isStatic(Expression _, Env _) = false;
+
+Value eval((Expression)`<Expression e>.toString()`, Env env) = expr([Expression]"\'<txt>\'") 
+    when code(Tree t) := eval(e, env),
+        str txt := replaceAll("<t>", "\n", "\\n");
+
+Value eval((Expression)`<Id x>.src`, Env env) = expr([Expression]toJSON(t.src))
+    when code(Tree t) := eval((Expression)`<Id x>`, env);
+
+Value eval((Expression)`<Id x>`, Env env) = env["<x>"]
+    when "<x>" in env;
+
+Value eval(e:(Expression)`<Literal _>`, Env _) = expr(e);
+
+Value eval((Expression)`(<Expression e>)`, Env env) = eval(e, env);
+
+Value eval((Expression)`<Expression lhs> + <Expression rhs>`, Env env) = expr(fromVal(a + b))
+    when int a := toVal(eval(lhs, env).expr),
+        int b := toVal(eval(rhs, env).expr);
+
+Value eval((Expression)`<Expression lhs> + <Expression rhs>`, Env env) = expr(fromVal(a + b))
+    when str a := toVal(eval(lhs, env).expr),
+        str b := toVal(eval(rhs, env).expr);
+
+
+Value eval((Expression)`<Expression lhs> - <Expression rhs>`, Env env) = expr(fromVal(a - b))
+    when int a := toVal(eval(lhs, env).expr),
+        int b := toVal(eval(rhs, env).expr);
+
+Value eval((Expression)`<Expression lhs> * <Expression rhs>`, Env env) = expr(fromVal(a * b))
+    when int a := toVal(eval(lhs, env).expr),
+        int b := toVal(eval(rhs, env).expr);
+
+Value eval((Expression)`<Expression lhs> / <Expression rhs>`, Env env) = expr(fromVal(a / b))
+    when int a := toVal(eval(lhs, env).expr),
+        int b := toVal(eval(rhs, env).expr);
+
+Value eval((Expression)`<Expression lhs> && <Expression rhs>`, Env env) = expr(fromVal(a && b))
+    when bool a := toVal(eval(lhs, env).expr),
+        bool b := toVal(eval(rhs, env).expr);
+
+Value eval((Expression)`<Expression lhs> || <Expression rhs>`, Env env) = expr(fromVal(a || b))
+    when bool a := toVal(eval(lhs, env).expr),
+        bool b := toVal(eval(rhs, env).expr);
+
+Value eval((Expression)`<Expression lhs> == <Expression rhs>`, Env env) = expr(fromVal(a == b))
+    when value a := toVal(eval(lhs, env).expr),
+        value b := toVal(eval(rhs, env).expr);
+
+Value eval((Expression)`<Expression lhs> != <Expression rhs>`, Env env) = expr(fromVal(a != b))
+    when value a := toVal(eval(lhs, env).expr),
+        value b := toVal(eval(rhs, env).expr);
+
+Value eval((Expression)`<Expression lhs> === <Expression rhs>`, Env env) = expr(fromVal(a == b))
+    when value a := toVal(eval(lhs, env).expr),
+        value b := toVal(eval(rhs, env).expr);
+
+Value eval((Expression)`<Expression lhs> !== <Expression rhs>`, Env env) = expr(fromVal(a != b))
+    when value a := toVal(eval(lhs, env).expr),
+        value b := toVal(eval(rhs, env).expr);
+
+default Value eval(Expression e, Env _) = expr(e);
+
+
+
+value toVal((Expression)`<Boolean b>`) = (Boolean)`true` := b;
+value toVal((Expression)`<Numeric n>`) = toInt("<n>"); // for now only ints
+value toVal((Expression)`<String s>`) = "<"<s>"[1..-1]>";
+
+Expression fromVal(int x) = [Expression]"<x>";
+Expression fromVal(str x) = [Expression]"\'<x>\'";
+Expression fromVal(bool x) = [Expression]"<x>";

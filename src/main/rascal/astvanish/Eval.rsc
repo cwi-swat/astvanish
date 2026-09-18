@@ -42,6 +42,7 @@ Statement toEval(Statement stmt, AEnv env, type[&T<:Tree] grammar) {
                 case (Expression)`<Id x>` => toField(x, env)
                     when isKid(x)
             }
+            
             insert (Expression)`<Id f>(<{Expression ","}* args>)`;   
         }
 
