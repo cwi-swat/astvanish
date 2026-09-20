@@ -8,7 +8,7 @@ import String;
 import Set;
 
 
-@synopsis{Partial evaluate function `f`  in "match"-enhanced Javascript given `static` arguments}
+@synopsis{Partial evaluate function `f`  in "match"-enhanced Javascript `code` given `static` arguments}
 start[Source] peval(start[Source] code, Env static, str f) {
     Admin admin = newAdmin(code);
     Function func = admin.lookup(f)[0];
@@ -17,6 +17,7 @@ start[Source] peval(start[Source] code, Env static, str f) {
     return spliceBlocks(admin.code());
 }
 
+@synopsis{Splice out superfluous curlies for more readable code}
 start[Source] spliceBlocks(start[Source] s) {
     solve (s) {
         s = visit (s) {
@@ -39,7 +40,7 @@ start[Source] spliceBlocks(start[Source] s) {
 
 @synopsis{Object interface to do code admin: lookup functions and declare new ones}
 alias Admin = tuple[
-    list[Function](str) lookup,
+    list[Function](str) lookup, // list as optional
     Id(Id, list[Id], Statement*, Env) declare,
     start[Source]() code
 ];
@@ -58,23 +59,38 @@ Admin newAdmin(start[Source] code) {
         return [];
     }
 
-    int idCounter = 0;
+
+    map[str, int] idCounters = ();
 
     map[str, Id] memo = ();
 
+    // we memoize on the function prefix `x` and the static args
     str hash(Id x, Env env) = ( "<x>" | it + " " + squeeze("<env[k].code>", #[\ \t\n]) | str k <- sort(env<0>) );
 
     Id declare_(Id prefix, list[Id] ids, Statement* body, Env env) {
+
+        // if we have specialized before with the same code arguments, 
+        // return the memoized function name
         str key = hash(prefix, env);
         if (key in memo) {
             return memo[key];
         }
 
-        Id newId = [Id]"<prefix>$<idCounter>";
+        // in the first round, we keep the original name
+        // to ensure that top-level calls keep their original names
+        Id newId = prefix;
+        str name = "<prefix>";
+        if (name in idCounters) {
+            newId = [Id]"<name>$<idCounters[name]>";
+            idCounters[name] += 1;
+        }
+        else {
+            idCounters[name] = 0;
+        }
+
+        
         memo[key] = newId;
 
-        idCounter += 1;
-    
         if ((start[Source])`<Statement* ss>` := gen) {
             {Id ","}* rest = makeParams(ids);
             gen = (start[Source])`<Statement* ss>
@@ -155,12 +171,6 @@ Statement peval(Statement s, Env env, Admin admin) {
                 when any(Expression e <- args, isStatic(e, env)), 
                     [Function func] := admin.lookup("<f>")
 
-            
-        // // todo: complete the escaping 
-        // case (Expression)`<Id sub>.toString()` => [Expression]"\'<txt>\'"
-        //     when isCode(sub, env), Tree src := env["<sub>"].code,
-        //         str txt := replaceAll("<src>", "\n", "\\n")
-
         case Expression e => eval(e, env).expr
             when isStatic(e, env)
 
@@ -170,8 +180,11 @@ Statement peval(Statement s, Env env, Admin admin) {
             }
         }
 
-        // case (Expression)`<Id sub>.src` => [Expression]toJSON(src)
-        //     when isCode(sub, env), loc src := env["<sub>"].code.src
+        case (Statement)`if (<Expression cond>) <Statement s>` => truthy(val) ? s : (Statement)`;`
+            when isStatic(cond, env), expr(Expression val) := eval(cond, env)
+
+        case (Statement)`if (<Expression cond>) <Statement s1> else <Statement s2>` => truthy(val) ? s1 : s2
+            when isStatic(cond, env), expr(Expression val) := eval(cond, env)
 
         case (Statement)`for (const <Id x> of <Id y>) <Statement s>` => unroll(x, s, env["<y>"].code, env, admin)
             when isCode(y, env)
@@ -326,8 +339,23 @@ default Value eval(Expression e, Env _) = expr(e);
 
 value toVal((Expression)`<Boolean b>`) = (Boolean)`true` := b;
 value toVal((Expression)`<Numeric n>`) = toInt("<n>"); // for now only ints
-value toVal((Expression)`<String s>`) = "<"<s>"[1..-1]>";
+value toVal((Expression)`<String s>`) = "<"<s>"[1..-1]>"; // todo: unescaping
 
 Expression fromVal(int x) = [Expression]"<x>";
-Expression fromVal(str x) = [Expression]"\'<x>\'";
+Expression fromVal(str x) = [Expression]"\'<x>\'"; // todo: escaping
 Expression fromVal(bool x) = [Expression]"<x>";
+
+bool truthy(Expression e) = !falsy(e);
+
+bool falsy((Expression)`false`) = true;
+bool falsy((Expression)`0`) = true;
+bool falsy((Expression)`-0`) = true;
+bool falsy((Expression)`""`) = true;
+bool falsy((Expression)`''`) = true;
+bool falsy((Expression)`null`) = true;
+bool falsy((Expression)`undefined`) = true;
+bool falsy((Expression)`NaN`) = true;
+default bool falsy(Expression _) = false;
+
+
+//bool falsy((Expression)`0n`) = true;

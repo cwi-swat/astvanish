@@ -1,19 +1,19 @@
-function checkType$0(x) {
+function checkType(x) {
     if (typeof x === 'string') return true;
 
     throw 'value ' + x + ' is not compatible with type str';
 }
-function checkType$1(x) {
+function checkType$0(x) {
     if (Number.isInteger(x)) return true;
 
     throw 'value ' + x + ' is not compatible with type int';
 }
-function checkType$2(x) {
+function checkType$3(x) {
     if (x === true || x === false) return true;
 
     throw 'value ' + x + ' is not compatible with type bool';
 }
-function define$3() {
+function define() {
     var m = {};
     m.__name = 'Example';
     m['Person'] = function () {
@@ -23,7 +23,7 @@ function define$3() {
         var obj = {};
         obj['name'] = function (x) {
             if (x !== undefined) {
-                checkType$0(x);
+                checkType(x);
                 data['name'] = x;
             }
             else {
@@ -32,7 +32,7 @@ function define$3() {
         };
         obj['age'] = function (x) {
             if (x !== undefined) {
-                checkType$1(x);
+                checkType$0(x);
                 data['age'] = x;
             }
             else {
@@ -48,7 +48,7 @@ function define$3() {
         var obj = {};
         obj['street'] = function (x) {
             if (x !== undefined) {
-                checkType$0(x);
+                checkType(x);
                 data['street'] = x;
             }
             else {
@@ -57,7 +57,7 @@ function define$3() {
         };
         obj['number'] = function (x) {
             if (x !== undefined) {
-                checkType$1(x);
+                checkType$0(x);
                 data['number'] = x;
             }
             else {
@@ -66,7 +66,7 @@ function define$3() {
         };
         obj['central'] = function (x) {
             if (x !== undefined) {
-                checkType$2(x);
+                checkType$3(x);
                 data['central'] = x;
             }
             else {
@@ -75,68 +75,4 @@ function define$3() {
         };
     };
     return m;
-}
-
-
-
-
-function define(schema) {
-    var m = {};
-    switch (schema.tag) {
-        case 'schema':
-            m.__name = schema.name;
-            for (const c of schema.classes) {
-                switch (c.tag) {
-                    case 'class':
-                        m[c.name] = function () {
-                            var data = {};
-                            for (const f of c.fields) {
-                                switch (f.tag) {
-                                    case 'field':
-                                        data[f.name] = null;
-                                        break;
-                                }
-                            }
-                            var obj = {};
-                            for (const f of c.fields) {
-                                switch (f.tag) {
-                                    case 'field':
-                                        obj[f.name] = function (x) {
-                                            if (x !== undefined) {
-                                                checkType(f.typ, x);
-                                                data[f.name] = x;
-                                            }
-                                            else {
-                                                return data[f.name];
-                                            }
-                                        };
-                                        break;
-                                }
-                            }
-                        };
-                        break;
-                }
-            }
-            break;
-    }
-
-    return m;
-}
-
-function checkType(type, x) {
-    switch (type.tag) {
-        case 'integer':
-            if (Number.isInteger(x)) return true;
-
-            break;
-        case 'boolean':
-            if (x === true || x === false) return true;
-
-            break;
-        case 'string':
-            if (typeof x === 'string') return true;
-
-            break;
-    }
-    throw 'value ' + x + (' is not compatible with type ' + type.toString());
 }
