@@ -11,10 +11,14 @@ import Set;
 @synopsis{Partial evaluate function `f`  in "match"-enhanced Javascript `code` given `static` arguments}
 start[Source] peval(start[Source] code, Env static, str f) {
     Admin admin = newAdmin(code);
-    Function func = admin.lookup(f)[0];
-    list[Expression] args = [ "<x>" in static ? (Expression)`<Id x>` : (Expression)`$$` /* dummy */ | Id x <- func.parameters ];
-    peval(func, static, makeArgs(args), admin);
-    return spliceBlocks(admin.code());
+    if ([Function func] := admin.lookup(f)) {
+        list[Expression] args = [ "<x>" in static 
+            ? (Expression)`<Id x>` 
+            : (Expression)`undefined` | Id x <- func.parameters ];
+        peval(func, static, makeArgs(args), admin);
+        return spliceBlocks(admin.code());
+    }
+    throw "could not find function <f> in source code";
 }
 
 @synopsis{Splice out superfluous curlies for nicer code}
@@ -168,7 +172,7 @@ Statement* peval(Statement* ss, Env env, Admin admin) {
 
 @synopsis{Partially evaluate a statement}
 Statement peval(Statement s, Env env, Admin admin) {
-    println("PEVAL: <s>");
+    //println("PEVAL: <s>");
     return top-down-break visit (s) {
         case (Expression)`<Id f>(<{Expression ","}* args>)` 
             => peval(func, env, args, admin) 
@@ -211,8 +215,6 @@ Statement peval(Statement s, Env env, Admin admin) {
         case (Statement)`match (<Expression e>) {<MatchCase* cases>}`: {
             if ((Expression)`<Id x>` := e, isCode(x, env)) {                        
                 for ((MatchCase)`case <Pattern p>: <Statement* ss>` <- cases) {
-                    println("PATTERN: <p>"); 
-                    println(env["<x>"].code);
                     if (success(list[Tree] bs) := matchTree(p, env["<x>"].code)) {
                         insert peval((Statement)`{<Statement* ss>}`, 
                             env + ( "$<i+1>": code(bs[i]) | int i <- [0..size(bs)] ), admin);
@@ -227,7 +229,7 @@ Statement peval(Statement s, Env env, Admin admin) {
     }        
 }
 
-str toJSON(loc l) = "{offset: <l.offset>, length: <l.length>}";
+str toObj(loc l) = "{offset: <l.offset>, length: <l.length>}";
 
 
 
@@ -273,6 +275,11 @@ bool isStatic((Expression)`<Expression lhs> * <Expression rhs>`, Env env) =
 bool isStatic((Expression)`<Expression lhs> / <Expression rhs>`, Env env) =
     isStatic(lhs, env) && isStatic(rhs, env);
 
+bool isStatic((Expression)`<Expression lhs> % <Expression rhs>`, Env env) =
+    isStatic(lhs, env) && isStatic(rhs, env);
+
+bool isStatic((Expression)`!<Expression e>`, Env env) = isStatic(e, env);
+
 bool isStatic((Expression)`<Expression lhs> && <Expression rhs>`, Env env) =
     isStatic(lhs, env) && isStatic(rhs, env);
 
@@ -291,15 +298,27 @@ bool isStatic((Expression)`<Expression lhs> != <Expression rhs>`, Env env) =
 bool isStatic((Expression)`<Expression lhs> !== <Expression rhs>`, Env env) =
     isStatic(lhs, env) && isStatic(rhs, env);
     
+bool isStatic((Expression)`<Expression lhs> \>= <Expression rhs>`, Env env) =
+    isStatic(lhs, env) && isStatic(rhs, env);
 
-// etc.
+bool isStatic((Expression)`<Expression lhs> \> <Expression rhs>`, Env env) =
+    isStatic(lhs, env) && isStatic(rhs, env);
+
+bool isStatic((Expression)`<Expression lhs> \<= <Expression rhs>`, Env env) =
+    isStatic(lhs, env) && isStatic(rhs, env);
+
+bool isStatic((Expression)`<Expression lhs> \< <Expression rhs>`, Env env) =
+    isStatic(lhs, env) && isStatic(rhs, env);
+
+
+
 default bool isStatic(Expression _, Env _) = false;
 
 Value eval((Expression)`<Expression e>.toString()`, Env env) = expr([Expression]"\'<txt>\'") 
     when code(Tree t) := eval(e, env),
         str txt := replaceAll("<t>", "\n", "\\n");
 
-Value eval((Expression)`<Id x>.src`, Env env) = expr([Expression]toJSON(t.src))
+Value eval((Expression)`<Id x>.src`, Env env) = expr([Expression]toObj(t.src))
     when code(Tree t) := eval((Expression)`<Id x>`, env);
 
 Value eval((Expression)`<Id x>`, Env env) = env["<x>"]
@@ -330,6 +349,13 @@ Value eval((Expression)`<Expression lhs> / <Expression rhs>`, Env env) = expr(fr
     when int a := toVal(eval(lhs, env).expr),
         int b := toVal(eval(rhs, env).expr);
 
+Value eval((Expression)`<Expression lhs> % <Expression rhs>`, Env env) = expr(fromVal(a % b))
+    when int a := toVal(eval(lhs, env).expr),
+        int b := toVal(eval(rhs, env).expr);
+
+Value eval((Expression)`!<Expression e>`, Env env) = expr(fromVal(!b))
+    when bool b := toVal(eval(e, env).expr);
+
 Value eval((Expression)`<Expression lhs> && <Expression rhs>`, Env env) = expr(fromVal(a && b))
     when bool a := toVal(eval(lhs, env).expr),
         bool b := toVal(eval(rhs, env).expr);
@@ -353,6 +379,28 @@ Value eval((Expression)`<Expression lhs> === <Expression rhs>`, Env env) = expr(
 Value eval((Expression)`<Expression lhs> !== <Expression rhs>`, Env env) = expr(fromVal(a != b))
     when value a := toVal(eval(lhs, env).expr),
         value b := toVal(eval(rhs, env).expr);
+
+Value eval((Expression)`<Expression lhs> \<= <Expression rhs>`, Env env) = expr(fromVal(a <= b))
+    when int a := toVal(eval(lhs, env).expr),
+        int b := toVal(eval(rhs, env).expr);
+
+Value eval((Expression)`<Expression lhs> \< <Expression rhs>`, Env env) = expr(fromVal(a < b))
+    when int a := toVal(eval(lhs, env).expr),
+        int b := toVal(eval(rhs, env).expr);
+
+Value eval((Expression)`<Expression lhs> \>= <Expression rhs>`, Env env) = expr(fromVal(a >= b))
+    when int a := toVal(eval(lhs, env).expr),
+        int b := toVal(eval(rhs, env).expr);
+
+Value eval((Expression)`<Expression lhs> \> <Expression rhs>`, Env env) = expr(fromVal(a > b))
+    when int a := toVal(eval(lhs, env).expr),
+        int b := toVal(eval(rhs, env).expr);
+
+
+
+
+
+
 
 default Value eval(Expression e, Env _) = expr(e);
 

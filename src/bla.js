@@ -144,3 +144,54 @@ function Run() {
 }
 
 console.log(Run());
+
+function Run(prog) {
+    var env = {};
+
+    {
+        for (const d of prog.defs) env[d.name] = function (args) {
+            var myEnv = Object.assign({}, env);
+            for (const f of d.params) {
+                myEnv[f.toString()] = args.shift();
+            }
+            return Eval(d.body, myEnv);
+        };
+
+        return Eval(prog.main, env);
+    }
+}
+
+function Eval(exp, env) {
+    var result;
+
+    switch (exp._tag) {
+        case 'var':
+            result = env[exp.name];
+            break;
+        case 'number':
+            result = parseInt(exp.number.toString());
+            break;
+        case 'mul':
+            result = Eval(exp.lhs, env) * Eval(exp.rhs, env);
+            break;
+        case 'sub':
+            result = Eval(exp.lhs, env) - Eval(exp.rhs, env);
+            break;
+        case 'gt':
+            result = Eval(exp.lhs, env) > Eval(exp.rhs, env);
+            break;
+        case 'ifThenElse':
+            result = Eval(exp.cond, env) ? Eval(exp.then, env) : Eval(exp.els, env);
+            break;
+        case 'call':
+            var args = [];
+            for (const a of exp.actuals) args.push(Eval(a, env));
+            result = env[exp.name](args);
+            break;
+    }
+
+    console.log('CODE = ' + exp.toString());
+    console.log("ENV = " + JSON.stringify(env));
+    console.log('RESULT = ' + result);
+    return result;
+}

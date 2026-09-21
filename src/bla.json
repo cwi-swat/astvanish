@@ -1,43 +1,55 @@
 {
-  "tag": "prog",
+  "_tag": "prog",
+  "_src": {"offset": 552, "length": 194},
   "defs": [
     {
-      "tag": "def",
+      "_tag": "def",
+      "_src": {"offset": 552, "length": 89},
       "name": "factorial",
       "params": [
         "n"
       ],
       "body": {
-        "tag": "ifThenElse",
+        "_tag": "ifThenElse",
+        "_src": {"offset": 575, "length": 66},
         "cond": {
-          "tag": "gt",
+          "_tag": "gt",
+          "_src": {"offset": 578, "length": 5},
           "lhs": {
-            "tag": "var",
+            "_tag": "var",
+            "_src": {"offset": 578, "length": 1},
             "name": "n"
           },
           "rhs": {
-            "tag": "number",
+            "_tag": "number",
+            "_src": {"offset": 583, "length": 1},
             "number": "1"
           }
         },
         "then": {
-          "tag": "mul",
+          "_tag": "mul",
+          "_src": {"offset": 599, "length": 20},
           "lhs": {
-            "tag": "var",
+            "_tag": "var",
+            "_src": {"offset": 599, "length": 1},
             "name": "n"
           },
           "rhs": {
-            "tag": "call",
+            "_tag": "call",
+            "_src": {"offset": 603, "length": 16},
             "name": "factorial",
             "actuals": [
               {
-                "tag": "sub",
+                "_tag": "sub",
+                "_src": {"offset": 613, "length": 5},
                 "lhs": {
-                  "tag": "var",
+                  "_tag": "var",
+                  "_src": {"offset": 613, "length": 1},
                   "name": "n"
                 },
                 "rhs": {
-                  "tag": "number",
+                  "_tag": "number",
+                  "_src": {"offset": 617, "length": 1},
                   "number": "1"
                 }
               }
@@ -45,53 +57,66 @@
           }
         },
         "els": {
-          "tag": "number",
+          "_tag": "number",
+          "_src": {"offset": 638, "length": 1},
           "number": "1"
         }
       }
     },
     {
-      "tag": "def",
+      "_tag": "def",
+      "_src": {"offset": 651, "length": 80},
       "name": "power",
       "params": [
         "x",
         "n"
       ],
       "body": {
-        "tag": "ifThenElse",
+        "_tag": "ifThenElse",
+        "_src": {"offset": 672, "length": 58},
         "cond": {
-          "tag": "gt",
+          "_tag": "gt",
+          "_src": {"offset": 675, "length": 5},
           "lhs": {
-            "tag": "var",
+            "_tag": "var",
+            "_src": {"offset": 675, "length": 1},
             "name": "n"
           },
           "rhs": {
-            "tag": "number",
+            "_tag": "number",
+            "_src": {"offset": 680, "length": 1},
             "number": "1"
           }
         },
         "then": {
-          "tag": "mul",
+          "_tag": "mul",
+          "_src": {"offset": 693, "length": 19},
           "lhs": {
-            "tag": "var",
+            "_tag": "var",
+            "_src": {"offset": 693, "length": 1},
             "name": "x"
           },
           "rhs": {
-            "tag": "call",
+            "_tag": "call",
+            "_src": {"offset": 697, "length": 15},
             "name": "power",
             "actuals": [
               {
-                "tag": "var",
+                "_tag": "var",
+                "_src": {"offset": 703, "length": 1},
                 "name": "x"
               },
               {
-                "tag": "sub",
+                "_tag": "sub",
+                "_src": {"offset": 706, "length": 5},
                 "lhs": {
-                  "tag": "var",
+                  "_tag": "var",
+                  "_src": {"offset": 706, "length": 1},
                   "name": "n"
                 },
                 "rhs": {
-                  "tag": "number",
+                  "_tag": "number",
+                  "_src": {"offset": 710, "length": 1},
                   "number": "1"
                 }
               }
@@ -99,26 +124,31 @@
           }
         },
         "els": {
-          "tag": "var",
+          "_tag": "var",
+          "_src": {"offset": 728, "length": 1},
           "name": "n"
         }
       }
     }
   ],
   "main": {
-    "tag": "call",
+    "_tag": "call",
+    "_src": {"offset": 739, "length": 22},
     "name": "factorial",
     "actuals": [
       {
-        "tag": "call",
+        "_tag": "call",
+        "_src": {"offset": 749, "length": 11},
         "name": "power",
         "actuals": [
           {
-            "tag": "number",
+            "_tag": "number",
+            "_src": {"offset": 755, "length": 1},
             "number": "2"
           },
           {
-            "tag": "number",
+            "_tag": "number",
+            "_src": {"offset": 758, "length": 1},
             "number": "3"
           }
         ]

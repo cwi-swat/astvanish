@@ -63,7 +63,7 @@ Statement toEval(Statement stmt, Sigs env, type[&T<:Tree] grammar) {
         case (Expression)`<Id sub>.toString()` => toField(sub, env)
             when isKid(sub)
 
-        case (Expression)`<Id sub>.src` => (Expression)`<Expression fld>.src`
+        case (Expression)`<Id sub>.src` => (Expression)`<Expression fld>._src`
             when isKid(sub), Expression fld := toField(sub, env)
 
         case (Statement)`for (const <Id x> of <Id y>) <Statement s>` 
@@ -99,7 +99,7 @@ Symbol eltType(opt(Symbol s)) = s;
 
 
 Statement toSwitch(Id x, MatchCase* cases, Sigs env, type[&T<:Tree] grammar) {
-    Statement sw = (Statement)`switch (<Id x>.tag) {}`;
+    Statement sw = (Statement)`switch (<Id x>._tag) {}`;
 
     
     void addCase(Expression guard, Statement* ss) {
@@ -116,9 +116,7 @@ Statement toSwitch(Id x, MatchCase* cases, Sigs env, type[&T<:Tree] grammar) {
     set[Production] alts = grammar.definitions[env["<x>"]].alternatives;
     
     for ((MatchCase)`case <Pattern p>: <Statement* ss>` <- cases) {
-        println("PATTERN = <p>");
-        if (/z:prod(_, _, _) := alts, bprintln(z), success(str cons, list[Symbol] bs) := matchProd(p, z)) {
-            println(z);
+        if (/z:prod(_, _, _) := alts, success(str cons, list[Symbol] bs) := matchProd(p, z)) {
             addCase([Expression]"\'<cons>\'", toEval(ss, env + ("$<i+1>": bs[i] | int i <- [0..size(bs)] ), grammar));
         }
         else {

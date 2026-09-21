@@ -2,7 +2,6 @@
 
 function Run(prog) {
     var env = {};
-
     with (_ _ : prog) {
         for (const d of $1) 
             with (def _ ( _ ) = _ ; : d) 
@@ -13,7 +12,6 @@ function Run(prog) {
                     }
                     return Eval($3, myEnv);
                 };
-
         return Eval($2, env);
     }
 }
@@ -36,8 +34,8 @@ function Eval(exp, env) {
             result = env[$1.toString()](args);
     }
 
-    console.log('CODE = ' + exp.toString());
-    console.log("ENV = " + JSON.stringify(env));   
-    console.log('RESULT = ' + result);
+    console.log(exp.src);
+    console.log(env);   
+    console.log(result);
     return result;
 }
