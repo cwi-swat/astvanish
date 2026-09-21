@@ -6,18 +6,24 @@ import List;
 import ParseTree;
 import IO;
 
+
+@synopsis{Signatures indicating whether parameters are static or dynamic}
 alias Sig = lrel[str, BindingTime];
 
+@synopsis{Mapping function names to signatures}
 alias FEnv = map[str, Sig];
 
+@synopsis{The set of variables that are static (parameters and $n variables from match and with)}
 alias Env = set[str];
 
-
+@synopsis{Binding time can be either static or dynamic}
 data BindingTime
     = static()
     | dyn()
     ;
 
+
+@synopsis{Check every function according to its signature with binding times}
 set[Message] check(start[Source] code) {
     FEnv env = inferStatics(code);
     set[Message] msgs = {};
@@ -38,7 +44,8 @@ set[Message] check(Function f, Env env, Sig bt, FEnv fenv) = check(f.statements,
 set[Message] check(Statement* ss, Env env, Sig bt, FEnv fenv)
     = { *check(s, env, bt, fenv) | Statement s <- ss };
 
-set[Message] check(Statement s,  Env env, Sig bt, FEnv fenv) {
+@synopsis{Check that the flow of static/dynamic data is correct in a statement}
+set[Message] check(Statement s, Env env, Sig bt, FEnv fenv) {
     set[Message] msgs = {};
     top-down-break visit (s) {
         case (Statement)`match (<Expression e>) {<MatchCase* cases>}`: {
@@ -105,12 +112,13 @@ set[Message] check(Statement s,  Env env, Sig bt, FEnv fenv) {
 
             }
             // else ignore
-
         } 
 
+        // these two cases are special because they have meaning both statically and dynamically
         case (Expression)`<Expression _>.toString()`: ;
         case (Expression)`<Expression _>.src`: ;
 
+        // after previous cases failed, a static variable is an error 
         case (Expression)`<Id x>`: {
             if ("<x>" in env) {
                 msgs += {error("static variable leaking into dynamic world", x.src)};
@@ -126,11 +134,13 @@ bool isVar((Token)`_@<Id _>`) = true;
 
 default bool isVar(Token _) = false;
 
+@synopsis{Check a case-clause, bringing the matched variables in as statics to the statements}
 set[Message] check((MatchCase)`case <Pattern p>: <Statement* ss>`, Env env, Sig bt, FEnv fenv) {
     list[Token] vars = [ tok | Token tok <- p.tokens, isVar(tok) ];
     return check(ss, env + { "$<i + 1>" | int i <- [0..size(vars)] }, bt, fenv);
 }
 
+@synopsis{Infer the static parameters per function according to match/with use}
 FEnv inferStatics(start[Source] code) {
     FEnv env = ();
     top-down-break visit (code) {
