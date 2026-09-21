@@ -189,6 +189,18 @@ Statement peval(Statement s, Env env, Admin admin) {
         case (Statement)`for (const <Id x> of <Id y>) <Statement s>` => unroll(x, s, env["<y>"].code, env, admin)
             when isCode(y, env)
 
+        case (Statement)`with (<Pattern p>: <Expression e>) <Statement s>`: {
+            if ((Expression)`<Id x>` := e, isCode(x, env)) {
+                if (success(list[Tree] bs) := matchTree(p, env["<x>"].code)) {
+                    insert peval(s, env + ( "$<i+1>": code(bs[i]) | int i <- [0..size(bs)] ), admin);
+                }
+                throw "no matching pattern for <env["<x>"].code>";   
+            }
+            else {
+                throw "only static variables are allowed in match conditions (not `<e>``)";
+            }
+        }
+
         case (Statement)`match (<Expression e>) {<MatchCase* cases>}`: {
             if ((Expression)`<Id x>` := e, isCode(x, env)) {                        
                 for ((MatchCase)`case <Pattern p>: <Statement* ss>` <- cases) {
