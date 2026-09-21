@@ -71,9 +71,22 @@ Statement toEval(Statement stmt, Sigs env, type[&T<:Tree] grammar) {
             when isKid(y), Expression fld := toField(y, env),
                 Statement s2 := toEval(s, env + ("<x>": eltType(env["<y>"])), grammar)
 
+        
         case (Statement)`match (<Id x>) {<MatchCase* cases>}` 
             // ugly hack: using the key "" to propagate the x object
             => toSwitch(x, cases, env + ("": sort("<x>")), grammar)                   
+
+        case (Statement)`with (<Pattern p>: <Id x>) <Statement s>`: {
+            set[Production] alts = grammar.definitions[env["<x>"]].alternatives;
+    
+            if (/z:prod(_, _, _) := alts, success(str _, list[Symbol] bs) := matchProd(p, z)) {
+                insert toEval(s, env + ("": sort("<x>")) + ("$<i+1>": bs[i] | int i <- [0..size(bs)] ), grammar);
+            }
+            else {
+                throw "no production found for pattern `<p>`";
+            }
+        }
+
     }
 }
 

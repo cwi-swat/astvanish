@@ -1,4 +1,26 @@
 
+
+function run(m, state, event) {
+    with (machine _ end : m) {
+        for (const s of $1) {
+            console.log(s.src);
+            with (state _ _ end: s) {
+                if ($1.toString() === state.current) {
+                    for (const t of $2) {
+                        with (_ => _ : t) {
+                            if ($1.toString() === event) {
+                                state.current = $2.toString();
+                            }
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 function main(state, event, m) {
     match (m) {
         case machine _ end: 

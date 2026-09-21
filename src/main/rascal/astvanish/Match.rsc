@@ -11,6 +11,7 @@ syntax Statement
     = "match" "(" Expression ")" "{" MatchCase* "}"
     | "for" "(" "const" Id "of" Expression ")" Statement body
     | "for" "(" "let" Id "of" Expression ")" Statement body
+    | "with" "(" Pattern ":" Expression ")" Statement
     ;
 
 syntax MatchCase
