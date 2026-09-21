@@ -83,8 +83,10 @@ set[Message] check(Statement s,  Env env, Sig bt, FEnv fenv) {
                 Sig fbt = fenv["<f>"];
                 list[Expression] argsLst = [ a | Expression a <- args ];
                 if (size(fbt) != size(argsLst)) {
-                    msgs += {error("wrong number of arguments", f.src)};
+                    msgs += {error("wrong number of arguments, expected <size(fbt)>, got <size(argsLst)>", f.src)};
+                    return msgs;
                 }
+                
                 lrel[Expression, tuple[str, BindingTime]] paired = zip2(argsLst, fbt);
 
                 for (<Expression arg, <str formal, BindingTime b>> <- paired) {
@@ -136,6 +138,10 @@ FEnv inferStatics(start[Source] code) {
 
             bool isParam(Id x) = any(Id y <- params, x := y);
 
+
+            // this has the nasty side-effect that if a user makes a mistake
+            // and passes a non-Id expression to match/with it'll cause dynamic here.
+
             lrel[str, BindingTime] statics = 
                 [ <"<x>", static()> | /(Statement)`match (<Id x>) {<MatchCase* _>}` := ss, isParam(x) ]
                 + [ <"<x>", static()> | /(Statement)`with (<Pattern _> : <Id x>) <Statement _>` := ss, isParam(x) ];
@@ -143,7 +149,7 @@ FEnv inferStatics(start[Source] code) {
             lrel[str, BindingTime] dyns = [ <"<x>", dyn()> | Id x <- params, "<x>" notin statics<0> ];
 
 
-            // this is a bit convoluted but we need to preserver the order of parameters.
+            // this is a bit convoluted but we need to preserve the order of parameters.
             tuple[str, BindingTime] bindingTimeOf(str x) = <x, static()>
                 when <x, static()> in statics;
 
