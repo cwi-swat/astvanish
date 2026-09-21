@@ -83,6 +83,7 @@ MatchResult matchTree(Pattern p, Tree t) {
 
 str kindOf(Tree t) = kindOf(t.prod.def);
 
+
 str kindOf(label(_, Symbol s)) = kindOf(s);
 
 default str kindOf(Symbol s) = s.name;

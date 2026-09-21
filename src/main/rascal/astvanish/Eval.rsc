@@ -116,7 +116,9 @@ Statement toSwitch(Id x, MatchCase* cases, Sigs env, type[&T<:Tree] grammar) {
     set[Production] alts = grammar.definitions[env["<x>"]].alternatives;
     
     for ((MatchCase)`case <Pattern p>: <Statement* ss>` <- cases) {
-        if (/z:prod(_, _, _) := alts, success(str cons, list[Symbol] bs) := matchProd(p, z)) {
+        println("PATTERN = <p>");
+        if (/z:prod(_, _, _) := alts, bprintln(z), success(str cons, list[Symbol] bs) := matchProd(p, z)) {
+            println(z);
             addCase([Expression]"\'<cons>\'", toEval(ss, env + ("$<i+1>": bs[i] | int i <- [0..size(bs)] ), grammar));
         }
         else {

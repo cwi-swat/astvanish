@@ -1,0 +1,43 @@
+
+
+function Run(prog) {
+    var env = {};
+
+    with (_ _ : prog) {
+        for (const d of $1) 
+            with (def _ ( _ ) = _ ; : d) 
+                env[$1.toString()] = function(args) {
+                    var myEnv = Object.assign({}, env);
+                    for (const f of $2) {
+                        myEnv[f.toString()] = args.shift();
+                    }
+                    return Eval($3, myEnv);
+                };
+
+        return Eval($2, env);
+    }
+}
+
+function Eval(exp, env) {
+    var result;
+
+    match (exp) {
+        case _@Id : result = env[$1.toString()];
+        case _@Num : result = parseInt($1.toString());
+        case _ * _ : result = Eval($1, env) * Eval($2, env);
+        case _ - _ : result = Eval($1, env) - Eval($2, env);
+        case _ > _ : result = Eval($1, env) > Eval($2, env);
+        case if _ then _ else _ fi :
+            result = Eval($1, env) ? Eval($2, env) : Eval($3, env);
+        case _ ( _ ) : 
+            var args = [];
+            for (const a of $2) 
+                args.push(Eval(a, env));
+            result = env[$1.toString()](args);
+    }
+
+    console.log('CODE = ' + exp.toString());
+    console.log("ENV = " + JSON.stringify(env));   
+    console.log('RESULT = ' + result);
+    return result;
+}

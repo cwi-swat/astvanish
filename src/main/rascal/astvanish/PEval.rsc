@@ -144,7 +144,10 @@ Statement unroll(Id x, Statement s, Tree seq, Env env, Admin admin) {
         throw "loop unrolling only over regulars, not <seq.prod>";
     }
 
-    for (int i <- [0,2..size(seq.args)]) {
+    //println("prod = <seq.prod>");
+    int step = size(seq.prod.def.separators);
+
+    for (int i <- [0,step+1..size(seq.args)]) {
         if ((Statement)`{<Statement* ss>}` := unrolled) {
             Statement new = peval(s, env + ("<x>": code(seq.args[i])), admin);
             unrolled = (Statement)`{<Statement* ss> <Statement new>}`;
@@ -165,6 +168,7 @@ Statement* peval(Statement* ss, Env env, Admin admin) {
 
 @synopsis{Partially evaluate a statement}
 Statement peval(Statement s, Env env, Admin admin) {
+    println("PEVAL: <s>");
     return top-down-break visit (s) {
         case (Expression)`<Id f>(<{Expression ","}* args>)` 
             => peval(func, env, args, admin) 
@@ -207,6 +211,8 @@ Statement peval(Statement s, Env env, Admin admin) {
         case (Statement)`match (<Expression e>) {<MatchCase* cases>}`: {
             if ((Expression)`<Id x>` := e, isCode(x, env)) {                        
                 for ((MatchCase)`case <Pattern p>: <Statement* ss>` <- cases) {
+                    println("PATTERN: <p>"); 
+                    println(env["<x>"].code);
                     if (success(list[Tree] bs) := matchTree(p, env["<x>"].code)) {
                         insert peval((Statement)`{<Statement* ss>}`, 
                             env + ( "$<i+1>": code(bs[i]) | int i <- [0..size(bs)] ), admin);
