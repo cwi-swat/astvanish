@@ -263,6 +263,10 @@ bool isStatic((Expression)`<Literal _>`, Env _) = true;
 
 bool isStatic((Expression)`(<Expression e>)`, Env env) = isStatic(e, env);
 
+bool isStatic((Expression)`+<Expression e>`, Env env) = isStatic(e, env);
+
+bool isStatic((Expression)`-<Expression e>`, Env env) = isStatic(e, env);
+
 bool isStatic((Expression)`<Expression lhs> + <Expression rhs>`, Env env) =
     isStatic(lhs, env) && isStatic(rhs, env);
 
@@ -285,6 +289,20 @@ bool isStatic((Expression)`<Expression lhs> && <Expression rhs>`, Env env) =
 
 bool isStatic((Expression)`<Expression lhs> || <Expression rhs>`, Env env) =
     isStatic(lhs, env) && isStatic(rhs, env);
+
+bool isStatic((Expression)`<Expression cond> ? <Expression then> : <Expression els>`, Env env) {
+    // this is funky: if the condition is static, we can evaluate it
+    // and depending on the result, only one of the branches has to be static
+    // and the other one doesn't...
+    if (isStatic(cond, env), expr(Expression e) := eval(cond, env)) {
+        if (truthy(e)) {
+            return isStatic(then, env);
+        }
+        return isStatic(els, env);
+    }
+    return false;
+}
+
 
 bool isStatic((Expression)`<Expression lhs> == <Expression rhs>`, Env env) =
     isStatic(lhs, env) && isStatic(rhs, env);
@@ -311,9 +329,11 @@ bool isStatic((Expression)`<Expression lhs> \< <Expression rhs>`, Env env) =
     isStatic(lhs, env) && isStatic(rhs, env);
 
 
-
+// all other expressions are not static
 default bool isStatic(Expression _, Env _) = false;
 
+
+@synopsis{Evaluate an expression (assuming `isStatic` holds)}
 Value eval((Expression)`<Expression e>.toString()`, Env env) = expr([Expression]"\'<txt>\'") 
     when code(Tree t) := eval(e, env),
         str txt := replaceAll("<t>", "\n", "\\n");
@@ -327,6 +347,12 @@ Value eval((Expression)`<Id x>`, Env env) = env["<x>"]
 Value eval(e:(Expression)`<Literal _>`, Env _) = expr(e);
 
 Value eval((Expression)`(<Expression e>)`, Env env) = eval(e, env);
+
+Value eval((Expression)`+<Expression e>`, Env env) = expr(fromVal(n))
+    when int n := toVal(eval(e, env).expr);
+
+Value eval((Expression)`-<Expression e>`, Env env) = expr(fromVal(-n))
+    when int n := toVal(eval(e, env).expr);
 
 Value eval((Expression)`<Expression lhs> + <Expression rhs>`, Env env) = expr(fromVal(a + b))
     when int a := toVal(eval(lhs, env).expr),
@@ -364,6 +390,14 @@ Value eval((Expression)`<Expression lhs> || <Expression rhs>`, Env env) = expr(f
     when bool a := toVal(eval(lhs, env).expr),
         bool b := toVal(eval(rhs, env).expr);
 
+Value eval((Expression)`<Expression cond> ? <Expression then> : <Expression els>`, Env env) {
+    Value v = eval(cond, env);
+    if (truthy(v.expr)) {
+        return eval(then, env);
+    }
+    return eval(els, env);
+}
+
 Value eval((Expression)`<Expression lhs> == <Expression rhs>`, Env env) = expr(fromVal(a == b))
     when value a := toVal(eval(lhs, env).expr),
         value b := toVal(eval(rhs, env).expr);
@@ -397,22 +431,23 @@ Value eval((Expression)`<Expression lhs> \> <Expression rhs>`, Env env) = expr(f
         int b := toVal(eval(rhs, env).expr);
 
 
+default Value eval(Expression e, Env env) {
+    throw "expected <e> to be static, but could not evaluate (env was: <env>)";
+}
 
 
 
 
-
-default Value eval(Expression e, Env _) = expr(e);
-
-
-
+@synopsis{Convert a Javascript literal expression to a Rascal value}
 value toVal((Expression)`<Boolean b>`) = (Boolean)`true` := b;
 value toVal((Expression)`<Numeric n>`) = toInt("<n>"); // for now only ints
 value toVal((Expression)`<String s>`) = "<"<s>"[1..-1]>"; // todo: unescaping
 
+@synopsis{Convert a Rascal value to a Javascript literal expression}
 Expression fromVal(int x) = [Expression]"<x>";
 Expression fromVal(str x) = [Expression]"\'<x>\'"; // todo: escaping
 Expression fromVal(bool x) = [Expression]"<x>";
+
 
 bool truthy(Expression e) = !falsy(e);
 
