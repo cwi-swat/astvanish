@@ -1,0 +1,128 @@
+{
+  "tag": "prog",
+  "defs": [
+    {
+      "tag": "def",
+      "name": "factorial",
+      "params": [
+        "n"
+      ],
+      "body": {
+        "tag": "ifThenElse",
+        "cond": {
+          "tag": "gt",
+          "lhs": {
+            "tag": "var",
+            "name": "n"
+          },
+          "rhs": {
+            "tag": "number",
+            "number": "1"
+          }
+        },
+        "then": {
+          "tag": "mul",
+          "lhs": {
+            "tag": "var",
+            "name": "n"
+          },
+          "rhs": {
+            "tag": "call",
+            "name": "factorial",
+            "actuals": [
+              {
+                "tag": "sub",
+                "lhs": {
+                  "tag": "var",
+                  "name": "n"
+                },
+                "rhs": {
+                  "tag": "number",
+                  "number": "1"
+                }
+              }
+            ]
+          }
+        },
+        "els": {
+          "tag": "number",
+          "number": "1"
+        }
+      }
+    },
+    {
+      "tag": "def",
+      "name": "power",
+      "params": [
+        "x",
+        "n"
+      ],
+      "body": {
+        "tag": "ifThenElse",
+        "cond": {
+          "tag": "gt",
+          "lhs": {
+            "tag": "var",
+            "name": "n"
+          },
+          "rhs": {
+            "tag": "number",
+            "number": "1"
+          }
+        },
+        "then": {
+          "tag": "mul",
+          "lhs": {
+            "tag": "var",
+            "name": "x"
+          },
+          "rhs": {
+            "tag": "call",
+            "name": "power",
+            "actuals": [
+              {
+                "tag": "var",
+                "name": "x"
+              },
+              {
+                "tag": "sub",
+                "lhs": {
+                  "tag": "var",
+                  "name": "n"
+                },
+                "rhs": {
+                  "tag": "number",
+                  "number": "1"
+                }
+              }
+            ]
+          }
+        },
+        "els": {
+          "tag": "var",
+          "name": "n"
+        }
+      }
+    }
+  ],
+  "main": {
+    "tag": "call",
+    "name": "factorial",
+    "actuals": [
+      {
+        "tag": "call",
+        "name": "power",
+        "actuals": [
+          {
+            "tag": "number",
+            "number": "2"
+          },
+          {
+            "tag": "number",
+            "number": "3"
+          }
+        ]
+      }
+    ]
+  }
+}
