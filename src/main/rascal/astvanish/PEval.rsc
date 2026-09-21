@@ -7,8 +7,16 @@ import ParseTree;
 import String;
 import Set;
 
+@synopsis{A `Value` represent a statically known value: either code, or a (constant) expression}
+data Value
+    = code(Tree code)
+    | expr(Expression expr);
 
-@synopsis{Partial evaluate function `f`  in "match"-enhanced Javascript `code` given `static` arguments}
+@synopsis{The environment capturing statically known bindings}
+alias Env = map[str, Value];
+
+
+@synopsis{Partial evaluate function `f` in "match"-enhanced Javascript `code` given `static` arguments}
 start[Source] peval(start[Source] code, Env static, str f) {
     Admin admin = newAdmin(code);
     if ([Function func] := admin.lookup(f)) {
@@ -44,11 +52,12 @@ start[Source] spliceBlocks(start[Source] s) {
 
 @synopsis{Object interface to do code admin: lookup functions and declare new ones}
 alias Admin = tuple[
-    list[Function](str) lookup, // list as optional
+    list[Function](str) lookup, // list as optional, we might not find it
     Id(Id, list[Id], Statement*, Env) declare,
     start[Source]() code
 ];
 
+@synopsis{Constructor for the `Admin` interface}
 Admin newAdmin(start[Source] code) {
     start[Source] gen = (start[Source])``;
 
@@ -63,9 +72,10 @@ Admin newAdmin(start[Source] code) {
         return [];
     }
 
-
+    // counters per partially evaluated function to generated fresh identifiers
     map[str, int] idCounters = ();
 
+    // memo table to not specialize the same expression multiple time
     map[str, Id] memo = ();
 
     // we memoize on the function prefix `x` and the static args
@@ -107,14 +117,6 @@ Admin newAdmin(start[Source] code) {
 }
 
 
-@synopsis{A `Value` represent a statically known value: either code, or a (constant) expression}
-data Value
-    = code(Tree code)
-    | expr(Expression expr);
-
-@synopsis{The environment capturing statically known bindings}
-alias Env = map[str, Value];
-
 
 @synopsis{Partition formal parameters and actual arguments into static environment and dynamic args}
 tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* args, Env env) {
@@ -132,6 +134,8 @@ tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* a
 @synopsis{Partially evaluate a function definition given the current static environment and call-site arguments}
 Expression peval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`, Env env, {Expression ","}* args, Admin admin) {
     <newEnv, dynArgs> = partition(fs, args, env);
+
+    // todo: skip this step if admin already knows its specialization
     Statement* newBody = peval(body, newEnv, admin);
 
     Id newName = admin.declare(f, dynArgs<0>, newBody, newEnv);
@@ -148,7 +152,7 @@ Statement unroll(Id x, Statement s, Tree seq, Env env, Admin admin) {
         throw "loop unrolling only over regulars, not <seq.prod>";
     }
 
-    //println("prod = <seq.prod>");
+    // todo: this does not work with the `opt` regular
     int step = size(seq.prod.def.separators);
 
     for (int i <- [0,step+1..size(seq.args)]) {
@@ -162,6 +166,7 @@ Statement unroll(Id x, Statement s, Tree seq, Env env, Admin admin) {
 }
 
 
+@synopsis{And identifier "is" code if it refers to code in the environment}
 bool isCode(Id x, Env env) = "<x>" in env && env["<x>"] is code;
 
 Statement* peval(Statement* ss, Env env, Admin admin) {
@@ -182,6 +187,7 @@ Statement peval(Statement s, Env env, Admin admin) {
         case Expression e => eval(e, env).expr
             when isStatic(e, env)
 
+        // catch-all clause: if not dealt with by earlier cases, it's an error
         case (Expression)`<Id x>` : {
             if (isCode(x, env)) {
                 throw "code cannot escape into the dynamic world (<x>, <x.src>)";
@@ -200,6 +206,11 @@ Statement peval(Statement s, Env env, Admin admin) {
             => unroll(x, s, env["<y>"].code, env, admin)
             when isCode(y, env)
 
+        case (Statement)`for (let <Id x> of <Id y>) <Statement s>` 
+            => unroll(x, s, env["<y>"].code, env, admin)
+            when isCode(y, env)
+
+        // the with statement is non-conditional, it assumes the `e` arg *will* match the pattern
         case (Statement)`with (<Pattern p>: <Expression e>) <Statement s>`: {
             if ((Expression)`<Id x>` := e, isCode(x, env)) {
                 if (success(list[Tree] bs) := matchTree(p, env["<x>"].code)) {
@@ -229,6 +240,7 @@ Statement peval(Statement s, Env env, Admin admin) {
     }        
 }
 
+@synopsis{Turn a location into a JS object string}
 str toObj(loc l) = "{offset: <l.offset>, length: <l.length>}";
 
 
@@ -293,7 +305,7 @@ bool isStatic((Expression)`<Expression lhs> || <Expression rhs>`, Env env) =
 bool isStatic((Expression)`<Expression cond> ? <Expression then> : <Expression els>`, Env env) {
     // this is funky: if the condition is static, we can evaluate it
     // and depending on the result, only one of the branches has to be static
-    // and the other one doesn't...
+    // and the other one doesn't have to be...
     if (isStatic(cond, env), expr(Expression e) := eval(cond, env)) {
         if (truthy(e)) {
             return isStatic(then, env);
@@ -336,7 +348,7 @@ default bool isStatic(Expression _, Env _) = false;
 @synopsis{Evaluate an expression (assuming `isStatic` holds)}
 Value eval((Expression)`<Expression e>.toString()`, Env env) = expr([Expression]"\'<txt>\'") 
     when code(Tree t) := eval(e, env),
-        str txt := replaceAll("<t>", "\n", "\\n");
+        str txt := replaceAll("<t>", "\n", "\\n"); // todo: fix escaping
 
 Value eval((Expression)`<Id x>.src`, Env env) = expr([Expression]toObj(t.src))
     when code(Tree t) := eval((Expression)`<Id x>`, env);
@@ -431,8 +443,10 @@ Value eval((Expression)`<Expression lhs> \> <Expression rhs>`, Env env) = expr(f
         int b := toVal(eval(rhs, env).expr);
 
 
+// the contract is: eval *must* eval, if isStatic returned true
+// and eval can only be called if isStatic holds.
 default Value eval(Expression e, Env env) {
-    throw "expected <e> to be static, but could not evaluate (env was: <env>)";
+    throw "expected `<e>` to be static, but could not evaluate (env was: <env>)";
 }
 
 
@@ -449,8 +463,10 @@ Expression fromVal(str x) = [Expression]"\'<x>\'"; // todo: escaping
 Expression fromVal(bool x) = [Expression]"<x>";
 
 
+@synopsis{Javascript's truthiness}
 bool truthy(Expression e) = !falsy(e);
 
+@synopsis{Javascript's falsiness}
 bool falsy((Expression)`false`) = true;
 bool falsy((Expression)`0`) = true;
 bool falsy((Expression)`-0`) = true;
