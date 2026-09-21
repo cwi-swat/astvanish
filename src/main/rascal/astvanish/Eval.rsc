@@ -19,6 +19,7 @@ alias Sigs = map[str, Symbol];
 // capture signatures per function that needs to be converted
 alias AEnv = map[str, Sigs];
 
+@synopsis{Convert top-level, named functions to interpreters, given the types of the static args}
 start[Source] toEval(start[Source] src, AEnv sigs, type[&T<:Tree] grammar) {
     return top-down-break visit (src) {
          case Function f => toEval(f, sigs["<f.name>"], grammar)
@@ -27,7 +28,7 @@ start[Source] toEval(start[Source] src, AEnv sigs, type[&T<:Tree] grammar) {
 }
 
 
-
+@synopsis{Convert a function to an interpreter, given the types of its static args}
 Function toEval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`, Sigs env, type[&T<:Tree] grammar) {
     //println("toEval: <f>");
     newBody = toEval(body, env, grammar);
@@ -90,6 +91,7 @@ Statement toEval(Statement stmt, Sigs env, type[&T<:Tree] grammar) {
     }
 }
 
+@synopsis{Determine the element type of a regular symbol (iters and optionals)}
 Symbol eltType(label(_, Symbol s)) = eltType(s);
 Symbol eltType(\iter-star-seps(Symbol s, _)) = s;
 Symbol eltType(\iter-seps(Symbol s, _)) = s;
@@ -97,7 +99,7 @@ Symbol eltType(\iter-star(Symbol s)) = s;
 Symbol eltType(\iter(Symbol s)) = s;
 Symbol eltType(opt(Symbol s)) = s;
 
-
+@synopsis{Convert `match`'s cases to an ordinary switch statement}
 Statement toSwitch(Id x, MatchCase* cases, Sigs env, type[&T<:Tree] grammar) {
     Statement sw = (Statement)`switch (<Id x>._tag) {}`;
 
