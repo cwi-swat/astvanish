@@ -50,7 +50,7 @@ start[Source] spliceBlocks(start[Source] s) {
     return s;
 }
 
-@synopsis{Object interface to do code admin: lookup functions and declare new ones}
+@synopsis{Object interface to do code admin: lookup functions and declare new specialized ones}
 alias Admin = tuple[
     list[Function](str) lookup, // list as optional, we might not find it
     Id(Id, list[Id], Statement*, Env) declare,
@@ -72,10 +72,10 @@ Admin newAdmin(start[Source] code) {
         return [];
     }
 
-    // counters per partially evaluated function to generated fresh identifiers
+    // counters per partially evaluated function to generate fresh identifiers
     map[str, int] idCounters = ();
 
-    // memo table to not specialize the same expression multiple time
+    // memo table to not specialize the same function multiple times for the same statics
     map[str, Id] memo = ();
 
     // we memoize on the function prefix `x` and the static args
@@ -113,7 +113,11 @@ Admin newAdmin(start[Source] code) {
         return newId;
     }
 
-    return <lookup_, declare_, start[Source]() { return gen; }>;
+    start[Source] code_() { 
+        return gen; 
+    }
+
+    return <lookup_, declare_, code_>;
 }
 
 
@@ -188,6 +192,7 @@ Statement peval(Statement s, Env env, Admin admin) {
             when isStatic(e, env)
 
         // catch-all clause: if not dealt with by earlier cases, it's an error
+        // because static data (code) is leaking into the dynamic world.
         case (Expression)`<Id x>` : {
             if (isCode(x, env)) {
                 throw "code cannot escape into the dynamic world (<x>, <x.src>)";
@@ -305,12 +310,9 @@ bool isStatic((Expression)`<Expression lhs> || <Expression rhs>`, Env env) =
 bool isStatic((Expression)`<Expression cond> ? <Expression then> : <Expression els>`, Env env) {
     // this is funky: if the condition is static, we can evaluate it
     // and depending on the result, only one of the branches has to be static
-    // and the other one doesn't have to be...
+    // and the other one doesn't have to be... (same as with if-statements)
     if (isStatic(cond, env), expr(Expression e) := eval(cond, env)) {
-        if (truthy(e)) {
-            return isStatic(then, env);
-        }
-        return isStatic(els, env);
+        return truthy(e) ? isStatic(then, env) : isStatic(els, env);
     }
     return false;
 }
@@ -443,8 +445,8 @@ Value eval((Expression)`<Expression lhs> \> <Expression rhs>`, Env env) = expr(f
         int b := toVal(eval(rhs, env).expr);
 
 
-// the contract is: eval *must* eval, if isStatic returned true
-// and eval can only be called if isStatic holds.
+// the contract is: eval *must* eval if isStatic returns true;
+// and eval should only be called if isStatic holds.
 default Value eval(Expression e, Env env) {
     throw "expected `<e>` to be static, but could not evaluate (env was: <env>)";
 }
