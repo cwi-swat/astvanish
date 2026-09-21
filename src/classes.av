@@ -2,42 +2,34 @@
 
 function define(schema) {
     var m = {};
-    match (schema) {
-        case schema _ _ : 
-            m.__name = $1.toString();
-            for (const c of $2) {
-                match (c) {
-                    case class _ { _ }: 
-                        m[$1.toString()] = function () {
-                            var data = {};
-                            for (const f of $2) {
-                                match (f) {
-                                    case _ \: _ : 
-                                        data[$1.toString()] = null;
+    with (schema _ _ : schema) {
+        m.__name = $1.toString();
+        for (const c of $2) {
+            with (class _ { _ } : c) {
+                m[$1.toString()] = function () {
+                    var data = {};
+                    for (const f of $2) {
+                        with (_ \: _ : f) {
+                            data[$1.toString()] = null;
+                        }
+                    }
+                    var obj = {};
+                    for (const f of $2) {
+                        with (_ \: _ : f) {
+                            obj[$1.toString()] = function(x) {
+                                if (x !== undefined) {
+                                    checkType($2, x);
+                                    data[$1.toString()] = x;
                                 }
-                            }
-                            var obj = {};
-                            for (const f of $2) {
-                                match (f) {
-                                    case _ \: _ : 
-                                        obj[$1.toString()] = function(x) {
-                                            if (x !== undefined) {
-                                                checkType($2, x);
-                                                data[$1.toString()] = x;
-                                            }
-                                            else {
-                                                return data[$1.toString()];
-                                            }
-                                        };
+                                else {
+                                    return data[$1.toString()];
                                 }
-                            }
-                        };
-                    
-                    // case class _ < _ { _ } : {
-                        
-                    // }
-                }
+                            };
+                        }
+                    }
+                };
             }
+        }
     }
 
     return m;

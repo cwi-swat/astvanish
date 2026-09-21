@@ -12,12 +12,12 @@ import Set;
 start[Source] peval(start[Source] code, Env static, str f) {
     Admin admin = newAdmin(code);
     Function func = admin.lookup(f)[0];
-    list[Expression] args = [ "<x>" in static ? (Expression)`<Id x>` : (Expression)`$$` | Id x <- func.parameters ];
+    list[Expression] args = [ "<x>" in static ? (Expression)`<Id x>` : (Expression)`$$` /* dummy */ | Id x <- func.parameters ];
     peval(func, static, makeArgs(args), admin);
     return spliceBlocks(admin.code());
 }
 
-@synopsis{Splice out superfluous curlies for more readable code}
+@synopsis{Splice out superfluous curlies for nicer code}
 start[Source] spliceBlocks(start[Source] s) {
     solve (s) {
         s = visit (s) {
@@ -180,13 +180,16 @@ Statement peval(Statement s, Env env, Admin admin) {
             }
         }
 
-        case (Statement)`if (<Expression cond>) <Statement s>` => truthy(val) ? s : (Statement)`;`
+        case (Statement)`if (<Expression cond>) <Statement s>` 
+            => truthy(val) ? peval(s, env, admin) : (Statement)`;`
             when isStatic(cond, env), expr(Expression val) := eval(cond, env)
 
-        case (Statement)`if (<Expression cond>) <Statement s1> else <Statement s2>` => truthy(val) ? s1 : s2
+        case (Statement)`if (<Expression cond>) <Statement s1> else <Statement s2>` 
+            => truthy(val) ? peval(s1, env, admin) : peval(s2, env, admin)
             when isStatic(cond, env), expr(Expression val) := eval(cond, env)
 
-        case (Statement)`for (const <Id x> of <Id y>) <Statement s>` => unroll(x, s, env["<y>"].code, env, admin)
+        case (Statement)`for (const <Id x> of <Id y>) <Statement s>` 
+            => unroll(x, s, env["<y>"].code, env, admin)
             when isCode(y, env)
 
         case (Statement)`with (<Pattern p>: <Expression e>) <Statement s>`: {

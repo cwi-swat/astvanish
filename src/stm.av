@@ -1,5 +1,11 @@
 
 
+function run2(m, state, events) {
+    for (const e of events) {
+        run(m, state, e);
+    }
+}
+
 function run(m, state, event) {
     with (machine _ end : m) {
         for (const s of $1) {
