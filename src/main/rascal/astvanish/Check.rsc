@@ -72,6 +72,12 @@ set[Message] check(Statement s,  Env env, Sig bt, FEnv fenv) {
             }
         }
 
+        case (Statement)`for (let <Id x> of <Id y>) <Statement s>`: {
+            if ("<y>" in env) {
+                msgs += check(s, env + "<x>", bt, fenv);
+            }
+        }
+
         case (Expression)`<Id f>(<{Expression ","}* args>)`: {
             if ("<f>" in fenv) {
                 Sig fbt = fenv["<f>"];
@@ -113,7 +119,9 @@ set[Message] check(Statement s,  Env env, Sig bt, FEnv fenv) {
 }
 
 bool isVar((Token)`_`) = true;
+
 bool isVar((Token)`_@<Id _>`) = true;
+
 default bool isVar(Token _) = false;
 
 set[Message] check((MatchCase)`case <Pattern p>: <Statement* ss>`, Env env, Sig bt, FEnv fenv) {
@@ -133,6 +141,18 @@ FEnv inferStatics(start[Source] code) {
                 + [ <"<x>", static()> | /(Statement)`with (<Pattern _> : <Id x>) <Statement _>` := ss, isParam(x) ];
             
             lrel[str, BindingTime] dyns = [ <"<x>", dyn()> | Id x <- params, "<x>" notin statics<0> ];
+
+
+            // this is a bit convoluted but we need to preserver the order of parameters.
+            tuple[str, BindingTime] bindingTimeOf(str x) = <x, static()>
+                when <x, static()> in statics;
+
+            tuple[str, BindingTime] bindingTimeOf(str x) = <x, dyn()>
+                when <x, dyn()> in dyns;
+                
+
+            lrel[str, BindingTime] sig = [ bindingTimeOf("<x>") | Id x <- params ];
+
             env += ("<f>" : statics + dyns );
         }
     }
