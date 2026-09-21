@@ -35,12 +35,14 @@ lexical Token
  * Concrete matching, against parse trees
  */ 
 
+@synopsis{Matching can either fail or succeed with a list of bindings ($1, $2, ...)}
 data MatchResult // for both kinds of matching :D
     = success(list[Tree] bindings)
     | success(str cons, list[Symbol] symbols)
     | failure()
     ;
 
+@synopsis{Matching a concrete syntax tree against a pattern}
 MatchResult matchTree(Pattern p, Tree t) {
     list[Tree] bindings = [];
     list[Token] toks = [ tok | Token tok <- p.tokens ];
@@ -81,8 +83,8 @@ MatchResult matchTree(Pattern p, Tree t) {
 }
 
 
+@synopsis{Determining the type of a tree (typicall, its sort)}
 str kindOf(Tree t) = kindOf(t.prod.def);
-
 
 str kindOf(label(_, Symbol s)) = kindOf(s);
 
@@ -106,8 +108,10 @@ start[Source] parseAV(loc l) = parse(#start[Source], l);
 
 
 str nameOf(label(str n, _)) = n;
+
 default str nameOf(Symbol _) = "$unknown";
 
+@synopsis{Matching a pattern against a grammar production}
 MatchResult matchProd(Pattern p, prod(label(str cons, Symbol _), list[Symbol] ss, _)) {
     list[Symbol] bindings = [];
     
