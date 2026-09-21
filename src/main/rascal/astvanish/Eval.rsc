@@ -7,6 +7,11 @@ import List;
 import String;
 import IO;
 
+/*
+ * This module turns an ASTVanish (match-enhanced) Javascript source file
+ * into a plain Javascript source file; it contains some ugly hacks
+ * but we plan to only use it for performance benchmarking anyway.
+ */
 
 // mapping parameter names to syntactic types
 alias Sigs = map[str, Symbol]; 
