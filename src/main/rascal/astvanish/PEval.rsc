@@ -16,7 +16,7 @@ data Value
 alias Env = map[str, Value];
 
 
-@synopsis{Partial evaluate function `f` in "match"-enhanced Javascript `code` given `static` arguments}
+@synopsis{Partial evaluate function `f` in match/with-enhanced Javascript `code` given `static` arguments}
 start[Source] peval(start[Source] code, Env static, str f) {
     Admin admin = newAdmin(code);
     if ([Function func] := admin.lookup(f)) {
@@ -224,7 +224,7 @@ Statement peval(Statement s, Env env, Admin admin) {
                 throw "no matching pattern for <env["<x>"].code>";   
             }
             else {
-                throw "only static variables are allowed in match conditions (not `<e>``)";
+                throw "only static variables are allowed in match conditions (not `<e>`)";
             }
         }
 
@@ -239,7 +239,7 @@ Statement peval(Statement s, Env env, Admin admin) {
                 throw "no matching pattern for <env["<x>"].code>";
             }
             else {
-                throw "only static variables are allowed in match conditions (not `<e>``)";
+                throw "only static variables are allowed in match conditions (not `<e>`)";
             }
         }
     }        
@@ -250,7 +250,7 @@ str toObj(loc l) = "{offset: <l.offset>, length: <l.length>}";
 
 
 
-// Helper functions to turns lists into iter-star-sep trees
+// Helper functions to turn lists into iter-star-sep trees
 {Id ","}* makeParams(list[Id] fs) {
     Function dummy = (Function)`function (){}`;
     for (Id f <- fs, (Function)`function (<{Id ","}* ids>) {}` := dummy) {

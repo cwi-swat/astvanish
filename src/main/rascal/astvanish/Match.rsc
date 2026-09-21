@@ -83,7 +83,7 @@ MatchResult matchTree(Pattern p, Tree t) {
 }
 
 
-@synopsis{Determining the type of a tree (typicall, its sort)}
+@synopsis{Determining the type of a tree (typically, its sort)}
 str kindOf(Tree t) = kindOf(t.prod.def);
 
 str kindOf(label(_, Symbol s)) = kindOf(s);
@@ -129,7 +129,7 @@ MatchResult matchProd(Pattern p, prod(label(str cons, Symbol _), list[Symbol] ss
                 i += 2;
             }
             
-            case (Token)`_@<Id x>`: {
+            case (Token)`_@<Id x>`: 
                 if (kindOf(ss[i]) == "<x>") {
                     bindings += [ss[i]];
                     i += 2;
@@ -137,19 +137,16 @@ MatchResult matchProd(Pattern p, prod(label(str cons, Symbol _), list[Symbol] ss
                 else {
                     return failure();
                 }
-            }
             
-            default: {
+            default: 
                 if (ss[i] is lit, ss[i].string == unescapeToken("<tok>")) {
                     i += 2;
                 }
                 else {
                     return failure();
                 }
-            }
         }
     }
-    //println(bindings);
     return success(cons, bindings);
 }
 
