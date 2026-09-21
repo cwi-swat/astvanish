@@ -8,7 +8,7 @@ function checkType$0(x) {
 
     throw 'value ' + x + ' is not compatible with type int';
 }
-function checkType$3(x) {
+function checkType$1(x) {
     if (x === true || x === false) return true;
 
     throw 'value ' + x + ' is not compatible with type bool';
@@ -66,7 +66,7 @@ function define() {
         };
         obj['central'] = function (x) {
             if (x !== undefined) {
-                checkType$3(x);
+                checkType$1(x);
                 data['central'] = x;
             }
             else {

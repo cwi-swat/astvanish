@@ -7,40 +7,49 @@ import List;
 import String;
 import IO;
 
-start[Source] toEval(start[Source] src, AEnv statics, type[&T<:Tree] grammar) {
+
+// mapping parameter names to syntactic types
+alias Sigs = map[str, Symbol]; 
+
+// capture signatures per function that needs to be converted
+alias AEnv = map[str, Sigs];
+
+start[Source] toEval(start[Source] src, AEnv sigs, type[&T<:Tree] grammar) {
     return top-down-break visit (src) {
-         case Function f => toEval(f, statics, grammar)
+         case Function f => toEval(f, sigs["<f.name>"], grammar)
+            when f has name, "<f.name>" in sigs
     }
 }
 
-alias AEnv = map[str, Symbol];
 
 
-Function toEval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`, AEnv env, type[&T<:Tree] grammar) {
+Function toEval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`, Sigs env, type[&T<:Tree] grammar) {
     //println("toEval: <f>");
     newBody = toEval(body, env, grammar);
     return (Function)`function <Id f>(<{Id ","}* fs>) {<Statement* newBody>}`;
 }
 
-Statement* toEval(Statement* stmts, AEnv env, type[&T<:Tree] grammar) {
+Statement* toEval(Statement* stmts, Sigs env, type[&T<:Tree] grammar) {
     return top-down-break visit (stmts) {
         case Statement s => toEval(s, env, grammar)
     }
 }
 
-Expression toField(Id x, AEnv env) = [Expression]"<owner>.<field>"
+Expression toField(Id x, Sigs env) = [Expression]"<owner>.<field>"
+    // ugly hack: using sort symbol to carry over the owner variable
     when str owner := env[""].name, 
         str field := nameOf(env["<x>"]);
 
 bool isKid(Id x) = /^\$[0-9]+$/ := "<x>";
 
-Statement toEval(Statement stmt, AEnv env, type[&T<:Tree] grammar) {
+Statement toEval(Statement stmt, Sigs env, type[&T<:Tree] grammar) {
     //println("toEval <stmt> / <env>");
     return top-down-break visit (stmt) {
         case (Expression)`<Id f>(<{Expression ","}* args>)`: {
             args = visit (args) {
                 case (Expression)`<Id x>` => toField(x, env)
-                    when isKid(x)
+                    // bit ugly; should check that f is in top-level sigs mapping
+                    when isKid(x) 
             }
             
             insert (Expression)`<Id f>(<{Expression ","}* args>)`;   
@@ -58,6 +67,7 @@ Statement toEval(Statement stmt, AEnv env, type[&T<:Tree] grammar) {
                 Statement s2 := toEval(s, env + ("<x>": eltType(env["<y>"])), grammar)
 
         case (Statement)`match (<Id x>) {<MatchCase* cases>}` 
+            // ugly hack: using the key "" to propagate the x object
             => toSwitch(x, cases, env + ("": sort("<x>")), grammar)                   
     }
 }
@@ -70,7 +80,7 @@ Symbol eltType(\iter(Symbol s)) = s;
 Symbol eltType(opt(Symbol s)) = s;
 
 
-Statement toSwitch(Id x, MatchCase* cases, AEnv env, type[&T<:Tree] grammar) {
+Statement toSwitch(Id x, MatchCase* cases, Sigs env, type[&T<:Tree] grammar) {
     Statement sw = (Statement)`switch (<Id x>.tag) {}`;
 
     

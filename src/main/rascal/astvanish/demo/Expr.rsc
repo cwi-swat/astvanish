@@ -1,4 +1,4 @@
-module astvanish::Expr
+module astvanish::demo::Expr
 
 extend lang::std::Layout;
 

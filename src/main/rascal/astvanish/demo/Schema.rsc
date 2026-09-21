@@ -1,4 +1,4 @@
-module astvanish::Schema
+module astvanish::demo::Schema
 
 extend lang::std::Layout;
 extend lang::std::Id;
