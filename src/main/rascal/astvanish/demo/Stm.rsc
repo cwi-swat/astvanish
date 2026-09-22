@@ -10,7 +10,10 @@ syntax State = state: "state" Id name Trans* trans "end";
 syntax Trans = trans: Id event "=\>" Id target;
 
 
-Machine doors() = (Machine)`machine 
+start[Machine] doors() = (start[Machine])
+                           `//@@ src/stm.av: run(m)
+                           '
+                           'machine 
                            '  state closed
                            '     open =\> opened
                            '  end
