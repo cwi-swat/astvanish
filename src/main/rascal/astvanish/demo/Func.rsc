@@ -37,4 +37,5 @@ start[Prog] aProg() = (start[Prog])
 '  else 
 '     n
 '  fi ;
+'
 'factorial(power(2, 3))`;
