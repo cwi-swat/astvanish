@@ -77,7 +77,6 @@ start[Source] spliceBlocks(start[Source] s) {
 @synopsis{Object interface to do code admin: lookup functions and declare new specialized ones}
 alias Admin = tuple[
     list[Function](str) lookup, // list as optional, we might not find it
-    list[Id](Id, Env) hasSeen,
     Id(Id, list[Id], Statement*, Env) declare,
     start[Source]() code
 ];
@@ -111,14 +110,6 @@ Admin newAdmin(start[Source] code) {
     // the generated source code
     start[Source] gen = (start[Source])``;
 
-    list[Id] hasSeen_(Id prefix, Env env) {
-        str key = hash(prefix, env);
-        if (key in memo) {
-            return [memo[key]];
-        }
-        return [];
-    } 
-
     Id declare_(Id prefix, list[Id] ids, Statement* body, Env env) {
 
         // if we have specialized before with the same code arguments, 
@@ -140,7 +131,6 @@ Admin newAdmin(start[Source] code) {
             idCounters[name] = 0;
         }
 
-        
         memo[key] = newId;
 
         if ((start[Source])`<Statement* ss>` := gen) {
@@ -153,7 +143,7 @@ Admin newAdmin(start[Source] code) {
 
     start[Source] code_() = gen;
 
-    return <lookup_, hasSeen_, declare_, code_>;
+    return <lookup_, declare_, code_>;
 }
 
 
@@ -175,14 +165,12 @@ tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* a
 Expression peval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`, Env env, {Expression ","}* args, Admin admin) {
     <newEnv, dynArgs> = partition(fs, args, env, admin);
 
+    Statement* newBody = peval(body, newEnv, admin);
+    
+    Id newName = admin.declare(f, dynArgs<0>, newBody, newEnv);
+    
     {Expression ","}* restArgs = makeArgs(dynArgs<1>);
     
-    if ([Id newName] := admin.hasSeen(f, newEnv)) {
-        return (Expression)`<Id newName>(<{Expression ","}* restArgs>)`;
-    } 
-
-    Statement* newBody = peval(body, newEnv, admin);
-    Id newName = admin.declare(f, dynArgs<0>, newBody, newEnv);
     return (Expression)`<Id newName>(<{Expression ","}* restArgs>)`;
 }
 
