@@ -6,6 +6,7 @@ import IO;
 import ParseTree;
 import String;
 import Set;
+import Message;
 
 @synopsis{A `Value` represent a statically known value: either code, or a (constant) expression}
 data Value
@@ -14,6 +15,20 @@ data Value
 
 @synopsis{The environment capturing statically known bindings}
 alias Env = map[str, Value];
+
+
+@synopsis{Extract the partial evaluation directive from a comment}
+tuple[str eval, str func, str static] extractPEvalDirective(Tree code) {
+    visit (code) {
+        // assuming Comment from lang::std::Comment
+        case Comment c: {
+            if (/^\/\/@@ <path:[^:\ ]*>: <f:[a-zA-Z0-9]+>\(<par:[^)]*>\)/ := "<c>") {
+                return <path, f, par>;
+            }
+        }
+    }
+    return <"", "", "">;
+}
 
 
 @synopsis{Partial evaluate function `f` in match/with-enhanced Javascript `code` given `static` arguments}
@@ -236,7 +251,7 @@ Statement peval(Statement s, Env env, Admin admin) {
                             env + ( "$<i+1>": code(bs[i]) | int i <- [0..size(bs)] ), admin);
                     }
                 }
-                throw "no matching pattern for <env["<x>"].code>";
+                throw "no matching pattern for `<env["<x>"].code>`";
             }
             else {
                 throw "only static variables are allowed in match conditions (not `<e>`)";

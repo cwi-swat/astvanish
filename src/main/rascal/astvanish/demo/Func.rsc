@@ -28,6 +28,8 @@ Prog aProg() = (Prog)
 '        1
 '   fi;
 '
+'//@@ src/func.av: Run(prog)
+'
 'def power(x, n) =
 '  if n \> 1 then
 '     x * power(x, n - 1)
