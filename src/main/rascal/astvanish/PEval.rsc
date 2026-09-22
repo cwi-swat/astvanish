@@ -77,6 +77,7 @@ start[Source] spliceBlocks(start[Source] s) {
 @synopsis{Object interface to do code admin: lookup functions and declare new specialized ones}
 alias Admin = tuple[
     list[Function](str) lookup, // list as optional, we might not find it
+    list[Id](Id, Env) hasSeen,
     Id(Id, list[Id], Statement*, Env) declare,
     start[Source]() code
 ];
@@ -100,11 +101,23 @@ Admin newAdmin(start[Source] code) {
     // memo table to not specialize the same function multiple times for the same statics
     map[str, Id] memo = ();
 
+    str yield(code(Tree t)) = "<t>";
+    str yield(expr(Expression e)) = "<e>";
+
     // we memoize on the function prefix `x` and the static args
-    str hash(Id x, Env env) = ( "<x>" | it + " " + squeeze("<env[k] is code ? env[k].code : env[k]>", #[\ \t\n]) | str k <- sort(env<0>) );
+    str hash(Id x, Env env) = ( "<x>" | it + " " 
+        + squeeze(yield(env[k]), #[\ \t\n]) | str k <- sort(env<0>) );
 
     // the generated source code
     start[Source] gen = (start[Source])``;
+
+    list[Id] hasSeen_(Id prefix, Env env) {
+        str key = hash(prefix, env);
+        if (key in memo) {
+            return [memo[key]];
+        }
+        return [];
+    } 
 
     Id declare_(Id prefix, list[Id] ids, Statement* body, Env env) {
 
@@ -140,7 +153,7 @@ Admin newAdmin(start[Source] code) {
 
     start[Source] code_() = gen;
 
-    return <lookup_, declare_, code_>;
+    return <lookup_, hasSeen_, declare_, code_>;
 }
 
 
@@ -149,10 +162,11 @@ Admin newAdmin(start[Source] code) {
 tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* args, Env env, Admin admin) {
     lrel[Id, Expression] paired = zip2([ p | Id p <- params ], [ e | Expression e <- args ]);
     
-    Env staticEnv = ( "<p>" : eval(a, env) | <Id p, Expression a> <- paired, isStatic(a, env) );
+    Env staticEnv = ( "<p>" : eval(a, env) 
+        | <Id p, Expression a> <- paired, isStatic(a, env) );
 
-    // check: call peval on a here? probably yes, because dyn params might be closures with static in them.
-    lrel[Id, Expression] dynArgs = [ <x, peval(a, env, admin)> | <Id x, Expression a> <- paired, !isStatic(a, env)];
+    lrel[Id, Expression] dynArgs = [ <x, peval(a, env, admin)> 
+        | <Id x, Expression a> <- paired, !isStatic(a, env)];
 
     return <staticEnv, dynArgs>;
 }
@@ -161,11 +175,14 @@ tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* a
 Expression peval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`, Env env, {Expression ","}* args, Admin admin) {
     <newEnv, dynArgs> = partition(fs, args, env, admin);
 
-    // todo: skip this step if admin already knows its specialization
-    Statement* newBody = peval(body, newEnv, admin);
-
-    Id newName = admin.declare(f, dynArgs<0>, newBody, newEnv);
     {Expression ","}* restArgs = makeArgs(dynArgs<1>);
+    
+    if ([Id newName] := admin.hasSeen(f, newEnv)) {
+        return (Expression)`<Id newName>(<{Expression ","}* restArgs>)`;
+    } 
+
+    Statement* newBody = peval(body, newEnv, admin);
+    Id newName = admin.declare(f, dynArgs<0>, newBody, newEnv);
     return (Expression)`<Id newName>(<{Expression ","}* restArgs>)`;
 }
 
@@ -239,21 +256,6 @@ Expression peval(Expression e, Env env, Admin admin) {
 Statement peval(Statement s, Env env, Admin admin) {
     //println("PEVAL: <s>");
     return top-down-break visit (s) {
-        // case (Expression)`<Id f>(<{Expression ","}* args>)` 
-        //     => peval(func, env, args, admin) 
-        //         when any(Expression e <- args, isStatic(e, env)), 
-        //             [Function func] := admin.lookup("<f>")
-
-        // case Expression e => eval(e, env).expr
-        //     when isStatic(e, env)
-
-        // // catch-all clause: if not dealt with by earlier cases, it's an error
-        // // because static data (code) is leaking into the dynamic world.
-        // case (Expression)`<Id x>` : {
-        //     if (isCode(x, env)) {
-        //         throw "code cannot escape into the dynamic world (<x>, <x.src>)";
-        //     }
-        // }
 
         case (Statement)`if (<Expression cond>) <Statement s>` 
             => truthy(val) ? peval(s, env, admin) : (Statement)`;`
