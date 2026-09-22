@@ -146,20 +146,20 @@ Admin newAdmin(start[Source] code) {
 
 
 @synopsis{Partition formal parameters and actual arguments into static environment and dynamic args}
-tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* args, Env env) {
+tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* args, Env env, Admin admin) {
     lrel[Id, Expression] paired = zip2([ p | Id p <- params ], [ e | Expression e <- args ]);
     
     Env staticEnv = ( "<p>" : eval(a, env) | <Id p, Expression a> <- paired, isStatic(a, env) );
 
-    // todo: call peval on a here? probably yes, because dyn params might be closures with static in them.
-    lrel[Id, Expression] dynArgs = [ <x, a> | <Id x, Expression a> <- paired, !isStatic(a, env)];
+    // check: call peval on a here? probably yes, because dyn params might be closures with static in them.
+    lrel[Id, Expression] dynArgs = [ <x, peval(a, env, admin)> | <Id x, Expression a> <- paired, !isStatic(a, env)];
 
     return <staticEnv, dynArgs>;
 }
 
 @synopsis{Partially evaluate a function definition given the current static environment and call-site arguments}
 Expression peval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`, Env env, {Expression ","}* args, Admin admin) {
-    <newEnv, dynArgs> = partition(fs, args, env);
+    <newEnv, dynArgs> = partition(fs, args, env, admin);
 
     // todo: skip this step if admin already knows its specialization
     Statement* newBody = peval(body, newEnv, admin);
