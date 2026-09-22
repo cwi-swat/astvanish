@@ -16,6 +16,16 @@ data Value
 @synopsis{The environment capturing statically known bindings}
 alias Env = map[str, Value];
 
+@synopsis{Partially evaluate as per the //@@ <file>: <func>(<static>) directive}
+start[Source] peval(Tree prog, loc root=|project://astvanish/|) {
+    assert prog.prod.def is \start : "must provide a start[] syntax tree";
+    <p, f, s> = extractPEvalDirective(prog);
+    if (p == "") {
+        throw "no partial-eval directive found";
+    }
+    start[Source] eval = parseAV(root + p);
+    return peval(eval, (s: code(prog.top)), f);   
+}
 
 @synopsis{Extract the partial evaluation directive from a comment}
 tuple[str eval, str func, str static] extractPEvalDirective(Tree code) {

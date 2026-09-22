@@ -20,15 +20,16 @@ syntax Expr
 
 lexical Num = [0-9]+;
 
-Prog aProg() = (Prog)
-`def factorial(n) =
+start[Prog] aProg() = (start[Prog])
+`//@@ src/func.av: Run(prog)
+'
+'def factorial(n) =
 '   if n \> 1 then
 '        n * factorial(n - 1)
 '   else
 '        1
 '   fi;
 '
-'//@@ src/func.av: Run(prog)
 '
 'def power(x, n) =
 '  if n \> 1 then

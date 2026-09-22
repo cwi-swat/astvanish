@@ -16,7 +16,10 @@ syntax Type
     | string: "str";
 
 
-Schema aSchema() =  (Schema)`schema Example
+start[Schema] aSchema() =  (start[Schema])`
+'//@@ src/classes.av: define(schema)
+'
+'schema Example
 'class Person {
 '   name: str 
 '   age: int   
