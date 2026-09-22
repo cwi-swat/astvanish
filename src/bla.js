@@ -1,78 +1,112 @@
-function checkType(x) {
-    if (typeof x === 'string') return true;
-
-    throw 'value ' + x + ' is not compatible with type str';
+function Eval(env) {
+    var result;
+    result = env['n'];
+    return result;
 }
-function checkType$0(x) {
-    if (Number.isInteger(x)) return true;
-
-    throw 'value ' + x + ' is not compatible with type int';
+function Eval$0(env) {
+    var result;
+    result = parseInt('1');
+    return result;
 }
-function checkType$1(x) {
-    if (x === true || x === false) return true;
-
-    throw 'value ' + x + ' is not compatible with type bool';
+function Eval$1(env) {
+    var result;
+    result = Eval(env) > Eval$0(env);
+    return result;
 }
-function define() {
-    var m = {};
-    m.__name = 'Example';
-    m['Person'] = function () {
-        var data = {};
-        data['name'] = null;
-        data['age'] = null;
-        var obj = {};
-        obj['name'] = function (x) {
-            if (x !== undefined) {
-                checkType(x);
-                data['name'] = x;
-            }
-            else {
-                return data['name'];
-            }
-        };
-        obj['age'] = function (x) {
-            if (x !== undefined) {
-                checkType$0(x);
-                data['age'] = x;
-            }
-            else {
-                return data['age'];
-            }
-        };
+function Eval$2() {
+    var result;
+    result = 7['n'];
+    return result;
+}
+function Eval$3() {
+    var result;
+    result = parseInt('1');
+    return result;
+}
+function Eval$4() {
+    var result;
+    result = Eval$2() - Eval$3();
+    return result;
+}
+function Eval$5() {
+    var result;
+    var args = [];
+    args.push(Eval$4());
+    result = 7['factorial'](args);
+    return result;
+}
+function Eval$6(env) {
+    var result;
+    result = Eval(env) * Eval$5();
+    return result;
+}
+function Eval$7(env) {
+    var result;
+    result = Eval$1(env) ? Eval$6(env) : Eval$0(env);
+    return result;
+}
+function Eval$8(env) {
+    var result;
+    result = env['x'];
+    return result;
+}
+function Eval$9() {
+    var result;
+    result = 7['x'];
+    return result;
+}
+function Eval$10() {
+    var result;
+    var args = [];
+    args.push(Eval$9()); args.push(Eval$4());
+    result = 7['power'](args);
+    return result;
+}
+function Eval$11(env) {
+    var result;
+    result = Eval$8(env) * Eval$10();
+    return result;
+}
+function Eval$12(env) {
+    var result;
+    result = Eval$1(env) ? Eval$11(env) : Eval(env);
+    return result;
+}
+function Eval$13(env) {
+    var result;
+    result = parseInt('2');
+    return result;
+}
+function Eval$14(env) {
+    var result;
+    result = parseInt('3');
+    return result;
+}
+function Eval$15(env) {
+    var result;
+    var args = [];
+    args.push(Eval$13(env)); args.push(Eval$14(env));
+    result = env['power'](args);
+    return result;
+}
+function Eval$16(env) {
+    var result;
+    var args = [];
+    args.push(Eval$15(env));
+    result = env['factorial'](args);
+    return result;
+}
+function Run() {
+    var env = {};
+    env['factorial'] = function (args) {
+        var myEnv = Object.assign({}, env);
+        myEnv['n'] = args.shift();
+        return Eval$7(myEnv);
+    }; env['power'] = function (args) {
+        var myEnv = Object.assign({}, env);
+        myEnv['x'] = args.shift();
+        myEnv['n'] = args.shift();
+        return Eval$12(myEnv);
     };
-    m['Address'] = function () {
-        var data = {};
-        data['street'] = null;
-        data['number'] = null;
-        data['central'] = null;
-        var obj = {};
-        obj['street'] = function (x) {
-            if (x !== undefined) {
-                checkType(x);
-                data['street'] = x;
-            }
-            else {
-                return data['street'];
-            }
-        };
-        obj['number'] = function (x) {
-            if (x !== undefined) {
-                checkType$0(x);
-                data['number'] = x;
-            }
-            else {
-                return data['number'];
-            }
-        };
-        obj['central'] = function (x) {
-            if (x !== undefined) {
-                checkType$1(x);
-                data['central'] = x;
-            }
-            else {
-                return data['central'];
-            }
-        };
-    };
-    return m;
+    return Eval$16(env);
 }

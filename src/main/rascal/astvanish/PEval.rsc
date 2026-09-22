@@ -101,7 +101,7 @@ Admin newAdmin(start[Source] code) {
     map[str, Id] memo = ();
 
     // we memoize on the function prefix `x` and the static args
-    str hash(Id x, Env env) = ( "<x>" | it + " " + squeeze("<env[k].code>", #[\ \t\n]) | str k <- sort(env<0>) );
+    str hash(Id x, Env env) = ( "<x>" | it + " " + squeeze("<env[k] is code ? env[k].code : env[k]>", #[\ \t\n]) | str k <- sort(env<0>) );
 
     // the generated source code
     start[Source] gen = (start[Source])``;
