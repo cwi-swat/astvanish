@@ -88,7 +88,7 @@ str kindOf(Tree t) = kindOf(t.prod.def);
 
 str kindOf(label(_, Symbol s)) = kindOf(s);
 
-default str kindOf(Symbol s) = s.name;
+default str kindOf(Symbol s) = s has name ? s.name : "";
 
 str unescapeToken(str tok) 
     = ( tok | replaceAll(it, x, m[x]) | str x <- m )

@@ -1,97 +1,91 @@
-function Eval(env) {
-    var result;
-    result = env['n'];
-    return result;
-}
-function Eval$0(env) {
-    var result;
-    result = parseInt('1');
-    return result;
-}
-function Eval$1(env) {
-    var result;
-    result = Eval(env) > Eval$0(env);
-    return result;
-}
-function Eval$2(env) {
-    var result;
-    result = Eval(env) - Eval$0(env);
-    return result;
-}
-function Eval$3(env) {
-    var result;
-    var args = [];
-    args.push(Eval$2(env));
-    result = env['factorial'](args);
-    return result;
-}
-function Eval$4(env) {
-    var result;
-    result = Eval(env) * Eval$3(env);
-    return result;
-}
-function Eval$5(env) {
-    var result;
-    result = Eval$1(env) ? Eval$4(env) : Eval$0(env);
-    return result;
-}
-function Eval$6(env) {
-    var result;
-    result = env['x'];
-    return result;
-}
-function Eval$7(env) {
-    var result;
-    var args = [];
-    args.push(Eval$6(env)); args.push(Eval$2(env));
-    result = env['power'](args);
-    return result;
-}
-function Eval$8(env) {
-    var result;
-    result = Eval$6(env) * Eval$7(env);
-    return result;
-}
-function Eval$9(env) {
-    var result;
-    result = Eval$1(env) ? Eval$8(env) : Eval(env);
-    return result;
-}
-function Eval$10(env) {
-    var result;
-    result = parseInt('2');
-    return result;
-}
-function Eval$11(env) {
-    var result;
-    result = parseInt('3');
-    return result;
-}
-function Eval$12(env) {
-    var result;
-    var args = [];
-    args.push(Eval$10(env)); args.push(Eval$11(env));
-    result = env['power'](args);
-    return result;
-}
-function Eval$13(env) {
-    var result;
-    var args = [];
-    args.push(Eval$12(env));
-    result = env['factorial'](args);
-    return result;
-}
-function Run() {
-    var env = {};
-    env['factorial'] = function (args) {
-        var myEnv = Object.assign({}, env);
-        myEnv['n'] = args.shift();
-        return Eval$5(myEnv);
-    }; env['power'] = function (args) {
-        var myEnv = Object.assign({}, env);
-        myEnv['x'] = args.shift();
-        myEnv['n'] = args.shift();
-        return Eval$9(myEnv);
-    };
-    return Eval$13(env);
-}
+function defaultFor() {return false;}
+function initializeQuestion(env) {env['hasBoughtHouse'] = defaultFor();}
+function initializeQuestion$0(env) {env['hasMaintLoan'] = defaultFor();}
+function initializeQuestion$1(env) {env['hasSoldHouse'] = defaultFor();}
+function defaultFor$0() {return 0;}
+function initializeQuestion$2(env) {env['sellingPrice'] = defaultFor$0();}
+function initializeQuestion$3(env) {env['privateDebt'] = defaultFor$0();}
+function initializeQuestion$4(env) {env['valueResidue'] = defaultFor$0();}
+function initializeQuestion$5(env) {initializeQuestion$2(env); 
+initializeQuestion$3(env); 
+initializeQuestion$4(env);}
+function initializeQuestion$6(env) {initializeQuestion$5(env);}
+function initialize(env) {initializeQuestion(env); initializeQuestion$0(env); initializeQuestion$1(env); initializeQuestion$6(env);}
+function widget(env, func) {page.append('"Did you buy a house in 2010?"');
+    var elt = createElement("input"); 
+elt.setAttribute("type", "checkbox");
+            elt.checked = env['hasBoughtHouse']; 
+page.append(elt); 
+elt.onchange = func;}
+function renderQuestion(env) {widget(env, function (x) { update('hasBoughtHouse', x.value); });}
+function widget$0(env, func) {page.append('"Did you enter a loan?"');
+    var elt = createElement("input"); 
+elt.setAttribute("type", "checkbox");
+            elt.checked = env['hasMaintLoan']; 
+page.append(elt); 
+elt.onchange = func;}
+function renderQuestion$0(env) {widget$0(env, function (x) { update('hasMaintLoan', x.value); });}
+function widget$1(env, func) {page.append('"Did you sell a house in 2010?"');
+    var elt = createElement("input"); 
+elt.setAttribute("type", "checkbox");
+            elt.checked = env['hasSoldHouse']; 
+page.append(elt); 
+elt.onchange = func;}
+function renderQuestion$1(env) {widget$1(env, function (x) { update('hasSoldHouse', x.value); });}
+function eval(env) {return env['hasSoldHouse'];}
+function widget$2(env, func) {page.append('"What was the selling price?"');
+    var elt = createElement("input"); 
+elt.setAttribute("type", "number");
+            elt.value = env['sellingPrice']; 
+page.append(elt); 
+elt.onchange = func;}
+function renderQuestion$2(env) {widget$2(env, function (x) { update('sellingPrice', x.value); });}
+function widget$3(env, func) {page.append('"Private debts for the sold house:"');
+    var elt = createElement("input"); 
+elt.setAttribute("type", "number");
+            elt.value = env['privateDebt']; 
+page.append(elt); 
+elt.onchange = func;}
+function renderQuestion$3(env) {widget$3(env, function (x) { update('privateDebt', x.value); });}
+function widget$4(env) {page.append('"Value residue:"');
+    var elt = createElement("input"); 
+elt.setAttribute("type", "number");
+            elt.value = env['valueResidue']; 
+page.append(elt); 
+elt.disabled = true;}
+function renderQuestion$4(env) {widget$4(env);}
+function renderQuestion$5(env) {renderQuestion$2(env); 
+renderQuestion$3(env); 
+renderQuestion$4(env);}
+function renderQuestion$6(env) {if (eval(env)) {
+                renderQuestion$5(env);
+            }}
+function render(env) {renderQuestion(env); renderQuestion$0(env); renderQuestion$1(env); renderQuestion$6(env);}
+function computeQuestion(env) {}
+function computeQuestion$0(env) {}
+function computeQuestion$1(env) {}
+function computeQuestion$2(env) {}
+function computeQuestion$3(env) {}
+function eval$0(env) {return env['sellingPrice'];}
+function eval$1(env) {return env['privateDebt'];}
+function eval$2(env) {return eval$0(env) - eval$1(env);}
+function computeQuestion$4(env) {var val = eval$2(env);
+            if (val !== env['valueResidue']) {
+                change = true;
+            }}
+function computeQuestion$5(env) {computeQuestion$2(env); 
+computeQuestion$3(env); 
+computeQuestion$4(env);}
+function computeQuestion$6(env) {if (eval(env)) {
+                computeQuestion$5(env);
+            }}
+function compute(env) {return function (x, val) {
+            env[x] = val;
+            var change = false;
+            do {computeQuestion(env); computeQuestion$0(env); computeQuestion$1(env); computeQuestion$6(env);}
+            while (change);
+        };}
+function main() {var env = {};
+    initialize(env);
+    render(env);
+    update = compute(env);}

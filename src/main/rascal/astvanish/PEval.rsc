@@ -150,7 +150,11 @@ Admin newAdmin(start[Source] code) {
 
 @synopsis{Partition formal parameters and actual arguments into static environment and dynamic args}
 tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* args, Env env, Admin admin) {
+    println("PARAMS: <params>");
+    println("ARGS: <args>");
+
     lrel[Id, Expression] paired = zip2([ p | Id p <- params ], [ e | Expression e <- args ]);
+    
     
     Env staticEnv = ( "<p>" : eval(a, env) 
         | <Id p, Expression a> <- paired, isStatic(a, env) );
@@ -197,8 +201,12 @@ Statement unroll(Id x, Statement s, Tree seq, Env env, Admin admin) {
 }
 
 
-@synopsis{And identifier "is" code if it refers to code in the environment}
+@synopsis{An identifier "is" code if it refers to code in the environment}
 bool isCode(Id x, Env env) = "<x>" in env && env["<x>"] is code;
+
+bool isCode((Expression)`<Id x>`, Env env) = isCode(x, env);
+
+default bool isCode(Expression _, Env _) = false;
 
 Statement* peval(Statement* ss, Env env, Admin admin) {
     return top-down-break visit (ss) {
@@ -226,9 +234,14 @@ Expression peval(Expression e, Env env, Admin admin) {
             f.statements = peval(f.statements, env, admin);
             insert (Expression)`<Function f>`;
         }
+
+        // case e:(Expression)`<Expression lhs> !== <Expression rhs>`
+        //     => (Expression)`<Expression lhs2> !== <Expression rhs2>`
+        //     when bprintln("EEEEEEE <e>"), Expression lhs2 := peval(lhs, env, admin),
+        //         Expression rhs2 := peval(rhs, env, admin)
             
         case Expression e => eval(e, env).expr
-            when isStatic(e, env)
+            when isStatic(e, env), !isCode(e, env)
 
         // catch-all clause: if not dealt with by earlier cases, it's an error
         // because static data (code) is leaking into the dynamic world.
@@ -249,9 +262,23 @@ Statement peval(Statement s, Env env, Admin admin) {
             => truthy(val) ? peval(s, env, admin) : (Statement)`;`
             when isStatic(cond, env), expr(Expression val) := eval(cond, env)
 
+        case i:(Statement)`if (<Expression cond>) <Statement s>` 
+            => (Statement)`if (<Expression cond2>) <Statement s2>`
+            when bprintln("IFFFFFFF <i>\n <env<0>>"),
+                 Expression cond2 := peval(cond, env, admin),
+                Statement s2 := peval(s, env, admin)
+
+
         case (Statement)`if (<Expression cond>) <Statement s1> else <Statement s2>` 
             => truthy(val) ? peval(s1, env, admin) : peval(s2, env, admin)
             when isStatic(cond, env), expr(Expression val) := eval(cond, env)
+
+
+        case (Statement)`if (<Expression cond>) <Statement s1> else <Statement s2>` 
+            => (Statement)`if (<Expression cond2>) <Statement s12> else <Statement s22>` 
+            when Expression cond2 := peval(cond, env, admin),
+                Statement s12 := peval(s1, env, admin),
+                Statement s22 := peval(s1, env, admin)
 
         case (Statement)`for (const <Id x> of <Id y>) <Statement s>` 
             => unroll(x, s, env["<y>"].code, env, admin)
@@ -274,7 +301,7 @@ Statement peval(Statement s, Env env, Admin admin) {
             }
         }
 
-        case (Statement)`match (<Expression e>) {<MatchCase* cases>}`: {
+        case s:(Statement)`match (<Expression e>) {<MatchCase* cases>}`: {
             if ((Expression)`<Id x>` := e, isCode(x, env)) {                        
                 for ((MatchCase)`case <Pattern p>: <Statement* ss>` <- cases) {
                     if (success(list[Tree] bs) := matchTree(p, env["<x>"].code)) {
@@ -282,7 +309,7 @@ Statement peval(Statement s, Env env, Admin admin) {
                             env + ( "$<i+1>": code(bs[i]) | int i <- [0..size(bs)] ), admin);
                     }
                 }
-                throw "no matching pattern for `<env["<x>"].code>`";
+                throw "no matching case in <s.src> for `<env["<x>"].code>`";
             }
             else {
                 throw "only static variables are allowed in match conditions (not `<e>`)";
