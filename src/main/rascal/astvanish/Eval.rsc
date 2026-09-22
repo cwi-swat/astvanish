@@ -102,7 +102,6 @@ Symbol eltType(opt(Symbol s)) = s;
 @synopsis{Convert `match`'s cases to an ordinary switch statement}
 Statement toSwitch(Id x, MatchCase* cases, Sigs env, type[&T<:Tree] grammar) {
     Statement sw = (Statement)`switch (<Id x>._tag) {}`;
-
     
     void addCase(Expression guard, Statement* ss) {
         if ((Statement)`switch (<Expression cond>) {<CaseClause* cc>}` := sw) {

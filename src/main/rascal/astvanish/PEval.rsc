@@ -23,8 +23,7 @@ start[Source] peval(Tree prog, loc root=|project://astvanish/|) {
     if (p == "") {
         throw "no partial-eval directive found";
     }
-    start[Source] eval = parseAV(root + p);
-    return peval(eval, (s: code(prog.top)), f);   
+    return peval(parseAV(root + p), (s: code(prog.top)), f);   
 }
 
 @synopsis{Extract the partial evaluation directive from a comment}
@@ -32,7 +31,7 @@ tuple[str eval, str func, str static] extractPEvalDirective(Tree code) {
     visit (code) {
         // assuming Comment from lang::std::Comment
         case Comment c: {
-            if (/^\/\/@@ <path:[^:\ ]*>: <f:[a-zA-Z0-9]+>\(<par:[^)]*>\)/ := "<c>") {
+            if (/^\/\/@@ <path:[^:\ ]*>: <f:[a-zA-Z0-9_]+>\(<par:[a-zA-Z0-9_]*>\)/ := "<c>") {
                 return <path, f, par>;
             }
         }
@@ -41,7 +40,7 @@ tuple[str eval, str func, str static] extractPEvalDirective(Tree code) {
 }
 
 
-@synopsis{Partial evaluate function `f` in match/with-enhanced Javascript `code` given `static` arguments}
+@synopsis{Partially evaluate function `f` in match/with-enhanced Javascript `code` given `static` arguments}
 start[Source] peval(start[Source] code, Env static, str f) {
     Admin admin = newAdmin(code);
     if ([Function func] := admin.lookup(f)) {
@@ -84,8 +83,6 @@ alias Admin = tuple[
 
 @synopsis{Constructor for the `Admin` interface}
 Admin newAdmin(start[Source] code) {
-    start[Source] gen = (start[Source])``;
-
     list[Function] lookup_(str name) {
         top-down visit (code) {
             case Function f: {
@@ -105,6 +102,9 @@ Admin newAdmin(start[Source] code) {
 
     // we memoize on the function prefix `x` and the static args
     str hash(Id x, Env env) = ( "<x>" | it + " " + squeeze("<env[k].code>", #[\ \t\n]) | str k <- sort(env<0>) );
+
+    // the generated source code
+    start[Source] gen = (start[Source])``;
 
     Id declare_(Id prefix, list[Id] ids, Statement* body, Env env) {
 
@@ -138,9 +138,7 @@ Admin newAdmin(start[Source] code) {
         return newId;
     }
 
-    start[Source] code_() { 
-        return gen; 
-    }
+    start[Source] code_() = gen;
 
     return <lookup_, declare_, code_>;
 }
@@ -149,12 +147,11 @@ Admin newAdmin(start[Source] code) {
 
 @synopsis{Partition formal parameters and actual arguments into static environment and dynamic args}
 tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* args, Env env) {
-    Value toValue((Expression)`<Id x>`, Env env) = env["<x>"];
-    default Value toValue(Expression e, Env _) = expr(e);
-
     lrel[Id, Expression] paired = zip2([ p | Id p <- params ], [ e | Expression e <- args ]);
     
-    Env staticEnv = ( "<p>" : toValue(a, env) | <Id p, Expression a> <- paired, isStatic(a, env) );
+    Env staticEnv = ( "<p>" : eval(a, env) | <Id p, Expression a> <- paired, isStatic(a, env) );
+
+    // todo: call peval on a here? probably yes, because dyn params might be closures with static in them.
     lrel[Id, Expression] dynArgs = [ <x, a> | <Id x, Expression a> <- paired, !isStatic(a, env)];
 
     return <staticEnv, dynArgs>;
@@ -204,15 +201,27 @@ Statement* peval(Statement* ss, Env env, Admin admin) {
     }
 }
 
-@synopsis{Partially evaluate a statement}
-Statement peval(Statement s, Env env, Admin admin) {
-    //println("PEVAL: <s>");
-    return top-down-break visit (s) {
+@synopsis{Partially evaluate an expression}
+Expression peval(Expression e, Env env, Admin admin) {
+    return top-down-break visit (e) {
+        // todo: something doesn't feel right about having two cases here
         case (Expression)`<Id f>(<{Expression ","}* args>)` 
             => peval(func, env, args, admin) 
                 when any(Expression e <- args, isStatic(e, env)), 
                     [Function func] := admin.lookup("<f>")
 
+        case (Expression)`<Id f>(<{Expression ","}* args>)`: {
+            args = top-down-break visit (args) {
+                case Expression e => peval(e, env, admin)
+            }
+            insert (Expression)`<Id f>(<{Expression ","}* args>)`;
+        }
+        
+        case (Expression)`<Function f>`: {
+            f.statements = peval(f.statements, env, admin);
+            insert (Expression)`<Function f>`;
+        }
+            
         case Expression e => eval(e, env).expr
             when isStatic(e, env)
 
@@ -223,6 +232,28 @@ Statement peval(Statement s, Env env, Admin admin) {
                 throw "code cannot escape into the dynamic world (<x>, <x.src>)";
             }
         }
+    };
+}
+
+@synopsis{Partially evaluate a statement}
+Statement peval(Statement s, Env env, Admin admin) {
+    //println("PEVAL: <s>");
+    return top-down-break visit (s) {
+        // case (Expression)`<Id f>(<{Expression ","}* args>)` 
+        //     => peval(func, env, args, admin) 
+        //         when any(Expression e <- args, isStatic(e, env)), 
+        //             [Function func] := admin.lookup("<f>")
+
+        // case Expression e => eval(e, env).expr
+        //     when isStatic(e, env)
+
+        // // catch-all clause: if not dealt with by earlier cases, it's an error
+        // // because static data (code) is leaking into the dynamic world.
+        // case (Expression)`<Id x>` : {
+        //     if (isCode(x, env)) {
+        //         throw "code cannot escape into the dynamic world (<x>, <x.src>)";
+        //     }
+        // }
 
         case (Statement)`if (<Expression cond>) <Statement s>` 
             => truthy(val) ? peval(s, env, admin) : (Statement)`;`
@@ -267,6 +298,8 @@ Statement peval(Statement s, Env env, Admin admin) {
                 throw "only static variables are allowed in match conditions (not `<e>`)";
             }
         }
+
+        case Expression e => peval(e, env, admin)
     }        
 }
 

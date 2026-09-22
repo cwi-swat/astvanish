@@ -103,7 +103,7 @@ test bool matchType()
 start[Source] parseAV(loc l) = parse(#start[Source], l);
 
 /*
- * Abtract matching / against grammar prods 
+ * Abstract matching / against grammar prods 
  */ 
 
 

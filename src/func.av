@@ -1,9 +1,4 @@
 
-
-// directive to trigger partial eval from the IDE, resulting in src/demo.js
-// NO: this should be in demo.func itself, so we know the grammar
-//@@ src/func.av: Run(prog)
-
 function Run(prog) {
     var env = {};
     with (_ _ : prog) {
@@ -38,8 +33,5 @@ function Eval(exp, env) {
             result = env[$1.toString()](args);
     }
 
-    console.log(exp.src);
-    console.log(env);   
-    console.log(result);
     return result;
 }

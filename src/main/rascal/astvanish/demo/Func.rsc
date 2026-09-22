@@ -21,21 +21,21 @@ syntax Expr
 lexical Num = [0-9]+;
 
 start[Prog] aProg() = (start[Prog])
-`//@@ src/func.av: Run(prog)
-'
-'def factorial(n) =
-'   if n \> 1 then
-'        n * factorial(n - 1)
-'   else
-'        1
-'   fi;
-'
-'
-'def power(x, n) =
-'  if n \> 1 then
-'     x * power(x, n - 1)
-'  else 
-'     n
-'  fi ;
-'
-'factorial(power(2, 3))`;
+    `//@@ src/func.av: Run(prog)
+    '
+    'def factorial(n) =
+    '   if n \> 1 then
+    '        n * factorial(n - 1)
+    '   else
+    '        1
+    '   fi;
+    '
+    '
+    'def power(x, n) =
+    '  if n \> 1 then
+    '     x * power(x, n - 1)
+    '  else 
+    '     n
+    '  fi ;
+    '
+    'factorial(power(2, 3))`;

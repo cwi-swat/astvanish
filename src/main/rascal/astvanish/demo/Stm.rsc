@@ -11,13 +11,13 @@ syntax Trans = trans: Id event "=\>" Id target;
 
 
 start[Machine] doors() = (start[Machine])
-                           `//@@ src/stm.av: run(m)
-                           '
-                           'machine 
-                           '  state closed
-                           '     open =\> opened
-                           '  end
-                           '  state opened
-                           '     close =\> closed
-                           '  end
-                           'end`;
+    `//@@ src/stm.av: run(m)
+    '
+    'machine 
+    '  state closed
+    '     open =\> opened
+    '  end
+    '  state opened
+    '     close =\> closed
+    '  end
+    'end`;
