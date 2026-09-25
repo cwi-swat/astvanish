@@ -142,7 +142,7 @@ set[Message] check((MatchCase)`case <Pattern p>: <Statement* ss>`, Env env, Sig 
 }
 
 
-@synopsis{Infer the static parameters per function according to match/with use}
+@synopsis{Infer the static parameters according to variable convention: $ means static}
 FEnv inferStatics(start[Source] code) {
     FEnv env = ();
     top-down-break visit (code) {
@@ -150,35 +150,6 @@ FEnv inferStatics(start[Source] code) {
             env["<f>"] = [ startsWith(x, "$") ? <x, static()> : <x, dyn()> 
                 | Id p <- params, str x := "<p>" ];
         }
-            
-        //     bool isParam(Id x) = any(Id y <- params, x := y);
-
-
-        //     // this has the nasty side-effect that if a user makes a mistake
-        //     // and passes a non-Id expression to match/with it'll cause dynamic here.
-
-        //     lrel[str, BindingTime] statics = 
-        //         [ <"<x>", static()> | /(Statement)`match (<Id x>) {<MatchCase* _>}` := ss, isParam(x) ]
-        //         + [ <"<x>", static()> | /(Statement)`with (<Pattern _> : <Id x>) <Statement _>` := ss, isParam(x) ];
-            
-        //     lrel[str, BindingTime] dyns = [ <"<x>", dyn()> | Id x <- params, "<x>" notin statics<0> ];
-
-
-        //     // this is a bit convoluted but we need to preserve the order of parameters.
-        //     tuple[str, BindingTime] bindingTimeOf(str x) = <x, static()>
-        //         when <x, static()> in statics;
-
-        //     tuple[str, BindingTime] bindingTimeOf(str x) = <x, dyn()>
-        //         when <x, dyn()> in dyns;
-                
-
-        //     lrel[str, BindingTime] sig = [ bindingTimeOf("<x>") | Id x <- params ];
-
-        //     env["<f>"] = sig;
-        //}
     }
-
-    iprintln(env);
-
     return env;
 }

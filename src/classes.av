@@ -35,8 +35,8 @@ function define($schema) {
     return m;
 }
 
-function checkType(type, x) {
-    match (type) {
+function checkType($type, x) {
+    match ($type) {
         case int : if (Number.isInteger(x)) return true;
         case bool : if (x === true || x === false) return true;
         case str : if (typeof x === 'string') return true;
