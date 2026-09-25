@@ -53,7 +53,7 @@ syntax Expr
   ;
 
 start[Form] aForm() = (start[Form])
-`//@@ src/ql.av: main(ql)
+`//@@ src/ql.av: main($ql)
 '
 'form "Tax Office example" { 
 '  "Did you buy a house in 2010?"

@@ -17,7 +17,7 @@ syntax Type
 
 
 start[Schema] aSchema() =  (start[Schema])`
-    '//@@ src/classes.av: define(schema)
+    '//@@ src/classes.av: define($schema)
     '
     'schema Example
     'class Person {

@@ -31,7 +31,7 @@ tuple[str eval, str func, str static] extractPEvalDirective(Tree code) {
     visit (code) {
         // assuming Comment from lang::std::Comment
         case Comment c: {
-            if (/^\/\/@@ <path:[^:\ ]*>: <f:[a-zA-Z0-9_]+>\(<par:[a-zA-Z0-9_]*>\)/ := "<c>") {
+            if (/^\/\/@@ <path:[^:\ ]*>: <f:[a-zA-Z0-9_]+>\(<par:\$[a-zA-Z0-9_]*>\)/ := "<c>") {
                 return <path, f, par>;
             }
         }

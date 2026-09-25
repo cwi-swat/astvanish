@@ -1,7 +1,7 @@
 
 
-function run(m, state, event) {
-    with (machine _ end : m) {
+function run($m, state, event) {
+    with (machine _ end : $m) {
         for (const s of $1) {
             console.log(s.src);
             with (state _ _ end: s) {
@@ -21,8 +21,8 @@ function run(m, state, event) {
 }
 
 
-function main(state, event, m) {
-    match (m) {
+function main(state, event, $m) {
+    match ($m) {
         case machine _ end: 
             for (const s of $1) {
                 console.log(s.src);

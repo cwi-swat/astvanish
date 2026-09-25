@@ -1,8 +1,8 @@
 
 
-function define(schema) {
+function define($schema) {
     var m = {};
-    with (schema _ _ : schema) {
+    with (schema _ _ : $schema) {
         m.__name = $1.toString();
         for (const c of $2) {
             with (class _ { _ } : c) {

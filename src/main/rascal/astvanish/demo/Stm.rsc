@@ -11,7 +11,7 @@ syntax Trans = trans: Id event "=\>" Id target;
 
 
 start[Machine] doors() = (start[Machine])
-    `//@@ src/stm.av: run(m)
+    `//@@ src/stm.av: run($m)
     '
     'machine 
     '  state closed
