@@ -21,7 +21,7 @@ syntax Expr
 lexical Num = [0-9]+;
 
 start[Prog] aProg() = (start[Prog])
-    `//@@ src/func.av: Run($prog)
+    `//@@ src/func.av: run($prog)
     '
     'def factorial(n) =
     '   if n \> 1 then

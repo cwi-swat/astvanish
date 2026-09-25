@@ -131,6 +131,7 @@ Admin newAdmin(start[Source] code) {
             idCounters[name] = 0;
         }
 
+        // eval has special meaning in JS so we avoid conflicts
         if ((Id)`eval` := newId) {
             newId = (Id)`eval_`;
         }
@@ -154,8 +155,8 @@ Admin newAdmin(start[Source] code) {
 
 @synopsis{Partition formal parameters and actual arguments into static environment and dynamic args}
 tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* args, Env env, Admin admin) {
-    println("PARAMS: <params>");
-    println("ARGS: <args>");
+    // println("PARAMS: <params>");
+    // println("ARGS: <args>");
 
     lrel[Id, Expression] paired = zip2([ p | Id p <- params ], [ e | Expression e <- args ]);
     
@@ -269,8 +270,7 @@ Statement peval(Statement s, Env env, Admin admin) {
 
         case i:(Statement)`if (<Expression cond>) <Statement s>` 
             => (Statement)`if (<Expression cond2>) <Statement s2>`
-            when bprintln("IFFFFFFF <i>\n <env<0>>"),
-                 Expression cond2 := peval(cond, env, admin),
+            when Expression cond2 := peval(cond, env, admin),
                 Statement s2 := peval(s, env, admin)
 
 

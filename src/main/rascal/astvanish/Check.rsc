@@ -26,7 +26,7 @@ data BindingTime
 
 @synopsis{Check every function according to its signature with binding times}
 set[Message] check(start[Source] code) {
-    FEnv env = inferStatics(code);
+    FEnv env = extractBindingTimes(code);
     set[Message] msgs = {};
 
     top-down-break visit (code) {
@@ -142,8 +142,8 @@ set[Message] check((MatchCase)`case <Pattern p>: <Statement* ss>`, Env env, Sig 
 }
 
 
-@synopsis{Infer the static parameters according to variable convention: $ means static}
-FEnv inferStatics(start[Source] code) {
+@synopsis{Extract the static parameters according to variable convention: $ means static}
+FEnv extractBindingTimes(start[Source] code) {
     FEnv env = ();
     top-down-break visit (code) {
         case (Function)`function <Id f>(<{Id ","}* params>) {<Statement* ss>}`: {
