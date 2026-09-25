@@ -170,13 +170,22 @@ tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* a
     return <staticEnv, dynArgs>;
 }
 
+bool isEmptyBody(Statement* ss) = (true | it && isEmptyBody(s) | Statement s <- ss);
+bool isEmptyBody((Statement)`{}`) = true;
+bool isEmptyBody((Statement)`;`) = true;
+
+default bool isEmptyBody(Statement _) = false;
+
 @synopsis{Partially evaluate a function definition given the current static environment and call-site arguments}
 Expression peval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`, Env env, {Expression ","}* args, Admin admin) {
     <newEnv, dynArgs> = partition(fs, args, env, admin);
 
     Statement* newBody = peval(body, newEnv, admin);
 
-    if ([] == [ s | Statement s <- newBody]) {
+    println("BODY: `<newBody>`");
+    println("ISEMPTY: <isEmptyBody(newBody)>");
+    if (isEmptyBody(newBody)) {
+        println("EMPTY body!!!");
         return (Expression)`undefined`;
     }
     
@@ -333,7 +342,7 @@ Statement peval(Statement s, Env env, Admin admin) {
                 ? (Statement)`;` : (Statement)`<Expression e2>;`
             when Expression e2 := peval(e, env, admin)
 
-        //case Expression e => peval(e, env, admin)
+        case Expression e => peval(e, env, admin)
     }        
 }
 
