@@ -15,6 +15,7 @@ set[LanguageService] myContributor()
     = {parser(getParser(#start[Source]))};
 
 
+
 Language getLanguage()
   = language(pathConfig(srcs = [|std:///|, |project://astvanish/src/main/rascal|]),
             "ASTVanish", "av", "astvanish::IDE", "myContributor");

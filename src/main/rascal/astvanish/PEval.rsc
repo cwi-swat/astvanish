@@ -175,6 +175,10 @@ Expression peval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`
     <newEnv, dynArgs> = partition(fs, args, env, admin);
 
     Statement* newBody = peval(body, newEnv, admin);
+
+    if ([] == [ s | Statement s <- newBody]) {
+        return (Expression)`undefined`;
+    }
     
     Id newName = admin.declare(f, dynArgs<0>, newBody, newEnv);
     
@@ -192,9 +196,13 @@ Statement unroll(Id x, Statement s, Tree seq, Env env, Admin admin) {
         throw "loop unrolling only over regulars, not <seq.prod>";
     }
 
-    // todo: this does not work with the `opt` regular
+    if (seq.prod.def is opt) {
+        throw "unsupported regular <seq.prod.def>";
+    }
+
     int step = size(seq.prod.def.separators);
 
+    
     for (int i <- [0,step+1..size(seq.args)]) {
         if ((Statement)`{<Statement* ss>}` := unrolled) {
             Statement new = peval(s, env + ("<x>": code(seq.args[i])), admin);
@@ -268,7 +276,7 @@ Statement peval(Statement s, Env env, Admin admin) {
             => truthy(val) ? peval(s, env, admin) : (Statement)`;`
             when isStatic(cond, env), expr(Expression val) := eval(cond, env)
 
-        case i:(Statement)`if (<Expression cond>) <Statement s>` 
+        case (Statement)`if (<Expression cond>) <Statement s>` 
             => (Statement)`if (<Expression cond2>) <Statement s2>`
             when Expression cond2 := peval(cond, env, admin),
                 Statement s2 := peval(s, env, admin)
@@ -321,7 +329,11 @@ Statement peval(Statement s, Env env, Admin admin) {
             }
         }
 
-        case Expression e => peval(e, env, admin)
+        case (Statement)`<Expression e>;` => (Expression)`undefined` := e2 
+                ? (Statement)`;` : (Statement)`<Expression e2>;`
+            when Expression e2 := peval(e, env, admin)
+
+        //case Expression e => peval(e, env, admin)
     }        
 }
 
