@@ -1,29 +1,29 @@
 
 var update;
 
-function main(ql) {
+function main($ql) {
     var env = {};
-    initialize(ql, env);
-    render(ql, env);
-    update = compute(ql, env);
+    initialize($ql, env);
+    render($ql, env);
+    update = compute($ql, env);
 }
 
-function initialize(ql, env) {
-    with (form _ { _ } : ql) 
+function initialize($ql, env) {
+    with (form _ { _ } : $ql) 
         for (const q of $2) 
             initializeQuestion(q, env);
 }
 
-function defaultFor(type) {
-    match (type) {
+function defaultFor($type) {
+    match ($type) {
         case int: return 0;
         case bool: return false;
         case str: return '';
     }
 }
 
-function initializeQuestion(q, env) {
-    match (q) {
+function initializeQuestion($q, env) {
+    match ($q) {
         case _ _ \: _ :
             env[$2.toString()] = defaultFor($3);
 
@@ -44,14 +44,14 @@ function initializeQuestion(q, env) {
     }
 }
 
-function render(ql, env) {
-    with (form _ { _ } : ql) 
+function render($ql, env) {
+    with (form _ { _ } : $ql) 
         for (const q of $2) 
             renderQuestion(q, env);
 }
 
-function compute(ql, env) {
-    with (form _ { _ } : ql) {
+function compute($ql, env) {
+    with (form _ { _ } : $ql) {
         return function (x, val) {
             env[x] = val;
             var change = false;
@@ -64,8 +64,8 @@ function compute(ql, env) {
     }
 }
 
-function computeQuestion(q, env) {
-    match (q) {
+function computeQuestion($q, env) {
+    match ($q) {
         case _ _ \: _ :
             /* nop */
 
@@ -96,13 +96,13 @@ function computeQuestion(q, env) {
 }
 
 
-function renderQuestion(q, env) {
-    match (q) {
+function renderQuestion($q, env) {
+    match ($q) {
         case _ _ \: _ :
-            widget($3, $1.toString(), $2.toString(), false, env, function (x) { update($2.toString(), x.value); });
+            widget($3, $1, $2, false, env, function (x) { update($2.toString(), x.value); });
 
         case _ _ \: _ = _ :
-            widget($3, $1.toString(), $2.toString(), true, env, null);
+            widget($3, $1, $2, true, env, null);
 
         case { _ } :
             for (const q of $1) {
@@ -125,19 +125,19 @@ function renderQuestion(q, env) {
     }
 }
 
-function widget(type, label, name, readOnly, env, func) {
-    page.append(label);
+function widget($type, $label, $name, readOnly, env, func) {
+    page.append($label.toString());
     var elt = createElement("input");            
-    match (type) {
+    match ($type) {
         case int : 
             elt.setAttribute("type", "number");
-            elt.value = env[name];
+            elt.value = env[$name.toString()];
         case bool :
             elt.setAttribute("type", "checkbox");
-            elt.checked = env[name];
+            elt.checked = env[$name.toString()];
         case str :
             elt.setAttribute("type", "text");
-            elt.value = env[name];
+            elt.value = env[$name.toString()];
     }
     page.append(elt);
     if (readOnly) {
@@ -148,8 +148,8 @@ function widget(type, label, name, readOnly, env, func) {
     }
 }
 
-function eval(e, env) {
-    match (e) {
+function eval($e, env) {
+    match ($e) {
         case _@Id : return env[$1.toString()];
         case _@Int : return parseInt($1.toString());
         case _@Str : return unquote($1.toString());

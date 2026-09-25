@@ -5,6 +5,7 @@ import Message;
 import List;
 import ParseTree;
 import IO;
+import String;
 
 
 @synopsis{Signatures indicating whether parameters are static or dynamic}
@@ -140,37 +141,44 @@ set[Message] check((MatchCase)`case <Pattern p>: <Statement* ss>`, Env env, Sig 
     return check(ss, env + { "$<i + 1>" | int i <- [0..size(vars)] }, bt, fenv);
 }
 
+
 @synopsis{Infer the static parameters per function according to match/with use}
 FEnv inferStatics(start[Source] code) {
     FEnv env = ();
     top-down-break visit (code) {
         case (Function)`function <Id f>(<{Id ","}* params>) {<Statement* ss>}`: {
-
-            bool isParam(Id x) = any(Id y <- params, x := y);
-
-
-            // this has the nasty side-effect that if a user makes a mistake
-            // and passes a non-Id expression to match/with it'll cause dynamic here.
-
-            lrel[str, BindingTime] statics = 
-                [ <"<x>", static()> | /(Statement)`match (<Id x>) {<MatchCase* _>}` := ss, isParam(x) ]
-                + [ <"<x>", static()> | /(Statement)`with (<Pattern _> : <Id x>) <Statement _>` := ss, isParam(x) ];
+            env["<f>"] = [ startsWith(x, "$") ? <x, static()> : <x, dyn()> 
+                | Id p <- params, str x := "<p>" ];
+        }
             
-            lrel[str, BindingTime] dyns = [ <"<x>", dyn()> | Id x <- params, "<x>" notin statics<0> ];
+        //     bool isParam(Id x) = any(Id y <- params, x := y);
 
 
-            // this is a bit convoluted but we need to preserve the order of parameters.
-            tuple[str, BindingTime] bindingTimeOf(str x) = <x, static()>
-                when <x, static()> in statics;
+        //     // this has the nasty side-effect that if a user makes a mistake
+        //     // and passes a non-Id expression to match/with it'll cause dynamic here.
 
-            tuple[str, BindingTime] bindingTimeOf(str x) = <x, dyn()>
-                when <x, dyn()> in dyns;
+        //     lrel[str, BindingTime] statics = 
+        //         [ <"<x>", static()> | /(Statement)`match (<Id x>) {<MatchCase* _>}` := ss, isParam(x) ]
+        //         + [ <"<x>", static()> | /(Statement)`with (<Pattern _> : <Id x>) <Statement _>` := ss, isParam(x) ];
+            
+        //     lrel[str, BindingTime] dyns = [ <"<x>", dyn()> | Id x <- params, "<x>" notin statics<0> ];
+
+
+        //     // this is a bit convoluted but we need to preserve the order of parameters.
+        //     tuple[str, BindingTime] bindingTimeOf(str x) = <x, static()>
+        //         when <x, static()> in statics;
+
+        //     tuple[str, BindingTime] bindingTimeOf(str x) = <x, dyn()>
+        //         when <x, dyn()> in dyns;
                 
 
-            lrel[str, BindingTime] sig = [ bindingTimeOf("<x>") | Id x <- params ];
+        //     lrel[str, BindingTime] sig = [ bindingTimeOf("<x>") | Id x <- params ];
 
-            env += ("<f>" : statics + dyns );
-        }
+        //     env["<f>"] = sig;
+        //}
     }
+
+    iprintln(env);
+
     return env;
 }

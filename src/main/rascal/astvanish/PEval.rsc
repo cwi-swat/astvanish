@@ -131,6 +131,10 @@ Admin newAdmin(start[Source] code) {
             idCounters[name] = 0;
         }
 
+        if ((Id)`eval` := newId) {
+            newId = (Id)`eval_`;
+        }
+
         memo[key] = newId;
 
         if ((start[Source])`<Statement* ss>` := gen) {
@@ -193,7 +197,8 @@ Statement unroll(Id x, Statement s, Tree seq, Env env, Admin admin) {
     for (int i <- [0,step+1..size(seq.args)]) {
         if ((Statement)`{<Statement* ss>}` := unrolled) {
             Statement new = peval(s, env + ("<x>": code(seq.args[i])), admin);
-            unrolled = (Statement)`{<Statement* ss> <Statement new>}`;
+            unrolled = (Statement)`{<Statement* ss>
+                                  '<Statement new>}`;
         }
     }
     
