@@ -1,5 +1,6 @@
 
 
+
 function run($m, state, event) {
     with (machine _ end : $m) {
         for (const s of $1) {

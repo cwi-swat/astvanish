@@ -176,10 +176,8 @@ set[Message] checkRecursion(CallGraph cg) {
     set[Message] msgs = {};
 
     for (<Node f, f> <- base+) { // NB: transitive closure here; not in def of base
-        println("f = <f>");
 
         for (list[Node] path <- paths(f, base), size(path) > 1, path[0] == path[-1]) {
-            println("PATH = <path>");
             bool good = false;
             list[loc] offenders = [];
 
@@ -212,9 +210,6 @@ bool isBadRecursion(Node from, Node to) {
     // todo: make this into a nice reducer, if possible
     for (str a1 <- from.args, str a2 <- to.args) {
         // we require at least one strictly decreasing argument pass
-        println("a1 = <a1>");
-        println("a2 = <a2>");
-        println("isDecreasing: <isDecreasing(a1, a2)>");
         if (isDecreasing(a1, a2)) {
             return false;
         }

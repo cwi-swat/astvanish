@@ -12,6 +12,7 @@ function define($schema) {
                         with (_ \: _ : f) {
                             data[$1.toString()] = null;
                         }
+                        
                     }
                     var obj = {};
                     for (const f of $2) {
