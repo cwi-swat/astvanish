@@ -4,8 +4,12 @@
 function run($p) {
     match ($p) {
         case while _ do _ od: 
-            runWhile($p, 1);
+            runWhileDummy($p, 1);
     }
+}
+
+function runWhileDummy($p, count) {
+    runWhile($p, count);
 }
 
 function dummy($wh, count) {
