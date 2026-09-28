@@ -1,25 +1,37 @@
 module astvanish::IDE
 
 import astvanish::Match;
-
+import astvanish::Check;
 
 import util::LanguageServer;
 import util::Reflective;
 
 import ParseTree;
 
-Tree(str, loc) getParser(type[&T<:Tree] t)
-  = Tree(str input, loc l) { return parse(t, input, l); };
 
-set[LanguageService] myContributor() 
-    = {parser(getParser(#start[Source]))};
+set[LanguageService] myContributor() = {
+    parsing(avParser(), usesSpecialCaseHighlighting = false),
+    analysis(avCheck, providesImplementations = false)
+};
 
 
+Tree (str, loc) avParser() = ParseTree::parser(#start[Source]);
 
-Language getLanguage()
-  = language(pathConfig(srcs = [|std:///|, |project://astvanish/src/main/rascal|]),
-            "ASTVanish", "av", "astvanish::IDE", "myContributor");
+Summary avCheck(loc l, start[Source] input) {
+    Summary s = summary(l);
+    s.messages = { <m.at, m> | Message m <- check(input)};
+    return s;
+}
 
 void main() {
-    registerLanguage(getLanguage());
+    registerLanguage(
+        language(
+            pathConfig(srcs = [|std:///|, |project://astvanish/src/main/rascal|]),
+            "ASTVanish",
+            {"av"},
+            "astvanish::IDE",
+            "myContributor"
+        )
+    );
 }
+
