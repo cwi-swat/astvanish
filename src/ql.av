@@ -8,6 +8,7 @@ function main($ql) {
     update = compute($ql, env);
 }
 
+
 function initialize($ql, env) {
     with (form _ { _ } : $ql) 
         for (const q of $2) 

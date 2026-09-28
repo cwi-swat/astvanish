@@ -172,22 +172,24 @@ alias Node = tuple[str func, list[str] args];
 
 @synopsis{Check for fully non-decreasing recursive call chains}
 set[Message] checkRecursion(CallGraph cg) {
-    rel[str, str] base = { <from, to> | <<str from, _>, _, <str to, _>> <- cg };
+    rel[Node, Node] base = cg<0, 2>;
     set[Message] msgs = {};
 
-    for (<str f, f> <- base+) { // NB: transitive closure here; not in def of base
-        
-        for (list[str] path <- paths(f, base), size(path) > 1, path[0] == path[-1]) {
+    for (<Node f, f> <- base+) { // NB: transitive closure here; not in def of base
+        println("f = <f>");
+
+        for (list[Node] path <- paths(f, base), size(path) > 1, path[0] == path[-1]) {
+            println("PATH = <path>");
             bool good = false;
             list[loc] offenders = [];
 
             for (int i <- [0..size(path)-1]) {
-                str from = path[i];
-                str to = path[i+1];
-                for (<n1:<from, _>, loc l, n2:<to, _>> <- cg) {
+                Node from = path[i];
+                Node to = path[i+1];
+                for (<from, loc l, to> <- cg) {
                     // this is a bit convoluted, but the intuition is
                     // "one good recursion on the recurive call chain is enough"
-                    if (!isBadRecursion(n1, n2)) {
+                    if (!isBadRecursion(from, to)) {
                         good = true;
                     }
                     else {
@@ -210,6 +212,9 @@ bool isBadRecursion(Node from, Node to) {
     // todo: make this into a nice reducer, if possible
     for (str a1 <- from.args, str a2 <- to.args) {
         // we require at least one strictly decreasing argument pass
+        println("a1 = <a1>");
+        println("a2 = <a2>");
+        println("isDecreasing: <isDecreasing(a1, a2)>");
         if (isDecreasing(a1, a2)) {
             return false;
         }
@@ -288,16 +293,16 @@ CallGraph extractCallGraph(start[Source] code) {
 
 
 @synopsis{Enumerate all paths starting at `n` in graph `g` (cycles allowed)}
-set[list[str]] paths(str n, rel[str, str] g) {
-    set[list[str]] results = {};
-    list[str] path = [n];
-    set[str] onPath = {n};          
+set[list[&T]] paths(&T n, rel[&T, &T] g) {
+    set[list[&T]] results = {};
+    list[&T] path = [n];
+    set[&T] onPath = {n};          
 
-    void dfs(str x) {
+    void dfs(&T x) {
         results += {path};
         bool hasSucc = false;
 
-        for (<x, str next> <- g) {
+        for (<x, &T next> <- g) {
             hasSucc = true;
             if (next in onPath) {
                 path += [next];
