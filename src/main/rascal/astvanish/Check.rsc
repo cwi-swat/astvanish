@@ -37,6 +37,7 @@ set[Message] check(start[Source] code) {
         }
     }
 
+    // we only check recursion when the rest is ok, since it assumes certain properties of the program
     if (msgs == {}) {
         CallGraph cg = extractCallGraph(code);
         msgs += checkRecursion(cg);
@@ -159,24 +160,17 @@ FEnv extractBindingTimes(start[Source] code) {
     return env;
 }
 
-bool isStatic((Expression)`<Id x>`) = isStatic(x);
-default bool isStatic(Expression _) = false;
 
 bool isStatic(Id x) = isStatic("<x>");
 bool isStatic(str x) = startsWith(x, "$");
 
+@synopsis{Call graph from function def to call site (`src` is call site)}
 alias CallGraph = rel[Node from, loc src, Node to];
 
+@synopsis{Node in the call graph; `args` represents the arguments as in "a.$1.$2" etc to indicate "decreasingness"}
 alias Node = tuple[str func, list[str] args];
 
-
-rel[str, str] myG() = {<"a","b">, <"b", "c">, <"b", "d">, <"c", "e">, <"e", "a">};
-
-
-
-
-
-
+@synopsis{Check for fully non-decreasing recursive call chains}
 set[Message] checkRecursion(CallGraph cg) {
     rel[str, str] base = { <from, to> | <<str from, _>, _, <str to, _>> <- cg };
     set[Message] msgs = {};
@@ -190,9 +184,9 @@ set[Message] checkRecursion(CallGraph cg) {
             for (int i <- [0..size(path)-1]) {
                 str from = path[i];
                 str to = path[i+1];
-                for (edge:<n1:<from, _>, loc l, n2:<to, _>> <- cg) {
+                for (<n1:<from, _>, loc l, n2:<to, _>> <- cg) {
                     // this is a bit convoluted, but the intuition is
-                    // "one good recursion on the recurive call chain is"
+                    // "one good recursion on the recurive call chain is enough"
                     if (!isBadRecursion(n1, n2)) {
                         good = true;
                     }
