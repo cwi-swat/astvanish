@@ -36,7 +36,6 @@ function initializeQuestion($q, env) {
             }
 
         case if ( _ ) _ else _ : 
-            initializeQuestion($q, env);
             initializeQuestion($2, env);
             initializeQuestion($3, env);
 

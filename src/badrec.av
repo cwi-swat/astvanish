@@ -1,0 +1,16 @@
+
+
+
+function run($p) {
+    match ($p) {
+        case _ _: {
+            sub($2, $p);
+        }
+    }
+}
+
+function sub($kid, $bla) {
+    with (_ _: $kid) {
+        run($1, $bla);
+    }
+}
