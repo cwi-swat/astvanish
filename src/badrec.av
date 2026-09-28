@@ -3,14 +3,20 @@
 
 function run($p) {
     match ($p) {
-        case _ _: {
-            sub($2, $p);
-        }
+        case while _ do _ od: 
+            runWhile($p, 1);
     }
 }
 
-function sub($kid, $bla) {
-    with (_ _: $kid) {
-        run($1, $bla);
+function dummy($wh, count) {
+    runWhile($wh, count);
+}
+
+function runWhile($wh, count) {
+    with (while _ do _ od: $wh) {
+        if (eval($1)) {
+            run($2);
+            dummy($wh, count + 1);
+        }
     }
 }

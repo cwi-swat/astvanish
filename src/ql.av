@@ -50,6 +50,7 @@ function render($ql, env) {
             renderQuestion(q, env);
 }
 
+
 function compute($ql, env) {
     with (form _ { _ } : $ql) {
         return function (x, val) {

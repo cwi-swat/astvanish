@@ -162,42 +162,10 @@ bool isStatic(str x) = startsWith(x, "$");
 
 alias CallGraph = rel[Node from, loc src, Node to];
 
-alias Node = tuple[str func, list[int] args];
+alias Node = tuple[str func, list[str] args];
 
 
 rel[str, str] myG() = {<"a","b">, <"b", "c">, <"b", "d">, <"c", "e">, <"e", "a">};
-
-/*
-ef enumerate_paths(start):
-    results = []
-    path = [start]
-    on_path = {start}
-
-    def dfs(node):
-        has_successors = False
-
-        for next_node in adj.get(node, []):
-            has_successors = True
-
-            if next_node in on_path:
-                # cycle: append the closing node, record it, then back out
-                path.append(next_node)
-                results.append(list(path))
-                path.pop()
-            else:
-                path.append(next_node)
-                on_path.add(next_node)
-                dfs(next_node)
-                path.pop()
-                on_path.remove(next_node)
-
-        if not has_successors:
-            # dead end: record the path as-is
-            results.append(list(path))
-
-    dfs(start)
-    return results
-*/
 
 
 set[list[str]] paths(str n, rel[str, str] g) {
@@ -240,30 +208,41 @@ set[list[str]] paths(str n, rel[str, str] g) {
 
 
 void checkCycle(CallGraph cg) {
-    rel[str, str] base = { <from, to> | <<str from, _>, _, <str to, _>> <- cg }+;
+    rel[str, str] base = { <from, to> | <<str from, _>, _, <str to, _>> <- cg };
 
-    for (<str f, f> <- base) {
-        // so f has recursion
-        for (list[str] path <- paths(f, base), path[0] == path[-1]) {
+    for (<str f, f> <- base+) { // NB: transitive closure here; not in def of base
+        for (list[str] path <- paths(f, base), size(path) > 1, path[0] == path[-1]) {
+            println("PATH: <path>");
             // for every cyclic path check that the call chain does not contain any bad recursion.
+
+            bool good = false;
+            lrel[Node, loc, Node] offenders = [];
+
             for (int i <- [0..size(path)-1]) {
                 str from = path[i];
                 str to = path[i+1];
-                for (edge:<n1:<from, list[int] w1>, loc l, n2:<to, list[int] w2>> <- cg) {
-                    if (isBadRecursion(n1, n2)) {
-                        println("Bad recursion:");
-                        println(edge);
+                for (edge:<n1:<from, list[str] w1>, loc l, n2:<to, list[str] w2>> <- cg) {
+                    if (!isBadRecursion(n1, n2)) {
+                        good = true;
+                    }
+                    else {
+                        offenders += [edge];
                     }
                 }
+            }
+
+            if (!good) {
+                println("BAD RECURSION:");
+                iprintln(offenders);
             }
         }
     }
 }
 
 bool isBadRecursion(Node from, Node to) {
-    for (int a1 <- from.args, int a2 <- to.args) {
+    for (str a1 <- from.args, str a2 <- to.args) {
         // we require at least one strictly decreasing argument pass
-        if (a2 > a1) {
+        if (isDecreasing(a1, a2)) {
             return false;
         }
     }
@@ -276,7 +255,7 @@ bool isDecreasing([], [_, *_]) = true;
 
 bool isDecreasing([], []) = false;
 
-bool isDecreasing([_, *xs], [_, *ys]) = isDecreasing(xs, ys);
+bool isDecreasing([str x, *xs], [x, *ys]) = isDecreasing(xs, ys);
 
 default bool isDecreasing(list[str] _, list[str] _) = false;
 
@@ -288,7 +267,7 @@ default bool isDecreasing(list[str] _, list[str] _) = false;
 CallGraph extractCallGraph(start[Source] code) {
     CallGraph cg = {};
 
-    CallGraph extract(Statement* ss, Node from, map[str, int] env) {
+    CallGraph extract(Statement* ss, Node from, map[str, list[str]] env) {
         CallGraph g = {};
         top-down-break visit (ss) {
             case Statement s: 
@@ -297,27 +276,27 @@ CallGraph extractCallGraph(start[Source] code) {
         return g;
     }
 
-    CallGraph extract(Statement s, Node from, map[str, int] env) {   
+    CallGraph extract(Statement s, Node from, map[str, list[str]] env) {   
         CallGraph g = {};
         top-down-break visit (s) {
             case (Statement)`match (<Id x>) {<MatchCase* cs>}`: {
                 for ((MatchCase)`case <Pattern p>: <Statement* ss>` <- cs) {
                     list[Token] vars = [ t | Token t <- p.tokens, isVar(t) ];
-                    g += extract(ss, from, env + ( "$<i+1>": env["<x>"] + 1 | int i <- [0..size(vars)]));
+                    g += extract(ss, from, env + ( "$<i+1>": env["<x>"] + ["$<i+1>"] | int i <- [0..size(vars)]));
                 }
             }
-            
+
             case (Statement)`with(<Pattern p>: <Id x>) <Statement s>`: {
                 list[Token] vars = [ t | Token t <- p.tokens, isVar(t) ];
-                g += extract(s, from, env + ( "$<i+1>": env["<x>"] + 1 | int i <- [0..size(vars)]));
+                g += extract(s, from, env + ( "$<i+1>": env["<x>"] + ["$<i+1>"] | int i <- [0..size(vars)]));
             }
 
             case (Statement)`for (const <Id k> of <Id x>) <Statement s>`: {
-                g += extract(s, from, env + ( "<k>" : env["<x>"] + 1 ));
+                g += extract(s, from, env + ( "<k>" : env["<x>"] + ["<k>"] ));
             }
 
             case e:(Expression)`<Id f>(<{Expression ","}* args>)`: {
-                g += {<from, e.src, <"<f>", [ env["<a>"] | Expression a <- args, "<a>" in env ]>>};
+                g += {<from, e.src, <"<f>", [ intercalate(".", env["<a>"]) | Expression a <- args, "<a>" in env ]>>};
             }
         }
         return g;
@@ -325,11 +304,59 @@ CallGraph extractCallGraph(start[Source] code) {
 
     top-down-break visit (code) {
         case (Function)`function <Id f>(<{Id ","}* xs>) {<Statement* ss>}`: {
-            Node from = <"<f>", [ 1 | Id x <- xs, isStatic(x) ]>;
-            cg += extract(ss, from, ( "<x>": 1 | Id x <- xs, isStatic(x) ));
+            Node from = <"<f>", [ "<x>" | Id x <- xs, isStatic(x) ]>;
+            cg += extract(ss, from, ( "<x>": ["<x>"] | Id x <- xs, isStatic(x) ));
         }
     }
 
     return cg;
 }
+
+// CallGraph extractCallGraph(start[Source] code) {
+//     CallGraph cg = {};
+
+//     CallGraph extract(Statement* ss, Node from, map[str, int] env) {
+//         CallGraph g = {};
+//         top-down-break visit (ss) {
+//             case Statement s: 
+//                 g += extract(s, from, env);
+//         }
+//         return g;
+//     }
+
+//     CallGraph extract(Statement s, Node from, map[str, int] env) {   
+//         CallGraph g = {};
+//         top-down-break visit (s) {
+//             case (Statement)`match (<Id x>) {<MatchCase* cs>}`: {
+//                 for ((MatchCase)`case <Pattern p>: <Statement* ss>` <- cs) {
+//                     list[Token] vars = [ t | Token t <- p.tokens, isVar(t) ];
+//                     g += extract(ss, from, env + ( "$<i+1>": env["<x>"] + 1 | int i <- [0..size(vars)]));
+//                 }
+//             }
+            
+//             case (Statement)`with(<Pattern p>: <Id x>) <Statement s>`: {
+//                 list[Token] vars = [ t | Token t <- p.tokens, isVar(t) ];
+//                 g += extract(s, from, env + ( "$<i+1>": env["<x>"] + 1 | int i <- [0..size(vars)]));
+//             }
+
+//             case (Statement)`for (const <Id k> of <Id x>) <Statement s>`: {
+//                 g += extract(s, from, env + ( "<k>" : env["<x>"] + 1 ));
+//             }
+
+//             case e:(Expression)`<Id f>(<{Expression ","}* args>)`: {
+//                 g += {<from, e.src, <"<f>", [ env["<a>"] | Expression a <- args, "<a>" in env ]>>};
+//             }
+//         }
+//         return g;
+//     }
+
+//     top-down-break visit (code) {
+//         case (Function)`function <Id f>(<{Id ","}* xs>) {<Statement* ss>}`: {
+//             Node from = <"<f>", [ "<x>" | Id x <- xs, isStatic(x) ]>;
+//             cg += extract(ss, from, ( "<x>": ["<x>"] | Id x <- xs, isStatic(x) ));
+//         }
+//     }
+
+//     return cg;
+// }
 
