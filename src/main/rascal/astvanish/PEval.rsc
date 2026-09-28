@@ -182,10 +182,7 @@ Expression peval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`
 
     Statement* newBody = peval(body, newEnv, admin);
 
-    println("BODY: `<newBody>`");
-    println("ISEMPTY: <isEmptyBody(newBody)>");
     if (isEmptyBody(newBody)) {
-        println("EMPTY body!!!");
         return (Expression)`undefined`;
     }
     

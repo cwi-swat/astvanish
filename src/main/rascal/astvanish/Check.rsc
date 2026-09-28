@@ -153,3 +153,68 @@ FEnv extractBindingTimes(start[Source] code) {
     }
     return env;
 }
+
+bool isStatic((Expression)`<Id x>`) = isStatic(x);
+default bool isStatic(Expression _) = false;
+
+bool isStatic(Id x) = isStatic("<x>");
+bool isStatic(str x) = startsWith(x, "$");
+
+alias CallGraph = rel[Node from, loc src, Node to];
+
+alias Node = tuple[str func, list[str] args];
+
+// bool isVar((Token)`_`) = true;
+// bool isVar((Token)`_@<Id _>`) = true;
+// default bool isVar(Token _) = false;
+
+void checkCycle(CallGraph cg) {
+    rel[Node, Node] tr = cg<0,2>+;
+    if (<Node n, n> <- tr) {
+        println("CYCLE:");
+        println(n);
+    }
+}
+
+CallGraph extractCallGraph(start[Source] code) {
+    CallGraph cg = {};
+
+    CallGraph extract(Statement* ss, Node from, map[str, list[str]] env) {
+        CallGraph g = {};
+        top-down-break visit (ss) {
+            case Statement s: 
+                g += extract(s, from, env);
+        }
+        return g;
+    }
+
+    CallGraph extract(Statement s, Node from, map[str, list[str]] env) {   
+        CallGraph g = {};
+        top-down-break visit (s) {
+            case (Statement)`match (<Id x>) {<MatchCase* cs>}`: {
+                for ((MatchCase)`case <Pattern p>: <Statement* ss>` <- cs) {
+                    list[Token] vars = [ t | Token t <- p.tokens, isVar(t) ];
+                    g += extract(ss, from, env + ( "$<i+1>": env["<x>"] + ["$<i+1>"] | int i <- [0..size(vars)]));
+                }
+            }
+            case (Statement)`with(<Pattern p>: <Id x>) <Statement s>`: {
+                list[Token] vars = [ t | Token t <- p.tokens, isVar(t) ];
+                g += extract(s, from, env + ( "$<i+1>": env["<x>"] + ["$<i+1>"] | int i <- [0..size(vars)]));
+            }
+            case e:(Expression)`<Id f>(<{Expression ","}* args>)`: {
+                g += {<from, e.src, <"<f>", [ intercalate(".", env["<a>"]) | Expression a <- args, isStatic(a) ]>>};
+            }
+        }
+        return g;
+    }
+
+    top-down-break visit (code) {
+        case (Function)`function <Id f>(<{Id ","}* xs>) {<Statement* ss>}`: {
+            Node from = <"<f>", [ "<x>" | Id x <- xs, isStatic(x) ]>;
+            cg += extract(ss, from, ( "<x>": ["<x>"] | Id x <- xs, isStatic(x) ));
+        }
+    }
+
+    return cg;
+}
+
