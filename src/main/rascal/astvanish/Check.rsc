@@ -202,6 +202,16 @@ set[Message] checkForBadRecursion(start[Source] code) {
 
     set[Message] msgs = {};
 
+    map[str, Function] funcs = ();
+
+    top-down-break visit (code) {
+        case Function f: {
+            if (f has name) {
+                funcs["<f.name>"] = f;
+            }
+        }
+    }
+
     void eval(Statement* ss, PEnv env) {
         top-down-break visit (ss) {
             case Statement s: 
@@ -236,18 +246,14 @@ set[Message] checkForBadRecursion(start[Source] code) {
                     fail v0; // fail causes visit to go into args, which might contain further calls.
                 }
                 memo += {e.src};
-                v: top-down-break visit (code) {
-                    case (Function)`function <Id name>(<{Id ","}* params>) {<Statement* ss>}`: {
-                        if (f !:= name) {
-                            fail v;
-                        }
-                        list[Expression] as = [ a | Expression a <- args ];
-                        list[Id] ps = [ p | Id p <- params ];
-                        assert size(as) == size(ps);
+                if ("<f>" in funcs) {
+                    Function func = funcs["<f>"];
+                    list[Expression] as = [ a | Expression a <- args ];
+                    list[Id] ps = [ p | Id p <- func.parameters ];
+                    assert size(as) == size(ps);
 
-                        newEnv = ( "<p>" : env["<a>"] | <Id p, Expression a> <- zip2(ps, as), isStatic(p), "<a>" in env);
-                        recurse(name, ss, newEnv);
-                    }
+                    newEnv = ( "<p>" : env["<a>"] | <Id p, Expression a> <- zip2(ps, as), isStatic(p), "<a>" in env);
+                    recurse(func.name, func.statements, newEnv);
                 }
             }
         }
@@ -261,8 +267,8 @@ set[Message] checkForBadRecursion(start[Source] code) {
         // find the earliest stack frame (before the current one) that caused recursion 
         if (int i <- [0..size(stack)-1], <name, PEnv prevEnv> := stack[i]) {
             // we are in a recursive call chain starting at i, causing the current frame
-            println("RECURSION");
-            iprintln(stack);
+            // println("RECURSION");
+            // iprintln(stack);
             if (!isDecreasing(prevEnv, stack[-1].env)) {
                 str chain = intercalate("-\>", [ stack[j].func | int j <- [i..size(stack)] ]);
                 msgs += {error("bad recursion: <chain>", f.src)};
@@ -273,11 +279,9 @@ set[Message] checkForBadRecursion(start[Source] code) {
         stack = stack[0..-1];
     }
 
-    top-down-break visit (code) {
-        case (Function)`function <Id f>(<{Id ","}* xs>) {<Statement* ss>}`: {
-            list[Id] ps = [ p | Id p <- xs ];
-            recurse(f, ss, ( "<p>" : ["<p>"] | Id p <- ps, isStatic(p)));
-        }
+    for (str f <- funcs) {
+        list[Id] ps = [ p | Id p <- funcs[f].parameters ];
+        recurse(funcs[f].name, funcs[f].statements, ( "<p>" : ["<p>"] | Id p <- ps, isStatic(p)));
     }
 
 
