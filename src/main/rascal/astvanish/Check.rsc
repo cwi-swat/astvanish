@@ -39,8 +39,7 @@ set[Message] check(start[Source] code) {
 
     // we only check recursion when the rest is ok, since it assumes certain properties of the program
     if (msgs == {}) {
-        CallGraph cg = extractCallGraph(code);
-        msgs += checkRecursion(cg);
+        msgs += detectBadRecursiveCallChains(code);
     }
 
     return msgs;
@@ -164,61 +163,17 @@ FEnv extractBindingTimes(start[Source] code) {
 bool isStatic(Id x) = isStatic("<x>");
 bool isStatic(str x) = startsWith(x, "$");
 
-@synopsis{Call graph from function def to call site (`src` is call site)}
-alias CallGraph = rel[Node from, loc src, Node to];
 
-@synopsis{Node in the call graph; `args` represents the arguments as in "a.$1.$2" etc to indicate "decreasingness"}
-alias Node = tuple[str func, list[str] args];
-
-@synopsis{Check for fully non-decreasing recursive call chains}
-set[Message] checkRecursion(CallGraph cg) {
-    rel[Node, Node] base = cg<0, 2>;
-    set[Message] msgs = {};
-
-    for (<Node f, f> <- base+) { // NB: transitive closure here; not in def of base
-
-        for (list[Node] path <- paths(f, base), size(path) > 1, path[0] == path[-1]) {
-            bool good = false;
-            list[loc] offenders = [];
-
-            for (int i <- [0..size(path)-1]) {
-                Node from = path[i];
-                Node to = path[i+1];
-                for (<from, loc l, to> <- cg) {
-                    // this is a bit convoluted, but the intuition is
-                    // "one good recursion on the recurive call chain is enough"
-                    if (!isBadRecursion(from, to)) {
-                        good = true;
-                    }
-                    else {
-                        offenders += [l];
-                    }
-                }
-            }
-
-            if (!good) {
-                msgs += {error("non-decreasing recursion", l) | loc l <- offenders };
-            }
+@synopsis{Determine whether whether any of the passed parameters are strictly decreasing}
+bool isDecreasing(map[str, list[str]] env1, map[str, list[str]] env2) {
+    // is this really correct? it basically says, if there's anything at all that's decreasing is ok...
+    for (list[str] l1 <- env1<1>, list[str] l2 <- env2<1>) {
+        if (isDecreasing(l1, l2)) {
+            return true;
         }
     }
-
-    return msgs;
+    return false;
 }
-
-@synopsis{Bad recursion happens if all combinations of formal vs actual are non-decreasing}
-bool isBadRecursion(Node from, Node to) {
-    // todo: make this into a nice reducer, if possible
-    for (str a1 <- from.args, str a2 <- to.args) {
-        // we require at least one strictly decreasing argument pass
-        if (isDecreasing(a1, a2)) {
-            return false;
-        }
-    }
-    return true;
-}
-
-@synopsis{Determine whether an argument `to` is strictly decreasing w.r.t. formal param `from`}
-bool isDecreasing(str from, str to) = isDecreasing(split(".", from), split(".", to));
 
 // the second is longer, it is "decreasing" because we go deeper into a term.
 bool isDecreasing([], [_, *_]) = true;
@@ -233,93 +188,102 @@ bool isDecreasing([str x, *xs], [x, *ys]) = isDecreasing(xs, ys);
 default bool isDecreasing(list[str] _, list[str] _) = false;
 
 
-@synopsis{Extract the call-graph from `code` with decreasing arguments annotations}
-CallGraph extractCallGraph(start[Source] code) {
-    CallGraph cg = {};
+set[Message] detectBadRecursiveCallChains(start[Source] code) {
 
-    CallGraph extract(Statement* ss, Node from, map[str, list[str]] env) {
-        CallGraph g = {};
+    set[loc] memo = {};
+
+    list[tuple[str, map[str, list[str]]]] stack = [];    
+
+    set[Message] msgs = {};
+
+    void eval(Statement* ss, map[str, list[str]] env) {
         top-down-break visit (ss) {
             case Statement s: 
-                g += extract(s, from, env);
+                eval(s, env);
         }
-        return g;
     }
 
-    CallGraph extract(Statement s, Node from, map[str, list[str]] env) {   
-        CallGraph g = {};
+    void eval(Statement s, map[str, list[str]] env) {   
         top-down-break visit (s) {
             case (Statement)`match (<Id x>) {<MatchCase* cs>}`: {
                 for ((MatchCase)`case <Pattern p>: <Statement* ss>` <- cs) {
                     list[Token] vars = [ t | Token t <- p.tokens, isVar(t) ];
-                    g += extract(ss, from, env + ( "$<i+1>": env["<x>"] + ["$<i+1>"] | int i <- [0..size(vars)]));
+                    eval(ss, env + ( "$<i+1>": env["<x>"] + ["$<i+1>"] | int i <- [0..size(vars)]));
                 }
             }
 
             case (Statement)`with(<Pattern p>: <Id x>) <Statement s>`: {
                 list[Token] vars = [ t | Token t <- p.tokens, isVar(t) ];
-                g += extract(s, from, env + ( "$<i+1>": env["<x>"] + ["$<i+1>"] | int i <- [0..size(vars)]));
+                eval(s, env + ( "$<i+1>": env["<x>"] + ["$<i+1>"] | int i <- [0..size(vars)]));
             }
 
             case (Statement)`for (const <Id k> of <Id x>) <Statement s>`: {
-                g += extract(s, from, env + ( "<k>" : env["<x>"] + ["<k>"] ));
+                eval(s, env + ( "<k>" : env["<x>"] + ["<k>"] ));
             }
 
             case (Statement)`for (let <Id k> of <Id x>) <Statement s>`: {
-                g += extract(s, from, env + ( "<k>" : env["<x>"] + ["<k>"] ));
+                eval(s, env + ( "<k>" : env["<x>"] + ["<k>"] ));
             }
 
             case e:(Expression)`<Id f>(<{Expression ","}* args>)`: {
-                g += {<from, e.src, <"<f>", [ intercalate(".", env["<a>"]) | Expression a <- args, "<a>" in env ]>>};
+                if (e.src in memo) {
+                    return;
+                }
+                memo += {e.src};
+                v: top-down-break visit (code) {
+                    case (Function)`function <Id name>(<{Id ","}* params>) {<Statement* ss>}`: {
+                        if (f !:= name) {
+                            fail v;
+                        }
+                        list[Expression] as = [ a | Expression a <- args ];
+                        list[Id] ps = [ p | Id p <- params ];
+                        newEnv = ( "<p>" : env["<a>"] | <Id p, Expression a> <- zip2(ps, as), isStatic(p), "<a>" in env);
+                        recurse(name, ss, newEnv);
+                    }
+                }
             }
         }
-        return g;
+    }
+
+
+    void recurse(Id f, Statement* ss, map[str, list[str]] env) {
+        str name = "<f>";
+        stack += [<name, env>];
+        for (int i <- [0..size(stack[0..-1])]) {
+            if (<name, map[str, list[str]] prevEnv> := stack[i]) {
+                // we are in a recursive call chain
+                // check that at least one intermediate frame is decreasing including the current one
+                // println("RECURSION");
+                // iprintln(stack);
+                bool ok = false;
+                for (int j <- [i..size(stack)-1]) {
+                    if (from:<_, map[str, list[str]] fenv> := stack[j], 
+                        to:<_, map[str, list[str]] tenv> := stack[j + 1]) {
+                            if (isDecreasing(fenv, tenv)) {
+                                ok = true;
+                            }
+                        }
+                }
+                if (!ok) {
+                    //println("BAD RECURSIVE CALL CHAIN");
+                    str chain = intercalate("-\>", [ stack[j][0] | int j <- [i..size(stack)] ]);
+                    msgs += {error("bad recursion: <chain>", f.src)};
+                }
+            }
+            
+        }
+        eval(ss, env);
+        stack = stack[0..-1];
     }
 
     top-down-break visit (code) {
         case (Function)`function <Id f>(<{Id ","}* xs>) {<Statement* ss>}`: {
-            Node from = <"<f>", [ "<x>" | Id x <- xs, isStatic(x) ]>;
-            cg += extract(ss, from, ( "<x>": ["<x>"] | Id x <- xs, isStatic(x) ));
+            list[Id] ps = [ p | Id p <- xs ];
+            recurse(f, ss, ( "<p>" : ["<p>"] | Id p <- ps, isStatic(p)));
         }
     }
 
-    return cg;
+
+    return msgs;
 }
 
-
-@synopsis{Enumerate all paths starting at `n` in graph `g` (cycles allowed)}
-set[list[&T]] paths(&T n, rel[&T, &T] g) {
-    set[list[&T]] results = {};
-    list[&T] path = [n];
-    set[&T] onPath = {n};          
-
-    void dfs(&T x) {
-        results += {path};
-        bool hasSucc = false;
-
-        for (<x, &T next> <- g) {
-            hasSucc = true;
-            if (next in onPath) {
-                path += [next];
-                results += {path};
-                path = path[0..-1];
-            }
-            else {
-                path += [next];
-                onPath += {next};
-                dfs(next);
-                path = path[0..-1];
-                onPath -= {next};
-            }
-        }
-
-        if (!hasSucc) {
-            results += {path};
-        }
-
-    }
-
-    dfs(n);
-
-    return results;
-}
