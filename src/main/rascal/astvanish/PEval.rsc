@@ -83,16 +83,16 @@ alias Admin = tuple[
 
 @synopsis{Constructor for the `Admin` interface}
 Admin newAdmin(start[Source] code) {
-    list[Function] lookup_(str name) {
-        top-down visit (code) {
-            case Function f: {
-                if (f has name, name := "<f.name>") {
-                    return [f];
-                }
+    map[str, Function] funcs = ();
+    top-down-break visit (code) {
+        case Function f: {
+            if (f has name) {
+                funcs["<f.name>"] = f;
             }
         }
-        return [];
     }
+
+    list[Function] lookup_(str name) = name in funcs ? [funcs[name]] : [];
 
     // counters per partially evaluated function to generate fresh identifiers
     map[str, int] idCounters = ();

@@ -14,15 +14,21 @@ function runWhileDummy($p, count) {
 }
 
 function dummy($wh, count) {
+    dummy2($wh, count);
+}
+
+function dummy2($wh, count) {
     runWhile($wh, count);
 }
 
 
 function runWhile($wh, count) {
-    with (while _ do _ od: $wh) {
-        if (eval($1)) {
-            run($2);
-            dummy($wh, count + 1);
+    function () {
+        with (while _ do _ od: $wh) {
+            if (eval($1)) {
+                run($2);
+                dummy($wh, count + 1);
+            }
         }
-    }
+    };
 }
