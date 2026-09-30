@@ -193,8 +193,12 @@ alias Frame = tuple[str func, PEnv env];
 
 
 set[Message] checkForBadRecursion(start[Source] code) {
+    // memoize on call sites, so that this analysis terminates itself
     set[loc] memo = {};
-    list[Frame] stack = [];    
+
+    // the abstract call stack
+    list[Frame] stack = [];   
+
     set[Message] msgs = {};
 
     void eval(Statement* ss, PEnv env) {
@@ -256,6 +260,8 @@ set[Message] checkForBadRecursion(start[Source] code) {
         // find the earliest stack frame that caused recursion 
         if (int i <- [0..size(stack)-1], <name, PEnv prevEnv> := stack[i]) {
             // we are in a recursive call chain starting at i, causing the current frame
+            // println("RECURSION");
+            // iprintln(stack);
             if (!isDecreasing(prevEnv, stack[-1].env)) {
                 str chain = intercalate("-\>", [ stack[j].func | int j <- [i..size(stack)] ]);
                 msgs += {error("bad recursion: <chain>", f.src)};
