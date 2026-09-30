@@ -17,6 +17,7 @@ function dummy($wh, count) {
     runWhile($wh, count);
 }
 
+
 function runWhile($wh, count) {
     with (while _ do _ od: $wh) {
         if (eval($1)) {

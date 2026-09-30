@@ -39,7 +39,7 @@ set[Message] check(start[Source] code) {
 
     // we only check recursion when the rest is ok, since it assumes certain properties of the program
     if (msgs == {}) {
-        msgs += detectBadRecursiveCallChains(code);
+        msgs += checkForBadRecursion(code);
     }
 
     return msgs;
@@ -134,10 +134,9 @@ set[Message] check(Statement s, Env env, Sig bt, FEnv fenv) {
     return msgs;
 }
 
+@synopsis{Determine if a token is variable placeholder}
 bool isVar((Token)`_`) = true;
-
 bool isVar((Token)`_@<Id _>`) = true;
-
 default bool isVar(Token _) = false;
 
 @synopsis{Check a case-clause, bringing the matched variables in as statics to the statements}
@@ -152,27 +151,26 @@ FEnv extractBindingTimes(start[Source] code) {
     FEnv env = ();
     top-down-break visit (code) {
         case (Function)`function <Id f>(<{Id ","}* params>) {<Statement* ss>}`: {
-            env["<f>"] = [ startsWith(x, "$") ? <x, static()> : <x, dyn()> 
+            env["<f>"] = [ isStatic(x) ? <x, static()> : <x, dyn()> 
                 | Id p <- params, str x := "<p>" ];
         }
     }
     return env;
 }
 
-
+@synopsis{Determine if an identifier is static according to the $-naming convention}
 bool isStatic(Id x) = isStatic("<x>");
 bool isStatic(str x) = startsWith(x, "$");
 
 
 @synopsis{Determine whether whether any of the passed parameters are strictly decreasing}
 bool isDecreasing(map[str, list[str]] env1, map[str, list[str]] env2) {
-    // is this really correct? it basically says, if there's anything at all that's decreasing is ok...
-    for (list[str] l1 <- env1<1>, list[str] l2 <- env2<1>) {
-        if (isDecreasing(l1, l2)) {
-            return true;
-        }
-    }
-    return false;
+    // isDecreasing is should always be called on the recursive 
+    // endpoints (start till recursion) of the same func
+    assert env1<0> == env2<0>: "bad environment signatures: <env1> vs <env2>";
+
+    // if any one of the parameters is decreasing it's enough
+    return ( false | it || isDecreasing(env1[k], env2[k]) | str k <- env1 );
 }
 
 // the second is longer, it is "decreasing" because we go deeper into a term.
@@ -187,23 +185,26 @@ bool isDecreasing([str x, *xs], [x, *ys]) = isDecreasing(xs, ys);
 // otherwise, its non-decreasing
 default bool isDecreasing(list[str] _, list[str] _) = false;
 
+@synopsis{The abstract parameter environment abstracting "size" through "nests"}
+alias PEnv = map[str name, list[str] nests];
 
-set[Message] detectBadRecursiveCallChains(start[Source] code) {
+@synopsis{Abstract stack frames}
+alias Frame = tuple[str func, PEnv env];
 
+
+set[Message] checkForBadRecursion(start[Source] code) {
     set[loc] memo = {};
-
-    list[tuple[str, map[str, list[str]]]] stack = [];    
-
+    list[Frame] stack = [];    
     set[Message] msgs = {};
 
-    void eval(Statement* ss, map[str, list[str]] env) {
+    void eval(Statement* ss, PEnv env) {
         top-down-break visit (ss) {
             case Statement s: 
                 eval(s, env);
         }
     }
 
-    void eval(Statement s, map[str, list[str]] env) {   
+    void eval(Statement s, PEnv env) {   
         top-down-break visit (s) {
             case (Statement)`match (<Id x>) {<MatchCase* cs>}`: {
                 for ((MatchCase)`case <Pattern p>: <Statement* ss>` <- cs) {
@@ -237,6 +238,8 @@ set[Message] detectBadRecursiveCallChains(start[Source] code) {
                         }
                         list[Expression] as = [ a | Expression a <- args ];
                         list[Id] ps = [ p | Id p <- params ];
+                        assert size(as) == size(ps);
+
                         newEnv = ( "<p>" : env["<a>"] | <Id p, Expression a> <- zip2(ps, as), isStatic(p), "<a>" in env);
                         recurse(name, ss, newEnv);
                     }
@@ -246,32 +249,19 @@ set[Message] detectBadRecursiveCallChains(start[Source] code) {
     }
 
 
-    void recurse(Id f, Statement* ss, map[str, list[str]] env) {
+    void recurse(Id f, Statement* ss, PEnv env) {
         str name = "<f>";
         stack += [<name, env>];
-        for (int i <- [0..size(stack[0..-1])]) {
-            if (<name, map[str, list[str]] prevEnv> := stack[i]) {
-                // we are in a recursive call chain
-                // check that at least one intermediate frame is decreasing including the current one
-                // println("RECURSION");
-                // iprintln(stack);
-                bool ok = false;
-                for (int j <- [i..size(stack)-1]) {
-                    if (from:<_, map[str, list[str]] fenv> := stack[j], 
-                        to:<_, map[str, list[str]] tenv> := stack[j + 1]) {
-                            if (isDecreasing(fenv, tenv)) {
-                                ok = true;
-                            }
-                        }
-                }
-                if (!ok) {
-                    //println("BAD RECURSIVE CALL CHAIN");
-                    str chain = intercalate("-\>", [ stack[j][0] | int j <- [i..size(stack)] ]);
-                    msgs += {error("bad recursion: <chain>", f.src)};
-                }
+        
+        // find the earliest stack frame that caused recursion 
+        if (int i <- [0..size(stack)-1], <name, PEnv prevEnv> := stack[i]) {
+            // we are in a recursive call chain starting at i, causing the current frame
+            if (!isDecreasing(prevEnv, stack[-1].env)) {
+                str chain = intercalate("-\>", [ stack[j].func | int j <- [i..size(stack)] ]);
+                msgs += {error("bad recursion: <chain>", f.src)};
             }
-            
         }
+            
         eval(ss, env);
         stack = stack[0..-1];
     }
