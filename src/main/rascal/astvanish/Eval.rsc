@@ -44,7 +44,8 @@ Statement* toEval(Statement* stmts, Sigs env, type[&T<:Tree] grammar) {
 Expression toField(Id x, Sigs env) = [Expression]"<owner>.<field>"
     // ugly hack: using sort symbol to carry over the owner variable
     when str owner := env[""].name, 
-        str field := nameOf(env["<x>"]);
+        str field := nameOf(env["<x>"]),
+         bprintln("<owner> . <field>");
 
 bool isKid(Id x) = /^\$[0-9]+$/ := "<x>";
 

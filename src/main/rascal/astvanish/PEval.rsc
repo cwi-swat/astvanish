@@ -36,7 +36,7 @@ tuple[str eval, str func, str static] extractPEvalDirective(Tree code) {
             }
         }
     }
-    return <"", "", "">;
+    return <"", "", "">; // no directive found
 }
 
 
@@ -328,7 +328,7 @@ Statement peval(Statement s, Env env, Admin admin) {
                             env + ( "$<i+1>": code(bs[i]) | int i <- [0..size(bs)] ), admin);
                     }
                 }
-                throw "no matching case in <s.src> for `<env["<x>"].code>`";
+                throw "no matching case in <s.src> for `<env["<x>"].code>` (<env["<x>"].code.prod>)";
             }
             else {
                 throw "only static variables are allowed in match conditions (not `<e>`)";

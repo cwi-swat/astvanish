@@ -44,6 +44,7 @@ data MatchResult // for both kinds of matching :D
 
 @synopsis{Matching a concrete syntax tree against a pattern}
 MatchResult matchTree(Pattern p, Tree t) {
+    println("<p> := `<t>`");
     list[Tree] bindings = [];
     list[Token] toks = [ tok | Token tok <- p.tokens ];
 
@@ -55,12 +56,19 @@ MatchResult matchTree(Pattern p, Tree t) {
     for (Token tok <- toks) {
         switch (tok) {
             case (Token)`_`: {
-                bindings += [t.args[i]];
-                i += 2;
+                Tree kid = t.args[i];
+                if (!(kid.prod.def is lit)) {
+                    bindings += [kid];
+                    i += 2;
+                }
+                else {
+                    return failure();
+                }
             }
             
             case (Token)`_@<Id x>`: {
                 Tree kid = t.args[i];
+                rprintln(kid);
                 if (kindOf(kid) == "<x>") {
                     bindings += [kid];
                     i += 2;
@@ -84,7 +92,10 @@ MatchResult matchTree(Pattern p, Tree t) {
 
 
 @synopsis{Determining the type of a tree (typically, its sort)}
-str kindOf(Tree t) = kindOf(t.prod.def);
+str kindOf(Tree t) = kindOf(t.prod.def)
+    when t has prod;
+
+str kindOf(lex(str s)) = s;
 
 str kindOf(label(_, Symbol s)) = kindOf(s);
 
@@ -109,7 +120,8 @@ start[Source] parseAV(loc l) = parse(#start[Source], l);
 
 str nameOf(label(str n, _)) = n;
 
-default str nameOf(Symbol _) = "$unknown";
+default str nameOf(Symbol s) = "$unknown"
+    when bprintln("UNKNOWN: <s>");
 
 @synopsis{Matching a pattern against a grammar production}
 MatchResult matchProd(Pattern p, prod(label(str cons, Symbol _), list[Symbol] ss, _)) {
@@ -125,8 +137,13 @@ MatchResult matchProd(Pattern p, prod(label(str cons, Symbol _), list[Symbol] ss
     for (Token tok <- toks) {
         switch (tok) {
             case (Token)`_`: {
-                bindings += [ss[i]];
-                i += 2;
+                if (!(ss[i] is lit)) {
+                    bindings += [ss[i]];
+                    i += 2;
+                }
+                else {
+                    return failure();
+                }
             }
             
             case (Token)`_@<Id x>`: 

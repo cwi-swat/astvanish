@@ -1,0 +1,48 @@
+
+
+
+function main($re, input) {
+    var i = 0;
+    try {
+        with (_: $re) {
+            eval($1, i, input, function (i, input) {
+                throw {pos: i};
+            });
+        }
+    }
+    catch (e) {
+        return e;
+    }
+}
+
+function eval($re, i, input, k) {
+    match ($re) {
+            
+        case _@Char: 
+            if (input[i] === $1.toString()) {
+                k(i+1, input);
+            }
+
+        case ( _ ): 
+            eval($1, i, input, k);
+
+        case _ _:
+            eval($1, i, input, function (i, input) {
+                eval($2, i, input, k);
+            });
+        
+        case _ | _: 
+            eval($1, i, input, k);
+            eval($2, i, input, k);
+
+        case _ ?: 
+            eval($1, i, input, k);
+            k(i, input);
+
+        case _ *: 
+            (function f(i, input) {
+                eval($1, i, input, f);
+                k(i, input);
+            })(i, input);
+    }
+}

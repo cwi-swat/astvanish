@@ -10,12 +10,13 @@ function run($p) {
 }
 
 // count is the reason we need to reject the recursion here
-// this the input to count is constant, peval will propagate
-// the constants (the addition in runWhile), hence peval
-// won't terminate since we memoize on static args (including
-// such constants). Without constant propagation memoization
+// because the input to count is constant in run, peval will propagate
+// it (and compute the addition in runWhile), hence peval
+// won't terminate since we memoize on static args including
+// such constants,--count will be different every iteration. 
+// Without constant propagation the memoization
 // would indeed terminate peval, but at the cost of infinite
-// recursion at run time
+// recursion at run time, which is also undesirable. 
 
 function runWhileDummy($p, count) {
     runWhile($p, count);

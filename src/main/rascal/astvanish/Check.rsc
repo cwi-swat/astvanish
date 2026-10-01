@@ -266,9 +266,7 @@ set[Message] checkForBadRecursion(start[Source] code) {
         
         // find the earliest stack frame (before the current one) that caused recursion 
         if (int i <- [0..size(stack)-1], <name, PEnv prevEnv> := stack[i]) {
-            // we are in a recursive call chain starting at i, causing the current frame
-            // println("RECURSION");
-            // iprintln(stack);
+            // we are in a recursive call chain starting at i, (transitively) causing the current frame
             if (!isDecreasing(prevEnv, stack[-1].env)) {
                 str chain = intercalate("-\>", [ stack[j].func | int j <- [i..size(stack)] ]);
                 msgs += {error("bad recursion: <chain>", f.src)};
