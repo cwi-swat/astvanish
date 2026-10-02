@@ -213,6 +213,11 @@ Expression peval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`
     if (isEmptyBody(newBody)) {
         return (Expression)`undefined`;
     }
+
+    // todo: make this robust against multiple superfluous {}
+    if ([(Statement)`{return <Expression ret>;}`] := [ s | Statement s <- newBody], isStatic(ret, env)) {
+        return ret;
+    }
     
     Id newName = admin.declare(f, dynArgs<0>, newBody, newEnv);
     
@@ -395,7 +400,7 @@ str toObj(loc l) = "{offset: <l.offset>, length: <l.length>}";
 
 
 
-@synopsis{Determine if an expression is statically known}
+@synopsis{Determine if an expression is statically known (and assumed to have no side-effects)}
 bool isStatic((Expression)`<Expression e>.toString()`, Env env) = isStatic(e, env);
 
 bool isStatic((Expression)`<Id x>.src`, Env env) = isStatic((Expression)`<Id x>`, env);
