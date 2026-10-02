@@ -44,3 +44,30 @@ function checkType($type, x) {
     }
     throw 'value ' + x + (' is not compatible with type ' + $type.toString());
 }
+
+function sql($schema, conn) {
+    with (schema _ _ : $schema) {
+        for (const c of $2) {
+            with (class _ { _ } : c) {
+                conn.exec('create table ' + $1.toString() + ';');
+                for (const f of $2) {
+                    field2sql(f, $1, conn);
+                }
+            }
+        }
+    }
+}
+
+function field2sql($field, $cname, conn) {
+    with (_ \: _ : $field) {
+        conn.exec('alter table ' + $cname.toString() + ' add column ' + $1.toString() + ' ' + toType($2) + ';');
+    }
+}
+
+function toType($type) {
+    match ($type) {
+        case int : return 'integer';
+        case bool : return 'boolean';
+        case str : return 'varchar(256)';
+    }
+}

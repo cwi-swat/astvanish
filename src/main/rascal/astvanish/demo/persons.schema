@@ -1,4 +1,5 @@
 //@@ src/classes.av: factory($schema)
+//@@ src/classes.av: sql($schema)
 
 schema Example
 class Person {
