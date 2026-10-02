@@ -198,18 +198,16 @@ tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* a
     return <staticEnv, dynArgs>;
 }
 
-// bool isEmptyBody(Statement* ss) = (true | it && isEmptyBody(s) | Statement s <- ss);
-// bool isEmptyBody((Statement)`{}`) = true;
-// bool isEmptyBody((Statement)`;`) = true;
-
-// default bool isEmptyBody(Statement _) = false;
+bool isEmptyBody(Statement* ss) = (true | it && isEmptyBody(s) | Statement s <- ss);
+bool isEmptyBody((Statement)`{}`) = true;
+bool isEmptyBody((Statement)`;`) = true;
+default bool isEmptyBody(Statement _) = false;
 
 list[Expression] isInlineable(Statement* body, Env env) {
-    list[Statement] ss = [ s | Statement s <- body ];
-    if (ss == []) {
+    if (isEmptyBody(body)) {
         return [(Expression)`undefined`];
     }
-    if ([Statement subj] := ss) {
+    if ([Statement subj] := [ s | Statement s <- body ]) {
         return isInlineable(subj, env);
     }
     return [];
