@@ -205,7 +205,11 @@ tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* a
 // default bool isEmptyBody(Statement _) = false;
 
 list[Expression] isInlineable(Statement* body, Env env) {
-    if ([Statement subj] := [ s | Statement s <- body ]) {
+    list[Statement] ss = [ s | Statement s <- body ];
+    if (ss == []) {
+        return [(Expression)`undefined`];
+    }
+    if ([Statement subj] := ss) {
         return isInlineable(subj, env);
     }
     return [];
