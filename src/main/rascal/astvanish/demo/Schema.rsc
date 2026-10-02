@@ -3,6 +3,8 @@ module astvanish::demo::Schema
 extend lang::std::Layout;
 extend lang::std::Id;
 
+import ParseTree;
+
 start syntax Schema
     = schema: "schema" Id name Class* classes;
 
@@ -16,17 +18,6 @@ syntax Type
     | string: "str";
 
 
-start[Schema] aSchema() =  (start[Schema])`
-    '//@@ src/classes.av: define($schema)
-    '
-    'schema Example
-    'class Person {
-    '   name: str 
-    '   age: int   
-    '}
-    '
-    'class Address {
-    '  street: str
-    '  number: int
-    '  central: bool
-    '}`;
+start[Schema] aSchema() 
+    = parse(#start[Schema], |project://astvanish/src/main/rascal/astvanish/demo/persons.schema|);
+

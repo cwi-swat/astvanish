@@ -1,7 +1,7 @@
 
 var update;
 
-function main($ql) {
+function run($ql) {
     var env = {};
     initialize($ql, env);
     render($ql, env);

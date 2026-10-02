@@ -1,0 +1,13 @@
+//@@ src/classes.av: factory($schema)
+
+schema Example
+class Person {
+   name: str 
+   age: int   
+}
+
+class Address {
+  street: str
+  number: int
+  central: bool
+}

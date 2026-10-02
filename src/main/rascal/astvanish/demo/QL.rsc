@@ -4,6 +4,8 @@ module astvanish::demo::QL
 extend lang::std::Layout;
 extend lang::std::Id;
 
+import ParseTree;
+
 start syntax Form 
   = form: "form" Str title "{" Question* questions "}"; 
 
@@ -52,25 +54,6 @@ syntax Expr
   > left or: Expr "||" Expr
   ;
 
-start[Form] aForm() = (start[Form])
-`//@@ src/ql.av: main($ql)
-'
-'form "Tax Office example" { 
-'  "Did you buy a house in 2010?"
-'    hasBoughtHouse: bool
-'  
-'  "Did you enter a loan?"
-'    hasMaintLoan: bool
-'    
-'  "Did you sell a house in 2010?"
-'    hasSoldHouse: bool    
-'   
-'  if (hasSoldHouse) {
-'    "What was the selling price?"
-'      sellingPrice: int
-'    "Private debts for the sold house:"
-'      privateDebt: int
-'    "Value residue:"
-'      valueResidue: int = sellingPrice - privateDebt
-'  }
-'}`;
+start[Form] aForm() 
+    = parse(#start[Form], |project://astvanish/src/main/rascal/astvanish/demo/tax.ql|);
+
