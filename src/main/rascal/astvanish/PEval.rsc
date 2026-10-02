@@ -219,6 +219,10 @@ Expression peval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`
         return ret;
     }
     
+    if ([(Statement)`return <Expression ret>;`] := [ s | Statement s <- newBody], isStatic(ret, env)) {
+        return ret;
+    }
+    
     Id newName = admin.declare(f, dynArgs<0>, newBody, newEnv);
     
     {Expression ","}* restArgs = makeArgs(dynArgs<1>);
