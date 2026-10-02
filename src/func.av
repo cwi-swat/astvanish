@@ -15,30 +15,21 @@ function run($prog) {
     }
 }
 
-function eval_($bla, env) {
-    return eval($bla, env);
-}
-
 function eval($exp, env) {
-    var result;
-
-
     match ($exp) {
-        case _@Id : result = env[$1.toString()];
-        case _@Num : result = parseInt($1.toString());
-        case _ * _ : result = eval($1, env) * eval($2, env);
-        case _ - _ : result = eval($1, env) - eval($2, env);
-        case _ > _ : result = eval($1, env) > eval($2, env);
+        case _@Id : return env[$1.toString()];
+        case _@Num : return parseInt($1.toString());
+        case _ * _ : return eval($1, env) * eval($2, env);
+        case _ - _ : return eval($1, env) - eval($2, env);
+        case _ > _ : return eval($1, env) > eval($2, env);
         case if _ then _ else _ fi :
-            result = eval($1, env) ? eval($2, env) : eval($3, env);
+            return eval($1, env) ? eval($2, env) : eval($3, env);
         case _ ( _ ) : 
             var args = [];
             for (const a of $2) 
                 args.push(eval(a, env));
-            result = env[$1.toString()](args);
+            return env[$1.toString()](args);
     }
-
-    return result;
 }
 
 function format($prog) {

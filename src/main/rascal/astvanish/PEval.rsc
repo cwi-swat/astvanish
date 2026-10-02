@@ -30,16 +30,16 @@ void peval(Tree prog, loc root=|project://astvanish/|) {
 }
 
 @synopsis{Partially evaluate as per a single payload directive}
-start[Source] peval1(Tree prog, loc root=|project://astvanish/|) {
+start[Source] peval1(Tree prog, loc root=|project://astvanish/|, bool logging=false) {
     assert prog.prod.def is \start : "must provide a start[] syntax tree";
     if ({PEvalTask task} := extractPayload(prog)) {
-        return peval(task, prog, root);
+        return peval(task, prog, root, logging=logging);
     }
     throw "no or multiple partial-eval directives found";
 }
 
-start[Source] peval(PEvalTask task, Tree prog, loc root) 
-    = peval(parseAV(root + task.path), (task.static: code(prog.top)), task.func);       
+start[Source] peval(PEvalTask task, Tree prog, loc root, bool logging=false) 
+    = peval(parseAV(root + task.path), (task.static: code(prog.top)), task.func, logging=logging);       
 
 alias PEvalTask = tuple[str path, str func, str static];
 alias Payload = set[PEvalTask];
@@ -60,8 +60,8 @@ Payload extractPayload(Tree code) {
 
 
 @synopsis{Partially evaluate function `f` in match/with-enhanced Javascript `code` given `static` arguments}
-start[Source] peval(start[Source] code, Env static, str f) {
-    Admin admin = newAdmin(code);
+start[Source] peval(start[Source] code, Env static, str f, bool logging=false) {
+    Admin admin = newAdmin(code, logging);
     if ([Function func] := admin.lookup(f)) {
         list[Expression] args = [ "<x>" in static 
             ? (Expression)`<Id x>` 
@@ -99,11 +99,12 @@ alias Admin = tuple[
     Id(Id, list[Id], Statement*, Env) declare,
     void(Message) alert,
     start[Source]() code,
-    set[Message]() msgs
+    set[Message]() msgs,
+    void(value) log
 ];
 
 @synopsis{Constructor for the `Admin` interface}
-Admin newAdmin(start[Source] code) {
+Admin newAdmin(start[Source] code, bool logging) {
     map[str, Function] funcs = ();
     top-down-break visit (code) {
         case Function f: {
@@ -176,7 +177,13 @@ Admin newAdmin(start[Source] code) {
 
     set[Message] msgs_() = msgs;
 
-    return <lookup_, declare_, alert_, code_, msgs_>;
+    void log_(value v) {
+        if (logging) {
+            println("LOG: <v>");
+        }
+    }
+
+    return <lookup_, declare_, alert_, code_, msgs_, log_>;
 }
 
 
@@ -198,11 +205,13 @@ tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* a
     return <staticEnv, dynArgs>;
 }
 
+@synopsis{Predicate to determine that a sequence of statements is empty (semantically)}
 bool isEmptyBody(Statement* ss) = (true | it && isEmptyBody(s) | Statement s <- ss);
 bool isEmptyBody((Statement)`{}`) = true;
 bool isEmptyBody((Statement)`;`) = true;
 default bool isEmptyBody(Statement _) = false;
 
+@synopsis{Is a sequence of statements inlineable and to what?}
 list[Expression] isInlineable(Statement* body, Env env) {
     if (isEmptyBody(body)) {
         return [(Expression)`undefined`];
@@ -213,6 +222,7 @@ list[Expression] isInlineable(Statement* body, Env env) {
     return [];
 }
 
+@synopsis{Is a statement inlineable and to what?}
 list[Expression] isInlineable((Statement)`;`, Env env)
     = [(Expression)`undefined`];
 
@@ -235,6 +245,7 @@ Expression peval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`
     Statement* newBody = peval(body, newEnv, admin);
 
     if ([Expression e] := isInlineable(newBody, env)) {
+        admin.log("Inlining <e>");
         return e;
     }
 
@@ -349,7 +360,7 @@ Statement peval(Statement s, Env env, Admin admin) {
             => (Statement)`if (<Expression cond2>) <Statement s12> else <Statement s22>` 
             when Expression cond2 := peval(cond, env, admin),
                 Statement s12 := peval(s1, env, admin),
-                Statement s22 := peval(s1, env, admin)
+                Statement s22 := peval(s2, env, admin)
 
         case (Statement)`for (const <Id x> of <Id y>) <Statement s>` 
             => unroll(x, s, env["<y>"].code, env, admin)

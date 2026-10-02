@@ -15,8 +15,7 @@ obj['name'] = function(x) {
                                     checkType(x);
                                     data['name'] = x;
                                 } else {
-                                    checkType(x);
-                                    data['name'] = x;
+                                    return data['name'];
                                 }
                             };
 obj['age'] = function(x) {
@@ -24,8 +23,7 @@ obj['age'] = function(x) {
                                     checkType$0(x);
                                     data['age'] = x;
                                 } else {
-                                    checkType$0(x);
-                                    data['age'] = x;
+                                    return data['age'];
                                 }
                             };}; 
 m['Address'] = function () {var data = {}; 
@@ -38,8 +36,7 @@ obj['street'] = function(x) {
                                     checkType(x);
                                     data['street'] = x;
                                 } else {
-                                    checkType(x);
-                                    data['street'] = x;
+                                    return data['street'];
                                 }
                             };
 obj['number'] = function(x) {
@@ -47,8 +44,7 @@ obj['number'] = function(x) {
                                     checkType$0(x);
                                     data['number'] = x;
                                 } else {
-                                    checkType$0(x);
-                                    data['number'] = x;
+                                    return data['number'];
                                 }
                             };
 obj['central'] = function(x) {
@@ -56,8 +52,7 @@ obj['central'] = function(x) {
                                     checkType$1(x);
                                     data['central'] = x;
                                 } else {
-                                    checkType$1(x);
-                                    data['central'] = x;
+                                    return data['central'];
                                 }
                             };}; 
 return m;}
