@@ -3,6 +3,7 @@ module astvanish::demo::Func
 extend lang::std::Layout;
 extend lang::std::Id;
 
+import ParseTree;
 
 start syntax Prog = prog: Def* defs Expr main;
 
@@ -20,22 +21,6 @@ syntax Expr
 
 lexical Num = [0-9]+;
 
-start[Prog] aProg() = (start[Prog])
-    `//@@ src/func.av: run($prog)
-    '
-    'def factorial(n) =
-    '   if n \> 1 then
-    '        n * factorial(n - 1)
-    '   else
-    '        1
-    '   fi;
-    '
-    '
-    'def power(x, n) =
-    '  if n \> 1 then
-    '     x * power(x, n - 1)
-    '  else 
-    '     n
-    '  fi ;
-    '
-    'factorial(power(2, 3))`;
+start[Prog] aProg() 
+    = parse(#start[Prog], |project://astvanish/src/main/rascal/astvanish/demo/factorial.func|);
+

@@ -50,21 +50,10 @@ function eval$10(i, input, k) {
         eval$6(i, input, k);
     });
 }
-function main(input) {
-    var i = 0;
-    try {
-        eval$10(i, input, function (i, input) {
-            throw { pos: i };
-        });
-    }
-    catch (e) {
-        return e;
-    }
-}
 
 function main($re, input) {
     try {
-        eval_($re, 0, input, function (i, input) {
+        eval($re, 0, input, function (i, input) {
             throw { pos: i };
         });
     }
@@ -85,9 +74,9 @@ function eval_($re, i, input, k) {
         case 'parens':
             eval($re.arg, i, input, k);
             break;
-        case 'iter':
-            eval($re.re, i, input, function (i, input) {
-                eval($re.$unknown, i, input, k);
+        case 'seq':
+            eval($re.lhs, i, input, function (i, input) {
+                eval($re.rhs, i, input, k);
             });
             break;
         case 'alt':

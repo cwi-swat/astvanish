@@ -44,7 +44,7 @@ data MatchResult // for both kinds of matching :D
 
 @synopsis{Matching a concrete syntax tree against a pattern}
 MatchResult matchTree(Pattern p, Tree t) {
-    println("<p> := `<t>`");
+    //println("<p> := `<t>`");
     list[Tree] bindings = [];
     list[Token] toks = [ tok | Token tok <- p.tokens ];
 
@@ -68,7 +68,7 @@ MatchResult matchTree(Pattern p, Tree t) {
             
             case (Token)`_@<Id x>`: {
                 Tree kid = t.args[i];
-                rprintln(kid);
+                //rprintln(kid);
                 if (kindOf(kid) == "<x>") {
                     bindings += [kid];
                     i += 2;
@@ -120,8 +120,7 @@ start[Source] parseAV(loc l) = parse(#start[Source], l);
 
 str nameOf(label(str n, _)) = n;
 
-default str nameOf(Symbol s) = "$unknown"
-    when bprintln("UNKNOWN: <s>");
+default str nameOf(Symbol s) = "$unknown";
 
 @synopsis{Matching a pattern against a grammar production}
 MatchResult matchProd(Pattern p, prod(label(str cons, Symbol _), list[Symbol] ss, _)) {

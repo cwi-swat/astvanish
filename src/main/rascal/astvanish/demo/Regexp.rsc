@@ -1,6 +1,7 @@
 module astvanish::demo::Regexp
 
 extend lang::std::Layout;
+import ParseTree;
 
 start syntax RE = Regexp;
 
@@ -15,8 +16,5 @@ syntax Regexp
 
 lexical Char = [a-zA-Z];
 
-start[RE] aRegexp() = (start[RE])
-`//@@ src/regexp.av: main($re)
-'
-'(a|b)*(abb|a*b)
-'`;
+start[RE] aRegexp() 
+    = parse(#start[RE], |project://astvanish/src/main/rascal/astvanish/demo/example.regexp|);

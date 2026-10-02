@@ -1,0 +1,3 @@
+//@@ src/regexp.av: match($re)
+
+(a|b)*(abb|a*b)

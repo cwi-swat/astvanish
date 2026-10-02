@@ -16,27 +16,46 @@ data Value
 @synopsis{The environment capturing statically known bindings}
 alias Env = map[str, Value];
 
-@synopsis{Partially evaluate as per the //@@ <file>: <func>(<static>) directive}
-start[Source] peval(Tree prog, loc root=|project://astvanish/|) {
+@synopsis{Partially evaluate as per a one or more payload directives (writes to disk)}
+void peval(Tree prog, loc root=|project://astvanish/|) {
     assert prog.prod.def is \start : "must provide a start[] syntax tree";
-    <p, f, s> = extractPEvalDirective(prog);
-    if (p == "") {
-        throw "no partial-eval directive found";
+
+    for (PEvalTask task <- extractPayload(prog)) {
+        start[Source] js = peval(task, prog, root);
+        loc l = prog.src;
+        l = l[file=split(".", prog.src.file)[0] + "-" + task.func][extension="js"].top;
+        println("LOG: writing to <l>");
+        writeFile(l, js);
     }
-    return peval(parseAV(root + p), (s: code(prog.top)), f);   
 }
 
-@synopsis{Extract the partial evaluation directive from a comment}
-tuple[str eval, str func, str static] extractPEvalDirective(Tree code) {
+@synopsis{Partially evaluate as per a single payload directive}
+start[Source] peval1(Tree prog, loc root=|project://astvanish/|) {
+    assert prog.prod.def is \start : "must provide a start[] syntax tree";
+    if ({PEvalTask task} := extractPayload(prog)) {
+        return peval(task, prog, root);
+    }
+    throw "no or multiple partial-eval directives found";
+}
+
+start[Source] peval(PEvalTask task, Tree prog, loc root) 
+    = peval(parseAV(root + task.path), (task.static: code(prog.top)), task.func);       
+
+alias PEvalTask = tuple[str path, str func, str static];
+alias Payload = set[PEvalTask];
+
+@synopsis{Extract the payload //@@ <file>: <func>(<static>) directive from comments}
+Payload extractPayload(Tree code) {
+    Payload pl = {};
     visit (code) {
         // assuming Comment from lang::std::Comment
         case Comment c: {
             if (/^\/\/@@ <path:[^:\ ]*>: <f:[a-zA-Z0-9_]+>\(<par:\$[a-zA-Z0-9_]*>\)/ := "<c>") {
-                return <path, f, par>;
+                pl += {<path, f, par>};
             }
         }
     }
-    return <"", "", "">; // no directive found
+    return pl;
 }
 
 
@@ -78,7 +97,9 @@ start[Source] spliceBlocks(start[Source] s) {
 alias Admin = tuple[
     list[Function](str) lookup, // list as optional, we might not find it
     Id(Id, list[Id], Statement*, Env) declare,
-    start[Source]() code
+    void(Message) alert,
+    start[Source]() code,
+    set[Message]() msgs
 ];
 
 @synopsis{Constructor for the `Admin` interface}
@@ -146,9 +167,16 @@ Admin newAdmin(start[Source] code) {
         return newId;
     }
 
+    set[Message] msgs = {};
+    void alert_(Message m) {
+        msgs += {m};
+    }
+
     start[Source] code_() = gen;
 
-    return <lookup_, declare_, code_>;
+    set[Message] msgs_() = msgs;
+
+    return <lookup_, declare_, alert_, code_, msgs_>;
 }
 
 
@@ -313,7 +341,7 @@ Statement peval(Statement s, Env env, Admin admin) {
                 if (success(list[Tree] bs) := matchTree(p, env["<x>"].code)) {
                     insert peval(s, env + ( "$<i+1>": code(bs[i]) | int i <- [0..size(bs)] ), admin);
                 }
-                throw "no matching pattern for <env["<x>"].code>";   
+                admin.alert(error("pattern did not match `<env["<x>"].code>`", p.src));;   
             }
             else {
                 throw "only static variables are allowed in match conditions (not `<e>`)";
@@ -328,7 +356,7 @@ Statement peval(Statement s, Env env, Admin admin) {
                             env + ( "$<i+1>": code(bs[i]) | int i <- [0..size(bs)] ), admin);
                     }
                 }
-                throw "no matching case in <s.src> for `<env["<x>"].code>` (<env["<x>"].code.prod>)";
+                admin.alert(error("no matching case found for `<env["<x>"].code>`", s.src));
             }
             else {
                 throw "only static variables are allowed in match conditions (not `<e>`)";

@@ -1,8 +1,8 @@
 
 
 
-function main($re, input) {
-    var i = 0;
+function match($re, input) {
+    var i = 0; // force i to be dynamic
     try {
         with (_: $re) {
             eval($1, i, input, function (i, input) {
