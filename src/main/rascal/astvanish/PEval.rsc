@@ -17,11 +17,11 @@ data Value
 alias Env = map[str, Value];
 
 @synopsis{Partially evaluate as per a one or more payload directives (writes to disk)}
-void peval(Tree prog, loc root=|project://astvanish/|) {
+void peval(Tree prog, loc root=|project://astvanish/|, bool logging=false) {
     assert prog.prod.def is \start : "must provide a start[] syntax tree";
 
     for (PEvalTask task <- extractPayload(prog)) {
-        start[Source] js = peval(task, prog, root);
+        start[Source] js = peval(task, prog, root, logging=logging);
         loc l = prog.src;
         l = l[file=split(".", prog.src.file)[0] + "-" + task.func][extension="js"].top;
         println("LOG: writing to <l>");
@@ -439,6 +439,9 @@ bool isStatic((Expression)`<Id x>`, Env env) = "<x>" in env;
 
 bool isStatic((Expression)`<Literal _>`, Env _) = true;
 
+bool isStatic((Expression)`[<{Expression ","}* es>]`, Env env) 
+    = ( true | it && isStatic(e, env) | Expression e <- es );
+
 bool isStatic((Expression)`(<Expression e>)`, Env env) = isStatic(e, env);
 
 bool isStatic((Expression)`+<Expression e>`, Env env) = isStatic(e, env);
@@ -520,6 +523,10 @@ Value eval((Expression)`<Id x>`, Env env) = env["<x>"]
     when "<x>" in env;
 
 Value eval(e:(Expression)`<Literal _>`, Env _) = expr(e);
+
+Value eval(e:(Expression)`[<{Expression ","}* es>]`, Env env)
+    = expr(fromVal([toVal(v.expr) | Value v <- vs]))
+    when list[Value] vs := [ eval(e, env) | Expression e <- es ];
 
 Value eval((Expression)`(<Expression e>)`, Env env) = eval(e, env);
 
@@ -619,11 +626,16 @@ default Value eval(Expression e, Env env) {
 value toVal((Expression)`<Boolean b>`) = (Boolean)`true` := b;
 value toVal((Expression)`<Numeric n>`) = toInt("<n>"); // for now only ints
 value toVal((Expression)`<String s>`) = "<"<s>"[1..-1]>"; // todo: unescaping
+value toVal((Expression)`[<{Expression ","}* es>]`)
+    = [ toVal(e) | Expression e <- es ];
 
 @synopsis{Convert a Rascal value to a Javascript literal expression}
 Expression fromVal(int x) = [Expression]"<x>";
 Expression fromVal(str x) = [Expression]"\'<x>\'"; // todo: escaping
 Expression fromVal(bool x) = [Expression]"<x>";
+Expression fromVal(list[value] vs) = (Expression)`[<{Expression ","}* args>]`
+    when list[Expression] es := [ fromVal(v) | value v <- vs ],
+        {Expression ","}* args := makeArgs(es);
 
 
 @synopsis{Javascript's truthiness}
