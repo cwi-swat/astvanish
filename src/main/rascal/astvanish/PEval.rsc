@@ -198,11 +198,33 @@ tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* a
     return <staticEnv, dynArgs>;
 }
 
-bool isEmptyBody(Statement* ss) = (true | it && isEmptyBody(s) | Statement s <- ss);
-bool isEmptyBody((Statement)`{}`) = true;
-bool isEmptyBody((Statement)`;`) = true;
+// bool isEmptyBody(Statement* ss) = (true | it && isEmptyBody(s) | Statement s <- ss);
+// bool isEmptyBody((Statement)`{}`) = true;
+// bool isEmptyBody((Statement)`;`) = true;
 
-default bool isEmptyBody(Statement _) = false;
+// default bool isEmptyBody(Statement _) = false;
+
+list[Expression] isInlineable(Statement* body, Env env) {
+    if ([Statement subj] := [ s | Statement s <- body ]) {
+        return isInlineable(subj, env);
+    }
+    return [];
+}
+
+list[Expression] isInlineable((Statement)`;`, Env env)
+    = [(Expression)`undefined`];
+
+list[Expression] isInlineable((Statement)`{}`, Env env)
+    = [(Expression)`undefined`];
+
+list[Expression] isInlineable((Statement)`{<Statement s>}`, Env env) 
+    = isInlineable(s, env);
+
+list[Expression] isInlineable((Statement)`return <Expression e>;`, Env env) = [e]
+    when isStatic(e, env);
+
+default list[Expression] isInlineable(Statement _, Env _) = [];
+
 
 @synopsis{Partially evaluate a function definition given the current static environment and call-site arguments}
 Expression peval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`, Env env, {Expression ","}* args, Admin admin) {
@@ -210,19 +232,10 @@ Expression peval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`
 
     Statement* newBody = peval(body, newEnv, admin);
 
-    if (isEmptyBody(newBody)) {
-        return (Expression)`undefined`;
+    if ([Expression e] := isInlineable(newBody, env)) {
+        return e;
     }
 
-    // todo: make this robust against multiple superfluous {}
-    if ([(Statement)`{return <Expression ret>;}`] := [ s | Statement s <- newBody], isStatic(ret, env)) {
-        return ret;
-    }
-    
-    if ([(Statement)`return <Expression ret>;`] := [ s | Statement s <- newBody], isStatic(ret, env)) {
-        return ret;
-    }
-    
     Id newName = admin.declare(f, dynArgs<0>, newBody, newEnv);
     
     {Expression ","}* restArgs = makeArgs(dynArgs<1>);
