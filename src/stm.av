@@ -39,6 +39,8 @@ function doActions($name, $actions) {
     for (const a of $actions) {
         with (on _ do { _ }: a) {
             // this for-loop plus if implements a kind of lookup
+            // it matches up states and their action clauses
+            // (related to "the trick" in peval folklore)
             if ($1.toString() == $name.toString()) {
                 for (const c of $2) {
                     match (c) {

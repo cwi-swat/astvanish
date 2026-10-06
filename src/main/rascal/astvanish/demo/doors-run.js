@@ -1,7 +1,4 @@
-function doActions() {
-    ;
-    console.log('print');
-}
+function doActions() { console.log('print'); }
 function doTrans(state, event) {
     if ('open' === event) {
         state.current = 'opened';
@@ -14,7 +11,6 @@ function handleState(state, event) { if ('closed' === state.current) { return do
 function doActions$0() {
     console.log('beep');
     console.log('beep');
-    ;
 }
 function doTrans$0(state, event) {
     if ('close' === event) {

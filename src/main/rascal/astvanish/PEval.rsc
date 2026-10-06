@@ -67,13 +67,13 @@ start[Source] peval(start[Source] code, Env static, str f, bool logging=false) {
             ? (Expression)`<Id x>` 
             : (Expression)`undefined` | Id x <- func.parameters ];
         peval(func, static, makeArgs(args), admin);
-        return spliceBlocks(admin.code());
+        return spliceBlocksAndCommas(admin.code());
     }
     throw "could not find function <f> in source code";
 }
 
 @synopsis{Splice out superfluous curlies for nicer code}
-start[Source] spliceBlocks(start[Source] s) {
+start[Source] spliceBlocksAndCommas(start[Source] s) {
     solve (s) {
         s = visit (s) {
             case (Statement)`{<Statement* s0> {<Statement* ss>} <Statement* s1>}`
@@ -88,6 +88,19 @@ start[Source] spliceBlocks(start[Source] s) {
                 => (Function)`function <Id f>(<{Id ","}* fs>) {<Statement* s0> 
                                                               '<Statement* ss> 
                                                               '<Statement* s1>}`
+
+            // somehow the interpreter does not like using the same match variables in the 
+            // following three cases
+            case (Statement)`{<Statement* sa> ; <Statement* sb>}`
+                => (Statement)`{<Statement* sa>
+                              '<Statement* sb>}`
+            case (Function)`function (<{Id ","}* fs_>) {<Statement* s01> ; <Statement* s11>}`
+                => (Function)`function (<{Id ","}* fs_>) {<Statement* s01> 
+                                                        '<Statement* s11>}`
+            case (Function)`function <Id f>(<{Id ","}* fs__>) {<Statement* s02> ; <Statement* s12>}`
+                => (Function)`function <Id f>(<{Id ","}* fs__>) {<Statement* s02> 
+                                                              '<Statement* s12>}`
+
         }
     }
     return s;
@@ -391,8 +404,8 @@ Statement peval(Statement s, Env env, Admin admin) {
             }
         }
 
-        // for some reason this is need, as top-down does not go into
-        // {} to find nested matches...
+        // for some reason this is need, the top-down does not go into
+        // {} to find nested match statements...
         case (Statement)`{<Statement* ss>}`: {
             ss = peval(ss, env, admin);
             insert (Statement)`{<Statement* ss>}`;
