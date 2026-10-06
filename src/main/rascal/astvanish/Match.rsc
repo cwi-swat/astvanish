@@ -166,4 +166,4 @@ MatchResult matchProd(Pattern p, prod(label(str cons, Symbol _), list[Symbol] ss
     return success(cons, bindings);
 }
 
-default MatchResult matchPattern(Pattern _, Production _) = failure();
+default MatchResult matchProd(Pattern _, Production _) = failure();

@@ -190,17 +190,11 @@ Admin newAdmin(start[Source] code, bool logging) {
 
 @synopsis{Partition formal parameters and actual arguments into static environment and dynamic args}
 tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* args, Env env, Admin admin) {
-    // println("PARAMS: <params>");
-    // println("ARGS: <args>");
-
     lrel[Id, Expression] paired = zip2([ p | Id p <- params ], [ e | Expression e <- args ]);
     
-    
-    Env staticEnv = ( "<p>" : eval(a, env) 
-        | <Id p, Expression a> <- paired, isStatic(a, env) );
+    Env staticEnv = ( "<p>" : eval(a, env) | <Id p, Expression a> <- paired, isStatic(a, env) );
 
-    lrel[Id, Expression] dynArgs = [ <x, peval(a, env, admin)> 
-        | <Id x, Expression a> <- paired, !isStatic(a, env)];
+    lrel[Id, Expression] dynArgs = [ <x, peval(a, env, admin)> | <Id x, Expression a> <- paired, !isStatic(a, env)];
 
     return <staticEnv, dynArgs>;
 }
@@ -270,7 +264,6 @@ Statement unroll(Id x, Statement s, Tree seq, Env env, Admin admin) {
     }
 
     int step = size(seq.prod.def.separators);
-
     
     for (int i <- [0,step+1..size(seq.args)]) {
         if ((Statement)`{<Statement* ss>}` := unrolled) {
@@ -317,11 +310,6 @@ Expression peval(Expression e, Env env, Admin admin) {
             f.statements = peval(f.statements, env, admin);
             insert (Expression)`<Function f>`;
         }
-
-        // case e:(Expression)`<Expression lhs> !== <Expression rhs>`
-        //     => (Expression)`<Expression lhs2> !== <Expression rhs2>`
-        //     when bprintln("EEEEEEE <e>"), Expression lhs2 := peval(lhs, env, admin),
-        //         Expression rhs2 := peval(rhs, env, admin)
             
         case Expression e => eval(e, env).expr
             when isStatic(e, env), !isCode(e, env)
@@ -433,6 +421,8 @@ str toObj(loc l) = "{offset: <l.offset>, length: <l.length>}";
 @synopsis{Determine if an expression is statically known (and assumed to have no side-effects)}
 bool isStatic((Expression)`<Expression e>.toString()`, Env env) = isStatic(e, env);
 
+bool isStatic((Expression)`<Expression e>.length`, Env env) = isStatic(e, env);
+
 bool isStatic((Expression)`<Id x>.src`, Env env) = isStatic((Expression)`<Id x>`, env);
 
 bool isStatic((Expression)`<Id x>`, Env env) = "<x>" in env;
@@ -441,6 +431,9 @@ bool isStatic((Expression)`<Literal _>`, Env _) = true;
 
 bool isStatic((Expression)`[<{Expression ","}* es>]`, Env env) 
     = ( true | it && isStatic(e, env) | Expression e <- es );
+
+bool isStatic((Expression)`<Expression arr>[<Expression idx>]`, Env env)
+    = isStatic(arr, env) && isStatic(idx, env);
 
 bool isStatic((Expression)`(<Expression e>)`, Env env) = isStatic(e, env);
 
@@ -518,6 +511,9 @@ Value eval((Expression)`<Expression e>.toString()`, Env env) = expr([Expression]
 
 Value eval((Expression)`<Id x>.src`, Env env) = expr([Expression]toObj(t.src))
     when code(Tree t) := eval((Expression)`<Id x>`, env);
+
+Value eval((Expression)`<Expression e>.length`, Env env) = expr(fromVal(size([ e | Expression e <- es ])))
+    when expr((Expression)`[<{Expression ","}* es>]`) := eval(e, env);
 
 Value eval((Expression)`<Id x>`, Env env) = env["<x>"]
     when "<x>" in env;
