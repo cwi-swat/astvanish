@@ -1,0 +1,10 @@
+//@@ src/stm.av: run($acts)
+
+on closed do {
+    beep
+    beep
+}
+
+on opened do {
+    print
+}

@@ -1,11 +1,11 @@
 
 
 
-function run($m, state, event) {
-    with (machine _ _ end : $m) {
+function run($m, $acts, state, event) {
+    with (machine _ end : $m) {
         for (const s of $1) {
             console.log(s.src);
-            if (handleState(s, $2, state, event)) {
+            if (handleState(s, $acts, state, event)) {
                 return;
             }
         }
@@ -36,20 +36,22 @@ function doTrans($name, $ts, $actions, state, event) {
 }
 
 function doActions($name, $actions) {
-    for (const a of $actions) {
-        with (on _ do { _ }: a) {
-            // this for-loop plus if implements a kind of lookup
-            // it matches up states and their action clauses
-            // (related to "the trick" in peval folklore)
-            if ($1.toString() == $name.toString()) {
-                for (const c of $2) {
-                    match (c) {
-                        case beep: console.log('beep');
-                        case print: console.log('print');
-                        case send: console.log('send');
+    with (_ : $actions) {
+        for (const a of $1) {
+            with (on _ do { _ }: a) {
+                // this for-loop plus if implements a kind of lookup
+                // it matches up states and their action clauses
+                // (related to "the trick" in peval folklore)
+                if ($1.toString() == $name.toString()) {
+                    for (const c of $2) {
+                        match (c) {
+                            case beep: console.log('beep');
+                            case print: console.log('print');
+                            case send: console.log('send');
+                        }
                     }
                 }
-            }
-        }       
+            }       
+        }
     }
 }

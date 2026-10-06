@@ -19,27 +19,43 @@ alias Env = map[str, Value];
 @synopsis{Partially evaluate as per a one or more payload directives (writes to disk)}
 void peval(Tree prog, loc root=|project://astvanish/|, bool logging=false) {
     assert prog.prod.def is \start : "must provide a start[] syntax tree";
+    peval({prog}, root=root, logging=logging);
+}
 
-    for (PEvalTask task <- extractPayload(prog)) {
-        start[Source] js = peval(task, prog, root, logging=logging);
-        loc l = prog.src;
-        l = l[file=split(".", prog.src.file)[0] + "-" + task.func][extension="js"].top;
+@synopsis{Partially evaluate as per a one or more payload directives (writes to disk)}
+void peval(set[Tree] progs, loc root=|project://astvanish/|, bool logging=false) {
+    assert all(Tree prog <- progs, prog.prod.def is \start) : "must provide a start[] syntax trees";
+
+    map[str path, map[str func, Env statics] calls] tasks = ();
+    map[str, map[str, list[loc]] ] sources = ();
+
+    for (Tree prog <- progs, <str path, str func, str static> <- extractPayload(prog)) {
+        if (path notin tasks) {
+            tasks[path] = ();
+            sources[path] = ();
+        }
+        if (func notin tasks[path]) {
+            tasks[path][func] = ();
+            sources[path][func] = [];
+        }
+        if (static in tasks[path][func]) {
+            throw "duplicate binding for static param <static> (<path> / <func>)";
+        }
+        tasks[path][func] += (static: code(prog.top));
+        sources[path][func] += [prog.src];
+    }
+
+    //iprintln(sources);
+
+    for (str path <- tasks, str func <- tasks[path]) {
+        start[Source] js = peval(parseAV(root + path), tasks[path][func], func, logging=logging);   
+        str base = intercalate("+", [ split(".", l.file)[0] | loc l <- sources[path][func] ]);
+        loc l = sources[path][func][0]; // take first one as "root"
+        l = l[file=base + "-" + func][extension="js"].top;
         println("LOG: writing to <l>");
         writeFile(l, js);
     }
 }
-
-@synopsis{Partially evaluate as per a single payload directive}
-start[Source] peval1(Tree prog, loc root=|project://astvanish/|, bool logging=false) {
-    assert prog.prod.def is \start : "must provide a start[] syntax tree";
-    if ({PEvalTask task} := extractPayload(prog)) {
-        return peval(task, prog, root, logging=logging);
-    }
-    throw "no or multiple partial-eval directives found";
-}
-
-start[Source] peval(PEvalTask task, Tree prog, loc root, bool logging=false) 
-    = peval(parseAV(root + task.path), (task.static: code(prog.top)), task.func, logging=logging);       
 
 alias PEvalTask = tuple[str path, str func, str static];
 alias Payload = set[PEvalTask];
