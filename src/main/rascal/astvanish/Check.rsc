@@ -150,7 +150,7 @@ set[Message] check((MatchCase)`case <Pattern p>: <Statement* ss>`, Env env, Sig 
 FEnv extractBindingTimes(start[Source] code) {
     FEnv env = ();
     top-down-break visit (code) {
-        case (Function)`function <Id f>(<{Id ","}* params>) {<Statement* ss>}`: {
+        case (Function)`function <Id f>(<{Id ","}* params>) {<Statement* _>}`: {
             env["<f>"] = [ isStatic(x) ? <x, static()> : <x, dyn()> 
                 | Id p <- params, str x := "<p>" ];
         }
