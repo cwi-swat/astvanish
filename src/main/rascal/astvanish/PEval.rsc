@@ -16,15 +16,9 @@ data Value
 @synopsis{The environment capturing statically known bindings}
 alias Env = map[str, Value];
 
-@synopsis{Partially evaluate as per a one or more payload directives (writes to disk)}
-void peval(Tree prog, loc root=|project://astvanish/|, bool logging=false) {
-    assert prog.prod.def is \start : "must provide a start[] syntax tree";
-    peval({prog}, root=root, logging=logging);
-}
-
-@synopsis{Partially evaluate as per a one or more payload directives (writes to disk)}
-void peval(set[Tree] progs, loc root=|project://astvanish/|, bool logging=false) {
-    assert all(Tree prog <- progs, prog.prod.def is \start) : "must provide a start[] syntax trees";
+@synopsis{Partially evaluate as per a one or more payload directives in one or more sources (writes to disk)}
+void peval(list[Tree] progs, loc root=|project://astvanish/|, bool logging=false) {
+    assert all(Tree prog <- progs, prog.prod.def is \start) : "must provide a start-syntax trees";
 
     map[str path, map[str func, Env statics] calls] tasks = ();
     map[str, map[str, list[loc]] ] sources = ();
@@ -41,21 +35,33 @@ void peval(set[Tree] progs, loc root=|project://astvanish/|, bool logging=false)
         if (static in tasks[path][func]) {
             throw "duplicate binding for static param <static> (<path> / <func>)";
         }
+
+        // here envs are merged to allow for different source files
+        // to be input to the same interpreter via different parameters.
         tasks[path][func] += (static: code(prog.top));
         sources[path][func] += [prog.src];
     }
 
-    //iprintln(sources);
-
     for (str path <- tasks, str func <- tasks[path]) {
-        start[Source] js = peval(parseAV(root + path), tasks[path][func], func, logging=logging);   
-        str base = intercalate("+", [ split(".", l.file)[0] | loc l <- sources[path][func] ]);
-        loc l = sources[path][func][0]; // take first one as "root"
-        l = l[file=base + "-" + func][extension="js"].top;
+        Env env = tasks[path][func];
+        start[Source] js = peval(parseAV(root + path), env, func, logging=logging); 
+        loc l = jsLoc(func, sources[path][func]);  
         println("LOG: writing to <l>");
         writeFile(l, js);
     }
 }
+
+@synopsis{Create a JS output file loc based on the semantics `func` and the input source `srcs`}
+loc jsLoc(str func, list[loc] srcs) {
+    // TODO: if different files represent different languages, they probably have 
+    // different extensions, but the same base name? (e.g. todo.schema, todo.checks, todo.policy, ...)
+    // how to unambiguously determine the name of the resulting file?
+    // In the current impl, you'd get, e.g., todo+todo+todo+run.js, which is not what we want.
+    str base = intercalate("+", [ split(".", l.file)[0] | loc l <- srcs ]);
+    loc l = srcs[0]; // take first one as "root" (maybe assert all are in the dir?)
+    return l[file=base + "-" + func][extension="js"].top;
+}
+        
 
 alias PEvalTask = tuple[str path, str func, str static];
 alias Payload = set[PEvalTask];
