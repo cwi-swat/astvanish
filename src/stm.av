@@ -2,45 +2,52 @@
 
 
 function run($m, state, event) {
-    with (machine _ end : $m) {
+    with (machine _ _ end : $m) {
         for (const s of $1) {
             console.log(s.src);
-            with (state _ _ end: s) {
-                if ($1.toString() === state.current) {
-                    for (const t of $2) {
-                        with (_ => _ : t) {
-                            if ($1.toString() === event) {
-                                state.current = $2.toString();
-                            }
-                            return;
-                        }
-                    }
-                }
+            if (handleState(s, $2, state, event)) {
+                return;
             }
         }
     }
 }
 
 
-function main(state, event, $m) {
-    match ($m) {
-        case machine _ end: 
-            for (const s of $1) {
-                console.log(s.src);
-                match (s) {
-                    case state _ _ end: 
-                        if ($1.toString() === state.current) {
-                            for (const t of $2) {
-                                match (t) {
-                                    case _ => _: 
-                                        if ($1.toString() === event) {
-                                            state.current = $2.toString();
-                                        }
-                                        return;
-                                }
-                            }
-                        }
+function handleState($s, $actions, state, event) {
+    with (state _ _ end: $s) {
+        if ($1.toString() === state.current) {
+            return doTrans($1, $2, $actions, state, event);
+        }
+        return false;
+    }
+}
+
+function doTrans($name, $ts, $actions, state, event) {
+    for (const t of $ts) {
+        with (_ => _ : t) {
+            if ($1.toString() === event) {
+                state.current = $2.toString();
+                doActions($2, $actions);
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+function doActions($name, $actions) {
+    for (const a of $actions) {
+        with (on _ do { _ }: a) {
+            // this for-loop plus if implements a kind of lookup
+            if ($1.toString() == $name.toString()) {
+                for (const c of $2) {
+                    match (c) {
+                        case beep: console.log('beep');
+                        case print: console.log('print');
+                        case send: console.log('send');
+                    }
                 }
             }
+        }       
     }
 }

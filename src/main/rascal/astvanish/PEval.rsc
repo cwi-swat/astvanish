@@ -180,6 +180,9 @@ Admin newAdmin(start[Source] code, bool logging) {
     void log_(value v) {
         if (logging) {
             println("LOG: <v>");
+            if (msgs != {}) {
+                iprintln(msgs);
+            }
         }
     }
 
@@ -292,6 +295,7 @@ Statement* peval(Statement* ss, Env env, Admin admin) {
 
 @synopsis{Partially evaluate an expression}
 Expression peval(Expression e, Env env, Admin admin) {
+    admin.log("expression: <e>");
     return top-down-break visit (e) {
         // todo: something doesn't feel right about having two cases here
         case (Expression)`<Id f>(<{Expression ","}* args>)` 
@@ -326,7 +330,7 @@ Expression peval(Expression e, Env env, Admin admin) {
 
 @synopsis{Partially evaluate a statement}
 Statement peval(Statement s, Env env, Admin admin) {
-    //println("PEVAL: <s>");
+    admin.log("statement <s>");
     return top-down-break visit (s) {
 
         case (Statement)`if (<Expression cond>) <Statement s>` 
@@ -372,6 +376,7 @@ Statement peval(Statement s, Env env, Admin admin) {
         }
 
         case s:(Statement)`match (<Expression e>) {<MatchCase* cases>}`: {
+            admin.log("match statement: <e>");
             if ((Expression)`<Id x>` := e, isCode(x, env)) {                        
                 for ((MatchCase)`case <Pattern p>: <Statement* ss>` <- cases) {
                     if (success(list[Tree] bs) := matchTree(p, env["<x>"].code)) {
@@ -384,6 +389,13 @@ Statement peval(Statement s, Env env, Admin admin) {
             else {
                 throw "only static variables are allowed in match conditions (not `<e>`)";
             }
+        }
+
+        // for some reason this is need, as top-down does not go into
+        // {} to find nested matches...
+        case (Statement)`{<Statement* ss>}`: {
+            ss = peval(ss, env, admin);
+            insert (Statement)`{<Statement* ss>}`;
         }
 
         case (Statement)`<Expression e>;` => (Expression)`undefined` := e2 

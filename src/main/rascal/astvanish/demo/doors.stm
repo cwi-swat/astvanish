@@ -7,4 +7,13 @@ machine
   state opened
      close => closed
   end
+
+  on closed do {
+    beep
+    beep
+  }
+
+  on opened do {
+    print
+  }
 end
