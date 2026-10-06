@@ -9,6 +9,9 @@ bool isAST(lit(_)) = false;
 bool isAST(cilit(_)) = false;
 default bool isAST(_) = true;
 
+str pt2json(t:appl(prod(\start(_), list[Symbol] def, _), list[Tree] args))
+    = pt2json(args[1]);
+
 str pt2json(t:appl(prod(label(str l, sort(_)), list[Symbol] def, _), list[Tree] args))
     = "{
       '  \"_tag\": \"<l>\",

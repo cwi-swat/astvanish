@@ -1,11 +1,9 @@
-function defaultFor() { return false; }
-function initializeQuestion(env) { env['hasBoughtHouse'] = defaultFor(); }
-function initializeQuestion$0(env) { env['hasMaintLoan'] = defaultFor(); }
-function initializeQuestion$1(env) { env['hasSoldHouse'] = defaultFor(); }
-function defaultFor$0() { return 0; }
-function initializeQuestion$2(env) { env['sellingPrice'] = defaultFor$0(); }
-function initializeQuestion$3(env) { env['privateDebt'] = defaultFor$0(); }
-function initializeQuestion$4(env) { env['valueResidue'] = defaultFor$0(); }
+function initializeQuestion(env) { env['hasBoughtHouse'] = false; }
+function initializeQuestion$0(env) { env['hasMaintLoan'] = false; }
+function initializeQuestion$1(env) { env['hasSoldHouse'] = false; }
+function initializeQuestion$2(env) { env['sellingPrice'] = 0; }
+function initializeQuestion$3(env) { env['privateDebt'] = 0; }
+function initializeQuestion$4(env) { env['valueResidue'] = 0; }
 function initializeQuestion$5(env) {
     initializeQuestion$2(env);
     initializeQuestion$3(env);
@@ -78,11 +76,7 @@ function renderQuestion$5(env) {
     renderQuestion$3(env);
     renderQuestion$4(env);
 }
-function renderQuestion$6(env) {
-    if (eval_(env)) {
-        renderQuestion$5(env);
-    }
-}
+function renderQuestion$6(env) { if (eval_(env)) { renderQuestion$5(env); } }
 function render(env) {
     renderQuestion(env);
     renderQuestion$0(env);
@@ -94,30 +88,15 @@ function eval$1(env) { return env['privateDebt']; }
 function eval$2(env) { return eval$0(env) - eval$1(env); }
 function computeQuestion(env) {
     var val = eval$2(env);
-    if (val !== env['valueResidue']) {
-        change = true;
-    }
+    if (val !== env['valueResidue']) { change = true; }
 }
-function computeQuestion$0(env) {
-    ;
-    ;
-    computeQuestion(env);
-}
-function computeQuestion$1(env) {
-    if (eval_(env)) {
-        computeQuestion$0(env);
-    }
-}
+function computeQuestion$0(env) { computeQuestion(env); }
+function computeQuestion$1(env) { if (eval_(env)) { computeQuestion$0(env); } }
 function compute(env) {
     return function (x, val) {
         env[x] = val;
         var change = false;
-        do {
-            ;
-            ;
-            ;
-            computeQuestion$1(env);
-        }
+        do { computeQuestion$1(env); }
         while (change);
     };
 }

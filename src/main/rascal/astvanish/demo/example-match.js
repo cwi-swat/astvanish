@@ -1,13 +1,5 @@
-function eval_(i, input, k) {
-    if (input[i] === 'b') {
-        k(i + 1, input);
-    }
-}
-function eval$0(i, input, k) {
-    if (input[i] === 'a') {
-        k(i + 1, input);
-    }
-}
+function eval_(i, input, k) { if (input[i] === 'b') { k(i + 1, input); } }
+function eval$0(i, input, k) { if (input[i] === 'a') { k(i + 1, input); } }
 function eval$1(i, input, k) {
     eval$0(i, input, function (i, input) {
         eval_(i, input, k);
@@ -57,7 +49,5 @@ function match(input) {
             throw { pos: i };
         });
     }
-    catch (e) {
-        return e;
-    }
+    catch (e) { return e; }
 }
