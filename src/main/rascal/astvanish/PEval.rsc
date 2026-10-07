@@ -283,6 +283,7 @@ default list[Expression] isInlineable(Statement _, Env _) = [];
 
 @synopsis{Partially evaluate a function definition given the current static environment and call-site arguments}
 Expression peval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`, Env env, {Expression ","}* args, Admin admin) {
+    admin.log("function: <f>(<fs>)");
     <newEnv, dynArgs> = partition(fs, args, env, admin);
 
     Statement* newBody = peval(body, newEnv, admin);
@@ -570,7 +571,11 @@ default bool isStatic(Expression _, Env _) = false;
 @synopsis{Evaluate an expression (assuming `isStatic` holds)}
 Value eval((Expression)`<Expression e>.toString()`, Env env) = expr([Expression]"\'<txt>\'") 
     when code(Tree t) := eval(e, env),
-        str txt := replaceAll("<t>", "\n", "\\n"); // todo: fix escaping
+        str txt := escape("<t>");
+
+str escape(str s) = (s | replaceAll(it, a, b) | <str a, str b>  <- m )
+    when lrel[str, str] m := [<"\\", "\\\\">, <"\n", "\\n">, <"\'", "\\\'">, <"\t", "\\t">];
+
 
 Value eval((Expression)`<Id x>.src`, Env env) = expr([Expression]toObj(t.src))
     when code(Tree t) := eval((Expression)`<Id x>`, env);

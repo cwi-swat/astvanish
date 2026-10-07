@@ -61,6 +61,9 @@ start[Form] aForm()
     = parse(#start[Form], |project://astvanish/src/main/rascal/astvanish/demo/tax.ql|);
 
 
+start[Form] loanApproval() 
+    = parse(#start[Form], |project://astvanish/src/main/rascal/astvanish/demo/loan.ql|);
+
 void dumpQlEval() {
     writeFile(|project://astvanish/src/main/rascal/astvanish/demo/ql-interp.js|, 
         toEval(|project://astvanish/src/ql.av|, (
