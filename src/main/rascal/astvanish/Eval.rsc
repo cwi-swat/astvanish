@@ -19,6 +19,9 @@ alias Sigs = map[str, Symbol];
 // capture signatures per function that needs to be converted
 alias AEnv = map[str, Sigs];
 
+start[Source] toEval(loc src, AEnv sigs, type[&T<:Tree] grammar)
+    = toEval(parseAV(src), sigs, grammar);
+
 @synopsis{Convert top-level, named functions to interpreters, given the types of the static args}
 start[Source] toEval(start[Source] src, AEnv sigs, type[&T<:Tree] grammar) {
     return top-down-break visit (src) {
@@ -43,9 +46,10 @@ Statement* toEval(Statement* stmts, Sigs env, type[&T<:Tree] grammar) {
 
 Expression toField(Id x, Sigs env) = [Expression]"<owner>.<field>"
     // ugly hack: using sort symbol to carry over the owner variable
-    when str owner := env[""].name, 
-        str field := nameOf(env["<x>"]),
-         bprintln("<owner> . <field>");
+    when "" in env, str owner := env[""].name, 
+        str field := nameOf(env["<x>"]);
+
+default Expression toField(Id x, Sigs _) = (Expression)`<Id x>`;
 
 bool isKid(Id x) = /^\$[0-9]+$/ := "<x>";
 
@@ -70,7 +74,7 @@ Statement toEval(Statement stmt, Sigs env, type[&T<:Tree] grammar) {
 
         case (Statement)`for (const <Id x> of <Id y>) <Statement s>` 
             => (Statement)`for (const <Id x> of <Expression fld>) <Statement s2>` 
-            when isKid(y), Expression fld := toField(y, env),
+            when bprintln("FOR: <x> of <y> (env=<env>)"), "<y>" in env, Expression fld := toField(y, env),
                 Statement s2 := toEval(s, env + ("<x>": eltType(env["<y>"])), grammar)
 
         
@@ -79,6 +83,7 @@ Statement toEval(Statement stmt, Sigs env, type[&T<:Tree] grammar) {
             => toSwitch(x, cases, env + ("": sort("<x>")), grammar)                   
 
         case (Statement)`with (<Pattern p>: <Id x>) <Statement s>`: {
+            iprintln(env);
             set[Production] alts = grammar.definitions[env["<x>"]].alternatives;
     
             if (/z:prod(_, _, _) := alts, success(str _, list[Symbol] bs) := matchProd(p, z)) {

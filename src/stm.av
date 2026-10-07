@@ -16,13 +16,13 @@ function run($m, $acts, state, event) {
 function handleState($s, $actions, state, event) {
     with (state _ _ end: $s) {
         if ($1.toString() === state.current) {
-            return doTrans($1, $2, $actions, state, event);
+            return doTrans($2, $actions, state, event);
         }
         return false;
     }
 }
 
-function doTrans($name, $ts, $actions, state, event) {
+function doTrans($ts, $actions, state, event) {
     for (const t of $ts) {
         with (_ => _ : t) {
             if ($1.toString() === event) {

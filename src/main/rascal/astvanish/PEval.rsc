@@ -447,7 +447,7 @@ Statement peval(Statement s, Env env, Admin admin) {
             }
         }
 
-        // for some reason this is need, the top-down does not go into
+        // for some reason this is needed, the top-down does not go into
         // {} to find nested match statements...
         case (Statement)`{<Statement* ss>}`: {
             ss = peval(ss, env, admin);
