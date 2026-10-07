@@ -99,6 +99,8 @@ str kindOf(lex(str s)) = s;
 
 str kindOf(label(_, Symbol s)) = kindOf(s);
 
+str kindOf(conditional(Symbol s, _)) = kindOf(s);
+
 default str kindOf(Symbol s) = s has name ? s.name : "";
 
 str unescapeToken(str tok) 

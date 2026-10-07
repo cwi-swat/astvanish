@@ -24,24 +24,24 @@ function match_($re, i, input, k) {
             }
 
         case ( _ ): 
-            eval($1, i, input, k);
+            match_($1, i, input, k);
 
         case _ _:
-            eval($1, i, input, function (i, input) {
-                eval($2, i, input, k);
+            match_($1, i, input, function (i, input) {
+                match_($2, i, input, k);
             });
         
         case _ | _: 
-            eval($1, i, input, k);
-            eval($2, i, input, k);
+            match_($1, i, input, k);
+            match_($2, i, input, k);
 
         case _ ?: 
-            eval($1, i, input, k);
+            match_($1, i, input, k);
             k(i, input);
 
         case _ *: 
             (function f(i, input) {
-                eval($1, i, input, f);
+                match_($1, i, input, f);
                 k(i, input);
             })(i, input);
     }

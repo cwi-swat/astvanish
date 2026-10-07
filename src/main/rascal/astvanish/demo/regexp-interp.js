@@ -25,24 +25,24 @@ function match_($re, i, input, k) {
 
             break;
         case 'parens':
-            eval($re.arg, i, input, k);
+            match_($re.arg, i, input, k);
             break;
         case 'seq':
-            eval($re.lhs, i, input, function (i, input) {
-                eval($re.rhs, i, input, k);
+            match_($re.lhs, i, input, function (i, input) {
+                match_($re.rhs, i, input, k);
             });
             break;
         case 'alt':
-            eval($re.lhs, i, input, k);
-            eval($re.rhs, i, input, k);
+            match_($re.lhs, i, input, k);
+            match_($re.rhs, i, input, k);
             break;
         case 'opt':
-            eval($re.re, i, input, k);
+            match_($re.re, i, input, k);
             k(i, input);
             break;
         case 'iter':
             (function f(i, input) {
-                eval($re.re, i, input, f);
+                match_($re.re, i, input, f);
                 k(i, input);
             })(i, input);
             break;

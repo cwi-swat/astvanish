@@ -1,24 +1,29 @@
 
 
 
-function run($m, $acts, state, event) {{
+function run($m, $acts, state, event) {
+    {
         for (const s of $m.states) {
             console.log(s.src);
             if (handleState(s, $acts, state, event)) {
                 return;
             }
         }
-    }}
+    }
+}
 
 
-function handleState($s, $actions, state, event) {{
+function handleState($s, $actions, state, event) {
+    {
         if ($s.name === state.current) {
             return doTrans($s.trans, $actions, state, event);
         }
         return false;
-    }}
+    }
+}
 
-function doTrans($ts, $actions, state, event) {for (const t of $ts) {
+function doTrans($ts, $actions, state, event) {
+    for (const t of $ts) {
         {
             if (t.event === event) {
                 state.current = t.target;
@@ -27,9 +32,11 @@ function doTrans($ts, $actions, state, event) {for (const t of $ts) {
             }
         }
     }
-    return false;}
+    return false;
+}
 
-function doActions($name, $actions) {{
+function doActions($name, $actions) {
+    {
         for (const a of $actions.actions) {
             {
                 // this for-loop plus if implements a kind of lookup
@@ -38,18 +45,19 @@ function doActions($name, $actions) {{
                 if (a.name == $name.toString()) {
                     for (const c of a.cmds) {
                         switch (c._tag) {
-case 'beep': 
-   console.log('beep');
-   break;
-case 'print': 
-   console.log('print');
-   break;
-case 'send': 
-   console.log('send');
-   break;
-}
+                            case 'beep':
+                                console.log('beep');
+                                break;
+                            case 'print':
+                                console.log('print');
+                                break;
+                            case 'send':
+                                console.log('send');
+                                break;
+                        }
                     }
                 }
-            }       
+            }
         }
-    }}
+    }
+}
