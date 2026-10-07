@@ -56,10 +56,11 @@ function compute($ql, env) {
     with (form _ { _ } : $ql) {
         return function (x, val) {
             env[x] = val;
-            var change = false;
             do {
+                var change = false;
+            
                 for (const q of $2) 
-                    computeQuestion(q, env);
+                    change = change || computeQuestion(q, env);
             }
             while (change);
         };
@@ -69,30 +70,33 @@ function compute($ql, env) {
 function computeQuestion($q, env) {
     match ($q) {
         case _ _ \: _ :
-            /* nop */
+            return false;
 
         case _ _ \: _ = _ :
             var val = eve($4, env);
             if (val !== env[$2.toString()]) {
-                change = true;
+                env[$2.toString()] = val;
+                return true;
             }
 
         case { _ } :
+            var change = false;
             for (const q of $1) {
-                computeQuestion(q, env);
+                change = change || computeQuestion(q, env);
             }
+            return change;
 
         case if ( _ ) _ else _ : 
             if (eve($1, env)) {
-                computeQuestion($2, env);
+                return computeQuestion($2, env);
             }
             else {
-                computeQuestion($3, env);
+                return computeQuestion($3, env);
             }
 
         case if ( _ ) _ _: 
             if (eve($1, env)) {
-                computeQuestion($2, env);
+                return computeQuestion($2, env);
             }   
     }
 }

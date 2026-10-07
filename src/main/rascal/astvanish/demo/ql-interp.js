@@ -55,9 +55,10 @@ function compute($ql, env) {
    {
       return function (x, val) {
          env[x] = val;
-         var change = false;
          do {
-            for (const q of $ql.questions) computeQuestion(q, env);
+            var change = false;
+
+            for (const q of $ql.questions) change = change || computeQuestion(q, env);
          }
          while (change);
       };
@@ -67,31 +68,35 @@ function compute($ql, env) {
 function computeQuestion($q, env) {
    switch ($q._tag) {
       case 'answerable':
+         return false;
          break;
       case 'computed':
          var val = eve($q.expr, env);
          if (val !== env[$q.name]) {
-            change = true;
+            env[$q.name] = val;
+            return true;
          }
 
 
          break;
       case 'block':
+         var change = false;
          for (const q of $q.questions) {
-            computeQuestion(q, env);
+            change = change || computeQuestion(q, env);
          }
+         return change;
          break;
       case 'ifThenElse':
          if (eve($q.cond, env)) {
-            computeQuestion($q.then, env);
+            return computeQuestion($q.then, env);
          }
          else {
-            computeQuestion($q.els, env);
+            return computeQuestion($q.els, env);
          }
          break;
       case 'ifThen':
          if (eve($q.cond, env)) {
-            computeQuestion($q.then, env);
+            return computeQuestion($q.then, env);
          }
 
          break;
