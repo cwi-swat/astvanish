@@ -22,7 +22,7 @@ syntax Type = integer: "int" | boolean: "bool" | string: "str";
 
 
 syntax Question 
-  = ifThen: "if" "(" Expr cond ")" Question then () !>> "else" 
+  = ifThen: "if" "(" Expr cond ")" Question then () empty !>> "else" 
   | ifThenElse: "if" "(" Expr cond ")" Question then "else" Question els
   | block: "{" Question* questions "}"
   | answerable: Str prompt Id name ":" Type type

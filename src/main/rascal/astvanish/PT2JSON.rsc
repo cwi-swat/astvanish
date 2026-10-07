@@ -31,7 +31,7 @@ str pt2json(appl(regular(\iter-star-seps(_, list[Symbol] seps)), list[Tree] args
 
 
 str escape(str s) = (s | replaceAll(it, a, b) | <str a, str b>  <- m )
-    when lrel[str,str] m := [<"\\", "\\\\">, <"\n", "\\n">, <"\"", "\\\"">, <"\t", "\\t">];
+    when lrel[str, str] m := [<"\\", "\\\\">, <"\n", "\\n">, <"\"", "\\\"">, <"\t", "\\t">];
 
 default str pt2json(Tree t) = "\"<escape(s)>\""
     when str s := "<t>";

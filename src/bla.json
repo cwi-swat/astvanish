@@ -1,97 +1,154 @@
 {
   "_tag": "form",
-  "_src": {"offset": 26, "length": 431},
+  "_src": {
+    "offset": 26,
+    "length": 431
+  },
   "title": "\"Tax Office example\"",
   "questions": [
     {
       "_tag": "answerable",
-      "_src": {"offset": 57, "length": 55},
+      "_src": {
+        "offset": 57,
+        "length": 55
+      },
       "prompt": "\"Did you buy a house in 2010?\"",
       "name": "hasBoughtHouse",
       "type": {
         "_tag": "boolean",
-        "_src": {"offset": 108, "length": 4}
+        "_src": {
+          "offset": 108,
+          "length": 4
+        }
       }
     },
     {
       "_tag": "answerable",
-      "_src": {"offset": 118, "length": 46},
+      "_src": {
+        "offset": 118,
+        "length": 46
+      },
       "prompt": "\"Did you enter a loan?\"",
       "name": "hasMaintLoan",
       "type": {
         "_tag": "boolean",
-        "_src": {"offset": 160, "length": 4}
+        "_src": {
+          "offset": 160,
+          "length": 4
+        }
       }
     },
     {
       "_tag": "answerable",
-      "_src": {"offset": 172, "length": 54},
+      "_src": {
+        "offset": 172,
+        "length": 54
+      },
       "prompt": "\"Did you sell a house in 2010?\"",
       "name": "hasSoldHouse",
       "type": {
         "_tag": "boolean",
-        "_src": {"offset": 222, "length": 4}
+        "_src": {
+          "offset": 222,
+          "length": 4
+        }
       }
     },
     {
       "_tag": "ifThen",
-      "_src": {"offset": 237, "length": 219},
+      "_src": {
+        "offset": 237,
+        "length": 219
+      },
       "cond": {
         "_tag": "var",
-        "_src": {"offset": 241, "length": 12},
+        "_src": {
+          "offset": 241,
+          "length": 12
+        },
         "name": "hasSoldHouse"
       },
       "then": {
         "_tag": "block",
-        "_src": {"offset": 255, "length": 200},
+        "_src": {
+          "offset": 255,
+          "length": 200
+        },
         "questions": [
           {
             "_tag": "answerable",
-            "_src": {"offset": 261, "length": 53},
+            "_src": {
+              "offset": 261,
+              "length": 53
+            },
             "prompt": "\"What was the selling price?\"",
             "name": "sellingPrice",
             "type": {
               "_tag": "integer",
-              "_src": {"offset": 311, "length": 3}
+              "_src": {
+                "offset": 311,
+                "length": 3
+              }
             }
           },
           {
             "_tag": "answerable",
-            "_src": {"offset": 319, "length": 58},
+            "_src": {
+              "offset": 319,
+              "length": 58
+            },
             "prompt": "\"Private debts for the sold house:\"",
             "name": "privateDebt",
             "type": {
               "_tag": "integer",
-              "_src": {"offset": 374, "length": 3}
+              "_src": {
+                "offset": 374,
+                "length": 3
+              }
             }
           },
           {
             "_tag": "computed",
-            "_src": {"offset": 382, "length": 69},
+            "_src": {
+              "offset": 382,
+              "length": 69
+            },
             "prompt": "\"Value residue:\"",
             "name": "valueResidue",
             "type": {
               "_tag": "integer",
-              "_src": {"offset": 419, "length": 3}
+              "_src": {
+                "offset": 419,
+                "length": 3
+              }
             },
             "expr": {
               "_tag": "sub",
-              "_src": {"offset": 425, "length": 26},
+              "_src": {
+                "offset": 425,
+                "length": 26
+              },
               "lhs": {
                 "_tag": "var",
-                "_src": {"offset": 425, "length": 12},
+                "_src": {
+                  "offset": 425,
+                  "length": 12
+                },
                 "name": "sellingPrice"
               },
               "rhs": {
                 "_tag": "var",
-                "_src": {"offset": 440, "length": 11},
+                "_src": {
+                  "offset": 440,
+                  "length": 11
+                },
                 "name": "privateDebt"
               }
             }
           }
         ]
       },
-      "$unknown": ""
+      "empty": ""
     }
   ]
 }

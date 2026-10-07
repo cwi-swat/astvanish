@@ -192,22 +192,12 @@ Admin newAdmin(start[Source] code, bool logging) {
             return memo[key];
         }
 
-        // in the first round, we keep the original name
-        // to ensure that top-level calls keep their original names
-        Id newId = prefix;
         str name = "<prefix>";
-        if (name in idCounters) {
-            newId = [Id]"<name>$<idCounters[name]>";
-            idCounters[name] += 1;
-        }
-        else {
+        if (name notin idCounters) {
             idCounters[name] = 0;
         }
-
-        // eval has special meaning in JS so we avoid conflicts
-        if ((Id)`eval` := newId) {
-            newId = (Id)`eval_`;
-        }
+        Id newId = [Id]"<name>$<idCounters[name]>";
+        idCounters[name] += 1;
 
         memo[key] = newId;
 
