@@ -5,7 +5,7 @@ function match($re, input) {
     var i = 0; // force i to be dynamic
     try {
         with (_: $re) {
-            eval($1, i, input, function (i, input) {
+            match_($1, i, input, function (i, input) {
                 throw {pos: i};
             });
         }
@@ -15,7 +15,7 @@ function match($re, input) {
     }
 }
 
-function eval($re, i, input, k) {
+function match_($re, i, input, k) {
     match ($re) {
             
         case _@Char: 

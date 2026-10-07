@@ -5,7 +5,7 @@ function match($re, input) {
     var i = 0; // force i to be dynamic
     try {
         {
-            eval($re.word, i, input, function (i, input) {
+            match_($re.word, i, input, function (i, input) {
                 throw { pos: i };
             });
         }
@@ -15,7 +15,7 @@ function match($re, input) {
     }
 }
 
-function eval($re, i, input, k) {
+function match_($re, i, input, k) {
     switch ($re._tag) {
         case 'word':
             if (input[i] === $re.word) {

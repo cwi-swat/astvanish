@@ -26,6 +26,6 @@ void dumpRegexpEval() {
     writeFile(|project://astvanish/src/main/rascal/astvanish/demo/regexp-interp.js|, 
         toEval(|project://astvanish/src/regexp.av|, (
             "match": ("$re": sort("Regexp")),
-            "eval": ("$re": sort("Regexp"))
+            "match_": ("$re": sort("Regexp"))
         ), #start[RE]));
 }

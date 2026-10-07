@@ -7,13 +7,13 @@ function run($prog) {
             for (const f of d.params) {
                 myEnv[f.toString()] = args.shift();
             }
-            return eval(d.body, myEnv);
+            return eve(d.body, myEnv);
         };
-        return eval($prog.main, env);
+        return eve($prog.main, env);
     }
 }
 
-function eval($exp, env) {
+function eve($exp, env) {
     switch ($exp._tag) {
         case 'var':
             return env[$exp.name];
@@ -22,20 +22,20 @@ function eval($exp, env) {
             return parseInt($exp.number.toString());
             break;
         case 'mul':
-            return eval($exp.lhs, env) * eval($exp.rhs, env);
+            return eve($exp.lhs, env) * eve($exp.rhs, env);
             break;
         case 'sub':
-            return eval($exp.lhs, env) - eval($exp.rhs, env);
+            return eve($exp.lhs, env) - eve($exp.rhs, env);
             break;
         case 'gt':
-            return eval($exp.lhs, env) > eval($exp.rhs, env);
+            return eve($exp.lhs, env) > eve($exp.rhs, env);
             break;
         case 'ifThenElse':
-            return eval($exp.cond, env) ? eval($exp.then, env) : eval($exp.els, env);
+            return eve($exp.cond, env) ? eve($exp.then, env) : eve($exp.els, env);
             break;
         case 'call':
             var args = [];
-            for (const a of $exp.actuals) args.push(eval(a, env));
+            for (const a of $exp.actuals) args.push(eve(a, env));
             return env[$exp.name](args);
             break;
     }

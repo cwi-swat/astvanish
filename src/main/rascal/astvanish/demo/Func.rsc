@@ -31,7 +31,7 @@ void dumpFuncEval() {
     writeFile(|project://astvanish/src/main/rascal/astvanish/demo/func-interp.js|, 
         toEval(|project://astvanish/src/func.av|, (
             "run": ("$prog": sort("Prog")),
-            "eval": ("$exp": sort("Expr")),
+            "eve": ("$exp": sort("Expr")),
             "format": ("$prog": sort("Prog")),
             "formatExp": ("$exp": sort("Expr"))
         ), #start[Prog]));

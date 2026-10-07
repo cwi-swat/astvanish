@@ -9,25 +9,25 @@ function run($prog) {
                     for (const f of $2) {
                         myEnv[f.toString()] = args.shift();
                     }
-                    return eval($3, myEnv);
+                    return eve($3, myEnv);
                 };
-        return eval($2, env);
+        return eve($2, env);
     }
 }
 
-function eval($exp, env) {
+function eve($exp, env) {
     match ($exp) {
         case _@Id : return env[$1.toString()];
         case _@Num : return parseInt($1.toString());
-        case _ * _ : return eval($1, env) * eval($2, env);
-        case _ - _ : return eval($1, env) - eval($2, env);
-        case _ > _ : return eval($1, env) > eval($2, env);
+        case _ * _ : return eve($1, env) * eve($2, env);
+        case _ - _ : return eve($1, env) - eve($2, env);
+        case _ > _ : return eve($1, env) > eve($2, env);
         case if _ then _ else _ fi :
-            return eval($1, env) ? eval($2, env) : eval($3, env);
+            return eve($1, env) ? eve($2, env) : eve($3, env);
         case _ ( _ ) : 
             var args = [];
             for (const a of $2) 
-                args.push(eval(a, env));
+                args.push(eve(a, env));
             return env[$1.toString()](args);
     }
 }

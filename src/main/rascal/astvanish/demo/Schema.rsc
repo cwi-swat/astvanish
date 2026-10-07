@@ -31,5 +31,5 @@ void dumpSchemaEval() {
             "sql": ("$schema": sort("Schema")),
             "field2sql": ("$field": sort("Field"), "$cname": sort("Id")),
             "toType": ("$type": sort("Type"))
-        ), #start[RE]));
+        ), #start[Schema]));
 }

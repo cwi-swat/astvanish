@@ -72,7 +72,7 @@ function computeQuestion($q, env) {
             /* nop */
 
         case _ _ \: _ = _ :
-            var val = eval($4, env);
+            var val = eve($4, env);
             if (val !== env[$2.toString()]) {
                 change = true;
             }
@@ -83,7 +83,7 @@ function computeQuestion($q, env) {
             }
 
         case if ( _ ) _ else _ : 
-            if (eval($1, env)) {
+            if (eve($1, env)) {
                 computeQuestion($2, env);
             }
             else {
@@ -91,7 +91,7 @@ function computeQuestion($q, env) {
             }
 
         case if ( _ ) _ _: 
-            if (eval($1, env)) {
+            if (eve($1, env)) {
                 computeQuestion($2, env);
             }   
     }
@@ -112,7 +112,7 @@ function renderQuestion($q, env) {
             }
 
         case if ( _ ) _ else _ : 
-            if (eval($1, env)) {
+            if (eve($1, env)) {
                 renderQuestion($2, env);
             }
             else {
@@ -120,7 +120,7 @@ function renderQuestion($q, env) {
             }
 
         case if ( _ ) _ _:  // the last _ is the () empty for the follow restriction
-            if (eval($1, env)) {
+            if (eve($1, env)) {
                 renderQuestion($2, env);
             }
         
@@ -150,25 +150,25 @@ function widget($type, $label, $name, readOnly, env, func) {
     }
 }
 
-function eval($e, env) {
+function eve($e, env) {
     match ($e) {
         case _@Id : return env[$1.toString()];
         case _@Int : return parseInt($1.toString());
         case _@Str : return unquote($1.toString());
         case _@Bool : return $1.toString() === 'true';
-        case ( _ ) : return eval($1, env);
-        case ! _ : return !eval($1, env);
-        case _ * _: return eval($1, env) * eval($2, env);
-        case _ / _: return Math.round(eval($1, env) / eval($2, env));
-        case _ + _: return eval($1, env) + eval($2, env);
-        case _ - _: return eval($1, env) - eval($2, env);
-        case _ == _: return eval($1, env) === eval($2, env);
-        case _ != _: return eval($1, env) !== eval($2, env);
-        case _ > _: return eval($1, env) > eval($2, env);
-        case _ < _: return eval($1, env) < eval($2, env);
-        case _ <= _: return eval($1, env) <= eval($2, env);
-        case _ >= _: return eval($1, env) >= eval($2, env);
-        case _ && _: return eval($1, env) && eval($2, env);
-        case _ || _: return eval($1, env) || eval($2, env);
+        case ( _ ) : return eve($1, env);
+        case ! _ : return !eve($1, env);
+        case _ * _: return eve($1, env) * eve($2, env);
+        case _ / _: return Math.round(eve($1, env) / eve($2, env));
+        case _ + _: return eve($1, env) + eve($2, env);
+        case _ - _: return eve($1, env) - eve($2, env);
+        case _ == _: return eve($1, env) === eve($2, env);
+        case _ != _: return eve($1, env) !== eve($2, env);
+        case _ > _: return eve($1, env) > eve($2, env);
+        case _ < _: return eve($1, env) < eve($2, env);
+        case _ <= _: return eve($1, env) <= eve($2, env);
+        case _ >= _: return eve($1, env) >= eve($2, env);
+        case _ && _: return eve($1, env) && eve($2, env);
+        case _ || _: return eve($1, env) || eve($2, env);
     }
 }
