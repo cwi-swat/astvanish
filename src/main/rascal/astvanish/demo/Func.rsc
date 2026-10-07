@@ -4,6 +4,8 @@ extend lang::std::Layout;
 extend lang::std::Id;
 
 import ParseTree;
+import IO;
+import astvanish::Eval;
 
 start syntax Prog = prog: Def* defs Expr main;
 
@@ -24,3 +26,13 @@ lexical Num = [0-9]+;
 start[Prog] aProg() 
     = parse(#start[Prog], |project://astvanish/src/main/rascal/astvanish/demo/factorial.func|);
 
+
+void dumpFuncEval() {
+    writeFile(|project://astvanish/src/main/rascal/astvanish/demo/func-interp.js|, 
+        toEval(|project://astvanish/src/func.av|, (
+            "run": ("$prog": sort("Prog")),
+            "eval": ("$exp": sort("Expr")),
+            "format": ("$prog": sort("Prog")),
+            "formatExp": ("$exp": sort("Expr"))
+        ), #start[Prog]));
+}

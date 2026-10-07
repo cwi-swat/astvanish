@@ -74,7 +74,7 @@ Statement toEval(Statement stmt, Sigs env, type[&T<:Tree] grammar) {
 
         case (Statement)`for (const <Id x> of <Id y>) <Statement s>` 
             => (Statement)`for (const <Id x> of <Expression fld>) <Statement s2>` 
-            when bprintln("FOR: <x> of <y> (env=<env>)"), "<y>" in env, Expression fld := toField(y, env),
+            when "<y>" in env, Expression fld := toField(y, env),
                 Statement s2 := toEval(s, env + ("<x>": eltType(env["<y>"])), grammar)
 
         
@@ -83,7 +83,6 @@ Statement toEval(Statement stmt, Sigs env, type[&T<:Tree] grammar) {
             => toSwitch(x, cases, env + ("": sort("<x>")), grammar)                   
 
         case (Statement)`with (<Pattern p>: <Id x>) <Statement s>`: {
-            iprintln(env);
             set[Production] alts = grammar.definitions[env["<x>"]].alternatives;
     
             if (/z:prod(_, _, _) := alts, success(str _, list[Symbol] bs) := matchProd(p, z)) {
