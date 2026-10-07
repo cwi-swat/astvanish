@@ -16,6 +16,10 @@ data Value
 @synopsis{The environment capturing statically known bindings}
 alias Env = map[str, Value];
 
+void peval(Tree prog, list[Tree] with=[], loc root=|project://astvanish/|, bool logging=false) {
+    peval([prog, *with], root=root, logging=logging);
+}
+
 @synopsis{Partially evaluate as per a one or more payload directives in one or more sources (writes to disk)}
 void peval(list[Tree] progs, loc root=|project://astvanish/|, bool logging=false) {
     assert all(Tree prog <- progs, prog.prod.def is \start) : "must provide a start-syntax trees";
@@ -53,12 +57,9 @@ void peval(list[Tree] progs, loc root=|project://astvanish/|, bool logging=false
 
 @synopsis{Create a JS output file loc based on the semantics `func` and the input source `srcs`}
 loc jsLoc(str func, list[loc] srcs) {
-    // TODO: if different files represent different languages, they probably have 
-    // different extensions, but the same base name? (e.g. todo.schema, todo.checks, todo.policy, ...)
-    // how to unambiguously determine the name of the resulting file?
-    // In the current impl, you'd get, e.g., todo+todo+todo+run.js, which is not what we want.
-    str base = intercalate("+", [ split(".", l.file)[0] | loc l <- srcs ]);
-    loc l = srcs[0]; // take first one as "root" (maybe assert all are in the dir?)
+    // take first one as "root" (maybe assert all are in the dir?)
+    str base = split(".", srcs[0].file)[0];
+    loc l = srcs[0]; 
     return l[file=base + "-" + func][extension="js"].top;
 }
         
