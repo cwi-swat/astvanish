@@ -164,58 +164,58 @@ function widget($type, $label, $name, readOnly, env, func) {
 function eve($e, env) {
    switch ($e._tag) {
       case 'var':
-         return env[$e.$unknown];
+         return env[$e.name];
          break;
       case 'integer':
-         return parseInt($e.$unknown.toString());
+         return parseInt($e.theInt.toString());
          break;
       case 'string':
-         return unquote($e.$unknown.toString());
+         return unquote($e.theStr.toString());
          break;
       case 'boolean':
-         return $e.$unknown === 'true';
+         return $e.theBool === 'true';
          break;
       case 'parens':
-         return eve($e.$unknown, env);
+         return eve($e.arg, env);
          break;
       case 'not':
-         return !eve($e.$unknown, env);
+         return !eve($e.arg, env);
          break;
       case 'mul':
-         return eve($e.$unknown, env) * eve($e.$unknown, env);
+         return eve($e.lhs, env) * eve($e.rhs, env);
          break;
       case 'div':
-         return Math.round(eve($e.$unknown, env) / eve($e.$unknown, env));
+         return Math.round(eve($e.lhs, env) / eve($e.rhs, env));
          break;
       case 'add':
-         return eve($e.$unknown, env) + eve($e.$unknown, env);
+         return eve($e.lhs, env) + eve($e.rhs, env);
          break;
       case 'sub':
-         return eve($e.$unknown, env) - eve($e.$unknown, env);
+         return eve($e.lhs, env) - eve($e.rhs, env);
          break;
       case 'eq':
-         return eve($e.$unknown, env) === eve($e.$unknown, env);
+         return eve($e.lhs, env) === eve($e.rhs, env);
          break;
       case 'neq':
-         return eve($e.$unknown, env) !== eve($e.$unknown, env);
+         return eve($e.lhs, env) !== eve($e.rhs, env);
          break;
       case 'gt':
-         return eve($e.$unknown, env) > eve($e.$unknown, env);
+         return eve($e.lhs, env) > eve($e.rhs, env);
          break;
       case 'lt':
-         return eve($e.$unknown, env) < eve($e.$unknown, env);
+         return eve($e.lhs, env) < eve($e.rhs, env);
          break;
       case 'leq':
-         return eve($e.$unknown, env) <= eve($e.$unknown, env);
+         return eve($e.lhs, env) <= eve($e.rhs, env);
          break;
       case 'geq':
-         return eve($e.$unknown, env) >= eve($e.$unknown, env);
+         return eve($e.lhs, env) >= eve($e.rhs, env);
          break;
       case 'and':
-         return eve($e.$unknown, env) && eve($e.$unknown, env);
+         return eve($e.lhs, env) && eve($e.rhs, env);
          break;
       case 'or':
-         return eve($e.$unknown, env) || eve($e.$unknown, env);
+         return eve($e.lhs, env) || eve($e.rhs, env);
          break;
    }
 }

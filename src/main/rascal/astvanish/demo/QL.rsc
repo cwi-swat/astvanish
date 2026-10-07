@@ -32,29 +32,29 @@ syntax Question
 
 syntax Expr
   = var: Id name \ "true" \"false"
-  | integer: Int
-  | string: Str
-  | boolean: Bool
-  | bracket parens: "(" Expr ")"
-  | not: "!" Expr
+  | integer: Int theInt
+  | string: Str theStr
+  | boolean: Bool theBool
+  | bracket parens: "(" Expr arg ")"
+  | not: "!" Expr arg
   > left (
-      mul: Expr "*" Expr
-    | div: Expr "/" Expr
+      mul: Expr lhs "*" Expr rhs
+    | div: Expr lhs "/" Expr rhs
   )
   > left (
-      add: Expr "+" Expr
-    | sub: Expr "-" Expr
+      add: Expr lhs "+" Expr rhs
+    | sub: Expr lhs "-" Expr rhs
   )
   > non-assoc (
-      eq: Expr "==" Expr
-    | neq: Expr "!=" Expr
-    | gt: Expr "\>" Expr
-    | lt: Expr "\<" Expr
-    | leq: Expr "\<=" Expr
-    | geq: Expr "\>=" Expr
+      eq: Expr lhs "==" Expr rhs
+    | neq: Expr lhs "!=" Expr rhs
+    | gt: Expr lhs "\>" Expr rhs
+    | lt: Expr lhs "\<" Expr rhs
+    | leq: Expr lhs "\<=" Expr rhs
+    | geq: Expr lhs "\>=" Expr rhs
   )
-  > left and: Expr "&&" Expr
-  > left or: Expr "||" Expr
+  > left and: Expr lhs "&&" Expr rhs
+  > left or: Expr lhs "||" Expr rhs
   ;
 
 start[Form] aForm() 

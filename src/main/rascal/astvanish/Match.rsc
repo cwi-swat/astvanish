@@ -122,6 +122,8 @@ start[Source] parseAV(loc l) = parse(#start[Source], l);
 
 str nameOf(label(str n, _)) = n;
 
+str nameOf(conditional(Symbol s, _)) = nameOf(s);
+
 default str nameOf(Symbol s) = "$unknown";
 
 @synopsis{Matching a pattern against a grammar production}
