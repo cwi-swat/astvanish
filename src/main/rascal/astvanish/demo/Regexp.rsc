@@ -2,6 +2,8 @@ module astvanish::demo::Regexp
 
 extend lang::std::Layout;
 import ParseTree;
+import IO;
+import astvanish::Eval;
 
 start syntax RE = Regexp;
 
@@ -18,3 +20,12 @@ lexical Char = [a-zA-Z];
 
 start[RE] aRegexp() 
     = parse(#start[RE], |project://astvanish/src/main/rascal/astvanish/demo/example.regexp|);
+
+
+void dumpRegexpEval() {
+    writeFile(|project://astvanish/src/main/rascal/astvanish/demo/regexp-interp.js|, 
+        toEval(|project://astvanish/src/regexp.av|, (
+            "match": ("$re": sort("Regexp")),
+            "eval": ("$re": sort("Regexp"))
+        ), #start[RE]));
+}
