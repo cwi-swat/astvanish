@@ -64,9 +64,6 @@ function widget$2(env, func) {
 function renderQuestion$2(env) {
     widget$2(env, function (x) { update('hasSoldHouse', x.value); });
 }
-function eve$0(env) {
-    return env['hasSoldHouse'];
-}
 function widget$3(env, func) {
     page.append('"What was the selling price?"');
     var elt = createElement("input");
@@ -106,15 +103,16 @@ function renderQuestion$6(env) {
     renderQuestion$5(env);
 }
 function renderQuestion$7(env) {
-    if (eve$0(env)) {
-        renderQuestion$6(env);
-    }
+    renderQuestion$6(env);
 }
 function render$0(env) {
     renderQuestion$0(env);
     renderQuestion$1(env);
     renderQuestion$2(env);
     renderQuestion$7(env);
+}
+function eve$0(env) {
+    return env['hasSoldHouse'];
 }
 function eve$1(env) {
     return env['sellingPrice'];
@@ -125,10 +123,15 @@ function eve$2(env) {
 function eve$3(env) {
     return eve$1(env) - eve$2(env);
 }
+function updateValue$0(val) {
+    var elt = getElementById('valueResidue-widget');
+    elt.value = val;
+}
 function computeQuestion$0(env) {
     var val = eve$3(env);
     if (val !== env['valueResidue']) {
         env['valueResidue'] = val;
+        updateValue$0(val);
         return true;
     }
 }
@@ -144,6 +147,38 @@ function computeQuestion$2(env) {
         return computeQuestion$1(env);
     }
 }
+function updateVisibility$0(vis, env) {
+    var elt = getElementById('hasBoughtHouse-div');
+    elt.style = 'display: ' + vis ? 'block;' : 'none;';
+}
+function updateVisibility$1(vis, env) {
+    var elt = getElementById('hasMaintLoan-div');
+    elt.style = 'display: ' + vis ? 'block;' : 'none;';
+}
+function updateVisibility$2(vis, env) {
+    var elt = getElementById('hasSoldHouse-div');
+    elt.style = 'display: ' + vis ? 'block;' : 'none;';
+}
+function updateVisibility$3(vis, env) {
+    var elt = getElementById('sellingPrice-div');
+    elt.style = 'display: ' + vis ? 'block;' : 'none;';
+}
+function updateVisibility$4(vis, env) {
+    var elt = getElementById('privateDebt-div');
+    elt.style = 'display: ' + vis ? 'block;' : 'none;';
+}
+function updateVisibility$5(vis, env) {
+    var elt = getElementById('valueResidue-div');
+    elt.style = 'display: ' + vis ? 'block;' : 'none;';
+}
+function updateVisibility$6(vis, env) {
+    updateVisibility$3(vis, env);
+    updateVisibility$4(vis, env);
+    updateVisibility$5(vis, env);
+}
+function updateVisibility$7(vis, env) {
+    updateVisibility$6(eve$0(env), env);
+}
 function compute$0(env) {
     return function (x, val) {
         env[x] = val;
@@ -155,6 +190,11 @@ function compute$0(env) {
             change = change || computeQuestion$2(env);
         }
         while (change);
+        var vis = true;
+        updateVisibility$0(vis, env);
+        updateVisibility$1(vis, env);
+        updateVisibility$2(vis, env);
+        updateVisibility$7(vis, env);
     };
 }
 function run$0() {

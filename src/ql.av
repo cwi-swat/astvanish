@@ -64,7 +64,44 @@ function compute($ql, env) {
                     change = change || computeQuestion(q, env);
             }
             while (change);
+            var vis = true;
+            for (const q of $2) {
+                updateVisibility(q, vis, env);
+            }
         };
+    }
+}
+
+function updateVisibility($q, vis, env) {
+    match ($q) {
+        case _ _ \: _ :
+            var elt = getElementById($2.toString() + '-div');
+            elt.style = 'display: ' + vis ? 'block;' : 'none;';
+
+        case _ _ \: _ = _ :
+            var elt = getElementById($2.toString() + '-div');
+            elt.style = 'display: ' + vis ? 'block;' : 'none;';
+            
+        case { _ } :
+            for (const q of $1) {
+                updateVisibility(q, vis, env);
+            }
+
+        case if ( _ ) _ else _ : 
+            updateVisibility($2, eve($1, env), env);
+            updateVisibility($3, !eve($1, env), env);
+
+        case if ( _ ) _ _: 
+            updateVisibility($2, eve($1, env), env);   
+    }
+}
+
+function updateValue($name, $type, val) {
+    var elt = getElementById($name.toString() + '-widget');
+    match ($type) {
+        case int: elt.value = val;
+        case str: elt.value = val;
+        case bool: elt.checked = val;
     }
 }
 
@@ -77,6 +114,7 @@ function computeQuestion($q, env) {
             var val = eve($4, env);
             if (val !== env[$2.toString()]) {
                 env[$2.toString()] = val;
+                updateValue($2, $3, val);
                 return true;
             }
 
@@ -117,18 +155,11 @@ function renderQuestion($q, env) {
             }
 
         case if ( _ ) _ else _ : 
-            if (eve($1, env)) {
-                renderQuestion($2, env);
-            }
-            else {
-                renderQuestion($3, env);
-            }
+            renderQuestion($2, env);
+            renderQuestion($3, env);
 
         case if ( _ ) _ _:  // the last _ is the () empty for the follow restriction
-            if (eve($1, env)) {
-                renderQuestion($2, env);
-            }
-        
+            renderQuestion($2, env);
     }
 }
 

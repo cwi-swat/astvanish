@@ -72,6 +72,8 @@ void dumpQlEval() {
             "compute": ("$ql": sort("Form")),
             "computeQuestion": ("$q": sort("Question")),
             "renderQuestion": ("$q": sort("Question")),
+            "updateVisibility": ("$q": sort("Question")),
+            "updateValue": ("$name": sort("Id"), "$type": sort("Type")),
             "widget": ("$type": sort("Type"), "$label": sort("Str"), "$name": sort("Id")),
             "eve": ("$e": sort("Expr"))
         ), #start[Form]));
