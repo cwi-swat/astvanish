@@ -16,12 +16,13 @@ data Value
 @synopsis{The environment capturing statically known bindings}
 alias Env = map[str, Value];
 
+@synopsis{Partially evaluate as per one or more payload directives with one or more sources}
 void peval(Tree prog, list[Tree] with=[], loc root=|project://astvanish/|, bool logging=false) {
-    peval([prog, *with], root=root, logging=logging);
+    peval([prog, *with], root, logging);
 }
 
 @synopsis{Partially evaluate as per a one or more payload directives in one or more sources (writes to disk)}
-void peval(list[Tree] progs, loc root=|project://astvanish/|, bool logging=false) {
+void peval(list[Tree] progs, loc root, bool logging) {
     assert all(Tree prog <- progs, prog.prod.def is \start) : "must provide a start-syntax trees";
 
     map[str path, map[str func, Env statics] calls] tasks = ();
@@ -48,19 +49,21 @@ void peval(list[Tree] progs, loc root=|project://astvanish/|, bool logging=false
 
     for (str path <- tasks, str func <- tasks[path]) {
         Env env = tasks[path][func];
-        start[Source] js = peval(parseAV(root + path), env, func, logging=logging); 
+        start[Source] js = peval(parseAV(root + path), env, func, logging); 
         loc l = jsLoc(func, sources[path][func]);  
-        println("LOG: writing to <l>");
+        if (logging) {
+            println("LOG: writing to <l>");
+        }
         writeFile(l, js);
     }
 }
 
 @synopsis{Create a JS output file loc based on the semantics `func` and the input source `srcs`}
 loc jsLoc(str func, list[loc] srcs) {
-    // take first one as "root" (maybe assert all are in the dir?)
+    assert size(srcs) >= 1;
+    // take first one as "root" 
     str base = split(".", srcs[0].file)[0];
-    loc l = srcs[0]; 
-    return l[file=base + "-" + func][extension="js"].top;
+    return srcs[0][file=base + "-" + func][extension="js"].top;
 }
         
 
@@ -83,7 +86,7 @@ Payload extractPayload(Tree code) {
 
 
 @synopsis{Partially evaluate function `f` in match/with-enhanced Javascript `code` given `static` arguments}
-start[Source] peval(start[Source] code, Env static, str f, bool logging=false) {
+start[Source] peval(start[Source] code, Env static, str f, bool logging) {
     Admin admin = newAdmin(code, logging);
     if ([Function func] := admin.lookup(f)) {
         list[Expression] args = [ "<x>" in static 
@@ -95,34 +98,46 @@ start[Source] peval(start[Source] code, Env static, str f, bool logging=false) {
     throw "could not find function <f> in source code";
 }
 
-@synopsis{Splice out superfluous curlies for nicer code}
+@synopsis{Splice out superfluous curlies and commas for nicer code}
 start[Source] spliceBlocksAndCommas(start[Source] s) {
     solve (s) {
         s = visit (s) {
             case (Statement)`{<Statement* s0> {<Statement* ss>} <Statement* s1>}`
-                => (Statement)`{<Statement* s0>
-                              '<Statement* ss> 
-                              '<Statement* s1>}`
+                => (Statement)`{
+                              '  <Statement* s0>
+                              '  <Statement* ss> 
+                              '  <Statement* s1>
+                              '}`
             case (Function)`function (<{Id ","}* fs>) {<Statement* s0> {<Statement* ss>} <Statement* s1>}`
-                => (Function)`function (<{Id ","}* fs>) {<Statement* s0> 
-                                                        '<Statement* ss> 
-                                                        '<Statement* s1>}`
+                => (Function)`function (<{Id ","}* fs>) {
+                             '  <Statement* s0> 
+                             '  <Statement* ss> 
+                             '  <Statement* s1>
+                             '}`
             case (Function)`function <Id f>(<{Id ","}* fs>) {<Statement* s0> {<Statement* ss>} <Statement* s1>}`
-                => (Function)`function <Id f>(<{Id ","}* fs>) {<Statement* s0> 
-                                                              '<Statement* ss> 
-                                                              '<Statement* s1>}`
+                => (Function)`function <Id f>(<{Id ","}* fs>) {
+                             '  <Statement* s0> 
+                             '  <Statement* ss> 
+                             '  <Statement* s1>
+                             '}`
 
             // somehow the interpreter does not like using the same match variables in the 
             // following three cases
             case (Statement)`{<Statement* sa> ; <Statement* sb>}`
-                => (Statement)`{<Statement* sa>
-                              '<Statement* sb>}`
+                => (Statement)`{
+                              '  <Statement* sa>
+                              '  <Statement* sb>
+                              '}`
             case (Function)`function (<{Id ","}* fs_>) {<Statement* s01> ; <Statement* s11>}`
-                => (Function)`function (<{Id ","}* fs_>) {<Statement* s01> 
-                                                        '<Statement* s11>}`
+                => (Function)`function (<{Id ","}* fs_>) {
+                             '  <Statement* s01> 
+                             '  <Statement* s11>
+                             '}`
             case (Function)`function <Id f>(<{Id ","}* fs__>) {<Statement* s02> ; <Statement* s12>}`
-                => (Function)`function <Id f>(<{Id ","}* fs__>) {<Statement* s02> 
-                                                              '<Statement* s12>}`
+                => (Function)`function <Id f>(<{Id ","}* fs__>) {
+                             '  <Statement* s02> 
+                             '  <Statement* s12>
+                             '}`
 
         }
     }
@@ -199,7 +214,9 @@ Admin newAdmin(start[Source] code, bool logging) {
         if ((start[Source])`<Statement* ss>` := gen) {
             {Id ","}* rest = makeParams(ids);
             gen = (start[Source])`<Statement* ss>
-                                 'function <Id newId>(<{Id ","}* rest>) {<Statement* body>}`;
+                                 'function <Id newId>(<{Id ","}* rest>) {
+                                 '  <Statement* body>
+                                 '}`;
         }
         return newId;
     }
@@ -385,7 +402,10 @@ Statement peval(Statement s, Env env, Admin admin) {
 
 
         case (Statement)`if (<Expression cond>) <Statement s1> else <Statement s2>` 
-            => (Statement)`if (<Expression cond2>) <Statement s12> else <Statement s22>` 
+            => (Statement)`if (<Expression cond2>) 
+                          '   <Statement s12> 
+                          'else 
+                          '   <Statement s22>` 
             when Expression cond2 := peval(cond, env, admin),
                 Statement s12 := peval(s1, env, admin),
                 Statement s22 := peval(s2, env, admin)
@@ -431,7 +451,9 @@ Statement peval(Statement s, Env env, Admin admin) {
         // {} to find nested match statements...
         case (Statement)`{<Statement* ss>}`: {
             ss = peval(ss, env, admin);
-            insert (Statement)`{<Statement* ss>}`;
+            insert (Statement)`{
+                              '   <Statement* ss>
+                              '}`;
         }
 
         case (Statement)`<Expression e>;` => (Expression)`undefined` := e2 
