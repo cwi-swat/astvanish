@@ -1,4 +1,5 @@
 
+// todo: move this inside, thread thru render
 var update;
 
 function run($ql) {
