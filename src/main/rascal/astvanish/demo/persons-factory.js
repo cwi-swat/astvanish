@@ -1,16 +1,17 @@
-function checkType(x) {
+export { factory$0 as factory };
+function checkType$0(x) {
   if (typeof x === 'string') return true;
   throw 'value ' + x + ' is not compatible with type str';
 }
-function checkType$0(x) {
+function checkType$1(x) {
   if (Number.isInteger(x)) return true;
   throw 'value ' + x + ' is not compatible with type int';
 }
-function checkType$1(x) {
+function checkType$2(x) {
   if (x === true || x === false) return true;
   throw 'value ' + x + ' is not compatible with type bool';
 }
-function factory() {
+function factory$0() {
   var m = {};
   m.__name = 'Example';
   m['Person'] = function () {
@@ -20,7 +21,7 @@ function factory() {
     var obj = {};
     obj['name'] = function (x) {
       if (x !== undefined) {
-        checkType(x);
+        checkType$0(x);
         data['name'] = x;
       }
       else {
@@ -29,7 +30,7 @@ function factory() {
     };
     obj['age'] = function (x) {
       if (x !== undefined) {
-        checkType$0(x);
+        checkType$1(x);
         data['age'] = x;
       }
       else {
@@ -45,7 +46,7 @@ function factory() {
     var obj = {};
     obj['street'] = function (x) {
       if (x !== undefined) {
-        checkType(x);
+        checkType$0(x);
         data['street'] = x;
       }
       else {
@@ -54,7 +55,7 @@ function factory() {
     };
     obj['number'] = function (x) {
       if (x !== undefined) {
-        checkType$0(x);
+        checkType$1(x);
         data['number'] = x;
       }
       else {
@@ -63,7 +64,7 @@ function factory() {
     };
     obj['central'] = function (x) {
       if (x !== undefined) {
-        checkType$1(x);
+        checkType$2(x);
         data['central'] = x;
       }
       else {

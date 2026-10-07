@@ -41,3 +41,5 @@ function run(state, event) {
         return;
     }
 }
+
+export {run$0};

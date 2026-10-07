@@ -87,7 +87,7 @@ Payload extractPayload(Tree code) {
 
 @synopsis{Partially evaluate function `f` in match/with-enhanced Javascript `code` given `static` arguments}
 start[Source] peval(start[Source] code, Env static, str f, bool logging) {
-    Admin admin = newAdmin(code, logging);
+    Admin admin = newAdmin(code, f, logging);
     if ([Function func] := admin.lookup(f)) {
         list[Expression] args = [ "<x>" in static 
             ? (Expression)`<Id x>` 
@@ -155,7 +155,7 @@ alias Admin = tuple[
 ];
 
 @synopsis{Constructor for the `Admin` interface}
-Admin newAdmin(start[Source] code, bool logging) {
+Admin newAdmin(start[Source] code, str func, bool logging) {
     map[str, Function] funcs = ();
     top-down-break visit (code) {
         case Function f: {
@@ -181,7 +181,10 @@ Admin newAdmin(start[Source] code, bool logging) {
         + squeeze(yield(env[k]), #[\ \t\n]) | str k <- sort(env<0>) );
 
     // the generated source code
-    start[Source] gen = (start[Source])``;
+    Id fid = [Id]func;
+    Id fid0 = [Id]"<func>$0";
+    start[Source] gen = (start[Source])`export {<Id fid0> as <Id fid>};
+                                       '`;
 
     Id declare_(Id prefix, list[Id] ids, Statement* body, Env env) {
 

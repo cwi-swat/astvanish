@@ -12,6 +12,18 @@ syntax Statement
     | "for" "(" "const" Id "of" Expression ")" Statement body
     | "for" "(" "let" Id "of" Expression ")" Statement body
     | "with" "(" Pattern ":" Expression ")" Statement
+    | "yield" Expression ";"
+    | "export" "{" {Export ","}* "}"
+    ;
+
+syntax Export
+    = Id "as" Id
+    ;
+
+
+syntax Function
+    = "function" "*" "(" {Id ","}* ")" "{" Statement* "}"
+    | "function" "*" Id "(" {Id ","}* ")" "{" Statement* "}"
     ;
 
 syntax MatchCase
