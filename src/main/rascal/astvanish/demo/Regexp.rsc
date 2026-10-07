@@ -5,7 +5,7 @@ import ParseTree;
 import IO;
 import astvanish::Eval;
 
-start syntax RE = Regexp;
+start syntax RE = regexp: Regexp re;
 
 syntax Regexp 
     = word: Char word
