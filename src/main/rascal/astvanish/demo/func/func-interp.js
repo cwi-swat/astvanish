@@ -38,21 +38,3 @@ case 'call':
             return env[$exp.name](args);
    break;
 }}
-
-function format($prog) {var src = '';
-    {
-        for (const d of $prog.defs) {
-                src += 'def ' + d.name + "(";
-                for (const p of d.params) {
-                    src += p.toString() + ',';
-                }
-                src += ')\n';
-                src += formatExp(d.body);
-                src += ';\n';
-            }
-        src += '\n' + formatExp($prog.main);
-    }
-    return src;}
-
-
-function formatExp($exp) {return $exp.toString();}

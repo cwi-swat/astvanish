@@ -1,5 +1,4 @@
-//@@ src/func.av: run($prog)
-//@@ src/func.av: format($prog)
+//@@ src/main/rascal/astvanish/demo/func/func.av: run($prog)
 
 def factorial(n) =
    if n > 1 then
