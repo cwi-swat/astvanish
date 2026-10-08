@@ -1,0 +1,35 @@
+
+
+
+function match($re, input) {
+    var i = 0; // force i to be dynamic
+    with (_: $re) 
+        match_($1, i, input, function (i, input) {
+            console.log('matched up till: ' + i);
+        });
+}
+
+function match_($re, i, input, k) {
+    match ($re) {
+        case _@Char: 
+            if (input[i] === $1.toString()) 
+                k(i+1, input);
+        case ( _ ): 
+            match_($1, i, input, k);
+        case _ _:
+            match_($1, i, input, function (i, input) {
+                match_($2, i, input, k);
+            });
+        case _ | _: 
+            match_($1, i, input, k);
+            match_($2, i, input, k);
+        case _ ?: 
+            match_($1, i, input, k);
+            k(i, input);
+        case _ *: 
+            (function f(i, input) {
+                match_($1, i, input, f);
+                k(i, input);
+            })(i, input);
+    }
+}

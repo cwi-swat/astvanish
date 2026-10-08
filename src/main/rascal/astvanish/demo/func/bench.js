@@ -7,6 +7,7 @@ function doRun(interp, compiled, ast, args) {
     const endUsage = process.cpuUsage(startUsage);
     console.log('Interpreted result: ' + result);
     
+    // timings are in milliseconds
     const timings = {};
 
     timings.interpreted = {
