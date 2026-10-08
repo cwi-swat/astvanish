@@ -1,4 +1,4 @@
-//@@ src/ql.av: main($ql)
+//@@ src/ql.av: run($ql)
 
 form "Tax Office example" { 
   "Did you buy a house in 2010?"

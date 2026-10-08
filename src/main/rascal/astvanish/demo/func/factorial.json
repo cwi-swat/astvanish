@@ -1,0 +1,158 @@
+{
+  "_tag": "prog",
+  "_src": {"offset": 62, "length": 196},
+  "defs": [
+    {
+      "_tag": "def",
+      "_src": {"offset": 62, "length": 89},
+      "name": "factorial",
+      "params": [
+        "n"
+      ],
+      "body": {
+        "_tag": "ifThenElse",
+        "_src": {"offset": 84, "length": 66},
+        "cond": {
+          "_tag": "gt",
+          "_src": {"offset": 87, "length": 5},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 87, "length": 1},
+            "name": "n"
+          },
+          "rhs": {
+            "_tag": "number",
+            "_src": {"offset": 91, "length": 1},
+            "number": "1"
+          }
+        },
+        "then": {
+          "_tag": "mul",
+          "_src": {"offset": 106, "length": 20},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 106, "length": 1},
+            "name": "n"
+          },
+          "rhs": {
+            "_tag": "call",
+            "_src": {"offset": 110, "length": 16},
+            "name": "factorial",
+            "actuals": [
+              {
+                "_tag": "sub",
+                "_src": {"offset": 120, "length": 5},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 120, "length": 1},
+                  "name": "n"
+                },
+                "rhs": {
+                  "_tag": "number",
+                  "_src": {"offset": 124, "length": 1},
+                  "number": "1"
+                }
+              }
+            ]
+          }
+        },
+        "els": {
+          "_tag": "number",
+          "_src": {"offset": 143, "length": 1},
+          "number": "1"
+        }
+      }
+    },
+    {
+      "_tag": "def",
+      "_src": {"offset": 154, "length": 80},
+      "name": "power",
+      "params": [
+        "x",
+        "n"
+      ],
+      "body": {
+        "_tag": "ifThenElse",
+        "_src": {"offset": 174, "length": 58},
+        "cond": {
+          "_tag": "gt",
+          "_src": {"offset": 177, "length": 5},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 177, "length": 1},
+            "name": "n"
+          },
+          "rhs": {
+            "_tag": "number",
+            "_src": {"offset": 181, "length": 1},
+            "number": "1"
+          }
+        },
+        "then": {
+          "_tag": "mul",
+          "_src": {"offset": 193, "length": 19},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 193, "length": 1},
+            "name": "x"
+          },
+          "rhs": {
+            "_tag": "call",
+            "_src": {"offset": 197, "length": 15},
+            "name": "power",
+            "actuals": [
+              {
+                "_tag": "var",
+                "_src": {"offset": 203, "length": 1},
+                "name": "x"
+              },
+              {
+                "_tag": "sub",
+                "_src": {"offset": 206, "length": 5},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 206, "length": 1},
+                  "name": "n"
+                },
+                "rhs": {
+                  "_tag": "number",
+                  "_src": {"offset": 210, "length": 1},
+                  "number": "1"
+                }
+              }
+            ]
+          }
+        },
+        "els": {
+          "_tag": "var",
+          "_src": {"offset": 226, "length": 1},
+          "name": "n"
+        }
+      }
+    }
+  ],
+  "main": {
+    "_tag": "call",
+    "_src": {"offset": 236, "length": 22},
+    "name": "factorial",
+    "actuals": [
+      {
+        "_tag": "call",
+        "_src": {"offset": 246, "length": 11},
+        "name": "power",
+        "actuals": [
+          {
+            "_tag": "number",
+            "_src": {"offset": 252, "length": 1},
+            "number": "2"
+          },
+          {
+            "_tag": "number",
+            "_src": {"offset": 255, "length": 1},
+            "number": "4"
+          }
+        ]
+      }
+    ]
+  }
+}

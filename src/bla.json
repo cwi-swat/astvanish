@@ -1,154 +1,655 @@
 {
   "_tag": "form",
-  "_src": {
-    "offset": 26,
-    "length": 431
-  },
-  "title": "\"Tax Office example\"",
+  "_src": {"offset": 26, "length": 2215},
+  "title": "\"Loan Approval\"",
   "questions": [
     {
       "_tag": "answerable",
-      "_src": {
-        "offset": 57,
-        "length": 55
-      },
-      "prompt": "\"Did you buy a house in 2010?\"",
-      "name": "hasBoughtHouse",
+      "_src": {"offset": 51, "length": 39},
+      "prompt": "\"What is your full name?\"",
+      "name": "fullName",
       "type": {
-        "_tag": "boolean",
-        "_src": {
-          "offset": 108,
-          "length": 4
-        }
+        "_tag": "string",
+        "_src": {"offset": 87, "length": 3}
       }
     },
     {
       "_tag": "answerable",
-      "_src": {
-        "offset": 118,
-        "length": 46
-      },
-      "prompt": "\"Did you enter a loan?\"",
-      "name": "hasMaintLoan",
+      "_src": {"offset": 93, "length": 27},
+      "prompt": "\"How old are you?\"",
+      "name": "age",
       "type": {
-        "_tag": "boolean",
-        "_src": {
-          "offset": 160,
-          "length": 4
-        }
+        "_tag": "integer",
+        "_src": {"offset": 117, "length": 3}
       }
     },
     {
       "_tag": "answerable",
-      "_src": {
-        "offset": 172,
-        "length": 54
-      },
-      "prompt": "\"Did you sell a house in 2010?\"",
-      "name": "hasSoldHouse",
+      "_src": {"offset": 123, "length": 50},
+      "prompt": "\"Do you have a driver's license?\"",
+      "name": "hasLicense",
       "type": {
         "_tag": "boolean",
-        "_src": {
-          "offset": 222,
-          "length": 4
-        }
+        "_src": {"offset": 169, "length": 4}
       }
     },
     {
-      "_tag": "ifThen",
-      "_src": {
-        "offset": 237,
-        "length": 219
-      },
+      "_tag": "ifThenElse",
+      "_src": {"offset": 179, "length": 1078},
       "cond": {
-        "_tag": "var",
-        "_src": {
-          "offset": 241,
-          "length": 12
+        "_tag": "lt",
+        "_src": {"offset": 183, "length": 8},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 183, "length": 3},
+          "name": "age"
         },
-        "name": "hasSoldHouse"
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 189, "length": 2},
+          "theInt": "18"
+        }
       },
       "then": {
         "_tag": "block",
-        "_src": {
-          "offset": 255,
-          "length": 200
-        },
+        "_src": {"offset": 193, "length": 128},
         "questions": [
           {
             "_tag": "answerable",
-            "_src": {
-              "offset": 261,
-              "length": 53
-            },
-            "prompt": "\"What was the selling price?\"",
-            "name": "sellingPrice",
+            "_src": {"offset": 199, "length": 45},
+            "prompt": "\"Are you currently in school?\"",
+            "name": "inSchool",
             "type": {
-              "_tag": "integer",
-              "_src": {
-                "offset": 311,
-                "length": 3
-              }
+              "_tag": "boolean",
+              "_src": {"offset": 240, "length": 4}
             }
           },
           {
-            "_tag": "answerable",
-            "_src": {
-              "offset": 319,
-              "length": 58
+            "_tag": "ifThen",
+            "_src": {"offset": 249, "length": 71},
+            "cond": {
+              "_tag": "var",
+              "_src": {"offset": 253, "length": 8},
+              "name": "inSchool"
             },
-            "prompt": "\"Private debts for the sold house:\"",
-            "name": "privateDebt",
-            "type": {
-              "_tag": "integer",
-              "_src": {
-                "offset": 374,
-                "length": 3
-              }
-            }
-          },
+            "then": {
+              "_tag": "block",
+              "_src": {"offset": 263, "length": 54},
+              "questions": [
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 271, "length": 40},
+                  "prompt": "\"What is your current grade?\"",
+                  "name": "grade",
+                  "type": {
+                    "_tag": "integer",
+                    "_src": {"offset": 308, "length": 3}
+                  }
+                }
+              ]
+            },
+            "empty": ""
+          }
+        ]
+      },
+      "els": {
+        "_tag": "block",
+        "_src": {"offset": 327, "length": 930},
+        "questions": [
           {
-            "_tag": "computed",
-            "_src": {
-              "offset": 382,
-              "length": 69
-            },
-            "prompt": "\"Value residue:\"",
-            "name": "valueResidue",
-            "type": {
-              "_tag": "integer",
-              "_src": {
-                "offset": 419,
-                "length": 3
-              }
-            },
-            "expr": {
-              "_tag": "sub",
-              "_src": {
-                "offset": 425,
-                "length": 26
+            "_tag": "ifThenElse",
+            "_src": {"offset": 333, "length": 920},
+            "cond": {
+              "_tag": "and",
+              "_src": {"offset": 337, "length": 22},
+              "lhs": {
+                "_tag": "geq",
+                "_src": {"offset": 337, "length": 9},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 337, "length": 3},
+                  "name": "age"
+                },
+                "rhs": {
+                  "_tag": "integer",
+                  "_src": {"offset": 344, "length": 2},
+                  "theInt": "18"
+                }
               },
+              "rhs": {
+                "_tag": "leq",
+                "_src": {"offset": 350, "length": 9},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 350, "length": 3},
+                  "name": "age"
+                },
+                "rhs": {
+                  "_tag": "integer",
+                  "_src": {"offset": 357, "length": 2},
+                  "theInt": "65"
+                }
+              }
+            },
+            "then": {
+              "_tag": "block",
+              "_src": {"offset": 361, "length": 519},
+              "questions": [
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 369, "length": 44},
+                  "prompt": "\"Are you currently employed?\"",
+                  "name": "employed",
+                  "type": {
+                    "_tag": "boolean",
+                    "_src": {"offset": 409, "length": 4}
+                  }
+                },
+                {
+                  "_tag": "ifThenElse",
+                  "_src": {"offset": 427, "length": 447},
+                  "cond": {
+                    "_tag": "var",
+                    "_src": {"offset": 431, "length": 8},
+                    "name": "employed"
+                  },
+                  "then": {
+                    "_tag": "block",
+                    "_src": {"offset": 441, "length": 352},
+                    "questions": [
+                      {
+                        "_tag": "answerable",
+                        "_src": {"offset": 451, "length": 39},
+                        "prompt": "\"What is your job title?\"",
+                        "name": "jobTitle",
+                        "type": {
+                          "_tag": "string",
+                          "_src": {"offset": 487, "length": 3}
+                        }
+                      },
+                      {
+                        "_tag": "answerable",
+                        "_src": {"offset": 499, "length": 69},
+                        "prompt": "\"How many years have you worked in your current job?\"",
+                        "name": "yearsInJob",
+                        "type": {
+                          "_tag": "integer",
+                          "_src": {"offset": 565, "length": 3}
+                        }
+                      },
+                      {
+                        "_tag": "answerable",
+                        "_src": {"offset": 577, "length": 49},
+                        "prompt": "\"What is your monthly salary?\"",
+                        "name": "monthlySalary",
+                        "type": {
+                          "_tag": "integer",
+                          "_src": {"offset": 623, "length": 3}
+                        }
+                      },
+                      {
+                        "_tag": "answerable",
+                        "_src": {"offset": 635, "length": 59},
+                        "prompt": "\"What is your total monthly expenses?\"",
+                        "name": "monthlyExpenses",
+                        "type": {
+                          "_tag": "integer",
+                          "_src": {"offset": 691, "length": 3}
+                        }
+                      },
+                      {
+                        "_tag": "computed",
+                        "_src": {"offset": 704, "length": 81},
+                        "prompt": "\"Your annual savings\"",
+                        "name": "annualSavings",
+                        "type": {
+                          "_tag": "integer",
+                          "_src": {"offset": 741, "length": 3}
+                        },
+                        "expr": {
+                          "_tag": "mul",
+                          "_src": {"offset": 747, "length": 38},
+                          "lhs": {
+                            "_tag": "parens",
+                            "_src": {"offset": 747, "length": 33},
+                            "arg": {
+                              "_tag": "sub",
+                              "_src": {"offset": 748, "length": 31},
+                              "lhs": {
+                                "_tag": "var",
+                                "_src": {"offset": 748, "length": 13},
+                                "name": "monthlySalary"
+                              },
+                              "rhs": {
+                                "_tag": "var",
+                                "_src": {"offset": 764, "length": 15},
+                                "name": "monthlyExpenses"
+                              }
+                            }
+                          },
+                          "rhs": {
+                            "_tag": "integer",
+                            "_src": {"offset": 783, "length": 2},
+                            "theInt": "12"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "els": {
+                    "_tag": "block",
+                    "_src": {"offset": 799, "length": 75},
+                    "questions": [
+                      {
+                        "_tag": "answerable",
+                        "_src": {"offset": 809, "length": 57},
+                        "prompt": "\"Are you actively looking for a job?\"",
+                        "name": "lookingForJob",
+                        "type": {
+                          "_tag": "boolean",
+                          "_src": {"offset": 862, "length": 4}
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "els": {
+              "_tag": "block",
+              "_src": {"offset": 886, "length": 367},
+              "questions": [
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 894, "length": 32},
+                  "prompt": "\"Are you retired?\"",
+                  "name": "retired",
+                  "type": {
+                    "_tag": "boolean",
+                    "_src": {"offset": 922, "length": 4}
+                  }
+                },
+                {
+                  "_tag": "ifThen",
+                  "_src": {"offset": 933, "length": 319},
+                  "cond": {
+                    "_tag": "var",
+                    "_src": {"offset": 937, "length": 7},
+                    "name": "retired"
+                  },
+                  "then": {
+                    "_tag": "block",
+                    "_src": {"offset": 946, "length": 301},
+                    "questions": [
+                      {
+                        "_tag": "answerable",
+                        "_src": {"offset": 956, "length": 51},
+                        "prompt": "\"How long have you been retired?\"",
+                        "name": "yearsRetired",
+                        "type": {
+                          "_tag": "integer",
+                          "_src": {"offset": 1004, "length": 3}
+                        }
+                      },
+                      {
+                        "_tag": "answerable",
+                        "_src": {"offset": 1016, "length": 49},
+                        "prompt": "\"What is your annual pension?\"",
+                        "name": "annualPension",
+                        "type": {
+                          "_tag": "integer",
+                          "_src": {"offset": 1062, "length": 3}
+                        }
+                      },
+                      {
+                        "_tag": "answerable",
+                        "_src": {"offset": 1074, "length": 65},
+                        "prompt": "\"What is your annual healthcare expense?\"",
+                        "name": "healthcareExpenses",
+                        "type": {
+                          "_tag": "integer",
+                          "_src": {"offset": 1136, "length": 3}
+                        }
+                      },
+                      {
+                        "_tag": "computed",
+                        "_src": {"offset": 1149, "length": 90},
+                        "prompt": "\"Net annual pension after healthcare\"",
+                        "name": "netPension",
+                        "type": {
+                          "_tag": "integer",
+                          "_src": {"offset": 1199, "length": 3}
+                        },
+                        "expr": {
+                          "_tag": "sub",
+                          "_src": {"offset": 1205, "length": 34},
+                          "lhs": {
+                            "_tag": "var",
+                            "_src": {"offset": 1205, "length": 13},
+                            "name": "annualPension"
+                          },
+                          "rhs": {
+                            "_tag": "var",
+                            "_src": {"offset": 1221, "length": 18},
+                            "name": "healthcareExpenses"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "empty": ""
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 1261, "length": 93},
+      "prompt": "\"Are you eligible for a senior citizen discount?\"",
+      "name": "seniorDiscount",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1327, "length": 4}
+      },
+      "expr": {
+        "_tag": "and",
+        "_src": {"offset": 1334, "length": 20},
+        "lhs": {
+          "_tag": "geq",
+          "_src": {"offset": 1334, "length": 9},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 1334, "length": 3},
+            "name": "age"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 1341, "length": 2},
+            "theInt": "65"
+          }
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 1347, "length": 7},
+          "name": "retired"
+        }
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1360, "length": 41},
+      "prompt": "\"What is your annual income?\"",
+      "name": "income",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1398, "length": 3}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1404, "length": 48},
+      "prompt": "\"What are your monthly debts?\"",
+      "name": "monthlyDebts",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1449, "length": 3}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1455, "length": 54},
+      "prompt": "\"Do you have a co-signer for loans?\"",
+      "name": "hasCoSigner",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1505, "length": 4}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1515, "length": 37},
+      "prompt": "\"Desired loan amount\"",
+      "name": "loanAmount",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1549, "length": 3}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1555, "length": 51},
+      "prompt": "\"Loan interest rate (percentage)\"",
+      "name": "interestRate",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1603, "length": 3}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1609, "length": 33},
+      "prompt": "\"Loan term (years)\"",
+      "name": "loanTerm",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1639, "length": 3}
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 1648, "length": 93},
+      "prompt": "\"Total interest to be paid\"",
+      "name": "totalInterest",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1691, "length": 3}
+      },
+      "expr": {
+        "_tag": "div",
+        "_src": {"offset": 1697, "length": 44},
+        "lhs": {
+          "_tag": "parens",
+          "_src": {"offset": 1697, "length": 38},
+          "arg": {
+            "_tag": "mul",
+            "_src": {"offset": 1698, "length": 36},
+            "lhs": {
+              "_tag": "mul",
+              "_src": {"offset": 1698, "length": 25},
               "lhs": {
                 "_tag": "var",
-                "_src": {
-                  "offset": 425,
-                  "length": 12
-                },
-                "name": "sellingPrice"
+                "_src": {"offset": 1698, "length": 10},
+                "name": "loanAmount"
               },
               "rhs": {
                 "_tag": "var",
-                "_src": {
-                  "offset": 440,
-                  "length": 11
-                },
-                "name": "privateDebt"
+                "_src": {"offset": 1711, "length": 12},
+                "name": "interestRate"
               }
+            },
+            "rhs": {
+              "_tag": "var",
+              "_src": {"offset": 1726, "length": 8},
+              "name": "loanTerm"
+            }
+          }
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 1738, "length": 3},
+          "theInt": "100"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 1744, "length": 76},
+      "prompt": "\"Total amount to be repaid\"",
+      "name": "totalRepayment",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1788, "length": 3}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 1794, "length": 26},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 1794, "length": 10},
+          "name": "loanAmount"
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 1807, "length": 13},
+          "name": "totalInterest"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 1823, "length": 82},
+      "prompt": "\"Your monthly loan payment\"",
+      "name": "monthlyPayment",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1867, "length": 3}
+      },
+      "expr": {
+        "_tag": "div",
+        "_src": {"offset": 1873, "length": 32},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 1873, "length": 14},
+          "name": "totalRepayment"
+        },
+        "rhs": {
+          "_tag": "parens",
+          "_src": {"offset": 1890, "length": 15},
+          "arg": {
+            "_tag": "mul",
+            "_src": {"offset": 1891, "length": 13},
+            "lhs": {
+              "_tag": "var",
+              "_src": {"offset": 1891, "length": 8},
+              "name": "loanTerm"
+            },
+            "rhs": {
+              "_tag": "integer",
+              "_src": {"offset": 1902, "length": 2},
+              "theInt": "12"
+            }
+          }
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 1911, "length": 99},
+      "prompt": "\"Loan approval status\"",
+      "name": "loanApproved",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1948, "length": 4}
+      },
+      "expr": {
+        "_tag": "or",
+        "_src": {"offset": 1955, "length": 55},
+        "lhs": {
+          "_tag": "parens",
+          "_src": {"offset": 1955, "length": 40},
+          "arg": {
+            "_tag": "and",
+            "_src": {"offset": 1956, "length": 38},
+            "lhs": {
+              "_tag": "gt",
+              "_src": {"offset": 1956, "length": 14},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 1956, "length": 6},
+                "name": "income"
+              },
+              "rhs": {
+                "_tag": "integer",
+                "_src": {"offset": 1965, "length": 5},
+                "theInt": "50000"
+              }
+            },
+            "rhs": {
+              "_tag": "lt",
+              "_src": {"offset": 1974, "length": 20},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 1974, "length": 12},
+                "name": "monthlyDebts"
+              },
+              "rhs": {
+                "_tag": "integer",
+                "_src": {"offset": 1989, "length": 5},
+                "theInt": "10000"
+              }
+            }
+          }
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 1999, "length": 11},
+          "name": "hasCoSigner"
+        }
+      }
+    },
+    {
+      "_tag": "ifThenElse",
+      "_src": {"offset": 2014, "length": 225},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 2018, "length": 12},
+        "name": "loanApproved"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 2032, "length": 91},
+        "questions": [
+          {
+            "_tag": "computed",
+            "_src": {"offset": 2038, "length": 81},
+            "prompt": "\"Congratulations! Your loan has been approved.\"",
+            "name": "approvalMessage",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 2103, "length": 3}
+            },
+            "expr": {
+              "_tag": "string",
+              "_src": {"offset": 2109, "length": 10},
+              "theStr": "\"Approved\""
             }
           }
         ]
       },
-      "empty": ""
+      "els": {
+        "_tag": "block",
+        "_src": {"offset": 2129, "length": 110},
+        "questions": [
+          {
+            "_tag": "computed",
+            "_src": {"offset": 2135, "length": 100},
+            "prompt": "\"Unfortunately, your loan application was not successful.\"",
+            "name": "not_approvalMessage",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 2215, "length": 3}
+            },
+            "expr": {
+              "_tag": "string",
+              "_src": {"offset": 2221, "length": 14},
+              "theStr": "\"Not Approved\""
+            }
+          }
+        ]
+      }
     }
   ]
 }

@@ -6,6 +6,12 @@ function run($ql) {
    var env = {};
    initialize($ql, env);
    render($ql, env);
+   var vis = true;
+   {
+      for (const q of $ql.questions) {
+         updateVisibility(q, vis, env);
+      }
+   }
    update = compute($ql, env);
 }
 

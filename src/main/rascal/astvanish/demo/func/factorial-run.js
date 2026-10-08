@@ -1,4 +1,4 @@
-export { run$0 as run };
+export {run$0 as run};
 function eve$0(env) {
   return env['n'];
 }
@@ -13,7 +13,7 @@ function eve$3(env) {
 }
 function eve$4(env) {
   var args = [];
-  args.push(eve$3(env));
+  args.push(eve$3(env)); 
   return env['factorial'](args);
 }
 function eve$5(env) {
@@ -28,7 +28,7 @@ function eve$7(env) {
 function eve$8(env) {
   var args = [];
   args.push(eve$7(env));
-  args.push(eve$3(env));
+args.push(eve$3(env)); 
   return env['power'](args);
 }
 function eve$9(env) {
@@ -41,31 +41,31 @@ function eve$11(env) {
   return parseInt('2');
 }
 function eve$12(env) {
-  return parseInt('3');
+  return parseInt('4');
 }
 function eve$13(env) {
   var args = [];
   args.push(eve$11(env));
-  args.push(eve$12(env));
+args.push(eve$12(env)); 
   return env['power'](args);
 }
 function eve$14(env) {
   var args = [];
-  args.push(eve$13(env));
+  args.push(eve$13(env)); 
   return env['factorial'](args);
 }
 function run$0() {
-  var env = {};
+  var env = {}; 
   env['factorial'] = function (args) {
-    var myEnv = Object.assign({}, env);
-    myEnv['n'] = args.shift();
-    return eve$6(myEnv);
-  };
-  env['power'] = function (args) {
-    var myEnv = Object.assign({}, env);
-    myEnv['x'] = args.shift();
-    myEnv['n'] = args.shift();
-    return eve$10(myEnv);
-  };
+  var myEnv = Object.assign({}, env); 
+  myEnv['n'] = args.shift(); 
+  return eve$6(myEnv);
+};
+env['power'] = function (args) {
+  var myEnv = Object.assign({}, env); 
+  myEnv['x'] = args.shift(); 
+  myEnv['n'] = args.shift(); 
+  return eve$10(myEnv);
+}; 
   return eve$14(env);
 }

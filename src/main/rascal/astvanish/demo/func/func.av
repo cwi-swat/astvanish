@@ -1,4 +1,6 @@
 
+export { run as run };
+
 function run($prog) {
     var env = {};
     with (_ _ : $prog) {

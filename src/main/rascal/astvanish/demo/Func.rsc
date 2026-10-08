@@ -6,6 +6,8 @@ extend lang::std::Id;
 import ParseTree;
 import IO;
 import astvanish::Eval;
+import astvanish::PEval;
+import astvanish::PT2JSON;
 
 start syntax Prog = prog: Def* defs Expr main;
 
@@ -24,12 +26,16 @@ syntax Expr
 lexical Num = [0-9]+;
 
 start[Prog] aProg() 
-    = parse(#start[Prog], |project://astvanish/src/main/rascal/astvanish/demo/factorial.func|);
+    = parse(#start[Prog], |project://astvanish/src/main/rascal/astvanish/demo/func/factorial.func|);
 
 
-void dumpFuncEval() {
-    writeFile(|project://astvanish/src/main/rascal/astvanish/demo/func-interp.js|, 
-        toEval(|project://astvanish/src/func.av|, (
+
+
+void dumpFuncEval(loc root = |project://astvanish/src/main/rascal/astvanish/demo/func/|) {
+    peval(aProg());
+    writeFile(root + "factorial.json", pt2json(aProg()));
+    writeFile(root + "func-interp.js", 
+        toEval(root + "func.av", (
             "run": ("$prog": sort("Prog")),
             "eve": ("$exp": sort("Expr")),
             "format": ("$prog": sort("Prog")),

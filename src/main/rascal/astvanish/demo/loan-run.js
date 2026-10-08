@@ -579,360 +579,6 @@ function render$0(env) {
   renderQuestion$40(env);
   renderQuestion$45(env);
 }
-function eve$0(env) {
-  return env['age'];
-}
-function eve$1(env) {
-  return parseInt('18');
-}
-function eve$2(env) {
-  return eve$0(env) < eve$1(env);
-}
-function eve$3(env) {
-  return env['inSchool'];
-}
-function computeQuestion$0(env) {
-  var change = false;
-  change = change || false;
-  return change;
-}
-function computeQuestion$1(env) {
-  if (eve$3(env)) {
-    return computeQuestion$0(env);
-  }
-}
-function computeQuestion$2(env) {
-  var change = false;
-  change = change || false;
-  change = change || computeQuestion$1(env);
-  return change;
-}
-function eve$4(env) {
-  return eve$0(env) >= eve$1(env);
-}
-function eve$5(env) {
-  return parseInt('65');
-}
-function eve$6(env) {
-  return eve$0(env) <= eve$5(env);
-}
-function eve$7(env) {
-  return eve$4(env) && eve$6(env);
-}
-function eve$8(env) {
-  return env['employed'];
-}
-function eve$9(env) {
-  return env['monthlySalary'];
-}
-function eve$10(env) {
-  return env['monthlyExpenses'];
-}
-function eve$11(env) {
-  return eve$9(env) - eve$10(env);
-}
-function eve$12(env) {
-  return eve$11(env);
-}
-function eve$13(env) {
-  return parseInt('12');
-}
-function eve$14(env) {
-  return eve$12(env) * eve$13(env);
-}
-function updateValue$0(val) {
-  var elt = getElementById('annualSavings-widget');
-  elt.value = val;
-}
-function computeQuestion$3(env) {
-  var val = eve$14(env);
-  if (val !== env['annualSavings']) {
-    env['annualSavings'] = val;
-    updateValue$0(val);
-    return true;
-  }
-}
-function computeQuestion$4(env) {
-  var change = false;
-  change = change || false;
-  change = change || false;
-  change = change || false;
-  change = change || false;
-  change = change || computeQuestion$3(env);
-  return change;
-}
-function computeQuestion$5(env) {
-  var change = false;
-  change = change || false;
-  return change;
-}
-function computeQuestion$6(env) {
-  if (eve$8(env)) {
-    return computeQuestion$4(env);
-  }
-  else {
-    return computeQuestion$5(env);
-  }
-}
-function computeQuestion$7(env) {
-  var change = false;
-  change = change || false;
-  change = change || computeQuestion$6(env);
-  return change;
-}
-function eve$15(env) {
-  return env['retired'];
-}
-function eve$16(env) {
-  return env['annualPension'];
-}
-function eve$17(env) {
-  return env['healthcareExpenses'];
-}
-function eve$18(env) {
-  return eve$16(env) - eve$17(env);
-}
-function updateValue$1(val) {
-  var elt = getElementById('netPension-widget');
-  elt.value = val;
-}
-function computeQuestion$8(env) {
-  var val = eve$18(env);
-  if (val !== env['netPension']) {
-    env['netPension'] = val;
-    updateValue$1(val);
-    return true;
-  }
-}
-function computeQuestion$9(env) {
-  var change = false;
-  change = change || false;
-  change = change || false;
-  change = change || false;
-  change = change || computeQuestion$8(env);
-  return change;
-}
-function computeQuestion$10(env) {
-  if (eve$15(env)) {
-    return computeQuestion$9(env);
-  }
-}
-function computeQuestion$11(env) {
-  var change = false;
-  change = change || false;
-  change = change || computeQuestion$10(env);
-  return change;
-}
-function computeQuestion$12(env) {
-  if (eve$7(env)) {
-    return computeQuestion$7(env);
-  }
-  else {
-    return computeQuestion$11(env);
-  }
-}
-function computeQuestion$13(env) {
-  var change = false;
-  change = change || computeQuestion$12(env);
-  return change;
-}
-function computeQuestion$14(env) {
-  if (eve$2(env)) {
-    return computeQuestion$2(env);
-  }
-  else {
-    return computeQuestion$13(env);
-  }
-}
-function eve$19(env) {
-  return eve$0(env) >= eve$5(env);
-}
-function eve$20(env) {
-  return eve$19(env) && eve$15(env);
-}
-function updateValue$2(val) {
-  var elt = getElementById('seniorDiscount-widget');
-  elt.checked = val;
-}
-function computeQuestion$15(env) {
-  var val = eve$20(env);
-  if (val !== env['seniorDiscount']) {
-    env['seniorDiscount'] = val;
-    updateValue$2(val);
-    return true;
-  }
-}
-function eve$21(env) {
-  return env['loanAmount'];
-}
-function eve$22(env) {
-  return env['interestRate'];
-}
-function eve$23(env) {
-  return eve$21(env) * eve$22(env);
-}
-function eve$24(env) {
-  return env['loanTerm'];
-}
-function eve$25(env) {
-  return eve$23(env) * eve$24(env);
-}
-function eve$26(env) {
-  return eve$25(env);
-}
-function eve$27(env) {
-  return parseInt('100');
-}
-function eve$28(env) {
-  return Math.round(eve$26(env) / eve$27(env));
-}
-function updateValue$3(val) {
-  var elt = getElementById('totalInterest-widget');
-  elt.value = val;
-}
-function computeQuestion$16(env) {
-  var val = eve$28(env);
-  if (val !== env['totalInterest']) {
-    env['totalInterest'] = val;
-    updateValue$3(val);
-    return true;
-  }
-}
-function eve$29(env) {
-  return env['totalInterest'];
-}
-function eve$30(env) {
-  return eve$21(env) + eve$29(env);
-}
-function updateValue$4(val) {
-  var elt = getElementById('totalRepayment-widget');
-  elt.value = val;
-}
-function computeQuestion$17(env) {
-  var val = eve$30(env);
-  if (val !== env['totalRepayment']) {
-    env['totalRepayment'] = val;
-    updateValue$4(val);
-    return true;
-  }
-}
-function eve$31(env) {
-  return env['totalRepayment'];
-}
-function eve$32(env) {
-  return eve$24(env) * eve$13(env);
-}
-function eve$33(env) {
-  return eve$32(env);
-}
-function eve$34(env) {
-  return Math.round(eve$31(env) / eve$33(env));
-}
-function updateValue$5(val) {
-  var elt = getElementById('monthlyPayment-widget');
-  elt.value = val;
-}
-function computeQuestion$18(env) {
-  var val = eve$34(env);
-  if (val !== env['monthlyPayment']) {
-    env['monthlyPayment'] = val;
-    updateValue$5(val);
-    return true;
-  }
-}
-function eve$35(env) {
-  return env['income'];
-}
-function eve$36(env) {
-  return parseInt('50000');
-}
-function eve$37(env) {
-  return eve$35(env) > eve$36(env);
-}
-function eve$38(env) {
-  return env['monthlyDebts'];
-}
-function eve$39(env) {
-  return parseInt('10000');
-}
-function eve$40(env) {
-  return eve$38(env) < eve$39(env);
-}
-function eve$41(env) {
-  return eve$37(env) && eve$40(env);
-}
-function eve$42(env) {
-  return eve$41(env);
-}
-function eve$43(env) {
-  return env['hasCoSigner'];
-}
-function eve$44(env) {
-  return eve$42(env) || eve$43(env);
-}
-function updateValue$6(val) {
-  var elt = getElementById('loanApproved-widget');
-  elt.checked = val;
-}
-function computeQuestion$19(env) {
-  var val = eve$44(env);
-  if (val !== env['loanApproved']) {
-    env['loanApproved'] = val;
-    updateValue$6(val);
-    return true;
-  }
-}
-function eve$45(env) {
-  return env['loanApproved'];
-}
-function eve$46(env) {
-  return unquote('"Approved"');
-}
-function updateValue$7(val) {
-  var elt = getElementById('approvalMessage-widget');
-  elt.value = val;
-}
-function computeQuestion$20(env) {
-  var val = eve$46(env);
-  if (val !== env['approvalMessage']) {
-    env['approvalMessage'] = val;
-    updateValue$7(val);
-    return true;
-  }
-}
-function computeQuestion$21(env) {
-  var change = false;
-  change = change || computeQuestion$20(env);
-  return change;
-}
-function eve$47(env) {
-  return unquote('"Not Approved"');
-}
-function updateValue$8(val) {
-  var elt = getElementById('not_approvalMessage-widget');
-  elt.value = val;
-}
-function computeQuestion$22(env) {
-  var val = eve$47(env);
-  if (val !== env['not_approvalMessage']) {
-    env['not_approvalMessage'] = val;
-    updateValue$8(val);
-    return true;
-  }
-}
-function computeQuestion$23(env) {
-  var change = false;
-  change = change || computeQuestion$22(env);
-  return change;
-}
-function computeQuestion$24(env) {
-  if (eve$45(env)) {
-    return computeQuestion$21(env);
-  }
-  else {
-    return computeQuestion$23(env);
-  }
-}
 function updateVisibility$0(vis, env) {
   var elt = getElementById('fullName-div');
   elt.style = 'display: ' + vis ? 'block;' : 'none;';
@@ -945,9 +591,21 @@ function updateVisibility$2(vis, env) {
   var elt = getElementById('hasLicense-div');
   elt.style = 'display: ' + vis ? 'block;' : 'none;';
 }
+function eve$0(env) {
+  return env['age'];
+}
+function eve$1(env) {
+  return parseInt('18');
+}
+function eve$2(env) {
+  return eve$0(env) < eve$1(env);
+}
 function updateVisibility$3(vis, env) {
   var elt = getElementById('inSchool-div');
   elt.style = 'display: ' + vis ? 'block;' : 'none;';
+}
+function eve$3(env) {
+  return env['inSchool'];
 }
 function updateVisibility$4(vis, env) {
   var elt = getElementById('grade-div');
@@ -963,9 +621,24 @@ function updateVisibility$7(vis, env) {
   updateVisibility$3(vis, env);
   updateVisibility$6(vis, env);
 }
+function eve$4(env) {
+  return eve$0(env) >= eve$1(env);
+}
+function eve$5(env) {
+  return parseInt('65');
+}
+function eve$6(env) {
+  return eve$0(env) <= eve$5(env);
+}
+function eve$7(env) {
+  return eve$4(env) && eve$6(env);
+}
 function updateVisibility$8(vis, env) {
   var elt = getElementById('employed-div');
   elt.style = 'display: ' + vis ? 'block;' : 'none;';
+}
+function eve$8(env) {
+  return env['employed'];
 }
 function updateVisibility$9(vis, env) {
   var elt = getElementById('jobTitle-div');
@@ -1013,6 +686,9 @@ function updateVisibility$19(vis, env) {
   var elt = getElementById('retired-div');
   elt.style = 'display: ' + vis ? 'block;' : 'none;';
 }
+function eve$9(env) {
+  return env['retired'];
+}
 function updateVisibility$20(vis, env) {
   var elt = getElementById('yearsRetired-div');
   elt.style = 'display: ' + vis ? 'block;' : 'none;';
@@ -1036,7 +712,7 @@ function updateVisibility$24(vis, env) {
   updateVisibility$23(vis, env);
 }
 function updateVisibility$25(vis, env) {
-  updateVisibility$24(eve$15(env), env);
+  updateVisibility$24(eve$9(env), env);
 }
 function updateVisibility$26(vis, env) {
   updateVisibility$19(vis, env);
@@ -1097,6 +773,9 @@ function updateVisibility$40(vis, env) {
   var elt = getElementById('loanApproved-div');
   elt.style = 'display: ' + vis ? 'block;' : 'none;';
 }
+function eve$10(env) {
+  return env['loanApproved'];
+}
 function updateVisibility$41(vis, env) {
   var elt = getElementById('approvalMessage-div');
   elt.style = 'display: ' + vis ? 'block;' : 'none;';
@@ -1112,8 +791,329 @@ function updateVisibility$44(vis, env) {
   updateVisibility$43(vis, env);
 }
 function updateVisibility$45(vis, env) {
-  updateVisibility$42(eve$45(env), env);
-  updateVisibility$44(!eve$45(env), env);
+  updateVisibility$42(eve$10(env), env);
+  updateVisibility$44(!eve$10(env), env);
+}
+function computeQuestion$0(env) {
+  var change = false;
+  change = change || false;
+  return change;
+}
+function computeQuestion$1(env) {
+  if (eve$3(env)) {
+    return computeQuestion$0(env);
+  }
+}
+function computeQuestion$2(env) {
+  var change = false;
+  change = change || false;
+  change = change || computeQuestion$1(env);
+  return change;
+}
+function eve$11(env) {
+  return env['monthlySalary'];
+}
+function eve$12(env) {
+  return env['monthlyExpenses'];
+}
+function eve$13(env) {
+  return eve$11(env) - eve$12(env);
+}
+function eve$14(env) {
+  return eve$13(env);
+}
+function eve$15(env) {
+  return parseInt('12');
+}
+function eve$16(env) {
+  return eve$14(env) * eve$15(env);
+}
+function updateValue$0(val) {
+  var elt = getElementById('annualSavings-widget');
+  elt.value = val;
+}
+function computeQuestion$3(env) {
+  var val = eve$16(env);
+  if (val !== env['annualSavings']) {
+    env['annualSavings'] = val;
+    updateValue$0(val);
+    return true;
+  }
+}
+function computeQuestion$4(env) {
+  var change = false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || computeQuestion$3(env);
+  return change;
+}
+function computeQuestion$5(env) {
+  var change = false;
+  change = change || false;
+  return change;
+}
+function computeQuestion$6(env) {
+  if (eve$8(env)) {
+    return computeQuestion$4(env);
+  }
+  else {
+    return computeQuestion$5(env);
+  }
+}
+function computeQuestion$7(env) {
+  var change = false;
+  change = change || false;
+  change = change || computeQuestion$6(env);
+  return change;
+}
+function eve$17(env) {
+  return env['annualPension'];
+}
+function eve$18(env) {
+  return env['healthcareExpenses'];
+}
+function eve$19(env) {
+  return eve$17(env) - eve$18(env);
+}
+function updateValue$1(val) {
+  var elt = getElementById('netPension-widget');
+  elt.value = val;
+}
+function computeQuestion$8(env) {
+  var val = eve$19(env);
+  if (val !== env['netPension']) {
+    env['netPension'] = val;
+    updateValue$1(val);
+    return true;
+  }
+}
+function computeQuestion$9(env) {
+  var change = false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || computeQuestion$8(env);
+  return change;
+}
+function computeQuestion$10(env) {
+  if (eve$9(env)) {
+    return computeQuestion$9(env);
+  }
+}
+function computeQuestion$11(env) {
+  var change = false;
+  change = change || false;
+  change = change || computeQuestion$10(env);
+  return change;
+}
+function computeQuestion$12(env) {
+  if (eve$7(env)) {
+    return computeQuestion$7(env);
+  }
+  else {
+    return computeQuestion$11(env);
+  }
+}
+function computeQuestion$13(env) {
+  var change = false;
+  change = change || computeQuestion$12(env);
+  return change;
+}
+function computeQuestion$14(env) {
+  if (eve$2(env)) {
+    return computeQuestion$2(env);
+  }
+  else {
+    return computeQuestion$13(env);
+  }
+}
+function eve$20(env) {
+  return eve$0(env) >= eve$5(env);
+}
+function eve$21(env) {
+  return eve$20(env) && eve$9(env);
+}
+function updateValue$2(val) {
+  var elt = getElementById('seniorDiscount-widget');
+  elt.checked = val;
+}
+function computeQuestion$15(env) {
+  var val = eve$21(env);
+  if (val !== env['seniorDiscount']) {
+    env['seniorDiscount'] = val;
+    updateValue$2(val);
+    return true;
+  }
+}
+function eve$22(env) {
+  return env['loanAmount'];
+}
+function eve$23(env) {
+  return env['interestRate'];
+}
+function eve$24(env) {
+  return eve$22(env) * eve$23(env);
+}
+function eve$25(env) {
+  return env['loanTerm'];
+}
+function eve$26(env) {
+  return eve$24(env) * eve$25(env);
+}
+function eve$27(env) {
+  return eve$26(env);
+}
+function eve$28(env) {
+  return parseInt('100');
+}
+function eve$29(env) {
+  return Math.round(eve$27(env) / eve$28(env));
+}
+function updateValue$3(val) {
+  var elt = getElementById('totalInterest-widget');
+  elt.value = val;
+}
+function computeQuestion$16(env) {
+  var val = eve$29(env);
+  if (val !== env['totalInterest']) {
+    env['totalInterest'] = val;
+    updateValue$3(val);
+    return true;
+  }
+}
+function eve$30(env) {
+  return env['totalInterest'];
+}
+function eve$31(env) {
+  return eve$22(env) + eve$30(env);
+}
+function updateValue$4(val) {
+  var elt = getElementById('totalRepayment-widget');
+  elt.value = val;
+}
+function computeQuestion$17(env) {
+  var val = eve$31(env);
+  if (val !== env['totalRepayment']) {
+    env['totalRepayment'] = val;
+    updateValue$4(val);
+    return true;
+  }
+}
+function eve$32(env) {
+  return env['totalRepayment'];
+}
+function eve$33(env) {
+  return eve$25(env) * eve$15(env);
+}
+function eve$34(env) {
+  return eve$33(env);
+}
+function eve$35(env) {
+  return Math.round(eve$32(env) / eve$34(env));
+}
+function updateValue$5(val) {
+  var elt = getElementById('monthlyPayment-widget');
+  elt.value = val;
+}
+function computeQuestion$18(env) {
+  var val = eve$35(env);
+  if (val !== env['monthlyPayment']) {
+    env['monthlyPayment'] = val;
+    updateValue$5(val);
+    return true;
+  }
+}
+function eve$36(env) {
+  return env['income'];
+}
+function eve$37(env) {
+  return parseInt('50000');
+}
+function eve$38(env) {
+  return eve$36(env) > eve$37(env);
+}
+function eve$39(env) {
+  return env['monthlyDebts'];
+}
+function eve$40(env) {
+  return parseInt('10000');
+}
+function eve$41(env) {
+  return eve$39(env) < eve$40(env);
+}
+function eve$42(env) {
+  return eve$38(env) && eve$41(env);
+}
+function eve$43(env) {
+  return eve$42(env);
+}
+function eve$44(env) {
+  return env['hasCoSigner'];
+}
+function eve$45(env) {
+  return eve$43(env) || eve$44(env);
+}
+function updateValue$6(val) {
+  var elt = getElementById('loanApproved-widget');
+  elt.checked = val;
+}
+function computeQuestion$19(env) {
+  var val = eve$45(env);
+  if (val !== env['loanApproved']) {
+    env['loanApproved'] = val;
+    updateValue$6(val);
+    return true;
+  }
+}
+function eve$46(env) {
+  return unquote('"Approved"');
+}
+function updateValue$7(val) {
+  var elt = getElementById('approvalMessage-widget');
+  elt.value = val;
+}
+function computeQuestion$20(env) {
+  var val = eve$46(env);
+  if (val !== env['approvalMessage']) {
+    env['approvalMessage'] = val;
+    updateValue$7(val);
+    return true;
+  }
+}
+function computeQuestion$21(env) {
+  var change = false;
+  change = change || computeQuestion$20(env);
+  return change;
+}
+function eve$47(env) {
+  return unquote('"Not Approved"');
+}
+function updateValue$8(val) {
+  var elt = getElementById('not_approvalMessage-widget');
+  elt.value = val;
+}
+function computeQuestion$22(env) {
+  var val = eve$47(env);
+  if (val !== env['not_approvalMessage']) {
+    env['not_approvalMessage'] = val;
+    updateValue$8(val);
+    return true;
+  }
+}
+function computeQuestion$23(env) {
+  var change = false;
+  change = change || computeQuestion$22(env);
+  return change;
+}
+function computeQuestion$24(env) {
+  if (eve$10(env)) {
+    return computeQuestion$21(env);
+  }
+  else {
+    return computeQuestion$23(env);
+  }
 }
 function compute$0(env) {
   return function (x, val) {
@@ -1161,5 +1161,22 @@ function run$0() {
   var env = {};
   initialize$0(env);
   render$0(env);
+  var vis = true;
+  updateVisibility$0(vis, env);
+  updateVisibility$1(vis, env);
+  updateVisibility$2(vis, env);
+  updateVisibility$29(vis, env);
+  updateVisibility$30(vis, env);
+  updateVisibility$31(vis, env);
+  updateVisibility$32(vis, env);
+  updateVisibility$33(vis, env);
+  updateVisibility$34(vis, env);
+  updateVisibility$35(vis, env);
+  updateVisibility$36(vis, env);
+  updateVisibility$37(vis, env);
+  updateVisibility$38(vis, env);
+  updateVisibility$39(vis, env);
+  updateVisibility$40(vis, env);
+  updateVisibility$45(vis, env);
   update = compute$0(env);
 }

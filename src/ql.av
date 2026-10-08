@@ -6,6 +6,12 @@ function run($ql) {
     var env = {};
     initialize($ql, env);
     render($ql, env);
+    var vis = true;
+    with (form _ { _ }: $ql) {
+        for (const q of $2) {
+            updateVisibility(q, vis, env);
+        }
+    }
     update = compute($ql, env);
 }
 
