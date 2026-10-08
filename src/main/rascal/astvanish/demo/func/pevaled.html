@@ -1,0 +1,8 @@
+<script type="module">
+  import * as bench from '/bench.js';
+  import { run } from './factorial-run.js';
+  
+  bench.start();
+  run([2, 450]);
+  bench.stop();
+</script>
