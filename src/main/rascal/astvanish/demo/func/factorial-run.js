@@ -37,24 +37,7 @@ function eve$9(env) {
 function eve$10(env) {
   return eve$2(env) ? eve$9(env) : eve$0(env);
 }
-function eve$11(env) {
-  return parseInt('2');
-}
-function eve$12(env) {
-  return parseInt('4');
-}
-function eve$13(env) {
-  var args = [];
-  args.push(eve$11(env));
-args.push(eve$12(env)); 
-  return env['power'](args);
-}
-function eve$14(env) {
-  var args = [];
-  args.push(eve$13(env)); 
-  return env['factorial'](args);
-}
-function run$0() {
+function run$0(args) {
   var env = {}; 
   env['factorial'] = function (args) {
   var myEnv = Object.assign({}, env); 
@@ -67,5 +50,5 @@ env['power'] = function (args) {
   myEnv['n'] = args.shift(); 
   return eve$10(myEnv);
 }; 
-  return eve$14(env);
+  return env['power'](args.slice());
 }

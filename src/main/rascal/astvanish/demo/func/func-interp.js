@@ -1,7 +1,7 @@
 
 export { run as run };
 
-function run($prog) {var env = {};
+function run($prog, args) {var env = {};
     {
         for (const d of $prog.defs) env[d.name] = function(args) {
                     var myEnv = Object.assign({}, env);
@@ -10,7 +10,7 @@ function run($prog) {var env = {};
                     }
                     return eve(d.body, myEnv);
                 };
-        return eve($prog.main, env);
+        return env[$prog.main](args.slice());
     }}
 
 function eve($exp, env) {switch ($exp._tag) {

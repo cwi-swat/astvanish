@@ -9,7 +9,7 @@ import astvanish::Eval;
 import astvanish::PEval;
 import astvanish::PT2JSON;
 
-start syntax Prog = prog: Def* defs Expr main;
+start syntax Prog = prog: Def* defs Id main;
 
 syntax Def = def: "def" Id name "(" {Id ","}* params ")" "=" Expr body ";";
 

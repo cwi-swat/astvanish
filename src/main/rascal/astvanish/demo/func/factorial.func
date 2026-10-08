@@ -15,4 +15,4 @@ def power(x, n) =
      n
   fi ;
 
-factorial(power(2, 4))
+power

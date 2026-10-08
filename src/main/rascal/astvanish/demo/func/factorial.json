@@ -1,6 +1,6 @@
 {
   "_tag": "prog",
-  "_src": {"offset": 62, "length": 196},
+  "_src": {"offset": 62, "length": 179},
   "defs": [
     {
       "_tag": "def",
@@ -131,28 +131,5 @@
       }
     }
   ],
-  "main": {
-    "_tag": "call",
-    "_src": {"offset": 236, "length": 22},
-    "name": "factorial",
-    "actuals": [
-      {
-        "_tag": "call",
-        "_src": {"offset": 246, "length": 11},
-        "name": "power",
-        "actuals": [
-          {
-            "_tag": "number",
-            "_src": {"offset": 252, "length": 1},
-            "number": "2"
-          },
-          {
-            "_tag": "number",
-            "_src": {"offset": 255, "length": 1},
-            "number": "4"
-          }
-        ]
-      }
-    ]
-  }
+  "main": "power"
 }

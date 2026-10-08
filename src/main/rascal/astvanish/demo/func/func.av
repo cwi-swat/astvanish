@@ -1,7 +1,7 @@
 
 export { run as run };
 
-function run($prog) {
+function run($prog, args) {
     var env = {};
     with (_ _ : $prog) {
         for (const d of $1) 
@@ -13,7 +13,7 @@ function run($prog) {
                     }
                     return eve($3, myEnv);
                 };
-        return eve($2, env);
+        return env[$2.toString()](args.slice());
     }
 }
 

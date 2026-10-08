@@ -1,40 +1,39 @@
 
 
+
+function doRun(interp, compiled, ast, args) {
+    const startUsage = process.cpuUsage();
+    const result = interp(ast, args);
+    const endUsage = process.cpuUsage(startUsage);
+    console.log('Interpreted result: ' + result);
+    
+    const timings = {};
+
+    timings.interpreted = {
+        user: endUsage.user / 1000,
+        system: endUsage.system / 1000
+    };
+
+    const startUsage2 = process.cpuUsage();
+    const result2 = compiled(args);
+    const endUsage2 = process.cpuUsage(startUsage2);
+    
+    console.log('Compiled result: ' + result2);
+
+    timings.compiled = {
+        user: endUsage2.user / 1000,
+        system: endUsage2.system / 1000
+    };
+
+    return timings;
+}
+
 import { run } from './func-interp.js';
-
-import { readFile } from 'fs/promises';
-
-const ast = JSON.parse(await readFile("factorial.json", "utf8"));
-
-console.time('interpreted');
-const result = run(ast);
-console.timeEnd('interpreted');
-
-console.log('result = ' + result);
-
 import { run as run2 } from './factorial-run.js';
 
-console.time('compiled');
-const result2 = run2();
-console.timeEnd('compiled');
+import { readFile } from 'fs/promises';
+const ast = JSON.parse(await readFile("factorial.json", "utf8"));
 
-console.log('peval result = ' + result2);
-
-
-console.log ("######################");
-
-const startUsage = process.cpuUsage();
-run(ast);
-const endUsage = process.cpuUsage(startUsage);
-console.log('CPU Usage (interpreted):');
-console.log(` User: ${endUsage.user / 1000}ms`);
-console.log(` System: ${endUsage.system / 1000}ms`);
-
-
-const startUsage2 = process.cpuUsage();
-run2();
-const endUsage2 = process.cpuUsage(startUsage2);
-console.log('CPU Usage (compiled):');
-console.log(` User: ${endUsage2.user / 1000}ms`);
-console.log(` System: ${endUsage2.system / 1000}ms`);
-
+for (var i = 0; i < 150; i++) {
+    console.log(JSON.stringify(doRun(run, run2, ast, [2, i])));
+}
