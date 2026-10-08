@@ -50,7 +50,6 @@ list[str] genStr((Regexp)`<Regexp a> <Regexp b>`)
 list[str] genStr((Regexp)`<Regexp a> | <Regexp b>`) 
     = arbInt(2) == 1 ? genStr(a) : genStr(b);
 
-
 list[str] genStr((Regexp)`<Regexp a>?`) 
     = arbInt(2) == 1 ? genStr(a) : [];
 
