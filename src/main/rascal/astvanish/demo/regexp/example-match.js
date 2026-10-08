@@ -53,7 +53,14 @@ function match_$11(i, input, k) {
 }
 function match$0(input) {
   var i = 0; // force i to be dynamic
-    match_$11(i, input, function (i, input) {
-            console.log('matched up till: ' + i);
-        });
+    try {
+   match_$11(i, input, function (i, input) {
+                if (i === input.length) {
+   throw "match";
+}});
+}
+    catch (e) {
+   return true;
+}
+    return false;
 }

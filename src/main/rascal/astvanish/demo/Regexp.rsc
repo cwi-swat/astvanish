@@ -6,6 +6,7 @@ import IO;
 import astvanish::Eval;
 import astvanish::PEval;
 import astvanish::PT2JSON;
+import util::Math;
 
 start syntax RE = regexp: Regexp re;
 
@@ -29,7 +30,29 @@ void dumpRegexpEval(loc root = |project://astvanish/src/main/rascal/astvanish/de
     peval(aRegexp());
     writeFile(root + "regexp-interp.js", 
         toEval(root + "regexp.av", (
-            "match": ("$re": sort("Regexp")),
+            "match": ("$re": sort("RE")),
             "match_": ("$re": sort("Regexp"))
         ), #start[RE]));
 }
+
+list[str] genStr(start[RE] re) = genStr(re.top);
+
+list[str] genStr(RE re) = genStr(re.re);
+
+list[str] genStr((Regexp)`<Char c>`) = ["<c>"];
+
+list[str] genStr((Regexp)`(<Regexp re>)`)
+    = genStr(re);
+
+list[str] genStr((Regexp)`<Regexp a> <Regexp b>`)
+    = genStr(a) + genStr(b);
+
+list[str] genStr((Regexp)`<Regexp a> | <Regexp b>`) 
+    = arbInt(2) == 1 ? genStr(a) : genStr(b);
+
+
+list[str] genStr((Regexp)`<Regexp a>?`) 
+    = arbInt(2) == 1 ? genStr(a) : [];
+
+list[str] genStr((Regexp)`<Regexp a>*`)
+    = [ *genStr(a) | int _ <- [0..arbInt(1000)] ];

@@ -1,10 +1,19 @@
 
-
+export { match as match }
 
 function match($re, input) {var i = 0; // force i to be dynamic
-    match_($re.word, i, input, function (i, input) {
-            console.log('matched up till: ' + i);
-        });}
+    try {
+        match_($re.re, i, input, function (i, input) {
+                if (i === input.length) {
+                    // console.log('match');
+                    throw "match";
+                }
+            });
+    }
+    catch (e) {
+        return true;
+    }
+    return false;}
 
 function match_($re, i, input, k) {switch ($re._tag) {
 case 'word': 

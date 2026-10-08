@@ -1,12 +1,21 @@
 
-
+export { match as match }
 
 function match($re, input) {
     var i = 0; // force i to be dynamic
-    with (_: $re) 
-        match_($1, i, input, function (i, input) {
-            console.log('matched up till: ' + i);
-        });
+    try {
+        with (_: $re) 
+            match_($1, i, input, function (i, input) {
+                if (i === input.length) {
+                    // console.log('match');
+                    throw "match";
+                }
+            });
+    }
+    catch (e) {
+        return true;
+    }
+    return false;
 }
 
 function match_($re, i, input, k) {

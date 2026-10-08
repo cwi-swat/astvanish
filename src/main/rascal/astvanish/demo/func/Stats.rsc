@@ -12,7 +12,7 @@ bool isOutlier(num z) = z < -3 || z > 3;
 
 Content visTimings() {
     lrel[str,num,num] dat = readCSV(#lrel[str,num,num], 
-        |project://astvanish/src/main/rascal/astvanish/demo/func/timings.csv|);
+        |project://astvanish/src/main/rascal/astvanish/demo/regexp/timings.csv|);
 
 
     num mInterp = mean(dat<1>);

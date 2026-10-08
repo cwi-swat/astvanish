@@ -1,0 +1,17 @@
+
+<script type="module">
+  import * as bench from '/bench.js';
+  
+  function power(x, n) {
+    if (n > 1) {
+        return x * power(x, n - 1);
+    }
+    else {
+        return n;
+    }
+  }
+
+  bench.start();
+  power(2, 450);
+  bench.stop();
+</script>
