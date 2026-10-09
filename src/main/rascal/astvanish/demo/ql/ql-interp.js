@@ -1,4 +1,7 @@
 
+export { run as run };
+
+
 function run($ql) {var env = {};
     initialize($ql, env);
 
@@ -52,15 +55,15 @@ function render($ql, env, upd) {for (const q of $ql.questions) renderQuestion(q,
 function renderQuestion($q, env, upd) {switch ($q._tag) {
 case 'answerable': 
    widget($q.type, $q.prompt, $q.name, false, env, function (x) { 
-                switch ($3._tag) {
+                switch ($q.type._tag) {
 case 'integer': 
-   upd($3.name.toString(), x.target.value);
+   upd($q.type.name.toString(), x.target.value);
    break;
 case 'boolean': 
-   upd($3.name.toString(), x.target.checked);
+   upd($q.type.name.toString(), x.target.checked);
    break;
 case 'string': 
-   upd($3.name.toString(), x.target.value);
+   upd($q.type.name.toString(), x.target.value);
    break;
 }
             });

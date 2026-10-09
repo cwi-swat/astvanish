@@ -1,4 +1,7 @@
 
+export { run as run };
+
+
 function run($ql) {
     var env = {};
     initialize($ql, env);
