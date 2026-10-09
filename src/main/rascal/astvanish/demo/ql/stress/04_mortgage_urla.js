@@ -1368,7 +1368,12 @@ function eve$99(env) {
   return parseInt('100');
 }
 function eve$100(env) {
-  return Math.round(eve$98(env) / eve$99(env));
+  var x = eve$98(env);
+            var y = eve$99(env);
+            if (y === 0) {
+   window.alert('Division by zero in: s3aRentIncome * 75 / 100');
+                return 0;
+}return Math.round(x / y);
 }
 function eve$101(env) {
   return env['s3aCarrying'];
@@ -1858,7 +1863,12 @@ function eve$170(env) {
   return eve$169(env);
 }
 function eve$171(env) {
-  return Math.round(eve$166(env) / eve$170(env));
+  var x = eve$166(env);
+            var y = eve$170(env);
+            if (y === 0) {
+   window.alert('Division by zero in: peTotal * 100 / (totalIncome + 1)');
+                return 0;
+}return Math.round(x / y);
 }
 function updateValue$20(val) {
   var elt = document.getElementById('frontRatio-widget'); 
@@ -1891,7 +1901,12 @@ function eve$177(env) {
   return eve$176(env) * eve$99(env);
 }
 function eve$178(env) {
-  return Math.round(eve$177(env) / eve$170(env));
+  var x = eve$177(env);
+            var y = eve$170(env);
+            if (y === 0) {
+   window.alert('Division by zero in: (peTotal + totalDebt + otherHousingDebt) * 100 / (totalIncome + 1)');
+                return 0;
+}return Math.round(x / y);
 }
 function updateValue$21(val) {
   var elt = document.getElementById('backRatio-widget'); 
@@ -1918,7 +1933,12 @@ function eve$182(env) {
   return eve$181(env);
 }
 function eve$183(env) {
-  return Math.round(eve$179(env) / eve$182(env));
+  var x = eve$179(env);
+            var y = eve$182(env);
+            if (y === 0) {
+   window.alert('Division by zero in: s4aLoanAmount * 100 / (propertyValue + 1)');
+                return 0;
+}return Math.round(x / y);
 }
 function updateValue$22(val) {
   var elt = document.getElementById('ltv-widget'); 
@@ -3249,7 +3269,7 @@ function renderQuestion$1(env, upd) {
 }
 function updater$2(upd) {
   return function (x) {
-  upd('s1aAge', x.target.value);
+  upd('s1aAge', parseInt(x.target.value));
 };
 }
 function widget$2(env, func) {
@@ -3423,7 +3443,7 @@ function renderQuestion$13(env, upd) {
 }
 function updater$10(upd) {
   return function (x) {
-  upd('s1aDependents', x.target.value);
+  upd('s1aDependents', parseInt(x.target.value));
 };
 }
 function widget$10(env, func) {
@@ -3503,7 +3523,7 @@ function renderQuestion$17(env, upd) {
 }
 function updater$14(upd) {
   return function (x) {
-  upd('s1aYearsAtAddress', x.target.value);
+  upd('s1aYearsAtAddress', parseInt(x.target.value));
 };
 }
 function widget$14(env, func) {
@@ -3543,7 +3563,7 @@ function renderQuestion$19(env, upd) {
 }
 function updater$16(upd) {
   return function (x) {
-  upd('s1aRent', x.target.value);
+  upd('s1aRent', parseInt(x.target.value));
 };
 }
 function widget$16(env, func) {
@@ -3589,7 +3609,7 @@ function renderQuestion$23(env, upd) {
 }
 function updater$18(upd) {
   return function (x) {
-  upd('s1aFormerYears', x.target.value);
+  upd('s1aFormerYears', parseInt(x.target.value));
 };
 }
 function widget$18(env, func) {
@@ -3676,7 +3696,7 @@ function renderQuestion$29(env, upd) {
 }
 function updater$22(upd) {
   return function (x) {
-  upd('s1bYearsInLine', x.target.value);
+  upd('s1bYearsInLine', parseInt(x.target.value));
 };
 }
 function widget$22(env, func) {
@@ -3736,7 +3756,7 @@ function renderQuestion$32(env, upd) {
 }
 function updater$25(upd) {
   return function (x) {
-  upd('s1bBusinessIncome', x.target.value);
+  upd('s1bBusinessIncome', parseInt(x.target.value));
 };
 }
 function widget$25(env, func) {
@@ -3760,7 +3780,7 @@ function renderQuestion$34(env, upd) {
 }
 function updater$26(upd) {
   return function (x) {
-  upd('s1bBase', x.target.value);
+  upd('s1bBase', parseInt(x.target.value));
 };
 }
 function widget$26(env, func) {
@@ -3780,7 +3800,7 @@ function renderQuestion$35(env, upd) {
 }
 function updater$27(upd) {
   return function (x) {
-  upd('s1bOvertime', x.target.value);
+  upd('s1bOvertime', parseInt(x.target.value));
 };
 }
 function widget$27(env, func) {
@@ -3800,7 +3820,7 @@ function renderQuestion$36(env, upd) {
 }
 function updater$28(upd) {
   return function (x) {
-  upd('s1bBonus', x.target.value);
+  upd('s1bBonus', parseInt(x.target.value));
 };
 }
 function widget$28(env, func) {
@@ -3820,7 +3840,7 @@ function renderQuestion$37(env, upd) {
 }
 function updater$29(upd) {
   return function (x) {
-  upd('s1bCommission', x.target.value);
+  upd('s1bCommission', parseInt(x.target.value));
 };
 }
 function widget$29(env, func) {
@@ -3840,7 +3860,7 @@ function renderQuestion$38(env, upd) {
 }
 function updater$30(upd) {
   return function (x) {
-  upd('s1bMilitary', x.target.value);
+  upd('s1bMilitary', parseInt(x.target.value));
 };
 }
 function widget$30(env, func) {
@@ -3860,7 +3880,7 @@ function renderQuestion$39(env, upd) {
 }
 function updater$31(upd) {
   return function (x) {
-  upd('s1bOther', x.target.value);
+  upd('s1bOther', parseInt(x.target.value));
 };
 }
 function widget$31(env, func) {
@@ -3958,7 +3978,7 @@ function renderQuestion$47(env, upd) {
 }
 function updater$34(upd) {
   return function (x) {
-  upd('s1cBase', x.target.value);
+  upd('s1cBase', parseInt(x.target.value));
 };
 }
 function widget$35(env, func) {
@@ -3978,7 +3998,7 @@ function renderQuestion$48(env, upd) {
 }
 function updater$35(upd) {
   return function (x) {
-  upd('s1cOvertime', x.target.value);
+  upd('s1cOvertime', parseInt(x.target.value));
 };
 }
 function widget$36(env, func) {
@@ -3998,7 +4018,7 @@ function renderQuestion$49(env, upd) {
 }
 function updater$36(upd) {
   return function (x) {
-  upd('s1cBonus', x.target.value);
+  upd('s1cBonus', parseInt(x.target.value));
 };
 }
 function widget$37(env, func) {
@@ -4098,7 +4118,7 @@ function renderQuestion$56(env, upd) {
 }
 function updater$39(upd) {
   return function (x) {
-  upd('s1dIncome', x.target.value);
+  upd('s1dIncome', parseInt(x.target.value));
 };
 }
 function widget$42(env, func) {
@@ -4126,7 +4146,7 @@ function renderQuestion$59(env, upd) {
 }
 function updater$40(upd) {
   return function (x) {
-  upd('s1eAlimony', x.target.value);
+  upd('s1eAlimony', parseInt(x.target.value));
 };
 }
 function widget$43(env, func) {
@@ -4146,7 +4166,7 @@ function renderQuestion$60(env, upd) {
 }
 function updater$41(upd) {
   return function (x) {
-  upd('s1eChildSupport', x.target.value);
+  upd('s1eChildSupport', parseInt(x.target.value));
 };
 }
 function widget$44(env, func) {
@@ -4166,7 +4186,7 @@ function renderQuestion$61(env, upd) {
 }
 function updater$42(upd) {
   return function (x) {
-  upd('s1eDividends', x.target.value);
+  upd('s1eDividends', parseInt(x.target.value));
 };
 }
 function widget$45(env, func) {
@@ -4186,7 +4206,7 @@ function renderQuestion$62(env, upd) {
 }
 function updater$43(upd) {
   return function (x) {
-  upd('s1eRetirement', x.target.value);
+  upd('s1eRetirement', parseInt(x.target.value));
 };
 }
 function widget$46(env, func) {
@@ -4206,7 +4226,7 @@ function renderQuestion$63(env, upd) {
 }
 function updater$44(upd) {
   return function (x) {
-  upd('s1eSocialSecurity', x.target.value);
+  upd('s1eSocialSecurity', parseInt(x.target.value));
 };
 }
 function widget$47(env, func) {
@@ -4226,7 +4246,7 @@ function renderQuestion$64(env, upd) {
 }
 function updater$45(upd) {
   return function (x) {
-  upd('s1eDisability', x.target.value);
+  upd('s1eDisability', parseInt(x.target.value));
 };
 }
 function widget$48(env, func) {
@@ -4246,7 +4266,7 @@ function renderQuestion$65(env, upd) {
 }
 function updater$46(upd) {
   return function (x) {
-  upd('s1eRental', x.target.value);
+  upd('s1eRental', parseInt(x.target.value));
 };
 }
 function widget$49(env, func) {
@@ -4266,7 +4286,7 @@ function renderQuestion$66(env, upd) {
 }
 function updater$47(upd) {
   return function (x) {
-  upd('s1eOther', x.target.value);
+  upd('s1eOther', parseInt(x.target.value));
 };
 }
 function widget$50(env, func) {
@@ -4316,7 +4336,7 @@ function renderQuestion$69(env, upd) {
 }
 function updater$48(upd) {
   return function (x) {
-  upd('s2aChecking', x.target.value);
+  upd('s2aChecking', parseInt(x.target.value));
 };
 }
 function widget$53(env, func) {
@@ -4336,7 +4356,7 @@ function renderQuestion$70(env, upd) {
 }
 function updater$49(upd) {
   return function (x) {
-  upd('s2aSavings', x.target.value);
+  upd('s2aSavings', parseInt(x.target.value));
 };
 }
 function widget$54(env, func) {
@@ -4356,7 +4376,7 @@ function renderQuestion$71(env, upd) {
 }
 function updater$50(upd) {
   return function (x) {
-  upd('s2aMoneyMarket', x.target.value);
+  upd('s2aMoneyMarket', parseInt(x.target.value));
 };
 }
 function widget$55(env, func) {
@@ -4376,7 +4396,7 @@ function renderQuestion$72(env, upd) {
 }
 function updater$51(upd) {
   return function (x) {
-  upd('s2aStocks', x.target.value);
+  upd('s2aStocks', parseInt(x.target.value));
 };
 }
 function widget$56(env, func) {
@@ -4396,7 +4416,7 @@ function renderQuestion$73(env, upd) {
 }
 function updater$52(upd) {
   return function (x) {
-  upd('s2aRetirement', x.target.value);
+  upd('s2aRetirement', parseInt(x.target.value));
 };
 }
 function widget$57(env, func) {
@@ -4416,7 +4436,7 @@ function renderQuestion$74(env, upd) {
 }
 function updater$53(upd) {
   return function (x) {
-  upd('s2aLifeInsurance', x.target.value);
+  upd('s2aLifeInsurance', parseInt(x.target.value));
 };
 }
 function widget$58(env, func) {
@@ -4451,7 +4471,7 @@ function renderQuestion$76(env, upd) {
 }
 function updater$54(upd) {
   return function (x) {
-  upd('s2bEarnest', x.target.value);
+  upd('s2bEarnest', parseInt(x.target.value));
 };
 }
 function widget$60(env, func) {
@@ -4471,7 +4491,7 @@ function renderQuestion$77(env, upd) {
 }
 function updater$55(upd) {
   return function (x) {
-  upd('s2bAssetSale', x.target.value);
+  upd('s2bAssetSale', parseInt(x.target.value));
 };
 }
 function widget$61(env, func) {
@@ -4491,7 +4511,7 @@ function renderQuestion$78(env, upd) {
 }
 function updater$56(upd) {
   return function (x) {
-  upd('s2bGift', x.target.value);
+  upd('s2bGift', parseInt(x.target.value));
 };
 }
 function widget$62(env, func) {
@@ -4588,7 +4608,7 @@ function renderQuestion$85(env, upd) {
 }
 function updater$59(upd) {
   return function (x) {
-  upd('s2cAuto', x.target.value);
+  upd('s2cAuto', parseInt(x.target.value));
 };
 }
 function widget$67(env, func) {
@@ -4608,7 +4628,7 @@ function renderQuestion$86(env, upd) {
 }
 function updater$60(upd) {
   return function (x) {
-  upd('s2cAutoBalance', x.target.value);
+  upd('s2cAutoBalance', parseInt(x.target.value));
 };
 }
 function widget$68(env, func) {
@@ -4628,7 +4648,7 @@ function renderQuestion$87(env, upd) {
 }
 function updater$61(upd) {
   return function (x) {
-  upd('s2cCards', x.target.value);
+  upd('s2cCards', parseInt(x.target.value));
 };
 }
 function widget$69(env, func) {
@@ -4648,7 +4668,7 @@ function renderQuestion$88(env, upd) {
 }
 function updater$62(upd) {
   return function (x) {
-  upd('s2cCardsBalance', x.target.value);
+  upd('s2cCardsBalance', parseInt(x.target.value));
 };
 }
 function widget$70(env, func) {
@@ -4668,7 +4688,7 @@ function renderQuestion$89(env, upd) {
 }
 function updater$63(upd) {
   return function (x) {
-  upd('s2cStudent', x.target.value);
+  upd('s2cStudent', parseInt(x.target.value));
 };
 }
 function widget$71(env, func) {
@@ -4688,7 +4708,7 @@ function renderQuestion$90(env, upd) {
 }
 function updater$64(upd) {
   return function (x) {
-  upd('s2cStudentBalance', x.target.value);
+  upd('s2cStudentBalance', parseInt(x.target.value));
 };
 }
 function widget$72(env, func) {
@@ -4708,7 +4728,7 @@ function renderQuestion$91(env, upd) {
 }
 function updater$65(upd) {
   return function (x) {
-  upd('s2cInstallment', x.target.value);
+  upd('s2cInstallment', parseInt(x.target.value));
 };
 }
 function widget$73(env, func) {
@@ -4748,7 +4768,7 @@ function renderQuestion$93(env, upd) {
 }
 function updater$67(upd) {
   return function (x) {
-  upd('s2cPaidOffPayment', x.target.value);
+  upd('s2cPaidOffPayment', parseInt(x.target.value));
 };
 }
 function widget$75(env, func) {
@@ -4774,7 +4794,7 @@ function renderQuestion$96(env, upd) {
 }
 function updater$68(upd) {
   return function (x) {
-  upd('s2dAlimony', x.target.value);
+  upd('s2dAlimony', parseInt(x.target.value));
 };
 }
 function widget$76(env, func) {
@@ -4794,7 +4814,7 @@ function renderQuestion$97(env, upd) {
 }
 function updater$69(upd) {
   return function (x) {
-  upd('s2dChildSupport', x.target.value);
+  upd('s2dChildSupport', parseInt(x.target.value));
 };
 }
 function widget$77(env, func) {
@@ -4814,7 +4834,7 @@ function renderQuestion$98(env, upd) {
 }
 function updater$70(upd) {
   return function (x) {
-  upd('s2dJobExpenses', x.target.value);
+  upd('s2dJobExpenses', parseInt(x.target.value));
 };
 }
 function widget$78(env, func) {
@@ -4904,7 +4924,7 @@ function renderQuestion$103(env, upd) {
 }
 function updater$73(upd) {
   return function (x) {
-  upd('s3aValue', x.target.value);
+  upd('s3aValue', parseInt(x.target.value));
 };
 }
 function widget$83(env, func) {
@@ -4964,7 +4984,7 @@ function renderQuestion$106(env, upd) {
 }
 function updater$76(upd) {
   return function (x) {
-  upd('s3aCarrying', x.target.value);
+  upd('s3aCarrying', parseInt(x.target.value));
 };
 }
 function widget$86(env, func) {
@@ -4984,7 +5004,7 @@ function renderQuestion$107(env, upd) {
 }
 function updater$77(upd) {
   return function (x) {
-  upd('s3aMortgageBalance', x.target.value);
+  upd('s3aMortgageBalance', parseInt(x.target.value));
 };
 }
 function widget$87(env, func) {
@@ -5004,7 +5024,7 @@ function renderQuestion$108(env, upd) {
 }
 function updater$78(upd) {
   return function (x) {
-  upd('s3aMortgagePayment', x.target.value);
+  upd('s3aMortgagePayment', parseInt(x.target.value));
 };
 }
 function widget$88(env, func) {
@@ -5024,7 +5044,7 @@ function renderQuestion$109(env, upd) {
 }
 function updater$79(upd) {
   return function (x) {
-  upd('s3aRentIncome', x.target.value);
+  upd('s3aRentIncome', parseInt(x.target.value));
 };
 }
 function widget$89(env, func) {
@@ -5121,7 +5141,7 @@ function renderQuestion$116(env, upd) {
 }
 function updater$82(upd) {
   return function (x) {
-  upd('s3bValue', x.target.value);
+  upd('s3bValue', parseInt(x.target.value));
 };
 }
 function widget$94(env, func) {
@@ -5141,7 +5161,7 @@ function renderQuestion$117(env, upd) {
 }
 function updater$83(upd) {
   return function (x) {
-  upd('s3bMortgageBalance', x.target.value);
+  upd('s3bMortgageBalance', parseInt(x.target.value));
 };
 }
 function widget$95(env, func) {
@@ -5161,7 +5181,7 @@ function renderQuestion$118(env, upd) {
 }
 function updater$84(upd) {
   return function (x) {
-  upd('s3bMortgagePayment', x.target.value);
+  upd('s3bMortgagePayment', parseInt(x.target.value));
 };
 }
 function widget$96(env, func) {
@@ -5237,7 +5257,7 @@ function renderQuestion$125(env, upd) {
 }
 function updater$85(upd) {
   return function (x) {
-  upd('s4aLoanAmount', x.target.value);
+  upd('s4aLoanAmount', parseInt(x.target.value));
 };
 }
 function widget$99(env, func) {
@@ -5277,7 +5297,7 @@ function renderQuestion$127(env, upd) {
 }
 function updater$87(upd) {
   return function (x) {
-  upd('s4aPrice', x.target.value);
+  upd('s4aPrice', parseInt(x.target.value));
 };
 }
 function widget$101(env, func) {
@@ -5352,7 +5372,7 @@ function renderQuestion$132(env, upd) {
 }
 function updater$89(upd) {
   return function (x) {
-  upd('s4aAppraised', x.target.value);
+  upd('s4aAppraised', parseInt(x.target.value));
 };
 }
 function widget$105(env, func) {
@@ -5372,7 +5392,7 @@ function renderQuestion$133(env, upd) {
 }
 function updater$90(upd) {
   return function (x) {
-  upd('s4aCashOutAmount', x.target.value);
+  upd('s4aCashOutAmount', parseInt(x.target.value));
 };
 }
 function widget$106(env, func) {
@@ -5427,7 +5447,7 @@ function renderQuestion$139(env, upd) {
 }
 function updater$92(upd) {
   return function (x) {
-  upd('s4aUnits', x.target.value);
+  upd('s4aUnits', parseInt(x.target.value));
 };
 }
 function widget$108(env, func) {
@@ -5568,7 +5588,7 @@ function renderQuestion$148(env, upd) {
 }
 function updater$98(upd) {
   return function (x) {
-  upd('s4bPayment', x.target.value);
+  upd('s4bPayment', parseInt(x.target.value));
 };
 }
 function widget$115(env, func) {
@@ -5588,7 +5608,7 @@ function renderQuestion$149(env, upd) {
 }
 function updater$99(upd) {
   return function (x) {
-  upd('s4bAmount', x.target.value);
+  upd('s4bAmount', parseInt(x.target.value));
 };
 }
 function widget$116(env, func) {
@@ -5615,7 +5635,7 @@ function renderQuestion$152(env, upd) {
 }
 function updater$100(upd) {
   return function (x) {
-  upd('s4cRentalIncome', x.target.value);
+  upd('s4cRentalIncome', parseInt(x.target.value));
 };
 }
 function widget$117(env, func) {
@@ -5635,7 +5655,7 @@ function renderQuestion$153(env, upd) {
 }
 function updater$101(upd) {
   return function (x) {
-  upd('s4dGifts', x.target.value);
+  upd('s4dGifts', parseInt(x.target.value));
 };
 }
 function widget$118(env, func) {
@@ -5655,7 +5675,7 @@ function renderQuestion$154(env, upd) {
 }
 function updater$102(upd) {
   return function (x) {
-  upd('pePrincipalInterest', x.target.value);
+  upd('pePrincipalInterest', parseInt(x.target.value));
 };
 }
 function widget$119(env, func) {
@@ -5675,7 +5695,7 @@ function renderQuestion$155(env, upd) {
 }
 function updater$103(upd) {
   return function (x) {
-  upd('peInsurance', x.target.value);
+  upd('peInsurance', parseInt(x.target.value));
 };
 }
 function widget$120(env, func) {
@@ -5695,7 +5715,7 @@ function renderQuestion$156(env, upd) {
 }
 function updater$104(upd) {
   return function (x) {
-  upd('peTaxes', x.target.value);
+  upd('peTaxes', parseInt(x.target.value));
 };
 }
 function widget$121(env, func) {
@@ -5715,7 +5735,7 @@ function renderQuestion$157(env, upd) {
 }
 function updater$105(upd) {
   return function (x) {
-  upd('peMortgageInsurance', x.target.value);
+  upd('peMortgageInsurance', parseInt(x.target.value));
 };
 }
 function widget$122(env, func) {
@@ -5735,7 +5755,7 @@ function renderQuestion$158(env, upd) {
 }
 function updater$106(upd) {
   return function (x) {
-  upd('peDues', x.target.value);
+  upd('peDues', parseInt(x.target.value));
 };
 }
 function widget$123(env, func) {
@@ -5856,7 +5876,7 @@ function renderQuestion$166(env, upd) {
 }
 function updater$111(upd) {
   return function (x) {
-  upd('s5aUndisclosedAmount', x.target.value);
+  upd('s5aUndisclosedAmount', parseInt(x.target.value));
 };
 }
 function widget$129(env, func) {
@@ -6122,7 +6142,7 @@ function renderQuestion$181(env, upd) {
 }
 function updater$124(upd) {
   return function (x) {
-  upd('s5bYearsSinceDischarge', x.target.value);
+  upd('s5bYearsSinceDischarge', parseInt(x.target.value));
 };
 }
 function widget$142(env, func) {

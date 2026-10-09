@@ -1170,7 +1170,7 @@ function renderQuestion$0(env, upd) {
 }
 function updater$1(upd) {
   return function (x) {
-  upd('age', x.target.value);
+  upd('age', parseInt(x.target.value));
 };
 }
 function widget$1(env, func) {
@@ -1270,7 +1270,7 @@ function renderQuestion$5(env, upd) {
 }
 function updater$6(upd) {
   return function (x) {
-  upd('partnerAge', x.target.value);
+  upd('partnerAge', parseInt(x.target.value));
 };
 }
 function widget$6(env, func) {
@@ -1290,7 +1290,7 @@ function renderQuestion$6(env, upd) {
 }
 function updater$7(upd) {
   return function (x) {
-  upd('partnerIncome', x.target.value);
+  upd('partnerIncome', parseInt(x.target.value));
 };
 }
 function widget$7(env, func) {
@@ -1310,7 +1310,7 @@ function renderQuestion$7(env, upd) {
 }
 function updater$8(upd) {
   return function (x) {
-  upd('partnerAssets', x.target.value);
+  upd('partnerAssets', parseInt(x.target.value));
 };
 }
 function widget$8(env, func) {
@@ -1339,7 +1339,7 @@ function renderQuestion$10(env, upd) {
 }
 function updater$9(upd) {
   return function (x) {
-  upd('nChildren', x.target.value);
+  upd('nChildren', parseInt(x.target.value));
 };
 }
 function widget$9(env, func) {
@@ -1359,7 +1359,7 @@ function renderQuestion$11(env, upd) {
 }
 function updater$10(upd) {
   return function (x) {
-  upd('nCoResidents', x.target.value);
+  upd('nCoResidents', parseInt(x.target.value));
 };
 }
 function widget$10(env, func) {
@@ -1379,7 +1379,7 @@ function renderQuestion$12(env, upd) {
 }
 function updater$11(upd) {
   return function (x) {
-  upd('coResidentIncome', x.target.value);
+  upd('coResidentIncome', parseInt(x.target.value));
 };
 }
 function widget$11(env, func) {
@@ -1492,7 +1492,7 @@ function renderQuestion$21(env, upd) {
 }
 function updater$16(upd) {
   return function (x) {
-  upd('bareRent', x.target.value);
+  upd('bareRent', parseInt(x.target.value));
 };
 }
 function widget$16(env, func) {
@@ -1532,7 +1532,7 @@ function renderQuestion$23(env, upd) {
 }
 function updater$18(upd) {
   return function (x) {
-  upd('svcEnergy', x.target.value);
+  upd('svcEnergy', parseInt(x.target.value));
 };
 }
 function widget$18(env, func) {
@@ -1552,7 +1552,7 @@ function renderQuestion$24(env, upd) {
 }
 function updater$19(upd) {
   return function (x) {
-  upd('svcCleaning', x.target.value);
+  upd('svcCleaning', parseInt(x.target.value));
 };
 }
 function widget$19(env, func) {
@@ -1572,7 +1572,7 @@ function renderQuestion$25(env, upd) {
 }
 function updater$20(upd) {
   return function (x) {
-  upd('svcCaretaker', x.target.value);
+  upd('svcCaretaker', parseInt(x.target.value));
 };
 }
 function widget$20(env, func) {
@@ -1592,7 +1592,7 @@ function renderQuestion$26(env, upd) {
 }
 function updater$21(upd) {
   return function (x) {
-  upd('svcShared', x.target.value);
+  upd('svcShared', parseInt(x.target.value));
 };
 }
 function widget$21(env, func) {
@@ -1732,7 +1732,7 @@ function renderQuestion$36(env, upd) {
 }
 function updater$22(upd) {
   return function (x) {
-  upd('income', x.target.value);
+  upd('income', parseInt(x.target.value));
 };
 }
 function widget$29(env, func) {
@@ -1752,7 +1752,7 @@ function renderQuestion$37(env, upd) {
 }
 function updater$23(upd) {
   return function (x) {
-  upd('assets', x.target.value);
+  upd('assets', parseInt(x.target.value));
 };
 }
 function widget$30(env, func) {
@@ -1957,7 +1957,7 @@ function renderQuestion$50(env, upd) {
 }
 function updater$25(upd) {
   return function (x) {
-  upd('startMonth', x.target.value);
+  upd('startMonth', parseInt(x.target.value));
 };
 }
 function widget$43(env, func) {

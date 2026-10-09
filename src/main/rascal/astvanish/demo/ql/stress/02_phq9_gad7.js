@@ -903,7 +903,7 @@ function renderQuestion$0(env, upd) {
 }
 function updater$1(upd) {
   return function (x) {
-  upd('age', x.target.value);
+  upd('age', parseInt(x.target.value));
 };
 }
 function widget$1(env, func) {
@@ -923,7 +923,7 @@ function renderQuestion$1(env, upd) {
 }
 function updater$2(upd) {
   return function (x) {
-  upd('phq1', x.target.value);
+  upd('phq1', parseInt(x.target.value));
 };
 }
 function widget$2(env, func) {
@@ -943,7 +943,7 @@ function renderQuestion$2(env, upd) {
 }
 function updater$3(upd) {
   return function (x) {
-  upd('phq2', x.target.value);
+  upd('phq2', parseInt(x.target.value));
 };
 }
 function widget$3(env, func) {
@@ -963,7 +963,7 @@ function renderQuestion$3(env, upd) {
 }
 function updater$4(upd) {
   return function (x) {
-  upd('phq3', x.target.value);
+  upd('phq3', parseInt(x.target.value));
 };
 }
 function widget$4(env, func) {
@@ -983,7 +983,7 @@ function renderQuestion$4(env, upd) {
 }
 function updater$5(upd) {
   return function (x) {
-  upd('phq4', x.target.value);
+  upd('phq4', parseInt(x.target.value));
 };
 }
 function widget$5(env, func) {
@@ -1003,7 +1003,7 @@ function renderQuestion$5(env, upd) {
 }
 function updater$6(upd) {
   return function (x) {
-  upd('phq5', x.target.value);
+  upd('phq5', parseInt(x.target.value));
 };
 }
 function widget$6(env, func) {
@@ -1023,7 +1023,7 @@ function renderQuestion$6(env, upd) {
 }
 function updater$7(upd) {
   return function (x) {
-  upd('phq6', x.target.value);
+  upd('phq6', parseInt(x.target.value));
 };
 }
 function widget$7(env, func) {
@@ -1043,7 +1043,7 @@ function renderQuestion$7(env, upd) {
 }
 function updater$8(upd) {
   return function (x) {
-  upd('phq7', x.target.value);
+  upd('phq7', parseInt(x.target.value));
 };
 }
 function widget$8(env, func) {
@@ -1063,7 +1063,7 @@ function renderQuestion$8(env, upd) {
 }
 function updater$9(upd) {
   return function (x) {
-  upd('phq8', x.target.value);
+  upd('phq8', parseInt(x.target.value));
 };
 }
 function widget$9(env, func) {
@@ -1083,7 +1083,7 @@ function renderQuestion$9(env, upd) {
 }
 function updater$10(upd) {
   return function (x) {
-  upd('phq9', x.target.value);
+  upd('phq9', parseInt(x.target.value));
 };
 }
 function widget$10(env, func) {
@@ -1276,7 +1276,7 @@ function renderQuestion$24(env, upd) {
 }
 function updater$13(upd) {
   return function (x) {
-  upd('phqDifficulty', x.target.value);
+  upd('phqDifficulty', parseInt(x.target.value));
 };
 }
 function widget$21(env, func) {
@@ -1302,7 +1302,7 @@ function renderQuestion$27(env, upd) {
 }
 function updater$14(upd) {
   return function (x) {
-  upd('gad1', x.target.value);
+  upd('gad1', parseInt(x.target.value));
 };
 }
 function widget$22(env, func) {
@@ -1322,7 +1322,7 @@ function renderQuestion$28(env, upd) {
 }
 function updater$15(upd) {
   return function (x) {
-  upd('gad2', x.target.value);
+  upd('gad2', parseInt(x.target.value));
 };
 }
 function widget$23(env, func) {
@@ -1342,7 +1342,7 @@ function renderQuestion$29(env, upd) {
 }
 function updater$16(upd) {
   return function (x) {
-  upd('gad3', x.target.value);
+  upd('gad3', parseInt(x.target.value));
 };
 }
 function widget$24(env, func) {
@@ -1362,7 +1362,7 @@ function renderQuestion$30(env, upd) {
 }
 function updater$17(upd) {
   return function (x) {
-  upd('gad4', x.target.value);
+  upd('gad4', parseInt(x.target.value));
 };
 }
 function widget$25(env, func) {
@@ -1382,7 +1382,7 @@ function renderQuestion$31(env, upd) {
 }
 function updater$18(upd) {
   return function (x) {
-  upd('gad5', x.target.value);
+  upd('gad5', parseInt(x.target.value));
 };
 }
 function widget$26(env, func) {
@@ -1402,7 +1402,7 @@ function renderQuestion$32(env, upd) {
 }
 function updater$19(upd) {
   return function (x) {
-  upd('gad6', x.target.value);
+  upd('gad6', parseInt(x.target.value));
 };
 }
 function widget$27(env, func) {
@@ -1422,7 +1422,7 @@ function renderQuestion$33(env, upd) {
 }
 function updater$20(upd) {
   return function (x) {
-  upd('gad7', x.target.value);
+  upd('gad7', parseInt(x.target.value));
 };
 }
 function widget$28(env, func) {

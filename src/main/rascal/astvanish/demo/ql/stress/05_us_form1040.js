@@ -2158,7 +2158,12 @@ function eve$108(env) {
   return env['sCMealsTotal'];
 }
 function eve$109(env) {
-  return Math.round(eve$108(env) / eve$48(env));
+  var x = eve$108(env);
+            var y = eve$48(env);
+            if (y === 0) {
+   window.alert('Division by zero in: sCMealsTotal / 2');
+                return 0;
+}return Math.round(x / y);
 }
 function updateValue$17(val) {
   var elt = document.getElementById('sCL24b-widget'); 
@@ -2532,7 +2537,12 @@ function eve$176(env) {
   return parseInt('10000');
 }
 function eve$177(env) {
-  return Math.round(eve$175(env) / eve$176(env));
+  var x = eve$175(env);
+            var y = eve$176(env);
+            if (y === 0) {
+   window.alert('Division by zero in: sSEL2 * 9235 / 10000');
+                return 0;
+}return Math.round(x / y);
 }
 function updateValue$25(val) {
   var elt = document.getElementById('sSEL4a-widget'); 
@@ -2640,7 +2650,12 @@ function eve$192(env) {
   return parseInt('1000');
 }
 function eve$193(env) {
-  return Math.round(eve$191(env) / eve$192(env));
+  var x = eve$191(env);
+            var y = eve$192(env);
+            if (y === 0) {
+   window.alert('Division by zero in: sSEL4a * 124 / 1000');
+                return 0;
+}return Math.round(x / y);
 }
 function updateValue$30(val) {
   var elt = document.getElementById('sSEL10-widget'); 
@@ -2661,7 +2676,12 @@ function eve$195(env) {
   return eve$187(env) * eve$194(env);
 }
 function eve$196(env) {
-  return Math.round(eve$195(env) / eve$192(env));
+  var x = eve$195(env);
+            var y = eve$192(env);
+            if (y === 0) {
+   window.alert('Division by zero in: sSEL4a * 29 / 1000');
+                return 0;
+}return Math.round(x / y);
 }
 function updateValue$31(val) {
   var elt = document.getElementById('sSEL11-widget'); 
@@ -2700,7 +2720,12 @@ function eve$200(env) {
   return env['sSEL12'];
 }
 function eve$201(env) {
-  return Math.round(eve$200(env) / eve$48(env));
+  var x = eve$200(env);
+            var y = eve$48(env);
+            if (y === 0) {
+   window.alert('Division by zero in: sSEL12 / 2');
+                return 0;
+}return Math.round(x / y);
 }
 function updateValue$33(val) {
   var elt = document.getElementById('sSEL13-widget'); 
@@ -3298,7 +3323,12 @@ function eve$307(env) {
   return eve$305(env) * eve$306(env);
 }
 function eve$308(env) {
-  return Math.round(eve$307(env) / eve$192(env));
+  var x = eve$307(env);
+            var y = eve$192(env);
+            if (y === 0) {
+   window.alert('Division by zero in: f1040L11 * 75 / 1000');
+                return 0;
+}return Math.round(x / y);
 }
 function updateValue$52(val) {
   var elt = document.getElementById('sAL3-widget'); 
@@ -3826,7 +3856,12 @@ function eve$382(env) {
   return eve$381(env);
 }
 function eve$383(env) {
-  return Math.round(eve$382(env) / eve$192(env));
+  var x = eve$382(env);
+            var y = eve$192(env);
+            if (y === 0) {
+   window.alert('Division by zero in: (f1040L11 - s8812Threshold) / 1000');
+                return 0;
+}return Math.round(x / y);
 }
 function eve$384(env) {
   return eve$383(env) * eve$243(env);
@@ -6550,7 +6585,7 @@ function renderQuestion$4(env, upd) {
 }
 function updater$5(upd) {
   return function (x) {
-  upd('age', x.target.value);
+  upd('age', parseInt(x.target.value));
 };
 }
 function widget$5(env, func) {
@@ -6805,7 +6840,7 @@ function renderQuestion$17(env, upd) {
 }
 function updater$17(upd) {
   return function (x) {
-  upd('spouseAge', x.target.value);
+  upd('spouseAge', parseInt(x.target.value));
 };
 }
 function widget$18(env, func) {
@@ -6922,7 +6957,7 @@ function renderQuestion$26(env, upd) {
 }
 function updater$22(upd) {
   return function (x) {
-  upd('nDependents', x.target.value);
+  upd('nDependents', parseInt(x.target.value));
 };
 }
 function widget$23(env, func) {
@@ -7002,7 +7037,7 @@ function renderQuestion$30(env, upd) {
 }
 function updater$26(upd) {
   return function (x) {
-  upd('dep1Age', x.target.value);
+  upd('dep1Age', parseInt(x.target.value));
 };
 }
 function widget$27(env, func) {
@@ -7144,7 +7179,7 @@ function renderQuestion$39(env, upd) {
 }
 function updater$31(upd) {
   return function (x) {
-  upd('dep2Age', x.target.value);
+  upd('dep2Age', parseInt(x.target.value));
 };
 }
 function widget$34(env, func) {
@@ -7286,7 +7321,7 @@ function renderQuestion$48(env, upd) {
 }
 function updater$36(upd) {
   return function (x) {
-  upd('dep3Age', x.target.value);
+  upd('dep3Age', parseInt(x.target.value));
 };
 }
 function widget$41(env, func) {
@@ -7428,7 +7463,7 @@ function renderQuestion$57(env, upd) {
 }
 function updater$41(upd) {
   return function (x) {
-  upd('dep4Age', x.target.value);
+  upd('dep4Age', parseInt(x.target.value));
 };
 }
 function widget$48(env, func) {
@@ -7510,7 +7545,7 @@ function renderQuestion$63(env, upd) {
 }
 function updater$43(upd) {
   return function (x) {
-  upd('nW2', x.target.value);
+  upd('nW2', parseInt(x.target.value));
 };
 }
 function widget$52(env, func) {
@@ -7550,7 +7585,7 @@ function renderQuestion$65(env, upd) {
 }
 function updater$45(upd) {
   return function (x) {
-  upd('w2aWages', x.target.value);
+  upd('w2aWages', parseInt(x.target.value));
 };
 }
 function widget$54(env, func) {
@@ -7570,7 +7605,7 @@ function renderQuestion$66(env, upd) {
 }
 function updater$46(upd) {
   return function (x) {
-  upd('w2aWithheld', x.target.value);
+  upd('w2aWithheld', parseInt(x.target.value));
 };
 }
 function widget$55(env, func) {
@@ -7590,7 +7625,7 @@ function renderQuestion$67(env, upd) {
 }
 function updater$47(upd) {
   return function (x) {
-  upd('w2aTips', x.target.value);
+  upd('w2aTips', parseInt(x.target.value));
 };
 }
 function widget$56(env, func) {
@@ -7610,7 +7645,7 @@ function renderQuestion$68(env, upd) {
 }
 function updater$48(upd) {
   return function (x) {
-  upd('w2aCare', x.target.value);
+  upd('w2aCare', parseInt(x.target.value));
 };
 }
 function widget$57(env, func) {
@@ -7660,7 +7695,7 @@ function renderQuestion$72(env, upd) {
 }
 function updater$50(upd) {
   return function (x) {
-  upd('w2bWages', x.target.value);
+  upd('w2bWages', parseInt(x.target.value));
 };
 }
 function widget$59(env, func) {
@@ -7680,7 +7715,7 @@ function renderQuestion$73(env, upd) {
 }
 function updater$51(upd) {
   return function (x) {
-  upd('w2bWithheld', x.target.value);
+  upd('w2bWithheld', parseInt(x.target.value));
 };
 }
 function widget$60(env, func) {
@@ -7700,7 +7735,7 @@ function renderQuestion$74(env, upd) {
 }
 function updater$52(upd) {
   return function (x) {
-  upd('w2bTips', x.target.value);
+  upd('w2bTips', parseInt(x.target.value));
 };
 }
 function widget$61(env, func) {
@@ -7720,7 +7755,7 @@ function renderQuestion$75(env, upd) {
 }
 function updater$53(upd) {
   return function (x) {
-  upd('w2bCare', x.target.value);
+  upd('w2bCare', parseInt(x.target.value));
 };
 }
 function widget$62(env, func) {
@@ -7770,7 +7805,7 @@ function renderQuestion$79(env, upd) {
 }
 function updater$55(upd) {
   return function (x) {
-  upd('w2cWages', x.target.value);
+  upd('w2cWages', parseInt(x.target.value));
 };
 }
 function widget$64(env, func) {
@@ -7790,7 +7825,7 @@ function renderQuestion$80(env, upd) {
 }
 function updater$56(upd) {
   return function (x) {
-  upd('w2cWithheld', x.target.value);
+  upd('w2cWithheld', parseInt(x.target.value));
 };
 }
 function widget$65(env, func) {
@@ -7810,7 +7845,7 @@ function renderQuestion$81(env, upd) {
 }
 function updater$57(upd) {
   return function (x) {
-  upd('w2cTips', x.target.value);
+  upd('w2cTips', parseInt(x.target.value));
 };
 }
 function widget$66(env, func) {
@@ -7830,7 +7865,7 @@ function renderQuestion$82(env, upd) {
 }
 function updater$58(upd) {
   return function (x) {
-  upd('w2cCare', x.target.value);
+  upd('w2cCare', parseInt(x.target.value));
 };
 }
 function widget$67(env, func) {
@@ -7880,7 +7915,7 @@ function renderQuestion$86(env, upd) {
 }
 function updater$60(upd) {
   return function (x) {
-  upd('sBInt1', x.target.value);
+  upd('sBInt1', parseInt(x.target.value));
 };
 }
 function widget$69(env, func) {
@@ -7920,7 +7955,7 @@ function renderQuestion$88(env, upd) {
 }
 function updater$62(upd) {
   return function (x) {
-  upd('sBInt2', x.target.value);
+  upd('sBInt2', parseInt(x.target.value));
 };
 }
 function widget$71(env, func) {
@@ -7960,7 +7995,7 @@ function renderQuestion$90(env, upd) {
 }
 function updater$64(upd) {
   return function (x) {
-  upd('sBInt3', x.target.value);
+  upd('sBInt3', parseInt(x.target.value));
 };
 }
 function widget$73(env, func) {
@@ -7995,7 +8030,7 @@ function renderQuestion$92(env, upd) {
 }
 function updater$65(upd) {
   return function (x) {
-  upd('sBL3', x.target.value);
+  upd('sBL3', parseInt(x.target.value));
 };
 }
 function widget$75(env, func) {
@@ -8030,7 +8065,7 @@ function renderQuestion$94(env, upd) {
 }
 function updater$66(upd) {
   return function (x) {
-  upd('taxExemptInterest', x.target.value);
+  upd('taxExemptInterest', parseInt(x.target.value));
 };
 }
 function widget$77(env, func) {
@@ -8070,7 +8105,7 @@ function renderQuestion$96(env, upd) {
 }
 function updater$68(upd) {
   return function (x) {
-  upd('sBDiv1', x.target.value);
+  upd('sBDiv1', parseInt(x.target.value));
 };
 }
 function widget$79(env, func) {
@@ -8110,7 +8145,7 @@ function renderQuestion$98(env, upd) {
 }
 function updater$70(upd) {
   return function (x) {
-  upd('sBDiv2', x.target.value);
+  upd('sBDiv2', parseInt(x.target.value));
 };
 }
 function widget$81(env, func) {
@@ -8145,7 +8180,7 @@ function renderQuestion$100(env, upd) {
 }
 function updater$71(upd) {
   return function (x) {
-  upd('qualifiedDividends', x.target.value);
+  upd('qualifiedDividends', parseInt(x.target.value));
 };
 }
 function widget$83(env, func) {
@@ -8436,7 +8471,7 @@ function renderQuestion$120(env, upd) {
 }
 function updater$83(upd) {
   return function (x) {
-  upd('sCL1', x.target.value);
+  upd('sCL1', parseInt(x.target.value));
 };
 }
 function widget$97(env, func) {
@@ -8456,7 +8491,7 @@ function renderQuestion$121(env, upd) {
 }
 function updater$84(upd) {
   return function (x) {
-  upd('sCL2', x.target.value);
+  upd('sCL2', parseInt(x.target.value));
 };
 }
 function widget$98(env, func) {
@@ -8491,7 +8526,7 @@ function renderQuestion$123(env, upd) {
 }
 function updater$85(upd) {
   return function (x) {
-  upd('sCL4', x.target.value);
+  upd('sCL4', parseInt(x.target.value));
 };
 }
 function widget$100(env, func) {
@@ -8526,7 +8561,7 @@ function renderQuestion$125(env, upd) {
 }
 function updater$86(upd) {
   return function (x) {
-  upd('sCL6', x.target.value);
+  upd('sCL6', parseInt(x.target.value));
 };
 }
 function widget$102(env, func) {
@@ -8561,7 +8596,7 @@ function renderQuestion$127(env, upd) {
 }
 function updater$87(upd) {
   return function (x) {
-  upd('sCL8', x.target.value);
+  upd('sCL8', parseInt(x.target.value));
 };
 }
 function widget$104(env, func) {
@@ -8581,7 +8616,7 @@ function renderQuestion$128(env, upd) {
 }
 function updater$88(upd) {
   return function (x) {
-  upd('sCL9', x.target.value);
+  upd('sCL9', parseInt(x.target.value));
 };
 }
 function widget$105(env, func) {
@@ -8601,7 +8636,7 @@ function renderQuestion$129(env, upd) {
 }
 function updater$89(upd) {
   return function (x) {
-  upd('sCL10', x.target.value);
+  upd('sCL10', parseInt(x.target.value));
 };
 }
 function widget$106(env, func) {
@@ -8621,7 +8656,7 @@ function renderQuestion$130(env, upd) {
 }
 function updater$90(upd) {
   return function (x) {
-  upd('sCL11', x.target.value);
+  upd('sCL11', parseInt(x.target.value));
 };
 }
 function widget$107(env, func) {
@@ -8641,7 +8676,7 @@ function renderQuestion$131(env, upd) {
 }
 function updater$91(upd) {
   return function (x) {
-  upd('sCL12', x.target.value);
+  upd('sCL12', parseInt(x.target.value));
 };
 }
 function widget$108(env, func) {
@@ -8661,7 +8696,7 @@ function renderQuestion$132(env, upd) {
 }
 function updater$92(upd) {
   return function (x) {
-  upd('sCL13', x.target.value);
+  upd('sCL13', parseInt(x.target.value));
 };
 }
 function widget$109(env, func) {
@@ -8681,7 +8716,7 @@ function renderQuestion$133(env, upd) {
 }
 function updater$93(upd) {
   return function (x) {
-  upd('sCL14', x.target.value);
+  upd('sCL14', parseInt(x.target.value));
 };
 }
 function widget$110(env, func) {
@@ -8701,7 +8736,7 @@ function renderQuestion$134(env, upd) {
 }
 function updater$94(upd) {
   return function (x) {
-  upd('sCL15', x.target.value);
+  upd('sCL15', parseInt(x.target.value));
 };
 }
 function widget$111(env, func) {
@@ -8721,7 +8756,7 @@ function renderQuestion$135(env, upd) {
 }
 function updater$95(upd) {
   return function (x) {
-  upd('sCL16a', x.target.value);
+  upd('sCL16a', parseInt(x.target.value));
 };
 }
 function widget$112(env, func) {
@@ -8741,7 +8776,7 @@ function renderQuestion$136(env, upd) {
 }
 function updater$96(upd) {
   return function (x) {
-  upd('sCL16b', x.target.value);
+  upd('sCL16b', parseInt(x.target.value));
 };
 }
 function widget$113(env, func) {
@@ -8761,7 +8796,7 @@ function renderQuestion$137(env, upd) {
 }
 function updater$97(upd) {
   return function (x) {
-  upd('sCL17', x.target.value);
+  upd('sCL17', parseInt(x.target.value));
 };
 }
 function widget$114(env, func) {
@@ -8781,7 +8816,7 @@ function renderQuestion$138(env, upd) {
 }
 function updater$98(upd) {
   return function (x) {
-  upd('sCL18', x.target.value);
+  upd('sCL18', parseInt(x.target.value));
 };
 }
 function widget$115(env, func) {
@@ -8801,7 +8836,7 @@ function renderQuestion$139(env, upd) {
 }
 function updater$99(upd) {
   return function (x) {
-  upd('sCL19', x.target.value);
+  upd('sCL19', parseInt(x.target.value));
 };
 }
 function widget$116(env, func) {
@@ -8821,7 +8856,7 @@ function renderQuestion$140(env, upd) {
 }
 function updater$100(upd) {
   return function (x) {
-  upd('sCL20a', x.target.value);
+  upd('sCL20a', parseInt(x.target.value));
 };
 }
 function widget$117(env, func) {
@@ -8841,7 +8876,7 @@ function renderQuestion$141(env, upd) {
 }
 function updater$101(upd) {
   return function (x) {
-  upd('sCL20b', x.target.value);
+  upd('sCL20b', parseInt(x.target.value));
 };
 }
 function widget$118(env, func) {
@@ -8861,7 +8896,7 @@ function renderQuestion$142(env, upd) {
 }
 function updater$102(upd) {
   return function (x) {
-  upd('sCL21', x.target.value);
+  upd('sCL21', parseInt(x.target.value));
 };
 }
 function widget$119(env, func) {
@@ -8881,7 +8916,7 @@ function renderQuestion$143(env, upd) {
 }
 function updater$103(upd) {
   return function (x) {
-  upd('sCL22', x.target.value);
+  upd('sCL22', parseInt(x.target.value));
 };
 }
 function widget$120(env, func) {
@@ -8901,7 +8936,7 @@ function renderQuestion$144(env, upd) {
 }
 function updater$104(upd) {
   return function (x) {
-  upd('sCL23', x.target.value);
+  upd('sCL23', parseInt(x.target.value));
 };
 }
 function widget$121(env, func) {
@@ -8921,7 +8956,7 @@ function renderQuestion$145(env, upd) {
 }
 function updater$105(upd) {
   return function (x) {
-  upd('sCL24a', x.target.value);
+  upd('sCL24a', parseInt(x.target.value));
 };
 }
 function widget$122(env, func) {
@@ -8941,7 +8976,7 @@ function renderQuestion$146(env, upd) {
 }
 function updater$106(upd) {
   return function (x) {
-  upd('sCMealsTotal', x.target.value);
+  upd('sCMealsTotal', parseInt(x.target.value));
 };
 }
 function widget$123(env, func) {
@@ -8976,7 +9011,7 @@ function renderQuestion$148(env, upd) {
 }
 function updater$107(upd) {
   return function (x) {
-  upd('sCL25', x.target.value);
+  upd('sCL25', parseInt(x.target.value));
 };
 }
 function widget$125(env, func) {
@@ -8996,7 +9031,7 @@ function renderQuestion$149(env, upd) {
 }
 function updater$108(upd) {
   return function (x) {
-  upd('sCL26', x.target.value);
+  upd('sCL26', parseInt(x.target.value));
 };
 }
 function widget$126(env, func) {
@@ -9016,7 +9051,7 @@ function renderQuestion$150(env, upd) {
 }
 function updater$109(upd) {
   return function (x) {
-  upd('sCL27a', x.target.value);
+  upd('sCL27a', parseInt(x.target.value));
 };
 }
 function widget$127(env, func) {
@@ -9086,7 +9121,7 @@ function renderQuestion$154(env, upd) {
 }
 function updater$111(upd) {
   return function (x) {
-  upd('sCHomeSqft', x.target.value);
+  upd('sCHomeSqft', parseInt(x.target.value));
 };
 }
 function widget$131(env, func) {
@@ -9413,7 +9448,7 @@ function renderQuestion$178(env, upd) {
 }
 function updater$113(upd) {
   return function (x) {
-  upd('s1L1', x.target.value);
+  upd('s1L1', parseInt(x.target.value));
 };
 }
 function widget$147(env, func) {
@@ -9433,7 +9468,7 @@ function renderQuestion$179(env, upd) {
 }
 function updater$114(upd) {
   return function (x) {
-  upd('s1L2a', x.target.value);
+  upd('s1L2a', parseInt(x.target.value));
 };
 }
 function widget$148(env, func) {
@@ -9468,7 +9503,7 @@ function renderQuestion$181(env, upd) {
 }
 function updater$115(upd) {
   return function (x) {
-  upd('s1L4', x.target.value);
+  upd('s1L4', parseInt(x.target.value));
 };
 }
 function widget$150(env, func) {
@@ -9488,7 +9523,7 @@ function renderQuestion$182(env, upd) {
 }
 function updater$116(upd) {
   return function (x) {
-  upd('s1L5', x.target.value);
+  upd('s1L5', parseInt(x.target.value));
 };
 }
 function widget$151(env, func) {
@@ -9508,7 +9543,7 @@ function renderQuestion$183(env, upd) {
 }
 function updater$117(upd) {
   return function (x) {
-  upd('s1L6', x.target.value);
+  upd('s1L6', parseInt(x.target.value));
 };
 }
 function widget$152(env, func) {
@@ -9528,7 +9563,7 @@ function renderQuestion$184(env, upd) {
 }
 function updater$118(upd) {
   return function (x) {
-  upd('s1L7', x.target.value);
+  upd('s1L7', parseInt(x.target.value));
 };
 }
 function widget$153(env, func) {
@@ -9548,7 +9583,7 @@ function renderQuestion$185(env, upd) {
 }
 function updater$119(upd) {
   return function (x) {
-  upd('s1L8a', x.target.value);
+  upd('s1L8a', parseInt(x.target.value));
 };
 }
 function widget$154(env, func) {
@@ -9568,7 +9603,7 @@ function renderQuestion$186(env, upd) {
 }
 function updater$120(upd) {
   return function (x) {
-  upd('s1L8b', x.target.value);
+  upd('s1L8b', parseInt(x.target.value));
 };
 }
 function widget$155(env, func) {
@@ -9588,7 +9623,7 @@ function renderQuestion$187(env, upd) {
 }
 function updater$121(upd) {
   return function (x) {
-  upd('s1L8c', x.target.value);
+  upd('s1L8c', parseInt(x.target.value));
 };
 }
 function widget$156(env, func) {
@@ -9608,7 +9643,7 @@ function renderQuestion$188(env, upd) {
 }
 function updater$122(upd) {
   return function (x) {
-  upd('s1L8i', x.target.value);
+  upd('s1L8i', parseInt(x.target.value));
 };
 }
 function widget$157(env, func) {
@@ -9628,7 +9663,7 @@ function renderQuestion$189(env, upd) {
 }
 function updater$123(upd) {
   return function (x) {
-  upd('s1L8j', x.target.value);
+  upd('s1L8j', parseInt(x.target.value));
 };
 }
 function widget$158(env, func) {
@@ -9648,7 +9683,7 @@ function renderQuestion$190(env, upd) {
 }
 function updater$124(upd) {
   return function (x) {
-  upd('s1L8z', x.target.value);
+  upd('s1L8z', parseInt(x.target.value));
 };
 }
 function widget$159(env, func) {
@@ -9724,7 +9759,7 @@ function renderQuestion$196(env, upd) {
 }
 function updater$126(upd) {
   return function (x) {
-  upd('s1L11', x.target.value);
+  upd('s1L11', parseInt(x.target.value));
 };
 }
 function widget$163(env, func) {
@@ -9759,7 +9794,7 @@ function renderQuestion$198(env, upd) {
 }
 function updater$127(upd) {
   return function (x) {
-  upd('s1L13', x.target.value);
+  upd('s1L13', parseInt(x.target.value));
 };
 }
 function widget$165(env, func) {
@@ -9779,7 +9814,7 @@ function renderQuestion$199(env, upd) {
 }
 function updater$128(upd) {
   return function (x) {
-  upd('s1L14', x.target.value);
+  upd('s1L14', parseInt(x.target.value));
 };
 }
 function widget$166(env, func) {
@@ -9814,7 +9849,7 @@ function renderQuestion$201(env, upd) {
 }
 function updater$129(upd) {
   return function (x) {
-  upd('s1L16', x.target.value);
+  upd('s1L16', parseInt(x.target.value));
 };
 }
 function widget$168(env, func) {
@@ -9834,7 +9869,7 @@ function renderQuestion$202(env, upd) {
 }
 function updater$130(upd) {
   return function (x) {
-  upd('s1L17', x.target.value);
+  upd('s1L17', parseInt(x.target.value));
 };
 }
 function widget$169(env, func) {
@@ -9854,7 +9889,7 @@ function renderQuestion$203(env, upd) {
 }
 function updater$131(upd) {
   return function (x) {
-  upd('s1L18', x.target.value);
+  upd('s1L18', parseInt(x.target.value));
 };
 }
 function widget$170(env, func) {
@@ -9874,7 +9909,7 @@ function renderQuestion$204(env, upd) {
 }
 function updater$132(upd) {
   return function (x) {
-  upd('s1L19a', x.target.value);
+  upd('s1L19a', parseInt(x.target.value));
 };
 }
 function widget$171(env, func) {
@@ -9920,7 +9955,7 @@ function renderQuestion$208(env, upd) {
 }
 function updater$134(upd) {
   return function (x) {
-  upd('s1L20', x.target.value);
+  upd('s1L20', parseInt(x.target.value));
 };
 }
 function widget$173(env, func) {
@@ -9955,7 +9990,7 @@ function renderQuestion$210(env, upd) {
 }
 function updater$135(upd) {
   return function (x) {
-  upd('s1L21', x.target.value);
+  upd('s1L21', parseInt(x.target.value));
 };
 }
 function widget$175(env, func) {
@@ -10020,7 +10055,7 @@ function renderQuestion$214(env, upd) {
 }
 function updater$136(upd) {
   return function (x) {
-  upd('f1040L1b', x.target.value);
+  upd('f1040L1b', parseInt(x.target.value));
 };
 }
 function widget$179(env, func) {
@@ -10040,7 +10075,7 @@ function renderQuestion$215(env, upd) {
 }
 function updater$137(upd) {
   return function (x) {
-  upd('f1040L1c', x.target.value);
+  upd('f1040L1c', parseInt(x.target.value));
 };
 }
 function widget$180(env, func) {
@@ -10060,7 +10095,7 @@ function renderQuestion$216(env, upd) {
 }
 function updater$138(upd) {
   return function (x) {
-  upd('f1040L1e', x.target.value);
+  upd('f1040L1e', parseInt(x.target.value));
 };
 }
 function widget$181(env, func) {
@@ -10080,7 +10115,7 @@ function renderQuestion$217(env, upd) {
 }
 function updater$139(upd) {
   return function (x) {
-  upd('f1040L1f', x.target.value);
+  upd('f1040L1f', parseInt(x.target.value));
 };
 }
 function widget$182(env, func) {
@@ -10100,7 +10135,7 @@ function renderQuestion$218(env, upd) {
 }
 function updater$140(upd) {
   return function (x) {
-  upd('f1040L1g', x.target.value);
+  upd('f1040L1g', parseInt(x.target.value));
 };
 }
 function widget$183(env, func) {
@@ -10120,7 +10155,7 @@ function renderQuestion$219(env, upd) {
 }
 function updater$141(upd) {
   return function (x) {
-  upd('f1040L1h', x.target.value);
+  upd('f1040L1h', parseInt(x.target.value));
 };
 }
 function widget$184(env, func) {
@@ -10215,7 +10250,7 @@ function renderQuestion$225(env, upd) {
 }
 function updater$142(upd) {
   return function (x) {
-  upd('f1040L4a', x.target.value);
+  upd('f1040L4a', parseInt(x.target.value));
 };
 }
 function widget$190(env, func) {
@@ -10235,7 +10270,7 @@ function renderQuestion$226(env, upd) {
 }
 function updater$143(upd) {
   return function (x) {
-  upd('f1040L4b', x.target.value);
+  upd('f1040L4b', parseInt(x.target.value));
 };
 }
 function widget$191(env, func) {
@@ -10255,7 +10290,7 @@ function renderQuestion$227(env, upd) {
 }
 function updater$144(upd) {
   return function (x) {
-  upd('f1040L5a', x.target.value);
+  upd('f1040L5a', parseInt(x.target.value));
 };
 }
 function widget$192(env, func) {
@@ -10275,7 +10310,7 @@ function renderQuestion$228(env, upd) {
 }
 function updater$145(upd) {
   return function (x) {
-  upd('f1040L5b', x.target.value);
+  upd('f1040L5b', parseInt(x.target.value));
 };
 }
 function widget$193(env, func) {
@@ -10295,7 +10330,7 @@ function renderQuestion$229(env, upd) {
 }
 function updater$146(upd) {
   return function (x) {
-  upd('f1040L6a', x.target.value);
+  upd('f1040L6a', parseInt(x.target.value));
 };
 }
 function widget$194(env, func) {
@@ -10315,7 +10350,7 @@ function renderQuestion$230(env, upd) {
 }
 function updater$147(upd) {
   return function (x) {
-  upd('f1040L6b', x.target.value);
+  upd('f1040L6b', parseInt(x.target.value));
 };
 }
 function widget$195(env, func) {
@@ -10361,7 +10396,7 @@ function renderQuestion$234(env, upd) {
 }
 function updater$149(upd) {
   return function (x) {
-  upd('f1040L7', x.target.value);
+  upd('f1040L7', parseInt(x.target.value));
 };
 }
 function widget$197(env, func) {
@@ -10481,7 +10516,7 @@ function renderQuestion$241(env, upd) {
 }
 function updater$152(upd) {
   return function (x) {
-  upd('sAL1', x.target.value);
+  upd('sAL1', parseInt(x.target.value));
 };
 }
 function widget$204(env, func) {
@@ -10546,7 +10581,7 @@ function renderQuestion$245(env, upd) {
 }
 function updater$153(upd) {
   return function (x) {
-  upd('sAL5a', x.target.value);
+  upd('sAL5a', parseInt(x.target.value));
 };
 }
 function widget$208(env, func) {
@@ -10566,7 +10601,7 @@ function renderQuestion$246(env, upd) {
 }
 function updater$154(upd) {
   return function (x) {
-  upd('sAL5b', x.target.value);
+  upd('sAL5b', parseInt(x.target.value));
 };
 }
 function widget$209(env, func) {
@@ -10586,7 +10621,7 @@ function renderQuestion$247(env, upd) {
 }
 function updater$155(upd) {
   return function (x) {
-  upd('sAL5c', x.target.value);
+  upd('sAL5c', parseInt(x.target.value));
 };
 }
 function widget$210(env, func) {
@@ -10636,7 +10671,7 @@ function renderQuestion$250(env, upd) {
 }
 function updater$156(upd) {
   return function (x) {
-  upd('sAL8a', x.target.value);
+  upd('sAL8a', parseInt(x.target.value));
 };
 }
 function widget$213(env, func) {
@@ -10656,7 +10691,7 @@ function renderQuestion$251(env, upd) {
 }
 function updater$157(upd) {
   return function (x) {
-  upd('sAL8c', x.target.value);
+  upd('sAL8c', parseInt(x.target.value));
 };
 }
 function widget$214(env, func) {
@@ -10691,7 +10726,7 @@ function renderQuestion$253(env, upd) {
 }
 function updater$158(upd) {
   return function (x) {
-  upd('sAL11', x.target.value);
+  upd('sAL11', parseInt(x.target.value));
 };
 }
 function widget$216(env, func) {
@@ -10711,7 +10746,7 @@ function renderQuestion$254(env, upd) {
 }
 function updater$159(upd) {
   return function (x) {
-  upd('sAL12', x.target.value);
+  upd('sAL12', parseInt(x.target.value));
 };
 }
 function widget$217(env, func) {
@@ -10757,7 +10792,7 @@ function renderQuestion$258(env, upd) {
 }
 function updater$161(upd) {
   return function (x) {
-  upd('sAL13', x.target.value);
+  upd('sAL13', parseInt(x.target.value));
 };
 }
 function widget$219(env, func) {
@@ -10792,7 +10827,7 @@ function renderQuestion$260(env, upd) {
 }
 function updater$162(upd) {
   return function (x) {
-  upd('sAL15', x.target.value);
+  upd('sAL15', parseInt(x.target.value));
 };
 }
 function widget$221(env, func) {
@@ -10812,7 +10847,7 @@ function renderQuestion$261(env, upd) {
 }
 function updater$163(upd) {
   return function (x) {
-  upd('sAL16', x.target.value);
+  upd('sAL16', parseInt(x.target.value));
 };
 }
 function widget$222(env, func) {
@@ -10932,7 +10967,7 @@ function renderQuestion$269(env, upd) {
 }
 function updater$164(upd) {
   return function (x) {
-  upd('f1040L12', x.target.value);
+  upd('f1040L12', parseInt(x.target.value));
 };
 }
 function widget$228(env, func) {
@@ -10952,7 +10987,7 @@ function renderQuestion$270(env, upd) {
 }
 function updater$165(upd) {
   return function (x) {
-  upd('f1040L13', x.target.value);
+  upd('f1040L13', parseInt(x.target.value));
 };
 }
 function widget$229(env, func) {
@@ -11017,7 +11052,7 @@ function renderQuestion$274(env, upd) {
 }
 function updater$166(upd) {
   return function (x) {
-  upd('f1040L16', x.target.value);
+  upd('f1040L16', parseInt(x.target.value));
 };
 }
 function widget$233(env, func) {
@@ -11077,7 +11112,7 @@ function renderQuestion$277(env, upd) {
 }
 function updater$169(upd) {
   return function (x) {
-  upd('s2L1a', x.target.value);
+  upd('s2L1a', parseInt(x.target.value));
 };
 }
 function widget$236(env, func) {
@@ -11097,7 +11132,7 @@ function renderQuestion$278(env, upd) {
 }
 function updater$170(upd) {
   return function (x) {
-  upd('s2L2', x.target.value);
+  upd('s2L2', parseInt(x.target.value));
 };
 }
 function widget$237(env, func) {
@@ -11162,7 +11197,7 @@ function renderQuestion$282(env, upd) {
 }
 function updater$171(upd) {
   return function (x) {
-  upd('s8812Children', x.target.value);
+  upd('s8812Children', parseInt(x.target.value));
 };
 }
 function widget$241(env, func) {
@@ -11182,7 +11217,7 @@ function renderQuestion$283(env, upd) {
 }
 function updater$172(upd) {
   return function (x) {
-  upd('s8812Others', x.target.value);
+  upd('s8812Others', parseInt(x.target.value));
 };
 }
 function widget$242(env, func) {
@@ -11247,7 +11282,7 @@ function renderQuestion$287(env, upd) {
 }
 function updater$173(upd) {
   return function (x) {
-  upd('s8812Threshold', x.target.value);
+  upd('s8812Threshold', parseInt(x.target.value));
 };
 }
 function widget$246(env, func) {
@@ -11297,7 +11332,7 @@ function renderQuestion$290(env, upd) {
 }
 function updater$174(upd) {
   return function (x) {
-  upd('f1040L19', x.target.value);
+  upd('f1040L19', parseInt(x.target.value));
 };
 }
 function widget$249(env, func) {
@@ -11317,7 +11352,7 @@ function renderQuestion$291(env, upd) {
 }
 function updater$175(upd) {
   return function (x) {
-  upd('s3L1', x.target.value);
+  upd('s3L1', parseInt(x.target.value));
 };
 }
 function widget$250(env, func) {
@@ -11337,7 +11372,7 @@ function renderQuestion$292(env, upd) {
 }
 function updater$176(upd) {
   return function (x) {
-  upd('s3L2', x.target.value);
+  upd('s3L2', parseInt(x.target.value));
 };
 }
 function widget$251(env, func) {
@@ -11397,7 +11432,7 @@ function renderQuestion$295(env, upd) {
 }
 function updater$179(upd) {
   return function (x) {
-  upd('s3CareExpenses', x.target.value);
+  upd('s3CareExpenses', parseInt(x.target.value));
 };
 }
 function widget$254(env, func) {
@@ -11441,7 +11476,7 @@ function renderQuestion$299(env, upd) {
 }
 function updater$180(upd) {
   return function (x) {
-  upd('s3L3', x.target.value);
+  upd('s3L3', parseInt(x.target.value));
 };
 }
 function widget$256(env, func) {
@@ -11461,7 +11496,7 @@ function renderQuestion$300(env, upd) {
 }
 function updater$181(upd) {
   return function (x) {
-  upd('s3L4', x.target.value);
+  upd('s3L4', parseInt(x.target.value));
 };
 }
 function widget$257(env, func) {
@@ -11481,7 +11516,7 @@ function renderQuestion$301(env, upd) {
 }
 function updater$182(upd) {
   return function (x) {
-  upd('s3L5a', x.target.value);
+  upd('s3L5a', parseInt(x.target.value));
 };
 }
 function widget$258(env, func) {
@@ -11501,7 +11536,7 @@ function renderQuestion$302(env, upd) {
 }
 function updater$183(upd) {
   return function (x) {
-  upd('s3L5b', x.target.value);
+  upd('s3L5b', parseInt(x.target.value));
 };
 }
 function widget$259(env, func) {
@@ -11521,7 +11556,7 @@ function renderQuestion$303(env, upd) {
 }
 function updater$184(upd) {
   return function (x) {
-  upd('s3L6f', x.target.value);
+  upd('s3L6f', parseInt(x.target.value));
 };
 }
 function widget$260(env, func) {
@@ -11631,7 +11666,7 @@ function renderQuestion$310(env, upd) {
 }
 function updater$185(upd) {
   return function (x) {
-  upd('s2L8', x.target.value);
+  upd('s2L8', parseInt(x.target.value));
 };
 }
 function widget$267(env, func) {
@@ -11651,7 +11686,7 @@ function renderQuestion$311(env, upd) {
 }
 function updater$186(upd) {
   return function (x) {
-  upd('s2L9', x.target.value);
+  upd('s2L9', parseInt(x.target.value));
 };
 }
 function widget$268(env, func) {
@@ -11671,7 +11706,7 @@ function renderQuestion$312(env, upd) {
 }
 function updater$187(upd) {
   return function (x) {
-  upd('s2L11', x.target.value);
+  upd('s2L11', parseInt(x.target.value));
 };
 }
 function widget$269(env, func) {
@@ -11691,7 +11726,7 @@ function renderQuestion$313(env, upd) {
 }
 function updater$188(upd) {
   return function (x) {
-  upd('s2L12', x.target.value);
+  upd('s2L12', parseInt(x.target.value));
 };
 }
 function widget$270(env, func) {
@@ -11771,7 +11806,7 @@ function renderQuestion$318(env, upd) {
 }
 function updater$189(upd) {
   return function (x) {
-  upd('f1040L25b', x.target.value);
+  upd('f1040L25b', parseInt(x.target.value));
 };
 }
 function widget$275(env, func) {
@@ -11791,7 +11826,7 @@ function renderQuestion$319(env, upd) {
 }
 function updater$190(upd) {
   return function (x) {
-  upd('f1040L25c', x.target.value);
+  upd('f1040L25c', parseInt(x.target.value));
 };
 }
 function widget$276(env, func) {
@@ -11826,7 +11861,7 @@ function renderQuestion$321(env, upd) {
 }
 function updater$191(upd) {
   return function (x) {
-  upd('f1040L26', x.target.value);
+  upd('f1040L26', parseInt(x.target.value));
 };
 }
 function widget$278(env, func) {
@@ -11846,7 +11881,7 @@ function renderQuestion$322(env, upd) {
 }
 function updater$192(upd) {
   return function (x) {
-  upd('f1040L27', x.target.value);
+  upd('f1040L27', parseInt(x.target.value));
 };
 }
 function widget$279(env, func) {
@@ -11892,7 +11927,7 @@ function renderQuestion$326(env, upd) {
 }
 function updater$194(upd) {
   return function (x) {
-  upd('f1040L28', x.target.value);
+  upd('f1040L28', parseInt(x.target.value));
 };
 }
 function widget$281(env, func) {
@@ -11912,7 +11947,7 @@ function renderQuestion$327(env, upd) {
 }
 function updater$195(upd) {
   return function (x) {
-  upd('f1040L29', x.target.value);
+  upd('f1040L29', parseInt(x.target.value));
 };
 }
 function widget$282(env, func) {
@@ -11932,7 +11967,7 @@ function renderQuestion$328(env, upd) {
 }
 function updater$196(upd) {
   return function (x) {
-  upd('s3L9', x.target.value);
+  upd('s3L9', parseInt(x.target.value));
 };
 }
 function widget$283(env, func) {
@@ -11952,7 +11987,7 @@ function renderQuestion$329(env, upd) {
 }
 function updater$197(upd) {
   return function (x) {
-  upd('s3L10', x.target.value);
+  upd('s3L10', parseInt(x.target.value));
 };
 }
 function widget$284(env, func) {
@@ -11972,7 +12007,7 @@ function renderQuestion$330(env, upd) {
 }
 function updater$198(upd) {
   return function (x) {
-  upd('s3L11', x.target.value);
+  upd('s3L11', parseInt(x.target.value));
 };
 }
 function widget$285(env, func) {
@@ -12082,7 +12117,7 @@ function renderQuestion$337(env, upd) {
 }
 function updater$199(upd) {
   return function (x) {
-  upd('f1040L36', x.target.value);
+  upd('f1040L36', parseInt(x.target.value));
 };
 }
 function widget$292(env, func) {
@@ -12227,7 +12262,7 @@ function renderQuestion$347(env, upd) {
 }
 function updater$204(upd) {
   return function (x) {
-  upd('f1040L38', x.target.value);
+  upd('f1040L38', parseInt(x.target.value));
 };
 }
 function widget$299(env, func) {
