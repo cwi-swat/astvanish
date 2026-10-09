@@ -1,0 +1,926 @@
+{
+  "_tag": "form",
+  "_src": {"offset": 332, "length": 3305},
+  "title": "\"PHQ-9 and GAD-7 screening\"",
+  "questions": [
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 369, "length": 43},
+      "prompt": "\"Patient identifier:\"",
+      "name": "patientId",
+      "type": {
+        "_tag": "string",
+        "_src": {"offset": 406, "length": 6}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 415, "length": 31},
+      "prompt": "\"Age (years):\"",
+      "name": "age",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 439, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 525, "length": 77},
+      "prompt": "\"PHQ 1. Little interest or pleasure in doing things (0-3):\"",
+      "name": "phq1",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 595, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 605, "length": 70},
+      "prompt": "\"PHQ 2. Feeling down, depressed, or hopeless (0-3):\"",
+      "name": "phq2",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 668, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 678, "length": 89},
+      "prompt": "\"PHQ 3. Trouble falling or staying asleep, or sleeping too much (0-3):\"",
+      "name": "phq3",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 760, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 770, "length": 71},
+      "prompt": "\"PHQ 4. Feeling tired or having little energy (0-3):\"",
+      "name": "phq4",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 834, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 844, "length": 61},
+      "prompt": "\"PHQ 5. Poor appetite or overeating (0-3):\"",
+      "name": "phq5",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 898, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 908, "length": 87},
+      "prompt": "\"PHQ 6. Feeling bad about yourself, or that you are a failure (0-3):\"",
+      "name": "phq6",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 988, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 998, "length": 65},
+      "prompt": "\"PHQ 7. Trouble concentrating on things (0-3):\"",
+      "name": "phq7",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1056, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1066, "length": 89},
+      "prompt": "\"PHQ 8. Moving or speaking slowly, or being fidgety or restless (0-3):\"",
+      "name": "phq8",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1148, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1158, "length": 99},
+      "prompt": "\"PHQ 9. Thoughts that you would be better off dead or of hurting yourself (0-3):\"",
+      "name": "phq9",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1250, "length": 7}
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 1261, "length": 62},
+      "prompt": "\"PHQ-2 pre-screen score:\"",
+      "name": "phq2Score",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1302, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 1312, "length": 11},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 1312, "length": 4},
+          "name": "phq1"
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 1319, "length": 4},
+          "name": "phq2"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 1326, "length": 78},
+      "prompt": "\"PHQ-2 positive (score 3 or more):\"",
+      "name": "phq2Positive",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1380, "length": 7}
+      },
+      "expr": {
+        "_tag": "geq",
+        "_src": {"offset": 1390, "length": 14},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 1390, "length": 9},
+          "name": "phq2Score"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 1403, "length": 1},
+          "theInt": "3"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 1407, "length": 105},
+      "prompt": "\"PHQ-9 total score:\"",
+      "name": "phqTotal",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1442, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 1452, "length": 60},
+        "lhs": {
+          "_tag": "add",
+          "_src": {"offset": 1452, "length": 53},
+          "lhs": {
+            "_tag": "add",
+            "_src": {"offset": 1452, "length": 46},
+            "lhs": {
+              "_tag": "add",
+              "_src": {"offset": 1452, "length": 39},
+              "lhs": {
+                "_tag": "add",
+                "_src": {"offset": 1452, "length": 32},
+                "lhs": {
+                  "_tag": "add",
+                  "_src": {"offset": 1452, "length": 25},
+                  "lhs": {
+                    "_tag": "add",
+                    "_src": {"offset": 1452, "length": 18},
+                    "lhs": {
+                      "_tag": "add",
+                      "_src": {"offset": 1452, "length": 11},
+                      "lhs": {
+                        "_tag": "var",
+                        "_src": {"offset": 1452, "length": 4},
+                        "name": "phq1"
+                      },
+                      "rhs": {
+                        "_tag": "var",
+                        "_src": {"offset": 1459, "length": 4},
+                        "name": "phq2"
+                      }
+                    },
+                    "rhs": {
+                      "_tag": "var",
+                      "_src": {"offset": 1466, "length": 4},
+                      "name": "phq3"
+                    }
+                  },
+                  "rhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 1473, "length": 4},
+                    "name": "phq4"
+                  }
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 1480, "length": 4},
+                  "name": "phq5"
+                }
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 1487, "length": 4},
+                "name": "phq6"
+              }
+            },
+            "rhs": {
+              "_tag": "var",
+              "_src": {"offset": 1494, "length": 4},
+              "name": "phq7"
+            }
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 1501, "length": 4},
+            "name": "phq8"
+          }
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 1508, "length": 4},
+          "name": "phq9"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 1516, "length": 67},
+      "prompt": "\"Minimal depression (0-4):\"",
+      "name": "phqMinimal",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1560, "length": 7}
+      },
+      "expr": {
+        "_tag": "leq",
+        "_src": {"offset": 1570, "length": 13},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 1570, "length": 8},
+          "name": "phqTotal"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 1582, "length": 1},
+          "theInt": "4"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 1586, "length": 78},
+      "prompt": "\"Mild depression (5-9):\"",
+      "name": "phqMild",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1624, "length": 7}
+      },
+      "expr": {
+        "_tag": "and",
+        "_src": {"offset": 1634, "length": 30},
+        "lhs": {
+          "_tag": "geq",
+          "_src": {"offset": 1634, "length": 13},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 1634, "length": 8},
+            "name": "phqTotal"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 1646, "length": 1},
+            "theInt": "5"
+          }
+        },
+        "rhs": {
+          "_tag": "leq",
+          "_src": {"offset": 1651, "length": 13},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 1651, "length": 8},
+            "name": "phqTotal"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 1663, "length": 1},
+            "theInt": "9"
+          }
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 1667, "length": 90},
+      "prompt": "\"Moderate depression (10-14):\"",
+      "name": "phqModerate",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1715, "length": 7}
+      },
+      "expr": {
+        "_tag": "and",
+        "_src": {"offset": 1725, "length": 32},
+        "lhs": {
+          "_tag": "geq",
+          "_src": {"offset": 1725, "length": 14},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 1725, "length": 8},
+            "name": "phqTotal"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 1737, "length": 2},
+            "theInt": "10"
+          }
+        },
+        "rhs": {
+          "_tag": "leq",
+          "_src": {"offset": 1743, "length": 14},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 1743, "length": 8},
+            "name": "phqTotal"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 1755, "length": 2},
+            "theInt": "14"
+          }
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 1760, "length": 100},
+      "prompt": "\"Moderately severe depression (15-19):\"",
+      "name": "phqModSevere",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1818, "length": 7}
+      },
+      "expr": {
+        "_tag": "and",
+        "_src": {"offset": 1828, "length": 32},
+        "lhs": {
+          "_tag": "geq",
+          "_src": {"offset": 1828, "length": 14},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 1828, "length": 8},
+            "name": "phqTotal"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 1840, "length": 2},
+            "theInt": "15"
+          }
+        },
+        "rhs": {
+          "_tag": "leq",
+          "_src": {"offset": 1846, "length": 14},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 1846, "length": 8},
+            "name": "phqTotal"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 1858, "length": 2},
+            "theInt": "19"
+          }
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 1863, "length": 68},
+      "prompt": "\"Severe depression (20-27):\"",
+      "name": "phqSevere",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1907, "length": 7}
+      },
+      "expr": {
+        "_tag": "geq",
+        "_src": {"offset": 1917, "length": 14},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 1917, "length": 8},
+          "name": "phqTotal"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 1929, "length": 2},
+          "theInt": "20"
+        }
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 1935, "length": 232},
+      "cond": {
+        "_tag": "gt",
+        "_src": {"offset": 1939, "length": 8},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 1939, "length": 4},
+          "name": "phq9"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 1946, "length": 1},
+          "theInt": "0"
+        }
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 1949, "length": 214},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 1955, "length": 86},
+            "prompt": "\"Item 9 is positive: safety assessment completed today?\"",
+            "name": "safetyAssessed",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 2034, "length": 7}
+            }
+          },
+          {
+            "_tag": "ifThen",
+            "_src": {"offset": 2046, "length": 116},
+            "cond": {
+              "_tag": "not",
+              "_src": {"offset": 2050, "length": 15},
+              "arg": {
+                "_tag": "var",
+                "_src": {"offset": 2051, "length": 14},
+                "name": "safetyAssessed"
+              }
+            },
+            "then": {
+              "_tag": "block",
+              "_src": {"offset": 2067, "length": 92},
+              "questions": [
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 2075, "length": 78},
+                  "prompt": "\"Reason the safety assessment was not completed:\"",
+                  "name": "safetyReason",
+                  "type": {
+                    "_tag": "string",
+                    "_src": {"offset": 2147, "length": 6}
+                  }
+                }
+              ]
+            },
+            "empty": ""
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 2167, "length": 257},
+      "cond": {
+        "_tag": "gt",
+        "_src": {"offset": 2171, "length": 12},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 2171, "length": 8},
+          "name": "phqTotal"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 2182, "length": 1},
+          "theInt": "0"
+        }
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 2185, "length": 160},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 2191, "length": 150},
+            "prompt": "\"PHQ 10. How difficult have these problems made it to work, take care of things at home, or get along with others (0-3)?\"",
+            "name": "phqDifficulty",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 2334, "length": 7}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 2424, "length": 70},
+      "prompt": "\"GAD 1. Feeling nervous, anxious, or on edge (0-3):\"",
+      "name": "gad1",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 2487, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 2497, "length": 76},
+      "prompt": "\"GAD 2. Not being able to stop or control worrying (0-3):\"",
+      "name": "gad2",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 2566, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 2576, "length": 74},
+      "prompt": "\"GAD 3. Worrying too much about different things (0-3):\"",
+      "name": "gad3",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 2643, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 2653, "length": 50},
+      "prompt": "\"GAD 4. Trouble relaxing (0-3):\"",
+      "name": "gad4",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 2696, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 2706, "length": 80},
+      "prompt": "\"GAD 5. Being so restless that it is hard to sit still (0-3):\"",
+      "name": "gad5",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 2779, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 2789, "length": 70},
+      "prompt": "\"GAD 6. Becoming easily annoyed or irritable (0-3):\"",
+      "name": "gad6",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 2852, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 2862, "length": 83},
+      "prompt": "\"GAD 7. Feeling afraid as if something awful might happen (0-3):\"",
+      "name": "gad7",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 2938, "length": 7}
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 2949, "length": 91},
+      "prompt": "\"GAD-7 total score:\"",
+      "name": "gadTotal",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 2984, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 2994, "length": 46},
+        "lhs": {
+          "_tag": "add",
+          "_src": {"offset": 2994, "length": 39},
+          "lhs": {
+            "_tag": "add",
+            "_src": {"offset": 2994, "length": 32},
+            "lhs": {
+              "_tag": "add",
+              "_src": {"offset": 2994, "length": 25},
+              "lhs": {
+                "_tag": "add",
+                "_src": {"offset": 2994, "length": 18},
+                "lhs": {
+                  "_tag": "add",
+                  "_src": {"offset": 2994, "length": 11},
+                  "lhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 2994, "length": 4},
+                    "name": "gad1"
+                  },
+                  "rhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 3001, "length": 4},
+                    "name": "gad2"
+                  }
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 3008, "length": 4},
+                  "name": "gad3"
+                }
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 3015, "length": 4},
+                "name": "gad4"
+              }
+            },
+            "rhs": {
+              "_tag": "var",
+              "_src": {"offset": 3022, "length": 4},
+              "name": "gad5"
+            }
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 3029, "length": 4},
+            "name": "gad6"
+          }
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 3036, "length": 4},
+          "name": "gad7"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 3043, "length": 64},
+      "prompt": "\"Minimal anxiety (0-4):\"",
+      "name": "gadMinimal",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 3084, "length": 7}
+      },
+      "expr": {
+        "_tag": "leq",
+        "_src": {"offset": 3094, "length": 13},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 3094, "length": 8},
+          "name": "gadTotal"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 3106, "length": 1},
+          "theInt": "4"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 3110, "length": 75},
+      "prompt": "\"Mild anxiety (5-9):\"",
+      "name": "gadMild",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 3145, "length": 7}
+      },
+      "expr": {
+        "_tag": "and",
+        "_src": {"offset": 3155, "length": 30},
+        "lhs": {
+          "_tag": "geq",
+          "_src": {"offset": 3155, "length": 13},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 3155, "length": 8},
+            "name": "gadTotal"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 3167, "length": 1},
+            "theInt": "5"
+          }
+        },
+        "rhs": {
+          "_tag": "leq",
+          "_src": {"offset": 3172, "length": 13},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 3172, "length": 8},
+            "name": "gadTotal"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 3184, "length": 1},
+            "theInt": "9"
+          }
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 3188, "length": 87},
+      "prompt": "\"Moderate anxiety (10-14):\"",
+      "name": "gadModerate",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 3233, "length": 7}
+      },
+      "expr": {
+        "_tag": "and",
+        "_src": {"offset": 3243, "length": 32},
+        "lhs": {
+          "_tag": "geq",
+          "_src": {"offset": 3243, "length": 14},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 3243, "length": 8},
+            "name": "gadTotal"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 3255, "length": 2},
+            "theInt": "10"
+          }
+        },
+        "rhs": {
+          "_tag": "leq",
+          "_src": {"offset": 3261, "length": 14},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 3261, "length": 8},
+            "name": "gadTotal"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 3273, "length": 2},
+            "theInt": "14"
+          }
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 3278, "length": 65},
+      "prompt": "\"Severe anxiety (15-21):\"",
+      "name": "gadSevere",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 3319, "length": 7}
+      },
+      "expr": {
+        "_tag": "geq",
+        "_src": {"offset": 3329, "length": 14},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 3329, "length": 8},
+          "name": "gadTotal"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 3341, "length": 2},
+          "theInt": "15"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 3347, "length": 100},
+      "prompt": "\"Refer to mental health services:\"",
+      "name": "refer",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 3393, "length": 7}
+      },
+      "expr": {
+        "_tag": "or",
+        "_src": {"offset": 3403, "length": 44},
+        "lhs": {
+          "_tag": "or",
+          "_src": {"offset": 3403, "length": 32},
+          "lhs": {
+            "_tag": "geq",
+            "_src": {"offset": 3403, "length": 14},
+            "lhs": {
+              "_tag": "var",
+              "_src": {"offset": 3403, "length": 8},
+              "name": "phqTotal"
+            },
+            "rhs": {
+              "_tag": "integer",
+              "_src": {"offset": 3415, "length": 2},
+              "theInt": "10"
+            }
+          },
+          "rhs": {
+            "_tag": "geq",
+            "_src": {"offset": 3421, "length": 14},
+            "lhs": {
+              "_tag": "var",
+              "_src": {"offset": 3421, "length": 8},
+              "name": "gadTotal"
+            },
+            "rhs": {
+              "_tag": "integer",
+              "_src": {"offset": 3433, "length": 2},
+              "theInt": "10"
+            }
+          }
+        },
+        "rhs": {
+          "_tag": "gt",
+          "_src": {"offset": 3439, "length": 8},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 3439, "length": 4},
+            "name": "phq9"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 3446, "length": 1},
+            "theInt": "0"
+          }
+        }
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 3450, "length": 149},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 3454, "length": 5},
+        "name": "refer"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 3461, "length": 135},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 3467, "length": 48},
+            "prompt": "\"Referral destination:\"",
+            "name": "referralTo",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 3509, "length": 6}
+            }
+          },
+          {
+            "_tag": "computed",
+            "_src": {"offset": 3520, "length": 72},
+            "prompt": "\"Referral urgent:\"",
+            "name": "referralUrgent",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 3561, "length": 7}
+            },
+            "expr": {
+              "_tag": "or",
+              "_src": {"offset": 3571, "length": 21},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 3571, "length": 9},
+                "name": "phqSevere"
+              },
+              "rhs": {
+                "_tag": "gt",
+                "_src": {"offset": 3584, "length": 8},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 3584, "length": 4},
+                  "name": "phq9"
+                },
+                "rhs": {
+                  "_tag": "integer",
+                  "_src": {"offset": 3591, "length": 1},
+                  "theInt": "1"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 3599, "length": 36},
+      "prompt": "\"Clinician notes:\"",
+      "name": "notes",
+      "type": {
+        "_tag": "string",
+        "_src": {"offset": 3629, "length": 6}
+      }
+    }
+  ]
+}

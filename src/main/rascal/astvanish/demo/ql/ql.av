@@ -25,9 +25,9 @@ function initialize($ql, env) {
 
 function defaultFor($type) {
     match ($type) {
-        case int: return 0;
-        case bool: return false;
-        case str: return '';
+        case integer: return 0;
+        case boolean: return false;
+        case string: return '';
     }
 }
 
@@ -62,9 +62,9 @@ function render($ql, env, upd) {
 function updater($name, $type, upd) {
     return function(x) {
         match ($type) {
-            case int: upd($name.toString(), x.target.value); 
-            case bool: upd($name.toString(), x.target.checked); 
-            case str: upd($name.toString(), x.target.value); 
+            case integer: upd($name.toString(), x.target.value); 
+            case boolean: upd($name.toString(), x.target.checked); 
+            case string: upd($name.toString(), x.target.value); 
         }
     };
 }
@@ -98,13 +98,13 @@ function widget($type, $label, $name, readOnly, env, func) {
     var elt = document.createElement('input'); 
     elt.id = $name.toString() + '-widget';           
     match ($type) {
-        case int : 
+        case integer : 
             elt.setAttribute('type', 'number');
             elt.value = env[$name.toString()];
-        case bool :
+        case boolean :
             elt.setAttribute('type', 'checkbox');
             elt.checked = env[$name.toString()];
-        case str :
+        case string :
             elt.setAttribute('type', 'text');
             elt.value = env[$name.toString()];
     }
@@ -165,9 +165,9 @@ function updateVisibility($q, vis, env) {
 function updateValue($name, $type, val) {
     var elt = document.getElementById($name.toString() + '-widget');
     match ($type) {
-        case int: elt.value = val;
-        case str: elt.value = val;
-        case bool: elt.checked = val;
+        case integer: elt.value = val;
+        case string: elt.value = val;
+        case boolean: elt.checked = val;
     }
 }
 

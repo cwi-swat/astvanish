@@ -1,0 +1,3001 @@
+{
+  "_tag": "form",
+  "_src": {"offset": 365, "length": 15403},
+  "title": "\"Uniform Residential Loan Application\"",
+  "questions": [
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 495, "length": 40},
+      "prompt": "\"1a. Borrower name:\"",
+      "name": "s1aName",
+      "type": {
+        "_tag": "string",
+        "_src": {"offset": 529, "length": 6}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 538, "length": 48},
+      "prompt": "\"1a. Social Security Number:\"",
+      "name": "s1aSsn",
+      "type": {
+        "_tag": "string",
+        "_src": {"offset": 580, "length": 6}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 589, "length": 38},
+      "prompt": "\"1a. Age (years):\"",
+      "name": "s1aAge",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 620, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 630, "length": 43},
+      "prompt": "\"1a. U.S. citizen?\"",
+      "name": "s1aCitizen",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 666, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 676, "length": 166},
+      "cond": {
+        "_tag": "not",
+        "_src": {"offset": 680, "length": 11},
+        "arg": {
+          "_tag": "var",
+          "_src": {"offset": 681, "length": 10},
+          "name": "s1aCitizen"
+        }
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 693, "length": 146},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 699, "length": 67},
+            "prompt": "\"1a. Permanent resident alien?\"",
+            "name": "s1aPermanentResident",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 759, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 771, "length": 64},
+            "prompt": "\"1a. Visa type (non-permanent residents):\"",
+            "name": "s1aVisa",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 829, "length": 6}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 842, "length": 73},
+      "prompt": "\"1a. Applying for joint credit with a co-borrower?\"",
+      "name": "s1aJoint",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 908, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 918, "length": 143},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 922, "length": 8},
+        "name": "s1aJoint"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 932, "length": 126},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 938, "length": 47},
+            "prompt": "\"1a. Co-borrower name:\"",
+            "name": "s1aCoName",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 979, "length": 6}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 990, "length": 64},
+            "prompt": "\"1a. Co-borrower Social Security Number:\"",
+            "name": "s1aCoSsn",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 1048, "length": 6}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1061, "length": 38},
+      "prompt": "\"1a. Married?\"",
+      "name": "s1aMarried",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1092, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1102, "length": 87},
+      "prompt": "\"1a. Number of dependents (not listed by another borrower):\"",
+      "name": "s1aDependents",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1182, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1192, "length": 38},
+      "prompt": "\"1a. Home phone:\"",
+      "name": "s1aPhone",
+      "type": {
+        "_tag": "string",
+        "_src": {"offset": 1224, "length": 6}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1233, "length": 33},
+      "prompt": "\"1a. Email:\"",
+      "name": "s1aEmail",
+      "type": {
+        "_tag": "string",
+        "_src": {"offset": 1260, "length": 6}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1269, "length": 45},
+      "prompt": "\"1a. Current address:\"",
+      "name": "s1aAddress",
+      "type": {
+        "_tag": "string",
+        "_src": {"offset": 1308, "length": 6}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1317, "length": 62},
+      "prompt": "\"1a. Years at current address:\"",
+      "name": "s1aYearsAtAddress",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1372, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1382, "length": 60},
+      "prompt": "\"1a. Do you own your current home?\"",
+      "name": "s1aOwnsHome",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1435, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 1445, "length": 79},
+      "cond": {
+        "_tag": "not",
+        "_src": {"offset": 1449, "length": 12},
+        "arg": {
+          "_tag": "var",
+          "_src": {"offset": 1450, "length": 11},
+          "name": "s1aOwnsHome"
+        }
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 1463, "length": 58},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 1469, "length": 48},
+            "prompt": "\"1a. Monthly rent (USD):\"",
+            "name": "s1aRent",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 1510, "length": 7}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 1524, "length": 270},
+      "cond": {
+        "_tag": "lt",
+        "_src": {"offset": 1528, "length": 21},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 1528, "length": 17},
+          "name": "s1aYearsAtAddress"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 1548, "length": 1},
+          "theInt": "2"
+        }
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 1551, "length": 158},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 1557, "length": 83},
+            "prompt": "\"1a. Former address (less than 2 years at current):\"",
+            "name": "s1aFormerAddress",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 1634, "length": 6}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 1645, "length": 60},
+            "prompt": "\"1a. Years at former address:\"",
+            "name": "s1aFormerYears",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 1698, "length": 7}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1794, "length": 75},
+      "prompt": "\"1b. Are you currently employed or self-employed?\"",
+      "name": "s1bEmployed",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1862, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 1872, "length": 1229},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 1876, "length": 11},
+        "name": "s1bEmployed"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 1889, "length": 1127},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 1895, "length": 58},
+            "prompt": "\"1b. Employer or business name:\"",
+            "name": "s1bEmployer",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 1947, "length": 6}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 1958, "length": 50},
+            "prompt": "\"1b. Position or title:\"",
+            "name": "s1bPosition",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 2002, "length": 6}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 2013, "length": 63},
+            "prompt": "\"1b. Years in this line of work:\"",
+            "name": "s1bYearsInLine",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 2069, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 2081, "length": 101},
+            "prompt": "\"1b. Are you self-employed or own 25 percent or more of the business?\"",
+            "name": "s1bSelfEmployed",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 2175, "length": 7}
+            }
+          },
+          {
+            "_tag": "ifThenElse",
+            "_src": {"offset": 2187, "length": 646},
+            "cond": {
+              "_tag": "var",
+              "_src": {"offset": 2191, "length": 15},
+              "name": "s1bSelfEmployed"
+            },
+            "then": {
+              "_tag": "block",
+              "_src": {"offset": 2208, "length": 185},
+              "questions": [
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 2216, "length": 76},
+                  "prompt": "\"1b. Ownership share of 25 percent or more?\"",
+                  "name": "s1bOwnership25",
+                  "type": {
+                    "_tag": "boolean",
+                    "_src": {"offset": 2285, "length": 7}
+                  }
+                },
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 2299, "length": 88},
+                  "prompt": "\"1b. Monthly income or loss from the business (USD):\"",
+                  "name": "s1bBusinessIncome",
+                  "type": {
+                    "_tag": "integer",
+                    "_src": {"offset": 2380, "length": 7}
+                  }
+                }
+              ]
+            },
+            "els": {
+              "_tag": "block",
+              "_src": {"offset": 2399, "length": 434},
+              "questions": [
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 2407, "length": 60},
+                  "prompt": "\"1b. Gross monthly base pay (USD):\"",
+                  "name": "s1bBase",
+                  "type": {
+                    "_tag": "integer",
+                    "_src": {"offset": 2460, "length": 7}
+                  }
+                },
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 2474, "length": 64},
+                  "prompt": "\"1b. Gross monthly overtime (USD):\"",
+                  "name": "s1bOvertime",
+                  "type": {
+                    "_tag": "integer",
+                    "_src": {"offset": 2531, "length": 7}
+                  }
+                },
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 2545, "length": 58},
+                  "prompt": "\"1b. Gross monthly bonus (USD):\"",
+                  "name": "s1bBonus",
+                  "type": {
+                    "_tag": "integer",
+                    "_src": {"offset": 2596, "length": 7}
+                  }
+                },
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 2610, "length": 68},
+                  "prompt": "\"1b. Gross monthly commission (USD):\"",
+                  "name": "s1bCommission",
+                  "type": {
+                    "_tag": "integer",
+                    "_src": {"offset": 2671, "length": 7}
+                  }
+                },
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 2685, "length": 77},
+                  "prompt": "\"1b. Gross monthly military entitlements (USD):\"",
+                  "name": "s1bMilitary",
+                  "type": {
+                    "_tag": "integer",
+                    "_src": {"offset": 2755, "length": 7}
+                  }
+                },
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 2769, "length": 58},
+                  "prompt": "\"1b. Gross monthly other (USD):\"",
+                  "name": "s1bOther",
+                  "type": {
+                    "_tag": "integer",
+                    "_src": {"offset": 2820, "length": 7}
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "_tag": "computed",
+            "_src": {"offset": 2838, "length": 174},
+            "prompt": "\"1b. Total monthly income from this employment (USD):\"",
+            "name": "s1bTotal",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 2909, "length": 7}
+            },
+            "expr": {
+              "_tag": "add",
+              "_src": {"offset": 2919, "length": 93},
+              "lhs": {
+                "_tag": "add",
+                "_src": {"offset": 2919, "length": 82},
+                "lhs": {
+                  "_tag": "add",
+                  "_src": {"offset": 2919, "length": 68},
+                  "lhs": {
+                    "_tag": "add",
+                    "_src": {"offset": 2919, "length": 52},
+                    "lhs": {
+                      "_tag": "add",
+                      "_src": {"offset": 2919, "length": 41},
+                      "lhs": {
+                        "_tag": "add",
+                        "_src": {"offset": 2919, "length": 27},
+                        "lhs": {
+                          "_tag": "var",
+                          "_src": {"offset": 2919, "length": 17},
+                          "name": "s1bBusinessIncome"
+                        },
+                        "rhs": {
+                          "_tag": "var",
+                          "_src": {"offset": 2939, "length": 7},
+                          "name": "s1bBase"
+                        }
+                      },
+                      "rhs": {
+                        "_tag": "var",
+                        "_src": {"offset": 2949, "length": 11},
+                        "name": "s1bOvertime"
+                      }
+                    },
+                    "rhs": {
+                      "_tag": "var",
+                      "_src": {"offset": 2963, "length": 8},
+                      "name": "s1bBonus"
+                    }
+                  },
+                  "rhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 2974, "length": 13},
+                    "name": "s1bCommission"
+                  }
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 2990, "length": 11},
+                  "name": "s1bMilitary"
+                }
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 3004, "length": 8},
+                "name": "s1bOther"
+              }
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 3101, "length": 70},
+      "prompt": "\"1c. Do you have additional employment?\"",
+      "name": "s1cHasAdditional",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 3164, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 3174, "length": 489},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 3178, "length": 16},
+        "name": "s1cHasAdditional"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 3196, "length": 382},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 3202, "length": 57},
+            "prompt": "\"1c. Additional employer name:\"",
+            "name": "s1cEmployer",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 3253, "length": 6}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 3264, "length": 58},
+            "prompt": "\"1c. Gross monthly base pay (USD):\"",
+            "name": "s1cBase",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 3315, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 3327, "length": 62},
+            "prompt": "\"1c. Gross monthly overtime (USD):\"",
+            "name": "s1cOvertime",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 3382, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 3394, "length": 56},
+            "prompt": "\"1c. Gross monthly bonus (USD):\"",
+            "name": "s1cBonus",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 3443, "length": 7}
+            }
+          },
+          {
+            "_tag": "computed",
+            "_src": {"offset": 3455, "length": 119},
+            "prompt": "\"1c. Total monthly income from additional employment (USD):\"",
+            "name": "s1cTotal",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 3532, "length": 7}
+            },
+            "expr": {
+              "_tag": "add",
+              "_src": {"offset": 3542, "length": 32},
+              "lhs": {
+                "_tag": "add",
+                "_src": {"offset": 3542, "length": 21},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 3542, "length": 7},
+                  "name": "s1cBase"
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 3552, "length": 11},
+                  "name": "s1cOvertime"
+                }
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 3566, "length": 8},
+                "name": "s1cBonus"
+              }
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 3663, "length": 95},
+      "prompt": "\"1d. Less than 2 years at current employment?\"",
+      "name": "s1dHasPrevious",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 3730, "length": 7}
+      },
+      "expr": {
+        "_tag": "lt",
+        "_src": {"offset": 3740, "length": 18},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 3740, "length": 14},
+          "name": "s1bYearsInLine"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 3757, "length": 1},
+          "theInt": "2"
+        }
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 3761, "length": 297},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 3765, "length": 14},
+        "name": "s1dHasPrevious"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 3781, "length": 192},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 3787, "length": 55},
+            "prompt": "\"1d. Previous employer name:\"",
+            "name": "s1dEmployer",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 3836, "length": 6}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 3847, "length": 50},
+            "prompt": "\"1d. Previous position:\"",
+            "name": "s1dPosition",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 3891, "length": 6}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 3902, "length": 67},
+            "prompt": "\"1d. Previous gross monthly income (USD):\"",
+            "name": "s1dIncome",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 3962, "length": 7}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 4058, "length": 61},
+      "prompt": "\"1e. Monthly alimony received (USD):\"",
+      "name": "s1eAlimony",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 4112, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 4122, "length": 72},
+      "prompt": "\"1e. Monthly child support received (USD):\"",
+      "name": "s1eChildSupport",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 4187, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 4197, "length": 69},
+      "prompt": "\"1e. Monthly interest and dividends (USD):\"",
+      "name": "s1eDividends",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 4259, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 4269, "length": 81},
+      "prompt": "\"1e. Monthly retirement income, pension or IRA (USD):\"",
+      "name": "s1eRetirement",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 4343, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 4353, "length": 67},
+      "prompt": "\"1e. Monthly Social Security (USD):\"",
+      "name": "s1eSocialSecurity",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 4413, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 4423, "length": 65},
+      "prompt": "\"1e. Monthly disability income (USD):\"",
+      "name": "s1eDisability",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 4481, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 4491, "length": 79},
+      "prompt": "\"1e. Monthly rental income from other properties (USD):\"",
+      "name": "s1eRental",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 4563, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 4573, "length": 55},
+      "prompt": "\"1e. Monthly other income (USD):\"",
+      "name": "s1eOther",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 4621, "length": 7}
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 4631, "length": 174},
+      "prompt": "\"1e. Total other income (USD):\"",
+      "name": "s1eTotal",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 4677, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 4687, "length": 118},
+        "lhs": {
+          "_tag": "add",
+          "_src": {"offset": 4687, "length": 107},
+          "lhs": {
+            "_tag": "add",
+            "_src": {"offset": 4687, "length": 95},
+            "lhs": {
+              "_tag": "add",
+              "_src": {"offset": 4687, "length": 79},
+              "lhs": {
+                "_tag": "add",
+                "_src": {"offset": 4687, "length": 59},
+                "lhs": {
+                  "_tag": "add",
+                  "_src": {"offset": 4687, "length": 43},
+                  "lhs": {
+                    "_tag": "add",
+                    "_src": {"offset": 4687, "length": 28},
+                    "lhs": {
+                      "_tag": "var",
+                      "_src": {"offset": 4687, "length": 10},
+                      "name": "s1eAlimony"
+                    },
+                    "rhs": {
+                      "_tag": "var",
+                      "_src": {"offset": 4700, "length": 15},
+                      "name": "s1eChildSupport"
+                    }
+                  },
+                  "rhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 4718, "length": 12},
+                    "name": "s1eDividends"
+                  }
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 4733, "length": 13},
+                  "name": "s1eRetirement"
+                }
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 4749, "length": 17},
+                "name": "s1eSocialSecurity"
+              }
+            },
+            "rhs": {
+              "_tag": "var",
+              "_src": {"offset": 4769, "length": 13},
+              "name": "s1eDisability"
+            }
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 4785, "length": 9},
+            "name": "s1eRental"
+          }
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 4797, "length": 8},
+          "name": "s1eOther"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 4809, "length": 98},
+      "prompt": "\"Total monthly qualifying income (USD):\"",
+      "name": "totalIncome",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 4867, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 4877, "length": 30},
+        "lhs": {
+          "_tag": "add",
+          "_src": {"offset": 4877, "length": 19},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 4877, "length": 8},
+            "name": "s1bTotal"
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 4888, "length": 8},
+            "name": "s1cTotal"
+          }
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 4899, "length": 8},
+          "name": "s1eTotal"
+        }
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 4992, "length": 62},
+      "prompt": "\"2a. Checking account balance (USD):\"",
+      "name": "s2aChecking",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 5047, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 5057, "length": 60},
+      "prompt": "\"2a. Savings account balance (USD):\"",
+      "name": "s2aSavings",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 5110, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 5120, "length": 61},
+      "prompt": "\"2a. Money market and CDs (USD):\"",
+      "name": "s2aMoneyMarket",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 5174, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 5184, "length": 66},
+      "prompt": "\"2a. Stocks, bonds and mutual funds (USD):\"",
+      "name": "s2aStocks",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 5243, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 5253, "length": 59},
+      "prompt": "\"2a. Retirement accounts (USD):\"",
+      "name": "s2aRetirement",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 5305, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 5315, "length": 71},
+      "prompt": "\"2a. Cash value of life insurance (USD):\"",
+      "name": "s2aLifeInsurance",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 5379, "length": 7}
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 5389, "length": 140},
+      "prompt": "\"2a. Total accounts (USD):\"",
+      "name": "s2aTotal",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 5431, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 5441, "length": 88},
+        "lhs": {
+          "_tag": "add",
+          "_src": {"offset": 5441, "length": 69},
+          "lhs": {
+            "_tag": "add",
+            "_src": {"offset": 5441, "length": 53},
+            "lhs": {
+              "_tag": "add",
+              "_src": {"offset": 5441, "length": 41},
+              "lhs": {
+                "_tag": "add",
+                "_src": {"offset": 5441, "length": 24},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 5441, "length": 11},
+                  "name": "s2aChecking"
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 5455, "length": 10},
+                  "name": "s2aSavings"
+                }
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 5468, "length": 14},
+                "name": "s2aMoneyMarket"
+              }
+            },
+            "rhs": {
+              "_tag": "var",
+              "_src": {"offset": 5485, "length": 9},
+              "name": "s2aStocks"
+            }
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 5497, "length": 13},
+            "name": "s2aRetirement"
+          }
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 5513, "length": 16},
+          "name": "s2aLifeInsurance"
+        }
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 5614, "length": 58},
+      "prompt": "\"2b. Earnest money deposit (USD):\"",
+      "name": "s2bEarnest",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 5665, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 5675, "length": 82},
+      "prompt": "\"2b. Proceeds from sale of non-real-estate asset (USD):\"",
+      "name": "s2bAssetSale",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 5750, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 5760, "length": 65},
+      "prompt": "\"2b. Gift or grant not yet deposited (USD):\"",
+      "name": "s2bGift",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 5818, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 5828, "length": 181},
+      "cond": {
+        "_tag": "gt",
+        "_src": {"offset": 5832, "length": 11},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 5832, "length": 7},
+          "name": "s2bGift"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 5842, "length": 1},
+          "theInt": "0"
+        }
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 5845, "length": 161},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 5851, "length": 90},
+            "prompt": "\"2b. Source of the gift (relative, employer, nonprofit, ...):\"",
+            "name": "s2bGiftSource",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 5935, "length": 6}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 5946, "length": 56},
+            "prompt": "\"2b. Gift letter provided?\"",
+            "name": "s2bGiftLetter",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 5995, "length": 7}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 6009, "length": 91},
+      "prompt": "\"2b. Total other assets (USD):\"",
+      "name": "s2bTotal",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 6055, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 6065, "length": 35},
+        "lhs": {
+          "_tag": "add",
+          "_src": {"offset": 6065, "length": 25},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 6065, "length": 10},
+            "name": "s2bEarnest"
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 6078, "length": 12},
+            "name": "s2bAssetSale"
+          }
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 6093, "length": 7},
+          "name": "s2bGift"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 6103, "length": 68},
+      "prompt": "\"Total assets (USD):\"",
+      "name": "totalAssets",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 6142, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 6152, "length": 19},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 6152, "length": 8},
+          "name": "s2aTotal"
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 6163, "length": 8},
+          "name": "s2bTotal"
+        }
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 6256, "length": 60},
+      "prompt": "\"2c. Monthly auto loan payments (USD):\"",
+      "name": "s2cAuto",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 6309, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 6319, "length": 65},
+      "prompt": "\"2c. Auto loan unpaid balance (USD):\"",
+      "name": "s2cAutoBalance",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 6377, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 6387, "length": 71},
+      "prompt": "\"2c. Monthly credit card minimum payments (USD):\"",
+      "name": "s2cCards",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 6451, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 6461, "length": 61},
+      "prompt": "\"2c. Credit card balance (USD):\"",
+      "name": "s2cCardsBalance",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 6515, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 6525, "length": 66},
+      "prompt": "\"2c. Monthly student loan payments (USD):\"",
+      "name": "s2cStudent",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 6584, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 6594, "length": 71},
+      "prompt": "\"2c. Student loan unpaid balance (USD):\"",
+      "name": "s2cStudentBalance",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 6658, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 6668, "length": 84},
+      "prompt": "\"2c. Monthly installment and other loan payments (USD):\"",
+      "name": "s2cInstallment",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 6745, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 6755, "length": 81},
+      "prompt": "\"2c. Will any of these be paid off at or before closing?\"",
+      "name": "s2cPaidOff",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 6829, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 6839, "length": 194},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 6843, "length": 10},
+        "name": "s2cPaidOff"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 6855, "length": 93},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 6861, "length": 83},
+            "prompt": "\"2c. Monthly payment amount to be paid off (USD):\"",
+            "name": "s2cPaidOffPayment",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 6937, "length": 7}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 7033, "length": 57},
+      "prompt": "\"2d. Monthly alimony paid (USD):\"",
+      "name": "s2dAlimony",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 7083, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 7093, "length": 68},
+      "prompt": "\"2d. Monthly child support paid (USD):\"",
+      "name": "s2dChildSupport",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 7154, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 7164, "length": 69},
+      "prompt": "\"2d. Monthly job-related expenses (USD):\"",
+      "name": "s2dJobExpenses",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 7226, "length": 7}
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 7236, "length": 178},
+      "prompt": "\"Total monthly debt payments (USD):\"",
+      "name": "totalDebt",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 7288, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 7298, "length": 116},
+        "lhs": {
+          "_tag": "add",
+          "_src": {"offset": 7298, "length": 99},
+          "lhs": {
+            "_tag": "add",
+            "_src": {"offset": 7298, "length": 81},
+            "lhs": {
+              "_tag": "sub",
+              "_src": {"offset": 7298, "length": 68},
+              "lhs": {
+                "_tag": "add",
+                "_src": {"offset": 7298, "length": 48},
+                "lhs": {
+                  "_tag": "add",
+                  "_src": {"offset": 7298, "length": 31},
+                  "lhs": {
+                    "_tag": "add",
+                    "_src": {"offset": 7298, "length": 18},
+                    "lhs": {
+                      "_tag": "var",
+                      "_src": {"offset": 7298, "length": 7},
+                      "name": "s2cAuto"
+                    },
+                    "rhs": {
+                      "_tag": "var",
+                      "_src": {"offset": 7308, "length": 8},
+                      "name": "s2cCards"
+                    }
+                  },
+                  "rhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 7319, "length": 10},
+                    "name": "s2cStudent"
+                  }
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 7332, "length": 14},
+                  "name": "s2cInstallment"
+                }
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 7349, "length": 17},
+                "name": "s2cPaidOffPayment"
+              }
+            },
+            "rhs": {
+              "_tag": "var",
+              "_src": {"offset": 7369, "length": 10},
+              "name": "s2dAlimony"
+            }
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 7382, "length": 15},
+            "name": "s2dChildSupport"
+          }
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 7400, "length": 14},
+          "name": "s2dJobExpenses"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 7417, "length": 119},
+      "prompt": "\"Total liabilities balance (USD):\"",
+      "name": "totalLiabilities",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 7474, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 7484, "length": 52},
+        "lhs": {
+          "_tag": "add",
+          "_src": {"offset": 7484, "length": 32},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 7484, "length": 14},
+            "name": "s2cAutoBalance"
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 7501, "length": 15},
+            "name": "s2cCardsBalance"
+          }
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 7519, "length": 17},
+          "name": "s2cStudentBalance"
+        }
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 7620, "length": 62},
+      "prompt": "\"3. Do you own any real estate?\"",
+      "name": "s3OwnsRealEstate",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 7675, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 7685, "length": 1408},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 7689, "length": 16},
+        "name": "s3OwnsRealEstate"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 7707, "length": 1383},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 7713, "length": 48},
+            "prompt": "\"3a. Property address:\"",
+            "name": "s3aAddress",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 7755, "length": 6}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 7766, "length": 51},
+            "prompt": "\"3a. Property value (USD):\"",
+            "name": "s3aValue",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 7810, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 7822, "length": 82},
+            "prompt": "\"3a. Status: will the property be sold before closing?\"",
+            "name": "s3aWillSell",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 7897, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 7909, "length": 64},
+            "prompt": "\"3a. Is it an investment property?\"",
+            "name": "s3aInvestment",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 7966, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 7978, "length": 85},
+            "prompt": "\"3a. Monthly insurance, taxes and association dues (USD):\"",
+            "name": "s3aCarrying",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 8056, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 8068, "length": 70},
+            "prompt": "\"3a. Mortgage unpaid balance (USD):\"",
+            "name": "s3aMortgageBalance",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 8131, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 8143, "length": 71},
+            "prompt": "\"3a. Monthly mortgage payment (USD):\"",
+            "name": "s3aMortgagePayment",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 8207, "length": 7}
+            }
+          },
+          {
+            "_tag": "ifThen",
+            "_src": {"offset": 8219, "length": 271},
+            "cond": {
+              "_tag": "var",
+              "_src": {"offset": 8223, "length": 13},
+              "name": "s3aInvestment"
+            },
+            "then": {
+              "_tag": "block",
+              "_src": {"offset": 8238, "length": 247},
+              "questions": [
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 8246, "length": 65},
+                  "prompt": "\"3a. Monthly rental income (USD):\"",
+                  "name": "s3aRentIncome",
+                  "type": {
+                    "_tag": "integer",
+                    "_src": {"offset": 8304, "length": 7}
+                  }
+                },
+                {
+                  "_tag": "computed",
+                  "_src": {"offset": 8318, "length": 161},
+                  "prompt": "\"3a. Net monthly rental income, 75 percent of gross minus costs (USD):\"",
+                  "name": "s3aNetRent",
+                  "type": {
+                    "_tag": "integer",
+                    "_src": {"offset": 8410, "length": 7}
+                  },
+                  "expr": {
+                    "_tag": "sub",
+                    "_src": {"offset": 8420, "length": 59},
+                    "lhs": {
+                      "_tag": "sub",
+                      "_src": {"offset": 8420, "length": 38},
+                      "lhs": {
+                        "_tag": "div",
+                        "_src": {"offset": 8420, "length": 24},
+                        "lhs": {
+                          "_tag": "mul",
+                          "_src": {"offset": 8420, "length": 18},
+                          "lhs": {
+                            "_tag": "var",
+                            "_src": {"offset": 8420, "length": 13},
+                            "name": "s3aRentIncome"
+                          },
+                          "rhs": {
+                            "_tag": "integer",
+                            "_src": {"offset": 8436, "length": 2},
+                            "theInt": "75"
+                          }
+                        },
+                        "rhs": {
+                          "_tag": "integer",
+                          "_src": {"offset": 8441, "length": 3},
+                          "theInt": "100"
+                        }
+                      },
+                      "rhs": {
+                        "_tag": "var",
+                        "_src": {"offset": 8447, "length": 11},
+                        "name": "s3aCarrying"
+                      }
+                    },
+                    "rhs": {
+                      "_tag": "var",
+                      "_src": {"offset": 8461, "length": 18},
+                      "name": "s3aMortgagePayment"
+                    }
+                  }
+                }
+              ]
+            },
+            "empty": ""
+          },
+          {
+            "_tag": "computed",
+            "_src": {"offset": 8490, "length": 93},
+            "prompt": "\"3a. Equity in this property (USD):\"",
+            "name": "s3aEquity",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 8544, "length": 7}
+            },
+            "expr": {
+              "_tag": "sub",
+              "_src": {"offset": 8554, "length": 29},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 8554, "length": 8},
+                "name": "s3aValue"
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 8565, "length": 18},
+                "name": "s3aMortgageBalance"
+              }
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 8588, "length": 61},
+            "prompt": "\"3. Do you own a second property?\"",
+            "name": "s3HasSecond",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 8642, "length": 7}
+            }
+          },
+          {
+            "_tag": "ifThen",
+            "_src": {"offset": 8654, "length": 435},
+            "cond": {
+              "_tag": "var",
+              "_src": {"offset": 8658, "length": 11},
+              "name": "s3HasSecond"
+            },
+            "then": {
+              "_tag": "block",
+              "_src": {"offset": 8671, "length": 415},
+              "questions": [
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 8679, "length": 57},
+                  "prompt": "\"3b. Second property address:\"",
+                  "name": "s3bAddress",
+                  "type": {
+                    "_tag": "string",
+                    "_src": {"offset": 8730, "length": 6}
+                  }
+                },
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 8743, "length": 60},
+                  "prompt": "\"3b. Second property value (USD):\"",
+                  "name": "s3bValue",
+                  "type": {
+                    "_tag": "integer",
+                    "_src": {"offset": 8796, "length": 7}
+                  }
+                },
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 8810, "length": 79},
+                  "prompt": "\"3b. Second mortgage unpaid balance (USD):\"",
+                  "name": "s3bMortgageBalance",
+                  "type": {
+                    "_tag": "integer",
+                    "_src": {"offset": 8882, "length": 7}
+                  }
+                },
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 8896, "length": 80},
+                  "prompt": "\"3b. Second monthly mortgage payment (USD):\"",
+                  "name": "s3bMortgagePayment",
+                  "type": {
+                    "_tag": "integer",
+                    "_src": {"offset": 8969, "length": 7}
+                  }
+                },
+                {
+                  "_tag": "computed",
+                  "_src": {"offset": 8983, "length": 97},
+                  "prompt": "\"3b. Equity in second property (USD):\"",
+                  "name": "s3bEquity",
+                  "type": {
+                    "_tag": "integer",
+                    "_src": {"offset": 9041, "length": 7}
+                  },
+                  "expr": {
+                    "_tag": "sub",
+                    "_src": {"offset": 9051, "length": 29},
+                    "lhs": {
+                      "_tag": "var",
+                      "_src": {"offset": 9051, "length": 8},
+                      "name": "s3bValue"
+                    },
+                    "rhs": {
+                      "_tag": "var",
+                      "_src": {"offset": 9062, "length": 18},
+                      "name": "s3bMortgageBalance"
+                    }
+                  }
+                }
+              ]
+            },
+            "empty": ""
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 9093, "length": 123},
+      "prompt": "\"Housing debt on other properties (USD per month):\"",
+      "name": "otherHousingDebt",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 9167, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 9177, "length": 39},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 9177, "length": 18},
+          "name": "s3aMortgagePayment"
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 9198, "length": 18},
+          "name": "s3bMortgagePayment"
+        }
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 9301, "length": 51},
+      "prompt": "\"4a. Loan amount (USD):\"",
+      "name": "s4aLoanAmount",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 9345, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 9355, "length": 78},
+      "prompt": "\"4a. Loan purpose is purchase (otherwise refinance)?\"",
+      "name": "s4aPurchase",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 9426, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThenElse",
+      "_src": {"offset": 9436, "length": 513},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 9440, "length": 11},
+        "name": "s4aPurchase"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 9453, "length": 252},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 9459, "length": 51},
+            "prompt": "\"4a. Purchase price (USD):\"",
+            "name": "s4aPrice",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 9503, "length": 7}
+            }
+          },
+          {
+            "_tag": "computed",
+            "_src": {"offset": 9515, "length": 82},
+            "prompt": "\"4a. Down payment (USD):\"",
+            "name": "s4aDownPayment",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 9563, "length": 7}
+            },
+            "expr": {
+              "_tag": "sub",
+              "_src": {"offset": 9573, "length": 24},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 9573, "length": 8},
+                "name": "s4aPrice"
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 9584, "length": 13},
+                "name": "s4aLoanAmount"
+              }
+            }
+          },
+          {
+            "_tag": "computed",
+            "_src": {"offset": 9602, "length": 99},
+            "prompt": "\"4a. Enough assets for the down payment:\"",
+            "name": "s4aFundsOk",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 9662, "length": 7}
+            },
+            "expr": {
+              "_tag": "geq",
+              "_src": {"offset": 9672, "length": 29},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 9672, "length": 11},
+                "name": "totalAssets"
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 9687, "length": 14},
+                "name": "s4aDownPayment"
+              }
+            }
+          }
+        ]
+      },
+      "els": {
+        "_tag": "block",
+        "_src": {"offset": 9711, "length": 238},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 9717, "length": 52},
+            "prompt": "\"4a. Refinance: cash-out?\"",
+            "name": "s4aCashOut",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 9762, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 9774, "length": 64},
+            "prompt": "\"4a. Current appraised value (USD):\"",
+            "name": "s4aAppraised",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 9831, "length": 7}
+            }
+          },
+          {
+            "_tag": "ifThen",
+            "_src": {"offset": 9843, "length": 105},
+            "cond": {
+              "_tag": "var",
+              "_src": {"offset": 9847, "length": 10},
+              "name": "s4aCashOut"
+            },
+            "then": {
+              "_tag": "block",
+              "_src": {"offset": 9859, "length": 86},
+              "questions": [
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 9867, "length": 72},
+                  "prompt": "\"4a. Cash-out amount requested (USD):\"",
+                  "name": "s4aCashOutAmount",
+                  "type": {
+                    "_tag": "integer",
+                    "_src": {"offset": 9932, "length": 7}
+                  }
+                }
+              ]
+            },
+            "empty": ""
+          }
+        ]
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 9952, "length": 54},
+      "prompt": "\"4a. Property address:\"",
+      "name": "s4aPropertyAddress",
+      "type": {
+        "_tag": "string",
+        "_src": {"offset": 10000, "length": 6}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 10009, "length": 50},
+      "prompt": "\"4a. Number of units (1-4):\"",
+      "name": "s4aUnits",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 10052, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 10062, "length": 61},
+      "prompt": "\"4a. Occupancy is primary residence?\"",
+      "name": "s4aPrimary",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 10116, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 10126, "length": 113},
+      "cond": {
+        "_tag": "not",
+        "_src": {"offset": 10130, "length": 11},
+        "arg": {
+          "_tag": "var",
+          "_src": {"offset": 10131, "length": 10},
+          "name": "s4aPrimary"
+        }
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 10143, "length": 93},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 10149, "length": 83},
+            "prompt": "\"4a. Occupancy is second home (otherwise investment)?\"",
+            "name": "s4aSecondHome",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 10225, "length": 7}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 10239, "length": 71},
+      "prompt": "\"4a. Is the property a manufactured home?\"",
+      "name": "s4aManufactured",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 10303, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 10313, "length": 68},
+      "prompt": "\"4a. Is the property a mixed-use property?\"",
+      "name": "s4aMixedUse",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 10374, "length": 7}
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 10384, "length": 88},
+      "prompt": "\"4a. Property value for LTV (USD):\"",
+      "name": "propertyValue",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 10439, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 10449, "length": 23},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 10449, "length": 8},
+          "name": "s4aPrice"
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 10460, "length": 12},
+          "name": "s4aAppraised"
+        }
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 10560, "length": 80},
+      "prompt": "\"4b. Is there another mortgage loan on this property?\"",
+      "name": "s4bOtherLoan",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 10633, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 10643, "length": 156},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 10647, "length": 12},
+        "name": "s4bOtherLoan"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 10661, "length": 135},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 10667, "length": 65},
+            "prompt": "\"4b. Other lien monthly payment (USD):\"",
+            "name": "s4bPayment",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 10725, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 10737, "length": 55},
+            "prompt": "\"4b. Other lien amount (USD):\"",
+            "name": "s4bAmount",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 10785, "length": 7}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 10799, "length": 94},
+      "prompt": "\"4c. Expected monthly rental income from the new property (USD):\"",
+      "name": "s4cRentalIncome",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 10886, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 10896, "length": 64},
+      "prompt": "\"4d. Gifts or grants for this loan (USD):\"",
+      "name": "s4dGifts",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 10953, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 11059, "length": 81},
+      "prompt": "\"Proposed monthly principal and interest (USD):\"",
+      "name": "pePrincipalInterest",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 11133, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 11143, "length": 70},
+      "prompt": "\"Proposed monthly homeowner insurance (USD):\"",
+      "name": "peInsurance",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 11206, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 11216, "length": 61},
+      "prompt": "\"Proposed monthly property taxes (USD):\"",
+      "name": "peTaxes",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 11270, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 11280, "length": 77},
+      "prompt": "\"Proposed monthly mortgage insurance (USD):\"",
+      "name": "peMortgageInsurance",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 11350, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 11360, "length": 62},
+      "prompt": "\"Proposed monthly association dues (USD):\"",
+      "name": "peDues",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 11415, "length": 7}
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 11425, "length": 158},
+      "prompt": "\"Proposed total monthly housing expense (USD):\"",
+      "name": "peTotal",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 11486, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 11496, "length": 87},
+        "lhs": {
+          "_tag": "add",
+          "_src": {"offset": 11496, "length": 74},
+          "lhs": {
+            "_tag": "add",
+            "_src": {"offset": 11496, "length": 65},
+            "lhs": {
+              "_tag": "add",
+              "_src": {"offset": 11496, "length": 43},
+              "lhs": {
+                "_tag": "add",
+                "_src": {"offset": 11496, "length": 33},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 11496, "length": 19},
+                  "name": "pePrincipalInterest"
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 11518, "length": 11},
+                  "name": "peInsurance"
+                }
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 11532, "length": 7},
+                "name": "peTaxes"
+              }
+            },
+            "rhs": {
+              "_tag": "var",
+              "_src": {"offset": 11542, "length": 19},
+              "name": "peMortgageInsurance"
+            }
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 11564, "length": 6},
+            "name": "peDues"
+          }
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 11573, "length": 10},
+          "name": "s4bPayment"
+        }
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 11667, "length": 86},
+      "prompt": "\"5a.A. Will you occupy the property as your primary residence?\"",
+      "name": "s5aOccupy",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 11746, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 11756, "length": 147},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 11760, "length": 9},
+        "name": "s5aOccupy"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 11771, "length": 129},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 11777, "length": 119},
+            "prompt": "\"5a.A. Have you had an ownership interest in another property in the last 3 years?\"",
+            "name": "s5aOwnershipInterest",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 11889, "length": 7}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 11903, "length": 96},
+      "prompt": "\"5a.B. Family relationship or business affiliation with the seller?\"",
+      "name": "s5aAffiliation",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 11992, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 12002, "length": 114},
+      "prompt": "\"5a.C. Are you borrowing money for this transaction not disclosed elsewhere?\"",
+      "name": "s5aUndisclosedBorrowing",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 12109, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 12119, "length": 113},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 12123, "length": 23},
+        "name": "s5aUndisclosedBorrowing"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 12148, "length": 81},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 12154, "length": 71},
+            "prompt": "\"5a.C. Amount of that money (USD):\"",
+            "name": "s5aUndisclosedAmount",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 12218, "length": 7}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 12232, "length": 93},
+      "prompt": "\"5a.D. Applying for another mortgage or new credit before closing?\"",
+      "name": "s5aNewCredit",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 12318, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 12328, "length": 98},
+      "prompt": "\"5a.E. Will this property be subject to a priority lien (e.g. PACE)?\"",
+      "name": "s5aPriorityLien",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 12419, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 12429, "length": 86},
+      "prompt": "\"5b.F. Are you a co-signer or guarantor on undisclosed debt?\"",
+      "name": "s5bCoSigner",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 12508, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 12518, "length": 78},
+      "prompt": "\"5b.G. Are there outstanding judgments against you?\"",
+      "name": "s5bJudgments",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 12589, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 12599, "length": 90},
+      "prompt": "\"5b.H. Are you delinquent or in default on a federal debt?\"",
+      "name": "s5bFederalDefault",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 12682, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 12692, "length": 96},
+      "prompt": "\"5b.I. Are you a party to a lawsuit with potential financial liability?\"",
+      "name": "s5bLawsuit",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 12781, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 12791, "length": 102},
+      "prompt": "\"5b.J. Have you conveyed title in lieu of foreclosure in the past 7 years?\"",
+      "name": "s5bDeedInLieu",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 12886, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 12896, "length": 84},
+      "prompt": "\"5b.K. Pre-foreclosure or short sale in the past 7 years?\"",
+      "name": "s5bShortSale",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 12973, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 12983, "length": 90},
+      "prompt": "\"5b.L. Has property been foreclosed upon in the last 7 years?\"",
+      "name": "s5bForeclosure",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 13066, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 13076, "length": 88},
+      "prompt": "\"5b.M. Have you declared bankruptcy within the past 7 years?\"",
+      "name": "s5bBankruptcy",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 13157, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 13167, "length": 202},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 13171, "length": 13},
+        "name": "s5bBankruptcy"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 13186, "length": 180},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 13192, "length": 45},
+            "prompt": "\"5b.M. Chapter 7?\"",
+            "name": "s5bChapter7",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 13230, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 13242, "length": 47},
+            "prompt": "\"5b.M. Chapter 13?\"",
+            "name": "s5bChapter13",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 13282, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 13294, "length": 68},
+            "prompt": "\"5b.M. Years since discharge:\"",
+            "name": "s5bYearsSinceDischarge",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 13355, "length": 7}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 13369, "length": 202},
+      "prompt": "\"Adverse declarations present:\"",
+      "name": "adverse",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 13414, "length": 7}
+      },
+      "expr": {
+        "_tag": "or",
+        "_src": {"offset": 13424, "length": 147},
+        "lhs": {
+          "_tag": "or",
+          "_src": {"offset": 13424, "length": 98},
+          "lhs": {
+            "_tag": "or",
+            "_src": {"offset": 13424, "length": 80},
+            "lhs": {
+              "_tag": "or",
+              "_src": {"offset": 13424, "length": 64},
+              "lhs": {
+                "_tag": "or",
+                "_src": {"offset": 13424, "length": 47},
+                "lhs": {
+                  "_tag": "or",
+                  "_src": {"offset": 13424, "length": 33},
+                  "lhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 13424, "length": 12},
+                    "name": "s5bJudgments"
+                  },
+                  "rhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 13440, "length": 17},
+                    "name": "s5bFederalDefault"
+                  }
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 13461, "length": 10},
+                  "name": "s5bLawsuit"
+                }
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 13475, "length": 13},
+                "name": "s5bDeedInLieu"
+              }
+            },
+            "rhs": {
+              "_tag": "var",
+              "_src": {"offset": 13492, "length": 12},
+              "name": "s5bShortSale"
+            }
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 13508, "length": 14},
+            "name": "s5bForeclosure"
+          }
+        },
+        "rhs": {
+          "_tag": "parens",
+          "_src": {"offset": 13526, "length": 45},
+          "arg": {
+            "_tag": "and",
+            "_src": {"offset": 13527, "length": 43},
+            "lhs": {
+              "_tag": "var",
+              "_src": {"offset": 13527, "length": 13},
+              "name": "s5bBankruptcy"
+            },
+            "rhs": {
+              "_tag": "lt",
+              "_src": {"offset": 13544, "length": 26},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 13544, "length": 22},
+                "name": "s5bYearsSinceDischarge"
+              },
+              "rhs": {
+                "_tag": "integer",
+                "_src": {"offset": 13569, "length": 1},
+                "theInt": "4"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 13655, "length": 75},
+      "prompt": "\"7. Have you ever served in the U.S. Armed Forces?\"",
+      "name": "s7Military",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 13723, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 13733, "length": 419},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 13737, "length": 10},
+        "name": "s7Military"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 13749, "length": 319},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 13755, "length": 62},
+            "prompt": "\"7. Currently serving on active duty?\"",
+            "name": "s7Active",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 13810, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 13822, "length": 76},
+            "prompt": "\"7. Retired, discharged or separated from service?\"",
+            "name": "s7Retired",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 13891, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 13903, "length": 55},
+            "prompt": "\"7. Surviving spouse?\"",
+            "name": "s7SurvivingSpouse",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 13951, "length": 7}
+            }
+          },
+          {
+            "_tag": "computed",
+            "_src": {"offset": 13963, "length": 101},
+            "prompt": "\"7. Eligible for a VA loan:\"",
+            "name": "s7VaEligible",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 14012, "length": 7}
+            },
+            "expr": {
+              "_tag": "or",
+              "_src": {"offset": 14022, "length": 42},
+              "lhs": {
+                "_tag": "or",
+                "_src": {"offset": 14022, "length": 21},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 14022, "length": 8},
+                  "name": "s7Active"
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 14034, "length": 9},
+                  "name": "s7Retired"
+                }
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 14047, "length": 17},
+                "name": "s7SurvivingSpouse"
+              }
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 14152, "length": 75},
+      "prompt": "\"8. Do you wish to provide demographic information?\"",
+      "name": "s8Provide",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 14220, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 14230, "length": 281},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 14234, "length": 9},
+        "name": "s8Provide"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 14245, "length": 171},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 14251, "length": 91},
+            "prompt": "\"8. Ethnicity (Hispanic or Latino, not Hispanic or Latino, ...):\"",
+            "name": "s8Ethnicity",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 14336, "length": 6}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 14347, "length": 31},
+            "prompt": "\"8. Race:\"",
+            "name": "s8Race",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 14372, "length": 6}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 14383, "length": 29},
+            "prompt": "\"8. Sex:\"",
+            "name": "s8Sex",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 14406, "length": 6}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 14511, "length": 106},
+      "prompt": "\"Front-end ratio, housing / income (percent):\"",
+      "name": "frontRatio",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 14574, "length": 7}
+      },
+      "expr": {
+        "_tag": "div",
+        "_src": {"offset": 14584, "length": 33},
+        "lhs": {
+          "_tag": "mul",
+          "_src": {"offset": 14584, "length": 13},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 14584, "length": 7},
+            "name": "peTotal"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 14594, "length": 3},
+            "theInt": "100"
+          }
+        },
+        "rhs": {
+          "_tag": "parens",
+          "_src": {"offset": 14600, "length": 17},
+          "arg": {
+            "_tag": "add",
+            "_src": {"offset": 14601, "length": 15},
+            "lhs": {
+              "_tag": "var",
+              "_src": {"offset": 14601, "length": 11},
+              "name": "totalIncome"
+            },
+            "rhs": {
+              "_tag": "integer",
+              "_src": {"offset": 14615, "length": 1},
+              "theInt": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 14620, "length": 138},
+      "prompt": "\"Back-end ratio, all debt / income (percent):\"",
+      "name": "backRatio",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 14682, "length": 7}
+      },
+      "expr": {
+        "_tag": "div",
+        "_src": {"offset": 14692, "length": 66},
+        "lhs": {
+          "_tag": "mul",
+          "_src": {"offset": 14692, "length": 46},
+          "lhs": {
+            "_tag": "parens",
+            "_src": {"offset": 14692, "length": 40},
+            "arg": {
+              "_tag": "add",
+              "_src": {"offset": 14693, "length": 38},
+              "lhs": {
+                "_tag": "add",
+                "_src": {"offset": 14693, "length": 19},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 14693, "length": 7},
+                  "name": "peTotal"
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 14703, "length": 9},
+                  "name": "totalDebt"
+                }
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 14715, "length": 16},
+                "name": "otherHousingDebt"
+              }
+            }
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 14735, "length": 3},
+            "theInt": "100"
+          }
+        },
+        "rhs": {
+          "_tag": "parens",
+          "_src": {"offset": 14741, "length": 17},
+          "arg": {
+            "_tag": "add",
+            "_src": {"offset": 14742, "length": 15},
+            "lhs": {
+              "_tag": "var",
+              "_src": {"offset": 14742, "length": 11},
+              "name": "totalIncome"
+            },
+            "rhs": {
+              "_tag": "integer",
+              "_src": {"offset": 14756, "length": 1},
+              "theInt": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 14761, "length": 87},
+      "prompt": "\"Loan-to-value (percent):\"",
+      "name": "ltv",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 14797, "length": 7}
+      },
+      "expr": {
+        "_tag": "div",
+        "_src": {"offset": 14807, "length": 41},
+        "lhs": {
+          "_tag": "mul",
+          "_src": {"offset": 14807, "length": 19},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 14807, "length": 13},
+            "name": "s4aLoanAmount"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 14823, "length": 3},
+            "theInt": "100"
+          }
+        },
+        "rhs": {
+          "_tag": "parens",
+          "_src": {"offset": 14829, "length": 19},
+          "arg": {
+            "_tag": "add",
+            "_src": {"offset": 14830, "length": 17},
+            "lhs": {
+              "_tag": "var",
+              "_src": {"offset": 14830, "length": 13},
+              "name": "propertyValue"
+            },
+            "rhs": {
+              "_tag": "integer",
+              "_src": {"offset": 14846, "length": 1},
+              "theInt": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 14851, "length": 76},
+      "prompt": "\"Front-end ratio within 28 percent:\"",
+      "name": "frontOk",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 14901, "length": 7}
+      },
+      "expr": {
+        "_tag": "leq",
+        "_src": {"offset": 14911, "length": 16},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 14911, "length": 10},
+          "name": "frontRatio"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 14925, "length": 2},
+          "theInt": "28"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 14930, "length": 73},
+      "prompt": "\"Back-end ratio within 43 percent:\"",
+      "name": "backOk",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 14978, "length": 7}
+      },
+      "expr": {
+        "_tag": "leq",
+        "_src": {"offset": 14988, "length": 15},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 14988, "length": 9},
+          "name": "backRatio"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 15001, "length": 2},
+          "theInt": "43"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 15006, "length": 88},
+      "prompt": "\"Mortgage insurance required (LTV above 80 percent):\"",
+      "name": "miRequired",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 15076, "length": 7}
+      },
+      "expr": {
+        "_tag": "gt",
+        "_src": {"offset": 15086, "length": 8},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 15086, "length": 3},
+          "name": "ltv"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 15092, "length": 2},
+          "theInt": "80"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 15097, "length": 97},
+      "prompt": "\"Net worth (USD):\"",
+      "name": "netWorth",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 15130, "length": 7}
+      },
+      "expr": {
+        "_tag": "sub",
+        "_src": {"offset": 15140, "length": 54},
+        "lhs": {
+          "_tag": "add",
+          "_src": {"offset": 15140, "length": 35},
+          "lhs": {
+            "_tag": "add",
+            "_src": {"offset": 15140, "length": 23},
+            "lhs": {
+              "_tag": "var",
+              "_src": {"offset": 15140, "length": 11},
+              "name": "totalAssets"
+            },
+            "rhs": {
+              "_tag": "var",
+              "_src": {"offset": 15154, "length": 9},
+              "name": "s3aEquity"
+            }
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 15166, "length": 9},
+            "name": "s3bEquity"
+          }
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 15178, "length": 16},
+          "name": "totalLiabilities"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 15197, "length": 103},
+      "prompt": "\"Pre-qualified:\"",
+      "name": "prequalified",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 15232, "length": 7}
+      },
+      "expr": {
+        "_tag": "and",
+        "_src": {"offset": 15242, "length": 58},
+        "lhs": {
+          "_tag": "and",
+          "_src": {"offset": 15242, "length": 42},
+          "lhs": {
+            "_tag": "and",
+            "_src": {"offset": 15242, "length": 29},
+            "lhs": {
+              "_tag": "and",
+              "_src": {"offset": 15242, "length": 17},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 15242, "length": 7},
+                "name": "frontOk"
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 15253, "length": 6},
+                "name": "backOk"
+              }
+            },
+            "rhs": {
+              "_tag": "not",
+              "_src": {"offset": 15263, "length": 8},
+              "arg": {
+                "_tag": "var",
+                "_src": {"offset": 15264, "length": 7},
+                "name": "adverse"
+              }
+            }
+          },
+          "rhs": {
+            "_tag": "leq",
+            "_src": {"offset": 15275, "length": 9},
+            "lhs": {
+              "_tag": "var",
+              "_src": {"offset": 15275, "length": 3},
+              "name": "ltv"
+            },
+            "rhs": {
+              "_tag": "integer",
+              "_src": {"offset": 15282, "length": 2},
+              "theInt": "97"
+            }
+          }
+        },
+        "rhs": {
+          "_tag": "geq",
+          "_src": {"offset": 15288, "length": 12},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 15288, "length": 6},
+            "name": "s1aAge"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 15298, "length": 2},
+            "theInt": "18"
+          }
+        }
+      }
+    },
+    {
+      "_tag": "ifThenElse",
+      "_src": {"offset": 15304, "length": 215},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 15308, "length": 12},
+        "name": "prequalified"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 15322, "length": 119},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 15328, "length": 51},
+            "prompt": "\"Preferred closing date:\"",
+            "name": "closingDate",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 15373, "length": 6}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 15384, "length": 53},
+            "prompt": "\"Lock the interest rate now?\"",
+            "name": "rateLock",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 15430, "length": 7}
+            }
+          }
+        ]
+      },
+      "els": {
+        "_tag": "block",
+        "_src": {"offset": 15447, "length": 72},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 15453, "length": 62},
+            "prompt": "\"Request a call with a loan officer?\"",
+            "name": "wantsCall",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 15508, "length": 7}
+            }
+          }
+        ]
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 15603, "length": 72},
+      "prompt": "\"6. I agree to the acknowledgments and agreements:\"",
+      "name": "s6Agree",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 15668, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 15678, "length": 56},
+      "prompt": "\"6. Signature (type full name):\"",
+      "name": "s6Signature",
+      "type": {
+        "_tag": "string",
+        "_src": {"offset": 15728, "length": 6}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 15737, "length": 29},
+      "prompt": "\"6. Date:\"",
+      "name": "s6Date",
+      "type": {
+        "_tag": "string",
+        "_src": {"offset": 15760, "length": 6}
+      }
+    }
+  ]
+}

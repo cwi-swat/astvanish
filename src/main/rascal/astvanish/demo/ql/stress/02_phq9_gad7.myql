@@ -1,0 +1,101 @@
+// Source: PHQ-9 (depression) and GAD-7 (anxiety) screening questionnaires,
+// Spitzer, Kroenke, Williams et al. Both are free to use (no permission required).
+// Each item is scored 0 = not at all, 1 = several days,
+// 2 = more than half the days, 3 = nearly every day.
+// Severity bands follow the published scoring instructions.
+form "PHQ-9 and GAD-7 screening" {
+  "Patient identifier:"
+    patientId: string
+  "Age (years):"
+    age: integer
+
+  // PHQ-9: over the last 2 weeks, how often have you been bothered by ...
+  "PHQ 1. Little interest or pleasure in doing things (0-3):"
+    phq1: integer
+  "PHQ 2. Feeling down, depressed, or hopeless (0-3):"
+    phq2: integer
+  "PHQ 3. Trouble falling or staying asleep, or sleeping too much (0-3):"
+    phq3: integer
+  "PHQ 4. Feeling tired or having little energy (0-3):"
+    phq4: integer
+  "PHQ 5. Poor appetite or overeating (0-3):"
+    phq5: integer
+  "PHQ 6. Feeling bad about yourself, or that you are a failure (0-3):"
+    phq6: integer
+  "PHQ 7. Trouble concentrating on things (0-3):"
+    phq7: integer
+  "PHQ 8. Moving or speaking slowly, or being fidgety or restless (0-3):"
+    phq8: integer
+  "PHQ 9. Thoughts that you would be better off dead or of hurting yourself (0-3):"
+    phq9: integer
+
+  "PHQ-2 pre-screen score:"
+    phq2Score: integer = phq1 + phq2
+  "PHQ-2 positive (score 3 or more):"
+    phq2Positive: boolean = phq2Score >= 3
+  "PHQ-9 total score:"
+    phqTotal: integer = phq1 + phq2 + phq3 + phq4 + phq5 + phq6 + phq7 + phq8 + phq9
+
+  "Minimal depression (0-4):"
+    phqMinimal: boolean = phqTotal <= 4
+  "Mild depression (5-9):"
+    phqMild: boolean = phqTotal >= 5 && phqTotal <= 9
+  "Moderate depression (10-14):"
+    phqModerate: boolean = phqTotal >= 10 && phqTotal <= 14
+  "Moderately severe depression (15-19):"
+    phqModSevere: boolean = phqTotal >= 15 && phqTotal <= 19
+  "Severe depression (20-27):"
+    phqSevere: boolean = phqTotal >= 20
+
+  if (phq9 > 0) {
+    "Item 9 is positive: safety assessment completed today?"
+      safetyAssessed: boolean
+    if (!safetyAssessed) {
+      "Reason the safety assessment was not completed:"
+        safetyReason: string
+    }
+  }
+
+  if (phqTotal > 0) {
+    "PHQ 10. How difficult have these problems made it to work, take care of things at home, or get along with others (0-3)?"
+      phqDifficulty: integer
+  }
+
+  // GAD-7: over the last 2 weeks, how often have you been bothered by ...
+  "GAD 1. Feeling nervous, anxious, or on edge (0-3):"
+    gad1: integer
+  "GAD 2. Not being able to stop or control worrying (0-3):"
+    gad2: integer
+  "GAD 3. Worrying too much about different things (0-3):"
+    gad3: integer
+  "GAD 4. Trouble relaxing (0-3):"
+    gad4: integer
+  "GAD 5. Being so restless that it is hard to sit still (0-3):"
+    gad5: integer
+  "GAD 6. Becoming easily annoyed or irritable (0-3):"
+    gad6: integer
+  "GAD 7. Feeling afraid as if something awful might happen (0-3):"
+    gad7: integer
+
+  "GAD-7 total score:"
+    gadTotal: integer = gad1 + gad2 + gad3 + gad4 + gad5 + gad6 + gad7
+  "Minimal anxiety (0-4):"
+    gadMinimal: boolean = gadTotal <= 4
+  "Mild anxiety (5-9):"
+    gadMild: boolean = gadTotal >= 5 && gadTotal <= 9
+  "Moderate anxiety (10-14):"
+    gadModerate: boolean = gadTotal >= 10 && gadTotal <= 14
+  "Severe anxiety (15-21):"
+    gadSevere: boolean = gadTotal >= 15
+
+  "Refer to mental health services:"
+    refer: boolean = phqTotal >= 10 || gadTotal >= 10 || phq9 > 0
+  if (refer) {
+    "Referral destination:"
+      referralTo: string
+    "Referral urgent:"
+      referralUrgent: boolean = phqSevere || phq9 > 1
+  }
+  "Clinician notes:"
+    notes: string
+}

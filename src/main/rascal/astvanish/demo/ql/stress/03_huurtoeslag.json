@@ -1,0 +1,1075 @@
+{
+  "_tag": "form",
+  "_src": {"offset": 287, "length": 4481},
+  "title": "\"Rent benefit (huurtoeslag) 2024\"",
+  "questions": [
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 330, "length": 47},
+      "prompt": "\"Citizen service number (BSN):\"",
+      "name": "bsn",
+      "type": {
+        "_tag": "string",
+        "_src": {"offset": 371, "length": 6}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 380, "length": 46},
+      "prompt": "\"Your age on 1 January 2024:\"",
+      "name": "age",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 419, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 429, "length": 88},
+      "prompt": "\"Do you have Dutch nationality or a valid residence permit?\"",
+      "name": "legalResidence",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 510, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 520, "length": 82},
+      "prompt": "\"Are you registered (BRP) at the rental address?\"",
+      "name": "registeredAtAddress",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 595, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 606, "length": 56},
+      "prompt": "\"Do you have a benefit partner?\"",
+      "name": "hasPartner",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 655, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 665, "length": 273},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 669, "length": 10},
+        "name": "hasPartner"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 681, "length": 253},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 687, "length": 39},
+            "prompt": "\"Partner BSN:\"",
+            "name": "partnerBsn",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 720, "length": 6}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 731, "length": 58},
+            "prompt": "\"Partner age on 1 January 2024:\"",
+            "name": "partnerAge",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 782, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 794, "length": 60},
+            "prompt": "\"Partner yearly income (euro):\"",
+            "name": "partnerIncome",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 847, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 859, "length": 71},
+            "prompt": "\"Partner assets on 1 January 2024 (euro):\"",
+            "name": "partnerAssets",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 923, "length": 7}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 938, "length": 69},
+      "prompt": "\"Number of children under 18 living with you:\"",
+      "name": "nChildren",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1000, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1010, "length": 82},
+      "prompt": "\"Number of other adults (co-residents) living with you:\"",
+      "name": "nCoResidents",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1085, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 1095, "length": 206},
+      "cond": {
+        "_tag": "gt",
+        "_src": {"offset": 1099, "length": 16},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 1099, "length": 12},
+          "name": "nCoResidents"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 1114, "length": 1},
+          "theInt": "0"
+        }
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 1117, "length": 159},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 1123, "length": 80},
+            "prompt": "\"Combined yearly income of co-residents (euro):\"",
+            "name": "coResidentIncome",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 1196, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 1208, "length": 64},
+            "prompt": "\"Are all co-residents under 23?\"",
+            "name": "coResidentsYoung",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 1265, "length": 7}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1301, "length": 102},
+      "prompt": "\"Is the property a self-contained home (own entrance, kitchen and toilet)?\"",
+      "name": "selfContained",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1396, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 1406, "length": 149},
+      "cond": {
+        "_tag": "not",
+        "_src": {"offset": 1410, "length": 14},
+        "arg": {
+          "_tag": "var",
+          "_src": {"offset": 1411, "length": 13},
+          "name": "selfContained"
+        }
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 1426, "length": 126},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 1432, "length": 116},
+            "prompt": "\"Is it a recognised room in a care or group home (woonwagen, woonschip or DAEB room)?\"",
+            "name": "recognisedRoom",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 1541, "length": 7}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1555, "length": 73},
+      "prompt": "\"Is the landlord a housing corporation?\"",
+      "name": "corporationLandlord",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1621, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1631, "length": 62},
+      "prompt": "\"Bare rent per month (kale huur, euro):\"",
+      "name": "bareRent",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1686, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1779, "length": 72},
+      "prompt": "\"Do you pay service costs to the landlord?\"",
+      "name": "hasServiceCosts",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1844, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 1854, "length": 914},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 1858, "length": 15},
+        "name": "hasServiceCosts"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 1875, "length": 890},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 1881, "length": 84},
+            "prompt": "\"Energy for shared spaces per month (euro, max 12 counts):\"",
+            "name": "svcEnergy",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 1958, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 1970, "length": 87},
+            "prompt": "\"Cleaning of shared spaces per month (euro, max 12 counts):\"",
+            "name": "svcCleaning",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 2050, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 2062, "length": 86},
+            "prompt": "\"Caretaker (huismeester) per month (euro, max 12 counts):\"",
+            "name": "svcCaretaker",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 2141, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 2153, "length": 85},
+            "prompt": "\"Shared rooms and services per month (euro, max 12 counts):\"",
+            "name": "svcShared",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 2231, "length": 7}
+            }
+          },
+          {
+            "_tag": "computed",
+            "_src": {"offset": 2243, "length": 61},
+            "prompt": "\"Energy capped:\"",
+            "name": "svcEnergyOk",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 2279, "length": 7}
+            },
+            "expr": {
+              "_tag": "leq",
+              "_src": {"offset": 2289, "length": 15},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 2289, "length": 9},
+                "name": "svcEnergy"
+              },
+              "rhs": {
+                "_tag": "integer",
+                "_src": {"offset": 2302, "length": 2},
+                "theInt": "12"
+              }
+            }
+          },
+          {
+            "_tag": "computed",
+            "_src": {"offset": 2309, "length": 67},
+            "prompt": "\"Cleaning capped:\"",
+            "name": "svcCleaningOk",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 2349, "length": 7}
+            },
+            "expr": {
+              "_tag": "leq",
+              "_src": {"offset": 2359, "length": 17},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 2359, "length": 11},
+                "name": "svcCleaning"
+              },
+              "rhs": {
+                "_tag": "integer",
+                "_src": {"offset": 2374, "length": 2},
+                "theInt": "12"
+              }
+            }
+          },
+          {
+            "_tag": "computed",
+            "_src": {"offset": 2381, "length": 70},
+            "prompt": "\"Caretaker capped:\"",
+            "name": "svcCaretakerOk",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 2423, "length": 7}
+            },
+            "expr": {
+              "_tag": "leq",
+              "_src": {"offset": 2433, "length": 18},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 2433, "length": 12},
+                "name": "svcCaretaker"
+              },
+              "rhs": {
+                "_tag": "integer",
+                "_src": {"offset": 2449, "length": 2},
+                "theInt": "12"
+              }
+            }
+          },
+          {
+            "_tag": "computed",
+            "_src": {"offset": 2456, "length": 61},
+            "prompt": "\"Shared capped:\"",
+            "name": "svcSharedOk",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 2492, "length": 7}
+            },
+            "expr": {
+              "_tag": "leq",
+              "_src": {"offset": 2502, "length": 15},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 2502, "length": 9},
+                "name": "svcShared"
+              },
+              "rhs": {
+                "_tag": "integer",
+                "_src": {"offset": 2515, "length": 2},
+                "theInt": "12"
+              }
+            }
+          },
+          {
+            "_tag": "computed",
+            "_src": {"offset": 2522, "length": 125},
+            "prompt": "\"All service costs within their cap:\"",
+            "name": "svcAllOk",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 2576, "length": 7}
+            },
+            "expr": {
+              "_tag": "and",
+              "_src": {"offset": 2586, "length": 61},
+              "lhs": {
+                "_tag": "and",
+                "_src": {"offset": 2586, "length": 46},
+                "lhs": {
+                  "_tag": "and",
+                  "_src": {"offset": 2586, "length": 28},
+                  "lhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 2586, "length": 11},
+                    "name": "svcEnergyOk"
+                  },
+                  "rhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 2601, "length": 13},
+                    "name": "svcCleaningOk"
+                  }
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 2618, "length": 14},
+                  "name": "svcCaretakerOk"
+                }
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 2636, "length": 11},
+                "name": "svcSharedOk"
+              }
+            }
+          },
+          {
+            "_tag": "computed",
+            "_src": {"offset": 2652, "length": 109},
+            "prompt": "\"Declared service costs (euro):\"",
+            "name": "svcTotal",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 2701, "length": 7}
+            },
+            "expr": {
+              "_tag": "add",
+              "_src": {"offset": 2711, "length": 50},
+              "lhs": {
+                "_tag": "add",
+                "_src": {"offset": 2711, "length": 38},
+                "lhs": {
+                  "_tag": "add",
+                  "_src": {"offset": 2711, "length": 23},
+                  "lhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 2711, "length": 9},
+                    "name": "svcEnergy"
+                  },
+                  "rhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 2723, "length": 11},
+                    "name": "svcCleaning"
+                  }
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 2737, "length": 12},
+                  "name": "svcCaretaker"
+                }
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 2752, "length": 9},
+                "name": "svcShared"
+              }
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 2768, "length": 111},
+      "prompt": "\"Eligible rent if every service cost is within its cap (euro):\"",
+      "name": "eligibleRent",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 2850, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 2860, "length": 19},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 2860, "length": 8},
+          "name": "bareRent"
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 2871, "length": 8},
+          "name": "svcTotal"
+        }
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 2906, "length": 75},
+      "prompt": "\"Your expected yearly income (toetsingsinkomen, euro):\"",
+      "name": "income",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 2974, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 2984, "length": 59},
+      "prompt": "\"Your assets on 1 January 2024 (euro):\"",
+      "name": "assets",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 3036, "length": 7}
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 3046, "length": 99},
+      "prompt": "\"Household income (euro):\"",
+      "name": "householdIncome",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 3094, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 3104, "length": 41},
+        "lhs": {
+          "_tag": "add",
+          "_src": {"offset": 3104, "length": 22},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 3104, "length": 6},
+            "name": "income"
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 3113, "length": 13},
+            "name": "partnerIncome"
+          }
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 3129, "length": 16},
+          "name": "coResidentIncome"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 3148, "length": 80},
+      "prompt": "\"Household assets (euro):\"",
+      "name": "householdAssets",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 3196, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 3206, "length": 22},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 3206, "length": 6},
+          "name": "assets"
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 3215, "length": 13},
+          "name": "partnerAssets"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 3249, "length": 110},
+      "prompt": "\"Applicant (and partner) younger than 23:\"",
+      "name": "under23",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 3305, "length": 7}
+      },
+      "expr": {
+        "_tag": "and",
+        "_src": {"offset": 3315, "length": 44},
+        "lhs": {
+          "_tag": "lt",
+          "_src": {"offset": 3315, "length": 8},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 3315, "length": 3},
+            "name": "age"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 3321, "length": 2},
+            "theInt": "23"
+          }
+        },
+        "rhs": {
+          "_tag": "parens",
+          "_src": {"offset": 3327, "length": 32},
+          "arg": {
+            "_tag": "or",
+            "_src": {"offset": 3328, "length": 30},
+            "lhs": {
+              "_tag": "not",
+              "_src": {"offset": 3328, "length": 11},
+              "arg": {
+                "_tag": "var",
+                "_src": {"offset": 3329, "length": 10},
+                "name": "hasPartner"
+              }
+            },
+            "rhs": {
+              "_tag": "lt",
+              "_src": {"offset": 3343, "length": 15},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 3343, "length": 10},
+                "name": "partnerAge"
+              },
+              "rhs": {
+                "_tag": "integer",
+                "_src": {"offset": 3356, "length": 2},
+                "theInt": "23"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 3362, "length": 110},
+      "prompt": "\"Exception for young tenants applies (children in the household):\"",
+      "name": "youngException",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 3449, "length": 7}
+      },
+      "expr": {
+        "_tag": "gt",
+        "_src": {"offset": 3459, "length": 13},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 3459, "length": 9},
+          "name": "nChildren"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 3471, "length": 1},
+          "theInt": "0"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 3475, "length": 97},
+      "prompt": "\"Rent at or below the youth rent limit (452):\"",
+      "name": "belowYouthLimit",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 3543, "length": 7}
+      },
+      "expr": {
+        "_tag": "leq",
+        "_src": {"offset": 3553, "length": 19},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 3553, "length": 12},
+          "name": "eligibleRent"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 3569, "length": 3},
+          "theInt": "452"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 3575, "length": 97},
+      "prompt": "\"Rent at or below the maximum rent limit (880):\"",
+      "name": "belowMaxLimit",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 3643, "length": 7}
+      },
+      "expr": {
+        "_tag": "leq",
+        "_src": {"offset": 3653, "length": 19},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 3653, "length": 12},
+          "name": "eligibleRent"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 3669, "length": 3},
+          "theInt": "880"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 3675, "length": 121},
+      "prompt": "\"Rent passes the rent-limit test:\"",
+      "name": "rentOk",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 3722, "length": 7}
+      },
+      "expr": {
+        "_tag": "and",
+        "_src": {"offset": 3732, "length": 64},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 3732, "length": 13},
+          "name": "belowMaxLimit"
+        },
+        "rhs": {
+          "_tag": "parens",
+          "_src": {"offset": 3749, "length": 47},
+          "arg": {
+            "_tag": "or",
+            "_src": {"offset": 3750, "length": 45},
+            "lhs": {
+              "_tag": "or",
+              "_src": {"offset": 3750, "length": 26},
+              "lhs": {
+                "_tag": "not",
+                "_src": {"offset": 3750, "length": 8},
+                "arg": {
+                  "_tag": "var",
+                  "_src": {"offset": 3751, "length": 7},
+                  "name": "under23"
+                }
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 3762, "length": 14},
+                "name": "youngException"
+              }
+            },
+            "rhs": {
+              "_tag": "var",
+              "_src": {"offset": 3780, "length": 15},
+              "name": "belowYouthLimit"
+            }
+          }
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 3800, "length": 170},
+      "prompt": "\"Assets below the limit (36952 single, 73904 with partner):\"",
+      "name": "assetsOk",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 3875, "length": 7}
+      },
+      "expr": {
+        "_tag": "or",
+        "_src": {"offset": 3885, "length": 85},
+        "lhs": {
+          "_tag": "parens",
+          "_src": {"offset": 3885, "length": 41},
+          "arg": {
+            "_tag": "and",
+            "_src": {"offset": 3886, "length": 39},
+            "lhs": {
+              "_tag": "not",
+              "_src": {"offset": 3886, "length": 11},
+              "arg": {
+                "_tag": "var",
+                "_src": {"offset": 3887, "length": 10},
+                "name": "hasPartner"
+              }
+            },
+            "rhs": {
+              "_tag": "leq",
+              "_src": {"offset": 3901, "length": 24},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 3901, "length": 15},
+                "name": "householdAssets"
+              },
+              "rhs": {
+                "_tag": "integer",
+                "_src": {"offset": 3920, "length": 5},
+                "theInt": "36952"
+              }
+            }
+          }
+        },
+        "rhs": {
+          "_tag": "parens",
+          "_src": {"offset": 3930, "length": 40},
+          "arg": {
+            "_tag": "and",
+            "_src": {"offset": 3931, "length": 38},
+            "lhs": {
+              "_tag": "var",
+              "_src": {"offset": 3931, "length": 10},
+              "name": "hasPartner"
+            },
+            "rhs": {
+              "_tag": "leq",
+              "_src": {"offset": 3945, "length": 24},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 3945, "length": 15},
+                "name": "householdAssets"
+              },
+              "rhs": {
+                "_tag": "integer",
+                "_src": {"offset": 3964, "length": 5},
+                "theInt": "73904"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 3974, "length": 79},
+      "prompt": "\"Property qualifies:\"",
+      "name": "propertyOk",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 4012, "length": 7}
+      },
+      "expr": {
+        "_tag": "or",
+        "_src": {"offset": 4022, "length": 31},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 4022, "length": 13},
+          "name": "selfContained"
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 4039, "length": 14},
+          "name": "recognisedRoom"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 4057, "length": 97},
+      "prompt": "\"Basic conditions met:\"",
+      "name": "basicOk",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 4094, "length": 7}
+      },
+      "expr": {
+        "_tag": "and",
+        "_src": {"offset": 4104, "length": 50},
+        "lhs": {
+          "_tag": "and",
+          "_src": {"offset": 4104, "length": 27},
+          "lhs": {
+            "_tag": "geq",
+            "_src": {"offset": 4104, "length": 9},
+            "lhs": {
+              "_tag": "var",
+              "_src": {"offset": 4104, "length": 3},
+              "name": "age"
+            },
+            "rhs": {
+              "_tag": "integer",
+              "_src": {"offset": 4111, "length": 2},
+              "theInt": "18"
+            }
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 4117, "length": 14},
+            "name": "legalResidence"
+          }
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 4135, "length": 19},
+          "name": "registeredAtAddress"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 4158, "length": 111},
+      "prompt": "\"Eligible for huurtoeslag:\"",
+      "name": "eligible",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 4200, "length": 7}
+      },
+      "expr": {
+        "_tag": "and",
+        "_src": {"offset": 4210, "length": 59},
+        "lhs": {
+          "_tag": "and",
+          "_src": {"offset": 4210, "length": 43},
+          "lhs": {
+            "_tag": "and",
+            "_src": {"offset": 4210, "length": 31},
+            "lhs": {
+              "_tag": "and",
+              "_src": {"offset": 4210, "length": 21},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 4210, "length": 7},
+                "name": "basicOk"
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 4221, "length": 10},
+                "name": "propertyOk"
+              }
+            },
+            "rhs": {
+              "_tag": "var",
+              "_src": {"offset": 4235, "length": 6},
+              "name": "rentOk"
+            }
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 4245, "length": 8},
+            "name": "assetsOk"
+          }
+        },
+        "rhs": {
+          "_tag": "gt",
+          "_src": {"offset": 4257, "length": 12},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 4257, "length": 8},
+            "name": "bareRent"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 4268, "length": 1},
+            "theInt": "0"
+          }
+        }
+      }
+    },
+    {
+      "_tag": "ifThenElse",
+      "_src": {"offset": 4273, "length": 493},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 4277, "length": 8},
+        "name": "eligible"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 4287, "length": 297},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 4293, "length": 38},
+            "prompt": "\"IBAN for payment:\"",
+            "name": "iban",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 4325, "length": 6}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 4336, "length": 70},
+            "prompt": "\"Start month of the rental contract (1-12):\"",
+            "name": "startMonth",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 4399, "length": 7}
+            }
+          },
+          {
+            "_tag": "computed",
+            "_src": {"offset": 4411, "length": 79},
+            "prompt": "\"Months of benefit this year:\"",
+            "name": "monthsOfBenefit",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 4465, "length": 7}
+            },
+            "expr": {
+              "_tag": "sub",
+              "_src": {"offset": 4475, "length": 15},
+              "lhs": {
+                "_tag": "integer",
+                "_src": {"offset": 4475, "length": 2},
+                "theInt": "13"
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 4480, "length": 10},
+                "name": "startMonth"
+              }
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 4495, "length": 85},
+            "prompt": "\"Do you agree to report changes in income within 4 weeks?\"",
+            "name": "agreeReport",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 4573, "length": 7}
+            }
+          }
+        ]
+      },
+      "els": {
+        "_tag": "block",
+        "_src": {"offset": 4590, "length": 176},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 4596, "length": 74},
+            "prompt": "\"Would you like information on other allowances?\"",
+            "name": "wantsInfo",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 4663, "length": 7}
+            }
+          },
+          {
+            "_tag": "ifThen",
+            "_src": {"offset": 4675, "length": 90},
+            "cond": {
+              "_tag": "var",
+              "_src": {"offset": 4679, "length": 9},
+              "name": "wantsInfo"
+            },
+            "then": {
+              "_tag": "block",
+              "_src": {"offset": 4690, "length": 72},
+              "questions": [
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 4698, "length": 58},
+                  "prompt": "\"Email address for information:\"",
+                  "name": "infoEmail",
+                  "type": {
+                    "_tag": "string",
+                    "_src": {"offset": 4750, "length": 6}
+                  }
+                }
+              ]
+            },
+            "empty": ""
+          }
+        ]
+      }
+    }
+  ]
+}

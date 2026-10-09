@@ -1,0 +1,1526 @@
+{
+  "_tag": "form",
+  "_src": {"offset": 288, "length": 7004},
+  "title": "\"American Community Survey, household of 1\"",
+  "questions": [
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 341, "length": 76},
+      "prompt": "\"Number of persons living or staying at this address:\"",
+      "name": "nPersons",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 410, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 499, "length": 104},
+      "prompt": "\"H1. Which best describes this building (house, apartment, mobile home, ...)?\"",
+      "name": "hBuildingType",
+      "type": {
+        "_tag": "string",
+        "_src": {"offset": 597, "length": 6}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 606, "length": 78},
+      "prompt": "\"H2. About when was this building first built (year)?\"",
+      "name": "hYearBuilt",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 677, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 687, "length": 81},
+      "prompt": "\"H3. When did you move into this house or apartment (year)?\"",
+      "name": "hMoveIn",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 761, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 771, "length": 57},
+      "prompt": "\"H4. Is this house on 1 acre or more?\"",
+      "name": "hAcre",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 821, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 831, "length": 101},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 835, "length": 5},
+        "name": "hAcre"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 842, "length": 87},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 848, "length": 77},
+            "prompt": "\"H5. Agricultural sales in the last 12 months (USD):\"",
+            "name": "hAgSales",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 918, "length": 7}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 932, "length": 48},
+      "prompt": "\"H6. Number of bedrooms:\"",
+      "name": "hBedrooms",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 973, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 983, "length": 64},
+      "prompt": "\"H7. Number of rooms (excluding bathrooms):\"",
+      "name": "hRooms",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1040, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1050, "length": 57},
+      "prompt": "\"H8. Has hot and cold running water?\"",
+      "name": "hWater",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1100, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1110, "length": 51},
+      "prompt": "\"H8. Has a bathtub or shower?\"",
+      "name": "hShower",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1154, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1164, "length": 46},
+      "prompt": "\"H8. Has a refrigerator?\"",
+      "name": "hFridge",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1203, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1213, "length": 47},
+      "prompt": "\"H8. Has a stove or range?\"",
+      "name": "hStove",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1253, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1263, "length": 68},
+      "prompt": "\"H9. Has a broadband internet subscription?\"",
+      "name": "hBroadband",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1324, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1334, "length": 82},
+      "prompt": "\"H10. Number of automobiles, vans and trucks kept at home:\"",
+      "name": "hVehicles",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1409, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1419, "length": 64},
+      "prompt": "\"H11. Monthly electricity cost (USD):\"",
+      "name": "hElectricity",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1476, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1486, "length": 48},
+      "prompt": "\"H11. Monthly gas cost (USD):\"",
+      "name": "hGas",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1527, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1537, "length": 65},
+      "prompt": "\"H11. Yearly water and sewer cost (USD):\"",
+      "name": "hWaterCost",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 1595, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 1605, "length": 76},
+      "prompt": "\"H12. Is this house owned (with or without a mortgage)?\"",
+      "name": "hOwned",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 1674, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThenElse",
+      "_src": {"offset": 1684, "length": 636},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 1688, "length": 6},
+        "name": "hOwned"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 1696, "length": 495},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 1702, "length": 69},
+            "prompt": "\"H13. Is there a mortgage on this property?\"",
+            "name": "hMortgage",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 1764, "length": 7}
+            }
+          },
+          {
+            "_tag": "ifThen",
+            "_src": {"offset": 1776, "length": 195},
+            "cond": {
+              "_tag": "var",
+              "_src": {"offset": 1780, "length": 9},
+              "name": "hMortgage"
+            },
+            "then": {
+              "_tag": "block",
+              "_src": {"offset": 1791, "length": 175},
+              "questions": [
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 1799, "length": 72},
+                  "prompt": "\"H14. Monthly mortgage payment (USD):\"",
+                  "name": "hMortgagePayment",
+                  "type": {
+                    "_tag": "integer",
+                    "_src": {"offset": 1864, "length": 7}
+                  }
+                },
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 1878, "length": 82},
+                  "prompt": "\"H15. Does the payment include real estate taxes?\"",
+                  "name": "hMortgageTaxes",
+                  "type": {
+                    "_tag": "boolean",
+                    "_src": {"offset": 1953, "length": 7}
+                  }
+                }
+              ]
+            },
+            "empty": ""
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 1971, "length": 70},
+            "prompt": "\"H16. Yearly real estate taxes (USD):\"",
+            "name": "hRealEstateTaxes",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 2034, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 2046, "length": 79},
+            "prompt": "\"H17. Yearly fire, hazard and flood insurance (USD):\"",
+            "name": "hInsurance",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 2118, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 2130, "length": 57},
+            "prompt": "\"H18. Value of the property (USD):\"",
+            "name": "hValue",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 2180, "length": 7}
+            }
+          }
+        ]
+      },
+      "els": {
+        "_tag": "block",
+        "_src": {"offset": 2197, "length": 123},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 2203, "length": 47},
+            "prompt": "\"H19. Monthly rent (USD):\"",
+            "name": "hRent",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 2243, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 2255, "length": 61},
+            "prompt": "\"H20. Does the rent include meals?\"",
+            "name": "hRentMeals",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 2309, "length": 7}
+            }
+          }
+        ]
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 2323, "length": 164},
+      "prompt": "\"Monthly housing cost (USD):\"",
+      "name": "hMonthlyCost",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 2371, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 2381, "length": 106},
+        "lhs": {
+          "_tag": "add",
+          "_src": {"offset": 2381, "length": 88},
+          "lhs": {
+            "_tag": "add",
+            "_src": {"offset": 2381, "length": 64},
+            "lhs": {
+              "_tag": "add",
+              "_src": {"offset": 2381, "length": 46},
+              "lhs": {
+                "_tag": "add",
+                "_src": {"offset": 2381, "length": 39},
+                "lhs": {
+                  "_tag": "add",
+                  "_src": {"offset": 2381, "length": 24},
+                  "lhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 2381, "length": 16},
+                    "name": "hMortgagePayment"
+                  },
+                  "rhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 2400, "length": 5},
+                    "name": "hRent"
+                  }
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 2408, "length": 12},
+                  "name": "hElectricity"
+                }
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 2423, "length": 4},
+                "name": "hGas"
+              }
+            },
+            "rhs": {
+              "_tag": "div",
+              "_src": {"offset": 2430, "length": 15},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 2430, "length": 10},
+                "name": "hWaterCost"
+              },
+              "rhs": {
+                "_tag": "integer",
+                "_src": {"offset": 2443, "length": 2},
+                "theInt": "12"
+              }
+            }
+          },
+          "rhs": {
+            "_tag": "div",
+            "_src": {"offset": 2448, "length": 21},
+            "lhs": {
+              "_tag": "var",
+              "_src": {"offset": 2448, "length": 16},
+              "name": "hRealEstateTaxes"
+            },
+            "rhs": {
+              "_tag": "integer",
+              "_src": {"offset": 2467, "length": 2},
+              "theInt": "12"
+            }
+          }
+        },
+        "rhs": {
+          "_tag": "div",
+          "_src": {"offset": 2472, "length": 15},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 2472, "length": 10},
+            "name": "hInsurance"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 2485, "length": 2},
+            "theInt": "12"
+          }
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 2490, "length": 84},
+      "prompt": "\"Crowded (more than one person per room):\"",
+      "name": "hCrowded",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 2547, "length": 7}
+      },
+      "expr": {
+        "_tag": "gt",
+        "_src": {"offset": 2557, "length": 17},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 2557, "length": 8},
+          "name": "nPersons"
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 2568, "length": 6},
+          "name": "hRooms"
+        }
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 2657, "length": 44},
+      "prompt": "\"P1 1. Name of person 1:\"",
+      "name": "p1Name",
+      "type": {
+        "_tag": "string",
+        "_src": {"offset": 2695, "length": 6}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 2704, "length": 52},
+      "prompt": "\"P1 3. Is this person female?\"",
+      "name": "p1Female",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 2749, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 2759, "length": 39},
+      "prompt": "\"P1 4. Age (years):\"",
+      "name": "p1Age",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 2791, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 2801, "length": 85},
+      "prompt": "\"P1 5. Is this person of Hispanic, Latino or Spanish origin?\"",
+      "name": "p1Hispanic",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 2879, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 2889, "length": 111},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 2893, "length": 10},
+        "name": "p1Hispanic"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 2905, "length": 92},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 2911, "length": 82},
+            "prompt": "\"P1 5. Origin (Mexican, Puerto Rican, Cuban, ...):\"",
+            "name": "p1HispanicOrigin",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 2987, "length": 6}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 3000, "length": 32},
+      "prompt": "\"P1 6. Race:\"",
+      "name": "p1Race",
+      "type": {
+        "_tag": "string",
+        "_src": {"offset": 3026, "length": 6}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 3035, "length": 56},
+      "prompt": "\"P1 7. Born in the United States?\"",
+      "name": "p1BornUS",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 3084, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 3094, "length": 239},
+      "cond": {
+        "_tag": "not",
+        "_src": {"offset": 3098, "length": 9},
+        "arg": {
+          "_tag": "var",
+          "_src": {"offset": 3099, "length": 8},
+          "name": "p1BornUS"
+        }
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 3109, "length": 221},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 3115, "length": 54},
+            "prompt": "\"P1 7. Country of birth:\"",
+            "name": "p1BirthCountry",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 3163, "length": 6}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 3174, "length": 68},
+            "prompt": "\"P1 8. U.S. citizen by naturalization?\"",
+            "name": "p1Naturalized",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 3235, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 3247, "length": 79},
+            "prompt": "\"P1 9. Year this person came to live in the U.S.:\"",
+            "name": "p1YearArrived",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 3319, "length": 7}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 3333, "length": 211},
+      "cond": {
+        "_tag": "geq",
+        "_src": {"offset": 3337, "length": 10},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 3337, "length": 5},
+          "name": "p1Age"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 3346, "length": 1},
+          "theInt": "3"
+        }
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 3349, "length": 192},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 3355, "length": 83},
+            "prompt": "\"P1 10. Attended school or college in the last 3 months?\"",
+            "name": "p1InSchool",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 3431, "length": 7}
+            }
+          },
+          {
+            "_tag": "ifThen",
+            "_src": {"offset": 3443, "length": 97},
+            "cond": {
+              "_tag": "var",
+              "_src": {"offset": 3447, "length": 10},
+              "name": "p1InSchool"
+            },
+            "then": {
+              "_tag": "block",
+              "_src": {"offset": 3459, "length": 78},
+              "questions": [
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 3467, "length": 64},
+                  "prompt": "\"P1 10. Grade or level attending:\"",
+                  "name": "p1SchoolGrade",
+                  "type": {
+                    "_tag": "string",
+                    "_src": {"offset": 3525, "length": 6}
+                  }
+                }
+              ]
+            },
+            "empty": ""
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 3544, "length": 277},
+      "cond": {
+        "_tag": "geq",
+        "_src": {"offset": 3548, "length": 10},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 3548, "length": 5},
+          "name": "p1Age"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 3557, "length": 1},
+          "theInt": "5"
+        }
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 3560, "length": 258},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 3566, "length": 85},
+            "prompt": "\"P1 12. Speaks a language other than English at home?\"",
+            "name": "p1OtherLanguage",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 3644, "length": 7}
+            }
+          },
+          {
+            "_tag": "ifThen",
+            "_src": {"offset": 3656, "length": 161},
+            "cond": {
+              "_tag": "var",
+              "_src": {"offset": 3660, "length": 15},
+              "name": "p1OtherLanguage"
+            },
+            "then": {
+              "_tag": "block",
+              "_src": {"offset": 3677, "length": 137},
+              "questions": [
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 3685, "length": 51},
+                  "prompt": "\"P1 12. Which language?\"",
+                  "name": "p1Language",
+                  "type": {
+                    "_tag": "string",
+                    "_src": {"offset": 3730, "length": 6}
+                  }
+                },
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 3743, "length": 65},
+                  "prompt": "\"P1 12. Speaks English very well?\"",
+                  "name": "p1EnglishWell",
+                  "type": {
+                    "_tag": "boolean",
+                    "_src": {"offset": 3801, "length": 7}
+                  }
+                }
+              ]
+            },
+            "empty": ""
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 3821, "length": 67},
+      "prompt": "\"P1 15. Lived in this house one year ago?\"",
+      "name": "p1SameHouse",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 3881, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 3891, "length": 84},
+      "prompt": "\"P1 16. Covered by health insurance through an employer?\"",
+      "name": "p1InsEmployer",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 3968, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 3978, "length": 56},
+      "prompt": "\"P1 16. Covered by Medicare?\"",
+      "name": "p1InsMedicare",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 4027, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 4037, "length": 92},
+      "prompt": "\"P1 16. Covered by Medicaid or other government assistance plan?\"",
+      "name": "p1InsMedicaid",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 4122, "length": 7}
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 4132, "length": 93},
+      "prompt": "\"P1 Uninsured:\"",
+      "name": "p1Uninsured",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 4165, "length": 7}
+      },
+      "expr": {
+        "_tag": "and",
+        "_src": {"offset": 4175, "length": 50},
+        "lhs": {
+          "_tag": "and",
+          "_src": {"offset": 4175, "length": 32},
+          "lhs": {
+            "_tag": "not",
+            "_src": {"offset": 4175, "length": 14},
+            "arg": {
+              "_tag": "var",
+              "_src": {"offset": 4176, "length": 13},
+              "name": "p1InsEmployer"
+            }
+          },
+          "rhs": {
+            "_tag": "not",
+            "_src": {"offset": 4193, "length": 14},
+            "arg": {
+              "_tag": "var",
+              "_src": {"offset": 4194, "length": 13},
+              "name": "p1InsMedicare"
+            }
+          }
+        },
+        "rhs": {
+          "_tag": "not",
+          "_src": {"offset": 4211, "length": 14},
+          "arg": {
+            "_tag": "var",
+            "_src": {"offset": 4212, "length": 13},
+            "name": "p1InsMedicaid"
+          }
+        }
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 4228, "length": 102},
+      "prompt": "\"P1 17. Difficulty concentrating, remembering or making decisions?\"",
+      "name": "p1DifficultyCognitive",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 4323, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 4333, "length": 80},
+      "prompt": "\"P1 18. Difficulty walking or climbing stairs?\"",
+      "name": "p1DifficultyWalking",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 4406, "length": 7}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 4416, "length": 166},
+      "cond": {
+        "_tag": "geq",
+        "_src": {"offset": 4420, "length": 11},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 4420, "length": 5},
+          "name": "p1Age"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 4429, "length": 2},
+          "theInt": "15"
+        }
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 4433, "length": 146},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 4439, "length": 52},
+            "prompt": "\"P1 20. Currently married?\"",
+            "name": "p1Married",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 4484, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 4496, "length": 79},
+            "prompt": "\"P1 21. Highest degree or level of school completed:\"",
+            "name": "p1Education",
+            "type": {
+              "_tag": "string",
+              "_src": {"offset": 4569, "length": 6}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 4582, "length": 789},
+      "cond": {
+        "_tag": "geq",
+        "_src": {"offset": 4586, "length": 11},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 4586, "length": 5},
+          "name": "p1Age"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 4595, "length": 2},
+          "theInt": "16"
+        }
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 4599, "length": 769},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 4605, "length": 66},
+            "prompt": "\"P1 30. Worked for pay last week?\"",
+            "name": "p1WorkedLastWeek",
+            "type": {
+              "_tag": "boolean",
+              "_src": {"offset": 4664, "length": 7}
+            }
+          },
+          {
+            "_tag": "ifThenElse",
+            "_src": {"offset": 4676, "length": 688},
+            "cond": {
+              "_tag": "var",
+              "_src": {"offset": 4680, "length": 16},
+              "name": "p1WorkedLastWeek"
+            },
+            "then": {
+              "_tag": "block",
+              "_src": {"offset": 4698, "length": 566},
+              "questions": [
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 4706, "length": 69},
+                  "prompt": "\"P1 31. Address of main place of work:\"",
+                  "name": "p1WorkAddress",
+                  "type": {
+                    "_tag": "string",
+                    "_src": {"offset": 4769, "length": 6}
+                  }
+                },
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 4782, "length": 76},
+                  "prompt": "\"P1 33. Minutes to get from home to work:\"",
+                  "name": "p1CommuteMinutes",
+                  "type": {
+                    "_tag": "integer",
+                    "_src": {"offset": 4851, "length": 7}
+                  }
+                },
+                {
+                  "_tag": "computed",
+                  "_src": {"offset": 4865, "length": 99},
+                  "prompt": "\"P1 33. Long commute (60 minutes or more):\"",
+                  "name": "p1LongCommute",
+                  "type": {
+                    "_tag": "boolean",
+                    "_src": {"offset": 4932, "length": 7}
+                  },
+                  "expr": {
+                    "_tag": "geq",
+                    "_src": {"offset": 4942, "length": 22},
+                    "lhs": {
+                      "_tag": "var",
+                      "_src": {"offset": 4942, "length": 16},
+                      "name": "p1CommuteMinutes"
+                    },
+                    "rhs": {
+                      "_tag": "integer",
+                      "_src": {"offset": 4962, "length": 2},
+                      "theInt": "60"
+                    }
+                  }
+                },
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 4971, "length": 62},
+                  "prompt": "\"P1 41. Usual hours worked per week:\"",
+                  "name": "p1Hours",
+                  "type": {
+                    "_tag": "integer",
+                    "_src": {"offset": 5026, "length": 7}
+                  }
+                },
+                {
+                  "_tag": "computed",
+                  "_src": {"offset": 5040, "length": 69},
+                  "prompt": "\"P1 41. Works full time:\"",
+                  "name": "p1FullTime",
+                  "type": {
+                    "_tag": "boolean",
+                    "_src": {"offset": 5086, "length": 7}
+                  },
+                  "expr": {
+                    "_tag": "geq",
+                    "_src": {"offset": 5096, "length": 13},
+                    "lhs": {
+                      "_tag": "var",
+                      "_src": {"offset": 5096, "length": 7},
+                      "name": "p1Hours"
+                    },
+                    "rhs": {
+                      "_tag": "integer",
+                      "_src": {"offset": 5107, "length": 2},
+                      "theInt": "35"
+                    }
+                  }
+                },
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 5116, "length": 71},
+                  "prompt": "\"P1 44. Self-employed in own business?\"",
+                  "name": "p1SelfEmployed",
+                  "type": {
+                    "_tag": "boolean",
+                    "_src": {"offset": 5180, "length": 7}
+                  }
+                },
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 5194, "length": 64},
+                  "prompt": "\"P1 46. Kind of work (occupation):\"",
+                  "name": "p1Occupation",
+                  "type": {
+                    "_tag": "string",
+                    "_src": {"offset": 5252, "length": 6}
+                  }
+                }
+              ]
+            },
+            "els": {
+              "_tag": "block",
+              "_src": {"offset": 5270, "length": 94},
+              "questions": [
+                {
+                  "_tag": "answerable",
+                  "_src": {"offset": 5278, "length": 80},
+                  "prompt": "\"P1 36. Looking for work in the last 4 weeks?\"",
+                  "name": "p1LookingForWork",
+                  "type": {
+                    "_tag": "boolean",
+                    "_src": {"offset": 5351, "length": 7}
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 5371, "length": 677},
+      "cond": {
+        "_tag": "geq",
+        "_src": {"offset": 5375, "length": 11},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 5375, "length": 5},
+          "name": "p1Age"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 5384, "length": 2},
+          "theInt": "15"
+        }
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 5388, "length": 657},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 5394, "length": 83},
+            "prompt": "\"P1 47a. Wages, salary, commissions, bonuses or tips (USD):\"",
+            "name": "p1Wages",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 5470, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 5482, "length": 70},
+            "prompt": "\"P1 47b. Self-employment income (USD):\"",
+            "name": "p1SelfEmpIncome",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 5545, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 5557, "length": 81},
+            "prompt": "\"P1 47c. Interest, dividends, net rental income (USD):\"",
+            "name": "p1Interest",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 5631, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 5643, "length": 87},
+            "prompt": "\"P1 47d. Social Security or Railroad Retirement (USD):\"",
+            "name": "p1SocialSecurity",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 5723, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 5735, "length": 66},
+            "prompt": "\"P1 47e. Supplemental Security Income (USD):\"",
+            "name": "p1Ssi",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 5794, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 5806, "length": 70},
+            "prompt": "\"P1 47f. Public assistance or welfare (USD):\"",
+            "name": "p1Welfare",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 5869, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 5881, "length": 85},
+            "prompt": "\"P1 47g. Retirement, survivor or disability pensions (USD):\"",
+            "name": "p1Pension",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 5959, "length": 7}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 5971, "length": 70},
+            "prompt": "\"P1 47h. Any other regular income (USD):\"",
+            "name": "p1OtherIncome",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 6034, "length": 7}
+            }
+          }
+        ]
+      },
+      "empty": ""
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 6048, "length": 180},
+      "prompt": "\"P1 48. Total income in the past 12 months (USD):\"",
+      "name": "p1Income",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 6113, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 6123, "length": 105},
+        "lhs": {
+          "_tag": "add",
+          "_src": {"offset": 6123, "length": 89},
+          "lhs": {
+            "_tag": "add",
+            "_src": {"offset": 6123, "length": 77},
+            "lhs": {
+              "_tag": "add",
+              "_src": {"offset": 6123, "length": 65},
+              "lhs": {
+                "_tag": "add",
+                "_src": {"offset": 6123, "length": 57},
+                "lhs": {
+                  "_tag": "add",
+                  "_src": {"offset": 6123, "length": 38},
+                  "lhs": {
+                    "_tag": "add",
+                    "_src": {"offset": 6123, "length": 25},
+                    "lhs": {
+                      "_tag": "var",
+                      "_src": {"offset": 6123, "length": 7},
+                      "name": "p1Wages"
+                    },
+                    "rhs": {
+                      "_tag": "var",
+                      "_src": {"offset": 6133, "length": 15},
+                      "name": "p1SelfEmpIncome"
+                    }
+                  },
+                  "rhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 6151, "length": 10},
+                    "name": "p1Interest"
+                  }
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 6164, "length": 16},
+                  "name": "p1SocialSecurity"
+                }
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 6183, "length": 5},
+                "name": "p1Ssi"
+              }
+            },
+            "rhs": {
+              "_tag": "var",
+              "_src": {"offset": 6191, "length": 9},
+              "name": "p1Welfare"
+            }
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 6203, "length": 9},
+            "name": "p1Pension"
+          }
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 6215, "length": 13},
+          "name": "p1OtherIncome"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 6231, "length": 89},
+      "prompt": "\"P1 Receives public assistance:\"",
+      "name": "p1OnAssistance",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 6284, "length": 7}
+      },
+      "expr": {
+        "_tag": "or",
+        "_src": {"offset": 6294, "length": 26},
+        "lhs": {
+          "_tag": "gt",
+          "_src": {"offset": 6294, "length": 9},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 6294, "length": 5},
+            "name": "p1Ssi"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 6302, "length": 1},
+            "theInt": "0"
+          }
+        },
+        "rhs": {
+          "_tag": "gt",
+          "_src": {"offset": 6307, "length": 13},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 6307, "length": 9},
+            "name": "p1Welfare"
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 6319, "length": 1},
+            "theInt": "0"
+          }
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 6323, "length": 70},
+      "prompt": "\"P1 Household income so far (USD):\"",
+      "name": "p1HhIncome",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 6375, "length": 7}
+      },
+      "expr": {
+        "_tag": "var",
+        "_src": {"offset": 6385, "length": 8},
+        "name": "p1Income"
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 6396, "length": 84},
+      "prompt": "\"P1 Workers in the household so far:\"",
+      "name": "p1HhWorkers",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 6451, "length": 7}
+      },
+      "expr": {
+        "_tag": "div",
+        "_src": {"offset": 6461, "length": 19},
+        "lhs": {
+          "_tag": "parens",
+          "_src": {"offset": 6461, "length": 14},
+          "arg": {
+            "_tag": "add",
+            "_src": {"offset": 6462, "length": 12},
+            "lhs": {
+              "_tag": "var",
+              "_src": {"offset": 6462, "length": 7},
+              "name": "p1Hours"
+            },
+            "rhs": {
+              "_tag": "integer",
+              "_src": {"offset": 6472, "length": 2},
+              "theInt": "98"
+            }
+          }
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 6478, "length": 2},
+          "theInt": "99"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 6572, "length": 60},
+      "prompt": "\"Household income (USD):\"",
+      "name": "hhIncome",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 6612, "length": 7}
+      },
+      "expr": {
+        "_tag": "var",
+        "_src": {"offset": 6622, "length": 10},
+        "name": "p1HhIncome"
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 6635, "length": 60},
+      "prompt": "\"Workers in household:\"",
+      "name": "hhWorkers",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 6674, "length": 7}
+      },
+      "expr": {
+        "_tag": "var",
+        "_src": {"offset": 6684, "length": 11},
+        "name": "p1HhWorkers"
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 6698, "length": 107},
+      "prompt": "\"Housing cost burden (percent of income):\"",
+      "name": "hhBurden",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 6755, "length": 7}
+      },
+      "expr": {
+        "_tag": "div",
+        "_src": {"offset": 6765, "length": 40},
+        "lhs": {
+          "_tag": "mul",
+          "_src": {"offset": 6765, "length": 23},
+          "lhs": {
+            "_tag": "mul",
+            "_src": {"offset": 6765, "length": 17},
+            "lhs": {
+              "_tag": "var",
+              "_src": {"offset": 6765, "length": 12},
+              "name": "hMonthlyCost"
+            },
+            "rhs": {
+              "_tag": "integer",
+              "_src": {"offset": 6780, "length": 2},
+              "theInt": "12"
+            }
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 6785, "length": 3},
+            "theInt": "100"
+          }
+        },
+        "rhs": {
+          "_tag": "parens",
+          "_src": {"offset": 6791, "length": 14},
+          "arg": {
+            "_tag": "add",
+            "_src": {"offset": 6792, "length": 12},
+            "lhs": {
+              "_tag": "var",
+              "_src": {"offset": 6792, "length": 8},
+              "name": "hhIncome"
+            },
+            "rhs": {
+              "_tag": "integer",
+              "_src": {"offset": 6803, "length": 1},
+              "theInt": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 6808, "length": 93},
+      "prompt": "\"Cost-burdened household (more than 30 percent):\"",
+      "name": "hhCostBurdened",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 6878, "length": 7}
+      },
+      "expr": {
+        "_tag": "gt",
+        "_src": {"offset": 6888, "length": 13},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 6888, "length": 8},
+          "name": "hhBurden"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 6899, "length": 2},
+          "theInt": "30"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 6904, "length": 106},
+      "prompt": "\"Severely cost-burdened household (more than 50 percent):\"",
+      "name": "hhSeverelyBurdened",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 6987, "length": 7}
+      },
+      "expr": {
+        "_tag": "gt",
+        "_src": {"offset": 6997, "length": 13},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 6997, "length": 8},
+          "name": "hhBurden"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 7008, "length": 2},
+          "theInt": "50"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 7013, "length": 114},
+      "prompt": "\"2023 poverty guideline for this household size (USD):\"",
+      "name": "hhPovertyLine",
+      "type": {
+        "_tag": "integer",
+        "_src": {"offset": 7088, "length": 7}
+      },
+      "expr": {
+        "_tag": "add",
+        "_src": {"offset": 7098, "length": 29},
+        "lhs": {
+          "_tag": "integer",
+          "_src": {"offset": 7098, "length": 5},
+          "theInt": "14580"
+        },
+        "rhs": {
+          "_tag": "mul",
+          "_src": {"offset": 7106, "length": 21},
+          "lhs": {
+            "_tag": "parens",
+            "_src": {"offset": 7106, "length": 14},
+            "arg": {
+              "_tag": "sub",
+              "_src": {"offset": 7107, "length": 12},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 7107, "length": 8},
+                "name": "nPersons"
+              },
+              "rhs": {
+                "_tag": "integer",
+                "_src": {"offset": 7118, "length": 1},
+                "theInt": "1"
+              }
+            }
+          },
+          "rhs": {
+            "_tag": "integer",
+            "_src": {"offset": 7123, "length": 4},
+            "theInt": "5140"
+          }
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 7130, "length": 87},
+      "prompt": "\"Household below the poverty guideline:\"",
+      "name": "hhPoor",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 7183, "length": 7}
+      },
+      "expr": {
+        "_tag": "lt",
+        "_src": {"offset": 7193, "length": 24},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 7193, "length": 8},
+          "name": "hhIncome"
+        },
+        "rhs": {
+          "_tag": "var",
+          "_src": {"offset": 7204, "length": 13},
+          "name": "hhPovertyLine"
+        }
+      }
+    },
+    {
+      "_tag": "computed",
+      "_src": {"offset": 7220, "length": 70},
+      "prompt": "\"No worker in the household:\"",
+      "name": "hhNoWorker",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 7266, "length": 7}
+      },
+      "expr": {
+        "_tag": "eq",
+        "_src": {"offset": 7276, "length": 14},
+        "lhs": {
+          "_tag": "var",
+          "_src": {"offset": 7276, "length": 9},
+          "name": "hhWorkers"
+        },
+        "rhs": {
+          "_tag": "integer",
+          "_src": {"offset": 7289, "length": 1},
+          "theInt": "0"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+// Source: structure of the Uniform Residential Loan Application
+// (Fannie Mae Form 1003 / Freddie Mac Form 65, revised 2021), sections 1 to 8.
+// Field names follow the form's section numbering (s1a = section 1a, ...).
+// Ratio thresholds (front-end 28 percent, back-end 43 percent, LTV 80 percent)
+// are the usual underwriting guidelines, not part of the form.
+form "Uniform Residential Loan Application" {
+
+  // ---------------------------------------------------------------- Section 1a
+  "1a. Borrower name:"
+    s1aName: string
+  "1a. Social Security Number:"
+    s1aSsn: string
+  "1a. Age (years):"
+    s1aAge: integer
+  "1a. U.S. citizen?"
+    s1aCitizen: boolean
+  if (!s1aCitizen) {
+    "1a. Permanent resident alien?"
+      s1aPermanentResident: boolean
+    "1a. Visa type (non-permanent residents):"
+      s1aVisa: string
+  }
+  "1a. Applying for joint credit with a co-borrower?"
+    s1aJoint: boolean
+  if (s1aJoint) {
+    "1a. Co-borrower name:"
+      s1aCoName: string
+    "1a. Co-borrower Social Security Number:"
+      s1aCoSsn: string
+  }
+  "1a. Married?"
+    s1aMarried: boolean
+  "1a. Number of dependents (not listed by another borrower):"
+    s1aDependents: integer
+  "1a. Home phone:"
+    s1aPhone: string
+  "1a. Email:"
+    s1aEmail: string
+  "1a. Current address:"
+    s1aAddress: string
+  "1a. Years at current address:"
+    s1aYearsAtAddress: integer
+  "1a. Do you own your current home?"
+    s1aOwnsHome: boolean
+  if (!s1aOwnsHome) {
+    "1a. Monthly rent (USD):"
+      s1aRent: integer
+  }
+  if (s1aYearsAtAddress < 2) {
+    "1a. Former address (less than 2 years at current):"
+      s1aFormerAddress: string
+    "1a. Years at former address:"
+      s1aFormerYears: integer
+  }
+
+  // ---------------------------------------------------------------- Section 1b
+  "1b. Are you currently employed or self-employed?"
+    s1bEmployed: boolean
+  if (s1bEmployed) {
+    "1b. Employer or business name:"
+      s1bEmployer: string
+    "1b. Position or title:"
+      s1bPosition: string
+    "1b. Years in this line of work:"
+      s1bYearsInLine: integer
+    "1b. Are you self-employed or own 25 percent or more of the business?"
+      s1bSelfEmployed: boolean
+    if (s1bSelfEmployed) {
+      "1b. Ownership share of 25 percent or more?"
+        s1bOwnership25: boolean
+      "1b. Monthly income or loss from the business (USD):"
+        s1bBusinessIncome: integer
+    } else {
+      "1b. Gross monthly base pay (USD):"
+        s1bBase: integer
+      "1b. Gross monthly overtime (USD):"
+        s1bOvertime: integer
+      "1b. Gross monthly bonus (USD):"
+        s1bBonus: integer
+      "1b. Gross monthly commission (USD):"
+        s1bCommission: integer
+      "1b. Gross monthly military entitlements (USD):"
+        s1bMilitary: integer
+      "1b. Gross monthly other (USD):"
+        s1bOther: integer
+    }
+    "1b. Total monthly income from this employment (USD):"
+      s1bTotal: integer = s1bBusinessIncome + s1bBase + s1bOvertime + s1bBonus + s1bCommission + s1bMilitary + s1bOther
+  }
+
+  // ---------------------------------------------------------------- Section 1c
+  "1c. Do you have additional employment?"
+    s1cHasAdditional: boolean
+  if (s1cHasAdditional) {
+    "1c. Additional employer name:"
+      s1cEmployer: string
+    "1c. Gross monthly base pay (USD):"
+      s1cBase: integer
+    "1c. Gross monthly overtime (USD):"
+      s1cOvertime: integer
+    "1c. Gross monthly bonus (USD):"
+      s1cBonus: integer
+    "1c. Total monthly income from additional employment (USD):"
+      s1cTotal: integer = s1cBase + s1cOvertime + s1cBonus
+  }
+
+  // ---------------------------------------------------------------- Section 1d
+  "1d. Less than 2 years at current employment?"
+    s1dHasPrevious: boolean = s1bYearsInLine < 2
+  if (s1dHasPrevious) {
+    "1d. Previous employer name:"
+      s1dEmployer: string
+    "1d. Previous position:"
+      s1dPosition: string
+    "1d. Previous gross monthly income (USD):"
+      s1dIncome: integer
+  }
+
+  // ---------------------------------------------------------------- Section 1e
+  "1e. Monthly alimony received (USD):"
+    s1eAlimony: integer
+  "1e. Monthly child support received (USD):"
+    s1eChildSupport: integer
+  "1e. Monthly interest and dividends (USD):"
+    s1eDividends: integer
+  "1e. Monthly retirement income, pension or IRA (USD):"
+    s1eRetirement: integer
+  "1e. Monthly Social Security (USD):"
+    s1eSocialSecurity: integer
+  "1e. Monthly disability income (USD):"
+    s1eDisability: integer
+  "1e. Monthly rental income from other properties (USD):"
+    s1eRental: integer
+  "1e. Monthly other income (USD):"
+    s1eOther: integer
+  "1e. Total other income (USD):"
+    s1eTotal: integer = s1eAlimony + s1eChildSupport + s1eDividends + s1eRetirement + s1eSocialSecurity + s1eDisability + s1eRental + s1eOther
+
+  "Total monthly qualifying income (USD):"
+    totalIncome: integer = s1bTotal + s1cTotal + s1eTotal
+
+  // ---------------------------------------------------------------- Section 2a
+  "2a. Checking account balance (USD):"
+    s2aChecking: integer
+  "2a. Savings account balance (USD):"
+    s2aSavings: integer
+  "2a. Money market and CDs (USD):"
+    s2aMoneyMarket: integer
+  "2a. Stocks, bonds and mutual funds (USD):"
+    s2aStocks: integer
+  "2a. Retirement accounts (USD):"
+    s2aRetirement: integer
+  "2a. Cash value of life insurance (USD):"
+    s2aLifeInsurance: integer
+  "2a. Total accounts (USD):"
+    s2aTotal: integer = s2aChecking + s2aSavings + s2aMoneyMarket + s2aStocks + s2aRetirement + s2aLifeInsurance
+
+  // ---------------------------------------------------------------- Section 2b
+  "2b. Earnest money deposit (USD):"
+    s2bEarnest: integer
+  "2b. Proceeds from sale of non-real-estate asset (USD):"
+    s2bAssetSale: integer
+  "2b. Gift or grant not yet deposited (USD):"
+    s2bGift: integer
+  if (s2bGift > 0) {
+    "2b. Source of the gift (relative, employer, nonprofit, ...):"
+      s2bGiftSource: string
+    "2b. Gift letter provided?"
+      s2bGiftLetter: boolean
+  }
+  "2b. Total other assets (USD):"
+    s2bTotal: integer = s2bEarnest + s2bAssetSale + s2bGift
+  "Total assets (USD):"
+    totalAssets: integer = s2aTotal + s2bTotal
+
+  // ---------------------------------------------------------------- Section 2c
+  "2c. Monthly auto loan payments (USD):"
+    s2cAuto: integer
+  "2c. Auto loan unpaid balance (USD):"
+    s2cAutoBalance: integer
+  "2c. Monthly credit card minimum payments (USD):"
+    s2cCards: integer
+  "2c. Credit card balance (USD):"
+    s2cCardsBalance: integer
+  "2c. Monthly student loan payments (USD):"
+    s2cStudent: integer
+  "2c. Student loan unpaid balance (USD):"
+    s2cStudentBalance: integer
+  "2c. Monthly installment and other loan payments (USD):"
+    s2cInstallment: integer
+  "2c. Will any of these be paid off at or before closing?"
+    s2cPaidOff: boolean
+  if (s2cPaidOff) {
+    "2c. Monthly payment amount to be paid off (USD):"
+      s2cPaidOffPayment: integer
+  }
+
+  // ---------------------------------------------------------------- Section 2d
+  "2d. Monthly alimony paid (USD):"
+    s2dAlimony: integer
+  "2d. Monthly child support paid (USD):"
+    s2dChildSupport: integer
+  "2d. Monthly job-related expenses (USD):"
+    s2dJobExpenses: integer
+  "Total monthly debt payments (USD):"
+    totalDebt: integer = s2cAuto + s2cCards + s2cStudent + s2cInstallment - s2cPaidOffPayment + s2dAlimony + s2dChildSupport + s2dJobExpenses
+  "Total liabilities balance (USD):"
+    totalLiabilities: integer = s2cAutoBalance + s2cCardsBalance + s2cStudentBalance
+
+  // ---------------------------------------------------------------- Section 3
+  "3. Do you own any real estate?"
+    s3OwnsRealEstate: boolean
+  if (s3OwnsRealEstate) {
+    "3a. Property address:"
+      s3aAddress: string
+    "3a. Property value (USD):"
+      s3aValue: integer
+    "3a. Status: will the property be sold before closing?"
+      s3aWillSell: boolean
+    "3a. Is it an investment property?"
+      s3aInvestment: boolean
+    "3a. Monthly insurance, taxes and association dues (USD):"
+      s3aCarrying: integer
+    "3a. Mortgage unpaid balance (USD):"
+      s3aMortgageBalance: integer
+    "3a. Monthly mortgage payment (USD):"
+      s3aMortgagePayment: integer
+    if (s3aInvestment) {
+      "3a. Monthly rental income (USD):"
+        s3aRentIncome: integer
+      "3a. Net monthly rental income, 75 percent of gross minus costs (USD):"
+        s3aNetRent: integer = s3aRentIncome * 75 / 100 - s3aCarrying - s3aMortgagePayment
+    }
+    "3a. Equity in this property (USD):"
+      s3aEquity: integer = s3aValue - s3aMortgageBalance
+    "3. Do you own a second property?"
+      s3HasSecond: boolean
+    if (s3HasSecond) {
+      "3b. Second property address:"
+        s3bAddress: string
+      "3b. Second property value (USD):"
+        s3bValue: integer
+      "3b. Second mortgage unpaid balance (USD):"
+        s3bMortgageBalance: integer
+      "3b. Second monthly mortgage payment (USD):"
+        s3bMortgagePayment: integer
+      "3b. Equity in second property (USD):"
+        s3bEquity: integer = s3bValue - s3bMortgageBalance
+    }
+  }
+  "Housing debt on other properties (USD per month):"
+    otherHousingDebt: integer = s3aMortgagePayment + s3bMortgagePayment
+
+  // ---------------------------------------------------------------- Section 4a
+  "4a. Loan amount (USD):"
+    s4aLoanAmount: integer
+  "4a. Loan purpose is purchase (otherwise refinance)?"
+    s4aPurchase: boolean
+  if (s4aPurchase) {
+    "4a. Purchase price (USD):"
+      s4aPrice: integer
+    "4a. Down payment (USD):"
+      s4aDownPayment: integer = s4aPrice - s4aLoanAmount
+    "4a. Enough assets for the down payment:"
+      s4aFundsOk: boolean = totalAssets >= s4aDownPayment
+  } else {
+    "4a. Refinance: cash-out?"
+      s4aCashOut: boolean
+    "4a. Current appraised value (USD):"
+      s4aAppraised: integer
+    if (s4aCashOut) {
+      "4a. Cash-out amount requested (USD):"
+        s4aCashOutAmount: integer
+    }
+  }
+  "4a. Property address:"
+    s4aPropertyAddress: string
+  "4a. Number of units (1-4):"
+    s4aUnits: integer
+  "4a. Occupancy is primary residence?"
+    s4aPrimary: boolean
+  if (!s4aPrimary) {
+    "4a. Occupancy is second home (otherwise investment)?"
+      s4aSecondHome: boolean
+  }
+  "4a. Is the property a manufactured home?"
+    s4aManufactured: boolean
+  "4a. Is the property a mixed-use property?"
+    s4aMixedUse: boolean
+  "4a. Property value for LTV (USD):"
+    propertyValue: integer = s4aPrice + s4aAppraised
+
+  // ---------------------------------------------------------------- Section 4b-4d
+  "4b. Is there another mortgage loan on this property?"
+    s4bOtherLoan: boolean
+  if (s4bOtherLoan) {
+    "4b. Other lien monthly payment (USD):"
+      s4bPayment: integer
+    "4b. Other lien amount (USD):"
+      s4bAmount: integer
+  }
+  "4c. Expected monthly rental income from the new property (USD):"
+    s4cRentalIncome: integer
+  "4d. Gifts or grants for this loan (USD):"
+    s4dGifts: integer
+
+  // ---------------------------------------------------------------- Proposed housing expense
+  "Proposed monthly principal and interest (USD):"
+    pePrincipalInterest: integer
+  "Proposed monthly homeowner insurance (USD):"
+    peInsurance: integer
+  "Proposed monthly property taxes (USD):"
+    peTaxes: integer
+  "Proposed monthly mortgage insurance (USD):"
+    peMortgageInsurance: integer
+  "Proposed monthly association dues (USD):"
+    peDues: integer
+  "Proposed total monthly housing expense (USD):"
+    peTotal: integer = pePrincipalInterest + peInsurance + peTaxes + peMortgageInsurance + peDues + s4bPayment
+
+  // ---------------------------------------------------------------- Section 5
+  "5a.A. Will you occupy the property as your primary residence?"
+    s5aOccupy: boolean
+  if (s5aOccupy) {
+    "5a.A. Have you had an ownership interest in another property in the last 3 years?"
+      s5aOwnershipInterest: boolean
+  }
+  "5a.B. Family relationship or business affiliation with the seller?"
+    s5aAffiliation: boolean
+  "5a.C. Are you borrowing money for this transaction not disclosed elsewhere?"
+    s5aUndisclosedBorrowing: boolean
+  if (s5aUndisclosedBorrowing) {
+    "5a.C. Amount of that money (USD):"
+      s5aUndisclosedAmount: integer
+  }
+  "5a.D. Applying for another mortgage or new credit before closing?"
+    s5aNewCredit: boolean
+  "5a.E. Will this property be subject to a priority lien (e.g. PACE)?"
+    s5aPriorityLien: boolean
+  "5b.F. Are you a co-signer or guarantor on undisclosed debt?"
+    s5bCoSigner: boolean
+  "5b.G. Are there outstanding judgments against you?"
+    s5bJudgments: boolean
+  "5b.H. Are you delinquent or in default on a federal debt?"
+    s5bFederalDefault: boolean
+  "5b.I. Are you a party to a lawsuit with potential financial liability?"
+    s5bLawsuit: boolean
+  "5b.J. Have you conveyed title in lieu of foreclosure in the past 7 years?"
+    s5bDeedInLieu: boolean
+  "5b.K. Pre-foreclosure or short sale in the past 7 years?"
+    s5bShortSale: boolean
+  "5b.L. Has property been foreclosed upon in the last 7 years?"
+    s5bForeclosure: boolean
+  "5b.M. Have you declared bankruptcy within the past 7 years?"
+    s5bBankruptcy: boolean
+  if (s5bBankruptcy) {
+    "5b.M. Chapter 7?"
+      s5bChapter7: boolean
+    "5b.M. Chapter 13?"
+      s5bChapter13: boolean
+    "5b.M. Years since discharge:"
+      s5bYearsSinceDischarge: integer
+  }
+  "Adverse declarations present:"
+    adverse: boolean = s5bJudgments || s5bFederalDefault || s5bLawsuit || s5bDeedInLieu || s5bShortSale || s5bForeclosure || (s5bBankruptcy && s5bYearsSinceDischarge < 4)
+
+  // ---------------------------------------------------------------- Section 7
+  "7. Have you ever served in the U.S. Armed Forces?"
+    s7Military: boolean
+  if (s7Military) {
+    "7. Currently serving on active duty?"
+      s7Active: boolean
+    "7. Retired, discharged or separated from service?"
+      s7Retired: boolean
+    "7. Surviving spouse?"
+      s7SurvivingSpouse: boolean
+    "7. Eligible for a VA loan:"
+      s7VaEligible: boolean = s7Active || s7Retired || s7SurvivingSpouse
+  }
+
+  // ---------------------------------------------------------------- Section 8
+  "8. Do you wish to provide demographic information?"
+    s8Provide: boolean
+  if (s8Provide) {
+    "8. Ethnicity (Hispanic or Latino, not Hispanic or Latino, ...):"
+      s8Ethnicity: string
+    "8. Race:"
+      s8Race: string
+    "8. Sex:"
+      s8Sex: string
+  }
+
+  // ---------------------------------------------------------------- Underwriting summary
+  "Front-end ratio, housing / income (percent):"
+    frontRatio: integer = peTotal * 100 / (totalIncome + 1)
+  "Back-end ratio, all debt / income (percent):"
+    backRatio: integer = (peTotal + totalDebt + otherHousingDebt) * 100 / (totalIncome + 1)
+  "Loan-to-value (percent):"
+    ltv: integer = s4aLoanAmount * 100 / (propertyValue + 1)
+  "Front-end ratio within 28 percent:"
+    frontOk: boolean = frontRatio <= 28
+  "Back-end ratio within 43 percent:"
+    backOk: boolean = backRatio <= 43
+  "Mortgage insurance required (LTV above 80 percent):"
+    miRequired: boolean = ltv > 80
+  "Net worth (USD):"
+    netWorth: integer = totalAssets + s3aEquity + s3bEquity - totalLiabilities
+  "Pre-qualified:"
+    prequalified: boolean = frontOk && backOk && !adverse && ltv <= 97 && s1aAge >= 18
+
+  if (prequalified) {
+    "Preferred closing date:"
+      closingDate: string
+    "Lock the interest rate now?"
+      rateLock: boolean
+  } else {
+    "Request a call with a loan officer?"
+      wantsCall: boolean
+  }
+
+  // ---------------------------------------------------------------- Section 6
+  "6. I agree to the acknowledgments and agreements:"
+    s6Agree: boolean
+  "6. Signature (type full name):"
+    s6Signature: string
+  "6. Date:"
+    s6Date: string
+}

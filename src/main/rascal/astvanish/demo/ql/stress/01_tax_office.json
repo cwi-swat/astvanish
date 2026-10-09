@@ -1,90 +1,90 @@
 {
   "_tag": "form",
-  "_src": {"offset": 56, "length": 452},
+  "_src": {"offset": 218, "length": 436},
   "title": "\"Tax Office example\"",
   "questions": [
     {
       "_tag": "answerable",
-      "_src": {"offset": 87, "length": 58},
-      "prompt": "\"Did you buy a house in 2010?\"",
-      "name": "hasBoughtHouse",
-      "type": {
-        "_tag": "boolean",
-        "_src": {"offset": 138, "length": 7}
-      }
-    },
-    {
-      "_tag": "answerable",
-      "_src": {"offset": 151, "length": 49},
-      "prompt": "\"Did you enter a loan?\"",
-      "name": "hasMaintLoan",
-      "type": {
-        "_tag": "boolean",
-        "_src": {"offset": 193, "length": 7}
-      }
-    },
-    {
-      "_tag": "answerable",
-      "_src": {"offset": 208, "length": 57},
+      "_src": {"offset": 248, "length": 57},
       "prompt": "\"Did you sell a house in 2010?\"",
       "name": "hasSoldHouse",
       "type": {
         "_tag": "boolean",
-        "_src": {"offset": 258, "length": 7}
+        "_src": {"offset": 298, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 308, "length": 58},
+      "prompt": "\"Did you buy a house in 2010?\"",
+      "name": "hasBoughtHouse",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 359, "length": 7}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 369, "length": 49},
+      "prompt": "\"Did you enter a loan?\"",
+      "name": "hasMaintLoan",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 411, "length": 7}
       }
     },
     {
       "_tag": "ifThen",
-      "_src": {"offset": 276, "length": 231},
+      "_src": {"offset": 422, "length": 231},
       "cond": {
         "_tag": "var",
-        "_src": {"offset": 280, "length": 12},
+        "_src": {"offset": 426, "length": 12},
         "name": "hasSoldHouse"
       },
       "then": {
         "_tag": "block",
-        "_src": {"offset": 294, "length": 212},
+        "_src": {"offset": 440, "length": 212},
         "questions": [
           {
             "_tag": "answerable",
-            "_src": {"offset": 300, "length": 57},
+            "_src": {"offset": 446, "length": 57},
             "prompt": "\"What was the selling price?\"",
             "name": "sellingPrice",
             "type": {
               "_tag": "integer",
-              "_src": {"offset": 350, "length": 7}
+              "_src": {"offset": 496, "length": 7}
             }
           },
           {
             "_tag": "answerable",
-            "_src": {"offset": 362, "length": 62},
+            "_src": {"offset": 508, "length": 62},
             "prompt": "\"Private debts for the sold house:\"",
             "name": "privateDebt",
             "type": {
               "_tag": "integer",
-              "_src": {"offset": 417, "length": 7}
+              "_src": {"offset": 563, "length": 7}
             }
           },
           {
             "_tag": "computed",
-            "_src": {"offset": 429, "length": 73},
+            "_src": {"offset": 575, "length": 73},
             "prompt": "\"Value residue:\"",
             "name": "valueResidue",
             "type": {
               "_tag": "integer",
-              "_src": {"offset": 466, "length": 7}
+              "_src": {"offset": 612, "length": 7}
             },
             "expr": {
               "_tag": "sub",
-              "_src": {"offset": 476, "length": 26},
+              "_src": {"offset": 622, "length": 26},
               "lhs": {
                 "_tag": "var",
-                "_src": {"offset": 476, "length": 12},
+                "_src": {"offset": 622, "length": 12},
                 "name": "sellingPrice"
               },
               "rhs": {
                 "_tag": "var",
-                "_src": {"offset": 491, "length": 11},
+                "_src": {"offset": 637, "length": 11},
                 "name": "privateDebt"
               }
             }

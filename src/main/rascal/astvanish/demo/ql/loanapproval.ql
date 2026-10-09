@@ -1,60 +1,60 @@
 //@@ src/main/rascal/astvanish/demo/ql/ql.av: run($ql)
 
 form "Loan Approval" {
-  "What is your full name?" fullName: str
-  "How old are you?" age: int
-  "Do you have a driver's license?" hasLicense: bool
+  "What is your full name?" fullName: string
+  "How old are you?" age: integer
+  "Do you have a driver's license?" hasLicense: boolean
   
   if (age < 18) {
-    "Are you currently in school?" inSchool: bool
+    "Are you currently in school?" inSchool: boolean
     if (inSchool) {
-      "What is your current grade?" grade: int
+      "What is your current grade?" grade: integer
     }
   } else {
     if (age >= 18 && age <= 65) {
-      "Are you currently employed?" employed: bool
+      "Are you currently employed?" employed: boolean
       
       if (employed) {
-        "What is your job title?" jobTitle: str
-        "How many years have you worked in your current job?" yearsInJob: int
-        "What is your monthly salary?" monthlySalary: int
-        "What is your total monthly expenses?" monthlyExpenses: int
+        "What is your job title?" jobTitle: string
+        "How many years have you worked in your current job?" yearsInJob: integer
+        "What is your monthly salary?" monthlySalary: integer
+        "What is your total monthly expenses?" monthlyExpenses: integer
 
-        "Your annual savings" annualSavings: int = (monthlySalary - monthlyExpenses) * 12
+        "Your annual savings" annualSavings: integer = (monthlySalary - monthlyExpenses) * 12
       } else {
-        "Are you actively looking for a job?" lookingForJob: bool
+        "Are you actively looking for a job?" lookingForJob: boolean
       }
     } else {
-      "Are you retired?" retired: bool
+      "Are you retired?" retired: boolean
       if (retired) {
-        "How long have you been retired?" yearsRetired: int
-        "What is your annual pension?" annualPension: int
-        "What is your annual healthcare expense?" healthcareExpenses: int
+        "How long have you been retired?" yearsRetired: integer
+        "What is your annual pension?" annualPension: integer
+        "What is your annual healthcare expense?" healthcareExpenses: integer
 
-        "Net annual pension after healthcare" netPension: int = annualPension - healthcareExpenses
+        "Net annual pension after healthcare" netPension: integer = annualPension - healthcareExpenses
       }
     }
   }
 
-  "Are you eligible for a senior citizen discount?" seniorDiscount: bool = age >= 65 && retired
+  "Are you eligible for a senior citizen discount?" seniorDiscount: boolean = age >= 65 && retired
   
-  "What is your annual income?" income: int
-  "What are your monthly debts?" monthlyDebts: int
-  "Do you have a co-signer for loans?" hasCoSigner: bool
+  "What is your annual income?" income: integer
+  "What are your monthly debts?" monthlyDebts: integer
+  "Do you have a co-signer for loans?" hasCoSigner: boolean
   
-  "Desired loan amount" loanAmount: int
-  "Loan interest rate (percentage)" interestRate: int
-  "Loan term (years)" loanTerm: int
+  "Desired loan amount" loanAmount: integer
+  "Loan integererest rate (percentage)" integererestRate: integer
+  "Loan term (years)" loanTerm: integer
   
-  "Total interest to be paid" totalInterest: int = (loanAmount * interestRate * loanTerm) / 100
-  "Total amount to be repaid" totalRepayment: int = loanAmount + totalInterest
-  "Your monthly loan payment" monthlyPayment: int = totalRepayment / (loanTerm * 12)
+  "Total integererest to be paid" totalInterest: integer = (loanAmount * integererestRate * loanTerm) / 100
+  "Total amount to be repaid" totalRepayment: integer = loanAmount + totalInterest
+  "Your monthly loan payment" monthlyPayment: integer = totalRepayment / (loanTerm * 12)
   
-  "Loan approval status" loanApproved: bool = (income > 50000 && monthlyDebts < 10000) || hasCoSigner
+  "Loan approval status" loanApproved: boolean = (income > 50000 && monthlyDebts < 10000) || hasCoSigner
 
   if (loanApproved) {
-    "Congratulations! Your loan has been approved." approvalMessage: str = "Approved"
+    "Congratulations! Your loan has been approved." approvalMessage: string = "Approved"
   } else {
-    "Unfortunately, your loan application was not successful." not_approvalMessage: str = "Not Approved"
+    "Unfortunately, your loan application was not successful." not_approvalMessage: string = "Not Approved"
   }
 }

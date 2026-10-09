@@ -11,6 +11,7 @@ import astvanish::Eval;
 import astvanish::PEval;
 import astvanish::PT2JSON;
 
+
 start syntax Form 
   = form: "form" Str title "{" Question* questions "}"; 
 
@@ -20,7 +21,10 @@ lexical Bool = "true" | "false";
 
 lexical Int = [\-]?[0-9]+;
 
-syntax Type = integer: "int" | boolean: "bool" | string: "str";
+syntax Type 
+  = integer: "integer"
+  | boolean: "boolean"
+  | string: "string";
 
 
 syntax Question 
@@ -59,6 +63,8 @@ syntax Expr
   > left or: Expr lhs "||" Expr rhs
   ;
 
+start[Form] parseQL(loc l) = parse(#start[Form], l);
+
 start[Form] aForm() 
     = parse(#start[Form], |project://astvanish/src/main/rascal/astvanish/demo/ql/taxform.ql|);
 
@@ -87,4 +93,20 @@ void dumpQlEval(loc root=|project://astvanish/src/main/rascal/astvanish/demo/ql/
             "updater": ("$name": sort("Id"), "$type": sort("Type")),
             "eve": ("$e": sort("Expr"))
         ), #start[Form]));
+}
+
+void stressTestPrep(bool json=false, bool doPeval=false) {
+    loc dir = |project://astvanish/src/main/rascal/astvanish/demo/ql/stress/|;
+    for (loc l <- dir.ls, l.extension == "myql") {
+        println("processing <l>");
+        start[Form] f = parseQL(l);
+        if (json) {
+            writeFile(l[extension="json"], pt2json(f));
+        }
+        if (doPeval) {
+            js = peval(|project://astvanish/src/main/rascal/astvanish/demo/ql/ql.av|, 
+                ("$ql": code(f.top)), "run", false); 
+            writeFile(l[extension="js"], js);
+        }
+    }
 }

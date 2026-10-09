@@ -1,0 +1,764 @@
+// Source: IRS Form 1040 (tax year 2023) with Schedules 1, 2, 3, B, C, SE and a
+// simplified Schedule 8812. The forms are public domain (U.S. government works).
+// Identifiers follow the line numbers (f1040L1a = Form 1040 line 1a,
+// sCL7 = Schedule C line 7, ...). The tax on line 16 is looked up in the IRS
+// tax table, so it is an answerable question, as on the real form.
+// Amounts are whole dollars, as allowed by the instructions.
+form "U.S. Individual Income Tax Return 2023" {
+
+  // ======================================================== Header
+  "First name and middle initial:"
+    firstName: string
+  "Last name:"
+    lastName: string
+  "Your social security number:"
+    ssn: string
+  "Home address:"
+    address: string
+  "City, town or post office, state and ZIP code:"
+    city: string
+  "Your age on 31 December 2023:"
+    age: integer
+  "Are you blind?"
+    blind: boolean
+  "Can someone claim you as a dependent?"
+    claimedAsDependent: boolean
+  "Presidential Election Campaign: give 3 USD to this fund?"
+    presidentialFund: boolean
+
+  // ======================================================== Filing status
+  "Filing status: Single?"
+    fsSingle: boolean
+  "Filing status: Married filing jointly?"
+    fsJoint: boolean
+  "Filing status: Married filing separately?"
+    fsSeparate: boolean
+  "Filing status: Head of household?"
+    fsHoh: boolean
+  "Filing status: Qualifying surviving spouse?"
+    fsQss: boolean
+  "Exactly one filing status checked:"
+    fsValid: boolean = (fsSingle && !fsJoint && !fsSeparate && !fsHoh && !fsQss)
+                    || (!fsSingle && fsJoint && !fsSeparate && !fsHoh && !fsQss)
+                    || (!fsSingle && !fsJoint && fsSeparate && !fsHoh && !fsQss)
+                    || (!fsSingle && !fsJoint && !fsSeparate && fsHoh && !fsQss)
+                    || (!fsSingle && !fsJoint && !fsSeparate && !fsHoh && fsQss)
+
+  if (fsJoint || fsSeparate) {
+    "Spouse first name and middle initial:"
+      spouseFirstName: string
+    "Spouse last name:"
+      spouseLastName: string
+    "Spouse social security number:"
+      spouseSsn: string
+    "Spouse age on 31 December 2023:"
+      spouseAge: integer
+    "Is your spouse blind?"
+      spouseBlind: boolean
+    "Spouse presidential fund?"
+      spousePresidentialFund: boolean
+  }
+  if (fsHoh || fsQss) {
+    "Name of the qualifying person if not a dependent:"
+      qualifyingPersonName: string
+  }
+
+  "At any time during 2023 did you receive, sell, exchange or dispose of a digital asset?"
+    digitalAssets: boolean
+
+  // ======================================================== Dependents
+  "Number of dependents (0-4):"
+    nDependents: integer
+  if (nDependents >= 1) {
+    "Dependent 1 name:"
+      dep1Name: string
+    "Dependent 1 SSN:"
+      dep1Ssn: string
+    "Dependent 1 relationship:"
+      dep1Relationship: string
+    "Dependent 1 age at end of 2023:"
+      dep1Age: integer
+    "Dependent 1 lived with you more than half the year?"
+      dep1Lived: boolean
+    "Dependent 1 qualifies for the child tax credit:"
+      dep1Ctc: boolean = dep1Age < 17 && dep1Lived
+    "Dependent 1 qualifies for the credit for other dependents:"
+      dep1Odc: boolean = !dep1Ctc
+  }
+  if (nDependents >= 2) {
+    "Dependent 2 name:"
+      dep2Name: string
+    "Dependent 2 SSN:"
+      dep2Ssn: string
+    "Dependent 2 relationship:"
+      dep2Relationship: string
+    "Dependent 2 age at end of 2023:"
+      dep2Age: integer
+    "Dependent 2 lived with you more than half the year?"
+      dep2Lived: boolean
+    "Dependent 2 qualifies for the child tax credit:"
+      dep2Ctc: boolean = dep2Age < 17 && dep2Lived
+    "Dependent 2 qualifies for the credit for other dependents:"
+      dep2Odc: boolean = !dep2Ctc
+  }
+  if (nDependents >= 3) {
+    "Dependent 3 name:"
+      dep3Name: string
+    "Dependent 3 SSN:"
+      dep3Ssn: string
+    "Dependent 3 relationship:"
+      dep3Relationship: string
+    "Dependent 3 age at end of 2023:"
+      dep3Age: integer
+    "Dependent 3 lived with you more than half the year?"
+      dep3Lived: boolean
+    "Dependent 3 qualifies for the child tax credit:"
+      dep3Ctc: boolean = dep3Age < 17 && dep3Lived
+    "Dependent 3 qualifies for the credit for other dependents:"
+      dep3Odc: boolean = !dep3Ctc
+  }
+  if (nDependents >= 4) {
+    "Dependent 4 name:"
+      dep4Name: string
+    "Dependent 4 SSN:"
+      dep4Ssn: string
+    "Dependent 4 relationship:"
+      dep4Relationship: string
+    "Dependent 4 age at end of 2023:"
+      dep4Age: integer
+    "Dependent 4 lived with you more than half the year?"
+      dep4Lived: boolean
+    "Dependent 4 qualifies for the child tax credit:"
+      dep4Ctc: boolean = dep4Age < 17 && dep4Lived
+    "Dependent 4 qualifies for the credit for other dependents:"
+      dep4Odc: boolean = !dep4Ctc
+  }
+
+  // ======================================================== W-2 wages (up to 3 forms)
+  "Number of Forms W-2 (0-3):"
+    nW2: integer
+  if (nW2 >= 1) {
+    "W-2 #1 employer name:"
+      w2a: string
+    "W-2 #1 box 1 wages (USD):"
+      w2aWages: integer
+    "W-2 #1 box 2 federal income tax withheld (USD):"
+      w2aWithheld: integer
+    "W-2 #1 box 8 allocated tips (USD):"
+      w2aTips: integer
+    "W-2 #1 box 10 dependent care benefits (USD):"
+      w2aCare: integer
+  }
+  if (nW2 >= 2) {
+    "W-2 #2 employer name:"
+      w2b: string
+    "W-2 #2 box 1 wages (USD):"
+      w2bWages: integer
+    "W-2 #2 box 2 federal income tax withheld (USD):"
+      w2bWithheld: integer
+    "W-2 #2 box 8 allocated tips (USD):"
+      w2bTips: integer
+    "W-2 #2 box 10 dependent care benefits (USD):"
+      w2bCare: integer
+  }
+  if (nW2 >= 3) {
+    "W-2 #3 employer name:"
+      w2c: string
+    "W-2 #3 box 1 wages (USD):"
+      w2cWages: integer
+    "W-2 #3 box 2 federal income tax withheld (USD):"
+      w2cWithheld: integer
+    "W-2 #3 box 8 allocated tips (USD):"
+      w2cTips: integer
+    "W-2 #3 box 10 dependent care benefits (USD):"
+      w2cCare: integer
+  }
+
+  // ======================================================== Schedule B, part I: interest
+  "Schedule B 1. Interest payer 1:"
+    sBPayer1: string
+  "Schedule B 1. Interest from payer 1 (USD):"
+    sBInt1: integer
+  "Schedule B 1. Interest payer 2:"
+    sBPayer2: string
+  "Schedule B 1. Interest from payer 2 (USD):"
+    sBInt2: integer
+  "Schedule B 1. Interest payer 3:"
+    sBPayer3: string
+  "Schedule B 1. Interest from payer 3 (USD):"
+    sBInt3: integer
+  "Schedule B 2. Total interest (USD):"
+    sBL2: integer = sBInt1 + sBInt2 + sBInt3
+  "Schedule B 3. Excludable interest on series EE and I U.S. savings bonds (USD):"
+    sBL3: integer
+  "Schedule B 4. Taxable interest (USD):"
+    sBL4: integer = sBL2 - sBL3
+  "Tax-exempt interest (USD):"
+    taxExemptInterest: integer
+
+  // ======================================================== Schedule B, part II: dividends
+  "Schedule B 5. Dividend payer 1:"
+    sBDivPayer1: string
+  "Schedule B 5. Ordinary dividends from payer 1 (USD):"
+    sBDiv1: integer
+  "Schedule B 5. Dividend payer 2:"
+    sBDivPayer2: string
+  "Schedule B 5. Ordinary dividends from payer 2 (USD):"
+    sBDiv2: integer
+  "Schedule B 6. Total ordinary dividends (USD):"
+    sBL6: integer = sBDiv1 + sBDiv2
+  "Qualified dividends (USD):"
+    qualifiedDividends: integer
+  "Qualified dividends do not exceed ordinary dividends:"
+    qualifiedOk: boolean = qualifiedDividends <= sBL6
+
+  // ======================================================== Schedule B, part III: foreign accounts
+  "Schedule B part III required:"
+    sBPart3Required: boolean = sBL4 > 1500 || sBL6 > 1500
+  if (sBPart3Required) {
+    "Schedule B 7a. Financial interest in a foreign account?"
+      sBL7a: boolean
+    if (sBL7a) {
+      "Schedule B 7a. Required to file FinCEN Form 114 (FBAR)?"
+        sBFbar: boolean
+      "Schedule B 7b. Country of the foreign account:"
+        sBL7b: string
+    }
+    "Schedule B 8. Received a distribution from a foreign trust?"
+      sBL8: boolean
+  }
+
+  // ======================================================== Schedule C: business
+  "Did you operate a business as a sole proprietor?"
+    hasBusiness: boolean
+  if (hasBusiness) {
+    "Schedule C A. Principal business or profession:"
+      sCA: string
+    "Schedule C B. Principal business code:"
+      sCB: string
+    "Schedule C F. Accounting method is cash?"
+      sCCash: boolean
+    "Schedule C G. Did you materially participate in the business?"
+      sCG: boolean
+    "Schedule C I. Did you make payments requiring Forms 1099?"
+      sCI: boolean
+    if (sCI) {
+      "Schedule C J. Did you or will you file the required Forms 1099?"
+        sCJ: boolean
+    }
+
+    // Part I: income
+    "Schedule C 1. Gross receipts or sales (USD):"
+      sCL1: integer
+    "Schedule C 2. Returns and allowances (USD):"
+      sCL2: integer
+    "Schedule C 3. Net receipts (USD):"
+      sCL3: integer = sCL1 - sCL2
+    "Schedule C 4. Cost of goods sold (USD):"
+      sCL4: integer
+    "Schedule C 5. Gross profit (USD):"
+      sCL5: integer = sCL3 - sCL4
+    "Schedule C 6. Other income (USD):"
+      sCL6: integer
+    "Schedule C 7. Gross income (USD):"
+      sCL7: integer = sCL5 + sCL6
+
+    // Part II: expenses
+    "Schedule C 8. Advertising (USD):"
+      sCL8: integer
+    "Schedule C 9. Car and truck expenses (USD):"
+      sCL9: integer
+    "Schedule C 10. Commissions and fees (USD):"
+      sCL10: integer
+    "Schedule C 11. Contract labor (USD):"
+      sCL11: integer
+    "Schedule C 12. Depletion (USD):"
+      sCL12: integer
+    "Schedule C 13. Depreciation and section 179 (USD):"
+      sCL13: integer
+    "Schedule C 14. Employee benefit programs (USD):"
+      sCL14: integer
+    "Schedule C 15. Insurance other than health (USD):"
+      sCL15: integer
+    "Schedule C 16a. Mortgage interest paid to banks (USD):"
+      sCL16a: integer
+    "Schedule C 16b. Other interest (USD):"
+      sCL16b: integer
+    "Schedule C 17. Legal and professional services (USD):"
+      sCL17: integer
+    "Schedule C 18. Office expense (USD):"
+      sCL18: integer
+    "Schedule C 19. Pension and profit-sharing plans (USD):"
+      sCL19: integer
+    "Schedule C 20a. Rent of vehicles, machinery and equipment (USD):"
+      sCL20a: integer
+    "Schedule C 20b. Rent of other business property (USD):"
+      sCL20b: integer
+    "Schedule C 21. Repairs and maintenance (USD):"
+      sCL21: integer
+    "Schedule C 22. Supplies (USD):"
+      sCL22: integer
+    "Schedule C 23. Taxes and licenses (USD):"
+      sCL23: integer
+    "Schedule C 24a. Travel (USD):"
+      sCL24a: integer
+    "Schedule C 24b. Business meals, total cost (USD):"
+      sCMealsTotal: integer
+    "Schedule C 24b. Deductible meals, 50 percent (USD):"
+      sCL24b: integer = sCMealsTotal / 2
+    "Schedule C 25. Utilities (USD):"
+      sCL25: integer
+    "Schedule C 26. Wages less employment credits (USD):"
+      sCL26: integer
+    "Schedule C 27a. Other expenses (USD):"
+      sCL27a: integer
+    "Schedule C 28. Total expenses (USD):"
+      sCL28: integer = sCL8 + sCL9 + sCL10 + sCL11 + sCL12 + sCL13 + sCL14 + sCL15
+                     + sCL16a + sCL16b + sCL17 + sCL18 + sCL19 + sCL20a + sCL20b
+                     + sCL21 + sCL22 + sCL23 + sCL24a + sCL24b + sCL25 + sCL26 + sCL27a
+    "Schedule C 29. Tentative profit or loss (USD):"
+      sCL29: integer = sCL7 - sCL28
+
+    "Schedule C 30. Business use of home?"
+      sCHomeOffice: boolean
+    if (sCHomeOffice) {
+      "Schedule C 30. Square footage of home used for business:"
+        sCHomeSqft: integer
+      "Schedule C 30. Simplified method deduction, 5 USD per sq ft up to 300 sq ft:"
+        sCHomeSqftOk: boolean = sCHomeSqft <= 300
+      "Schedule C 30. Home office deduction (USD):"
+        sCL30: integer = sCHomeSqft * 5
+    }
+    "Schedule C 31. Net profit or loss (USD):"
+      sCL31: integer = sCL29 - sCL30
+    if (sCL31 < 0) {
+      "Schedule C 32a. All investment is at risk?"
+        sCL32a: boolean
+    }
+  }
+
+  // ======================================================== Schedule SE
+  "Schedule SE required (net SE earnings 400 USD or more):"
+    sSERequired: boolean = sCL31 >= 400
+  if (sSERequired) {
+    "Schedule SE 2. Net profit from Schedule C (USD):"
+      sSEL2: integer = sCL31
+    "Schedule SE 4a. Net earnings, 92.35 percent of line 2 (USD):"
+      sSEL4a: integer = sSEL2 * 9235 / 10000
+    "Schedule SE 8a. Social security wages from W-2 (USD):"
+      sSEL8a: integer = w2aWages + w2bWages + w2cWages
+    "Schedule SE 7. Maximum earnings subject to social security (USD):"
+      sSEL7: integer = 160200
+    "Schedule SE 9. Remaining room under the social security maximum (USD):"
+      sSEL9: integer = sSEL7 - sSEL8a
+    "Schedule SE: all net earnings under the maximum:"
+      sSEUnderMax: boolean = sSEL4a <= sSEL9
+    "Schedule SE 10. Social security part, 12.4 percent (USD):"
+      sSEL10: integer = sSEL4a * 124 / 1000
+    "Schedule SE 11. Medicare part, 2.9 percent (USD):"
+      sSEL11: integer = sSEL4a * 29 / 1000
+    "Schedule SE 12. Self-employment tax (USD):"
+      sSEL12: integer = sSEL10 + sSEL11
+    "Schedule SE 13. Deduction for one-half of SE tax (USD):"
+      sSEL13: integer = sSEL12 / 2
+  }
+
+  // ======================================================== Schedule 1, part I: additional income
+  "Schedule 1 1. Taxable refunds of state and local income taxes (USD):"
+    s1L1: integer
+  "Schedule 1 2a. Alimony received (divorce before 2019) (USD):"
+    s1L2a: integer
+  "Schedule 1 3. Business income or loss, Schedule C (USD):"
+    s1L3: integer = sCL31
+  "Schedule 1 4. Other gains or losses, Form 4797 (USD):"
+    s1L4: integer
+  "Schedule 1 5. Rental real estate, royalties, partnerships, Schedule E (USD):"
+    s1L5: integer
+  "Schedule 1 6. Farm income or loss, Schedule F (USD):"
+    s1L6: integer
+  "Schedule 1 7. Unemployment compensation (USD):"
+    s1L7: integer
+  "Schedule 1 8a. Net operating loss (enter as positive) (USD):"
+    s1L8a: integer
+  "Schedule 1 8b. Gambling income (USD):"
+    s1L8b: integer
+  "Schedule 1 8c. Cancellation of debt (USD):"
+    s1L8c: integer
+  "Schedule 1 8i. Prizes and awards (USD):"
+    s1L8i: integer
+  "Schedule 1 8j. Activity not engaged in for profit (USD):"
+    s1L8j: integer
+  "Schedule 1 8z. Other income (USD):"
+    s1L8z: integer
+  if (s1L8z > 0) {
+    "Schedule 1 8z. Type of other income:"
+      s1L8zType: string
+  }
+  "Schedule 1 9. Total other income (USD):"
+    s1L9: integer = s1L8b + s1L8c + s1L8i + s1L8j + s1L8z - s1L8a
+  "Schedule 1 10. Additional income (USD):"
+    s1L10: integer = s1L1 + s1L2a + s1L3 + s1L4 + s1L5 + s1L6 + s1L7 + s1L9
+
+  // ======================================================== Schedule 1, part II: adjustments
+  "Schedule 1 11. Educator expenses (USD, max 300):"
+    s1L11: integer
+  "Schedule 1 11. Educator expenses within limit:"
+    s1L11Ok: boolean = s1L11 <= 300 || (fsJoint && s1L11 <= 600)
+  "Schedule 1 13. Health savings account deduction (USD):"
+    s1L13: integer
+  "Schedule 1 14. Moving expenses for Armed Forces members (USD):"
+    s1L14: integer
+  "Schedule 1 15. Deductible part of self-employment tax (USD):"
+    s1L15: integer = sSEL13
+  "Schedule 1 16. Self-employed SEP, SIMPLE and qualified plans (USD):"
+    s1L16: integer
+  "Schedule 1 17. Self-employed health insurance deduction (USD):"
+    s1L17: integer
+  "Schedule 1 18. Penalty on early withdrawal of savings (USD):"
+    s1L18: integer
+  "Schedule 1 19a. Alimony paid (divorce before 2019) (USD):"
+    s1L19a: integer
+  if (s1L19a > 0) {
+    "Schedule 1 19b. Recipient SSN:"
+      s1L19b: string
+  }
+  "Schedule 1 20. IRA deduction (USD):"
+    s1L20: integer
+  "Schedule 1 20. IRA deduction within the 6500 USD limit (7500 if 50 or older):"
+    s1L20Ok: boolean = s1L20 <= 6500 || (age >= 50 && s1L20 <= 7500)
+  "Schedule 1 21. Student loan interest deduction (USD, max 2500):"
+    s1L21: integer
+  "Schedule 1 21. Student loan interest within limit:"
+    s1L21Ok: boolean = s1L21 <= 2500
+  "Schedule 1 26. Total adjustments to income (USD):"
+    s1L26: integer = s1L11 + s1L13 + s1L14 + s1L15 + s1L16 + s1L17 + s1L18 + s1L19a + s1L20 + s1L21
+
+  // ======================================================== Form 1040: income
+  "1040 1a. Total amount from Forms W-2, box 1 (USD):"
+    f1040L1a: integer = w2aWages + w2bWages + w2cWages
+  "1040 1b. Household employee wages not on W-2 (USD):"
+    f1040L1b: integer
+  "1040 1c. Tip income not reported on line 1a (USD):"
+    f1040L1c: integer
+  "1040 1e. Taxable dependent care benefits (USD):"
+    f1040L1e: integer
+  "1040 1f. Employer-provided adoption benefits (USD):"
+    f1040L1f: integer
+  "1040 1g. Wages from Form 8919 (USD):"
+    f1040L1g: integer
+  "1040 1h. Other earned income (USD):"
+    f1040L1h: integer
+  "1040 1z. Total wages (USD):"
+    f1040L1z: integer = f1040L1a + f1040L1b + f1040L1c + f1040L1e + f1040L1f + f1040L1g + f1040L1h
+  "1040 2a. Tax-exempt interest (USD):"
+    f1040L2a: integer = taxExemptInterest
+  "1040 2b. Taxable interest (USD):"
+    f1040L2b: integer = sBL4
+  "1040 3a. Qualified dividends (USD):"
+    f1040L3a: integer = qualifiedDividends
+  "1040 3b. Ordinary dividends (USD):"
+    f1040L3b: integer = sBL6
+  "1040 4a. IRA distributions (USD):"
+    f1040L4a: integer
+  "1040 4b. Taxable IRA distributions (USD):"
+    f1040L4b: integer
+  "1040 5a. Pensions and annuities (USD):"
+    f1040L5a: integer
+  "1040 5b. Taxable pensions and annuities (USD):"
+    f1040L5b: integer
+  "1040 6a. Social security benefits (USD):"
+    f1040L6a: integer
+  "1040 6b. Taxable social security benefits (USD):"
+    f1040L6b: integer
+  if (f1040L6a > 0) {
+    "1040 6c. Electing the lump-sum election method?"
+      f1040L6c: boolean
+  }
+  "1040 7. Capital gain or loss (USD):"
+    f1040L7: integer
+  "1040 7. Schedule D not required (only capital gain distributions)?"
+    f1040L7NoSchedD: boolean
+  "1040 8. Additional income from Schedule 1 (USD):"
+    f1040L8: integer = s1L10
+  "1040 9. Total income (USD):"
+    f1040L9: integer = f1040L1z + f1040L2b + f1040L3b + f1040L4b + f1040L5b + f1040L6b + f1040L7 + f1040L8
+  "1040 10. Adjustments to income from Schedule 1 (USD):"
+    f1040L10: integer = s1L26
+  "1040 11. Adjusted gross income (USD):"
+    f1040L11: integer = f1040L9 - f1040L10
+
+  // ======================================================== Deductions
+  "Itemize deductions (Schedule A) instead of the standard deduction?"
+    itemize: boolean
+  if (itemize) {
+    "Schedule A 1. Medical and dental expenses (USD):"
+      sAL1: integer
+    "Schedule A 3. 7.5 percent of AGI (USD):"
+      sAL3: integer = f1040L11 * 75 / 1000
+    "Schedule A: medical expenses exceed the floor:"
+      sAMedicalOver: boolean = sAL1 > sAL3
+    "Schedule A 4. Deductible medical expenses, if over the floor (USD):"
+      sAL4: integer = sAL1 - sAL3
+    "Schedule A 5a. State and local income or sales taxes (USD):"
+      sAL5a: integer
+    "Schedule A 5b. State and local real estate taxes (USD):"
+      sAL5b: integer
+    "Schedule A 5c. State and local personal property taxes (USD):"
+      sAL5c: integer
+    "Schedule A 5d. Total state and local taxes (USD):"
+      sAL5d: integer = sAL5a + sAL5b + sAL5c
+    "Schedule A 5e. SALT within the 10000 USD cap (5000 if separate):"
+      sASaltOk: boolean = sAL5d <= 10000 && (!fsSeparate || sAL5d <= 5000)
+    "Schedule A 8a. Home mortgage interest from Form 1098 (USD):"
+      sAL8a: integer
+    "Schedule A 8c. Points not reported on Form 1098 (USD):"
+      sAL8c: integer
+    "Schedule A 10. Total interest paid (USD):"
+      sAL10: integer = sAL8a + sAL8c
+    "Schedule A 11. Gifts to charity by cash or check (USD):"
+      sAL11: integer
+    "Schedule A 12. Other than by cash or check (USD):"
+      sAL12: integer
+    if (sAL12 > 500) {
+      "Schedule A 12. Form 8283 attached?"
+        sAForm8283: boolean
+    }
+    "Schedule A 13. Carryover from prior year (USD):"
+      sAL13: integer
+    "Schedule A 14. Total gifts to charity (USD):"
+      sAL14: integer = sAL11 + sAL12 + sAL13
+    "Schedule A 15. Casualty and theft losses (USD):"
+      sAL15: integer
+    "Schedule A 16. Other itemized deductions (USD):"
+      sAL16: integer
+    "Schedule A 17. Total itemized deductions (USD):"
+      sAL17: integer = sAL4 + sAL5d + sAL10 + sAL14 + sAL15 + sAL16
+  }
+  "Standard deduction for single or married filing separately (USD):"
+    stdSingle: integer = 13850
+  "Standard deduction for married filing jointly or surviving spouse (USD):"
+    stdJoint: integer = 27700
+  "Standard deduction for head of household (USD):"
+    stdHoh: integer = 20800
+  "Additional standard deduction boxes checked (65 or older, blind):"
+    extraBoxes: boolean = age >= 65 || blind || spouseAge >= 65 || spouseBlind
+  "1040 12. Standard deduction or itemized deductions (USD):"
+    f1040L12: integer
+  "1040 13. Qualified business income deduction (USD):"
+    f1040L13: integer
+  "1040 14. Total deductions (USD):"
+    f1040L14: integer = f1040L12 + f1040L13
+  "1040 15. Taxable income (USD):"
+    f1040L15: integer = f1040L11 - f1040L14
+  "Taxable income is positive:"
+    f1040L15Positive: boolean = f1040L15 > 0
+
+  // ======================================================== Tax and credits
+  "1040 16. Tax from the tax table or worksheet (USD):"
+    f1040L16: integer
+  "1040 16. Tax includes Form 8814 (child interest)?"
+    f1040L16Form8814: boolean
+  "1040 16. Tax includes Form 4972 (lump-sum distributions)?"
+    f1040L16Form4972: boolean
+
+  // Schedule 2, part I
+  "Schedule 2 1a. Excess advance premium tax credit repayment (USD):"
+    s2L1a: integer
+  "Schedule 2 2. Alternative minimum tax, Form 6251 (USD):"
+    s2L2: integer
+  "Schedule 2 3. Total part I (USD):"
+    s2L3: integer = s2L1a + s2L2
+  "1040 17. Amount from Schedule 2, line 3 (USD):"
+    f1040L17: integer = s2L3
+  "1040 18. Tax before credits (USD):"
+    f1040L18: integer = f1040L16 + f1040L17
+
+  // Schedule 8812 (simplified): 2000 USD per qualifying child, 500 per other dependent
+  "Schedule 8812: number of qualifying children (computed from the dependent rows):"
+    s8812Children: integer
+  "Schedule 8812: number of other dependents (computed from the dependent rows):"
+    s8812Others: integer
+  "Schedule 8812 5. Children times 2000 (USD):"
+    s8812L5: integer = s8812Children * 2000
+  "Schedule 8812 7. Other dependents times 500 (USD):"
+    s8812L7: integer = s8812Others * 500
+  "Schedule 8812 8. Total credit before phase-out (USD):"
+    s8812L8: integer = s8812L5 + s8812L7
+  "Schedule 8812: AGI threshold (400000 joint, 200000 otherwise):"
+    s8812Threshold: integer
+  "Schedule 8812: AGI above the threshold (phase-out applies):"
+    s8812PhaseOut: boolean = f1040L11 > s8812Threshold
+  "Schedule 8812: credit reduction, 50 USD per 1000 over threshold (USD):"
+    s8812Reduction: integer = (f1040L11 - s8812Threshold) / 1000 * 50
+  "1040 19. Child tax credit and credit for other dependents (USD):"
+    f1040L19: integer
+
+  // Schedule 3, part I: nonrefundable credits
+  "Schedule 3 1. Foreign tax credit (USD):"
+    s3L1: integer
+  "Schedule 3 2. Child and dependent care credit, Form 2441 (USD):"
+    s3L2: integer
+  if (s3L2 > 0) {
+    "Schedule 3 2. Care provider name:"
+      s3CareProvider: string
+    "Schedule 3 2. Care provider identification number:"
+      s3CareProviderId: string
+    "Schedule 3 2. Qualifying care expenses (USD):"
+      s3CareExpenses: integer
+    "Schedule 3 2. Expenses within the 3000 USD per person limit:"
+      s3CareOk: boolean = s3CareExpenses <= 3000 * nDependents
+  }
+  "Schedule 3 3. Education credits, Form 8863 (USD):"
+    s3L3: integer
+  "Schedule 3 4. Retirement savings contributions credit (USD):"
+    s3L4: integer
+  "Schedule 3 5a. Residential clean energy credit (USD):"
+    s3L5a: integer
+  "Schedule 3 5b. Energy efficient home improvement credit (USD):"
+    s3L5b: integer
+  "Schedule 3 6f. Clean vehicle credit (USD):"
+    s3L6f: integer
+  "Schedule 3 8. Total nonrefundable credits (USD):"
+    s3L8: integer = s3L1 + s3L2 + s3L3 + s3L4 + s3L5a + s3L5b + s3L6f
+  "1040 20. Amount from Schedule 3, line 8 (USD):"
+    f1040L20: integer = s3L8
+  "1040 21. Total credits (USD):"
+    f1040L21: integer = f1040L19 + f1040L20
+  "1040 22. Tax after credits (USD):"
+    f1040L22: integer = f1040L18 - f1040L21
+  "Credits exceed tax (line 22 must be zero):"
+    creditsExceedTax: boolean = f1040L22 < 0
+
+  // Schedule 2, part II: other taxes
+  "Schedule 2 4. Self-employment tax (USD):"
+    s2L4: integer = sSEL12
+  "Schedule 2 8. Additional tax on IRAs and retirement plans (USD):"
+    s2L8: integer
+  "Schedule 2 9. Household employment taxes (USD):"
+    s2L9: integer
+  "Schedule 2 11. Additional Medicare tax, Form 8959 (USD):"
+    s2L11: integer
+  "Schedule 2 12. Net investment income tax, Form 8960 (USD):"
+    s2L12: integer
+  "Schedule 2 21. Total other taxes (USD):"
+    s2L21: integer = s2L4 + s2L8 + s2L9 + s2L11 + s2L12
+  "1040 23. Other taxes from Schedule 2 (USD):"
+    f1040L23: integer = s2L21
+  "1040 24. Total tax (USD):"
+    f1040L24: integer = f1040L22 + f1040L23
+
+  // ======================================================== Payments
+  "1040 25a. Federal income tax withheld from Forms W-2 (USD):"
+    f1040L25a: integer = w2aWithheld + w2bWithheld + w2cWithheld
+  "1040 25b. Withheld from Forms 1099 (USD):"
+    f1040L25b: integer
+  "1040 25c. Withheld from other forms (USD):"
+    f1040L25c: integer
+  "1040 25d. Total withholding (USD):"
+    f1040L25d: integer = f1040L25a + f1040L25b + f1040L25c
+  "1040 26. Estimated tax payments and amount applied from 2022 (USD):"
+    f1040L26: integer
+  "1040 27. Earned income credit (USD):"
+    f1040L27: integer
+  if (f1040L27 > 0) {
+    "1040 27. Earned income within the EIC limit for your family size?"
+      f1040L27Ok: boolean
+  }
+  "1040 28. Additional child tax credit, Schedule 8812 (USD):"
+    f1040L28: integer
+  "1040 29. American opportunity credit, Form 8863 line 8 (USD):"
+    f1040L29: integer
+  "Schedule 3 9. Net premium tax credit (USD):"
+    s3L9: integer
+  "Schedule 3 10. Amount paid with request for extension (USD):"
+    s3L10: integer
+  "Schedule 3 11. Excess social security tax withheld (USD):"
+    s3L11: integer
+  "Schedule 3 15. Total other payments and refundable credits (USD):"
+    s3L15: integer = s3L9 + s3L10 + s3L11
+  "1040 31. Amount from Schedule 3, line 15 (USD):"
+    f1040L31: integer = s3L15
+  "1040 32. Total other payments and refundable credits (USD):"
+    f1040L32: integer = f1040L27 + f1040L28 + f1040L29 + f1040L31
+  "1040 33. Total payments (USD):"
+    f1040L33: integer = f1040L25d + f1040L26 + f1040L32
+
+  // ======================================================== Refund or amount owed
+  "Overpaid:"
+    overpaid: boolean = f1040L33 > f1040L24
+  if (overpaid) {
+    "1040 34. Amount overpaid (USD):"
+      f1040L34: integer = f1040L33 - f1040L24
+    "1040 36. Amount of line 34 applied to 2024 estimated tax (USD):"
+      f1040L36: integer
+    "1040 35a. Amount refunded to you (USD):"
+      f1040L35a: integer = f1040L34 - f1040L36
+    "1040 35a. Direct deposit?"
+      directDeposit: boolean
+    if (directDeposit) {
+      "1040 35b. Routing number:"
+        f1040L35b: string
+      "1040 35c. Account type is checking (otherwise savings)?"
+        f1040L35c: boolean
+      "1040 35d. Account number:"
+        f1040L35d: string
+    }
+  } else {
+    "1040 37. Amount you owe (USD):"
+      f1040L37: integer = f1040L24 - f1040L33
+    "1040 38. Estimated tax penalty (USD):"
+      f1040L38: integer
+    "Pay by direct debit?"
+      payDirectDebit: boolean
+    if (payDirectDebit) {
+      "Bank routing number for payment:"
+        payRouting: string
+      "Bank account number for payment:"
+        payAccount: string
+    }
+  }
+
+  // ======================================================== Third party and signature
+  "Allow another person to discuss this return with the IRS?"
+    thirdParty: boolean
+  if (thirdParty) {
+    "Designee name:"
+      designeeName: string
+    "Designee phone:"
+      designeePhone: string
+    "Designee personal identification number:"
+      designeePin: string
+  }
+  "Your occupation:"
+    occupation: string
+  "Identity protection PIN (if issued):"
+    ipPin: string
+  if (fsJoint) {
+    "Spouse occupation:"
+      spouseOccupation: string
+    "Spouse identity protection PIN:"
+      spouseIpPin: string
+  }
+  "Phone number:"
+    phone: string
+  "Email address:"
+    email: string
+  "Paid preparer used?"
+    paidPreparer: boolean
+  if (paidPreparer) {
+    "Preparer name:"
+      preparerName: string
+    "Preparer PTIN:"
+      preparerPtin: string
+    "Preparer is self-employed?"
+      preparerSelfEmployed: boolean
+    "Firm name:"
+      firmName: string
+    "Firm EIN:"
+      firmEin: string
+  }
+  "Under penalties of perjury, I declare this return is true, correct and complete:"
+    declaration: boolean
+  "Ready to file:"
+    readyToFile: boolean = declaration && fsValid && !creditsExceedTax && qualifiedOk
+}

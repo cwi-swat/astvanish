@@ -1,0 +1,130 @@
+// Source: structure of the Dutch rent benefit (huurtoeslag) application of the
+// Belastingdienst/Toeslagen, 2024 rules. The amounts are the 2024 thresholds
+// rounded to whole euros. This form is for illustration only: it checks
+// eligibility but does not compute the benefit amount.
+form "Rent benefit (huurtoeslag) 2024" {
+  "Citizen service number (BSN):"
+    bsn: string
+  "Your age on 1 January 2024:"
+    age: integer
+  "Do you have Dutch nationality or a valid residence permit?"
+    legalResidence: boolean
+  "Are you registered (BRP) at the rental address?"
+    registeredAtAddress: boolean
+
+  "Do you have a benefit partner?"
+    hasPartner: boolean
+  if (hasPartner) {
+    "Partner BSN:"
+      partnerBsn: string
+    "Partner age on 1 January 2024:"
+      partnerAge: integer
+    "Partner yearly income (euro):"
+      partnerIncome: integer
+    "Partner assets on 1 January 2024 (euro):"
+      partnerAssets: integer
+  }
+
+  "Number of children under 18 living with you:"
+    nChildren: integer
+  "Number of other adults (co-residents) living with you:"
+    nCoResidents: integer
+  if (nCoResidents > 0) {
+    "Combined yearly income of co-residents (euro):"
+      coResidentIncome: integer
+    "Are all co-residents under 23?"
+      coResidentsYoung: boolean
+  }
+
+  // Rental property
+  "Is the property a self-contained home (own entrance, kitchen and toilet)?"
+    selfContained: boolean
+  if (!selfContained) {
+    "Is it a recognised room in a care or group home (woonwagen, woonschip or DAEB room)?"
+      recognisedRoom: boolean
+  }
+  "Is the landlord a housing corporation?"
+    corporationLandlord: boolean
+  "Bare rent per month (kale huur, euro):"
+    bareRent: integer
+
+  // Service costs: only four categories count, each capped at 12 euro per month.
+  "Do you pay service costs to the landlord?"
+    hasServiceCosts: boolean
+  if (hasServiceCosts) {
+    "Energy for shared spaces per month (euro, max 12 counts):"
+      svcEnergy: integer
+    "Cleaning of shared spaces per month (euro, max 12 counts):"
+      svcCleaning: integer
+    "Caretaker (huismeester) per month (euro, max 12 counts):"
+      svcCaretaker: integer
+    "Shared rooms and services per month (euro, max 12 counts):"
+      svcShared: integer
+    "Energy capped:"
+      svcEnergyOk: boolean = svcEnergy <= 12
+    "Cleaning capped:"
+      svcCleaningOk: boolean = svcCleaning <= 12
+    "Caretaker capped:"
+      svcCaretakerOk: boolean = svcCaretaker <= 12
+    "Shared capped:"
+      svcSharedOk: boolean = svcShared <= 12
+    "All service costs within their cap:"
+      svcAllOk: boolean = svcEnergyOk && svcCleaningOk && svcCaretakerOk && svcSharedOk
+    "Declared service costs (euro):"
+      svcTotal: integer = svcEnergy + svcCleaning + svcCaretaker + svcShared
+  }
+  "Eligible rent if every service cost is within its cap (euro):"
+    eligibleRent: integer = bareRent + svcTotal
+
+  // Income and assets
+  "Your expected yearly income (toetsingsinkomen, euro):"
+    income: integer
+  "Your assets on 1 January 2024 (euro):"
+    assets: integer
+  "Household income (euro):"
+    householdIncome: integer = income + partnerIncome + coResidentIncome
+  "Household assets (euro):"
+    householdAssets: integer = assets + partnerAssets
+
+  // Rent limits
+  "Applicant (and partner) younger than 23:"
+    under23: boolean = age < 23 && (!hasPartner || partnerAge < 23)
+  "Exception for young tenants applies (children in the household):"
+    youngException: boolean = nChildren > 0
+  "Rent at or below the youth rent limit (452):"
+    belowYouthLimit: boolean = eligibleRent <= 452
+  "Rent at or below the maximum rent limit (880):"
+    belowMaxLimit: boolean = eligibleRent <= 880
+  "Rent passes the rent-limit test:"
+    rentOk: boolean = belowMaxLimit && (!under23 || youngException || belowYouthLimit)
+
+  "Assets below the limit (36952 single, 73904 with partner):"
+    assetsOk: boolean = (!hasPartner && householdAssets <= 36952) || (hasPartner && householdAssets <= 73904)
+
+  "Property qualifies:"
+    propertyOk: boolean = selfContained || recognisedRoom
+
+  "Basic conditions met:"
+    basicOk: boolean = age >= 18 && legalResidence && registeredAtAddress
+
+  "Eligible for huurtoeslag:"
+    eligible: boolean = basicOk && propertyOk && rentOk && assetsOk && bareRent > 0
+
+  if (eligible) {
+    "IBAN for payment:"
+      iban: string
+    "Start month of the rental contract (1-12):"
+      startMonth: integer
+    "Months of benefit this year:"
+      monthsOfBenefit: integer = 13 - startMonth
+    "Do you agree to report changes in income within 4 weeks?"
+      agreeReport: boolean
+  } else {
+    "Would you like information on other allowances?"
+      wantsInfo: boolean
+    if (wantsInfo) {
+      "Email address for information:"
+        infoEmail: string
+    }
+  }
+}

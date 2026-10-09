@@ -1,15 +1,14 @@
-//@@ src/main/rascal/astvanish/demo/ql/ql.av: run($ql)
-
-form "Tax Office example" { 
+// Source: the canonical QL example from the Language Workbench Challenge 2013
+// (Erdweg et al., "The State of the Art in Language Workbenches", SLE 2013).
+// `money` replaced by `integer` (our QL has no money type).
+form "Tax Office example" {
+  "Did you sell a house in 2010?"
+    hasSoldHouse: boolean
   "Did you buy a house in 2010?"
     hasBoughtHouse: boolean
-  
   "Did you enter a loan?"
     hasMaintLoan: boolean
-    
-  "Did you sell a house in 2010?"
-    hasSoldHouse: boolean    
-   
+
   if (hasSoldHouse) {
     "What was the selling price?"
       sellingPrice: integer

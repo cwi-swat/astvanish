@@ -49,7 +49,7 @@ void peval(list[Tree] progs, loc root, bool logging) {
 
     for (str path <- tasks, str func <- tasks[path]) {
         Env env = tasks[path][func];
-        start[Source] js = peval(parseAV(root + path), env, func, logging); 
+        start[Source] js = peval(root + path, env, func, logging); 
         loc l = jsLoc(func, sources[path][func]);  
         if (logging) {
             println("LOG: writing to <l>");
@@ -57,6 +57,9 @@ void peval(list[Tree] progs, loc root, bool logging) {
         writeFile(l, js);
     }
 }
+
+start[Source] peval(loc l, Env env, str func, bool logging)
+    = peval(parseAV(l), env, func, logging);
 
 @synopsis{Create a JS output file loc based on the semantics `func` and the input source `srcs`}
 loc jsLoc(str func, list[loc] srcs) {

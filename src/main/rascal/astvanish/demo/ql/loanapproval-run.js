@@ -118,7 +118,7 @@ function initializeQuestion$34(env) {
   env['loanAmount'] = 0;
 }
 function initializeQuestion$35(env) {
-  env['interestRate'] = 0;
+  env['integererestRate'] = 0;
 }
 function initializeQuestion$36(env) {
   env['loanTerm'] = 0;
@@ -362,7 +362,7 @@ function eve$21(env) {
   return env['loanAmount'];
 }
 function eve$22(env) {
-  return env['interestRate'];
+  return env['integererestRate'];
 }
 function eve$23(env) {
   return eve$21(env) * eve$22(env);
@@ -672,7 +672,7 @@ function updateVisibility$34(vis, env) {
             elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$35(vis, env) {
-  var elt = document.getElementById('interestRate-div');
+  var elt = document.getElementById('integererestRate-div');
             elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$36(vis, env) {
@@ -1234,17 +1234,17 @@ function renderQuestion$34(env, upd) {
 }
 function updater$19(upd) {
   return function (x) {
-  upd('interestRate', x.target.value);
+  upd('integererestRate', x.target.value);
 };
 }
 function widget$22(env, func) {
   var div = document.createElement('div');
-    div.id = 'interestRate-div';
-    div.appendChild(document.createTextNode('"Loan interest rate (percentage)"'.slice(1, -1)));
+    div.id = 'integererestRate-div';
+    div.appendChild(document.createTextNode('"Loan integererest rate (percentage)"'.slice(1, -1)));
     var elt = document.createElement('input'); 
-    elt.id = 'interestRate-widget'; 
+    elt.id = 'integererestRate-widget'; 
   elt.setAttribute('type', 'number');
-            elt.value = env['interestRate']; 
+            elt.value = env['integererestRate']; 
   elt.onchange = func; 
   div.appendChild(elt);
     document.body.appendChild(div);
@@ -1275,7 +1275,7 @@ function renderQuestion$36(env, upd) {
 function widget$24(env) {
   var div = document.createElement('div');
     div.id = 'totalInterest-div';
-    div.appendChild(document.createTextNode('"Total interest to be paid"'.slice(1, -1)));
+    div.appendChild(document.createTextNode('"Total integererest to be paid"'.slice(1, -1)));
     var elt = document.createElement('input'); 
     elt.id = 'totalInterest-widget'; 
   elt.setAttribute('type', 'number');
