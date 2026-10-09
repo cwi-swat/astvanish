@@ -6,6 +6,7 @@ extend lang::std::Id;
 
 import ParseTree;
 import IO;
+import String;
 
 import astvanish::Eval;
 import astvanish::PEval;
@@ -97,7 +98,7 @@ void dumpQlEval(loc root=|project://astvanish/src/main/rascal/astvanish/demo/ql/
 
 void stressTestPrep(bool json=false, bool doPeval=false) {
     loc dir = |project://astvanish/src/main/rascal/astvanish/demo/ql/stress/|;
-    for (loc l <- dir.ls, l.extension == "myql") {
+    for (loc l <- dir.ls, l.extension == "myql", !startsWith(l.file, "acs_")) {
         println("processing <l>");
         start[Form] f = parseQL(l);
         if (json) {
