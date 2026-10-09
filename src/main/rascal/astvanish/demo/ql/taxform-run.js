@@ -31,120 +31,8 @@ initializeQuestion$1(env);
 initializeQuestion$2(env);
 initializeQuestion$7(env);
 }
-function widget$0(env, func) {
-  page.append('"Did you buy a house in 2010?"');
-    var elt = createElement("input"); 
-  elt.setAttribute("type", "checkbox");
-            elt.checked = env['hasBoughtHouse']; 
-  page.append(elt); 
-  elt.onchange = func;
-}
-function renderQuestion$0(env) {
-  widget$0(env, function (x) { update('hasBoughtHouse', x.value); });
-}
-function widget$1(env, func) {
-  page.append('"Did you enter a loan?"');
-    var elt = createElement("input"); 
-  elt.setAttribute("type", "checkbox");
-            elt.checked = env['hasMaintLoan']; 
-  page.append(elt); 
-  elt.onchange = func;
-}
-function renderQuestion$1(env) {
-  widget$1(env, function (x) { update('hasMaintLoan', x.value); });
-}
-function widget$2(env, func) {
-  page.append('"Did you sell a house in 2010?"');
-    var elt = createElement("input"); 
-  elt.setAttribute("type", "checkbox");
-            elt.checked = env['hasSoldHouse']; 
-  page.append(elt); 
-  elt.onchange = func;
-}
-function renderQuestion$2(env) {
-  widget$2(env, function (x) { update('hasSoldHouse', x.value); });
-}
-function widget$3(env, func) {
-  page.append('"What was the selling price?"');
-    var elt = createElement("input"); 
-  elt.setAttribute("type", "number");
-            elt.value = env['sellingPrice']; 
-  page.append(elt); 
-  elt.onchange = func;
-}
-function renderQuestion$3(env) {
-  widget$3(env, function (x) { update('sellingPrice', x.value); });
-}
-function widget$4(env, func) {
-  page.append('"Private debts for the sold house:"');
-    var elt = createElement("input"); 
-  elt.setAttribute("type", "number");
-            elt.value = env['privateDebt']; 
-  page.append(elt); 
-  elt.onchange = func;
-}
-function renderQuestion$4(env) {
-  widget$4(env, function (x) { update('privateDebt', x.value); });
-}
-function widget$5(env) {
-  page.append('"Value residue:"');
-    var elt = createElement("input"); 
-  elt.setAttribute("type", "number");
-            elt.value = env['valueResidue']; 
-  page.append(elt); 
-  elt.disabled = true;
-}
-function renderQuestion$5(env) {
-  widget$5(env);
-}
-function renderQuestion$6(env) {
-  renderQuestion$3(env); 
-  renderQuestion$4(env); 
-  renderQuestion$5(env);
-}
-function renderQuestion$7(env) {
-  renderQuestion$6(env);
-}
-function render$0(env) {
-  renderQuestion$0(env);
-renderQuestion$1(env);
-renderQuestion$2(env);
-renderQuestion$7(env);
-}
-function updateVisibility$0(vis, env) {
-  var elt = getElementById('hasBoughtHouse-div');
-            elt.style = 'display: ' + vis ? 'block;' : 'none;';
-}
-function updateVisibility$1(vis, env) {
-  var elt = getElementById('hasMaintLoan-div');
-            elt.style = 'display: ' + vis ? 'block;' : 'none;';
-}
-function updateVisibility$2(vis, env) {
-  var elt = getElementById('hasSoldHouse-div');
-            elt.style = 'display: ' + vis ? 'block;' : 'none;';
-}
 function eve$0(env) {
   return env['hasSoldHouse'];
-}
-function updateVisibility$3(vis, env) {
-  var elt = getElementById('sellingPrice-div');
-            elt.style = 'display: ' + vis ? 'block;' : 'none;';
-}
-function updateVisibility$4(vis, env) {
-  var elt = getElementById('privateDebt-div');
-            elt.style = 'display: ' + vis ? 'block;' : 'none;';
-}
-function updateVisibility$5(vis, env) {
-  var elt = getElementById('valueResidue-div');
-            elt.style = 'display: ' + vis ? 'block;' : 'none;';
-}
-function updateVisibility$6(vis, env) {
-  updateVisibility$3(vis, env); 
-  updateVisibility$4(vis, env); 
-  updateVisibility$5(vis, env);
-}
-function updateVisibility$7(vis, env) {
-  updateVisibility$6(eve$0(env), env);
 }
 function eve$1(env) {
   return env['sellingPrice'];
@@ -179,6 +67,38 @@ function computeQuestion$2(env) {
    return computeQuestion$1(env);
 }
 }
+function updateVisibility$0(vis, env) {
+  var elt = getElementById('hasBoughtHouse-div');
+            elt.style = 'display: ' + vis ? 'block;' : 'none;';
+}
+function updateVisibility$1(vis, env) {
+  var elt = getElementById('hasMaintLoan-div');
+            elt.style = 'display: ' + vis ? 'block;' : 'none;';
+}
+function updateVisibility$2(vis, env) {
+  var elt = getElementById('hasSoldHouse-div');
+            elt.style = 'display: ' + vis ? 'block;' : 'none;';
+}
+function updateVisibility$3(vis, env) {
+  var elt = getElementById('sellingPrice-div');
+            elt.style = 'display: ' + vis ? 'block;' : 'none;';
+}
+function updateVisibility$4(vis, env) {
+  var elt = getElementById('privateDebt-div');
+            elt.style = 'display: ' + vis ? 'block;' : 'none;';
+}
+function updateVisibility$5(vis, env) {
+  var elt = getElementById('valueResidue-div');
+            elt.style = 'display: ' + vis ? 'block;' : 'none;';
+}
+function updateVisibility$6(vis, env) {
+  updateVisibility$3(vis, env); 
+  updateVisibility$4(vis, env); 
+  updateVisibility$5(vis, env);
+}
+function updateVisibility$7(vis, env) {
+  updateVisibility$6(eve$0(env), env);
+}
 function compute$0(env) {
   return function (x, val) {
   env[x] = val;
@@ -197,14 +117,119 @@ change = change || computeQuestion$2(env);
   updateVisibility$7(vis, env);
 };
 }
+function widget$0(env, func) {
+  var div = createElement('div');
+    div.id = 'hasBoughtHouse-div';
+    div.append('"Did you buy a house in 2010?"');
+    var elt = createElement('input'); 
+    elt.id = 'hasBoughtHouse-widget'; 
+  elt.setAttribute('type', 'checkbox');
+            elt.checked = env['hasBoughtHouse']; 
+  div.append(elt); 
+  elt.onchange = func; 
+  document.body.append(div);
+}
+function renderQuestion$0(env, upd) {
+  widget$0(env, function (x) { upd('hasBoughtHouse', x.value); });
+}
+function widget$1(env, func) {
+  var div = createElement('div');
+    div.id = 'hasMaintLoan-div';
+    div.append('"Did you enter a loan?"');
+    var elt = createElement('input'); 
+    elt.id = 'hasMaintLoan-widget'; 
+  elt.setAttribute('type', 'checkbox');
+            elt.checked = env['hasMaintLoan']; 
+  div.append(elt); 
+  elt.onchange = func; 
+  document.body.append(div);
+}
+function renderQuestion$1(env, upd) {
+  widget$1(env, function (x) { upd('hasMaintLoan', x.value); });
+}
+function widget$2(env, func) {
+  var div = createElement('div');
+    div.id = 'hasSoldHouse-div';
+    div.append('"Did you sell a house in 2010?"');
+    var elt = createElement('input'); 
+    elt.id = 'hasSoldHouse-widget'; 
+  elt.setAttribute('type', 'checkbox');
+            elt.checked = env['hasSoldHouse']; 
+  div.append(elt); 
+  elt.onchange = func; 
+  document.body.append(div);
+}
+function renderQuestion$2(env, upd) {
+  widget$2(env, function (x) { upd('hasSoldHouse', x.value); });
+}
+function widget$3(env, func) {
+  var div = createElement('div');
+    div.id = 'sellingPrice-div';
+    div.append('"What was the selling price?"');
+    var elt = createElement('input'); 
+    elt.id = 'sellingPrice-widget'; 
+  elt.setAttribute('type', 'number');
+            elt.value = env['sellingPrice']; 
+  div.append(elt); 
+  elt.onchange = func; 
+  document.body.append(div);
+}
+function renderQuestion$3(env, upd) {
+  widget$3(env, function (x) { upd('sellingPrice', x.value); });
+}
+function widget$4(env, func) {
+  var div = createElement('div');
+    div.id = 'privateDebt-div';
+    div.append('"Private debts for the sold house:"');
+    var elt = createElement('input'); 
+    elt.id = 'privateDebt-widget'; 
+  elt.setAttribute('type', 'number');
+            elt.value = env['privateDebt']; 
+  div.append(elt); 
+  elt.onchange = func; 
+  document.body.append(div);
+}
+function renderQuestion$4(env, upd) {
+  widget$4(env, function (x) { upd('privateDebt', x.value); });
+}
+function widget$5(env) {
+  var div = createElement('div');
+    div.id = 'valueResidue-div';
+    div.append('"Value residue:"');
+    var elt = createElement('input'); 
+    elt.id = 'valueResidue-widget'; 
+  elt.setAttribute('type', 'number');
+            elt.value = env['valueResidue']; 
+  div.append(elt); 
+  elt.disabled = true; 
+  document.body.append(div);
+}
+function renderQuestion$5(env, upd) {
+  widget$5(env);
+}
+function renderQuestion$6(env, upd) {
+  renderQuestion$3(env, upd); 
+  renderQuestion$4(env, upd); 
+  renderQuestion$5(env, upd);
+}
+function renderQuestion$7(env, upd) {
+  renderQuestion$6(env, upd);
+}
+function render$0(env, upd) {
+  renderQuestion$0(env, upd);
+renderQuestion$1(env, upd);
+renderQuestion$2(env, upd);
+renderQuestion$7(env, upd);
+}
 function run$0() {
   var env = {};
     initialize$0(env);
-    render$0(env);
+
+    var update = compute$0(env);
+    render$0(env, update);
     var vis = true; 
   updateVisibility$0(vis, env); 
   updateVisibility$1(vis, env); 
   updateVisibility$2(vis, env); 
-  updateVisibility$7(vis, env); 
-  update = compute$0(env);
+  updateVisibility$7(vis, env);
 }

@@ -1,18 +1,16 @@
 
-// todo: move this inside, thread thru render
-var update;
-
 function run($ql) {
     var env = {};
     initialize($ql, env);
-    render($ql, env);
+
+    var update = compute($ql, env);
+    render($ql, env, update);
     var vis = true;
     with (form _ { _ }: $ql) {
         for (const q of $2) {
             updateVisibility(q, vis, env);
         }
     }
-    update = compute($ql, env);
 }
 
 
@@ -52,10 +50,59 @@ function initializeQuestion($q, env) {
     }
 }
 
-function render($ql, env) {
+function render($ql, env, upd) {
     with (form _ { _ } : $ql) 
         for (const q of $2) 
-            renderQuestion(q, env);
+            renderQuestion(q, env, upd);
+}
+
+function renderQuestion($q, env, upd) {
+    match ($q) {
+        case _ _ \: _ :
+            widget($3, $1, $2, false, env, function (x) { upd($2.toString(), x.value); });
+
+        case _ _ \: _ = _ :
+            widget($3, $1, $2, true, env, null);
+
+        case { _ } :
+            for (const q of $1) {
+                renderQuestion(q, env, upd);
+            }
+
+        case if ( _ ) _ else _ : 
+            renderQuestion($2, env, upd);
+            renderQuestion($3, env, upd);
+
+        case if ( _ ) _ _:  // the last _ is the () empty for the follow restriction
+            renderQuestion($2, env, upd);
+    }
+}
+
+function widget($type, $label, $name, readOnly, env, func) {
+    var div = createElement('div');
+    div.id = $name.toString() + '-div';
+    div.append($label.toString());
+    var elt = createElement('input'); 
+    elt.id = $name.toString() + '-widget';           
+    match ($type) {
+        case int : 
+            elt.setAttribute('type', 'number');
+            elt.value = env[$name.toString()];
+        case bool :
+            elt.setAttribute('type', 'checkbox');
+            elt.checked = env[$name.toString()];
+        case str :
+            elt.setAttribute('type', 'text');
+            elt.value = env[$name.toString()];
+    }
+    div.append(elt);
+    if (readOnly) {
+        elt.disabled = true;
+    }
+    else {
+        elt.onchange = func;
+    }
+    document.body.append(div);
 }
 
 
@@ -147,50 +194,6 @@ function computeQuestion($q, env) {
 }
 
 
-function renderQuestion($q, env) {
-    match ($q) {
-        case _ _ \: _ :
-            widget($3, $1, $2, false, env, function (x) { update($2.toString(), x.value); });
-
-        case _ _ \: _ = _ :
-            widget($3, $1, $2, true, env, null);
-
-        case { _ } :
-            for (const q of $1) {
-                renderQuestion(q, env);
-            }
-
-        case if ( _ ) _ else _ : 
-            renderQuestion($2, env);
-            renderQuestion($3, env);
-
-        case if ( _ ) _ _:  // the last _ is the () empty for the follow restriction
-            renderQuestion($2, env);
-    }
-}
-
-function widget($type, $label, $name, readOnly, env, func) {
-    page.append($label.toString());
-    var elt = createElement("input");            
-    match ($type) {
-        case int : 
-            elt.setAttribute("type", "number");
-            elt.value = env[$name.toString()];
-        case bool :
-            elt.setAttribute("type", "checkbox");
-            elt.checked = env[$name.toString()];
-        case str :
-            elt.setAttribute("type", "text");
-            elt.value = env[$name.toString()];
-    }
-    page.append(elt);
-    if (readOnly) {
-        elt.disabled = true;
-    }
-    else {
-        elt.onchange = func;
-    }
-}
 
 function eve($e, env) {
     match ($e) {

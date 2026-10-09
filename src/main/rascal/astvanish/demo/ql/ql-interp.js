@@ -1,17 +1,15 @@
 
-// todo: move this inside, thread thru render
-var update;
-
 function run($ql) {var env = {};
     initialize($ql, env);
-    render($ql, env);
+
+    var update = compute($ql, env);
+    render($ql, env, update);
     var vis = true;
     {
         for (const q of $ql.questions) {
             updateVisibility(q, vis, env);
         }
-    }
-    update = compute($ql, env);}
+    }}
 
 
 function initialize($ql, env) {for (const q of $ql.questions) initializeQuestion(q, env);}
@@ -49,7 +47,56 @@ case 'ifThen':
    break;
 }}
 
-function render($ql, env) {for (const q of $ql.questions) renderQuestion(q, env);}
+function render($ql, env, upd) {for (const q of $ql.questions) renderQuestion(q, env, upd);}
+
+function renderQuestion($q, env, upd) {switch ($q._tag) {
+case 'answerable': 
+   widget($q.type, $q.prompt, $q.name, false, env, function (x) { upd($q.name.toString(), x.value); });
+   break;
+case 'computed': 
+   widget($q.type, $q.prompt, $q.name, true, env, null);
+   break;
+case 'block': 
+   for (const q of $q.questions) {
+                renderQuestion(q, env, upd);
+            }
+   break;
+case 'ifThenElse': 
+   renderQuestion($q.then, env, upd);
+            renderQuestion($q.els, env, upd);
+   break;
+case 'ifThen': 
+   renderQuestion($q.then, env, upd);
+   break;
+}}
+
+function widget($type, $label, $name, readOnly, env, func) {var div = createElement('div');
+    div.id = $name.toString() + '-div';
+    div.append($label.toString());
+    var elt = createElement('input'); 
+    elt.id = $name.toString() + '-widget';           
+    switch ($type._tag) {
+case 'integer': 
+   elt.setAttribute('type', 'number');
+            elt.value = env[$name.toString()];
+   break;
+case 'boolean': 
+   elt.setAttribute('type', 'checkbox');
+            elt.checked = env[$name.toString()];
+   break;
+case 'string': 
+   elt.setAttribute('type', 'text');
+            elt.value = env[$name.toString()];
+   break;
+}
+    div.append(elt);
+    if (readOnly) {
+        elt.disabled = true;
+    }
+    else {
+        elt.onchange = func;
+    }
+    document.body.append(div);}
 
 
 function compute($ql, env) {{
@@ -142,50 +189,6 @@ case 'ifThen':
 }}
 
 
-function renderQuestion($q, env) {switch ($q._tag) {
-case 'answerable': 
-   widget($q.type, $q.prompt, $q.name, false, env, function (x) { update($q.name.toString(), x.value); });
-   break;
-case 'computed': 
-   widget($q.type, $q.prompt, $q.name, true, env, null);
-   break;
-case 'block': 
-   for (const q of $q.questions) {
-                renderQuestion(q, env);
-            }
-   break;
-case 'ifThenElse': 
-   renderQuestion($q.then, env);
-            renderQuestion($q.els, env);
-   break;
-case 'ifThen': 
-   renderQuestion($q.then, env);
-   break;
-}}
-
-function widget($type, $label, $name, readOnly, env, func) {page.append($label.toString());
-    var elt = createElement("input");            
-    switch ($type._tag) {
-case 'integer': 
-   elt.setAttribute("type", "number");
-            elt.value = env[$name.toString()];
-   break;
-case 'boolean': 
-   elt.setAttribute("type", "checkbox");
-            elt.checked = env[$name.toString()];
-   break;
-case 'string': 
-   elt.setAttribute("type", "text");
-            elt.value = env[$name.toString()];
-   break;
-}
-    page.append(elt);
-    if (readOnly) {
-        elt.disabled = true;
-    }
-    else {
-        elt.onchange = func;
-    }}
 
 function eve($e, env) {switch ($e._tag) {
 case 'var': 
