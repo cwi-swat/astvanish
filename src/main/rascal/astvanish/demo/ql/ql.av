@@ -212,7 +212,7 @@ function eve($e, env) {
     match ($e) {
         case _@Id : return env[$1.toString()];
         case _@Int : return parseInt($1.toString());
-        case _@Str : return unquote($1.toString());
+        case _@Str : return $1.toString().slice(1,-1);
         case _@Bool : return $1.toString() === 'true';
         case ( _ ) : return eve($1, env);
         case ! _ : return !eve($1, env);

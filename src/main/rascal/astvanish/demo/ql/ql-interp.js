@@ -215,7 +215,7 @@ case 'integer':
    return parseInt($e.theInt.toString());
    break;
 case 'string': 
-   return unquote($e.theStr.toString());
+   return $e.theStr.slice(1,-1);
    break;
 case 'boolean': 
    return $e.theBool === 'true';

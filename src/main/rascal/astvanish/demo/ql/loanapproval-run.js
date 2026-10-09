@@ -482,7 +482,7 @@ function eve$45(env) {
   return env['loanApproved'];
 }
 function eve$46(env) {
-  return unquote('"Approved"');
+  return '"Approved"'.slice(1,-1);
 }
 function updateValue$7(val) {
   var elt = document.getElementById('approvalMessage-widget'); 
@@ -502,7 +502,7 @@ function computeQuestion$21(env) {
   return change;
 }
 function eve$47(env) {
-  return unquote('"Not Approved"');
+  return '"Not Approved"'.slice(1,-1);
 }
 function updateValue$8(val) {
   var elt = document.getElementById('not_approvalMessage-widget'); 

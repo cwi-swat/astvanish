@@ -5045,7 +5045,7 @@ function eve$0(env) {
   return env['Id10013'];
 }
 function eve$1(env) {
-  return unquote('"yes"');
+  return '"yes"'.slice(1,-1);
 }
 function eve$2(env) {
   return eve$0(env) === eve$1(env);
@@ -5089,13 +5089,13 @@ function computeQuestion$6(env) {
 }
 }
 function eve$9(env) {
-  return unquote('"no"');
+  return '"no"'.slice(1,-1);
 }
 function eve$10(env) {
   return eve$3(env) === eve$9(env);
 }
 function eve$11(env) {
-  return unquote('"ref"');
+  return '"ref"'.slice(1,-1);
 }
 function eve$12(env) {
   return eve$3(env) === eve$11(env);
@@ -5989,7 +5989,7 @@ function eve$126(env) {
   return env['age_group'];
 }
 function eve$127(env) {
-  return unquote('"neonate"');
+  return '"neonate"'.slice(1,-1);
 }
 function eve$128(env) {
   return eve$126(env) === eve$127(env);
@@ -6024,7 +6024,7 @@ function computeQuestion$74(env) {
 }
 }
 function eve$132(env) {
-  return unquote('"child"');
+  return '"child"'.slice(1,-1);
 }
 function eve$133(env) {
   return eve$126(env) === eve$132(env);
@@ -6043,7 +6043,7 @@ function eve$134(env) {
   return env['age_child_unit'];
 }
 function eve$135(env) {
-  return unquote('"days"');
+  return '"days"'.slice(1,-1);
 }
 function eve$136(env) {
   return eve$134(env) === eve$135(env);
@@ -6059,7 +6059,7 @@ function computeQuestion$78(env) {
 }
 }
 function eve$137(env) {
-  return unquote('"months"');
+  return '"months"'.slice(1,-1);
 }
 function eve$138(env) {
   return eve$134(env) === eve$137(env);
@@ -6075,7 +6075,7 @@ function computeQuestion$80(env) {
 }
 }
 function eve$139(env) {
-  return unquote('"years"');
+  return '"years"'.slice(1,-1);
 }
 function eve$140(env) {
   return eve$134(env) === eve$139(env);
@@ -6091,7 +6091,7 @@ function computeQuestion$82(env) {
 }
 }
 function eve$141(env) {
-  return unquote('"adult"');
+  return '"adult"'.slice(1,-1);
 }
 function eve$142(env) {
   return eve$126(env) === eve$141(env);
@@ -7611,13 +7611,13 @@ function eve$342(env) {
   return env['Id10063'];
 }
 function eve$343(env) {
-  return unquote('"no_formal_education"');
+  return '"no_formal_education"'.slice(1,-1);
 }
 function eve$344(env) {
   return eve$342(env) === eve$343(env);
 }
 function eve$345(env) {
-  return unquote('"primary_school"');
+  return '"primary_school"'.slice(1,-1);
 }
 function eve$346(env) {
   return eve$342(env) === eve$345(env);
@@ -7629,7 +7629,7 @@ function eve$348(env) {
   return eve$347(env);
 }
 function eve$349(env) {
-  return unquote('"DK"');
+  return '"DK"'.slice(1,-1);
 }
 function eve$350(env) {
   return eve$342(env) === eve$349(env);
@@ -7641,7 +7641,7 @@ function eve$352(env) {
   return eve$351(env);
 }
 function eve$353(env) {
-  return unquote('"Ref"');
+  return '"Ref"'.slice(1,-1);
 }
 function eve$354(env) {
   return eve$342(env) === eve$353(env);
@@ -7808,7 +7808,7 @@ function eve$401(env) {
   return env['Id10065'];
 }
 function eve$402(env) {
-  return unquote('"mainly_employed"');
+  return '"mainly_employed"'.slice(1,-1);
 }
 function eve$403(env) {
   return eve$401(env) === eve$402(env);
@@ -8062,7 +8062,7 @@ function eve$414(env) {
   return eve$413(env) === eve$1(env);
 }
 function eve$415(env) {
-  return unquote('"dk"');
+  return '"dk"'.slice(1,-1);
 }
 function eve$416(env) {
   return eve$413(env) === eve$415(env);
@@ -9288,7 +9288,7 @@ function eve$686(env) {
   return !eve$685(env);
 }
 function eve$687(env) {
-  return unquote('""');
+  return '""'.slice(1,-1);
 }
 function eve$688(env) {
   return eve$436(env) === eve$687(env);
@@ -9360,7 +9360,7 @@ function eve$710(env) {
   return env['Id10077_a'];
 }
 function eve$711(env) {
-  return unquote('"less"');
+  return '"less"'.slice(1,-1);
 }
 function eve$712(env) {
   return eve$710(env) === eve$711(env);
@@ -10976,7 +10976,7 @@ function eve$867(env) {
   return env['Id10178_unit'];
 }
 function eve$868(env) {
-  return unquote('"hours"');
+  return '"hours"'.slice(1,-1);
 }
 function eve$869(env) {
   return eve$867(env) === eve$868(env);
@@ -14913,13 +14913,13 @@ function eve$1267(env) {
   return env['Id10019'];
 }
 function eve$1268(env) {
-  return unquote('"female"');
+  return '"female"'.slice(1,-1);
 }
 function eve$1269(env) {
   return eve$1267(env) === eve$1268(env);
 }
 function eve$1270(env) {
-  return unquote('"undetermined"');
+  return '"undetermined"'.slice(1,-1);
 }
 function eve$1271(env) {
   return eve$1267(env) === eve$1270(env);
