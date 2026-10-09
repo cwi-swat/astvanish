@@ -1,4 +1,4 @@
-//@@ src/ql.av: run($ql)
+//@@ src/main/rascal/astvanish/demo/ql/ql.av: run($ql)
 
 form "Loan Approval" {
   "What is your full name?" fullName: str

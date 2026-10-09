@@ -8,6 +8,8 @@ import ParseTree;
 import IO;
 
 import astvanish::Eval;
+import astvanish::PEval;
+import astvanish::PT2JSON;
 
 start syntax Form 
   = form: "form" Str title "{" Question* questions "}"; 
@@ -58,15 +60,19 @@ syntax Expr
   ;
 
 start[Form] aForm() 
-    = parse(#start[Form], |project://astvanish/src/main/rascal/astvanish/demo/tax.ql|);
+    = parse(#start[Form], |project://astvanish/src/main/rascal/astvanish/demo/ql/taxform.ql|);
 
 
 start[Form] loanApproval() 
-    = parse(#start[Form], |project://astvanish/src/main/rascal/astvanish/demo/loan.ql|);
+    = parse(#start[Form], |project://astvanish/src/main/rascal/astvanish/demo/ql/loanapproval.ql|);
 
-void dumpQlEval() {
-    writeFile(|project://astvanish/src/main/rascal/astvanish/demo/ql-interp.js|, 
-        toEval(|project://astvanish/src/ql.av|, (
+void dumpQlEval(loc root=|project://astvanish/src/main/rascal/astvanish/demo/ql/|) {
+    peval(aForm());
+    peval(loanApproval());
+    writeFile(root + "taxform.json", pt2json(aForm()));
+    writeFile(root + "loanapproval.json", pt2json(loanApproval()));
+    writeFile(root + "ql-interp.js", 
+        toEval(root + "ql.av", (
             "run": ("$ql": sort("Form")),
             "initialize": ("$ql": sort("Form")),
             "defaultFor": ("$type": sort("Type")),

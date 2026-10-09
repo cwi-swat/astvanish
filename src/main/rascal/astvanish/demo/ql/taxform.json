@@ -1,0 +1,97 @@
+{
+  "_tag": "form",
+  "_src": {"offset": 56, "length": 431},
+  "title": "\"Tax Office example\"",
+  "questions": [
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 87, "length": 55},
+      "prompt": "\"Did you buy a house in 2010?\"",
+      "name": "hasBoughtHouse",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 138, "length": 4}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 148, "length": 46},
+      "prompt": "\"Did you enter a loan?\"",
+      "name": "hasMaintLoan",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 190, "length": 4}
+      }
+    },
+    {
+      "_tag": "answerable",
+      "_src": {"offset": 202, "length": 54},
+      "prompt": "\"Did you sell a house in 2010?\"",
+      "name": "hasSoldHouse",
+      "type": {
+        "_tag": "boolean",
+        "_src": {"offset": 252, "length": 4}
+      }
+    },
+    {
+      "_tag": "ifThen",
+      "_src": {"offset": 267, "length": 219},
+      "cond": {
+        "_tag": "var",
+        "_src": {"offset": 271, "length": 12},
+        "name": "hasSoldHouse"
+      },
+      "then": {
+        "_tag": "block",
+        "_src": {"offset": 285, "length": 200},
+        "questions": [
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 291, "length": 53},
+            "prompt": "\"What was the selling price?\"",
+            "name": "sellingPrice",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 341, "length": 3}
+            }
+          },
+          {
+            "_tag": "answerable",
+            "_src": {"offset": 349, "length": 58},
+            "prompt": "\"Private debts for the sold house:\"",
+            "name": "privateDebt",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 404, "length": 3}
+            }
+          },
+          {
+            "_tag": "computed",
+            "_src": {"offset": 412, "length": 69},
+            "prompt": "\"Value residue:\"",
+            "name": "valueResidue",
+            "type": {
+              "_tag": "integer",
+              "_src": {"offset": 449, "length": 3}
+            },
+            "expr": {
+              "_tag": "sub",
+              "_src": {"offset": 455, "length": 26},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 455, "length": 12},
+                "name": "sellingPrice"
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 470, "length": 11},
+                "name": "privateDebt"
+              }
+            }
+          }
+        ]
+      },
+      "empty": ""
+    }
+  ]
+}
