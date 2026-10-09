@@ -138,15 +138,18 @@ function compute($ql, env) {
     }
 }
 
+function toggleVisibility($name, vis) {
+    var elt = document.getElementById($name.toString() + '-div');
+    elt.style.display = vis ? 'block' : 'none';
+}
+
 function updateVisibility($q, vis, env) {
     match ($q) {
         case _ _ \: _ :
-            var elt = document.getElementById($2.toString() + '-div');
-            elt.style.display = vis ? 'block' : 'none';
+            toggleVisibility($2, vis);
 
         case _ _ \: _ = _ :
-            var elt = document.getElementById($2.toString() + '-div');
-            elt.style.display = vis ? 'block' : 'none';
+            toggleVisibility($2, vis);
             
         case { _ } :
             for (const q of $1) {

@@ -541,25 +541,40 @@ else
    return computeQuestion$23(env);
 }
 }
-function updateVisibility$0(vis, env) {
+function toggleVisibility$0(vis) {
   var elt = document.getElementById('fullName-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$0(vis, env) {
+  toggleVisibility$0(vis);
+}
+function toggleVisibility$1(vis) {
+  var elt = document.getElementById('age-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$1(vis, env) {
-  var elt = document.getElementById('age-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$1(vis);
+}
+function toggleVisibility$2(vis) {
+  var elt = document.getElementById('hasLicense-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$2(vis, env) {
-  var elt = document.getElementById('hasLicense-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$2(vis);
+}
+function toggleVisibility$3(vis) {
+  var elt = document.getElementById('inSchool-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$3(vis, env) {
-  var elt = document.getElementById('inSchool-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$3(vis);
+}
+function toggleVisibility$4(vis) {
+  var elt = document.getElementById('grade-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$4(vis, env) {
-  var elt = document.getElementById('grade-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$4(vis);
 }
 function updateVisibility$5(vis, env) {
   updateVisibility$4(vis, env);
@@ -571,29 +586,47 @@ function updateVisibility$7(vis, env) {
   updateVisibility$3(vis, env); 
   updateVisibility$6(vis, env);
 }
-function updateVisibility$8(vis, env) {
+function toggleVisibility$5(vis) {
   var elt = document.getElementById('employed-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$8(vis, env) {
+  toggleVisibility$5(vis);
+}
+function toggleVisibility$6(vis) {
+  var elt = document.getElementById('jobTitle-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$9(vis, env) {
-  var elt = document.getElementById('jobTitle-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$6(vis);
+}
+function toggleVisibility$7(vis) {
+  var elt = document.getElementById('yearsInJob-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$10(vis, env) {
-  var elt = document.getElementById('yearsInJob-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$7(vis);
+}
+function toggleVisibility$8(vis) {
+  var elt = document.getElementById('monthlySalary-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$11(vis, env) {
-  var elt = document.getElementById('monthlySalary-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$8(vis);
+}
+function toggleVisibility$9(vis) {
+  var elt = document.getElementById('monthlyExpenses-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$12(vis, env) {
-  var elt = document.getElementById('monthlyExpenses-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$9(vis);
+}
+function toggleVisibility$10(vis) {
+  var elt = document.getElementById('annualSavings-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$13(vis, env) {
-  var elt = document.getElementById('annualSavings-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$10(vis);
 }
 function updateVisibility$14(vis, env) {
   updateVisibility$9(vis, env); 
@@ -602,9 +635,12 @@ function updateVisibility$14(vis, env) {
   updateVisibility$12(vis, env); 
   updateVisibility$13(vis, env);
 }
-function updateVisibility$15(vis, env) {
+function toggleVisibility$11(vis) {
   var elt = document.getElementById('lookingForJob-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$15(vis, env) {
+  toggleVisibility$11(vis);
 }
 function updateVisibility$16(vis, env) {
   updateVisibility$15(vis, env);
@@ -617,25 +653,40 @@ function updateVisibility$18(vis, env) {
   updateVisibility$8(vis, env); 
   updateVisibility$17(vis, env);
 }
-function updateVisibility$19(vis, env) {
+function toggleVisibility$12(vis) {
   var elt = document.getElementById('retired-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$19(vis, env) {
+  toggleVisibility$12(vis);
+}
+function toggleVisibility$13(vis) {
+  var elt = document.getElementById('yearsRetired-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$20(vis, env) {
-  var elt = document.getElementById('yearsRetired-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$13(vis);
+}
+function toggleVisibility$14(vis) {
+  var elt = document.getElementById('annualPension-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$21(vis, env) {
-  var elt = document.getElementById('annualPension-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$14(vis);
+}
+function toggleVisibility$15(vis) {
+  var elt = document.getElementById('healthcareExpenses-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$22(vis, env) {
-  var elt = document.getElementById('healthcareExpenses-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$15(vis);
+}
+function toggleVisibility$16(vis) {
+  var elt = document.getElementById('netPension-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$23(vis, env) {
-  var elt = document.getElementById('netPension-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$16(vis);
 }
 function updateVisibility$24(vis, env) {
   updateVisibility$20(vis, env); 
@@ -661,60 +712,99 @@ function updateVisibility$29(vis, env) {
   updateVisibility$7(eve$2(env), env);
             updateVisibility$28(!eve$2(env), env);
 }
-function updateVisibility$30(vis, env) {
+function toggleVisibility$17(vis) {
   var elt = document.getElementById('seniorDiscount-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$30(vis, env) {
+  toggleVisibility$17(vis);
+}
+function toggleVisibility$18(vis) {
+  var elt = document.getElementById('income-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$31(vis, env) {
-  var elt = document.getElementById('income-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$18(vis);
+}
+function toggleVisibility$19(vis) {
+  var elt = document.getElementById('monthlyDebts-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$32(vis, env) {
-  var elt = document.getElementById('monthlyDebts-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$19(vis);
+}
+function toggleVisibility$20(vis) {
+  var elt = document.getElementById('hasCoSigner-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$33(vis, env) {
-  var elt = document.getElementById('hasCoSigner-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$20(vis);
+}
+function toggleVisibility$21(vis) {
+  var elt = document.getElementById('loanAmount-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$34(vis, env) {
-  var elt = document.getElementById('loanAmount-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$21(vis);
+}
+function toggleVisibility$22(vis) {
+  var elt = document.getElementById('integererestRate-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$35(vis, env) {
-  var elt = document.getElementById('integererestRate-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$22(vis);
+}
+function toggleVisibility$23(vis) {
+  var elt = document.getElementById('loanTerm-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$36(vis, env) {
-  var elt = document.getElementById('loanTerm-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$23(vis);
+}
+function toggleVisibility$24(vis) {
+  var elt = document.getElementById('totalInterest-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$37(vis, env) {
-  var elt = document.getElementById('totalInterest-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$24(vis);
+}
+function toggleVisibility$25(vis) {
+  var elt = document.getElementById('totalRepayment-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$38(vis, env) {
-  var elt = document.getElementById('totalRepayment-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$25(vis);
+}
+function toggleVisibility$26(vis) {
+  var elt = document.getElementById('monthlyPayment-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$39(vis, env) {
-  var elt = document.getElementById('monthlyPayment-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$26(vis);
+}
+function toggleVisibility$27(vis) {
+  var elt = document.getElementById('loanApproved-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$40(vis, env) {
-  var elt = document.getElementById('loanApproved-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$27(vis);
+}
+function toggleVisibility$28(vis) {
+  var elt = document.getElementById('approvalMessage-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$41(vis, env) {
-  var elt = document.getElementById('approvalMessage-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$28(vis);
 }
 function updateVisibility$42(vis, env) {
   updateVisibility$41(vis, env);
 }
-function updateVisibility$43(vis, env) {
+function toggleVisibility$29(vis) {
   var elt = document.getElementById('not_approvalMessage-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$43(vis, env) {
+  toggleVisibility$29(vis);
 }
 function updateVisibility$44(vis, env) {
   updateVisibility$43(vis, env);
