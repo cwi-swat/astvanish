@@ -52,21 +52,23 @@ case 'ifThen':
 
 function render($ql, env, upd) {for (const q of $ql.questions) renderQuestion(q, env, upd);}
 
-function renderQuestion($q, env, upd) {switch ($q._tag) {
-case 'answerable': 
-   widget($q.type, $q.prompt, $q.name, false, env, function (x) { 
-                switch ($q.type._tag) {
+function updater($name, $type, upd) {return function(x) {
+        switch ($type._tag) {
 case 'integer': 
-   upd($q.type.name.toString(), x.target.value);
+   upd($name.toString(), x.target.value);
    break;
 case 'boolean': 
-   upd($q.type.name.toString(), x.target.checked);
+   upd($name.toString(), x.target.checked);
    break;
 case 'string': 
-   upd($q.type.name.toString(), x.target.value);
+   upd($name.toString(), x.target.value);
    break;
 }
-            });
+    };}
+
+function renderQuestion($q, env, upd) {switch ($q._tag) {
+case 'answerable': 
+   widget($q.type, $q.prompt, $q.name, false, env, updater($q.name, $q.type, upd));
    break;
 case 'computed': 
    widget($q.type, $q.prompt, $q.name, true, env, null);

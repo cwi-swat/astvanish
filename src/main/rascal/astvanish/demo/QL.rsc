@@ -84,6 +84,7 @@ void dumpQlEval(loc root=|project://astvanish/src/main/rascal/astvanish/demo/ql/
             "updateVisibility": ("$q": sort("Question")),
             "updateValue": ("$name": sort("Id"), "$type": sort("Type")),
             "widget": ("$type": sort("Type"), "$label": sort("Str"), "$name": sort("Id")),
+            "updater": ("$name": sort("Id"), "$type": sort("Type")),
             "eve": ("$e": sort("Expr"))
         ), #start[Form]));
 }

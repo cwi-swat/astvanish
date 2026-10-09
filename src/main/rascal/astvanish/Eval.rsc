@@ -83,7 +83,7 @@ Statement toEval(Statement stmt, Sigs env, type[&T<:Tree] grammar) {
         
         case (Statement)`match (<Id x>) {<MatchCase* cases>}` 
             // ugly hack: using the key "" to propagate the x object
-            => toSwitch(x, toField(x, env), cases, env + ("": sort("<toField(x, env)>")), grammar)                   
+            => toSwitch(x, cases, env + ("": sort("<x>")), grammar)                   
 
         case (Statement)`with (<Pattern p>: <Id x>) <Statement s>`: {
             set[Production] alts = grammar.definitions[env["<x>"]].alternatives;
@@ -112,8 +112,8 @@ Symbol unlabel(label(_, Symbol s)) = s;
 default Symbol unlabel(Symbol s) = s;
 
 @synopsis{Convert `match`'s cases to an ordinary switch statement}
-Statement toSwitch(Id x, Expression e, MatchCase* cases, Sigs env, type[&T<:Tree] grammar) {
-    Statement sw = (Statement)`switch (<Expression e>._tag) {}`;
+Statement toSwitch(Id x, MatchCase* cases, Sigs env, type[&T<:Tree] grammar) {
+    Statement sw = (Statement)`switch (<Id x>._tag) {}`;
     
     void addCase(Expression guard, Statement* ss) {
         if ((Statement)`switch (<Expression cond>) {<CaseClause* cc>}` := sw) {

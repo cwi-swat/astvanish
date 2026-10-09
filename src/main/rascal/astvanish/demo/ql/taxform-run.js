@@ -117,6 +117,11 @@ change = change || computeQuestion$2(env);
   updateVisibility$7(vis, env);
 };
 }
+function updater$0(upd) {
+  return function (x) {
+  upd('hasBoughtHouse', x.target.checked);
+};
+}
 function widget$0(env, func) {
   var div = document.createElement('div');
     div.id = 'hasBoughtHouse-div';
@@ -130,9 +135,12 @@ function widget$0(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$0(env, upd) {
-  widget$0(env, function (x) {
-  upd('hasBoughtHouse', x.target.checked);
-});
+  widget$0(env, updater$0(upd));
+}
+function updater$1(upd) {
+  return function (x) {
+  upd('hasMaintLoan', x.target.checked);
+};
 }
 function widget$1(env, func) {
   var div = document.createElement('div');
@@ -147,9 +155,12 @@ function widget$1(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$1(env, upd) {
-  widget$1(env, function (x) {
-  upd('hasMaintLoan', x.target.checked);
-});
+  widget$1(env, updater$1(upd));
+}
+function updater$2(upd) {
+  return function (x) {
+  upd('hasSoldHouse', x.target.checked);
+};
 }
 function widget$2(env, func) {
   var div = document.createElement('div');
@@ -164,9 +175,12 @@ function widget$2(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$2(env, upd) {
-  widget$2(env, function (x) {
-  upd('hasSoldHouse', x.target.checked);
-});
+  widget$2(env, updater$2(upd));
+}
+function updater$3(upd) {
+  return function (x) {
+  upd('sellingPrice', x.target.value);
+};
 }
 function widget$3(env, func) {
   var div = document.createElement('div');
@@ -181,9 +195,12 @@ function widget$3(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$3(env, upd) {
-  widget$3(env, function (x) {
-  upd('sellingPrice', x.target.value);
-});
+  widget$3(env, updater$3(upd));
+}
+function updater$4(upd) {
+  return function (x) {
+  upd('privateDebt', x.target.value);
+};
 }
 function widget$4(env, func) {
   var div = document.createElement('div');
@@ -198,9 +215,7 @@ function widget$4(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$4(env, upd) {
-  widget$4(env, function (x) {
-  upd('privateDebt', x.target.value);
-});
+  widget$4(env, updater$4(upd));
 }
 function widget$5(env) {
   var div = document.createElement('div');

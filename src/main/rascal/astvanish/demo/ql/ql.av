@@ -59,16 +59,20 @@ function render($ql, env, upd) {
             renderQuestion(q, env, upd);
 }
 
+function updater($name, $type, upd) {
+    return function(x) {
+        match ($type) {
+            case int: upd($name.toString(), x.target.value); 
+            case bool: upd($name.toString(), x.target.checked); 
+            case str: upd($name.toString(), x.target.value); 
+        }
+    };
+}
+
 function renderQuestion($q, env, upd) {
     match ($q) {
         case _ _ \: _ :
-            widget($3, $1, $2, false, env, function (x) { 
-                match ($3) {
-                    case int: upd($2.toString(), x.target.value); 
-                    case bool: upd($2.toString(), x.target.checked); 
-                    case str: upd($2.toString(), x.target.value); 
-                }
-            });
+            widget($3, $1, $2, false, env, updater($2, $3, upd));
 
         case _ _ \: _ = _ :
             widget($3, $1, $2, true, env, null);

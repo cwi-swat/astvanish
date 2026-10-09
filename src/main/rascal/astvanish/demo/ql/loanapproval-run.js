@@ -755,6 +755,11 @@ change = change || computeQuestion$24(env);
   updateVisibility$45(vis, env);
 };
 }
+function updater$0(upd) {
+  return function (x) {
+  upd('fullName', x.target.value);
+};
+}
 function widget$0(env, func) {
   var div = document.createElement('div');
     div.id = 'fullName-div';
@@ -768,9 +773,12 @@ function widget$0(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$0(env, upd) {
-  widget$0(env, function (x) {
-  upd('fullName', x.target.value);
-});
+  widget$0(env, updater$0(upd));
+}
+function updater$1(upd) {
+  return function (x) {
+  upd('age', x.target.value);
+};
 }
 function widget$1(env, func) {
   var div = document.createElement('div');
@@ -785,9 +793,12 @@ function widget$1(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$1(env, upd) {
-  widget$1(env, function (x) {
-  upd('age', x.target.value);
-});
+  widget$1(env, updater$1(upd));
+}
+function updater$2(upd) {
+  return function (x) {
+  upd('hasLicense', x.target.checked);
+};
 }
 function widget$2(env, func) {
   var div = document.createElement('div');
@@ -802,9 +813,12 @@ function widget$2(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$2(env, upd) {
-  widget$2(env, function (x) {
-  upd('hasLicense', x.target.checked);
-});
+  widget$2(env, updater$2(upd));
+}
+function updater$3(upd) {
+  return function (x) {
+  upd('inSchool', x.target.checked);
+};
 }
 function widget$3(env, func) {
   var div = document.createElement('div');
@@ -819,9 +833,12 @@ function widget$3(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$3(env, upd) {
-  widget$3(env, function (x) {
-  upd('inSchool', x.target.checked);
-});
+  widget$3(env, updater$3(upd));
+}
+function updater$4(upd) {
+  return function (x) {
+  upd('grade', x.target.value);
+};
 }
 function widget$4(env, func) {
   var div = document.createElement('div');
@@ -836,9 +853,7 @@ function widget$4(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$4(env, upd) {
-  widget$4(env, function (x) {
-  upd('grade', x.target.value);
-});
+  widget$4(env, updater$4(upd));
 }
 function renderQuestion$5(env, upd) {
   renderQuestion$4(env, upd);
@@ -849,6 +864,11 @@ function renderQuestion$6(env, upd) {
 function renderQuestion$7(env, upd) {
   renderQuestion$3(env, upd); 
   renderQuestion$6(env, upd);
+}
+function updater$5(upd) {
+  return function (x) {
+  upd('employed', x.target.checked);
+};
 }
 function widget$5(env, func) {
   var div = document.createElement('div');
@@ -863,9 +883,12 @@ function widget$5(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$8(env, upd) {
-  widget$5(env, function (x) {
-  upd('employed', x.target.checked);
-});
+  widget$5(env, updater$5(upd));
+}
+function updater$6(upd) {
+  return function (x) {
+  upd('jobTitle', x.target.value);
+};
 }
 function widget$6(env, func) {
   var div = document.createElement('div');
@@ -880,9 +903,12 @@ function widget$6(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$9(env, upd) {
-  widget$6(env, function (x) {
-  upd('jobTitle', x.target.value);
-});
+  widget$6(env, updater$6(upd));
+}
+function updater$7(upd) {
+  return function (x) {
+  upd('yearsInJob', x.target.value);
+};
 }
 function widget$7(env, func) {
   var div = document.createElement('div');
@@ -897,9 +923,12 @@ function widget$7(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$10(env, upd) {
-  widget$7(env, function (x) {
-  upd('yearsInJob', x.target.value);
-});
+  widget$7(env, updater$7(upd));
+}
+function updater$8(upd) {
+  return function (x) {
+  upd('monthlySalary', x.target.value);
+};
 }
 function widget$8(env, func) {
   var div = document.createElement('div');
@@ -914,9 +943,12 @@ function widget$8(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$11(env, upd) {
-  widget$8(env, function (x) {
-  upd('monthlySalary', x.target.value);
-});
+  widget$8(env, updater$8(upd));
+}
+function updater$9(upd) {
+  return function (x) {
+  upd('monthlyExpenses', x.target.value);
+};
 }
 function widget$9(env, func) {
   var div = document.createElement('div');
@@ -931,9 +963,7 @@ function widget$9(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$12(env, upd) {
-  widget$9(env, function (x) {
-  upd('monthlyExpenses', x.target.value);
-});
+  widget$9(env, updater$9(upd));
 }
 function widget$10(env) {
   var div = document.createElement('div');
@@ -957,6 +987,11 @@ function renderQuestion$14(env, upd) {
   renderQuestion$12(env, upd); 
   renderQuestion$13(env, upd);
 }
+function updater$10(upd) {
+  return function (x) {
+  upd('lookingForJob', x.target.checked);
+};
+}
 function widget$11(env, func) {
   var div = document.createElement('div');
     div.id = 'lookingForJob-div';
@@ -970,9 +1005,7 @@ function widget$11(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$15(env, upd) {
-  widget$11(env, function (x) {
-  upd('lookingForJob', x.target.checked);
-});
+  widget$11(env, updater$10(upd));
 }
 function renderQuestion$16(env, upd) {
   renderQuestion$15(env, upd);
@@ -984,6 +1017,11 @@ function renderQuestion$17(env, upd) {
 function renderQuestion$18(env, upd) {
   renderQuestion$8(env, upd); 
   renderQuestion$17(env, upd);
+}
+function updater$11(upd) {
+  return function (x) {
+  upd('retired', x.target.checked);
+};
 }
 function widget$12(env, func) {
   var div = document.createElement('div');
@@ -998,9 +1036,12 @@ function widget$12(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$19(env, upd) {
-  widget$12(env, function (x) {
-  upd('retired', x.target.checked);
-});
+  widget$12(env, updater$11(upd));
+}
+function updater$12(upd) {
+  return function (x) {
+  upd('yearsRetired', x.target.value);
+};
 }
 function widget$13(env, func) {
   var div = document.createElement('div');
@@ -1015,9 +1056,12 @@ function widget$13(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$20(env, upd) {
-  widget$13(env, function (x) {
-  upd('yearsRetired', x.target.value);
-});
+  widget$13(env, updater$12(upd));
+}
+function updater$13(upd) {
+  return function (x) {
+  upd('annualPension', x.target.value);
+};
 }
 function widget$14(env, func) {
   var div = document.createElement('div');
@@ -1032,9 +1076,12 @@ function widget$14(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$21(env, upd) {
-  widget$14(env, function (x) {
-  upd('annualPension', x.target.value);
-});
+  widget$14(env, updater$13(upd));
+}
+function updater$14(upd) {
+  return function (x) {
+  upd('healthcareExpenses', x.target.value);
+};
 }
 function widget$15(env, func) {
   var div = document.createElement('div');
@@ -1049,9 +1096,7 @@ function widget$15(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$22(env, upd) {
-  widget$15(env, function (x) {
-  upd('healthcareExpenses', x.target.value);
-});
+  widget$15(env, updater$14(upd));
 }
 function widget$16(env) {
   var div = document.createElement('div');
@@ -1107,6 +1152,11 @@ function widget$17(env) {
 function renderQuestion$30(env, upd) {
   widget$17(env);
 }
+function updater$15(upd) {
+  return function (x) {
+  upd('income', x.target.value);
+};
+}
 function widget$18(env, func) {
   var div = document.createElement('div');
     div.id = 'income-div';
@@ -1120,9 +1170,12 @@ function widget$18(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$31(env, upd) {
-  widget$18(env, function (x) {
-  upd('income', x.target.value);
-});
+  widget$18(env, updater$15(upd));
+}
+function updater$16(upd) {
+  return function (x) {
+  upd('monthlyDebts', x.target.value);
+};
 }
 function widget$19(env, func) {
   var div = document.createElement('div');
@@ -1137,9 +1190,12 @@ function widget$19(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$32(env, upd) {
-  widget$19(env, function (x) {
-  upd('monthlyDebts', x.target.value);
-});
+  widget$19(env, updater$16(upd));
+}
+function updater$17(upd) {
+  return function (x) {
+  upd('hasCoSigner', x.target.checked);
+};
 }
 function widget$20(env, func) {
   var div = document.createElement('div');
@@ -1154,9 +1210,12 @@ function widget$20(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$33(env, upd) {
-  widget$20(env, function (x) {
-  upd('hasCoSigner', x.target.checked);
-});
+  widget$20(env, updater$17(upd));
+}
+function updater$18(upd) {
+  return function (x) {
+  upd('loanAmount', x.target.value);
+};
 }
 function widget$21(env, func) {
   var div = document.createElement('div');
@@ -1171,9 +1230,12 @@ function widget$21(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$34(env, upd) {
-  widget$21(env, function (x) {
-  upd('loanAmount', x.target.value);
-});
+  widget$21(env, updater$18(upd));
+}
+function updater$19(upd) {
+  return function (x) {
+  upd('interestRate', x.target.value);
+};
 }
 function widget$22(env, func) {
   var div = document.createElement('div');
@@ -1188,9 +1250,12 @@ function widget$22(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$35(env, upd) {
-  widget$22(env, function (x) {
-  upd('interestRate', x.target.value);
-});
+  widget$22(env, updater$19(upd));
+}
+function updater$20(upd) {
+  return function (x) {
+  upd('loanTerm', x.target.value);
+};
 }
 function widget$23(env, func) {
   var div = document.createElement('div');
@@ -1205,9 +1270,7 @@ function widget$23(env, func) {
     document.body.appendChild(div);
 }
 function renderQuestion$36(env, upd) {
-  widget$23(env, function (x) {
-  upd('loanTerm', x.target.value);
-});
+  widget$23(env, updater$20(upd));
 }
 function widget$24(env) {
   var div = document.createElement('div');
