@@ -96,7 +96,7 @@ void dumpQlEval(loc root=|project://astvanish/src/main/rascal/astvanish/demo/ql/
         ), #start[Form]));
 }
 
-void stressTestPrep(bool json=false, bool doPeval=false) {
+void stressTestPrep(bool json=false, bool doPeval=false, bool genPevalHtml=false, bool genInterpHtml=false) {
     loc dir = |project://astvanish/src/main/rascal/astvanish/demo/ql/stress/|;
     for (loc l <- dir.ls, l.extension == "myql", !startsWith(l.file, "acs_")) {
         println("processing <l>");
@@ -108,6 +108,34 @@ void stressTestPrep(bool json=false, bool doPeval=false) {
             js = peval(|project://astvanish/src/main/rascal/astvanish/demo/ql/ql.av|, 
                 ("$ql": code(f.top)), "run", false); 
             writeFile(l[extension="js"], js);
+        }
+        if (genPevalHtml) {
+            str h = "\<html\>
+                    '\<head\>
+                    '\<script type=\"module\"\>
+                    '    import { run } from \'./<l[extension="js"].file>\';
+                    '    run();
+                    '\</script\>
+                    '\</head\>
+                    '\<body\>
+                    '\</body\>
+                    '\</html\>";
+            writeFile(l[extension="html"], h);
+        }
+
+        if (genInterpHtml) {
+          str h = "\<html\>
+                    '\<head\>
+                    '\<script type=\"module\"\>
+                    '    import { run } from \'../ql-interp.js\';
+                    '    import ast from \'./<l[extension="json"].file>\' with {type: \'json\'};
+                    '    run(ast);
+                    '\</script\>
+                    '\</head\>
+                    '\<body\>
+                    '\</body\>
+                    '\</html\>";
+            writeFile(l[file="interp-" + l.file][extension="html"], h);
         }
     }
 }
