@@ -51,7 +51,19 @@ function render($ql, env, upd) {for (const q of $ql.questions) renderQuestion(q,
 
 function renderQuestion($q, env, upd) {switch ($q._tag) {
 case 'answerable': 
-   widget($q.type, $q.prompt, $q.name, false, env, function (x) { upd($q.name.toString(), x.value); });
+   widget($q.type, $q.prompt, $q.name, false, env, function (x) { 
+                switch ($3._tag) {
+case 'integer': 
+   upd($3.name.toString(), x.target.value);
+   break;
+case 'boolean': 
+   upd($3.name.toString(), x.target.checked);
+   break;
+case 'string': 
+   upd($3.name.toString(), x.target.value);
+   break;
+}
+            });
    break;
 case 'computed': 
    widget($q.type, $q.prompt, $q.name, true, env, null);
@@ -70,10 +82,10 @@ case 'ifThen':
    break;
 }}
 
-function widget($type, $label, $name, readOnly, env, func) {var div = createElement('div');
+function widget($type, $label, $name, readOnly, env, func) {var div = document.createElement('div');
     div.id = $name.toString() + '-div';
-    div.append($label.toString());
-    var elt = createElement('input'); 
+    div.appendChild(document.createTextNode($label.toString().slice(1, -1)));
+    var elt = document.createElement('input'); 
     elt.id = $name.toString() + '-widget';           
     switch ($type._tag) {
 case 'integer': 
@@ -89,14 +101,14 @@ case 'string':
             elt.value = env[$name.toString()];
    break;
 }
-    div.append(elt);
     if (readOnly) {
         elt.disabled = true;
     }
     else {
         elt.onchange = func;
     }
-    document.body.append(div);}
+    div.appendChild(elt);
+    document.body.appendChild(div);}
 
 
 function compute($ql, env) {{
@@ -117,12 +129,12 @@ function compute($ql, env) {{
 
 function updateVisibility($q, vis, env) {switch ($q._tag) {
 case 'answerable': 
-   var elt = getElementById($q.name.toString() + '-div');
-            elt.style = 'display: ' + vis ? 'block;' : 'none;';
+   var elt = document.getElementById($q.name + '-div');
+            elt.style.display = vis ? 'block' : 'none';
    break;
 case 'computed': 
-   var elt = getElementById($q.name.toString() + '-div');
-            elt.style = 'display: ' + vis ? 'block;' : 'none;';
+   var elt = document.getElementById($q.name + '-div');
+            elt.style.display = vis ? 'block' : 'none';
    break;
 case 'block': 
    for (const q of $q.questions) {
@@ -138,7 +150,7 @@ case 'ifThen':
    break;
 }}
 
-function updateValue($name, $type, val) {var elt = getElementById($name.toString() + '-widget');
+function updateValue($name, $type, val) {var elt = document.getElementById($name.toString() + '-widget');
     switch ($type._tag) {
 case 'integer': 
    elt.value = val;

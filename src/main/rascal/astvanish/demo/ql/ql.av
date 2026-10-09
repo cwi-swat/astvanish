@@ -59,7 +59,13 @@ function render($ql, env, upd) {
 function renderQuestion($q, env, upd) {
     match ($q) {
         case _ _ \: _ :
-            widget($3, $1, $2, false, env, function (x) { upd($2.toString(), x.value); });
+            widget($3, $1, $2, false, env, function (x) { 
+                match ($3) {
+                    case int: upd($2.toString(), x.target.value); 
+                    case bool: upd($2.toString(), x.target.checked); 
+                    case str: upd($2.toString(), x.target.value); 
+                }
+            });
 
         case _ _ \: _ = _ :
             widget($3, $1, $2, true, env, null);
@@ -79,10 +85,10 @@ function renderQuestion($q, env, upd) {
 }
 
 function widget($type, $label, $name, readOnly, env, func) {
-    var div = createElement('div');
+    var div = document.createElement('div');
     div.id = $name.toString() + '-div';
-    div.append($label.toString());
-    var elt = createElement('input'); 
+    div.appendChild(document.createTextNode($label.toString().slice(1, -1)));
+    var elt = document.createElement('input'); 
     elt.id = $name.toString() + '-widget';           
     match ($type) {
         case int : 
@@ -95,14 +101,14 @@ function widget($type, $label, $name, readOnly, env, func) {
             elt.setAttribute('type', 'text');
             elt.value = env[$name.toString()];
     }
-    div.append(elt);
     if (readOnly) {
         elt.disabled = true;
     }
     else {
         elt.onchange = func;
     }
-    document.body.append(div);
+    div.appendChild(elt);
+    document.body.appendChild(div);
 }
 
 
@@ -128,12 +134,12 @@ function compute($ql, env) {
 function updateVisibility($q, vis, env) {
     match ($q) {
         case _ _ \: _ :
-            var elt = getElementById($2.toString() + '-div');
-            elt.style = 'display: ' + vis ? 'block;' : 'none;';
+            var elt = document.getElementById($2.toString() + '-div');
+            elt.style.display = vis ? 'block' : 'none';
 
         case _ _ \: _ = _ :
-            var elt = getElementById($2.toString() + '-div');
-            elt.style = 'display: ' + vis ? 'block;' : 'none;';
+            var elt = document.getElementById($2.toString() + '-div');
+            elt.style.display = vis ? 'block' : 'none';
             
         case { _ } :
             for (const q of $1) {
@@ -150,7 +156,7 @@ function updateVisibility($q, vis, env) {
 }
 
 function updateValue($name, $type, val) {
-    var elt = getElementById($name.toString() + '-widget');
+    var elt = document.getElementById($name.toString() + '-widget');
     match ($type) {
         case int: elt.value = val;
         case str: elt.value = val;

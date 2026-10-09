@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "serve": "^14.2.6",
     "tachometer": "^0.7.2"
   }
 }

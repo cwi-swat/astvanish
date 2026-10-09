@@ -57,15 +57,18 @@ Statement toEval(Statement stmt, Sigs env, type[&T<:Tree] grammar) {
     //println("toEval <stmt> / <env>");
     return top-down-break visit (stmt) {
         case (Expression)`<Id f>(<{Expression ","}* args>)`: {
-            args = visit (args) {
+            args = top-down-break visit (args) {
                 case (Expression)`<Id x>` => toField(x, env)
                     // bit ugly; should check that f is in top-level sigs mapping
                     when isKid(x) 
+                case (Expression)`<Function f>` => (Expression)`<Function f2>`
+                    when Function f2 := f[statements=toEval(f.statements, env, grammar)]
             }
             
             insert (Expression)`<Id f>(<{Expression ","}* args>)`;   
         }
 
+        
         case (Expression)`<Id sub>.toString()` => toField(sub, env)
             when isKid(sub)
 
@@ -104,6 +107,10 @@ Symbol eltType(\iter-star(Symbol s)) = s;
 Symbol eltType(\iter(Symbol s)) = s;
 Symbol eltType(opt(Symbol s)) = s;
 
+
+Symbol unlabel(label(_, Symbol s)) = s;
+default Symbol unlabel(Symbol s) = s;
+
 @synopsis{Convert `match`'s cases to an ordinary switch statement}
 Statement toSwitch(Id x, MatchCase* cases, Sigs env, type[&T<:Tree] grammar) {
     Statement sw = (Statement)`switch (<Id x>._tag) {}`;
@@ -119,7 +126,7 @@ Statement toSwitch(Id x, MatchCase* cases, Sigs env, type[&T<:Tree] grammar) {
         }
     }
 
-    set[Production] alts = grammar.definitions[env["<x>"]].alternatives;
+    set[Production] alts = grammar.definitions[unlabel(env["<x>"])].alternatives;
     
     for ((MatchCase)`case <Pattern p>: <Statement* ss>` <- cases) {
         if (/z:prod(_, _, _) := alts, success(str cons, list[Symbol] bs) := matchProd(p, z)) {
