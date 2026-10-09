@@ -179,7 +179,7 @@ function renderQuestion$2(env, upd) {
 }
 function updater$3(upd) {
   return function (x) {
-  upd('sellingPrice', x.target.value);
+  upd('sellingPrice', parseInt(x.target.value));
 };
 }
 function widget$3(env, func) {
@@ -199,7 +199,7 @@ function renderQuestion$3(env, upd) {
 }
 function updater$4(upd) {
   return function (x) {
-  upd('privateDebt', x.target.value);
+  upd('privateDebt', parseInt(x.target.value));
 };
 }
 function widget$4(env, func) {

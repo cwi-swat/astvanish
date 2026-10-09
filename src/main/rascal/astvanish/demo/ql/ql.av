@@ -62,7 +62,7 @@ function render($ql, env, upd) {
 function updater($name, $type, upd) {
     return function(x) {
         match ($type) {
-            case integer: upd($name.toString(), x.target.value); 
+            case integer: upd($name.toString(), parseInt(x.target.value)); 
             case boolean: upd($name.toString(), x.target.checked); 
             case string: upd($name.toString(), x.target.value); 
         }
@@ -217,7 +217,14 @@ function eve($e, env) {
         case ( _ ) : return eve($1, env);
         case ! _ : return !eve($1, env);
         case _ * _: return eve($1, env) * eve($2, env);
-        case _ / _: return Math.round(eve($1, env) / eve($2, env));
+        case _ / _: 
+            var x = eve($1, env);
+            var y = eve($2, env);
+            if (y === 0) {
+                window.alert('Division by zero in: ' + $e.toString());
+                return 0;
+            }
+            return Math.round(x / y);
         case _ + _: return eve($1, env) + eve($2, env);
         case _ - _: return eve($1, env) - eve($2, env);
         case _ == _: return eve($1, env) === eve($2, env);
