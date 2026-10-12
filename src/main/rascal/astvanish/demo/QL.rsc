@@ -98,9 +98,7 @@ void dumpQlEval(loc root=|project://astvanish/src/main/rascal/astvanish/demo/ql/
 
 void stressTestPrep(bool json=false, bool doPeval=false, bool genPevalHtml=false, bool genInterpHtml=false) {
     loc dir = |project://astvanish/src/main/rascal/astvanish/demo/ql/stress/|;
-    for (loc l <- dir.ls, l.extension == "myql"
-        , !startsWith(l.file, "acs_")
-        ) {
+    for (loc l <- dir.ls, l.extension == "myql") {
         println("processing <l>");
         start[Form] f = parseQL(l);
         if (json) {

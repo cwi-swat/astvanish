@@ -1,0 +1,27 @@
+<html>
+<head>
+<script type="module">
+  import * as bench from '/bench.js';
+  import { run, initialState } from './stm-interp.js';
+  import ast from './random1000.json' with {type: 'json'};
+  import events from './random1000-events.json' with {type: 'json'};
+  
+  bench.start();
+  var state = {current: initialState(ast)};
+  for (let i = 0; i < 50; i++) {
+    for (const e of events.events) {
+      console.log('event: ' + e);
+      run(ast, state, e);
+      console.log('state = ' + state.current);
+      var elt = document.createElement('div');
+      elt.appendChild(document.createTextNode(state.current));
+      document.body.appendChild(elt);
+    }
+  }
+  bench.stop();
+</script>
+</head>
+<body>
+
+</body>
+</html>

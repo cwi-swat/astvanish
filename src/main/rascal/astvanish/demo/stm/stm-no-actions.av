@@ -1,0 +1,46 @@
+
+
+export {initialState as initialState, run as run};
+
+function initialState($m) {
+    with (machine _ end : $m) {
+        for (const s of $1) {
+            with (state _ _ end : s) {
+                return $1.toString();
+            }
+        }
+    }
+}
+
+function run($m, state, event) {
+    with (machine _ end : $m) {
+        for (const s of $1) {
+            if (handleState(s, state, event)) {
+                return;
+            }
+        }
+    }
+}
+
+
+function handleState($s, state, event) {
+    with (state _ _ end: $s) {
+        if ($1.toString() === state.current) {
+            return doTrans($2, state, event);
+        }
+        return false;
+    }
+}
+
+function doTrans($ts, state, event) {
+    for (const t of $ts) {
+        with (_ => _ : t) {
+            if ($1.toString() === event) {
+                state.current = $2.toString();
+                return true;
+            }
+        }
+    }
+    return false;
+}
+

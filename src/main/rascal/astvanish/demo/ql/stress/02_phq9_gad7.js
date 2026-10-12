@@ -621,89 +621,152 @@ function computeQuestion$22(env) {
    return computeQuestion$21(env);
 }
 }
-function updateVisibility$0(vis, env) {
+function toggleVisibility$0(vis) {
   var elt = document.getElementById('patientId-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$0(vis, env) {
+  toggleVisibility$0(vis);
+}
+function toggleVisibility$1(vis) {
+  var elt = document.getElementById('age-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$1(vis, env) {
-  var elt = document.getElementById('age-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$1(vis);
+}
+function toggleVisibility$2(vis) {
+  var elt = document.getElementById('phq1-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$2(vis, env) {
-  var elt = document.getElementById('phq1-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$2(vis);
+}
+function toggleVisibility$3(vis) {
+  var elt = document.getElementById('phq2-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$3(vis, env) {
-  var elt = document.getElementById('phq2-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$3(vis);
+}
+function toggleVisibility$4(vis) {
+  var elt = document.getElementById('phq3-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$4(vis, env) {
-  var elt = document.getElementById('phq3-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$4(vis);
+}
+function toggleVisibility$5(vis) {
+  var elt = document.getElementById('phq4-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$5(vis, env) {
-  var elt = document.getElementById('phq4-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$5(vis);
+}
+function toggleVisibility$6(vis) {
+  var elt = document.getElementById('phq5-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$6(vis, env) {
-  var elt = document.getElementById('phq5-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$6(vis);
+}
+function toggleVisibility$7(vis) {
+  var elt = document.getElementById('phq6-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$7(vis, env) {
-  var elt = document.getElementById('phq6-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$7(vis);
+}
+function toggleVisibility$8(vis) {
+  var elt = document.getElementById('phq7-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$8(vis, env) {
-  var elt = document.getElementById('phq7-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$8(vis);
+}
+function toggleVisibility$9(vis) {
+  var elt = document.getElementById('phq8-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$9(vis, env) {
-  var elt = document.getElementById('phq8-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$9(vis);
+}
+function toggleVisibility$10(vis) {
+  var elt = document.getElementById('phq9-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$10(vis, env) {
-  var elt = document.getElementById('phq9-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$10(vis);
+}
+function toggleVisibility$11(vis) {
+  var elt = document.getElementById('phq2Score-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$11(vis, env) {
-  var elt = document.getElementById('phq2Score-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$11(vis);
+}
+function toggleVisibility$12(vis) {
+  var elt = document.getElementById('phq2Positive-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$12(vis, env) {
-  var elt = document.getElementById('phq2Positive-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$12(vis);
+}
+function toggleVisibility$13(vis) {
+  var elt = document.getElementById('phqTotal-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$13(vis, env) {
-  var elt = document.getElementById('phqTotal-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$13(vis);
+}
+function toggleVisibility$14(vis) {
+  var elt = document.getElementById('phqMinimal-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$14(vis, env) {
-  var elt = document.getElementById('phqMinimal-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$14(vis);
+}
+function toggleVisibility$15(vis) {
+  var elt = document.getElementById('phqMild-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$15(vis, env) {
-  var elt = document.getElementById('phqMild-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$15(vis);
+}
+function toggleVisibility$16(vis) {
+  var elt = document.getElementById('phqModerate-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$16(vis, env) {
-  var elt = document.getElementById('phqModerate-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$16(vis);
+}
+function toggleVisibility$17(vis) {
+  var elt = document.getElementById('phqModSevere-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$17(vis, env) {
-  var elt = document.getElementById('phqModSevere-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$17(vis);
+}
+function toggleVisibility$18(vis) {
+  var elt = document.getElementById('phqSevere-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$18(vis, env) {
-  var elt = document.getElementById('phqSevere-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$18(vis);
+}
+function toggleVisibility$19(vis) {
+  var elt = document.getElementById('safetyAssessed-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$19(vis, env) {
-  var elt = document.getElementById('safetyAssessed-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$19(vis);
+}
+function toggleVisibility$20(vis) {
+  var elt = document.getElementById('safetyReason-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$20(vis, env) {
-  var elt = document.getElementById('safetyReason-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$20(vis);
 }
 function updateVisibility$21(vis, env) {
   updateVisibility$20(vis, env);
@@ -718,9 +781,12 @@ function updateVisibility$23(vis, env) {
 function updateVisibility$24(vis, env) {
   updateVisibility$23(eve$41(env), env);
 }
-function updateVisibility$25(vis, env) {
+function toggleVisibility$21(vis) {
   var elt = document.getElementById('phqDifficulty-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$25(vis, env) {
+  toggleVisibility$21(vis);
 }
 function updateVisibility$26(vis, env) {
   updateVisibility$25(vis, env);
@@ -728,65 +794,110 @@ function updateVisibility$26(vis, env) {
 function updateVisibility$27(vis, env) {
   updateVisibility$26(eve$44(env), env);
 }
-function updateVisibility$28(vis, env) {
+function toggleVisibility$22(vis) {
   var elt = document.getElementById('gad1-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$28(vis, env) {
+  toggleVisibility$22(vis);
+}
+function toggleVisibility$23(vis) {
+  var elt = document.getElementById('gad2-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$29(vis, env) {
-  var elt = document.getElementById('gad2-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$23(vis);
+}
+function toggleVisibility$24(vis) {
+  var elt = document.getElementById('gad3-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$30(vis, env) {
-  var elt = document.getElementById('gad3-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$24(vis);
+}
+function toggleVisibility$25(vis) {
+  var elt = document.getElementById('gad4-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$31(vis, env) {
-  var elt = document.getElementById('gad4-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$25(vis);
+}
+function toggleVisibility$26(vis) {
+  var elt = document.getElementById('gad5-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$32(vis, env) {
-  var elt = document.getElementById('gad5-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$26(vis);
+}
+function toggleVisibility$27(vis) {
+  var elt = document.getElementById('gad6-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$33(vis, env) {
-  var elt = document.getElementById('gad6-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$27(vis);
+}
+function toggleVisibility$28(vis) {
+  var elt = document.getElementById('gad7-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$34(vis, env) {
-  var elt = document.getElementById('gad7-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$28(vis);
+}
+function toggleVisibility$29(vis) {
+  var elt = document.getElementById('gadTotal-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$35(vis, env) {
-  var elt = document.getElementById('gadTotal-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$29(vis);
+}
+function toggleVisibility$30(vis) {
+  var elt = document.getElementById('gadMinimal-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$36(vis, env) {
-  var elt = document.getElementById('gadMinimal-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$30(vis);
+}
+function toggleVisibility$31(vis) {
+  var elt = document.getElementById('gadMild-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$37(vis, env) {
-  var elt = document.getElementById('gadMild-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$31(vis);
+}
+function toggleVisibility$32(vis) {
+  var elt = document.getElementById('gadModerate-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$38(vis, env) {
-  var elt = document.getElementById('gadModerate-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$32(vis);
+}
+function toggleVisibility$33(vis) {
+  var elt = document.getElementById('gadSevere-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$39(vis, env) {
-  var elt = document.getElementById('gadSevere-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$33(vis);
+}
+function toggleVisibility$34(vis) {
+  var elt = document.getElementById('refer-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$40(vis, env) {
-  var elt = document.getElementById('refer-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$34(vis);
+}
+function toggleVisibility$35(vis) {
+  var elt = document.getElementById('referralTo-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$41(vis, env) {
-  var elt = document.getElementById('referralTo-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$35(vis);
+}
+function toggleVisibility$36(vis) {
+  var elt = document.getElementById('referralUrgent-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$42(vis, env) {
-  var elt = document.getElementById('referralUrgent-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$36(vis);
 }
 function updateVisibility$43(vis, env) {
   updateVisibility$41(vis, env); 
@@ -795,9 +906,12 @@ function updateVisibility$43(vis, env) {
 function updateVisibility$44(vis, env) {
   updateVisibility$43(eve$69(env), env);
 }
-function updateVisibility$45(vis, env) {
+function toggleVisibility$37(vis) {
   var elt = document.getElementById('notes-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$45(vis, env) {
+  toggleVisibility$37(vis);
 }
 function compute$0(env) {
   return function (x, val) {

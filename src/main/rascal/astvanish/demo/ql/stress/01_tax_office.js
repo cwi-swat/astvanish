@@ -67,29 +67,47 @@ function computeQuestion$2(env) {
    return computeQuestion$1(env);
 }
 }
-function updateVisibility$0(vis, env) {
+function toggleVisibility$0(vis) {
   var elt = document.getElementById('hasSoldHouse-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$0(vis, env) {
+  toggleVisibility$0(vis);
+}
+function toggleVisibility$1(vis) {
+  var elt = document.getElementById('hasBoughtHouse-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$1(vis, env) {
-  var elt = document.getElementById('hasBoughtHouse-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$1(vis);
+}
+function toggleVisibility$2(vis) {
+  var elt = document.getElementById('hasMaintLoan-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$2(vis, env) {
-  var elt = document.getElementById('hasMaintLoan-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$2(vis);
+}
+function toggleVisibility$3(vis) {
+  var elt = document.getElementById('sellingPrice-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$3(vis, env) {
-  var elt = document.getElementById('sellingPrice-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$3(vis);
+}
+function toggleVisibility$4(vis) {
+  var elt = document.getElementById('privateDebt-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$4(vis, env) {
-  var elt = document.getElementById('privateDebt-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$4(vis);
+}
+function toggleVisibility$5(vis) {
+  var elt = document.getElementById('valueResidue-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$5(vis, env) {
-  var elt = document.getElementById('valueResidue-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$5(vis);
 }
 function updateVisibility$6(vis, env) {
   updateVisibility$3(vis, env); 

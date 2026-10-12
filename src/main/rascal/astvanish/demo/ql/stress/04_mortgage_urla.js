@@ -2120,29 +2120,47 @@ else
    return computeQuestion$75(env);
 }
 }
-function updateVisibility$0(vis, env) {
+function toggleVisibility$0(vis) {
   var elt = document.getElementById('s1aName-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$0(vis, env) {
+  toggleVisibility$0(vis);
+}
+function toggleVisibility$1(vis) {
+  var elt = document.getElementById('s1aSsn-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$1(vis, env) {
-  var elt = document.getElementById('s1aSsn-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$1(vis);
+}
+function toggleVisibility$2(vis) {
+  var elt = document.getElementById('s1aAge-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$2(vis, env) {
-  var elt = document.getElementById('s1aAge-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$2(vis);
+}
+function toggleVisibility$3(vis) {
+  var elt = document.getElementById('s1aCitizen-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$3(vis, env) {
-  var elt = document.getElementById('s1aCitizen-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$3(vis);
+}
+function toggleVisibility$4(vis) {
+  var elt = document.getElementById('s1aPermanentResident-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$4(vis, env) {
-  var elt = document.getElementById('s1aPermanentResident-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$4(vis);
+}
+function toggleVisibility$5(vis) {
+  var elt = document.getElementById('s1aVisa-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$5(vis, env) {
-  var elt = document.getElementById('s1aVisa-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$5(vis);
 }
 function updateVisibility$6(vis, env) {
   updateVisibility$4(vis, env); 
@@ -2151,17 +2169,26 @@ function updateVisibility$6(vis, env) {
 function updateVisibility$7(vis, env) {
   updateVisibility$6(eve$1(env), env);
 }
-function updateVisibility$8(vis, env) {
+function toggleVisibility$6(vis) {
   var elt = document.getElementById('s1aJoint-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$8(vis, env) {
+  toggleVisibility$6(vis);
+}
+function toggleVisibility$7(vis) {
+  var elt = document.getElementById('s1aCoName-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$9(vis, env) {
-  var elt = document.getElementById('s1aCoName-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$7(vis);
+}
+function toggleVisibility$8(vis) {
+  var elt = document.getElementById('s1aCoSsn-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$10(vis, env) {
-  var elt = document.getElementById('s1aCoSsn-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$8(vis);
 }
 function updateVisibility$11(vis, env) {
   updateVisibility$9(vis, env); 
@@ -2170,37 +2197,61 @@ function updateVisibility$11(vis, env) {
 function updateVisibility$12(vis, env) {
   updateVisibility$11(eve$2(env), env);
 }
-function updateVisibility$13(vis, env) {
+function toggleVisibility$9(vis) {
   var elt = document.getElementById('s1aMarried-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$13(vis, env) {
+  toggleVisibility$9(vis);
+}
+function toggleVisibility$10(vis) {
+  var elt = document.getElementById('s1aDependents-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$14(vis, env) {
-  var elt = document.getElementById('s1aDependents-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$10(vis);
+}
+function toggleVisibility$11(vis) {
+  var elt = document.getElementById('s1aPhone-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$15(vis, env) {
-  var elt = document.getElementById('s1aPhone-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$11(vis);
+}
+function toggleVisibility$12(vis) {
+  var elt = document.getElementById('s1aEmail-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$16(vis, env) {
-  var elt = document.getElementById('s1aEmail-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$12(vis);
+}
+function toggleVisibility$13(vis) {
+  var elt = document.getElementById('s1aAddress-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$17(vis, env) {
-  var elt = document.getElementById('s1aAddress-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$13(vis);
+}
+function toggleVisibility$14(vis) {
+  var elt = document.getElementById('s1aYearsAtAddress-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$18(vis, env) {
-  var elt = document.getElementById('s1aYearsAtAddress-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$14(vis);
+}
+function toggleVisibility$15(vis) {
+  var elt = document.getElementById('s1aOwnsHome-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$19(vis, env) {
-  var elt = document.getElementById('s1aOwnsHome-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$15(vis);
+}
+function toggleVisibility$16(vis) {
+  var elt = document.getElementById('s1aRent-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$20(vis, env) {
-  var elt = document.getElementById('s1aRent-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$16(vis);
 }
 function updateVisibility$21(vis, env) {
   updateVisibility$20(vis, env);
@@ -2208,13 +2259,19 @@ function updateVisibility$21(vis, env) {
 function updateVisibility$22(vis, env) {
   updateVisibility$21(eve$4(env), env);
 }
-function updateVisibility$23(vis, env) {
+function toggleVisibility$17(vis) {
   var elt = document.getElementById('s1aFormerAddress-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$23(vis, env) {
+  toggleVisibility$17(vis);
+}
+function toggleVisibility$18(vis) {
+  var elt = document.getElementById('s1aFormerYears-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$24(vis, env) {
-  var elt = document.getElementById('s1aFormerYears-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$18(vis);
 }
 function updateVisibility$25(vis, env) {
   updateVisibility$23(vis, env); 
@@ -2223,61 +2280,100 @@ function updateVisibility$25(vis, env) {
 function updateVisibility$26(vis, env) {
   updateVisibility$25(eve$7(env), env);
 }
-function updateVisibility$27(vis, env) {
+function toggleVisibility$19(vis) {
   var elt = document.getElementById('s1bEmployed-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$27(vis, env) {
+  toggleVisibility$19(vis);
+}
+function toggleVisibility$20(vis) {
+  var elt = document.getElementById('s1bEmployer-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$28(vis, env) {
-  var elt = document.getElementById('s1bEmployer-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$20(vis);
+}
+function toggleVisibility$21(vis) {
+  var elt = document.getElementById('s1bPosition-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$29(vis, env) {
-  var elt = document.getElementById('s1bPosition-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$21(vis);
+}
+function toggleVisibility$22(vis) {
+  var elt = document.getElementById('s1bYearsInLine-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$30(vis, env) {
-  var elt = document.getElementById('s1bYearsInLine-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$22(vis);
+}
+function toggleVisibility$23(vis) {
+  var elt = document.getElementById('s1bSelfEmployed-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$31(vis, env) {
-  var elt = document.getElementById('s1bSelfEmployed-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$23(vis);
+}
+function toggleVisibility$24(vis) {
+  var elt = document.getElementById('s1bOwnership25-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$32(vis, env) {
-  var elt = document.getElementById('s1bOwnership25-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$24(vis);
+}
+function toggleVisibility$25(vis) {
+  var elt = document.getElementById('s1bBusinessIncome-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$33(vis, env) {
-  var elt = document.getElementById('s1bBusinessIncome-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$25(vis);
 }
 function updateVisibility$34(vis, env) {
   updateVisibility$32(vis, env); 
   updateVisibility$33(vis, env);
 }
-function updateVisibility$35(vis, env) {
+function toggleVisibility$26(vis) {
   var elt = document.getElementById('s1bBase-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$35(vis, env) {
+  toggleVisibility$26(vis);
+}
+function toggleVisibility$27(vis) {
+  var elt = document.getElementById('s1bOvertime-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$36(vis, env) {
-  var elt = document.getElementById('s1bOvertime-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$27(vis);
+}
+function toggleVisibility$28(vis) {
+  var elt = document.getElementById('s1bBonus-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$37(vis, env) {
-  var elt = document.getElementById('s1bBonus-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$28(vis);
+}
+function toggleVisibility$29(vis) {
+  var elt = document.getElementById('s1bCommission-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$38(vis, env) {
-  var elt = document.getElementById('s1bCommission-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$29(vis);
+}
+function toggleVisibility$30(vis) {
+  var elt = document.getElementById('s1bMilitary-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$39(vis, env) {
-  var elt = document.getElementById('s1bMilitary-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$30(vis);
+}
+function toggleVisibility$31(vis) {
+  var elt = document.getElementById('s1bOther-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$40(vis, env) {
-  var elt = document.getElementById('s1bOther-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$31(vis);
 }
 function updateVisibility$41(vis, env) {
   updateVisibility$35(vis, env); 
@@ -2291,9 +2387,12 @@ function updateVisibility$42(vis, env) {
   updateVisibility$34(eve$9(env), env);
             updateVisibility$41(!eve$9(env), env);
 }
-function updateVisibility$43(vis, env) {
+function toggleVisibility$32(vis) {
   var elt = document.getElementById('s1bTotal-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$43(vis, env) {
+  toggleVisibility$32(vis);
 }
 function updateVisibility$44(vis, env) {
   updateVisibility$28(vis, env); 
@@ -2306,29 +2405,47 @@ function updateVisibility$44(vis, env) {
 function updateVisibility$45(vis, env) {
   updateVisibility$44(eve$8(env), env);
 }
-function updateVisibility$46(vis, env) {
+function toggleVisibility$33(vis) {
   var elt = document.getElementById('s1cHasAdditional-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$46(vis, env) {
+  toggleVisibility$33(vis);
+}
+function toggleVisibility$34(vis) {
+  var elt = document.getElementById('s1cEmployer-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$47(vis, env) {
-  var elt = document.getElementById('s1cEmployer-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$34(vis);
+}
+function toggleVisibility$35(vis) {
+  var elt = document.getElementById('s1cBase-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$48(vis, env) {
-  var elt = document.getElementById('s1cBase-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$35(vis);
+}
+function toggleVisibility$36(vis) {
+  var elt = document.getElementById('s1cOvertime-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$49(vis, env) {
-  var elt = document.getElementById('s1cOvertime-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$36(vis);
+}
+function toggleVisibility$37(vis) {
+  var elt = document.getElementById('s1cBonus-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$50(vis, env) {
-  var elt = document.getElementById('s1cBonus-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$37(vis);
+}
+function toggleVisibility$38(vis) {
+  var elt = document.getElementById('s1cTotal-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$51(vis, env) {
-  var elt = document.getElementById('s1cTotal-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$38(vis);
 }
 function updateVisibility$52(vis, env) {
   updateVisibility$47(vis, env); 
@@ -2340,21 +2457,33 @@ function updateVisibility$52(vis, env) {
 function updateVisibility$53(vis, env) {
   updateVisibility$52(eve$23(env), env);
 }
-function updateVisibility$54(vis, env) {
+function toggleVisibility$39(vis) {
   var elt = document.getElementById('s1dHasPrevious-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$54(vis, env) {
+  toggleVisibility$39(vis);
+}
+function toggleVisibility$40(vis) {
+  var elt = document.getElementById('s1dEmployer-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$55(vis, env) {
-  var elt = document.getElementById('s1dEmployer-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$40(vis);
+}
+function toggleVisibility$41(vis) {
+  var elt = document.getElementById('s1dPosition-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$56(vis, env) {
-  var elt = document.getElementById('s1dPosition-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$41(vis);
+}
+function toggleVisibility$42(vis) {
+  var elt = document.getElementById('s1dIncome-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$57(vis, env) {
-  var elt = document.getElementById('s1dIncome-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$42(vis);
 }
 function updateVisibility$58(vis, env) {
   updateVisibility$55(vis, env); 
@@ -2364,93 +2493,159 @@ function updateVisibility$58(vis, env) {
 function updateVisibility$59(vis, env) {
   updateVisibility$58(eve$31(env), env);
 }
-function updateVisibility$60(vis, env) {
+function toggleVisibility$43(vis) {
   var elt = document.getElementById('s1eAlimony-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$60(vis, env) {
+  toggleVisibility$43(vis);
+}
+function toggleVisibility$44(vis) {
+  var elt = document.getElementById('s1eChildSupport-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$61(vis, env) {
-  var elt = document.getElementById('s1eChildSupport-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$44(vis);
+}
+function toggleVisibility$45(vis) {
+  var elt = document.getElementById('s1eDividends-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$62(vis, env) {
-  var elt = document.getElementById('s1eDividends-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$45(vis);
+}
+function toggleVisibility$46(vis) {
+  var elt = document.getElementById('s1eRetirement-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$63(vis, env) {
-  var elt = document.getElementById('s1eRetirement-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$46(vis);
+}
+function toggleVisibility$47(vis) {
+  var elt = document.getElementById('s1eSocialSecurity-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$64(vis, env) {
-  var elt = document.getElementById('s1eSocialSecurity-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$47(vis);
+}
+function toggleVisibility$48(vis) {
+  var elt = document.getElementById('s1eDisability-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$65(vis, env) {
-  var elt = document.getElementById('s1eDisability-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$48(vis);
+}
+function toggleVisibility$49(vis) {
+  var elt = document.getElementById('s1eRental-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$66(vis, env) {
-  var elt = document.getElementById('s1eRental-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$49(vis);
+}
+function toggleVisibility$50(vis) {
+  var elt = document.getElementById('s1eOther-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$67(vis, env) {
-  var elt = document.getElementById('s1eOther-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$50(vis);
+}
+function toggleVisibility$51(vis) {
+  var elt = document.getElementById('s1eTotal-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$68(vis, env) {
-  var elt = document.getElementById('s1eTotal-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$51(vis);
+}
+function toggleVisibility$52(vis) {
+  var elt = document.getElementById('totalIncome-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$69(vis, env) {
-  var elt = document.getElementById('totalIncome-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$52(vis);
+}
+function toggleVisibility$53(vis) {
+  var elt = document.getElementById('s2aChecking-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$70(vis, env) {
-  var elt = document.getElementById('s2aChecking-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$53(vis);
+}
+function toggleVisibility$54(vis) {
+  var elt = document.getElementById('s2aSavings-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$71(vis, env) {
-  var elt = document.getElementById('s2aSavings-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$54(vis);
+}
+function toggleVisibility$55(vis) {
+  var elt = document.getElementById('s2aMoneyMarket-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$72(vis, env) {
-  var elt = document.getElementById('s2aMoneyMarket-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$55(vis);
+}
+function toggleVisibility$56(vis) {
+  var elt = document.getElementById('s2aStocks-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$73(vis, env) {
-  var elt = document.getElementById('s2aStocks-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$56(vis);
+}
+function toggleVisibility$57(vis) {
+  var elt = document.getElementById('s2aRetirement-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$74(vis, env) {
-  var elt = document.getElementById('s2aRetirement-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$57(vis);
+}
+function toggleVisibility$58(vis) {
+  var elt = document.getElementById('s2aLifeInsurance-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$75(vis, env) {
-  var elt = document.getElementById('s2aLifeInsurance-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$58(vis);
+}
+function toggleVisibility$59(vis) {
+  var elt = document.getElementById('s2aTotal-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$76(vis, env) {
-  var elt = document.getElementById('s2aTotal-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$59(vis);
+}
+function toggleVisibility$60(vis) {
+  var elt = document.getElementById('s2bEarnest-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$77(vis, env) {
-  var elt = document.getElementById('s2bEarnest-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$60(vis);
+}
+function toggleVisibility$61(vis) {
+  var elt = document.getElementById('s2bAssetSale-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$78(vis, env) {
-  var elt = document.getElementById('s2bAssetSale-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$61(vis);
+}
+function toggleVisibility$62(vis) {
+  var elt = document.getElementById('s2bGift-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$79(vis, env) {
-  var elt = document.getElementById('s2bGift-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$62(vis);
+}
+function toggleVisibility$63(vis) {
+  var elt = document.getElementById('s2bGiftSource-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$80(vis, env) {
-  var elt = document.getElementById('s2bGiftSource-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$63(vis);
+}
+function toggleVisibility$64(vis) {
+  var elt = document.getElementById('s2bGiftLetter-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$81(vis, env) {
-  var elt = document.getElementById('s2bGiftLetter-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$64(vis);
 }
 function updateVisibility$82(vis, env) {
   updateVisibility$80(vis, env); 
@@ -2459,49 +2654,82 @@ function updateVisibility$82(vis, env) {
 function updateVisibility$83(vis, env) {
   updateVisibility$82(eve$65(env), env);
 }
-function updateVisibility$84(vis, env) {
+function toggleVisibility$65(vis) {
   var elt = document.getElementById('s2bTotal-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$84(vis, env) {
+  toggleVisibility$65(vis);
+}
+function toggleVisibility$66(vis) {
+  var elt = document.getElementById('totalAssets-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$85(vis, env) {
-  var elt = document.getElementById('totalAssets-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$66(vis);
+}
+function toggleVisibility$67(vis) {
+  var elt = document.getElementById('s2cAuto-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$86(vis, env) {
-  var elt = document.getElementById('s2cAuto-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$67(vis);
+}
+function toggleVisibility$68(vis) {
+  var elt = document.getElementById('s2cAutoBalance-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$87(vis, env) {
-  var elt = document.getElementById('s2cAutoBalance-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$68(vis);
+}
+function toggleVisibility$69(vis) {
+  var elt = document.getElementById('s2cCards-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$88(vis, env) {
-  var elt = document.getElementById('s2cCards-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$69(vis);
+}
+function toggleVisibility$70(vis) {
+  var elt = document.getElementById('s2cCardsBalance-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$89(vis, env) {
-  var elt = document.getElementById('s2cCardsBalance-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$70(vis);
+}
+function toggleVisibility$71(vis) {
+  var elt = document.getElementById('s2cStudent-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$90(vis, env) {
-  var elt = document.getElementById('s2cStudent-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$71(vis);
+}
+function toggleVisibility$72(vis) {
+  var elt = document.getElementById('s2cStudentBalance-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$91(vis, env) {
-  var elt = document.getElementById('s2cStudentBalance-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$72(vis);
+}
+function toggleVisibility$73(vis) {
+  var elt = document.getElementById('s2cInstallment-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$92(vis, env) {
-  var elt = document.getElementById('s2cInstallment-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$73(vis);
+}
+function toggleVisibility$74(vis) {
+  var elt = document.getElementById('s2cPaidOff-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$93(vis, env) {
-  var elt = document.getElementById('s2cPaidOff-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$74(vis);
+}
+function toggleVisibility$75(vis) {
+  var elt = document.getElementById('s2cPaidOffPayment-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$94(vis, env) {
-  var elt = document.getElementById('s2cPaidOffPayment-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$75(vis);
 }
 function updateVisibility$95(vis, env) {
   updateVisibility$94(vis, env);
@@ -2509,65 +2737,110 @@ function updateVisibility$95(vis, env) {
 function updateVisibility$96(vis, env) {
   updateVisibility$95(eve$73(env), env);
 }
-function updateVisibility$97(vis, env) {
+function toggleVisibility$76(vis) {
   var elt = document.getElementById('s2dAlimony-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$97(vis, env) {
+  toggleVisibility$76(vis);
+}
+function toggleVisibility$77(vis) {
+  var elt = document.getElementById('s2dChildSupport-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$98(vis, env) {
-  var elt = document.getElementById('s2dChildSupport-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$77(vis);
+}
+function toggleVisibility$78(vis) {
+  var elt = document.getElementById('s2dJobExpenses-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$99(vis, env) {
-  var elt = document.getElementById('s2dJobExpenses-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$78(vis);
+}
+function toggleVisibility$79(vis) {
+  var elt = document.getElementById('totalDebt-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$100(vis, env) {
-  var elt = document.getElementById('totalDebt-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$79(vis);
+}
+function toggleVisibility$80(vis) {
+  var elt = document.getElementById('totalLiabilities-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$101(vis, env) {
-  var elt = document.getElementById('totalLiabilities-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$80(vis);
+}
+function toggleVisibility$81(vis) {
+  var elt = document.getElementById('s3OwnsRealEstate-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$102(vis, env) {
-  var elt = document.getElementById('s3OwnsRealEstate-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$81(vis);
+}
+function toggleVisibility$82(vis) {
+  var elt = document.getElementById('s3aAddress-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$103(vis, env) {
-  var elt = document.getElementById('s3aAddress-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$82(vis);
+}
+function toggleVisibility$83(vis) {
+  var elt = document.getElementById('s3aValue-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$104(vis, env) {
-  var elt = document.getElementById('s3aValue-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$83(vis);
+}
+function toggleVisibility$84(vis) {
+  var elt = document.getElementById('s3aWillSell-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$105(vis, env) {
-  var elt = document.getElementById('s3aWillSell-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$84(vis);
+}
+function toggleVisibility$85(vis) {
+  var elt = document.getElementById('s3aInvestment-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$106(vis, env) {
-  var elt = document.getElementById('s3aInvestment-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$85(vis);
+}
+function toggleVisibility$86(vis) {
+  var elt = document.getElementById('s3aCarrying-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$107(vis, env) {
-  var elt = document.getElementById('s3aCarrying-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$86(vis);
+}
+function toggleVisibility$87(vis) {
+  var elt = document.getElementById('s3aMortgageBalance-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$108(vis, env) {
-  var elt = document.getElementById('s3aMortgageBalance-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$87(vis);
+}
+function toggleVisibility$88(vis) {
+  var elt = document.getElementById('s3aMortgagePayment-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$109(vis, env) {
-  var elt = document.getElementById('s3aMortgagePayment-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$88(vis);
+}
+function toggleVisibility$89(vis) {
+  var elt = document.getElementById('s3aRentIncome-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$110(vis, env) {
-  var elt = document.getElementById('s3aRentIncome-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$89(vis);
+}
+function toggleVisibility$90(vis) {
+  var elt = document.getElementById('s3aNetRent-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$111(vis, env) {
-  var elt = document.getElementById('s3aNetRent-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$90(vis);
 }
 function updateVisibility$112(vis, env) {
   updateVisibility$110(vis, env); 
@@ -2576,33 +2849,54 @@ function updateVisibility$112(vis, env) {
 function updateVisibility$113(vis, env) {
   updateVisibility$112(eve$95(env), env);
 }
-function updateVisibility$114(vis, env) {
+function toggleVisibility$91(vis) {
   var elt = document.getElementById('s3aEquity-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$114(vis, env) {
+  toggleVisibility$91(vis);
+}
+function toggleVisibility$92(vis) {
+  var elt = document.getElementById('s3HasSecond-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$115(vis, env) {
-  var elt = document.getElementById('s3HasSecond-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$92(vis);
+}
+function toggleVisibility$93(vis) {
+  var elt = document.getElementById('s3bAddress-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$116(vis, env) {
-  var elt = document.getElementById('s3bAddress-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$93(vis);
+}
+function toggleVisibility$94(vis) {
+  var elt = document.getElementById('s3bValue-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$117(vis, env) {
-  var elt = document.getElementById('s3bValue-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$94(vis);
+}
+function toggleVisibility$95(vis) {
+  var elt = document.getElementById('s3bMortgageBalance-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$118(vis, env) {
-  var elt = document.getElementById('s3bMortgageBalance-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$95(vis);
+}
+function toggleVisibility$96(vis) {
+  var elt = document.getElementById('s3bMortgagePayment-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$119(vis, env) {
-  var elt = document.getElementById('s3bMortgagePayment-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$96(vis);
+}
+function toggleVisibility$97(vis) {
+  var elt = document.getElementById('s3bEquity-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$120(vis, env) {
-  var elt = document.getElementById('s3bEquity-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$97(vis);
 }
 function updateVisibility$121(vis, env) {
   updateVisibility$116(vis, env); 
@@ -2630,46 +2924,73 @@ function updateVisibility$123(vis, env) {
 function updateVisibility$124(vis, env) {
   updateVisibility$123(eve$94(env), env);
 }
-function updateVisibility$125(vis, env) {
+function toggleVisibility$98(vis) {
   var elt = document.getElementById('otherHousingDebt-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$125(vis, env) {
+  toggleVisibility$98(vis);
+}
+function toggleVisibility$99(vis) {
+  var elt = document.getElementById('s4aLoanAmount-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$126(vis, env) {
-  var elt = document.getElementById('s4aLoanAmount-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$99(vis);
+}
+function toggleVisibility$100(vis) {
+  var elt = document.getElementById('s4aPurchase-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$127(vis, env) {
-  var elt = document.getElementById('s4aPurchase-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$100(vis);
+}
+function toggleVisibility$101(vis) {
+  var elt = document.getElementById('s4aPrice-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$128(vis, env) {
-  var elt = document.getElementById('s4aPrice-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$101(vis);
+}
+function toggleVisibility$102(vis) {
+  var elt = document.getElementById('s4aDownPayment-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$129(vis, env) {
-  var elt = document.getElementById('s4aDownPayment-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$102(vis);
+}
+function toggleVisibility$103(vis) {
+  var elt = document.getElementById('s4aFundsOk-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$130(vis, env) {
-  var elt = document.getElementById('s4aFundsOk-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$103(vis);
 }
 function updateVisibility$131(vis, env) {
   updateVisibility$128(vis, env); 
   updateVisibility$129(vis, env); 
   updateVisibility$130(vis, env);
 }
-function updateVisibility$132(vis, env) {
+function toggleVisibility$104(vis) {
   var elt = document.getElementById('s4aCashOut-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$132(vis, env) {
+  toggleVisibility$104(vis);
+}
+function toggleVisibility$105(vis) {
+  var elt = document.getElementById('s4aAppraised-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$133(vis, env) {
-  var elt = document.getElementById('s4aAppraised-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$105(vis);
+}
+function toggleVisibility$106(vis) {
+  var elt = document.getElementById('s4aCashOutAmount-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$134(vis, env) {
-  var elt = document.getElementById('s4aCashOutAmount-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$106(vis);
 }
 function updateVisibility$135(vis, env) {
   updateVisibility$134(vis, env);
@@ -2686,21 +3007,33 @@ function updateVisibility$138(vis, env) {
   updateVisibility$131(eve$114(env), env);
             updateVisibility$137(!eve$114(env), env);
 }
-function updateVisibility$139(vis, env) {
+function toggleVisibility$107(vis) {
   var elt = document.getElementById('s4aPropertyAddress-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$139(vis, env) {
+  toggleVisibility$107(vis);
+}
+function toggleVisibility$108(vis) {
+  var elt = document.getElementById('s4aUnits-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$140(vis, env) {
-  var elt = document.getElementById('s4aUnits-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$108(vis);
+}
+function toggleVisibility$109(vis) {
+  var elt = document.getElementById('s4aPrimary-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$141(vis, env) {
-  var elt = document.getElementById('s4aPrimary-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$109(vis);
+}
+function toggleVisibility$110(vis) {
+  var elt = document.getElementById('s4aSecondHome-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$142(vis, env) {
-  var elt = document.getElementById('s4aSecondHome-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$110(vis);
 }
 function updateVisibility$143(vis, env) {
   updateVisibility$142(vis, env);
@@ -2708,29 +3041,47 @@ function updateVisibility$143(vis, env) {
 function updateVisibility$144(vis, env) {
   updateVisibility$143(eve$123(env), env);
 }
-function updateVisibility$145(vis, env) {
+function toggleVisibility$111(vis) {
   var elt = document.getElementById('s4aManufactured-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$145(vis, env) {
+  toggleVisibility$111(vis);
+}
+function toggleVisibility$112(vis) {
+  var elt = document.getElementById('s4aMixedUse-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$146(vis, env) {
-  var elt = document.getElementById('s4aMixedUse-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$112(vis);
+}
+function toggleVisibility$113(vis) {
+  var elt = document.getElementById('propertyValue-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$147(vis, env) {
-  var elt = document.getElementById('propertyValue-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$113(vis);
+}
+function toggleVisibility$114(vis) {
+  var elt = document.getElementById('s4bOtherLoan-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$148(vis, env) {
-  var elt = document.getElementById('s4bOtherLoan-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$114(vis);
+}
+function toggleVisibility$115(vis) {
+  var elt = document.getElementById('s4bPayment-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$149(vis, env) {
-  var elt = document.getElementById('s4bPayment-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$115(vis);
+}
+function toggleVisibility$116(vis) {
+  var elt = document.getElementById('s4bAmount-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$150(vis, env) {
-  var elt = document.getElementById('s4bAmount-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$116(vis);
 }
 function updateVisibility$151(vis, env) {
   updateVisibility$149(vis, env); 
@@ -2739,45 +3090,75 @@ function updateVisibility$151(vis, env) {
 function updateVisibility$152(vis, env) {
   updateVisibility$151(eve$126(env), env);
 }
-function updateVisibility$153(vis, env) {
+function toggleVisibility$117(vis) {
   var elt = document.getElementById('s4cRentalIncome-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$153(vis, env) {
+  toggleVisibility$117(vis);
+}
+function toggleVisibility$118(vis) {
+  var elt = document.getElementById('s4dGifts-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$154(vis, env) {
-  var elt = document.getElementById('s4dGifts-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$118(vis);
+}
+function toggleVisibility$119(vis) {
+  var elt = document.getElementById('pePrincipalInterest-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$155(vis, env) {
-  var elt = document.getElementById('pePrincipalInterest-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$119(vis);
+}
+function toggleVisibility$120(vis) {
+  var elt = document.getElementById('peInsurance-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$156(vis, env) {
-  var elt = document.getElementById('peInsurance-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$120(vis);
+}
+function toggleVisibility$121(vis) {
+  var elt = document.getElementById('peTaxes-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$157(vis, env) {
-  var elt = document.getElementById('peTaxes-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$121(vis);
+}
+function toggleVisibility$122(vis) {
+  var elt = document.getElementById('peMortgageInsurance-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$158(vis, env) {
-  var elt = document.getElementById('peMortgageInsurance-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$122(vis);
+}
+function toggleVisibility$123(vis) {
+  var elt = document.getElementById('peDues-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$159(vis, env) {
-  var elt = document.getElementById('peDues-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$123(vis);
+}
+function toggleVisibility$124(vis) {
+  var elt = document.getElementById('peTotal-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$160(vis, env) {
-  var elt = document.getElementById('peTotal-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$124(vis);
+}
+function toggleVisibility$125(vis) {
+  var elt = document.getElementById('s5aOccupy-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$161(vis, env) {
-  var elt = document.getElementById('s5aOccupy-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$125(vis);
+}
+function toggleVisibility$126(vis) {
+  var elt = document.getElementById('s5aOwnershipInterest-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$162(vis, env) {
-  var elt = document.getElementById('s5aOwnershipInterest-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$126(vis);
 }
 function updateVisibility$163(vis, env) {
   updateVisibility$162(vis, env);
@@ -2785,17 +3166,26 @@ function updateVisibility$163(vis, env) {
 function updateVisibility$164(vis, env) {
   updateVisibility$163(eve$138(env), env);
 }
-function updateVisibility$165(vis, env) {
+function toggleVisibility$127(vis) {
   var elt = document.getElementById('s5aAffiliation-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$165(vis, env) {
+  toggleVisibility$127(vis);
+}
+function toggleVisibility$128(vis) {
+  var elt = document.getElementById('s5aUndisclosedBorrowing-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$166(vis, env) {
-  var elt = document.getElementById('s5aUndisclosedBorrowing-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$128(vis);
+}
+function toggleVisibility$129(vis) {
+  var elt = document.getElementById('s5aUndisclosedAmount-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$167(vis, env) {
-  var elt = document.getElementById('s5aUndisclosedAmount-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$129(vis);
 }
 function updateVisibility$168(vis, env) {
   updateVisibility$167(vis, env);
@@ -2803,57 +3193,96 @@ function updateVisibility$168(vis, env) {
 function updateVisibility$169(vis, env) {
   updateVisibility$168(eve$139(env), env);
 }
-function updateVisibility$170(vis, env) {
+function toggleVisibility$130(vis) {
   var elt = document.getElementById('s5aNewCredit-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$170(vis, env) {
+  toggleVisibility$130(vis);
+}
+function toggleVisibility$131(vis) {
+  var elt = document.getElementById('s5aPriorityLien-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$171(vis, env) {
-  var elt = document.getElementById('s5aPriorityLien-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$131(vis);
+}
+function toggleVisibility$132(vis) {
+  var elt = document.getElementById('s5bCoSigner-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$172(vis, env) {
-  var elt = document.getElementById('s5bCoSigner-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$132(vis);
+}
+function toggleVisibility$133(vis) {
+  var elt = document.getElementById('s5bJudgments-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$173(vis, env) {
-  var elt = document.getElementById('s5bJudgments-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$133(vis);
+}
+function toggleVisibility$134(vis) {
+  var elt = document.getElementById('s5bFederalDefault-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$174(vis, env) {
-  var elt = document.getElementById('s5bFederalDefault-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$134(vis);
+}
+function toggleVisibility$135(vis) {
+  var elt = document.getElementById('s5bLawsuit-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$175(vis, env) {
-  var elt = document.getElementById('s5bLawsuit-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$135(vis);
+}
+function toggleVisibility$136(vis) {
+  var elt = document.getElementById('s5bDeedInLieu-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$176(vis, env) {
-  var elt = document.getElementById('s5bDeedInLieu-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$136(vis);
+}
+function toggleVisibility$137(vis) {
+  var elt = document.getElementById('s5bShortSale-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$177(vis, env) {
-  var elt = document.getElementById('s5bShortSale-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$137(vis);
+}
+function toggleVisibility$138(vis) {
+  var elt = document.getElementById('s5bForeclosure-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$178(vis, env) {
-  var elt = document.getElementById('s5bForeclosure-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$138(vis);
+}
+function toggleVisibility$139(vis) {
+  var elt = document.getElementById('s5bBankruptcy-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$179(vis, env) {
-  var elt = document.getElementById('s5bBankruptcy-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$139(vis);
+}
+function toggleVisibility$140(vis) {
+  var elt = document.getElementById('s5bChapter7-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$180(vis, env) {
-  var elt = document.getElementById('s5bChapter7-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$140(vis);
+}
+function toggleVisibility$141(vis) {
+  var elt = document.getElementById('s5bChapter13-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$181(vis, env) {
-  var elt = document.getElementById('s5bChapter13-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$141(vis);
+}
+function toggleVisibility$142(vis) {
+  var elt = document.getElementById('s5bYearsSinceDischarge-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$182(vis, env) {
-  var elt = document.getElementById('s5bYearsSinceDischarge-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$142(vis);
 }
 function updateVisibility$183(vis, env) {
   updateVisibility$180(vis, env); 
@@ -2863,29 +3292,47 @@ function updateVisibility$183(vis, env) {
 function updateVisibility$184(vis, env) {
   updateVisibility$183(eve$140(env), env);
 }
-function updateVisibility$185(vis, env) {
+function toggleVisibility$143(vis) {
   var elt = document.getElementById('adverse-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$185(vis, env) {
+  toggleVisibility$143(vis);
+}
+function toggleVisibility$144(vis) {
+  var elt = document.getElementById('s7Military-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$186(vis, env) {
-  var elt = document.getElementById('s7Military-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$144(vis);
+}
+function toggleVisibility$145(vis) {
+  var elt = document.getElementById('s7Active-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$187(vis, env) {
-  var elt = document.getElementById('s7Active-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$145(vis);
+}
+function toggleVisibility$146(vis) {
+  var elt = document.getElementById('s7Retired-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$188(vis, env) {
-  var elt = document.getElementById('s7Retired-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$146(vis);
+}
+function toggleVisibility$147(vis) {
+  var elt = document.getElementById('s7SurvivingSpouse-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$189(vis, env) {
-  var elt = document.getElementById('s7SurvivingSpouse-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$147(vis);
+}
+function toggleVisibility$148(vis) {
+  var elt = document.getElementById('s7VaEligible-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$190(vis, env) {
-  var elt = document.getElementById('s7VaEligible-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$148(vis);
 }
 function updateVisibility$191(vis, env) {
   updateVisibility$187(vis, env); 
@@ -2896,21 +3343,33 @@ function updateVisibility$191(vis, env) {
 function updateVisibility$192(vis, env) {
   updateVisibility$191(eve$158(env), env);
 }
-function updateVisibility$193(vis, env) {
+function toggleVisibility$149(vis) {
   var elt = document.getElementById('s8Provide-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$193(vis, env) {
+  toggleVisibility$149(vis);
+}
+function toggleVisibility$150(vis) {
+  var elt = document.getElementById('s8Ethnicity-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$194(vis, env) {
-  var elt = document.getElementById('s8Ethnicity-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$150(vis);
+}
+function toggleVisibility$151(vis) {
+  var elt = document.getElementById('s8Race-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$195(vis, env) {
-  var elt = document.getElementById('s8Race-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$151(vis);
+}
+function toggleVisibility$152(vis) {
+  var elt = document.getElementById('s8Sex-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$196(vis, env) {
-  var elt = document.getElementById('s8Sex-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$152(vis);
 }
 function updateVisibility$197(vis, env) {
   updateVisibility$194(vis, env); 
@@ -2920,53 +3379,86 @@ function updateVisibility$197(vis, env) {
 function updateVisibility$198(vis, env) {
   updateVisibility$197(eve$164(env), env);
 }
-function updateVisibility$199(vis, env) {
+function toggleVisibility$153(vis) {
   var elt = document.getElementById('frontRatio-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$199(vis, env) {
+  toggleVisibility$153(vis);
+}
+function toggleVisibility$154(vis) {
+  var elt = document.getElementById('backRatio-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$200(vis, env) {
-  var elt = document.getElementById('backRatio-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$154(vis);
+}
+function toggleVisibility$155(vis) {
+  var elt = document.getElementById('ltv-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$201(vis, env) {
-  var elt = document.getElementById('ltv-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$155(vis);
+}
+function toggleVisibility$156(vis) {
+  var elt = document.getElementById('frontOk-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$202(vis, env) {
-  var elt = document.getElementById('frontOk-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$156(vis);
+}
+function toggleVisibility$157(vis) {
+  var elt = document.getElementById('backOk-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$203(vis, env) {
-  var elt = document.getElementById('backOk-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$157(vis);
+}
+function toggleVisibility$158(vis) {
+  var elt = document.getElementById('miRequired-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$204(vis, env) {
-  var elt = document.getElementById('miRequired-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$158(vis);
+}
+function toggleVisibility$159(vis) {
+  var elt = document.getElementById('netWorth-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$205(vis, env) {
-  var elt = document.getElementById('netWorth-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$159(vis);
+}
+function toggleVisibility$160(vis) {
+  var elt = document.getElementById('prequalified-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$206(vis, env) {
-  var elt = document.getElementById('prequalified-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$160(vis);
+}
+function toggleVisibility$161(vis) {
+  var elt = document.getElementById('closingDate-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$207(vis, env) {
-  var elt = document.getElementById('closingDate-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$161(vis);
+}
+function toggleVisibility$162(vis) {
+  var elt = document.getElementById('rateLock-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$208(vis, env) {
-  var elt = document.getElementById('rateLock-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$162(vis);
 }
 function updateVisibility$209(vis, env) {
   updateVisibility$207(vis, env); 
   updateVisibility$208(vis, env);
 }
-function updateVisibility$210(vis, env) {
+function toggleVisibility$163(vis) {
   var elt = document.getElementById('wantsCall-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$210(vis, env) {
+  toggleVisibility$163(vis);
 }
 function updateVisibility$211(vis, env) {
   updateVisibility$210(vis, env);
@@ -2975,17 +3467,26 @@ function updateVisibility$212(vis, env) {
   updateVisibility$209(eve$212(env), env);
             updateVisibility$211(!eve$212(env), env);
 }
-function updateVisibility$213(vis, env) {
+function toggleVisibility$164(vis) {
   var elt = document.getElementById('s6Agree-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$213(vis, env) {
+  toggleVisibility$164(vis);
+}
+function toggleVisibility$165(vis) {
+  var elt = document.getElementById('s6Signature-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$214(vis, env) {
-  var elt = document.getElementById('s6Signature-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$165(vis);
+}
+function toggleVisibility$166(vis) {
+  var elt = document.getElementById('s6Date-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$215(vis, env) {
-  var elt = document.getElementById('s6Date-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$166(vis);
 }
 function compute$0(env) {
   return function (x, val) {

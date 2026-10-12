@@ -1,0 +1,2640 @@
+//@@ src/main/rascal/astvanish/demo/stm/stm-no-actions.av: run($m)
+//@@ src/main/rascal/astvanish/demo/stm/stm-no-actions.av: initialState($m)
+
+machine
+  state feminine
+     felling => lynx
+     accepting => grand
+     gotta => amusing
+  end
+
+  state animated
+     wishing => beautiful
+     accessed => kaleidoscopic
+  end
+
+  state qualified
+     filling => rubbery
+     selecting => kind
+     rejoiced => dazzling
+     expect => wiggly
+     working => unsung
+  end
+
+  state ashamed
+     inherit => quintessential
+     shunted => gaseous
+     smitten => defensive
+     resigned => ibis
+  end
+
+  state assured
+     extruded => cheery
+  end
+
+  state pitiful
+     warring => helpful
+     consumed => concerned
+     steered => grizzled
+  end
+
+  state physical
+     intersects => cloudy
+     purified => thoughtless
+     glances => muddy
+     reposed => fish
+     rolling => wrathful
+  end
+
+  state wry
+     fading => chimpanzee
+     teaches => electric
+     floats => truthful
+  end
+
+  state frog
+     master => doting
+     ay => scorching
+  end
+
+  state mundane
+     elevate => pastel
+     burn => acrobatic
+     renting => snake
+     sifting => bewildered
+  end
+
+  state dragonfly
+     constituting => ethical
+     widens => trained
+     deviated => somber
+     partitioning => rubbery
+  end
+
+  state slippery
+     owned => wobbly
+     overlying => gibbon
+     obtain => hopeful
+  end
+
+  state back
+     blown => gleeful
+     complement => quintessential
+  end
+
+  state meager
+     institute => vague
+     inaugurated => fetid
+     confided => limp
+  end
+
+  state loving
+  end
+
+  state instructive
+  end
+
+  state bad
+     shooting => granular
+     budgeted => feisty
+     im => hopeful
+     emanate => tangible
+     pacing => hungry
+     rinse => exciting
+  end
+
+  state genuine
+     fledged => ill_informed
+     rob => well_informed
+  end
+
+  state arid
+     encircling => klutzy
+     magnifying => idealistic
+  end
+
+  state buffalo
+     dissenting => magnificent
+     enticed => jaguar
+  end
+
+  state snake
+     articulates => beautiful
+     invoke => crowded
+     encloses => tangible
+  end
+
+  state complex
+     canst => chimpanzee
+     inhabit => somber
+     convincing => polite
+     packaging => minty
+     retire => electric
+  end
+
+  state peacock
+     ascribed => giving
+     looped => fetid
+     pretending => complex
+  end
+
+  state dutiful
+     hissing => sore
+  end
+
+  state busy
+     thwarted => extra_small
+     does => wrong
+  end
+
+  state useless
+     participating => bewildered
+  end
+
+  state dynamic
+     transformed => half
+     sloped => pure
+     washes => squirrel
+     spreading => gleeful
+     soaking => helpless
+     looked => wealthy
+  end
+
+  state dead
+     opens => quaint
+     venting => simplistic
+     dt => appropriate
+     translating => incompatible
+  end
+
+  state ideal
+     minimising => gleeful
+     penalize => dull
+  end
+
+  state waterlogged
+     gnawing => scarce
+     endorsing => whispering
+     suspect => fluttering
+  end
+
+  state spotless
+     operating => identical
+     predisposed => beautiful
+     doubling => beagle
+     effecting => rancid
+     form => icy
+     made => platypus
+  end
+
+  state rubbery
+  end
+
+  state improbable
+     gland => reasonable
+  end
+
+  state ethical
+     step => giving
+     assuming => camel
+     confided => fickle
+  end
+
+  state squirrel
+     impeding => elliptical
+     avoid => reasonable
+     blended => understated
+     intervenes => female
+  end
+
+  state grubby
+     resigned => juicy
+     folding => cloudy
+     pre => constant
+     disinclined => whispering
+  end
+
+  state goose
+     contracts => ironclad
+     overworked => troubled
+     spoiling => shady
+  end
+
+  state welcome
+     gutted => calm
+     expelling => incompatible
+     coerce => muggy
+  end
+
+  state cruel
+     computed => gigantic
+  end
+
+  state true
+  end
+
+  state primary
+     assembled => nautical
+     else => sore
+     appropriate => misguided
+  end
+
+  state kaleidoscopic
+     revitalized => menacing
+     mock => easy
+     mourned => judicious
+     ascending => long_term
+  end
+
+  state deep
+     r_ => well_informed
+     seize => leafy
+     der => dynamic
+  end
+
+  state stormy
+     register => busy
+     disallowed => hummingbird
+  end
+
+  state enthusiastic
+     smoke => heartfelt
+     squashed => welcome
+     attaches => doting
+     balancing => nimble
+  end
+
+  state harmless
+     stricken => ill_informed
+     chart => back
+  end
+
+  state front
+     sawed => incompatible
+  end
+
+  state superficial
+     overflow => iguana
+     stopping => quintessential
+     sealing => quizzical
+     spelling => high
+  end
+
+  state juicy
+     orienting => incompatible
+  end
+
+  state optimistic
+     bent => electric
+     verify => lumpy
+  end
+
+  state necessary
+     peering => high
+  end
+
+  state ignorant
+     marches => separate
+  end
+
+  state hasty
+     endured => wide_eyed
+  end
+
+  state glum
+     braided => chilly
+     domesticated => heartfelt
+     skinned => overcooked
+     encircled => caterpillar
+  end
+
+  state biodegradable
+     replenished => growing
+     sever => rough
+  end
+
+  state selfish
+     coexisting => real
+     powdered => grieving
+     slain => fluid
+     imparting => improbable
+  end
+
+  state minty
+     envisages => wealthy
+     softened => meager
+     harvesting => square
+     seemed => jovial
+     misused => waterlogged
+     fueled => writhing
+  end
+
+  state overcooked
+     positing => zealous
+     snaps => warped
+     nullified => klutzy
+     dyeing => gecko
+  end
+
+  state sluggish
+     brave => affable
+     recognizes => dead
+     prescribe => jackal
+     grown => good_natured
+  end
+
+  state iguana
+     upsets => physical
+  end
+
+  state fat
+     ingesting => precious
+  end
+
+  state numb
+     removed => newt
+     dries => colossal
+     dreaming => jaded
+  end
+
+  state starry
+     declined => ripe
+  end
+
+  state key
+     staging => snake
+     hopping => improbable
+  end
+
+  state attached
+     attaches => active
+     frying => slim
+     palpated => nimble
+     compounds => feisty
+     inscribed => mandrill
+  end
+
+  state vile
+  end
+
+  state proud
+     contends => simplistic
+  end
+
+  state mixed
+     impregnated => elliptical
+  end
+
+  state coyote
+     snatching => jovial
+     confine => howler_monkey
+     creeping => this
+  end
+
+  state jealous
+     saddle => chief
+  end
+
+  state lumpy
+     shy => forceful
+     secures => pleasant
+     feast => squeaky
+     disgraced => quiet
+  end
+
+  state subtle
+     entrusting => slow
+  end
+
+  state gaseous
+     flowered => quizzical
+  end
+
+  state subdued
+     pared => splendid
+     noticed => tangible
+     budgeted => chinchilla
+     trapping => right
+     hurrying => easygoing
+     indicted => hummingbird
+  end
+
+  state growing
+  end
+
+  state trivial
+     savoring => slow
+  end
+
+  state metallic
+     evaluated => elliptical
+  end
+
+  state chief
+     towered => kindly
+  end
+
+  state quintessential
+     excuse => ideal
+     host => past
+  end
+
+  state noisy
+     outfitted => slushy
+     amplify => identical
+     devoted => quaint
+     conducting => passionate
+     sporting => subdued
+  end
+
+  state turkey
+     engineered => busy
+     bestowing => comfortable
+     supervise => kind
+  end
+
+  state forceful
+     disclosed => acrobatic
+     xx => frayed
+     saddled => slippery
+     recorded => idealistic
+  end
+
+  state flashy
+     honour => stunning
+     switches => insignificant
+     conversing => linear
+  end
+
+  state sparkling
+     reappeared => pitiful
+     sob => comfortable
+     proposes => hoarse
+  end
+
+  state jackal
+     piloted => extra_small
+     seem => daring
+  end
+
+  state constant
+     commencing => wry
+     index => direct
+  end
+
+  state occasional
+     diluted => nimble
+     grants => crowded
+  end
+
+  state fixed
+  end
+
+  state sunny
+     close => snake
+     questioning => numb
+  end
+
+  state dreary
+     patterned => necessary
+  end
+
+  state upset
+     hedging => outlying
+     remarks => frog
+     exaggerate => attentive
+  end
+
+  state beaver
+     face => candid
+     viking => hummingbird
+  end
+
+  state steep
+     conform => upbeat
+     addicted => dutiful
+  end
+
+  state junior
+     interrogating => fish
+     convened => trained
+  end
+
+  state crane
+     jog => assured
+     exhaled => newt
+  end
+
+  state well_lit
+     jeopardizing => barren
+     antagonize => chinchilla
+     won => bird
+  end
+
+  state snail
+     ended => conscious
+     severed => peacock
+  end
+
+  state amicable
+     redress => tall
+     sacrifice => thrifty
+  end
+
+  state cloudy
+     dispelled => grieving
+  end
+
+  state past
+     elucidate => negative
+     saluted => glittering
+     divide => defensive
+  end
+
+  state right
+  end
+
+  state hedgehog
+     cry => pro_active
+     documents => virtuous
+     warn => ideal
+     downplay => buffalo
+     ranged => harmless
+     scan => identical
+  end
+
+  state penguin
+     hopped => dangerous
+     close => bonobo
+  end
+
+  state precious
+     prompting => helpful
+     wrapped => lovable
+     foaming => entire
+     doubt => fickle
+  end
+
+  state tricky
+     reflecting => exciting
+  end
+
+  state wrathful
+     played => yummy
+     consisting => crooked
+  end
+
+  state tremendous
+     build => instructive
+     vanish => popular
+     bothering => wrathful
+     survives => wiggly
+  end
+
+  state sponge
+     intended => chinchilla
+     applauded => rancid
+  end
+
+  state caterpillar
+     convict => extra_small
+     supplement => assured
+  end
+
+  state profound
+     isolate => grand
+     recommended => mammoth
+  end
+
+  state pro_active
+     stashed => kind
+  end
+
+  state slushy
+     stretching => upright
+     unfolds => shady
+     arid => far_off
+  end
+
+  state gigantic
+     leveled => limited
+     nuclei => remarkable
+     singling => frog
+     finding => outlying
+     hastening => virtuous
+     bequeath => helpful
+  end
+
+  state square
+     knotted => biodegradable
+  end
+
+  state misguided
+     sounding => otter
+  end
+
+  state ostrich
+     combines => nutritious
+     shoot => upbeat
+     pricing => grubby
+     channeled => thick
+     authenticate => starry
+  end
+
+  state impolite
+     mailing => animated
+     awaken => jealous
+     ascribed => round
+     transpose => cruel
+  end
+
+  state sardonic
+  end
+
+  state amusing
+     fend => attractive
+     towering => turtle
+     protruding => writhing
+     inducing => hopeful
+  end
+
+  state well_informed
+     personified => annoyed
+     attaining => growing
+  end
+
+  state winding
+     viii => rigid
+  end
+
+  state giddy
+     misunderstand => pro_active
+     chuckling => insistent
+     shifts => rowdy
+     swallowing => this
+  end
+
+  state ajar
+     slowed => falcon
+     bases => shrill
+     be => present
+  end
+
+  state motherly
+     whispered => dragonfly
+     occured => pastel
+     exhaust => sure_footed
+  end
+
+  state mandrill
+     nesting => staid
+     averred => peacock
+     apportion => pale
+     label => scarce
+  end
+
+  state intelligent
+     bends => extra_small
+     impinges => direct
+     contemplate => gecko
+  end
+
+  state needy
+     tapering => skeletal
+     deletes => waterlogged
+     stepped => sore
+  end
+
+  state wrong
+     subsection => otter
+     history => costly
+  end
+
+  state wilted
+     build => colorless
+     endeavor => wry
+     quantify => soaring
+  end
+
+  state puny
+     delle => dutiful
+     reveals => grieving
+     initialize => cuttlefish
+  end
+
+  state ibis
+     enquire => menacing
+     proportioned => kindly
+     butchered => optimistic
+     stalled => usable
+     writhing => agreeable
+  end
+
+  state doting
+     regard => exotic
+  end
+
+  state quizzical
+     shared => defensive
+  end
+
+  state identical
+     clasped => starry
+     forwarded => joyous
+     rambling => attentive
+  end
+
+  state lemming
+     theorize => colossal
+     cools => sluggish
+     targeting => loving
+     interspersed => grouchy
+  end
+
+  state favorite
+     accommodates => simplistic
+     full => elliptical
+  end
+
+  state conscious
+     diverted => hungry
+     cement => tight
+     roused => extra_small
+     escaping => plaintive
+     crediting => stormy
+  end
+
+  state tasteless
+     talking => scarce
+  end
+
+  state fish
+  end
+
+  state writhing
+     chance => crowded
+     lags => towering
+     depressed => liquid
+  end
+
+  state slim
+     snorting => gecko
+     predetermined => instructive
+     reduce => ghastly
+  end
+
+  state hurtful
+     piss => frog
+  end
+
+  state same
+     toiling => slow
+     relocated => bubbly
+  end
+
+  state colossal
+     versus => recent
+  end
+
+  state secondary
+     worn => violet
+     not => gleeful
+     alarming => well_lit
+  end
+
+  state heartfelt
+     impaired => crane
+     serves => ideal
+     glows => anteater
+     contaminating => hurtful
+  end
+
+  state delightful
+     mount => instructive
+  end
+
+  state tall
+     resulted => smiling
+     stalking => snail
+     nursing => elliptical
+  end
+
+  state glittering
+     sunk => needy
+  end
+
+  state half
+     flipped => identical
+     converging => grand
+     ease => sponge
+     created => puny
+  end
+
+  state cuttlefish
+     stoned => beaver
+  end
+
+  state superb
+     attribute => ajar
+     crested => ibis
+     undergo => chimpanzee
+     bearing => grouchy
+     devastated => warped
+  end
+
+  state lynx
+     supervising => patient
+     rub => oddball
+     soars => juicy
+     cremated => hospitable
+  end
+
+  state trustworthy
+     flutter => content
+     hearing => needy
+     devastated => wrathful
+     deemed => relieved
+     liberalize => mixed
+  end
+
+  state outlying
+     sprinkling => relieved
+     squinting => genuine
+     spend => otter
+     recognised => gecko
+  end
+
+  state slow
+     piqued => real
+  end
+
+  state healthy
+     alternating => lobster
+     comprises => laconic
+     tailored => remarkable
+     presupposed => superb
+  end
+
+  state shrill
+     poses => patient
+  end
+
+  state female
+     terrifying => utter
+  end
+
+  state frayed
+     me => truthful
+     surfaced => tricky
+     intensifying => scorching
+     pool => bonobo
+     provoke => incomparable
+     comin => hippopotamus
+  end
+
+  state raw
+     supervised => howler_monkey
+     want => junior
+     alienating => grand
+     supplanted => splendid
+  end
+
+  state active
+     forfeit => violet
+  end
+
+  state towering
+     supervising => acidic
+     finds => violet
+     compares => quintessential
+     book => goose
+  end
+
+  state judicious
+     crediting => high
+     constructing => jackal
+  end
+
+  state kindly
+     clarifies => content
+  end
+
+  state attractive
+     project => lonely
+     coveted => fitting
+     borrowed => recent
+     remand => slim
+     expires => present
+  end
+
+  state hospitable
+     frowned => bonobo
+     bite => laconic
+     inflated => dull
+  end
+
+  state mammoth
+     resell => flawless
+     devour => superficial
+  end
+
+  state agreeable
+     unites => soaring
+     executing => beaver
+     lowered => granular
+     punish => big_hearted
+  end
+
+  state upright
+     contend => flounder
+     falling => charming
+     rigged => laconic
+     rot => upset
+  end
+
+  state grand
+     pat => which
+     reigns => peaceful
+     harvest => iguana
+     invite => wide_eyed
+  end
+
+  state violet
+     beheld => sore
+     dramatized => rowdy
+     participates => long
+     uplifted => complex
+     inquiring => defensive
+     sprinted => vile
+     restore => hippopotamus
+  end
+
+  state chinchilla
+     rewrote => linear
+     disturb => active
+     unleashed => curvy
+     visited => grieving
+     obtain => conventional
+  end
+
+  state kind
+     pondered => stunning
+     denoting => nautical
+  end
+
+  state pale
+     exaggerates => true
+     lobbied => female
+     pressed => metallic
+     dominate => junior
+     deferring => negative
+     destroys => chief
+  end
+
+  state arrogant
+     chatting => ashamed
+     differentiating => squirrel
+     transfer => gleeful
+     circulated => writhing
+     kindle => bubbly
+  end
+
+  state puffin
+     moving => numb
+     amass => better
+  end
+
+  state lovable
+     tearing => trivial
+     refrained => scorching
+     perverted => qualified
+     squaring => fluid
+     shirk => anteater
+  end
+
+  state basic
+     scold => false
+     entertained => giving
+  end
+
+  state limp
+     lock => acidic
+     realises => direct
+     overthrow => grouchy
+  end
+
+  state curvy
+     begun => unsung
+     authorizing => chief
+     betting => wolfhound
+     tailoring => wrong
+  end
+
+  state scarce
+     report => rough
+  end
+
+  state nice
+     relaxes => complex
+     endangered => sponge
+     lack => crane
+     fan => numerous
+     drops => ajar
+  end
+
+  state ill_informed
+     rounded => raccoon
+  end
+
+  state patient
+     taping => burdensome
+     disputed => foul
+     shut => naughty
+  end
+
+  state private
+     finish => back
+     shuddered => delightful
+     commend => trim
+     injecting => pale
+     kidnap => wrathful
+  end
+
+  state daring
+     choked => joyous
+     swayed => splendid
+  end
+
+  state pungent
+     optimize => truthful
+  end
+
+  state curly
+     inflicting => snake
+     double => loyal
+     interpreting => well_informed
+     hit => juicy
+     shattering => arrogant
+  end
+
+  state affectionate
+     applied => gaseous
+     mounted => necessary
+  end
+
+  state anteater
+     monopolize => hungry
+     roam => wilted
+  end
+
+  state ripe
+     viking => remarkable
+  end
+
+  state joyous
+     scolding => feminine
+     sp => tall
+     terms => active
+     anchored => dingo
+  end
+
+  state bird
+  end
+
+  state idealistic
+     witnessing => bonobo
+     experience => humming
+     enhance => nutritious
+  end
+
+  state helpful
+     freezing => dutiful
+     feasting => electric
+  end
+
+  state ornery
+     criticised => quiet
+     underwriting => hopeful
+     internalizing => ornery
+     zipped => cylindrical
+     teaching => hospitable
+     existed => far_off
+  end
+
+  state modern
+     reputed => private
+     statement => grieving
+     curling => anteater
+     involved => warped
+  end
+
+  state acrobatic
+     seep => pro_active
+  end
+
+  state empty
+     roaring => vile
+  end
+
+  state fragrant
+     coded => proud
+     averting => abyssinian
+  end
+
+  state wide_eyed
+     sighing => menacing
+     languished => glum
+     redesigning => minty
+  end
+
+  state loyal
+     documented => yummy
+     inferred => oblong
+  end
+
+  state liquid
+     echoes => occasional
+     deciphered => incomparable
+     following => repentant
+     padded => conventional
+  end
+
+  state bewildered
+     see => qualified
+     stranded => long_term
+     opposed => impassioned
+  end
+
+  state fluid
+     occur => trim
+     splashing => cheerful
+     compare => doting
+     signaling => ironclad
+  end
+
+  state thoughtless
+     stripping => healthy
+     police => assured
+     q => anteater
+     warmed => excellent
+     factoring => juicy
+  end
+
+  state buttery
+     indicted => attractive
+     smite => hospitable
+     stabilised => costly
+     infringing => this
+     gaze => hummingbird
+  end
+
+  state newt
+     rinse => thick
+  end
+
+  state pesky
+     reacts => patient
+     a_ => numb
+  end
+
+  state mole
+     complicated => agreeable
+  end
+
+  state zealous
+     preceding => hound
+  end
+
+  state real
+     taming => equal
+     manifesting => affectionate
+     demolished => rigid
+  end
+
+  state nimble
+     int => hurtful
+  end
+
+  state cheerful
+     necessitating => crowded
+     concluded => harmless
+     upsets => helpless
+     unite => chimpanzee
+     blossomed => horrid
+     emphasise => harmonious
+  end
+
+  state thrifty
+     coexisting => ill_informed
+     blurred => plush
+     amplifying => crowded
+     soiled => splendid
+  end
+
+  state gleeful
+     headlong => proper
+     splintered => deep
+     exchange => insistent
+     seizing => intelligent
+  end
+
+  state nutritious
+     tumble => motherly
+     ii => menacing
+  end
+
+  state raccoon
+     plough => profound
+  end
+
+  state jaded
+     begin => affectionate
+     counteract => popular
+  end
+
+  state insignificant
+     excluding => elliptical
+     side => loyal
+     withheld => understated
+     solidified => ajar
+  end
+
+  state unlawful
+     subdivided => humming
+     lives => pitiful
+  end
+
+  state fond
+     possesses => mixed
+     appreciate => comfortable
+     criticizes => tedious
+     type => bonobo
+  end
+
+  state this
+     encouraging => wasp
+     netted => puny
+     diagnosing => ideal
+     assembling => fluttering
+  end
+
+  state attentive
+     footing => flaky
+     ascribes => easy
+     places => good_natured
+  end
+
+  state honored
+     suspects => grouse
+     compounds => sneaky
+  end
+
+  state staid
+     coincident => cute
+     expected => puffin
+     interfacing => winding
+     nested => insistent
+     dreams => bonobo
+     suffer => buttery
+  end
+
+  state fearless
+     lo => tarantula
+     confusing => identical
+     unload => vile
+  end
+
+  state gibbon
+     alleviating => rancid
+     bounced => good_natured
+  end
+
+  state meandering
+     representing => simplistic
+     interpreting => big_hearted
+     simple => excellent
+  end
+
+  state cheery
+     diffusing => easygoing
+     swap => slim
+     predicts => mundane
+  end
+
+  state intent
+     tinkering => nice
+     embody => many
+  end
+
+  state wiggly
+     refrain => daring
+  end
+
+  state jovial
+     buffeted => wrathful
+     enforcing => harmonious
+     blazing => proper
+  end
+
+  state fluttering
+     roamed => motherly
+  end
+
+  state sneaky
+     realised => sharp
+     didn => secondary
+     march => forceful
+     basking => albatross
+     clasp => rubbery
+  end
+
+  state unsung
+     appreciates => rough
+     hold => buffalo
+     greets => reliable
+  end
+
+  state tight
+     funded => millipede
+     utilized => curly
+     equated => square
+     fumed => present
+     defraud => many
+     confirms => stupendous
+     pursed => yummy
+  end
+
+  state variable
+     scale => lovable
+     convicted => ibis
+     dissuaded => primary
+     certifying => active
+  end
+
+  state pink
+     ligated => feminine
+     constituting => gleeful
+     proven => dragonfly
+     plowed => hurtful
+  end
+
+  state pleasant
+     dressed => lynx
+     charmed => polite
+     degenerate => stunning
+     rigging => hummingbird
+  end
+
+  state horrid
+     allocate => bewildered
+     don => wilted
+     purport => hippopotamus
+     pray => ethical
+     patented => hard_working
+     funding => quiet
+  end
+
+  state wasp
+     shift => acrobatic
+     cant => wan
+     battling => burdensome
+  end
+
+  state hoarse
+     dry => pastel
+     shaded => grizzled
+     rooting => intelligent
+  end
+
+  state sore
+     betray => calm
+  end
+
+  state grizzled
+     landing => biodegradable
+     gushing => curly
+  end
+
+  state linear
+     scrutinize => numb
+     resonates => ornery
+  end
+
+  state different
+     himself => fragrant
+     lo => popular
+     rapped => busy
+  end
+
+  state long_term
+  end
+
+  state magnificent
+     skirted => fickle
+     terminate => square
+  end
+
+  state flamingo
+     board => flashy
+  end
+
+  state remarkable
+     elude => high
+     soothed => howler_monkey
+  end
+
+  state closed
+     snaps => rancid
+     traveling => fluid
+     fainting => slow
+  end
+
+  state good_natured
+     disgraced => chilly
+  end
+
+  state carefree
+  end
+
+  state millipede
+     reelected => coyote
+     resonates => millipede
+     excites => gigantic
+     adjudicate => electric
+  end
+
+  state menacing
+     tread => klutzy
+     mobilizing => ripe
+  end
+
+  state scorching
+     seeming => key
+     fold => conventional
+  end
+
+  state detailed
+     exalt => unsightly
+     ringing => complex
+     combine => many
+     distorting => meandering
+  end
+
+  state passionate
+     endangered => dreary
+     petition => naughty
+     divorce => raccoon
+  end
+
+  state muggy
+     soothe => muggy
+  end
+
+  state charming
+     investigate => trim
+     entitled => cloudy
+     fanning => puffin
+  end
+
+  state giving
+     restoring => caterpillar
+  end
+
+  state serene
+     unlock => sponge
+  end
+
+  state round
+     accrues => negative
+     merged => charming
+  end
+
+  state pointless
+     dislodged => curly
+     shaded => metallic
+  end
+
+  state tarantula
+  end
+
+  state unselfish
+     indented => flaky
+     overcrowding => past
+  end
+
+  state incomparable
+     transfixed => impassioned
+     compounding => overcooked
+  end
+
+  state high
+     we => false
+     reworked => slippery
+     decoded => mole
+  end
+
+  state somber
+     total => troubled
+  end
+
+  state colorless
+     alight => hippopotamus
+  end
+
+  state entire
+     communicate => fat
+     fortify => many
+     striven => trained
+     counterbalanced => tarantula
+  end
+
+  state muddy
+     disappoint => virtuous
+  end
+
+  state tidy
+     imaging => wilted
+     rivaled => harmless
+  end
+
+  state stupendous
+     complementing => different
+     prejudice => good_natured
+  end
+
+  state far_off
+     distinguish => humming
+     understated => false
+     shunted => forceful
+     due => wrathful
+  end
+
+  state burdensome
+     transcends => hasty
+     smash => truthful
+     thicken => glittering
+     debugging => assured
+  end
+
+  state jaguar
+     excels => punctual
+     licensed => pitiful
+     given => upset
+  end
+
+  state sharp
+     modified => electric
+     concurring => flounder
+     storytelling => gibbon
+     toppled => plaintive
+     arouses => wolfhound
+     breaks => organic
+  end
+
+  state utter
+     averred => busy
+     imprinting => hedgehog
+     etc => rigid
+     utters => false
+     learnt => sore
+  end
+
+  state feisty
+     damping => electric
+  end
+
+  state virtuous
+     sift => instructive
+     honoured => turkey
+     fought => helpful
+  end
+
+  state costly
+     remarks => icy
+     waited => tight
+     excepted => clear
+     counteract => liquid
+  end
+
+  state organic
+     iron => bubbly
+     devise => flamingo
+  end
+
+  state vigorous
+     seating => relieved
+     palpated => sneaky
+  end
+
+  state rusty
+     allege => detailed
+     attributes => bubbly
+  end
+
+  state buzzing
+     thwarted => pure
+  end
+
+  state hungry
+     relocating => buffalo
+     pleased => tasteless
+     reconstruct => beautiful
+     murdered => naughty
+  end
+
+  state wealthy
+     smash => pro_active
+  end
+
+  state naughty
+     attracting => cloudy
+     dispose => upright
+  end
+
+  state oblong
+     block => lemming
+     carry => ibis
+  end
+
+  state affable
+     contributing => patient
+     setting => flounder
+     spy => piercing
+     registering => tight
+     blurring => pitiful
+     deduced => simplistic
+  end
+
+  state which
+     plied => tarantula
+     pan => subdued
+  end
+
+  state dingo
+  end
+
+  state helpless
+     adjusting => impolite
+     gonna => grouse
+     entitled => wobbly
+  end
+
+  state annoyed
+     looked => pungent
+     loaned => jaded
+     obstruct => lovable
+  end
+
+  state guilty
+     eaten => trusting
+     dialing => false
+     staking => enormous
+     reasons => snail
+     moses => sluggish
+     squared => dynamic
+  end
+
+  state pure
+     urges => splendid
+     existed => slippery
+     hybridized => incompatible
+     participates => profound
+     scolding => unsung
+  end
+
+  state speedy
+     erred => hedgehog
+     surmount => improbable
+     sealing => gregarious
+     comforted => menacing
+     altered => wrong
+  end
+
+  state oddball
+     prop => mule
+     chilling => stunning
+     figuring => daring
+  end
+
+  state icy
+     commends => daring
+  end
+
+  state bubbly
+     xvi => menacing
+     sapped => pink
+     murmur => wide_eyed
+     crucified => big_hearted
+     balancing => violet
+     polarizing => grouchy
+  end
+
+  state direct
+     terms => squirrel
+  end
+
+  state big_hearted
+     rot => helpless
+  end
+
+  state insistent
+     surprised => unwelcome
+     dove => dazzling
+  end
+
+  state quiet
+     depress => ghastly
+     streaming => empty
+     born => attached
+  end
+
+  state peaceful
+     sanding => trivial
+     sc => fearless
+  end
+
+  state vague
+     dominating => curly
+     scheming => lonely
+  end
+
+  state wolfhound
+     motivate => delinquent
+     circa => turkey
+  end
+
+  state reasonable
+     card => square
+     realising => exotic
+     transported => mandrill
+  end
+
+  state weighty
+     exhausted => liquid
+  end
+
+  state popular
+     yields => annoyed
+     escaped => mammoth
+     irritate => scorching
+  end
+
+  state tangible
+     vomit => scorching
+     pack => hummingbird
+     po => feisty
+  end
+
+  state gummy
+  end
+
+  state yummy
+     burnt => stunning
+     misused => healthy
+     reel => dreary
+     boil => long
+  end
+
+  state quaint
+     iv => excellent
+     revolutionize => chimpanzee
+  end
+
+  state second
+     limping => fickle
+     internalized => pink
+     gaining => genuine
+  end
+
+  state elliptical
+     minced => harmless
+     disallow => grizzled
+  end
+
+  state lobster
+     longs => hospitable
+     compiling => big_hearted
+  end
+
+  state turbulent
+     coerced => camel
+     enclose => tidy
+  end
+
+  state falcon
+     supervise => curly
+     recited => ibis
+     entailed => costly
+     colour => false
+     interchanged => soaring
+  end
+
+  state trusting
+     begotten => patient
+     returning => punctual
+     analysed => wombat
+     screamed => rancid
+  end
+
+  state content
+     dozed => heartfelt
+     dialing => ironclad
+  end
+
+  state chilly
+     comin => agreeable
+     voting => unsung
+  end
+
+  state acidic
+     creaked => winding
+     practising => basic
+     debugging => feminine
+  end
+
+  state simplistic
+     ensues => fragrant
+  end
+
+  state leafy
+     expand => albatross
+     avoiding => worthy
+  end
+
+  state splendid
+     gambled => conscious
+     sci => complex
+     visited => bat
+     dwells => granular
+     delimited => speedy
+  end
+
+  state unsightly
+     interferes => selfish
+     censured => misguided
+  end
+
+  state humming
+  end
+
+  state proper
+     cooled => oddball
+     buzzing => direct
+  end
+
+  state untidy
+     certified => hard_working
+  end
+
+  state trusty
+     ses => harmonious
+     won => grand
+     reduce => hippopotamus
+  end
+
+  state truthful
+     imagining => dangerous
+     sealed => numb
+  end
+
+  state rowdy
+     supports => sardonic
+     curving => key
+     reuse => this
+  end
+
+  state exotic
+     outlive => negative
+  end
+
+  state hummingbird
+     engineer => curly
+     punished => squeaky
+  end
+
+  state stunning
+     testing => kindly
+     doped => untried
+     accounting => right
+     ripped => fetid
+     foreground => harmless
+  end
+
+  state impassioned
+     knock => ill_fated
+     subdivide => far_off
+  end
+
+  state gregarious
+     plowed => menacing
+  end
+
+  state cute
+     inaugurate => wilted
+     practiced => hard_working
+     server => fantastic
+     validate => pastel
+  end
+
+  state dull
+     sufficed => gigantic
+     confess => well_lit
+     scare => false
+  end
+
+  state rancid
+     subtract => thrifty
+     sutured => granular
+     publicize => snappy
+     irrigated => amicable
+  end
+
+  state punctual
+     consummated => long_term
+     tugged => overcooked
+     overshadowed => soaring
+     sew => incomparable
+  end
+
+  state usable
+     fear => icy
+  end
+
+  state troubled
+     improvised => sunny
+     finalized => ironclad
+     saturated => loving
+  end
+
+  state chimpanzee
+     bereaved => punctual
+  end
+
+  state incompatible
+     disposes => gregarious
+  end
+
+  state understated
+     tickling => kaleidoscopic
+  end
+
+  state howler_monkey
+     dug => weighty
+     envelop => extra_small
+     owing => healthy
+  end
+
+  state greedy
+     commemorated => proper
+     reelected => real
+  end
+
+  state dazzling
+     formulates => wry
+     waved => curvy
+     pervades => ornery
+     reconstitute => kindly
+  end
+
+  state long
+  end
+
+  state flawless
+     chartered => thrifty
+     looks => curly
+     reassure => stupendous
+     differ => pesky
+  end
+
+  state polite
+     incarcerated => this
+     equating => towering
+     leveled => hasty
+     localize => attached
+  end
+
+  state laconic
+     bled => beagle
+     arose => testy
+  end
+
+  state wobbly
+     reconcile => female
+     updating => incompatible
+     equilibrium => quizzical
+     renovated => leafy
+     boycotted => constant
+  end
+
+  state lonely
+     flitting => lobster
+     evoke => snake
+     praying => big_hearted
+     enticed => flashy
+     shocking => amusing
+  end
+
+  state testy
+     bounding => curvy
+     secreted => grouchy
+  end
+
+  state recent
+     disseminate => different
+     collaborate => staid
+  end
+
+  state numerous
+     catching => thorny
+     impinging => vague
+     bestowing => snail
+  end
+
+  state pastel
+     accommodated => nimble
+     disturb => affable
+     repay => ignorant
+     warring => unlawful
+     enclosing => fetid
+  end
+
+  state easy
+     composing => turtle
+  end
+
+  state wombat
+     post => goose
+  end
+
+  state flaky
+  end
+
+  state trained
+     professed => winding
+     reign => grieving
+  end
+
+  state worthy
+     breathing => long_term
+  end
+
+  state thick
+     fucking => horrid
+  end
+
+  state beautiful
+     outperform => cuttlefish
+     shower => worthy
+     upsetting => smiling
+     mate => juicy
+  end
+
+  state easygoing
+     inverted => gibbon
+     quiet => exotic
+     snapped => forceful
+     cerevisiae => dead
+     legitimated => thrifty
+     stomach => mundane
+     dying => albatross
+  end
+
+  state otter
+     allowed => profound
+     feast => tall
+     buckle => weighty
+  end
+
+  state electric
+     defends => chinchilla
+     peek => burdensome
+  end
+
+  state hopeful
+     obeys => closed
+     shutting => wry
+     deferring => repentant
+  end
+
+  state flounder
+     father => upbeat
+     licked => shrill
+     last => long
+     manifesting => ironclad
+  end
+
+  state comfortable
+     originated => worthy
+  end
+
+  state repentant
+     stumble => pastel
+     glistening => quiet
+     predicted => grizzled
+     refuses => flounder
+     lacked => identical
+     theorize => grand
+  end
+
+  state grouchy
+  end
+
+  state fickle
+     entails => loyal
+  end
+
+  state camel
+  end
+
+  state warped
+     taken => smiling
+     chapter => harmless
+     mentioned => upset
+     clad => flawless
+     hinders => ill_informed
+     mimics => constant
+  end
+
+  state enormous
+     braided => amicable
+     sizes => wrong
+  end
+
+  state cylindrical
+     stood => flounder
+     staffing => crooked
+  end
+
+  state fruitful
+     reg => beaver
+  end
+
+  state rough
+     settled => incomparable
+  end
+
+  state smiling
+     perched => fearless
+  end
+
+  state well_to_do
+     harnessing => amusing
+     cry => caterpillar
+     prized => occasional
+     denigrate => gleeful
+     reaped => yawning
+  end
+
+  state barren
+     remodeling => granular
+     erased => magnificent
+     relished => tasteless
+  end
+
+  state rigid
+     refine => direct
+     glossed => pungent
+     controls => metallic
+     desert => ethical
+     primed => instructive
+  end
+
+  state bat
+     vexed => sure_footed
+     intended => comfortable
+     maimed => untidy
+     settle => ashamed
+     march => female
+     evading => upset
+  end
+
+  state concerned
+     hunted => simplistic
+     crystallize => extra_small
+     enumerated => idealistic
+     eliminated => snail
+     predisposes => subdued
+     available => better
+  end
+
+  state false
+     suck => dreary
+  end
+
+  state appropriate
+     associated => agreeable
+  end
+
+  state fetid
+     entangled => remarkable
+     eliciting => occasional
+     lasts => hoarse
+  end
+
+  state squeaky
+     delighted => ajar
+  end
+
+  state excellent
+     issue => entire
+     safeguarding => same
+     squealing => colossal
+  end
+
+  state equal
+     prevent => extra_small
+  end
+
+  state whispering
+     summon => untidy
+  end
+
+  state ironclad
+     conforming => puny
+  end
+
+  state tedious
+     accessing => klutzy
+     maneuver => numb
+  end
+
+  state skeletal
+     organising => buffalo
+     slain => arid
+     stirring => half
+     recapture => camel
+     clin => appropriate
+     snarled => variable
+     explore => popular
+  end
+
+  state snappy
+     capitulate => pastel
+  end
+
+  state old_fashioned
+     comes => harmless
+     unleash => bonobo
+     defended => qualified
+     demolished => carefree
+  end
+
+  state extra_small
+     savor => camel
+     abstracting => pro_active
+  end
+
+  state yawning
+     disprove => smiling
+     burying => helpful
+     area => exciting
+  end
+
+  state ghastly
+     delivered => lemming
+     leveled => otter
+     populate => healthy
+     insulted => gregarious
+  end
+
+  state grieving
+     remaking => flaky
+     grappling => pro_active
+     mutter => equal
+     provide => easy
+  end
+
+  state separate
+     realised => hound
+     administer => key
+     minimising => nutritious
+  end
+
+  state klutzy
+     tend => appropriate
+     wane => plush
+  end
+
+  state wan
+     enacting => slow
+     ted => wealthy
+     dial => intelligent
+  end
+
+  state grouse
+     rang => virtuous
+     nose => nautical
+     skimming => soaring
+     doubles => starry
+     arrayed => laconic
+     receding => thick
+     sighing => meerkat
+     prostrated => smiling
+     applauded => towering
+  end
+
+  state clear
+     bullying => trim
+  end
+
+  state bonobo
+     scanned => quizzical
+     alternating => numerous
+     test => front
+  end
+
+  state upbeat
+     coalesce => affable
+     complement => profound
+  end
+
+  state accurate
+     spring => grouse
+  end
+
+  state calm
+     synchronized => flounder
+     staging => grand
+  end
+
+  state plush
+     disengaged => big_hearted
+     damages => active
+  end
+
+  state mule
+     colour => fearless
+     acclaimed => round
+     deserves => muddy
+     fracture => cloudy
+  end
+
+  state exciting
+     priming => slow
+     incarnated => trim
+  end
+
+  state hippopotamus
+     stifle => curvy
+     scaring => tarantula
+     suspecting => fluid
+  end
+
+  state beagle
+     garnish => rubbery
+     protect => useless
+     disembarked => fragrant
+     threaded => right
+     modify => grubby
+     admire => insignificant
+  end
+
+  state fitting
+     registered => camel
+     assembles => idealistic
+  end
+
+  state many
+     fucked => content
+     log => trim
+     detested => dutiful
+  end
+
+  state trim
+  end
+
+  state hound
+     flanked => grieving
+     trembled => arid
+     key => grubby
+  end
+
+  state turtle
+     sobre => direct
+     disclaimed => skeletal
+  end
+
+  state defensive
+     missed => jaded
+     overemphasized => dead
+     earning => slushy
+  end
+
+  state excited
+     net => sneaky
+  end
+
+  state harmonious
+     bar => false
+     outline => hungry
+     initialized => judicious
+     obstruct => sneaky
+     abandons => electric
+     overruled => sponge
+  end
+
+  state conventional
+     excusing => popular
+     presuming => forceful
+     shocked => towering
+  end
+
+  state soaring
+     folded => harmless
+     trying => bonobo
+     mate => female
+     worn => wombat
+  end
+
+  state queasy
+     discrediting => trusting
+     deleting => colorless
+  end
+
+  state piercing
+     handed => bat
+     impairing => recent
+     depose => grouse
+  end
+
+  state meerkat
+     sit => glittering
+     l => fickle
+     budge => bubbly
+     descended => mule
+     des => bonobo
+     solved => wrathful
+     transcribe => vague
+  end
+
+  state granular
+     circa => buffalo
+     critique => which
+     forgo => greedy
+  end
+
+  state buoyant
+     service => detailed
+  end
+
+  state negative
+     float => punctual
+     tottering => optimistic
+     seething => attached
+     dip => wilted
+     perfection => forceful
+  end
+
+  state foul
+     assayed => conscious
+     confiding => grieving
+  end
+
+  state crowded
+     subscribed => second
+     straightened => delinquent
+     exited => wrong
+  end
+
+  state sure_footed
+     wept => snail
+     racked => variable
+     erupting => back
+  end
+
+  state spry
+     objectified => whispering
+     weighs => motherly
+     roaming => animated
+  end
+
+  state reliable
+     figured => winding
+     lingered => old_fashioned
+     rotates => half
+     destroying => dangerous
+     puffing => otter
+     darken => true
+  end
+
+  state fantastic
+     quit => enthusiastic
+     shit => jovial
+     requested => penguin
+     isolate => accurate
+  end
+
+  state unwelcome
+     transferring => long
+     scheduled => beaver
+     variation => burdensome
+     nods => exciting
+     quarreling => fitting
+  end
+
+  state abyssinian
+     underlying => stormy
+     reward => plaintive
+  end
+
+  state crooked
+     profiling => gregarious
+     lapse => menacing
+     demoralized => beagle
+     evaporate => bad
+  end
+
+  state albatross
+  end
+
+  state candid
+     bolstered => lumpy
+     surmise => fat
+     debugging => cylindrical
+     dictate => jaded
+  end
+
+  state present
+     disfigured => sure_footed
+     conducts => fantastic
+     savored => puny
+  end
+
+  state nautical
+     hammer => bat
+  end
+
+  state limited
+     thermal => vigorous
+  end
+
+  state delinquent
+     automate => polite
+     slumbering => wiggly
+     cheated => worthy
+  end
+
+  state plaintive
+  end
+
+  state platypus
+     stars => fond
+     pronounces => joyous
+  end
+
+  state hard_working
+     numbered => calm
+     ram => kaleidoscopic
+     twofold => insistent
+     committed => grizzled
+  end
+
+  state thorny
+     linked => fluid
+     combining => flaky
+  end
+
+  state gecko
+     expressed => affable
+     administering => remarkable
+     reaffirms => magnificent
+     veto => genuine
+  end
+
+  state shady
+  end
+
+  state prime
+     punch => long_term
+  end
+
+  state untried
+     listed => hopeful
+     easing => present
+     transposed => fixed
+  end
+
+  state relieved
+     live => pleasant
+  end
+
+  state better
+     disgusted => newt
+     alluding => hard_working
+     making => helpless
+  end
+
+  state dangerous
+     rein => affectionate
+     appropriates => rigid
+     implicate => fat
+     authorise => charming
+     whimpering => bat
+  end
+
+  state ill_fated
+     distributed => elliptical
+     si => beaver
+  end
+
+end

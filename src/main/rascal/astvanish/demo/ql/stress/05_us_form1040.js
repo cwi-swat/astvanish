@@ -1,4 +1,4 @@
-export {run$0 as run};
+export { run$0 as run };
 function initializeQuestion$0(env) {
   env['firstName'] = '';
 }
@@ -63,11 +63,11 @@ function initializeQuestion$20(env) {
   env['spousePresidentialFund'] = false;
 }
 function initializeQuestion$21(env) {
-  initializeQuestion$15(env); 
-  initializeQuestion$16(env); 
-  initializeQuestion$17(env); 
-  initializeQuestion$18(env); 
-  initializeQuestion$19(env); 
+  initializeQuestion$15(env);
+  initializeQuestion$16(env);
+  initializeQuestion$17(env);
+  initializeQuestion$18(env);
+  initializeQuestion$19(env);
   initializeQuestion$20(env);
 }
 function initializeQuestion$22(env) {
@@ -110,12 +110,12 @@ function initializeQuestion$34(env) {
   env['dep1Odc'] = false;
 }
 function initializeQuestion$35(env) {
-  initializeQuestion$28(env); 
-  initializeQuestion$29(env); 
-  initializeQuestion$30(env); 
-  initializeQuestion$31(env); 
-  initializeQuestion$32(env); 
-  initializeQuestion$33(env); 
+  initializeQuestion$28(env);
+  initializeQuestion$29(env);
+  initializeQuestion$30(env);
+  initializeQuestion$31(env);
+  initializeQuestion$32(env);
+  initializeQuestion$33(env);
   initializeQuestion$34(env);
 }
 function initializeQuestion$36(env) {
@@ -143,12 +143,12 @@ function initializeQuestion$43(env) {
   env['dep2Odc'] = false;
 }
 function initializeQuestion$44(env) {
-  initializeQuestion$37(env); 
-  initializeQuestion$38(env); 
-  initializeQuestion$39(env); 
-  initializeQuestion$40(env); 
-  initializeQuestion$41(env); 
-  initializeQuestion$42(env); 
+  initializeQuestion$37(env);
+  initializeQuestion$38(env);
+  initializeQuestion$39(env);
+  initializeQuestion$40(env);
+  initializeQuestion$41(env);
+  initializeQuestion$42(env);
   initializeQuestion$43(env);
 }
 function initializeQuestion$45(env) {
@@ -176,12 +176,12 @@ function initializeQuestion$52(env) {
   env['dep3Odc'] = false;
 }
 function initializeQuestion$53(env) {
-  initializeQuestion$46(env); 
-  initializeQuestion$47(env); 
-  initializeQuestion$48(env); 
-  initializeQuestion$49(env); 
-  initializeQuestion$50(env); 
-  initializeQuestion$51(env); 
+  initializeQuestion$46(env);
+  initializeQuestion$47(env);
+  initializeQuestion$48(env);
+  initializeQuestion$49(env);
+  initializeQuestion$50(env);
+  initializeQuestion$51(env);
   initializeQuestion$52(env);
 }
 function initializeQuestion$54(env) {
@@ -209,12 +209,12 @@ function initializeQuestion$61(env) {
   env['dep4Odc'] = false;
 }
 function initializeQuestion$62(env) {
-  initializeQuestion$55(env); 
-  initializeQuestion$56(env); 
-  initializeQuestion$57(env); 
-  initializeQuestion$58(env); 
-  initializeQuestion$59(env); 
-  initializeQuestion$60(env); 
+  initializeQuestion$55(env);
+  initializeQuestion$56(env);
+  initializeQuestion$57(env);
+  initializeQuestion$58(env);
+  initializeQuestion$59(env);
+  initializeQuestion$60(env);
   initializeQuestion$61(env);
 }
 function initializeQuestion$63(env) {
@@ -239,10 +239,10 @@ function initializeQuestion$69(env) {
   env['w2aCare'] = 0;
 }
 function initializeQuestion$70(env) {
-  initializeQuestion$65(env); 
-  initializeQuestion$66(env); 
-  initializeQuestion$67(env); 
-  initializeQuestion$68(env); 
+  initializeQuestion$65(env);
+  initializeQuestion$66(env);
+  initializeQuestion$67(env);
+  initializeQuestion$68(env);
   initializeQuestion$69(env);
 }
 function initializeQuestion$71(env) {
@@ -264,10 +264,10 @@ function initializeQuestion$76(env) {
   env['w2bCare'] = 0;
 }
 function initializeQuestion$77(env) {
-  initializeQuestion$72(env); 
-  initializeQuestion$73(env); 
-  initializeQuestion$74(env); 
-  initializeQuestion$75(env); 
+  initializeQuestion$72(env);
+  initializeQuestion$73(env);
+  initializeQuestion$74(env);
+  initializeQuestion$75(env);
   initializeQuestion$76(env);
 }
 function initializeQuestion$78(env) {
@@ -289,10 +289,10 @@ function initializeQuestion$83(env) {
   env['w2cCare'] = 0;
 }
 function initializeQuestion$84(env) {
-  initializeQuestion$79(env); 
-  initializeQuestion$80(env); 
-  initializeQuestion$81(env); 
-  initializeQuestion$82(env); 
+  initializeQuestion$79(env);
+  initializeQuestion$80(env);
+  initializeQuestion$81(env);
+  initializeQuestion$82(env);
   initializeQuestion$83(env);
 }
 function initializeQuestion$85(env) {
@@ -362,7 +362,7 @@ function initializeQuestion$106(env) {
   env['sBL7b'] = '';
 }
 function initializeQuestion$107(env) {
-  initializeQuestion$105(env); 
+  initializeQuestion$105(env);
   initializeQuestion$106(env);
 }
 function initializeQuestion$108(env) {
@@ -372,8 +372,8 @@ function initializeQuestion$109(env) {
   env['sBL8'] = false;
 }
 function initializeQuestion$110(env) {
-  initializeQuestion$104(env); 
-  initializeQuestion$108(env); 
+  initializeQuestion$104(env);
+  initializeQuestion$108(env);
   initializeQuestion$109(env);
 }
 function initializeQuestion$111(env) {
@@ -518,8 +518,8 @@ function initializeQuestion$157(env) {
   env['sCL30'] = 0;
 }
 function initializeQuestion$158(env) {
-  initializeQuestion$155(env); 
-  initializeQuestion$156(env); 
+  initializeQuestion$155(env);
+  initializeQuestion$156(env);
   initializeQuestion$157(env);
 }
 function initializeQuestion$159(env) {
@@ -538,48 +538,48 @@ function initializeQuestion$163(env) {
   initializeQuestion$162(env);
 }
 function initializeQuestion$164(env) {
-  initializeQuestion$113(env); 
-  initializeQuestion$114(env); 
-  initializeQuestion$115(env); 
-  initializeQuestion$116(env); 
-  initializeQuestion$117(env); 
-  initializeQuestion$120(env); 
-  initializeQuestion$121(env); 
-  initializeQuestion$122(env); 
-  initializeQuestion$123(env); 
-  initializeQuestion$124(env); 
-  initializeQuestion$125(env); 
-  initializeQuestion$126(env); 
-  initializeQuestion$127(env); 
-  initializeQuestion$128(env); 
-  initializeQuestion$129(env); 
-  initializeQuestion$130(env); 
-  initializeQuestion$131(env); 
-  initializeQuestion$132(env); 
-  initializeQuestion$133(env); 
-  initializeQuestion$134(env); 
-  initializeQuestion$135(env); 
-  initializeQuestion$136(env); 
-  initializeQuestion$137(env); 
-  initializeQuestion$138(env); 
-  initializeQuestion$139(env); 
-  initializeQuestion$140(env); 
-  initializeQuestion$141(env); 
-  initializeQuestion$142(env); 
-  initializeQuestion$143(env); 
-  initializeQuestion$144(env); 
-  initializeQuestion$145(env); 
-  initializeQuestion$146(env); 
-  initializeQuestion$147(env); 
-  initializeQuestion$148(env); 
-  initializeQuestion$149(env); 
-  initializeQuestion$150(env); 
-  initializeQuestion$151(env); 
-  initializeQuestion$152(env); 
-  initializeQuestion$153(env); 
-  initializeQuestion$154(env); 
-  initializeQuestion$159(env); 
-  initializeQuestion$160(env); 
+  initializeQuestion$113(env);
+  initializeQuestion$114(env);
+  initializeQuestion$115(env);
+  initializeQuestion$116(env);
+  initializeQuestion$117(env);
+  initializeQuestion$120(env);
+  initializeQuestion$121(env);
+  initializeQuestion$122(env);
+  initializeQuestion$123(env);
+  initializeQuestion$124(env);
+  initializeQuestion$125(env);
+  initializeQuestion$126(env);
+  initializeQuestion$127(env);
+  initializeQuestion$128(env);
+  initializeQuestion$129(env);
+  initializeQuestion$130(env);
+  initializeQuestion$131(env);
+  initializeQuestion$132(env);
+  initializeQuestion$133(env);
+  initializeQuestion$134(env);
+  initializeQuestion$135(env);
+  initializeQuestion$136(env);
+  initializeQuestion$137(env);
+  initializeQuestion$138(env);
+  initializeQuestion$139(env);
+  initializeQuestion$140(env);
+  initializeQuestion$141(env);
+  initializeQuestion$142(env);
+  initializeQuestion$143(env);
+  initializeQuestion$144(env);
+  initializeQuestion$145(env);
+  initializeQuestion$146(env);
+  initializeQuestion$147(env);
+  initializeQuestion$148(env);
+  initializeQuestion$149(env);
+  initializeQuestion$150(env);
+  initializeQuestion$151(env);
+  initializeQuestion$152(env);
+  initializeQuestion$153(env);
+  initializeQuestion$154(env);
+  initializeQuestion$159(env);
+  initializeQuestion$160(env);
   initializeQuestion$163(env);
 }
 function initializeQuestion$165(env) {
@@ -619,15 +619,15 @@ function initializeQuestion$176(env) {
   env['sSEL13'] = 0;
 }
 function initializeQuestion$177(env) {
-  initializeQuestion$167(env); 
-  initializeQuestion$168(env); 
-  initializeQuestion$169(env); 
-  initializeQuestion$170(env); 
-  initializeQuestion$171(env); 
-  initializeQuestion$172(env); 
-  initializeQuestion$173(env); 
-  initializeQuestion$174(env); 
-  initializeQuestion$175(env); 
+  initializeQuestion$167(env);
+  initializeQuestion$168(env);
+  initializeQuestion$169(env);
+  initializeQuestion$170(env);
+  initializeQuestion$171(env);
+  initializeQuestion$172(env);
+  initializeQuestion$173(env);
+  initializeQuestion$174(env);
+  initializeQuestion$175(env);
   initializeQuestion$176(env);
 }
 function initializeQuestion$178(env) {
@@ -889,25 +889,25 @@ function initializeQuestion$263(env) {
   env['sAL17'] = 0;
 }
 function initializeQuestion$264(env) {
-  initializeQuestion$242(env); 
-  initializeQuestion$243(env); 
-  initializeQuestion$244(env); 
-  initializeQuestion$245(env); 
-  initializeQuestion$246(env); 
-  initializeQuestion$247(env); 
-  initializeQuestion$248(env); 
-  initializeQuestion$249(env); 
-  initializeQuestion$250(env); 
-  initializeQuestion$251(env); 
-  initializeQuestion$252(env); 
-  initializeQuestion$253(env); 
-  initializeQuestion$254(env); 
-  initializeQuestion$255(env); 
-  initializeQuestion$258(env); 
-  initializeQuestion$259(env); 
-  initializeQuestion$260(env); 
-  initializeQuestion$261(env); 
-  initializeQuestion$262(env); 
+  initializeQuestion$242(env);
+  initializeQuestion$243(env);
+  initializeQuestion$244(env);
+  initializeQuestion$245(env);
+  initializeQuestion$246(env);
+  initializeQuestion$247(env);
+  initializeQuestion$248(env);
+  initializeQuestion$249(env);
+  initializeQuestion$250(env);
+  initializeQuestion$251(env);
+  initializeQuestion$252(env);
+  initializeQuestion$253(env);
+  initializeQuestion$254(env);
+  initializeQuestion$255(env);
+  initializeQuestion$258(env);
+  initializeQuestion$259(env);
+  initializeQuestion$260(env);
+  initializeQuestion$261(env);
+  initializeQuestion$262(env);
   initializeQuestion$263(env);
 }
 function initializeQuestion$265(env) {
@@ -1010,9 +1010,9 @@ function initializeQuestion$297(env) {
   env['s3CareOk'] = false;
 }
 function initializeQuestion$298(env) {
-  initializeQuestion$294(env); 
-  initializeQuestion$295(env); 
-  initializeQuestion$296(env); 
+  initializeQuestion$294(env);
+  initializeQuestion$295(env);
+  initializeQuestion$296(env);
   initializeQuestion$297(env);
 }
 function initializeQuestion$299(env) {
@@ -1151,18 +1151,18 @@ function initializeQuestion$343(env) {
   env['f1040L35d'] = '';
 }
 function initializeQuestion$344(env) {
-  initializeQuestion$341(env); 
-  initializeQuestion$342(env); 
+  initializeQuestion$341(env);
+  initializeQuestion$342(env);
   initializeQuestion$343(env);
 }
 function initializeQuestion$345(env) {
   initializeQuestion$344(env);
 }
 function initializeQuestion$346(env) {
-  initializeQuestion$337(env); 
-  initializeQuestion$338(env); 
-  initializeQuestion$339(env); 
-  initializeQuestion$340(env); 
+  initializeQuestion$337(env);
+  initializeQuestion$338(env);
+  initializeQuestion$339(env);
+  initializeQuestion$340(env);
   initializeQuestion$345(env);
 }
 function initializeQuestion$347(env) {
@@ -1181,21 +1181,21 @@ function initializeQuestion$351(env) {
   env['payAccount'] = '';
 }
 function initializeQuestion$352(env) {
-  initializeQuestion$350(env); 
+  initializeQuestion$350(env);
   initializeQuestion$351(env);
 }
 function initializeQuestion$353(env) {
   initializeQuestion$352(env);
 }
 function initializeQuestion$354(env) {
-  initializeQuestion$347(env); 
-  initializeQuestion$348(env); 
-  initializeQuestion$349(env); 
+  initializeQuestion$347(env);
+  initializeQuestion$348(env);
+  initializeQuestion$349(env);
   initializeQuestion$353(env);
 }
 function initializeQuestion$355(env) {
   initializeQuestion$346(env);
-            initializeQuestion$354(env);
+  initializeQuestion$354(env);
 }
 function initializeQuestion$356(env) {
   env['thirdParty'] = false;
@@ -1210,8 +1210,8 @@ function initializeQuestion$359(env) {
   env['designeePin'] = '';
 }
 function initializeQuestion$360(env) {
-  initializeQuestion$357(env); 
-  initializeQuestion$358(env); 
+  initializeQuestion$357(env);
+  initializeQuestion$358(env);
   initializeQuestion$359(env);
 }
 function initializeQuestion$361(env) {
@@ -1230,7 +1230,7 @@ function initializeQuestion$365(env) {
   env['spouseIpPin'] = '';
 }
 function initializeQuestion$366(env) {
-  initializeQuestion$364(env); 
+  initializeQuestion$364(env);
   initializeQuestion$365(env);
 }
 function initializeQuestion$367(env) {
@@ -1261,10 +1261,10 @@ function initializeQuestion$375(env) {
   env['firmEin'] = '';
 }
 function initializeQuestion$376(env) {
-  initializeQuestion$371(env); 
-  initializeQuestion$372(env); 
-  initializeQuestion$373(env); 
-  initializeQuestion$374(env); 
+  initializeQuestion$371(env);
+  initializeQuestion$372(env);
+  initializeQuestion$373(env);
+  initializeQuestion$374(env);
   initializeQuestion$375(env);
 }
 function initializeQuestion$377(env) {
@@ -1278,189 +1278,189 @@ function initializeQuestion$379(env) {
 }
 function initialize$0(env) {
   initializeQuestion$0(env);
-initializeQuestion$1(env);
-initializeQuestion$2(env);
-initializeQuestion$3(env);
-initializeQuestion$4(env);
-initializeQuestion$5(env);
-initializeQuestion$6(env);
-initializeQuestion$7(env);
-initializeQuestion$8(env);
-initializeQuestion$9(env);
-initializeQuestion$10(env);
-initializeQuestion$11(env);
-initializeQuestion$12(env);
-initializeQuestion$13(env);
-initializeQuestion$14(env);
-initializeQuestion$22(env);
-initializeQuestion$25(env);
-initializeQuestion$26(env);
-initializeQuestion$27(env);
-initializeQuestion$36(env);
-initializeQuestion$45(env);
-initializeQuestion$54(env);
-initializeQuestion$63(env);
-initializeQuestion$64(env);
-initializeQuestion$71(env);
-initializeQuestion$78(env);
-initializeQuestion$85(env);
-initializeQuestion$86(env);
-initializeQuestion$87(env);
-initializeQuestion$88(env);
-initializeQuestion$89(env);
-initializeQuestion$90(env);
-initializeQuestion$91(env);
-initializeQuestion$92(env);
-initializeQuestion$93(env);
-initializeQuestion$94(env);
-initializeQuestion$95(env);
-initializeQuestion$96(env);
-initializeQuestion$97(env);
-initializeQuestion$98(env);
-initializeQuestion$99(env);
-initializeQuestion$100(env);
-initializeQuestion$101(env);
-initializeQuestion$102(env);
-initializeQuestion$103(env);
-initializeQuestion$111(env);
-initializeQuestion$112(env);
-initializeQuestion$165(env);
-initializeQuestion$166(env);
-initializeQuestion$178(env);
-initializeQuestion$179(env);
-initializeQuestion$180(env);
-initializeQuestion$181(env);
-initializeQuestion$182(env);
-initializeQuestion$183(env);
-initializeQuestion$184(env);
-initializeQuestion$185(env);
-initializeQuestion$186(env);
-initializeQuestion$187(env);
-initializeQuestion$188(env);
-initializeQuestion$189(env);
-initializeQuestion$190(env);
-initializeQuestion$191(env);
-initializeQuestion$194(env);
-initializeQuestion$195(env);
-initializeQuestion$196(env);
-initializeQuestion$197(env);
-initializeQuestion$198(env);
-initializeQuestion$199(env);
-initializeQuestion$200(env);
-initializeQuestion$201(env);
-initializeQuestion$202(env);
-initializeQuestion$203(env);
-initializeQuestion$204(env);
-initializeQuestion$205(env);
-initializeQuestion$208(env);
-initializeQuestion$209(env);
-initializeQuestion$210(env);
-initializeQuestion$211(env);
-initializeQuestion$212(env);
-initializeQuestion$213(env);
-initializeQuestion$214(env);
-initializeQuestion$215(env);
-initializeQuestion$216(env);
-initializeQuestion$217(env);
-initializeQuestion$218(env);
-initializeQuestion$219(env);
-initializeQuestion$220(env);
-initializeQuestion$221(env);
-initializeQuestion$222(env);
-initializeQuestion$223(env);
-initializeQuestion$224(env);
-initializeQuestion$225(env);
-initializeQuestion$226(env);
-initializeQuestion$227(env);
-initializeQuestion$228(env);
-initializeQuestion$229(env);
-initializeQuestion$230(env);
-initializeQuestion$231(env);
-initializeQuestion$234(env);
-initializeQuestion$235(env);
-initializeQuestion$236(env);
-initializeQuestion$237(env);
-initializeQuestion$238(env);
-initializeQuestion$239(env);
-initializeQuestion$240(env);
-initializeQuestion$241(env);
-initializeQuestion$265(env);
-initializeQuestion$266(env);
-initializeQuestion$267(env);
-initializeQuestion$268(env);
-initializeQuestion$269(env);
-initializeQuestion$270(env);
-initializeQuestion$271(env);
-initializeQuestion$272(env);
-initializeQuestion$273(env);
-initializeQuestion$274(env);
-initializeQuestion$275(env);
-initializeQuestion$276(env);
-initializeQuestion$277(env);
-initializeQuestion$278(env);
-initializeQuestion$279(env);
-initializeQuestion$280(env);
-initializeQuestion$281(env);
-initializeQuestion$282(env);
-initializeQuestion$283(env);
-initializeQuestion$284(env);
-initializeQuestion$285(env);
-initializeQuestion$286(env);
-initializeQuestion$287(env);
-initializeQuestion$288(env);
-initializeQuestion$289(env);
-initializeQuestion$290(env);
-initializeQuestion$291(env);
-initializeQuestion$292(env);
-initializeQuestion$293(env);
-initializeQuestion$299(env);
-initializeQuestion$300(env);
-initializeQuestion$301(env);
-initializeQuestion$302(env);
-initializeQuestion$303(env);
-initializeQuestion$304(env);
-initializeQuestion$305(env);
-initializeQuestion$306(env);
-initializeQuestion$307(env);
-initializeQuestion$308(env);
-initializeQuestion$309(env);
-initializeQuestion$310(env);
-initializeQuestion$311(env);
-initializeQuestion$312(env);
-initializeQuestion$313(env);
-initializeQuestion$314(env);
-initializeQuestion$315(env);
-initializeQuestion$316(env);
-initializeQuestion$317(env);
-initializeQuestion$318(env);
-initializeQuestion$319(env);
-initializeQuestion$320(env);
-initializeQuestion$321(env);
-initializeQuestion$322(env);
-initializeQuestion$323(env);
-initializeQuestion$326(env);
-initializeQuestion$327(env);
-initializeQuestion$328(env);
-initializeQuestion$329(env);
-initializeQuestion$330(env);
-initializeQuestion$331(env);
-initializeQuestion$332(env);
-initializeQuestion$333(env);
-initializeQuestion$334(env);
-initializeQuestion$335(env);
-initializeQuestion$336(env);
-initializeQuestion$355(env);
-initializeQuestion$356(env);
-initializeQuestion$361(env);
-initializeQuestion$362(env);
-initializeQuestion$363(env);
-initializeQuestion$367(env);
-initializeQuestion$368(env);
-initializeQuestion$369(env);
-initializeQuestion$370(env);
-initializeQuestion$377(env);
-initializeQuestion$378(env);
-initializeQuestion$379(env);
+  initializeQuestion$1(env);
+  initializeQuestion$2(env);
+  initializeQuestion$3(env);
+  initializeQuestion$4(env);
+  initializeQuestion$5(env);
+  initializeQuestion$6(env);
+  initializeQuestion$7(env);
+  initializeQuestion$8(env);
+  initializeQuestion$9(env);
+  initializeQuestion$10(env);
+  initializeQuestion$11(env);
+  initializeQuestion$12(env);
+  initializeQuestion$13(env);
+  initializeQuestion$14(env);
+  initializeQuestion$22(env);
+  initializeQuestion$25(env);
+  initializeQuestion$26(env);
+  initializeQuestion$27(env);
+  initializeQuestion$36(env);
+  initializeQuestion$45(env);
+  initializeQuestion$54(env);
+  initializeQuestion$63(env);
+  initializeQuestion$64(env);
+  initializeQuestion$71(env);
+  initializeQuestion$78(env);
+  initializeQuestion$85(env);
+  initializeQuestion$86(env);
+  initializeQuestion$87(env);
+  initializeQuestion$88(env);
+  initializeQuestion$89(env);
+  initializeQuestion$90(env);
+  initializeQuestion$91(env);
+  initializeQuestion$92(env);
+  initializeQuestion$93(env);
+  initializeQuestion$94(env);
+  initializeQuestion$95(env);
+  initializeQuestion$96(env);
+  initializeQuestion$97(env);
+  initializeQuestion$98(env);
+  initializeQuestion$99(env);
+  initializeQuestion$100(env);
+  initializeQuestion$101(env);
+  initializeQuestion$102(env);
+  initializeQuestion$103(env);
+  initializeQuestion$111(env);
+  initializeQuestion$112(env);
+  initializeQuestion$165(env);
+  initializeQuestion$166(env);
+  initializeQuestion$178(env);
+  initializeQuestion$179(env);
+  initializeQuestion$180(env);
+  initializeQuestion$181(env);
+  initializeQuestion$182(env);
+  initializeQuestion$183(env);
+  initializeQuestion$184(env);
+  initializeQuestion$185(env);
+  initializeQuestion$186(env);
+  initializeQuestion$187(env);
+  initializeQuestion$188(env);
+  initializeQuestion$189(env);
+  initializeQuestion$190(env);
+  initializeQuestion$191(env);
+  initializeQuestion$194(env);
+  initializeQuestion$195(env);
+  initializeQuestion$196(env);
+  initializeQuestion$197(env);
+  initializeQuestion$198(env);
+  initializeQuestion$199(env);
+  initializeQuestion$200(env);
+  initializeQuestion$201(env);
+  initializeQuestion$202(env);
+  initializeQuestion$203(env);
+  initializeQuestion$204(env);
+  initializeQuestion$205(env);
+  initializeQuestion$208(env);
+  initializeQuestion$209(env);
+  initializeQuestion$210(env);
+  initializeQuestion$211(env);
+  initializeQuestion$212(env);
+  initializeQuestion$213(env);
+  initializeQuestion$214(env);
+  initializeQuestion$215(env);
+  initializeQuestion$216(env);
+  initializeQuestion$217(env);
+  initializeQuestion$218(env);
+  initializeQuestion$219(env);
+  initializeQuestion$220(env);
+  initializeQuestion$221(env);
+  initializeQuestion$222(env);
+  initializeQuestion$223(env);
+  initializeQuestion$224(env);
+  initializeQuestion$225(env);
+  initializeQuestion$226(env);
+  initializeQuestion$227(env);
+  initializeQuestion$228(env);
+  initializeQuestion$229(env);
+  initializeQuestion$230(env);
+  initializeQuestion$231(env);
+  initializeQuestion$234(env);
+  initializeQuestion$235(env);
+  initializeQuestion$236(env);
+  initializeQuestion$237(env);
+  initializeQuestion$238(env);
+  initializeQuestion$239(env);
+  initializeQuestion$240(env);
+  initializeQuestion$241(env);
+  initializeQuestion$265(env);
+  initializeQuestion$266(env);
+  initializeQuestion$267(env);
+  initializeQuestion$268(env);
+  initializeQuestion$269(env);
+  initializeQuestion$270(env);
+  initializeQuestion$271(env);
+  initializeQuestion$272(env);
+  initializeQuestion$273(env);
+  initializeQuestion$274(env);
+  initializeQuestion$275(env);
+  initializeQuestion$276(env);
+  initializeQuestion$277(env);
+  initializeQuestion$278(env);
+  initializeQuestion$279(env);
+  initializeQuestion$280(env);
+  initializeQuestion$281(env);
+  initializeQuestion$282(env);
+  initializeQuestion$283(env);
+  initializeQuestion$284(env);
+  initializeQuestion$285(env);
+  initializeQuestion$286(env);
+  initializeQuestion$287(env);
+  initializeQuestion$288(env);
+  initializeQuestion$289(env);
+  initializeQuestion$290(env);
+  initializeQuestion$291(env);
+  initializeQuestion$292(env);
+  initializeQuestion$293(env);
+  initializeQuestion$299(env);
+  initializeQuestion$300(env);
+  initializeQuestion$301(env);
+  initializeQuestion$302(env);
+  initializeQuestion$303(env);
+  initializeQuestion$304(env);
+  initializeQuestion$305(env);
+  initializeQuestion$306(env);
+  initializeQuestion$307(env);
+  initializeQuestion$308(env);
+  initializeQuestion$309(env);
+  initializeQuestion$310(env);
+  initializeQuestion$311(env);
+  initializeQuestion$312(env);
+  initializeQuestion$313(env);
+  initializeQuestion$314(env);
+  initializeQuestion$315(env);
+  initializeQuestion$316(env);
+  initializeQuestion$317(env);
+  initializeQuestion$318(env);
+  initializeQuestion$319(env);
+  initializeQuestion$320(env);
+  initializeQuestion$321(env);
+  initializeQuestion$322(env);
+  initializeQuestion$323(env);
+  initializeQuestion$326(env);
+  initializeQuestion$327(env);
+  initializeQuestion$328(env);
+  initializeQuestion$329(env);
+  initializeQuestion$330(env);
+  initializeQuestion$331(env);
+  initializeQuestion$332(env);
+  initializeQuestion$333(env);
+  initializeQuestion$334(env);
+  initializeQuestion$335(env);
+  initializeQuestion$336(env);
+  initializeQuestion$355(env);
+  initializeQuestion$356(env);
+  initializeQuestion$361(env);
+  initializeQuestion$362(env);
+  initializeQuestion$363(env);
+  initializeQuestion$367(env);
+  initializeQuestion$368(env);
+  initializeQuestion$369(env);
+  initializeQuestion$370(env);
+  initializeQuestion$377(env);
+  initializeQuestion$378(env);
+  initializeQuestion$379(env);
 }
 function eve$0(env) {
   return env['fsSingle'];
@@ -1571,47 +1571,47 @@ function eve$35(env) {
   return eve$31(env) || eve$34(env);
 }
 function updateValue$0(val) {
-  var elt = document.getElementById('fsValid-widget'); 
+  var elt = document.getElementById('fsValid-widget');
   elt.checked = val;
 }
 function computeQuestion$0(env) {
   var val = eve$35(env);
-            if (val !== env['fsValid']) {
-   env['fsValid'] = val;
-                updateValue$0(val);
-                return true;
-}
+  if (val !== env['fsValid']) {
+    env['fsValid'] = val;
+    updateValue$0(val);
+    return true;
+  }
 }
 function eve$36(env) {
   return eve$1(env) || eve$4(env);
 }
 function computeQuestion$1(env) {
   var change = false;
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
   return change;
 }
 function computeQuestion$2(env) {
   if (eve$36(env)) {
-   return computeQuestion$1(env);
-}
+    return computeQuestion$1(env);
+  }
 }
 function eve$37(env) {
   return eve$7(env) || eve$10(env);
 }
 function computeQuestion$3(env) {
   var change = false;
-  change = change || false; 
+  change = change || false;
   return change;
 }
 function computeQuestion$4(env) {
   if (eve$37(env)) {
-   return computeQuestion$3(env);
-}
+    return computeQuestion$3(env);
+  }
 }
 function eve$38(env) {
   return env['nDependents'];
@@ -1638,16 +1638,16 @@ function eve$45(env) {
   return eve$43(env) && eve$44(env);
 }
 function updateValue$1(val) {
-  var elt = document.getElementById('dep1Ctc-widget'); 
+  var elt = document.getElementById('dep1Ctc-widget');
   elt.checked = val;
 }
 function computeQuestion$5(env) {
   var val = eve$45(env);
-            if (val !== env['dep1Ctc']) {
-   env['dep1Ctc'] = val;
-                updateValue$1(val);
-                return true;
-}
+  if (val !== env['dep1Ctc']) {
+    env['dep1Ctc'] = val;
+    updateValue$1(val);
+    return true;
+  }
 }
 function eve$46(env) {
   return env['dep1Ctc'];
@@ -1656,32 +1656,32 @@ function eve$47(env) {
   return !eve$46(env);
 }
 function updateValue$2(val) {
-  var elt = document.getElementById('dep1Odc-widget'); 
+  var elt = document.getElementById('dep1Odc-widget');
   elt.checked = val;
 }
 function computeQuestion$6(env) {
   var val = eve$47(env);
-            if (val !== env['dep1Odc']) {
-   env['dep1Odc'] = val;
-                updateValue$2(val);
-                return true;
-}
+  if (val !== env['dep1Odc']) {
+    env['dep1Odc'] = val;
+    updateValue$2(val);
+    return true;
+  }
 }
 function computeQuestion$7(env) {
   var change = false;
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || computeQuestion$5(env); 
-  change = change || computeQuestion$6(env); 
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || computeQuestion$5(env);
+  change = change || computeQuestion$6(env);
   return change;
 }
 function computeQuestion$8(env) {
   if (eve$40(env)) {
-   return computeQuestion$7(env);
-}
+    return computeQuestion$7(env);
+  }
 }
 function eve$48(env) {
   return parseInt('2');
@@ -1702,16 +1702,16 @@ function eve$53(env) {
   return eve$51(env) && eve$52(env);
 }
 function updateValue$3(val) {
-  var elt = document.getElementById('dep2Ctc-widget'); 
+  var elt = document.getElementById('dep2Ctc-widget');
   elt.checked = val;
 }
 function computeQuestion$9(env) {
   var val = eve$53(env);
-            if (val !== env['dep2Ctc']) {
-   env['dep2Ctc'] = val;
-                updateValue$3(val);
-                return true;
-}
+  if (val !== env['dep2Ctc']) {
+    env['dep2Ctc'] = val;
+    updateValue$3(val);
+    return true;
+  }
 }
 function eve$54(env) {
   return env['dep2Ctc'];
@@ -1720,32 +1720,32 @@ function eve$55(env) {
   return !eve$54(env);
 }
 function updateValue$4(val) {
-  var elt = document.getElementById('dep2Odc-widget'); 
+  var elt = document.getElementById('dep2Odc-widget');
   elt.checked = val;
 }
 function computeQuestion$10(env) {
   var val = eve$55(env);
-            if (val !== env['dep2Odc']) {
-   env['dep2Odc'] = val;
-                updateValue$4(val);
-                return true;
-}
+  if (val !== env['dep2Odc']) {
+    env['dep2Odc'] = val;
+    updateValue$4(val);
+    return true;
+  }
 }
 function computeQuestion$11(env) {
   var change = false;
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || computeQuestion$9(env); 
-  change = change || computeQuestion$10(env); 
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || computeQuestion$9(env);
+  change = change || computeQuestion$10(env);
   return change;
 }
 function computeQuestion$12(env) {
   if (eve$49(env)) {
-   return computeQuestion$11(env);
-}
+    return computeQuestion$11(env);
+  }
 }
 function eve$56(env) {
   return parseInt('3');
@@ -1766,16 +1766,16 @@ function eve$61(env) {
   return eve$59(env) && eve$60(env);
 }
 function updateValue$5(val) {
-  var elt = document.getElementById('dep3Ctc-widget'); 
+  var elt = document.getElementById('dep3Ctc-widget');
   elt.checked = val;
 }
 function computeQuestion$13(env) {
   var val = eve$61(env);
-            if (val !== env['dep3Ctc']) {
-   env['dep3Ctc'] = val;
-                updateValue$5(val);
-                return true;
-}
+  if (val !== env['dep3Ctc']) {
+    env['dep3Ctc'] = val;
+    updateValue$5(val);
+    return true;
+  }
 }
 function eve$62(env) {
   return env['dep3Ctc'];
@@ -1784,32 +1784,32 @@ function eve$63(env) {
   return !eve$62(env);
 }
 function updateValue$6(val) {
-  var elt = document.getElementById('dep3Odc-widget'); 
+  var elt = document.getElementById('dep3Odc-widget');
   elt.checked = val;
 }
 function computeQuestion$14(env) {
   var val = eve$63(env);
-            if (val !== env['dep3Odc']) {
-   env['dep3Odc'] = val;
-                updateValue$6(val);
-                return true;
-}
+  if (val !== env['dep3Odc']) {
+    env['dep3Odc'] = val;
+    updateValue$6(val);
+    return true;
+  }
 }
 function computeQuestion$15(env) {
   var change = false;
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || computeQuestion$13(env); 
-  change = change || computeQuestion$14(env); 
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || computeQuestion$13(env);
+  change = change || computeQuestion$14(env);
   return change;
 }
 function computeQuestion$16(env) {
   if (eve$57(env)) {
-   return computeQuestion$15(env);
-}
+    return computeQuestion$15(env);
+  }
 }
 function eve$64(env) {
   return parseInt('4');
@@ -1830,16 +1830,16 @@ function eve$69(env) {
   return eve$67(env) && eve$68(env);
 }
 function updateValue$7(val) {
-  var elt = document.getElementById('dep4Ctc-widget'); 
+  var elt = document.getElementById('dep4Ctc-widget');
   elt.checked = val;
 }
 function computeQuestion$17(env) {
   var val = eve$69(env);
-            if (val !== env['dep4Ctc']) {
-   env['dep4Ctc'] = val;
-                updateValue$7(val);
-                return true;
-}
+  if (val !== env['dep4Ctc']) {
+    env['dep4Ctc'] = val;
+    updateValue$7(val);
+    return true;
+  }
 }
 function eve$70(env) {
   return env['dep4Ctc'];
@@ -1848,32 +1848,32 @@ function eve$71(env) {
   return !eve$70(env);
 }
 function updateValue$8(val) {
-  var elt = document.getElementById('dep4Odc-widget'); 
+  var elt = document.getElementById('dep4Odc-widget');
   elt.checked = val;
 }
 function computeQuestion$18(env) {
   var val = eve$71(env);
-            if (val !== env['dep4Odc']) {
-   env['dep4Odc'] = val;
-                updateValue$8(val);
-                return true;
-}
+  if (val !== env['dep4Odc']) {
+    env['dep4Odc'] = val;
+    updateValue$8(val);
+    return true;
+  }
 }
 function computeQuestion$19(env) {
   var change = false;
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || computeQuestion$17(env); 
-  change = change || computeQuestion$18(env); 
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || computeQuestion$17(env);
+  change = change || computeQuestion$18(env);
   return change;
 }
 function computeQuestion$20(env) {
   if (eve$65(env)) {
-   return computeQuestion$19(env);
-}
+    return computeQuestion$19(env);
+  }
 }
 function eve$72(env) {
   return env['nW2'];
@@ -1883,51 +1883,51 @@ function eve$73(env) {
 }
 function computeQuestion$21(env) {
   var change = false;
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
   return change;
 }
 function computeQuestion$22(env) {
   if (eve$73(env)) {
-   return computeQuestion$21(env);
-}
+    return computeQuestion$21(env);
+  }
 }
 function eve$74(env) {
   return eve$72(env) >= eve$48(env);
 }
 function computeQuestion$23(env) {
   var change = false;
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
   return change;
 }
 function computeQuestion$24(env) {
   if (eve$74(env)) {
-   return computeQuestion$23(env);
-}
+    return computeQuestion$23(env);
+  }
 }
 function eve$75(env) {
   return eve$72(env) >= eve$56(env);
 }
 function computeQuestion$25(env) {
   var change = false;
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
   return change;
 }
 function computeQuestion$26(env) {
   if (eve$75(env)) {
-   return computeQuestion$25(env);
-}
+    return computeQuestion$25(env);
+  }
 }
 function eve$76(env) {
   return env['sBInt1'];
@@ -1945,16 +1945,16 @@ function eve$80(env) {
   return eve$78(env) + eve$79(env);
 }
 function updateValue$9(val) {
-  var elt = document.getElementById('sBL2-widget'); 
+  var elt = document.getElementById('sBL2-widget');
   elt.value = val;
 }
 function computeQuestion$27(env) {
   var val = eve$80(env);
-            if (val !== env['sBL2']) {
-   env['sBL2'] = val;
-                updateValue$9(val);
-                return true;
-}
+  if (val !== env['sBL2']) {
+    env['sBL2'] = val;
+    updateValue$9(val);
+    return true;
+  }
 }
 function eve$81(env) {
   return env['sBL2'];
@@ -1966,16 +1966,16 @@ function eve$83(env) {
   return eve$81(env) - eve$82(env);
 }
 function updateValue$10(val) {
-  var elt = document.getElementById('sBL4-widget'); 
+  var elt = document.getElementById('sBL4-widget');
   elt.value = val;
 }
 function computeQuestion$28(env) {
   var val = eve$83(env);
-            if (val !== env['sBL4']) {
-   env['sBL4'] = val;
-                updateValue$10(val);
-                return true;
-}
+  if (val !== env['sBL4']) {
+    env['sBL4'] = val;
+    updateValue$10(val);
+    return true;
+  }
 }
 function eve$84(env) {
   return env['sBDiv1'];
@@ -1987,16 +1987,16 @@ function eve$86(env) {
   return eve$84(env) + eve$85(env);
 }
 function updateValue$11(val) {
-  var elt = document.getElementById('sBL6-widget'); 
+  var elt = document.getElementById('sBL6-widget');
   elt.value = val;
 }
 function computeQuestion$29(env) {
   var val = eve$86(env);
-            if (val !== env['sBL6']) {
-   env['sBL6'] = val;
-                updateValue$11(val);
-                return true;
-}
+  if (val !== env['sBL6']) {
+    env['sBL6'] = val;
+    updateValue$11(val);
+    return true;
+  }
 }
 function eve$87(env) {
   return env['qualifiedDividends'];
@@ -2008,16 +2008,16 @@ function eve$89(env) {
   return eve$87(env) <= eve$88(env);
 }
 function updateValue$12(val) {
-  var elt = document.getElementById('qualifiedOk-widget'); 
+  var elt = document.getElementById('qualifiedOk-widget');
   elt.checked = val;
 }
 function computeQuestion$30(env) {
   var val = eve$89(env);
-            if (val !== env['qualifiedOk']) {
-   env['qualifiedOk'] = val;
-                updateValue$12(val);
-                return true;
-}
+  if (val !== env['qualifiedOk']) {
+    env['qualifiedOk'] = val;
+    updateValue$12(val);
+    return true;
+  }
 }
 function eve$90(env) {
   return env['sBL4'];
@@ -2035,16 +2035,16 @@ function eve$94(env) {
   return eve$92(env) || eve$93(env);
 }
 function updateValue$13(val) {
-  var elt = document.getElementById('sBPart3Required-widget'); 
+  var elt = document.getElementById('sBPart3Required-widget');
   elt.checked = val;
 }
 function computeQuestion$31(env) {
   var val = eve$94(env);
-            if (val !== env['sBPart3Required']) {
-   env['sBPart3Required'] = val;
-                updateValue$13(val);
-                return true;
-}
+  if (val !== env['sBPart3Required']) {
+    env['sBPart3Required'] = val;
+    updateValue$13(val);
+    return true;
+  }
 }
 function eve$95(env) {
   return env['sBPart3Required'];
@@ -2054,26 +2054,26 @@ function eve$96(env) {
 }
 function computeQuestion$32(env) {
   var change = false;
-  change = change || false; 
-  change = change || false; 
+  change = change || false;
+  change = change || false;
   return change;
 }
 function computeQuestion$33(env) {
   if (eve$96(env)) {
-   return computeQuestion$32(env);
-}
+    return computeQuestion$32(env);
+  }
 }
 function computeQuestion$34(env) {
   var change = false;
-  change = change || false; 
-  change = change || computeQuestion$33(env); 
-  change = change || false; 
+  change = change || false;
+  change = change || computeQuestion$33(env);
+  change = change || false;
   return change;
 }
 function computeQuestion$35(env) {
   if (eve$95(env)) {
-   return computeQuestion$34(env);
-}
+    return computeQuestion$34(env);
+  }
 }
 function eve$97(env) {
   return env['hasBusiness'];
@@ -2083,13 +2083,13 @@ function eve$98(env) {
 }
 function computeQuestion$36(env) {
   var change = false;
-  change = change || false; 
+  change = change || false;
   return change;
 }
 function computeQuestion$37(env) {
   if (eve$98(env)) {
-   return computeQuestion$36(env);
-}
+    return computeQuestion$36(env);
+  }
 }
 function eve$99(env) {
   return env['sCL1'];
@@ -2101,16 +2101,16 @@ function eve$101(env) {
   return eve$99(env) - eve$100(env);
 }
 function updateValue$14(val) {
-  var elt = document.getElementById('sCL3-widget'); 
+  var elt = document.getElementById('sCL3-widget');
   elt.value = val;
 }
 function computeQuestion$38(env) {
   var val = eve$101(env);
-            if (val !== env['sCL3']) {
-   env['sCL3'] = val;
-                updateValue$14(val);
-                return true;
-}
+  if (val !== env['sCL3']) {
+    env['sCL3'] = val;
+    updateValue$14(val);
+    return true;
+  }
 }
 function eve$102(env) {
   return env['sCL3'];
@@ -2122,16 +2122,16 @@ function eve$104(env) {
   return eve$102(env) - eve$103(env);
 }
 function updateValue$15(val) {
-  var elt = document.getElementById('sCL5-widget'); 
+  var elt = document.getElementById('sCL5-widget');
   elt.value = val;
 }
 function computeQuestion$39(env) {
   var val = eve$104(env);
-            if (val !== env['sCL5']) {
-   env['sCL5'] = val;
-                updateValue$15(val);
-                return true;
-}
+  if (val !== env['sCL5']) {
+    env['sCL5'] = val;
+    updateValue$15(val);
+    return true;
+  }
 }
 function eve$105(env) {
   return env['sCL5'];
@@ -2143,39 +2143,39 @@ function eve$107(env) {
   return eve$105(env) + eve$106(env);
 }
 function updateValue$16(val) {
-  var elt = document.getElementById('sCL7-widget'); 
+  var elt = document.getElementById('sCL7-widget');
   elt.value = val;
 }
 function computeQuestion$40(env) {
   var val = eve$107(env);
-            if (val !== env['sCL7']) {
-   env['sCL7'] = val;
-                updateValue$16(val);
-                return true;
-}
+  if (val !== env['sCL7']) {
+    env['sCL7'] = val;
+    updateValue$16(val);
+    return true;
+  }
 }
 function eve$108(env) {
   return env['sCMealsTotal'];
 }
 function eve$109(env) {
   var x = eve$108(env);
-            var y = eve$48(env);
-            if (y === 0) {
-   window.alert('Division by zero in: sCMealsTotal / 2');
-                return 0;
-}return Math.round(x / y);
+  var y = eve$48(env);
+  if (y === 0) {
+    window.alert('Division by zero in: sCMealsTotal / 2');
+    return 0;
+  } return Math.round(x / y);
 }
 function updateValue$17(val) {
-  var elt = document.getElementById('sCL24b-widget'); 
+  var elt = document.getElementById('sCL24b-widget');
   elt.value = val;
 }
 function computeQuestion$41(env) {
   var val = eve$109(env);
-            if (val !== env['sCL24b']) {
-   env['sCL24b'] = val;
-                updateValue$17(val);
-                return true;
-}
+  if (val !== env['sCL24b']) {
+    env['sCL24b'] = val;
+    updateValue$17(val);
+    return true;
+  }
 }
 function eve$110(env) {
   return env['sCL8'];
@@ -2313,16 +2313,16 @@ function eve$154(env) {
   return eve$152(env) + eve$153(env);
 }
 function updateValue$18(val) {
-  var elt = document.getElementById('sCL28-widget'); 
+  var elt = document.getElementById('sCL28-widget');
   elt.value = val;
 }
 function computeQuestion$42(env) {
   var val = eve$154(env);
-            if (val !== env['sCL28']) {
-   env['sCL28'] = val;
-                updateValue$18(val);
-                return true;
-}
+  if (val !== env['sCL28']) {
+    env['sCL28'] = val;
+    updateValue$18(val);
+    return true;
+  }
 }
 function eve$155(env) {
   return env['sCL7'];
@@ -2334,16 +2334,16 @@ function eve$157(env) {
   return eve$155(env) - eve$156(env);
 }
 function updateValue$19(val) {
-  var elt = document.getElementById('sCL29-widget'); 
+  var elt = document.getElementById('sCL29-widget');
   elt.value = val;
 }
 function computeQuestion$43(env) {
   var val = eve$157(env);
-            if (val !== env['sCL29']) {
-   env['sCL29'] = val;
-                updateValue$19(val);
-                return true;
-}
+  if (val !== env['sCL29']) {
+    env['sCL29'] = val;
+    updateValue$19(val);
+    return true;
+  }
 }
 function eve$158(env) {
   return env['sCHomeOffice'];
@@ -2358,16 +2358,16 @@ function eve$161(env) {
   return eve$159(env) <= eve$160(env);
 }
 function updateValue$20(val) {
-  var elt = document.getElementById('sCHomeSqftOk-widget'); 
+  var elt = document.getElementById('sCHomeSqftOk-widget');
   elt.checked = val;
 }
 function computeQuestion$44(env) {
   var val = eve$161(env);
-            if (val !== env['sCHomeSqftOk']) {
-   env['sCHomeSqftOk'] = val;
-                updateValue$20(val);
-                return true;
-}
+  if (val !== env['sCHomeSqftOk']) {
+    env['sCHomeSqftOk'] = val;
+    updateValue$20(val);
+    return true;
+  }
 }
 function eve$162(env) {
   return parseInt('5');
@@ -2376,28 +2376,28 @@ function eve$163(env) {
   return eve$159(env) * eve$162(env);
 }
 function updateValue$21(val) {
-  var elt = document.getElementById('sCL30-widget'); 
+  var elt = document.getElementById('sCL30-widget');
   elt.value = val;
 }
 function computeQuestion$45(env) {
   var val = eve$163(env);
-            if (val !== env['sCL30']) {
-   env['sCL30'] = val;
-                updateValue$21(val);
-                return true;
-}
+  if (val !== env['sCL30']) {
+    env['sCL30'] = val;
+    updateValue$21(val);
+    return true;
+  }
 }
 function computeQuestion$46(env) {
   var change = false;
-  change = change || false; 
-  change = change || computeQuestion$44(env); 
-  change = change || computeQuestion$45(env); 
+  change = change || false;
+  change = change || computeQuestion$44(env);
+  change = change || computeQuestion$45(env);
   return change;
 }
 function computeQuestion$47(env) {
   if (eve$158(env)) {
-   return computeQuestion$46(env);
-}
+    return computeQuestion$46(env);
+  }
 }
 function eve$164(env) {
   return env['sCL29'];
@@ -2409,16 +2409,16 @@ function eve$166(env) {
   return eve$164(env) - eve$165(env);
 }
 function updateValue$22(val) {
-  var elt = document.getElementById('sCL31-widget'); 
+  var elt = document.getElementById('sCL31-widget');
   elt.value = val;
 }
 function computeQuestion$48(env) {
   var val = eve$166(env);
-            if (val !== env['sCL31']) {
-   env['sCL31'] = val;
-                updateValue$22(val);
-                return true;
-}
+  if (val !== env['sCL31']) {
+    env['sCL31'] = val;
+    updateValue$22(val);
+    return true;
+  }
 }
 function eve$167(env) {
   return env['sCL31'];
@@ -2431,65 +2431,65 @@ function eve$169(env) {
 }
 function computeQuestion$49(env) {
   var change = false;
-  change = change || false; 
+  change = change || false;
   return change;
 }
 function computeQuestion$50(env) {
   if (eve$169(env)) {
-   return computeQuestion$49(env);
-}
+    return computeQuestion$49(env);
+  }
 }
 function computeQuestion$51(env) {
   var change = false;
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || computeQuestion$37(env); 
-  change = change || false; 
-  change = change || false; 
-  change = change || computeQuestion$38(env); 
-  change = change || false; 
-  change = change || computeQuestion$39(env); 
-  change = change || false; 
-  change = change || computeQuestion$40(env); 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || computeQuestion$41(env); 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || computeQuestion$42(env); 
-  change = change || computeQuestion$43(env); 
-  change = change || false; 
-  change = change || computeQuestion$47(env); 
-  change = change || computeQuestion$48(env); 
-  change = change || computeQuestion$50(env); 
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || computeQuestion$37(env);
+  change = change || false;
+  change = change || false;
+  change = change || computeQuestion$38(env);
+  change = change || false;
+  change = change || computeQuestion$39(env);
+  change = change || false;
+  change = change || computeQuestion$40(env);
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || computeQuestion$41(env);
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || computeQuestion$42(env);
+  change = change || computeQuestion$43(env);
+  change = change || false;
+  change = change || computeQuestion$47(env);
+  change = change || computeQuestion$48(env);
+  change = change || computeQuestion$50(env);
   return change;
 }
 function computeQuestion$52(env) {
   if (eve$97(env)) {
-   return computeQuestion$51(env);
-}
+    return computeQuestion$51(env);
+  }
 }
 function eve$170(env) {
   return parseInt('400');
@@ -2498,31 +2498,31 @@ function eve$171(env) {
   return eve$167(env) >= eve$170(env);
 }
 function updateValue$23(val) {
-  var elt = document.getElementById('sSERequired-widget'); 
+  var elt = document.getElementById('sSERequired-widget');
   elt.checked = val;
 }
 function computeQuestion$53(env) {
   var val = eve$171(env);
-            if (val !== env['sSERequired']) {
-   env['sSERequired'] = val;
-                updateValue$23(val);
-                return true;
-}
+  if (val !== env['sSERequired']) {
+    env['sSERequired'] = val;
+    updateValue$23(val);
+    return true;
+  }
 }
 function eve$172(env) {
   return env['sSERequired'];
 }
 function updateValue$24(val) {
-  var elt = document.getElementById('sSEL2-widget'); 
+  var elt = document.getElementById('sSEL2-widget');
   elt.value = val;
 }
 function computeQuestion$54(env) {
   var val = eve$167(env);
-            if (val !== env['sSEL2']) {
-   env['sSEL2'] = val;
-                updateValue$24(val);
-                return true;
-}
+  if (val !== env['sSEL2']) {
+    env['sSEL2'] = val;
+    updateValue$24(val);
+    return true;
+  }
 }
 function eve$173(env) {
   return env['sSEL2'];
@@ -2538,23 +2538,23 @@ function eve$176(env) {
 }
 function eve$177(env) {
   var x = eve$175(env);
-            var y = eve$176(env);
-            if (y === 0) {
-   window.alert('Division by zero in: sSEL2 * 9235 / 10000');
-                return 0;
-}return Math.round(x / y);
+  var y = eve$176(env);
+  if (y === 0) {
+    window.alert('Division by zero in: sSEL2 * 9235 / 10000');
+    return 0;
+  } return Math.round(x / y);
 }
 function updateValue$25(val) {
-  var elt = document.getElementById('sSEL4a-widget'); 
+  var elt = document.getElementById('sSEL4a-widget');
   elt.value = val;
 }
 function computeQuestion$55(env) {
   var val = eve$177(env);
-            if (val !== env['sSEL4a']) {
-   env['sSEL4a'] = val;
-                updateValue$25(val);
-                return true;
-}
+  if (val !== env['sSEL4a']) {
+    env['sSEL4a'] = val;
+    updateValue$25(val);
+    return true;
+  }
 }
 function eve$178(env) {
   return env['w2aWages'];
@@ -2572,31 +2572,31 @@ function eve$182(env) {
   return eve$180(env) + eve$181(env);
 }
 function updateValue$26(val) {
-  var elt = document.getElementById('sSEL8a-widget'); 
+  var elt = document.getElementById('sSEL8a-widget');
   elt.value = val;
 }
 function computeQuestion$56(env) {
   var val = eve$182(env);
-            if (val !== env['sSEL8a']) {
-   env['sSEL8a'] = val;
-                updateValue$26(val);
-                return true;
-}
+  if (val !== env['sSEL8a']) {
+    env['sSEL8a'] = val;
+    updateValue$26(val);
+    return true;
+  }
 }
 function eve$183(env) {
   return parseInt('160200');
 }
 function updateValue$27(val) {
-  var elt = document.getElementById('sSEL7-widget'); 
+  var elt = document.getElementById('sSEL7-widget');
   elt.value = val;
 }
 function computeQuestion$57(env) {
   var val = eve$183(env);
-            if (val !== env['sSEL7']) {
-   env['sSEL7'] = val;
-                updateValue$27(val);
-                return true;
-}
+  if (val !== env['sSEL7']) {
+    env['sSEL7'] = val;
+    updateValue$27(val);
+    return true;
+  }
 }
 function eve$184(env) {
   return env['sSEL7'];
@@ -2608,16 +2608,16 @@ function eve$186(env) {
   return eve$184(env) - eve$185(env);
 }
 function updateValue$28(val) {
-  var elt = document.getElementById('sSEL9-widget'); 
+  var elt = document.getElementById('sSEL9-widget');
   elt.value = val;
 }
 function computeQuestion$58(env) {
   var val = eve$186(env);
-            if (val !== env['sSEL9']) {
-   env['sSEL9'] = val;
-                updateValue$28(val);
-                return true;
-}
+  if (val !== env['sSEL9']) {
+    env['sSEL9'] = val;
+    updateValue$28(val);
+    return true;
+  }
 }
 function eve$187(env) {
   return env['sSEL4a'];
@@ -2629,16 +2629,16 @@ function eve$189(env) {
   return eve$187(env) <= eve$188(env);
 }
 function updateValue$29(val) {
-  var elt = document.getElementById('sSEUnderMax-widget'); 
+  var elt = document.getElementById('sSEUnderMax-widget');
   elt.checked = val;
 }
 function computeQuestion$59(env) {
   var val = eve$189(env);
-            if (val !== env['sSEUnderMax']) {
-   env['sSEUnderMax'] = val;
-                updateValue$29(val);
-                return true;
-}
+  if (val !== env['sSEUnderMax']) {
+    env['sSEUnderMax'] = val;
+    updateValue$29(val);
+    return true;
+  }
 }
 function eve$190(env) {
   return parseInt('124');
@@ -2651,23 +2651,23 @@ function eve$192(env) {
 }
 function eve$193(env) {
   var x = eve$191(env);
-            var y = eve$192(env);
-            if (y === 0) {
-   window.alert('Division by zero in: sSEL4a * 124 / 1000');
-                return 0;
-}return Math.round(x / y);
+  var y = eve$192(env);
+  if (y === 0) {
+    window.alert('Division by zero in: sSEL4a * 124 / 1000');
+    return 0;
+  } return Math.round(x / y);
 }
 function updateValue$30(val) {
-  var elt = document.getElementById('sSEL10-widget'); 
+  var elt = document.getElementById('sSEL10-widget');
   elt.value = val;
 }
 function computeQuestion$60(env) {
   var val = eve$193(env);
-            if (val !== env['sSEL10']) {
-   env['sSEL10'] = val;
-                updateValue$30(val);
-                return true;
-}
+  if (val !== env['sSEL10']) {
+    env['sSEL10'] = val;
+    updateValue$30(val);
+    return true;
+  }
 }
 function eve$194(env) {
   return parseInt('29');
@@ -2677,23 +2677,23 @@ function eve$195(env) {
 }
 function eve$196(env) {
   var x = eve$195(env);
-            var y = eve$192(env);
-            if (y === 0) {
-   window.alert('Division by zero in: sSEL4a * 29 / 1000');
-                return 0;
-}return Math.round(x / y);
+  var y = eve$192(env);
+  if (y === 0) {
+    window.alert('Division by zero in: sSEL4a * 29 / 1000');
+    return 0;
+  } return Math.round(x / y);
 }
 function updateValue$31(val) {
-  var elt = document.getElementById('sSEL11-widget'); 
+  var elt = document.getElementById('sSEL11-widget');
   elt.value = val;
 }
 function computeQuestion$61(env) {
   var val = eve$196(env);
-            if (val !== env['sSEL11']) {
-   env['sSEL11'] = val;
-                updateValue$31(val);
-                return true;
-}
+  if (val !== env['sSEL11']) {
+    env['sSEL11'] = val;
+    updateValue$31(val);
+    return true;
+  }
 }
 function eve$197(env) {
   return env['sSEL10'];
@@ -2705,70 +2705,70 @@ function eve$199(env) {
   return eve$197(env) + eve$198(env);
 }
 function updateValue$32(val) {
-  var elt = document.getElementById('sSEL12-widget'); 
+  var elt = document.getElementById('sSEL12-widget');
   elt.value = val;
 }
 function computeQuestion$62(env) {
   var val = eve$199(env);
-            if (val !== env['sSEL12']) {
-   env['sSEL12'] = val;
-                updateValue$32(val);
-                return true;
-}
+  if (val !== env['sSEL12']) {
+    env['sSEL12'] = val;
+    updateValue$32(val);
+    return true;
+  }
 }
 function eve$200(env) {
   return env['sSEL12'];
 }
 function eve$201(env) {
   var x = eve$200(env);
-            var y = eve$48(env);
-            if (y === 0) {
-   window.alert('Division by zero in: sSEL12 / 2');
-                return 0;
-}return Math.round(x / y);
+  var y = eve$48(env);
+  if (y === 0) {
+    window.alert('Division by zero in: sSEL12 / 2');
+    return 0;
+  } return Math.round(x / y);
 }
 function updateValue$33(val) {
-  var elt = document.getElementById('sSEL13-widget'); 
+  var elt = document.getElementById('sSEL13-widget');
   elt.value = val;
 }
 function computeQuestion$63(env) {
   var val = eve$201(env);
-            if (val !== env['sSEL13']) {
-   env['sSEL13'] = val;
-                updateValue$33(val);
-                return true;
-}
+  if (val !== env['sSEL13']) {
+    env['sSEL13'] = val;
+    updateValue$33(val);
+    return true;
+  }
 }
 function computeQuestion$64(env) {
   var change = false;
-  change = change || computeQuestion$54(env); 
-  change = change || computeQuestion$55(env); 
-  change = change || computeQuestion$56(env); 
-  change = change || computeQuestion$57(env); 
-  change = change || computeQuestion$58(env); 
-  change = change || computeQuestion$59(env); 
-  change = change || computeQuestion$60(env); 
-  change = change || computeQuestion$61(env); 
-  change = change || computeQuestion$62(env); 
-  change = change || computeQuestion$63(env); 
+  change = change || computeQuestion$54(env);
+  change = change || computeQuestion$55(env);
+  change = change || computeQuestion$56(env);
+  change = change || computeQuestion$57(env);
+  change = change || computeQuestion$58(env);
+  change = change || computeQuestion$59(env);
+  change = change || computeQuestion$60(env);
+  change = change || computeQuestion$61(env);
+  change = change || computeQuestion$62(env);
+  change = change || computeQuestion$63(env);
   return change;
 }
 function computeQuestion$65(env) {
   if (eve$172(env)) {
-   return computeQuestion$64(env);
-}
+    return computeQuestion$64(env);
+  }
 }
 function updateValue$34(val) {
-  var elt = document.getElementById('s1L3-widget'); 
+  var elt = document.getElementById('s1L3-widget');
   elt.value = val;
 }
 function computeQuestion$66(env) {
   var val = eve$167(env);
-            if (val !== env['s1L3']) {
-   env['s1L3'] = val;
-                updateValue$34(val);
-                return true;
-}
+  if (val !== env['s1L3']) {
+    env['s1L3'] = val;
+    updateValue$34(val);
+    return true;
+  }
 }
 function eve$202(env) {
   return env['s1L8z'];
@@ -2778,13 +2778,13 @@ function eve$203(env) {
 }
 function computeQuestion$67(env) {
   var change = false;
-  change = change || false; 
+  change = change || false;
   return change;
 }
 function computeQuestion$68(env) {
   if (eve$203(env)) {
-   return computeQuestion$67(env);
-}
+    return computeQuestion$67(env);
+  }
 }
 function eve$204(env) {
   return env['s1L8b'];
@@ -2817,16 +2817,16 @@ function eve$213(env) {
   return eve$211(env) - eve$212(env);
 }
 function updateValue$35(val) {
-  var elt = document.getElementById('s1L9-widget'); 
+  var elt = document.getElementById('s1L9-widget');
   elt.value = val;
 }
 function computeQuestion$69(env) {
   var val = eve$213(env);
-            if (val !== env['s1L9']) {
-   env['s1L9'] = val;
-                updateValue$35(val);
-                return true;
-}
+  if (val !== env['s1L9']) {
+    env['s1L9'] = val;
+    updateValue$35(val);
+    return true;
+  }
 }
 function eve$214(env) {
   return env['s1L1'];
@@ -2874,16 +2874,16 @@ function eve$228(env) {
   return eve$226(env) + eve$227(env);
 }
 function updateValue$36(val) {
-  var elt = document.getElementById('s1L10-widget'); 
+  var elt = document.getElementById('s1L10-widget');
   elt.value = val;
 }
 function computeQuestion$70(env) {
   var val = eve$228(env);
-            if (val !== env['s1L10']) {
-   env['s1L10'] = val;
-                updateValue$36(val);
-                return true;
-}
+  if (val !== env['s1L10']) {
+    env['s1L10'] = val;
+    updateValue$36(val);
+    return true;
+  }
 }
 function eve$229(env) {
   return env['s1L11'];
@@ -2907,31 +2907,31 @@ function eve$235(env) {
   return eve$230(env) || eve$234(env);
 }
 function updateValue$37(val) {
-  var elt = document.getElementById('s1L11Ok-widget'); 
+  var elt = document.getElementById('s1L11Ok-widget');
   elt.checked = val;
 }
 function computeQuestion$71(env) {
   var val = eve$235(env);
-            if (val !== env['s1L11Ok']) {
-   env['s1L11Ok'] = val;
-                updateValue$37(val);
-                return true;
-}
+  if (val !== env['s1L11Ok']) {
+    env['s1L11Ok'] = val;
+    updateValue$37(val);
+    return true;
+  }
 }
 function eve$236(env) {
   return env['sSEL13'];
 }
 function updateValue$38(val) {
-  var elt = document.getElementById('s1L15-widget'); 
+  var elt = document.getElementById('s1L15-widget');
   elt.value = val;
 }
 function computeQuestion$72(env) {
   var val = eve$236(env);
-            if (val !== env['s1L15']) {
-   env['s1L15'] = val;
-                updateValue$38(val);
-                return true;
-}
+  if (val !== env['s1L15']) {
+    env['s1L15'] = val;
+    updateValue$38(val);
+    return true;
+  }
 }
 function eve$237(env) {
   return env['s1L19a'];
@@ -2941,13 +2941,13 @@ function eve$238(env) {
 }
 function computeQuestion$73(env) {
   var change = false;
-  change = change || false; 
+  change = change || false;
   return change;
 }
 function computeQuestion$74(env) {
   if (eve$238(env)) {
-   return computeQuestion$73(env);
-}
+    return computeQuestion$73(env);
+  }
 }
 function eve$239(env) {
   return env['s1L20'];
@@ -2983,16 +2983,16 @@ function eve$249(env) {
   return eve$241(env) || eve$248(env);
 }
 function updateValue$39(val) {
-  var elt = document.getElementById('s1L20Ok-widget'); 
+  var elt = document.getElementById('s1L20Ok-widget');
   elt.checked = val;
 }
 function computeQuestion$75(env) {
   var val = eve$249(env);
-            if (val !== env['s1L20Ok']) {
-   env['s1L20Ok'] = val;
-                updateValue$39(val);
-                return true;
-}
+  if (val !== env['s1L20Ok']) {
+    env['s1L20Ok'] = val;
+    updateValue$39(val);
+    return true;
+  }
 }
 function eve$250(env) {
   return env['s1L21'];
@@ -3004,16 +3004,16 @@ function eve$252(env) {
   return eve$250(env) <= eve$251(env);
 }
 function updateValue$40(val) {
-  var elt = document.getElementById('s1L21Ok-widget'); 
+  var elt = document.getElementById('s1L21Ok-widget');
   elt.checked = val;
 }
 function computeQuestion$76(env) {
   var val = eve$252(env);
-            if (val !== env['s1L21Ok']) {
-   env['s1L21Ok'] = val;
-                updateValue$40(val);
-                return true;
-}
+  if (val !== env['s1L21Ok']) {
+    env['s1L21Ok'] = val;
+    updateValue$40(val);
+    return true;
+  }
 }
 function eve$253(env) {
   return env['s1L13'];
@@ -3061,28 +3061,28 @@ function eve$267(env) {
   return eve$266(env) + eve$250(env);
 }
 function updateValue$41(val) {
-  var elt = document.getElementById('s1L26-widget'); 
+  var elt = document.getElementById('s1L26-widget');
   elt.value = val;
 }
 function computeQuestion$77(env) {
   var val = eve$267(env);
-            if (val !== env['s1L26']) {
-   env['s1L26'] = val;
-                updateValue$41(val);
-                return true;
-}
+  if (val !== env['s1L26']) {
+    env['s1L26'] = val;
+    updateValue$41(val);
+    return true;
+  }
 }
 function updateValue$42(val) {
-  var elt = document.getElementById('f1040L1a-widget'); 
+  var elt = document.getElementById('f1040L1a-widget');
   elt.value = val;
 }
 function computeQuestion$78(env) {
   var val = eve$182(env);
-            if (val !== env['f1040L1a']) {
-   env['f1040L1a'] = val;
-                updateValue$42(val);
-                return true;
-}
+  if (val !== env['f1040L1a']) {
+    env['f1040L1a'] = val;
+    updateValue$42(val);
+    return true;
+  }
 }
 function eve$268(env) {
   return env['f1040L1a'];
@@ -3124,67 +3124,67 @@ function eve$280(env) {
   return eve$278(env) + eve$279(env);
 }
 function updateValue$43(val) {
-  var elt = document.getElementById('f1040L1z-widget'); 
+  var elt = document.getElementById('f1040L1z-widget');
   elt.value = val;
 }
 function computeQuestion$79(env) {
   var val = eve$280(env);
-            if (val !== env['f1040L1z']) {
-   env['f1040L1z'] = val;
-                updateValue$43(val);
-                return true;
-}
+  if (val !== env['f1040L1z']) {
+    env['f1040L1z'] = val;
+    updateValue$43(val);
+    return true;
+  }
 }
 function eve$281(env) {
   return env['taxExemptInterest'];
 }
 function updateValue$44(val) {
-  var elt = document.getElementById('f1040L2a-widget'); 
+  var elt = document.getElementById('f1040L2a-widget');
   elt.value = val;
 }
 function computeQuestion$80(env) {
   var val = eve$281(env);
-            if (val !== env['f1040L2a']) {
-   env['f1040L2a'] = val;
-                updateValue$44(val);
-                return true;
-}
+  if (val !== env['f1040L2a']) {
+    env['f1040L2a'] = val;
+    updateValue$44(val);
+    return true;
+  }
 }
 function updateValue$45(val) {
-  var elt = document.getElementById('f1040L2b-widget'); 
+  var elt = document.getElementById('f1040L2b-widget');
   elt.value = val;
 }
 function computeQuestion$81(env) {
   var val = eve$90(env);
-            if (val !== env['f1040L2b']) {
-   env['f1040L2b'] = val;
-                updateValue$45(val);
-                return true;
-}
+  if (val !== env['f1040L2b']) {
+    env['f1040L2b'] = val;
+    updateValue$45(val);
+    return true;
+  }
 }
 function updateValue$46(val) {
-  var elt = document.getElementById('f1040L3a-widget'); 
+  var elt = document.getElementById('f1040L3a-widget');
   elt.value = val;
 }
 function computeQuestion$82(env) {
   var val = eve$87(env);
-            if (val !== env['f1040L3a']) {
-   env['f1040L3a'] = val;
-                updateValue$46(val);
-                return true;
-}
+  if (val !== env['f1040L3a']) {
+    env['f1040L3a'] = val;
+    updateValue$46(val);
+    return true;
+  }
 }
 function updateValue$47(val) {
-  var elt = document.getElementById('f1040L3b-widget'); 
+  var elt = document.getElementById('f1040L3b-widget');
   elt.value = val;
 }
 function computeQuestion$83(env) {
   var val = eve$88(env);
-            if (val !== env['f1040L3b']) {
-   env['f1040L3b'] = val;
-                updateValue$47(val);
-                return true;
-}
+  if (val !== env['f1040L3b']) {
+    env['f1040L3b'] = val;
+    updateValue$47(val);
+    return true;
+  }
 }
 function eve$282(env) {
   return env['f1040L6a'];
@@ -3194,28 +3194,28 @@ function eve$283(env) {
 }
 function computeQuestion$84(env) {
   var change = false;
-  change = change || false; 
+  change = change || false;
   return change;
 }
 function computeQuestion$85(env) {
   if (eve$283(env)) {
-   return computeQuestion$84(env);
-}
+    return computeQuestion$84(env);
+  }
 }
 function eve$284(env) {
   return env['s1L10'];
 }
 function updateValue$48(val) {
-  var elt = document.getElementById('f1040L8-widget'); 
+  var elt = document.getElementById('f1040L8-widget');
   elt.value = val;
 }
 function computeQuestion$86(env) {
   var val = eve$284(env);
-            if (val !== env['f1040L8']) {
-   env['f1040L8'] = val;
-                updateValue$48(val);
-                return true;
-}
+  if (val !== env['f1040L8']) {
+    env['f1040L8'] = val;
+    updateValue$48(val);
+    return true;
+  }
 }
 function eve$285(env) {
   return env['f1040L1z'];
@@ -3263,31 +3263,31 @@ function eve$299(env) {
   return eve$297(env) + eve$298(env);
 }
 function updateValue$49(val) {
-  var elt = document.getElementById('f1040L9-widget'); 
+  var elt = document.getElementById('f1040L9-widget');
   elt.value = val;
 }
 function computeQuestion$87(env) {
   var val = eve$299(env);
-            if (val !== env['f1040L9']) {
-   env['f1040L9'] = val;
-                updateValue$49(val);
-                return true;
-}
+  if (val !== env['f1040L9']) {
+    env['f1040L9'] = val;
+    updateValue$49(val);
+    return true;
+  }
 }
 function eve$300(env) {
   return env['s1L26'];
 }
 function updateValue$50(val) {
-  var elt = document.getElementById('f1040L10-widget'); 
+  var elt = document.getElementById('f1040L10-widget');
   elt.value = val;
 }
 function computeQuestion$88(env) {
   var val = eve$300(env);
-            if (val !== env['f1040L10']) {
-   env['f1040L10'] = val;
-                updateValue$50(val);
-                return true;
-}
+  if (val !== env['f1040L10']) {
+    env['f1040L10'] = val;
+    updateValue$50(val);
+    return true;
+  }
 }
 function eve$301(env) {
   return env['f1040L9'];
@@ -3299,16 +3299,16 @@ function eve$303(env) {
   return eve$301(env) - eve$302(env);
 }
 function updateValue$51(val) {
-  var elt = document.getElementById('f1040L11-widget'); 
+  var elt = document.getElementById('f1040L11-widget');
   elt.value = val;
 }
 function computeQuestion$89(env) {
   var val = eve$303(env);
-            if (val !== env['f1040L11']) {
-   env['f1040L11'] = val;
-                updateValue$51(val);
-                return true;
-}
+  if (val !== env['f1040L11']) {
+    env['f1040L11'] = val;
+    updateValue$51(val);
+    return true;
+  }
 }
 function eve$304(env) {
   return env['itemize'];
@@ -3324,23 +3324,23 @@ function eve$307(env) {
 }
 function eve$308(env) {
   var x = eve$307(env);
-            var y = eve$192(env);
-            if (y === 0) {
-   window.alert('Division by zero in: f1040L11 * 75 / 1000');
-                return 0;
-}return Math.round(x / y);
+  var y = eve$192(env);
+  if (y === 0) {
+    window.alert('Division by zero in: f1040L11 * 75 / 1000');
+    return 0;
+  } return Math.round(x / y);
 }
 function updateValue$52(val) {
-  var elt = document.getElementById('sAL3-widget'); 
+  var elt = document.getElementById('sAL3-widget');
   elt.value = val;
 }
 function computeQuestion$90(env) {
   var val = eve$308(env);
-            if (val !== env['sAL3']) {
-   env['sAL3'] = val;
-                updateValue$52(val);
-                return true;
-}
+  if (val !== env['sAL3']) {
+    env['sAL3'] = val;
+    updateValue$52(val);
+    return true;
+  }
 }
 function eve$309(env) {
   return env['sAL1'];
@@ -3352,31 +3352,31 @@ function eve$311(env) {
   return eve$309(env) > eve$310(env);
 }
 function updateValue$53(val) {
-  var elt = document.getElementById('sAMedicalOver-widget'); 
+  var elt = document.getElementById('sAMedicalOver-widget');
   elt.checked = val;
 }
 function computeQuestion$91(env) {
   var val = eve$311(env);
-            if (val !== env['sAMedicalOver']) {
-   env['sAMedicalOver'] = val;
-                updateValue$53(val);
-                return true;
-}
+  if (val !== env['sAMedicalOver']) {
+    env['sAMedicalOver'] = val;
+    updateValue$53(val);
+    return true;
+  }
 }
 function eve$312(env) {
   return eve$309(env) - eve$310(env);
 }
 function updateValue$54(val) {
-  var elt = document.getElementById('sAL4-widget'); 
+  var elt = document.getElementById('sAL4-widget');
   elt.value = val;
 }
 function computeQuestion$92(env) {
   var val = eve$312(env);
-            if (val !== env['sAL4']) {
-   env['sAL4'] = val;
-                updateValue$54(val);
-                return true;
-}
+  if (val !== env['sAL4']) {
+    env['sAL4'] = val;
+    updateValue$54(val);
+    return true;
+  }
 }
 function eve$313(env) {
   return env['sAL5a'];
@@ -3394,16 +3394,16 @@ function eve$317(env) {
   return eve$315(env) + eve$316(env);
 }
 function updateValue$55(val) {
-  var elt = document.getElementById('sAL5d-widget'); 
+  var elt = document.getElementById('sAL5d-widget');
   elt.value = val;
 }
 function computeQuestion$93(env) {
   var val = eve$317(env);
-            if (val !== env['sAL5d']) {
-   env['sAL5d'] = val;
-                updateValue$55(val);
-                return true;
-}
+  if (val !== env['sAL5d']) {
+    env['sAL5d'] = val;
+    updateValue$55(val);
+    return true;
+  }
 }
 function eve$318(env) {
   return env['sAL5d'];
@@ -3427,16 +3427,16 @@ function eve$324(env) {
   return eve$319(env) && eve$323(env);
 }
 function updateValue$56(val) {
-  var elt = document.getElementById('sASaltOk-widget'); 
+  var elt = document.getElementById('sASaltOk-widget');
   elt.checked = val;
 }
 function computeQuestion$94(env) {
   var val = eve$324(env);
-            if (val !== env['sASaltOk']) {
-   env['sASaltOk'] = val;
-                updateValue$56(val);
-                return true;
-}
+  if (val !== env['sASaltOk']) {
+    env['sASaltOk'] = val;
+    updateValue$56(val);
+    return true;
+  }
 }
 function eve$325(env) {
   return env['sAL8a'];
@@ -3448,16 +3448,16 @@ function eve$327(env) {
   return eve$325(env) + eve$326(env);
 }
 function updateValue$57(val) {
-  var elt = document.getElementById('sAL10-widget'); 
+  var elt = document.getElementById('sAL10-widget');
   elt.value = val;
 }
 function computeQuestion$95(env) {
   var val = eve$327(env);
-            if (val !== env['sAL10']) {
-   env['sAL10'] = val;
-                updateValue$57(val);
-                return true;
-}
+  if (val !== env['sAL10']) {
+    env['sAL10'] = val;
+    updateValue$57(val);
+    return true;
+  }
 }
 function eve$328(env) {
   return env['sAL12'];
@@ -3470,13 +3470,13 @@ function eve$330(env) {
 }
 function computeQuestion$96(env) {
   var change = false;
-  change = change || false; 
+  change = change || false;
   return change;
 }
 function computeQuestion$97(env) {
   if (eve$330(env)) {
-   return computeQuestion$96(env);
-}
+    return computeQuestion$96(env);
+  }
 }
 function eve$331(env) {
   return env['sAL11'];
@@ -3491,16 +3491,16 @@ function eve$334(env) {
   return eve$332(env) + eve$333(env);
 }
 function updateValue$58(val) {
-  var elt = document.getElementById('sAL14-widget'); 
+  var elt = document.getElementById('sAL14-widget');
   elt.value = val;
 }
 function computeQuestion$98(env) {
   var val = eve$334(env);
-            if (val !== env['sAL14']) {
-   env['sAL14'] = val;
-                updateValue$58(val);
-                return true;
-}
+  if (val !== env['sAL14']) {
+    env['sAL14'] = val;
+    updateValue$58(val);
+    return true;
+  }
 }
 function eve$335(env) {
   return env['sAL4'];
@@ -3533,90 +3533,90 @@ function eve$344(env) {
   return eve$342(env) + eve$343(env);
 }
 function updateValue$59(val) {
-  var elt = document.getElementById('sAL17-widget'); 
+  var elt = document.getElementById('sAL17-widget');
   elt.value = val;
 }
 function computeQuestion$99(env) {
   var val = eve$344(env);
-            if (val !== env['sAL17']) {
-   env['sAL17'] = val;
-                updateValue$59(val);
-                return true;
-}
+  if (val !== env['sAL17']) {
+    env['sAL17'] = val;
+    updateValue$59(val);
+    return true;
+  }
 }
 function computeQuestion$100(env) {
   var change = false;
-  change = change || false; 
-  change = change || computeQuestion$90(env); 
-  change = change || computeQuestion$91(env); 
-  change = change || computeQuestion$92(env); 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || computeQuestion$93(env); 
-  change = change || computeQuestion$94(env); 
-  change = change || false; 
-  change = change || false; 
-  change = change || computeQuestion$95(env); 
-  change = change || false; 
-  change = change || false; 
-  change = change || computeQuestion$97(env); 
-  change = change || false; 
-  change = change || computeQuestion$98(env); 
-  change = change || false; 
-  change = change || false; 
-  change = change || computeQuestion$99(env); 
+  change = change || false;
+  change = change || computeQuestion$90(env);
+  change = change || computeQuestion$91(env);
+  change = change || computeQuestion$92(env);
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || computeQuestion$93(env);
+  change = change || computeQuestion$94(env);
+  change = change || false;
+  change = change || false;
+  change = change || computeQuestion$95(env);
+  change = change || false;
+  change = change || false;
+  change = change || computeQuestion$97(env);
+  change = change || false;
+  change = change || computeQuestion$98(env);
+  change = change || false;
+  change = change || false;
+  change = change || computeQuestion$99(env);
   return change;
 }
 function computeQuestion$101(env) {
   if (eve$304(env)) {
-   return computeQuestion$100(env);
-}
+    return computeQuestion$100(env);
+  }
 }
 function eve$345(env) {
   return parseInt('13850');
 }
 function updateValue$60(val) {
-  var elt = document.getElementById('stdSingle-widget'); 
+  var elt = document.getElementById('stdSingle-widget');
   elt.value = val;
 }
 function computeQuestion$102(env) {
   var val = eve$345(env);
-            if (val !== env['stdSingle']) {
-   env['stdSingle'] = val;
-                updateValue$60(val);
-                return true;
-}
+  if (val !== env['stdSingle']) {
+    env['stdSingle'] = val;
+    updateValue$60(val);
+    return true;
+  }
 }
 function eve$346(env) {
   return parseInt('27700');
 }
 function updateValue$61(val) {
-  var elt = document.getElementById('stdJoint-widget'); 
+  var elt = document.getElementById('stdJoint-widget');
   elt.value = val;
 }
 function computeQuestion$103(env) {
   var val = eve$346(env);
-            if (val !== env['stdJoint']) {
-   env['stdJoint'] = val;
-                updateValue$61(val);
-                return true;
-}
+  if (val !== env['stdJoint']) {
+    env['stdJoint'] = val;
+    updateValue$61(val);
+    return true;
+  }
 }
 function eve$347(env) {
   return parseInt('20800');
 }
 function updateValue$62(val) {
-  var elt = document.getElementById('stdHoh-widget'); 
+  var elt = document.getElementById('stdHoh-widget');
   elt.value = val;
 }
 function computeQuestion$104(env) {
   var val = eve$347(env);
-            if (val !== env['stdHoh']) {
-   env['stdHoh'] = val;
-                updateValue$62(val);
-                return true;
-}
+  if (val !== env['stdHoh']) {
+    env['stdHoh'] = val;
+    updateValue$62(val);
+    return true;
+  }
 }
 function eve$348(env) {
   return parseInt('65');
@@ -3646,16 +3646,16 @@ function eve$356(env) {
   return eve$354(env) || eve$355(env);
 }
 function updateValue$63(val) {
-  var elt = document.getElementById('extraBoxes-widget'); 
+  var elt = document.getElementById('extraBoxes-widget');
   elt.checked = val;
 }
 function computeQuestion$105(env) {
   var val = eve$356(env);
-            if (val !== env['extraBoxes']) {
-   env['extraBoxes'] = val;
-                updateValue$63(val);
-                return true;
-}
+  if (val !== env['extraBoxes']) {
+    env['extraBoxes'] = val;
+    updateValue$63(val);
+    return true;
+  }
 }
 function eve$357(env) {
   return env['f1040L12'];
@@ -3667,16 +3667,16 @@ function eve$359(env) {
   return eve$357(env) + eve$358(env);
 }
 function updateValue$64(val) {
-  var elt = document.getElementById('f1040L14-widget'); 
+  var elt = document.getElementById('f1040L14-widget');
   elt.value = val;
 }
 function computeQuestion$106(env) {
   var val = eve$359(env);
-            if (val !== env['f1040L14']) {
-   env['f1040L14'] = val;
-                updateValue$64(val);
-                return true;
-}
+  if (val !== env['f1040L14']) {
+    env['f1040L14'] = val;
+    updateValue$64(val);
+    return true;
+  }
 }
 function eve$360(env) {
   return env['f1040L14'];
@@ -3685,16 +3685,16 @@ function eve$361(env) {
   return eve$305(env) - eve$360(env);
 }
 function updateValue$65(val) {
-  var elt = document.getElementById('f1040L15-widget'); 
+  var elt = document.getElementById('f1040L15-widget');
   elt.value = val;
 }
 function computeQuestion$107(env) {
   var val = eve$361(env);
-            if (val !== env['f1040L15']) {
-   env['f1040L15'] = val;
-                updateValue$65(val);
-                return true;
-}
+  if (val !== env['f1040L15']) {
+    env['f1040L15'] = val;
+    updateValue$65(val);
+    return true;
+  }
 }
 function eve$362(env) {
   return env['f1040L15'];
@@ -3703,16 +3703,16 @@ function eve$363(env) {
   return eve$362(env) > eve$168(env);
 }
 function updateValue$66(val) {
-  var elt = document.getElementById('f1040L15Positive-widget'); 
+  var elt = document.getElementById('f1040L15Positive-widget');
   elt.checked = val;
 }
 function computeQuestion$108(env) {
   var val = eve$363(env);
-            if (val !== env['f1040L15Positive']) {
-   env['f1040L15Positive'] = val;
-                updateValue$66(val);
-                return true;
-}
+  if (val !== env['f1040L15Positive']) {
+    env['f1040L15Positive'] = val;
+    updateValue$66(val);
+    return true;
+  }
 }
 function eve$364(env) {
   return env['s2L1a'];
@@ -3724,31 +3724,31 @@ function eve$366(env) {
   return eve$364(env) + eve$365(env);
 }
 function updateValue$67(val) {
-  var elt = document.getElementById('s2L3-widget'); 
+  var elt = document.getElementById('s2L3-widget');
   elt.value = val;
 }
 function computeQuestion$109(env) {
   var val = eve$366(env);
-            if (val !== env['s2L3']) {
-   env['s2L3'] = val;
-                updateValue$67(val);
-                return true;
-}
+  if (val !== env['s2L3']) {
+    env['s2L3'] = val;
+    updateValue$67(val);
+    return true;
+  }
 }
 function eve$367(env) {
   return env['s2L3'];
 }
 function updateValue$68(val) {
-  var elt = document.getElementById('f1040L17-widget'); 
+  var elt = document.getElementById('f1040L17-widget');
   elt.value = val;
 }
 function computeQuestion$110(env) {
   var val = eve$367(env);
-            if (val !== env['f1040L17']) {
-   env['f1040L17'] = val;
-                updateValue$68(val);
-                return true;
-}
+  if (val !== env['f1040L17']) {
+    env['f1040L17'] = val;
+    updateValue$68(val);
+    return true;
+  }
 }
 function eve$368(env) {
   return env['f1040L16'];
@@ -3760,16 +3760,16 @@ function eve$370(env) {
   return eve$368(env) + eve$369(env);
 }
 function updateValue$69(val) {
-  var elt = document.getElementById('f1040L18-widget'); 
+  var elt = document.getElementById('f1040L18-widget');
   elt.value = val;
 }
 function computeQuestion$111(env) {
   var val = eve$370(env);
-            if (val !== env['f1040L18']) {
-   env['f1040L18'] = val;
-                updateValue$69(val);
-                return true;
-}
+  if (val !== env['f1040L18']) {
+    env['f1040L18'] = val;
+    updateValue$69(val);
+    return true;
+  }
 }
 function eve$371(env) {
   return env['s8812Children'];
@@ -3781,16 +3781,16 @@ function eve$373(env) {
   return eve$371(env) * eve$372(env);
 }
 function updateValue$70(val) {
-  var elt = document.getElementById('s8812L5-widget'); 
+  var elt = document.getElementById('s8812L5-widget');
   elt.value = val;
 }
 function computeQuestion$112(env) {
   var val = eve$373(env);
-            if (val !== env['s8812L5']) {
-   env['s8812L5'] = val;
-                updateValue$70(val);
-                return true;
-}
+  if (val !== env['s8812L5']) {
+    env['s8812L5'] = val;
+    updateValue$70(val);
+    return true;
+  }
 }
 function eve$374(env) {
   return env['s8812Others'];
@@ -3799,16 +3799,16 @@ function eve$375(env) {
   return eve$374(env) * eve$329(env);
 }
 function updateValue$71(val) {
-  var elt = document.getElementById('s8812L7-widget'); 
+  var elt = document.getElementById('s8812L7-widget');
   elt.value = val;
 }
 function computeQuestion$113(env) {
   var val = eve$375(env);
-            if (val !== env['s8812L7']) {
-   env['s8812L7'] = val;
-                updateValue$71(val);
-                return true;
-}
+  if (val !== env['s8812L7']) {
+    env['s8812L7'] = val;
+    updateValue$71(val);
+    return true;
+  }
 }
 function eve$376(env) {
   return env['s8812L5'];
@@ -3820,16 +3820,16 @@ function eve$378(env) {
   return eve$376(env) + eve$377(env);
 }
 function updateValue$72(val) {
-  var elt = document.getElementById('s8812L8-widget'); 
+  var elt = document.getElementById('s8812L8-widget');
   elt.value = val;
 }
 function computeQuestion$114(env) {
   var val = eve$378(env);
-            if (val !== env['s8812L8']) {
-   env['s8812L8'] = val;
-                updateValue$72(val);
-                return true;
-}
+  if (val !== env['s8812L8']) {
+    env['s8812L8'] = val;
+    updateValue$72(val);
+    return true;
+  }
 }
 function eve$379(env) {
   return env['s8812Threshold'];
@@ -3838,16 +3838,16 @@ function eve$380(env) {
   return eve$305(env) > eve$379(env);
 }
 function updateValue$73(val) {
-  var elt = document.getElementById('s8812PhaseOut-widget'); 
+  var elt = document.getElementById('s8812PhaseOut-widget');
   elt.checked = val;
 }
 function computeQuestion$115(env) {
   var val = eve$380(env);
-            if (val !== env['s8812PhaseOut']) {
-   env['s8812PhaseOut'] = val;
-                updateValue$73(val);
-                return true;
-}
+  if (val !== env['s8812PhaseOut']) {
+    env['s8812PhaseOut'] = val;
+    updateValue$73(val);
+    return true;
+  }
 }
 function eve$381(env) {
   return eve$305(env) - eve$379(env);
@@ -3857,26 +3857,26 @@ function eve$382(env) {
 }
 function eve$383(env) {
   var x = eve$382(env);
-            var y = eve$192(env);
-            if (y === 0) {
-   window.alert('Division by zero in: (f1040L11 - s8812Threshold) / 1000');
-                return 0;
-}return Math.round(x / y);
+  var y = eve$192(env);
+  if (y === 0) {
+    window.alert('Division by zero in: (f1040L11 - s8812Threshold) / 1000');
+    return 0;
+  } return Math.round(x / y);
 }
 function eve$384(env) {
   return eve$383(env) * eve$243(env);
 }
 function updateValue$74(val) {
-  var elt = document.getElementById('s8812Reduction-widget'); 
+  var elt = document.getElementById('s8812Reduction-widget');
   elt.value = val;
 }
 function computeQuestion$116(env) {
   var val = eve$384(env);
-            if (val !== env['s8812Reduction']) {
-   env['s8812Reduction'] = val;
-                updateValue$74(val);
-                return true;
-}
+  if (val !== env['s8812Reduction']) {
+    env['s8812Reduction'] = val;
+    updateValue$74(val);
+    return true;
+  }
 }
 function eve$385(env) {
   return env['s3L2'];
@@ -3897,29 +3897,29 @@ function eve$390(env) {
   return eve$387(env) <= eve$389(env);
 }
 function updateValue$75(val) {
-  var elt = document.getElementById('s3CareOk-widget'); 
+  var elt = document.getElementById('s3CareOk-widget');
   elt.checked = val;
 }
 function computeQuestion$117(env) {
   var val = eve$390(env);
-            if (val !== env['s3CareOk']) {
-   env['s3CareOk'] = val;
-                updateValue$75(val);
-                return true;
-}
+  if (val !== env['s3CareOk']) {
+    env['s3CareOk'] = val;
+    updateValue$75(val);
+    return true;
+  }
 }
 function computeQuestion$118(env) {
   var change = false;
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || computeQuestion$117(env); 
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || computeQuestion$117(env);
   return change;
 }
 function computeQuestion$119(env) {
   if (eve$386(env)) {
-   return computeQuestion$118(env);
-}
+    return computeQuestion$118(env);
+  }
 }
 function eve$391(env) {
   return env['s3L1'];
@@ -3958,31 +3958,31 @@ function eve$402(env) {
   return eve$400(env) + eve$401(env);
 }
 function updateValue$76(val) {
-  var elt = document.getElementById('s3L8-widget'); 
+  var elt = document.getElementById('s3L8-widget');
   elt.value = val;
 }
 function computeQuestion$120(env) {
   var val = eve$402(env);
-            if (val !== env['s3L8']) {
-   env['s3L8'] = val;
-                updateValue$76(val);
-                return true;
-}
+  if (val !== env['s3L8']) {
+    env['s3L8'] = val;
+    updateValue$76(val);
+    return true;
+  }
 }
 function eve$403(env) {
   return env['s3L8'];
 }
 function updateValue$77(val) {
-  var elt = document.getElementById('f1040L20-widget'); 
+  var elt = document.getElementById('f1040L20-widget');
   elt.value = val;
 }
 function computeQuestion$121(env) {
   var val = eve$403(env);
-            if (val !== env['f1040L20']) {
-   env['f1040L20'] = val;
-                updateValue$77(val);
-                return true;
-}
+  if (val !== env['f1040L20']) {
+    env['f1040L20'] = val;
+    updateValue$77(val);
+    return true;
+  }
 }
 function eve$404(env) {
   return env['f1040L19'];
@@ -3994,16 +3994,16 @@ function eve$406(env) {
   return eve$404(env) + eve$405(env);
 }
 function updateValue$78(val) {
-  var elt = document.getElementById('f1040L21-widget'); 
+  var elt = document.getElementById('f1040L21-widget');
   elt.value = val;
 }
 function computeQuestion$122(env) {
   var val = eve$406(env);
-            if (val !== env['f1040L21']) {
-   env['f1040L21'] = val;
-                updateValue$78(val);
-                return true;
-}
+  if (val !== env['f1040L21']) {
+    env['f1040L21'] = val;
+    updateValue$78(val);
+    return true;
+  }
 }
 function eve$407(env) {
   return env['f1040L18'];
@@ -4015,16 +4015,16 @@ function eve$409(env) {
   return eve$407(env) - eve$408(env);
 }
 function updateValue$79(val) {
-  var elt = document.getElementById('f1040L22-widget'); 
+  var elt = document.getElementById('f1040L22-widget');
   elt.value = val;
 }
 function computeQuestion$123(env) {
   var val = eve$409(env);
-            if (val !== env['f1040L22']) {
-   env['f1040L22'] = val;
-                updateValue$79(val);
-                return true;
-}
+  if (val !== env['f1040L22']) {
+    env['f1040L22'] = val;
+    updateValue$79(val);
+    return true;
+  }
 }
 function eve$410(env) {
   return env['f1040L22'];
@@ -4033,28 +4033,28 @@ function eve$411(env) {
   return eve$410(env) < eve$168(env);
 }
 function updateValue$80(val) {
-  var elt = document.getElementById('creditsExceedTax-widget'); 
+  var elt = document.getElementById('creditsExceedTax-widget');
   elt.checked = val;
 }
 function computeQuestion$124(env) {
   var val = eve$411(env);
-            if (val !== env['creditsExceedTax']) {
-   env['creditsExceedTax'] = val;
-                updateValue$80(val);
-                return true;
-}
+  if (val !== env['creditsExceedTax']) {
+    env['creditsExceedTax'] = val;
+    updateValue$80(val);
+    return true;
+  }
 }
 function updateValue$81(val) {
-  var elt = document.getElementById('s2L4-widget'); 
+  var elt = document.getElementById('s2L4-widget');
   elt.value = val;
 }
 function computeQuestion$125(env) {
   var val = eve$200(env);
-            if (val !== env['s2L4']) {
-   env['s2L4'] = val;
-                updateValue$81(val);
-                return true;
-}
+  if (val !== env['s2L4']) {
+    env['s2L4'] = val;
+    updateValue$81(val);
+    return true;
+  }
 }
 function eve$412(env) {
   return env['s2L4'];
@@ -4084,31 +4084,31 @@ function eve$420(env) {
   return eve$418(env) + eve$419(env);
 }
 function updateValue$82(val) {
-  var elt = document.getElementById('s2L21-widget'); 
+  var elt = document.getElementById('s2L21-widget');
   elt.value = val;
 }
 function computeQuestion$126(env) {
   var val = eve$420(env);
-            if (val !== env['s2L21']) {
-   env['s2L21'] = val;
-                updateValue$82(val);
-                return true;
-}
+  if (val !== env['s2L21']) {
+    env['s2L21'] = val;
+    updateValue$82(val);
+    return true;
+  }
 }
 function eve$421(env) {
   return env['s2L21'];
 }
 function updateValue$83(val) {
-  var elt = document.getElementById('f1040L23-widget'); 
+  var elt = document.getElementById('f1040L23-widget');
   elt.value = val;
 }
 function computeQuestion$127(env) {
   var val = eve$421(env);
-            if (val !== env['f1040L23']) {
-   env['f1040L23'] = val;
-                updateValue$83(val);
-                return true;
-}
+  if (val !== env['f1040L23']) {
+    env['f1040L23'] = val;
+    updateValue$83(val);
+    return true;
+  }
 }
 function eve$422(env) {
   return env['f1040L23'];
@@ -4117,16 +4117,16 @@ function eve$423(env) {
   return eve$410(env) + eve$422(env);
 }
 function updateValue$84(val) {
-  var elt = document.getElementById('f1040L24-widget'); 
+  var elt = document.getElementById('f1040L24-widget');
   elt.value = val;
 }
 function computeQuestion$128(env) {
   var val = eve$423(env);
-            if (val !== env['f1040L24']) {
-   env['f1040L24'] = val;
-                updateValue$84(val);
-                return true;
-}
+  if (val !== env['f1040L24']) {
+    env['f1040L24'] = val;
+    updateValue$84(val);
+    return true;
+  }
 }
 function eve$424(env) {
   return env['w2aWithheld'];
@@ -4144,16 +4144,16 @@ function eve$428(env) {
   return eve$426(env) + eve$427(env);
 }
 function updateValue$85(val) {
-  var elt = document.getElementById('f1040L25a-widget'); 
+  var elt = document.getElementById('f1040L25a-widget');
   elt.value = val;
 }
 function computeQuestion$129(env) {
   var val = eve$428(env);
-            if (val !== env['f1040L25a']) {
-   env['f1040L25a'] = val;
-                updateValue$85(val);
-                return true;
-}
+  if (val !== env['f1040L25a']) {
+    env['f1040L25a'] = val;
+    updateValue$85(val);
+    return true;
+  }
 }
 function eve$429(env) {
   return env['f1040L25a'];
@@ -4171,16 +4171,16 @@ function eve$433(env) {
   return eve$431(env) + eve$432(env);
 }
 function updateValue$86(val) {
-  var elt = document.getElementById('f1040L25d-widget'); 
+  var elt = document.getElementById('f1040L25d-widget');
   elt.value = val;
 }
 function computeQuestion$130(env) {
   var val = eve$433(env);
-            if (val !== env['f1040L25d']) {
-   env['f1040L25d'] = val;
-                updateValue$86(val);
-                return true;
-}
+  if (val !== env['f1040L25d']) {
+    env['f1040L25d'] = val;
+    updateValue$86(val);
+    return true;
+  }
 }
 function eve$434(env) {
   return env['f1040L27'];
@@ -4190,13 +4190,13 @@ function eve$435(env) {
 }
 function computeQuestion$131(env) {
   var change = false;
-  change = change || false; 
+  change = change || false;
   return change;
 }
 function computeQuestion$132(env) {
   if (eve$435(env)) {
-   return computeQuestion$131(env);
-}
+    return computeQuestion$131(env);
+  }
 }
 function eve$436(env) {
   return env['s3L9'];
@@ -4214,31 +4214,31 @@ function eve$440(env) {
   return eve$438(env) + eve$439(env);
 }
 function updateValue$87(val) {
-  var elt = document.getElementById('s3L15-widget'); 
+  var elt = document.getElementById('s3L15-widget');
   elt.value = val;
 }
 function computeQuestion$133(env) {
   var val = eve$440(env);
-            if (val !== env['s3L15']) {
-   env['s3L15'] = val;
-                updateValue$87(val);
-                return true;
-}
+  if (val !== env['s3L15']) {
+    env['s3L15'] = val;
+    updateValue$87(val);
+    return true;
+  }
 }
 function eve$441(env) {
   return env['s3L15'];
 }
 function updateValue$88(val) {
-  var elt = document.getElementById('f1040L31-widget'); 
+  var elt = document.getElementById('f1040L31-widget');
   elt.value = val;
 }
 function computeQuestion$134(env) {
   var val = eve$441(env);
-            if (val !== env['f1040L31']) {
-   env['f1040L31'] = val;
-                updateValue$88(val);
-                return true;
-}
+  if (val !== env['f1040L31']) {
+    env['f1040L31'] = val;
+    updateValue$88(val);
+    return true;
+  }
 }
 function eve$442(env) {
   return env['f1040L28'];
@@ -4259,16 +4259,16 @@ function eve$447(env) {
   return eve$445(env) + eve$446(env);
 }
 function updateValue$89(val) {
-  var elt = document.getElementById('f1040L32-widget'); 
+  var elt = document.getElementById('f1040L32-widget');
   elt.value = val;
 }
 function computeQuestion$135(env) {
   var val = eve$447(env);
-            if (val !== env['f1040L32']) {
-   env['f1040L32'] = val;
-                updateValue$89(val);
-                return true;
-}
+  if (val !== env['f1040L32']) {
+    env['f1040L32'] = val;
+    updateValue$89(val);
+    return true;
+  }
 }
 function eve$448(env) {
   return env['f1040L25d'];
@@ -4286,16 +4286,16 @@ function eve$452(env) {
   return eve$450(env) + eve$451(env);
 }
 function updateValue$90(val) {
-  var elt = document.getElementById('f1040L33-widget'); 
+  var elt = document.getElementById('f1040L33-widget');
   elt.value = val;
 }
 function computeQuestion$136(env) {
   var val = eve$452(env);
-            if (val !== env['f1040L33']) {
-   env['f1040L33'] = val;
-                updateValue$90(val);
-                return true;
-}
+  if (val !== env['f1040L33']) {
+    env['f1040L33'] = val;
+    updateValue$90(val);
+    return true;
+  }
 }
 function eve$453(env) {
   return env['f1040L33'];
@@ -4307,16 +4307,16 @@ function eve$455(env) {
   return eve$453(env) > eve$454(env);
 }
 function updateValue$91(val) {
-  var elt = document.getElementById('overpaid-widget'); 
+  var elt = document.getElementById('overpaid-widget');
   elt.checked = val;
 }
 function computeQuestion$137(env) {
   var val = eve$455(env);
-            if (val !== env['overpaid']) {
-   env['overpaid'] = val;
-                updateValue$91(val);
-                return true;
-}
+  if (val !== env['overpaid']) {
+    env['overpaid'] = val;
+    updateValue$91(val);
+    return true;
+  }
 }
 function eve$456(env) {
   return env['overpaid'];
@@ -4325,16 +4325,16 @@ function eve$457(env) {
   return eve$453(env) - eve$454(env);
 }
 function updateValue$92(val) {
-  var elt = document.getElementById('f1040L34-widget'); 
+  var elt = document.getElementById('f1040L34-widget');
   elt.value = val;
 }
 function computeQuestion$138(env) {
   var val = eve$457(env);
-            if (val !== env['f1040L34']) {
-   env['f1040L34'] = val;
-                updateValue$92(val);
-                return true;
-}
+  if (val !== env['f1040L34']) {
+    env['f1040L34'] = val;
+    updateValue$92(val);
+    return true;
+  }
 }
 function eve$458(env) {
   return env['f1040L34'];
@@ -4346,130 +4346,128 @@ function eve$460(env) {
   return eve$458(env) - eve$459(env);
 }
 function updateValue$93(val) {
-  var elt = document.getElementById('f1040L35a-widget'); 
+  var elt = document.getElementById('f1040L35a-widget');
   elt.value = val;
 }
 function computeQuestion$139(env) {
   var val = eve$460(env);
-            if (val !== env['f1040L35a']) {
-   env['f1040L35a'] = val;
-                updateValue$93(val);
-                return true;
-}
+  if (val !== env['f1040L35a']) {
+    env['f1040L35a'] = val;
+    updateValue$93(val);
+    return true;
+  }
 }
 function eve$461(env) {
   return env['directDeposit'];
 }
 function computeQuestion$140(env) {
   var change = false;
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
+  change = change || false;
+  change = change || false;
+  change = change || false;
   return change;
 }
 function computeQuestion$141(env) {
   if (eve$461(env)) {
-   return computeQuestion$140(env);
-}
+    return computeQuestion$140(env);
+  }
 }
 function computeQuestion$142(env) {
   var change = false;
-  change = change || computeQuestion$138(env); 
-  change = change || false; 
-  change = change || computeQuestion$139(env); 
-  change = change || false; 
-  change = change || computeQuestion$141(env); 
+  change = change || computeQuestion$138(env);
+  change = change || false;
+  change = change || computeQuestion$139(env);
+  change = change || false;
+  change = change || computeQuestion$141(env);
   return change;
 }
 function eve$462(env) {
   return eve$454(env) - eve$453(env);
 }
 function updateValue$94(val) {
-  var elt = document.getElementById('f1040L37-widget'); 
+  var elt = document.getElementById('f1040L37-widget');
   elt.value = val;
 }
 function computeQuestion$143(env) {
   var val = eve$462(env);
-            if (val !== env['f1040L37']) {
-   env['f1040L37'] = val;
-                updateValue$94(val);
-                return true;
-}
+  if (val !== env['f1040L37']) {
+    env['f1040L37'] = val;
+    updateValue$94(val);
+    return true;
+  }
 }
 function eve$463(env) {
   return env['payDirectDebit'];
 }
 function computeQuestion$144(env) {
   var change = false;
-  change = change || false; 
-  change = change || false; 
+  change = change || false;
+  change = change || false;
   return change;
 }
 function computeQuestion$145(env) {
   if (eve$463(env)) {
-   return computeQuestion$144(env);
-}
+    return computeQuestion$144(env);
+  }
 }
 function computeQuestion$146(env) {
   var change = false;
-  change = change || computeQuestion$143(env); 
-  change = change || false; 
-  change = change || false; 
-  change = change || computeQuestion$145(env); 
+  change = change || computeQuestion$143(env);
+  change = change || false;
+  change = change || false;
+  change = change || computeQuestion$145(env);
   return change;
 }
 function computeQuestion$147(env) {
-  if (eve$456(env)) 
-   {
-   return computeQuestion$142(env);
-} 
-else 
-   {
-   return computeQuestion$146(env);
-}
+  if (eve$456(env)) {
+    return computeQuestion$142(env);
+  }
+  else {
+    return computeQuestion$146(env);
+  }
 }
 function eve$464(env) {
   return env['thirdParty'];
 }
 function computeQuestion$148(env) {
   var change = false;
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
+  change = change || false;
+  change = change || false;
+  change = change || false;
   return change;
 }
 function computeQuestion$149(env) {
   if (eve$464(env)) {
-   return computeQuestion$148(env);
-}
+    return computeQuestion$148(env);
+  }
 }
 function computeQuestion$150(env) {
   var change = false;
-  change = change || false; 
-  change = change || false; 
+  change = change || false;
+  change = change || false;
   return change;
 }
 function computeQuestion$151(env) {
   if (eve$1(env)) {
-   return computeQuestion$150(env);
-}
+    return computeQuestion$150(env);
+  }
 }
 function eve$465(env) {
   return env['paidPreparer'];
 }
 function computeQuestion$152(env) {
   var change = false;
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
-  change = change || false; 
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
+  change = change || false;
   return change;
 }
 function computeQuestion$153(env) {
   if (eve$465(env)) {
-   return computeQuestion$152(env);
-}
+    return computeQuestion$152(env);
+  }
 }
 function eve$466(env) {
   return env['declaration'];
@@ -4496,115 +4494,181 @@ function eve$473(env) {
   return eve$471(env) && eve$472(env);
 }
 function updateValue$95(val) {
-  var elt = document.getElementById('readyToFile-widget'); 
+  var elt = document.getElementById('readyToFile-widget');
   elt.checked = val;
 }
 function computeQuestion$154(env) {
   var val = eve$473(env);
-            if (val !== env['readyToFile']) {
-   env['readyToFile'] = val;
-                updateValue$95(val);
-                return true;
+  if (val !== env['readyToFile']) {
+    env['readyToFile'] = val;
+    updateValue$95(val);
+    return true;
+  }
 }
+function toggleVisibility$0(vis) {
+  var elt = document.getElementById('firstName-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$0(vis, env) {
-  var elt = document.getElementById('firstName-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$0(vis);
+}
+function toggleVisibility$1(vis) {
+  var elt = document.getElementById('lastName-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$1(vis, env) {
-  var elt = document.getElementById('lastName-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$1(vis);
+}
+function toggleVisibility$2(vis) {
+  var elt = document.getElementById('ssn-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$2(vis, env) {
-  var elt = document.getElementById('ssn-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$2(vis);
+}
+function toggleVisibility$3(vis) {
+  var elt = document.getElementById('address-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$3(vis, env) {
-  var elt = document.getElementById('address-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$3(vis);
+}
+function toggleVisibility$4(vis) {
+  var elt = document.getElementById('city-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$4(vis, env) {
-  var elt = document.getElementById('city-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$4(vis);
+}
+function toggleVisibility$5(vis) {
+  var elt = document.getElementById('age-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$5(vis, env) {
-  var elt = document.getElementById('age-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$5(vis);
+}
+function toggleVisibility$6(vis) {
+  var elt = document.getElementById('blind-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$6(vis, env) {
-  var elt = document.getElementById('blind-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$6(vis);
+}
+function toggleVisibility$7(vis) {
+  var elt = document.getElementById('claimedAsDependent-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$7(vis, env) {
-  var elt = document.getElementById('claimedAsDependent-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$7(vis);
+}
+function toggleVisibility$8(vis) {
+  var elt = document.getElementById('presidentialFund-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$8(vis, env) {
-  var elt = document.getElementById('presidentialFund-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$8(vis);
+}
+function toggleVisibility$9(vis) {
+  var elt = document.getElementById('fsSingle-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$9(vis, env) {
-  var elt = document.getElementById('fsSingle-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$9(vis);
+}
+function toggleVisibility$10(vis) {
+  var elt = document.getElementById('fsJoint-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$10(vis, env) {
-  var elt = document.getElementById('fsJoint-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$10(vis);
+}
+function toggleVisibility$11(vis) {
+  var elt = document.getElementById('fsSeparate-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$11(vis, env) {
-  var elt = document.getElementById('fsSeparate-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$11(vis);
+}
+function toggleVisibility$12(vis) {
+  var elt = document.getElementById('fsHoh-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$12(vis, env) {
-  var elt = document.getElementById('fsHoh-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$12(vis);
+}
+function toggleVisibility$13(vis) {
+  var elt = document.getElementById('fsQss-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$13(vis, env) {
-  var elt = document.getElementById('fsQss-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$13(vis);
+}
+function toggleVisibility$14(vis) {
+  var elt = document.getElementById('fsValid-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$14(vis, env) {
-  var elt = document.getElementById('fsValid-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$14(vis);
+}
+function toggleVisibility$15(vis) {
+  var elt = document.getElementById('spouseFirstName-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$15(vis, env) {
-  var elt = document.getElementById('spouseFirstName-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$15(vis);
+}
+function toggleVisibility$16(vis) {
+  var elt = document.getElementById('spouseLastName-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$16(vis, env) {
-  var elt = document.getElementById('spouseLastName-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$16(vis);
+}
+function toggleVisibility$17(vis) {
+  var elt = document.getElementById('spouseSsn-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$17(vis, env) {
-  var elt = document.getElementById('spouseSsn-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$17(vis);
+}
+function toggleVisibility$18(vis) {
+  var elt = document.getElementById('spouseAge-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$18(vis, env) {
-  var elt = document.getElementById('spouseAge-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$18(vis);
+}
+function toggleVisibility$19(vis) {
+  var elt = document.getElementById('spouseBlind-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$19(vis, env) {
-  var elt = document.getElementById('spouseBlind-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$19(vis);
+}
+function toggleVisibility$20(vis) {
+  var elt = document.getElementById('spousePresidentialFund-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$20(vis, env) {
-  var elt = document.getElementById('spousePresidentialFund-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$20(vis);
 }
 function updateVisibility$21(vis, env) {
-  updateVisibility$15(vis, env); 
-  updateVisibility$16(vis, env); 
-  updateVisibility$17(vis, env); 
-  updateVisibility$18(vis, env); 
-  updateVisibility$19(vis, env); 
+  updateVisibility$15(vis, env);
+  updateVisibility$16(vis, env);
+  updateVisibility$17(vis, env);
+  updateVisibility$18(vis, env);
+  updateVisibility$19(vis, env);
   updateVisibility$20(vis, env);
 }
 function updateVisibility$22(vis, env) {
   updateVisibility$21(eve$36(env), env);
 }
-function updateVisibility$23(vis, env) {
+function toggleVisibility$21(vis) {
   var elt = document.getElementById('qualifyingPersonName-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$23(vis, env) {
+  toggleVisibility$21(vis);
 }
 function updateVisibility$24(vis, env) {
   updateVisibility$23(vis, env);
@@ -4612,398 +4676,623 @@ function updateVisibility$24(vis, env) {
 function updateVisibility$25(vis, env) {
   updateVisibility$24(eve$37(env), env);
 }
-function updateVisibility$26(vis, env) {
+function toggleVisibility$22(vis) {
   var elt = document.getElementById('digitalAssets-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$26(vis, env) {
+  toggleVisibility$22(vis);
+}
+function toggleVisibility$23(vis) {
+  var elt = document.getElementById('nDependents-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$27(vis, env) {
-  var elt = document.getElementById('nDependents-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$23(vis);
+}
+function toggleVisibility$24(vis) {
+  var elt = document.getElementById('dep1Name-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$28(vis, env) {
-  var elt = document.getElementById('dep1Name-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$24(vis);
+}
+function toggleVisibility$25(vis) {
+  var elt = document.getElementById('dep1Ssn-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$29(vis, env) {
-  var elt = document.getElementById('dep1Ssn-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$25(vis);
+}
+function toggleVisibility$26(vis) {
+  var elt = document.getElementById('dep1Relationship-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$30(vis, env) {
-  var elt = document.getElementById('dep1Relationship-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$26(vis);
+}
+function toggleVisibility$27(vis) {
+  var elt = document.getElementById('dep1Age-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$31(vis, env) {
-  var elt = document.getElementById('dep1Age-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$27(vis);
+}
+function toggleVisibility$28(vis) {
+  var elt = document.getElementById('dep1Lived-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$32(vis, env) {
-  var elt = document.getElementById('dep1Lived-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$28(vis);
+}
+function toggleVisibility$29(vis) {
+  var elt = document.getElementById('dep1Ctc-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$33(vis, env) {
-  var elt = document.getElementById('dep1Ctc-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$29(vis);
+}
+function toggleVisibility$30(vis) {
+  var elt = document.getElementById('dep1Odc-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$34(vis, env) {
-  var elt = document.getElementById('dep1Odc-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$30(vis);
 }
 function updateVisibility$35(vis, env) {
-  updateVisibility$28(vis, env); 
-  updateVisibility$29(vis, env); 
-  updateVisibility$30(vis, env); 
-  updateVisibility$31(vis, env); 
-  updateVisibility$32(vis, env); 
-  updateVisibility$33(vis, env); 
+  updateVisibility$28(vis, env);
+  updateVisibility$29(vis, env);
+  updateVisibility$30(vis, env);
+  updateVisibility$31(vis, env);
+  updateVisibility$32(vis, env);
+  updateVisibility$33(vis, env);
   updateVisibility$34(vis, env);
 }
 function updateVisibility$36(vis, env) {
   updateVisibility$35(eve$40(env), env);
 }
-function updateVisibility$37(vis, env) {
+function toggleVisibility$31(vis) {
   var elt = document.getElementById('dep2Name-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$37(vis, env) {
+  toggleVisibility$31(vis);
+}
+function toggleVisibility$32(vis) {
+  var elt = document.getElementById('dep2Ssn-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$38(vis, env) {
-  var elt = document.getElementById('dep2Ssn-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$32(vis);
+}
+function toggleVisibility$33(vis) {
+  var elt = document.getElementById('dep2Relationship-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$39(vis, env) {
-  var elt = document.getElementById('dep2Relationship-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$33(vis);
+}
+function toggleVisibility$34(vis) {
+  var elt = document.getElementById('dep2Age-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$40(vis, env) {
-  var elt = document.getElementById('dep2Age-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$34(vis);
+}
+function toggleVisibility$35(vis) {
+  var elt = document.getElementById('dep2Lived-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$41(vis, env) {
-  var elt = document.getElementById('dep2Lived-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$35(vis);
+}
+function toggleVisibility$36(vis) {
+  var elt = document.getElementById('dep2Ctc-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$42(vis, env) {
-  var elt = document.getElementById('dep2Ctc-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$36(vis);
+}
+function toggleVisibility$37(vis) {
+  var elt = document.getElementById('dep2Odc-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$43(vis, env) {
-  var elt = document.getElementById('dep2Odc-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$37(vis);
 }
 function updateVisibility$44(vis, env) {
-  updateVisibility$37(vis, env); 
-  updateVisibility$38(vis, env); 
-  updateVisibility$39(vis, env); 
-  updateVisibility$40(vis, env); 
-  updateVisibility$41(vis, env); 
-  updateVisibility$42(vis, env); 
+  updateVisibility$37(vis, env);
+  updateVisibility$38(vis, env);
+  updateVisibility$39(vis, env);
+  updateVisibility$40(vis, env);
+  updateVisibility$41(vis, env);
+  updateVisibility$42(vis, env);
   updateVisibility$43(vis, env);
 }
 function updateVisibility$45(vis, env) {
   updateVisibility$44(eve$49(env), env);
 }
-function updateVisibility$46(vis, env) {
+function toggleVisibility$38(vis) {
   var elt = document.getElementById('dep3Name-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$46(vis, env) {
+  toggleVisibility$38(vis);
+}
+function toggleVisibility$39(vis) {
+  var elt = document.getElementById('dep3Ssn-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$47(vis, env) {
-  var elt = document.getElementById('dep3Ssn-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$39(vis);
+}
+function toggleVisibility$40(vis) {
+  var elt = document.getElementById('dep3Relationship-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$48(vis, env) {
-  var elt = document.getElementById('dep3Relationship-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$40(vis);
+}
+function toggleVisibility$41(vis) {
+  var elt = document.getElementById('dep3Age-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$49(vis, env) {
-  var elt = document.getElementById('dep3Age-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$41(vis);
+}
+function toggleVisibility$42(vis) {
+  var elt = document.getElementById('dep3Lived-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$50(vis, env) {
-  var elt = document.getElementById('dep3Lived-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$42(vis);
+}
+function toggleVisibility$43(vis) {
+  var elt = document.getElementById('dep3Ctc-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$51(vis, env) {
-  var elt = document.getElementById('dep3Ctc-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$43(vis);
+}
+function toggleVisibility$44(vis) {
+  var elt = document.getElementById('dep3Odc-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$52(vis, env) {
-  var elt = document.getElementById('dep3Odc-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$44(vis);
 }
 function updateVisibility$53(vis, env) {
-  updateVisibility$46(vis, env); 
-  updateVisibility$47(vis, env); 
-  updateVisibility$48(vis, env); 
-  updateVisibility$49(vis, env); 
-  updateVisibility$50(vis, env); 
-  updateVisibility$51(vis, env); 
+  updateVisibility$46(vis, env);
+  updateVisibility$47(vis, env);
+  updateVisibility$48(vis, env);
+  updateVisibility$49(vis, env);
+  updateVisibility$50(vis, env);
+  updateVisibility$51(vis, env);
   updateVisibility$52(vis, env);
 }
 function updateVisibility$54(vis, env) {
   updateVisibility$53(eve$57(env), env);
 }
-function updateVisibility$55(vis, env) {
+function toggleVisibility$45(vis) {
   var elt = document.getElementById('dep4Name-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$55(vis, env) {
+  toggleVisibility$45(vis);
+}
+function toggleVisibility$46(vis) {
+  var elt = document.getElementById('dep4Ssn-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$56(vis, env) {
-  var elt = document.getElementById('dep4Ssn-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$46(vis);
+}
+function toggleVisibility$47(vis) {
+  var elt = document.getElementById('dep4Relationship-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$57(vis, env) {
-  var elt = document.getElementById('dep4Relationship-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$47(vis);
+}
+function toggleVisibility$48(vis) {
+  var elt = document.getElementById('dep4Age-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$58(vis, env) {
-  var elt = document.getElementById('dep4Age-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$48(vis);
+}
+function toggleVisibility$49(vis) {
+  var elt = document.getElementById('dep4Lived-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$59(vis, env) {
-  var elt = document.getElementById('dep4Lived-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$49(vis);
+}
+function toggleVisibility$50(vis) {
+  var elt = document.getElementById('dep4Ctc-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$60(vis, env) {
-  var elt = document.getElementById('dep4Ctc-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$50(vis);
+}
+function toggleVisibility$51(vis) {
+  var elt = document.getElementById('dep4Odc-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$61(vis, env) {
-  var elt = document.getElementById('dep4Odc-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$51(vis);
 }
 function updateVisibility$62(vis, env) {
-  updateVisibility$55(vis, env); 
-  updateVisibility$56(vis, env); 
-  updateVisibility$57(vis, env); 
-  updateVisibility$58(vis, env); 
-  updateVisibility$59(vis, env); 
-  updateVisibility$60(vis, env); 
+  updateVisibility$55(vis, env);
+  updateVisibility$56(vis, env);
+  updateVisibility$57(vis, env);
+  updateVisibility$58(vis, env);
+  updateVisibility$59(vis, env);
+  updateVisibility$60(vis, env);
   updateVisibility$61(vis, env);
 }
 function updateVisibility$63(vis, env) {
   updateVisibility$62(eve$65(env), env);
 }
-function updateVisibility$64(vis, env) {
+function toggleVisibility$52(vis) {
   var elt = document.getElementById('nW2-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$64(vis, env) {
+  toggleVisibility$52(vis);
+}
+function toggleVisibility$53(vis) {
+  var elt = document.getElementById('w2a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$65(vis, env) {
-  var elt = document.getElementById('w2a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$53(vis);
+}
+function toggleVisibility$54(vis) {
+  var elt = document.getElementById('w2aWages-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$66(vis, env) {
-  var elt = document.getElementById('w2aWages-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$54(vis);
+}
+function toggleVisibility$55(vis) {
+  var elt = document.getElementById('w2aWithheld-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$67(vis, env) {
-  var elt = document.getElementById('w2aWithheld-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$55(vis);
+}
+function toggleVisibility$56(vis) {
+  var elt = document.getElementById('w2aTips-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$68(vis, env) {
-  var elt = document.getElementById('w2aTips-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$56(vis);
+}
+function toggleVisibility$57(vis) {
+  var elt = document.getElementById('w2aCare-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$69(vis, env) {
-  var elt = document.getElementById('w2aCare-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$57(vis);
 }
 function updateVisibility$70(vis, env) {
-  updateVisibility$65(vis, env); 
-  updateVisibility$66(vis, env); 
-  updateVisibility$67(vis, env); 
-  updateVisibility$68(vis, env); 
+  updateVisibility$65(vis, env);
+  updateVisibility$66(vis, env);
+  updateVisibility$67(vis, env);
+  updateVisibility$68(vis, env);
   updateVisibility$69(vis, env);
 }
 function updateVisibility$71(vis, env) {
   updateVisibility$70(eve$73(env), env);
 }
-function updateVisibility$72(vis, env) {
+function toggleVisibility$58(vis) {
   var elt = document.getElementById('w2b-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$72(vis, env) {
+  toggleVisibility$58(vis);
+}
+function toggleVisibility$59(vis) {
+  var elt = document.getElementById('w2bWages-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$73(vis, env) {
-  var elt = document.getElementById('w2bWages-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$59(vis);
+}
+function toggleVisibility$60(vis) {
+  var elt = document.getElementById('w2bWithheld-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$74(vis, env) {
-  var elt = document.getElementById('w2bWithheld-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$60(vis);
+}
+function toggleVisibility$61(vis) {
+  var elt = document.getElementById('w2bTips-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$75(vis, env) {
-  var elt = document.getElementById('w2bTips-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$61(vis);
+}
+function toggleVisibility$62(vis) {
+  var elt = document.getElementById('w2bCare-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$76(vis, env) {
-  var elt = document.getElementById('w2bCare-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$62(vis);
 }
 function updateVisibility$77(vis, env) {
-  updateVisibility$72(vis, env); 
-  updateVisibility$73(vis, env); 
-  updateVisibility$74(vis, env); 
-  updateVisibility$75(vis, env); 
+  updateVisibility$72(vis, env);
+  updateVisibility$73(vis, env);
+  updateVisibility$74(vis, env);
+  updateVisibility$75(vis, env);
   updateVisibility$76(vis, env);
 }
 function updateVisibility$78(vis, env) {
   updateVisibility$77(eve$74(env), env);
 }
-function updateVisibility$79(vis, env) {
+function toggleVisibility$63(vis) {
   var elt = document.getElementById('w2c-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$79(vis, env) {
+  toggleVisibility$63(vis);
+}
+function toggleVisibility$64(vis) {
+  var elt = document.getElementById('w2cWages-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$80(vis, env) {
-  var elt = document.getElementById('w2cWages-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$64(vis);
+}
+function toggleVisibility$65(vis) {
+  var elt = document.getElementById('w2cWithheld-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$81(vis, env) {
-  var elt = document.getElementById('w2cWithheld-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$65(vis);
+}
+function toggleVisibility$66(vis) {
+  var elt = document.getElementById('w2cTips-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$82(vis, env) {
-  var elt = document.getElementById('w2cTips-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$66(vis);
+}
+function toggleVisibility$67(vis) {
+  var elt = document.getElementById('w2cCare-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$83(vis, env) {
-  var elt = document.getElementById('w2cCare-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$67(vis);
 }
 function updateVisibility$84(vis, env) {
-  updateVisibility$79(vis, env); 
-  updateVisibility$80(vis, env); 
-  updateVisibility$81(vis, env); 
-  updateVisibility$82(vis, env); 
+  updateVisibility$79(vis, env);
+  updateVisibility$80(vis, env);
+  updateVisibility$81(vis, env);
+  updateVisibility$82(vis, env);
   updateVisibility$83(vis, env);
 }
 function updateVisibility$85(vis, env) {
   updateVisibility$84(eve$75(env), env);
 }
-function updateVisibility$86(vis, env) {
+function toggleVisibility$68(vis) {
   var elt = document.getElementById('sBPayer1-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$86(vis, env) {
+  toggleVisibility$68(vis);
+}
+function toggleVisibility$69(vis) {
+  var elt = document.getElementById('sBInt1-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$87(vis, env) {
-  var elt = document.getElementById('sBInt1-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$69(vis);
+}
+function toggleVisibility$70(vis) {
+  var elt = document.getElementById('sBPayer2-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$88(vis, env) {
-  var elt = document.getElementById('sBPayer2-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$70(vis);
+}
+function toggleVisibility$71(vis) {
+  var elt = document.getElementById('sBInt2-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$89(vis, env) {
-  var elt = document.getElementById('sBInt2-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$71(vis);
+}
+function toggleVisibility$72(vis) {
+  var elt = document.getElementById('sBPayer3-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$90(vis, env) {
-  var elt = document.getElementById('sBPayer3-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$72(vis);
+}
+function toggleVisibility$73(vis) {
+  var elt = document.getElementById('sBInt3-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$91(vis, env) {
-  var elt = document.getElementById('sBInt3-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$73(vis);
+}
+function toggleVisibility$74(vis) {
+  var elt = document.getElementById('sBL2-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$92(vis, env) {
-  var elt = document.getElementById('sBL2-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$74(vis);
+}
+function toggleVisibility$75(vis) {
+  var elt = document.getElementById('sBL3-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$93(vis, env) {
-  var elt = document.getElementById('sBL3-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$75(vis);
+}
+function toggleVisibility$76(vis) {
+  var elt = document.getElementById('sBL4-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$94(vis, env) {
-  var elt = document.getElementById('sBL4-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$76(vis);
+}
+function toggleVisibility$77(vis) {
+  var elt = document.getElementById('taxExemptInterest-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$95(vis, env) {
-  var elt = document.getElementById('taxExemptInterest-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$77(vis);
+}
+function toggleVisibility$78(vis) {
+  var elt = document.getElementById('sBDivPayer1-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$96(vis, env) {
-  var elt = document.getElementById('sBDivPayer1-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$78(vis);
+}
+function toggleVisibility$79(vis) {
+  var elt = document.getElementById('sBDiv1-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$97(vis, env) {
-  var elt = document.getElementById('sBDiv1-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$79(vis);
+}
+function toggleVisibility$80(vis) {
+  var elt = document.getElementById('sBDivPayer2-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$98(vis, env) {
-  var elt = document.getElementById('sBDivPayer2-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$80(vis);
+}
+function toggleVisibility$81(vis) {
+  var elt = document.getElementById('sBDiv2-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$99(vis, env) {
-  var elt = document.getElementById('sBDiv2-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$81(vis);
+}
+function toggleVisibility$82(vis) {
+  var elt = document.getElementById('sBL6-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$100(vis, env) {
-  var elt = document.getElementById('sBL6-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$82(vis);
+}
+function toggleVisibility$83(vis) {
+  var elt = document.getElementById('qualifiedDividends-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$101(vis, env) {
-  var elt = document.getElementById('qualifiedDividends-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$83(vis);
+}
+function toggleVisibility$84(vis) {
+  var elt = document.getElementById('qualifiedOk-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$102(vis, env) {
-  var elt = document.getElementById('qualifiedOk-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$84(vis);
+}
+function toggleVisibility$85(vis) {
+  var elt = document.getElementById('sBPart3Required-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$103(vis, env) {
-  var elt = document.getElementById('sBPart3Required-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$85(vis);
+}
+function toggleVisibility$86(vis) {
+  var elt = document.getElementById('sBL7a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$104(vis, env) {
-  var elt = document.getElementById('sBL7a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$86(vis);
+}
+function toggleVisibility$87(vis) {
+  var elt = document.getElementById('sBFbar-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$105(vis, env) {
-  var elt = document.getElementById('sBFbar-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$87(vis);
+}
+function toggleVisibility$88(vis) {
+  var elt = document.getElementById('sBL7b-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$106(vis, env) {
-  var elt = document.getElementById('sBL7b-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$88(vis);
 }
 function updateVisibility$107(vis, env) {
-  updateVisibility$105(vis, env); 
+  updateVisibility$105(vis, env);
   updateVisibility$106(vis, env);
 }
 function updateVisibility$108(vis, env) {
   updateVisibility$107(eve$96(env), env);
 }
-function updateVisibility$109(vis, env) {
+function toggleVisibility$89(vis) {
   var elt = document.getElementById('sBL8-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$109(vis, env) {
+  toggleVisibility$89(vis);
 }
 function updateVisibility$110(vis, env) {
-  updateVisibility$104(vis, env); 
-  updateVisibility$108(vis, env); 
+  updateVisibility$104(vis, env);
+  updateVisibility$108(vis, env);
   updateVisibility$109(vis, env);
 }
 function updateVisibility$111(vis, env) {
   updateVisibility$110(eve$95(env), env);
 }
-function updateVisibility$112(vis, env) {
+function toggleVisibility$90(vis) {
   var elt = document.getElementById('hasBusiness-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$112(vis, env) {
+  toggleVisibility$90(vis);
+}
+function toggleVisibility$91(vis) {
+  var elt = document.getElementById('sCA-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$113(vis, env) {
-  var elt = document.getElementById('sCA-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$91(vis);
+}
+function toggleVisibility$92(vis) {
+  var elt = document.getElementById('sCB-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$114(vis, env) {
-  var elt = document.getElementById('sCB-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$92(vis);
+}
+function toggleVisibility$93(vis) {
+  var elt = document.getElementById('sCCash-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$115(vis, env) {
-  var elt = document.getElementById('sCCash-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$93(vis);
+}
+function toggleVisibility$94(vis) {
+  var elt = document.getElementById('sCG-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$116(vis, env) {
-  var elt = document.getElementById('sCG-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$94(vis);
+}
+function toggleVisibility$95(vis) {
+  var elt = document.getElementById('sCI-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$117(vis, env) {
-  var elt = document.getElementById('sCI-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$95(vis);
+}
+function toggleVisibility$96(vis) {
+  var elt = document.getElementById('sCJ-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$118(vis, env) {
-  var elt = document.getElementById('sCJ-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$96(vis);
 }
 function updateVisibility$119(vis, env) {
   updateVisibility$118(vis, env);
@@ -5011,169 +5300,286 @@ function updateVisibility$119(vis, env) {
 function updateVisibility$120(vis, env) {
   updateVisibility$119(eve$98(env), env);
 }
-function updateVisibility$121(vis, env) {
+function toggleVisibility$97(vis) {
   var elt = document.getElementById('sCL1-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$121(vis, env) {
+  toggleVisibility$97(vis);
+}
+function toggleVisibility$98(vis) {
+  var elt = document.getElementById('sCL2-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$122(vis, env) {
-  var elt = document.getElementById('sCL2-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$98(vis);
+}
+function toggleVisibility$99(vis) {
+  var elt = document.getElementById('sCL3-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$123(vis, env) {
-  var elt = document.getElementById('sCL3-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$99(vis);
+}
+function toggleVisibility$100(vis) {
+  var elt = document.getElementById('sCL4-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$124(vis, env) {
-  var elt = document.getElementById('sCL4-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$100(vis);
+}
+function toggleVisibility$101(vis) {
+  var elt = document.getElementById('sCL5-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$125(vis, env) {
-  var elt = document.getElementById('sCL5-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$101(vis);
+}
+function toggleVisibility$102(vis) {
+  var elt = document.getElementById('sCL6-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$126(vis, env) {
-  var elt = document.getElementById('sCL6-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$102(vis);
+}
+function toggleVisibility$103(vis) {
+  var elt = document.getElementById('sCL7-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$127(vis, env) {
-  var elt = document.getElementById('sCL7-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$103(vis);
+}
+function toggleVisibility$104(vis) {
+  var elt = document.getElementById('sCL8-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$128(vis, env) {
-  var elt = document.getElementById('sCL8-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$104(vis);
+}
+function toggleVisibility$105(vis) {
+  var elt = document.getElementById('sCL9-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$129(vis, env) {
-  var elt = document.getElementById('sCL9-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$105(vis);
+}
+function toggleVisibility$106(vis) {
+  var elt = document.getElementById('sCL10-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$130(vis, env) {
-  var elt = document.getElementById('sCL10-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$106(vis);
+}
+function toggleVisibility$107(vis) {
+  var elt = document.getElementById('sCL11-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$131(vis, env) {
-  var elt = document.getElementById('sCL11-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$107(vis);
+}
+function toggleVisibility$108(vis) {
+  var elt = document.getElementById('sCL12-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$132(vis, env) {
-  var elt = document.getElementById('sCL12-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$108(vis);
+}
+function toggleVisibility$109(vis) {
+  var elt = document.getElementById('sCL13-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$133(vis, env) {
-  var elt = document.getElementById('sCL13-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$109(vis);
+}
+function toggleVisibility$110(vis) {
+  var elt = document.getElementById('sCL14-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$134(vis, env) {
-  var elt = document.getElementById('sCL14-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$110(vis);
+}
+function toggleVisibility$111(vis) {
+  var elt = document.getElementById('sCL15-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$135(vis, env) {
-  var elt = document.getElementById('sCL15-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$111(vis);
+}
+function toggleVisibility$112(vis) {
+  var elt = document.getElementById('sCL16a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$136(vis, env) {
-  var elt = document.getElementById('sCL16a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$112(vis);
+}
+function toggleVisibility$113(vis) {
+  var elt = document.getElementById('sCL16b-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$137(vis, env) {
-  var elt = document.getElementById('sCL16b-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$113(vis);
+}
+function toggleVisibility$114(vis) {
+  var elt = document.getElementById('sCL17-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$138(vis, env) {
-  var elt = document.getElementById('sCL17-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$114(vis);
+}
+function toggleVisibility$115(vis) {
+  var elt = document.getElementById('sCL18-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$139(vis, env) {
-  var elt = document.getElementById('sCL18-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$115(vis);
+}
+function toggleVisibility$116(vis) {
+  var elt = document.getElementById('sCL19-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$140(vis, env) {
-  var elt = document.getElementById('sCL19-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$116(vis);
+}
+function toggleVisibility$117(vis) {
+  var elt = document.getElementById('sCL20a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$141(vis, env) {
-  var elt = document.getElementById('sCL20a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$117(vis);
+}
+function toggleVisibility$118(vis) {
+  var elt = document.getElementById('sCL20b-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$142(vis, env) {
-  var elt = document.getElementById('sCL20b-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$118(vis);
+}
+function toggleVisibility$119(vis) {
+  var elt = document.getElementById('sCL21-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$143(vis, env) {
-  var elt = document.getElementById('sCL21-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$119(vis);
+}
+function toggleVisibility$120(vis) {
+  var elt = document.getElementById('sCL22-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$144(vis, env) {
-  var elt = document.getElementById('sCL22-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$120(vis);
+}
+function toggleVisibility$121(vis) {
+  var elt = document.getElementById('sCL23-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$145(vis, env) {
-  var elt = document.getElementById('sCL23-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$121(vis);
+}
+function toggleVisibility$122(vis) {
+  var elt = document.getElementById('sCL24a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$146(vis, env) {
-  var elt = document.getElementById('sCL24a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$122(vis);
+}
+function toggleVisibility$123(vis) {
+  var elt = document.getElementById('sCMealsTotal-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$147(vis, env) {
-  var elt = document.getElementById('sCMealsTotal-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$123(vis);
+}
+function toggleVisibility$124(vis) {
+  var elt = document.getElementById('sCL24b-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$148(vis, env) {
-  var elt = document.getElementById('sCL24b-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$124(vis);
+}
+function toggleVisibility$125(vis) {
+  var elt = document.getElementById('sCL25-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$149(vis, env) {
-  var elt = document.getElementById('sCL25-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$125(vis);
+}
+function toggleVisibility$126(vis) {
+  var elt = document.getElementById('sCL26-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$150(vis, env) {
-  var elt = document.getElementById('sCL26-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$126(vis);
+}
+function toggleVisibility$127(vis) {
+  var elt = document.getElementById('sCL27a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$151(vis, env) {
-  var elt = document.getElementById('sCL27a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$127(vis);
+}
+function toggleVisibility$128(vis) {
+  var elt = document.getElementById('sCL28-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$152(vis, env) {
-  var elt = document.getElementById('sCL28-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$128(vis);
+}
+function toggleVisibility$129(vis) {
+  var elt = document.getElementById('sCL29-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$153(vis, env) {
-  var elt = document.getElementById('sCL29-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$129(vis);
+}
+function toggleVisibility$130(vis) {
+  var elt = document.getElementById('sCHomeOffice-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$154(vis, env) {
-  var elt = document.getElementById('sCHomeOffice-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$130(vis);
+}
+function toggleVisibility$131(vis) {
+  var elt = document.getElementById('sCHomeSqft-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$155(vis, env) {
-  var elt = document.getElementById('sCHomeSqft-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$131(vis);
+}
+function toggleVisibility$132(vis) {
+  var elt = document.getElementById('sCHomeSqftOk-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$156(vis, env) {
-  var elt = document.getElementById('sCHomeSqftOk-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$132(vis);
+}
+function toggleVisibility$133(vis) {
+  var elt = document.getElementById('sCL30-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$157(vis, env) {
-  var elt = document.getElementById('sCL30-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$133(vis);
 }
 function updateVisibility$158(vis, env) {
-  updateVisibility$155(vis, env); 
-  updateVisibility$156(vis, env); 
+  updateVisibility$155(vis, env);
+  updateVisibility$156(vis, env);
   updateVisibility$157(vis, env);
 }
 function updateVisibility$159(vis, env) {
   updateVisibility$158(eve$158(env), env);
 }
-function updateVisibility$160(vis, env) {
+function toggleVisibility$134(vis) {
   var elt = document.getElementById('sCL31-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$160(vis, env) {
+  toggleVisibility$134(vis);
+}
+function toggleVisibility$135(vis) {
+  var elt = document.getElementById('sCL32a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$161(vis, env) {
-  var elt = document.getElementById('sCL32a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$135(vis);
 }
 function updateVisibility$162(vis, env) {
   updateVisibility$161(vis, env);
@@ -5182,167 +5588,242 @@ function updateVisibility$163(vis, env) {
   updateVisibility$162(eve$169(env), env);
 }
 function updateVisibility$164(vis, env) {
-  updateVisibility$113(vis, env); 
-  updateVisibility$114(vis, env); 
-  updateVisibility$115(vis, env); 
-  updateVisibility$116(vis, env); 
-  updateVisibility$117(vis, env); 
-  updateVisibility$120(vis, env); 
-  updateVisibility$121(vis, env); 
-  updateVisibility$122(vis, env); 
-  updateVisibility$123(vis, env); 
-  updateVisibility$124(vis, env); 
-  updateVisibility$125(vis, env); 
-  updateVisibility$126(vis, env); 
-  updateVisibility$127(vis, env); 
-  updateVisibility$128(vis, env); 
-  updateVisibility$129(vis, env); 
-  updateVisibility$130(vis, env); 
-  updateVisibility$131(vis, env); 
-  updateVisibility$132(vis, env); 
-  updateVisibility$133(vis, env); 
-  updateVisibility$134(vis, env); 
-  updateVisibility$135(vis, env); 
-  updateVisibility$136(vis, env); 
-  updateVisibility$137(vis, env); 
-  updateVisibility$138(vis, env); 
-  updateVisibility$139(vis, env); 
-  updateVisibility$140(vis, env); 
-  updateVisibility$141(vis, env); 
-  updateVisibility$142(vis, env); 
-  updateVisibility$143(vis, env); 
-  updateVisibility$144(vis, env); 
-  updateVisibility$145(vis, env); 
-  updateVisibility$146(vis, env); 
-  updateVisibility$147(vis, env); 
-  updateVisibility$148(vis, env); 
-  updateVisibility$149(vis, env); 
-  updateVisibility$150(vis, env); 
-  updateVisibility$151(vis, env); 
-  updateVisibility$152(vis, env); 
-  updateVisibility$153(vis, env); 
-  updateVisibility$154(vis, env); 
-  updateVisibility$159(vis, env); 
-  updateVisibility$160(vis, env); 
+  updateVisibility$113(vis, env);
+  updateVisibility$114(vis, env);
+  updateVisibility$115(vis, env);
+  updateVisibility$116(vis, env);
+  updateVisibility$117(vis, env);
+  updateVisibility$120(vis, env);
+  updateVisibility$121(vis, env);
+  updateVisibility$122(vis, env);
+  updateVisibility$123(vis, env);
+  updateVisibility$124(vis, env);
+  updateVisibility$125(vis, env);
+  updateVisibility$126(vis, env);
+  updateVisibility$127(vis, env);
+  updateVisibility$128(vis, env);
+  updateVisibility$129(vis, env);
+  updateVisibility$130(vis, env);
+  updateVisibility$131(vis, env);
+  updateVisibility$132(vis, env);
+  updateVisibility$133(vis, env);
+  updateVisibility$134(vis, env);
+  updateVisibility$135(vis, env);
+  updateVisibility$136(vis, env);
+  updateVisibility$137(vis, env);
+  updateVisibility$138(vis, env);
+  updateVisibility$139(vis, env);
+  updateVisibility$140(vis, env);
+  updateVisibility$141(vis, env);
+  updateVisibility$142(vis, env);
+  updateVisibility$143(vis, env);
+  updateVisibility$144(vis, env);
+  updateVisibility$145(vis, env);
+  updateVisibility$146(vis, env);
+  updateVisibility$147(vis, env);
+  updateVisibility$148(vis, env);
+  updateVisibility$149(vis, env);
+  updateVisibility$150(vis, env);
+  updateVisibility$151(vis, env);
+  updateVisibility$152(vis, env);
+  updateVisibility$153(vis, env);
+  updateVisibility$154(vis, env);
+  updateVisibility$159(vis, env);
+  updateVisibility$160(vis, env);
   updateVisibility$163(vis, env);
 }
 function updateVisibility$165(vis, env) {
   updateVisibility$164(eve$97(env), env);
 }
-function updateVisibility$166(vis, env) {
+function toggleVisibility$136(vis) {
   var elt = document.getElementById('sSERequired-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$166(vis, env) {
+  toggleVisibility$136(vis);
+}
+function toggleVisibility$137(vis) {
+  var elt = document.getElementById('sSEL2-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$167(vis, env) {
-  var elt = document.getElementById('sSEL2-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$137(vis);
+}
+function toggleVisibility$138(vis) {
+  var elt = document.getElementById('sSEL4a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$168(vis, env) {
-  var elt = document.getElementById('sSEL4a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$138(vis);
+}
+function toggleVisibility$139(vis) {
+  var elt = document.getElementById('sSEL8a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$169(vis, env) {
-  var elt = document.getElementById('sSEL8a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$139(vis);
+}
+function toggleVisibility$140(vis) {
+  var elt = document.getElementById('sSEL7-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$170(vis, env) {
-  var elt = document.getElementById('sSEL7-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$140(vis);
+}
+function toggleVisibility$141(vis) {
+  var elt = document.getElementById('sSEL9-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$171(vis, env) {
-  var elt = document.getElementById('sSEL9-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$141(vis);
+}
+function toggleVisibility$142(vis) {
+  var elt = document.getElementById('sSEUnderMax-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$172(vis, env) {
-  var elt = document.getElementById('sSEUnderMax-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$142(vis);
+}
+function toggleVisibility$143(vis) {
+  var elt = document.getElementById('sSEL10-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$173(vis, env) {
-  var elt = document.getElementById('sSEL10-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$143(vis);
+}
+function toggleVisibility$144(vis) {
+  var elt = document.getElementById('sSEL11-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$174(vis, env) {
-  var elt = document.getElementById('sSEL11-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$144(vis);
+}
+function toggleVisibility$145(vis) {
+  var elt = document.getElementById('sSEL12-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$175(vis, env) {
-  var elt = document.getElementById('sSEL12-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$145(vis);
+}
+function toggleVisibility$146(vis) {
+  var elt = document.getElementById('sSEL13-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$176(vis, env) {
-  var elt = document.getElementById('sSEL13-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$146(vis);
 }
 function updateVisibility$177(vis, env) {
-  updateVisibility$167(vis, env); 
-  updateVisibility$168(vis, env); 
-  updateVisibility$169(vis, env); 
-  updateVisibility$170(vis, env); 
-  updateVisibility$171(vis, env); 
-  updateVisibility$172(vis, env); 
-  updateVisibility$173(vis, env); 
-  updateVisibility$174(vis, env); 
-  updateVisibility$175(vis, env); 
+  updateVisibility$167(vis, env);
+  updateVisibility$168(vis, env);
+  updateVisibility$169(vis, env);
+  updateVisibility$170(vis, env);
+  updateVisibility$171(vis, env);
+  updateVisibility$172(vis, env);
+  updateVisibility$173(vis, env);
+  updateVisibility$174(vis, env);
+  updateVisibility$175(vis, env);
   updateVisibility$176(vis, env);
 }
 function updateVisibility$178(vis, env) {
   updateVisibility$177(eve$172(env), env);
 }
-function updateVisibility$179(vis, env) {
+function toggleVisibility$147(vis) {
   var elt = document.getElementById('s1L1-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$179(vis, env) {
+  toggleVisibility$147(vis);
+}
+function toggleVisibility$148(vis) {
+  var elt = document.getElementById('s1L2a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$180(vis, env) {
-  var elt = document.getElementById('s1L2a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$148(vis);
+}
+function toggleVisibility$149(vis) {
+  var elt = document.getElementById('s1L3-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$181(vis, env) {
-  var elt = document.getElementById('s1L3-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$149(vis);
+}
+function toggleVisibility$150(vis) {
+  var elt = document.getElementById('s1L4-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$182(vis, env) {
-  var elt = document.getElementById('s1L4-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$150(vis);
+}
+function toggleVisibility$151(vis) {
+  var elt = document.getElementById('s1L5-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$183(vis, env) {
-  var elt = document.getElementById('s1L5-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$151(vis);
+}
+function toggleVisibility$152(vis) {
+  var elt = document.getElementById('s1L6-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$184(vis, env) {
-  var elt = document.getElementById('s1L6-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$152(vis);
+}
+function toggleVisibility$153(vis) {
+  var elt = document.getElementById('s1L7-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$185(vis, env) {
-  var elt = document.getElementById('s1L7-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$153(vis);
+}
+function toggleVisibility$154(vis) {
+  var elt = document.getElementById('s1L8a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$186(vis, env) {
-  var elt = document.getElementById('s1L8a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$154(vis);
+}
+function toggleVisibility$155(vis) {
+  var elt = document.getElementById('s1L8b-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$187(vis, env) {
-  var elt = document.getElementById('s1L8b-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$155(vis);
+}
+function toggleVisibility$156(vis) {
+  var elt = document.getElementById('s1L8c-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$188(vis, env) {
-  var elt = document.getElementById('s1L8c-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$156(vis);
+}
+function toggleVisibility$157(vis) {
+  var elt = document.getElementById('s1L8i-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$189(vis, env) {
-  var elt = document.getElementById('s1L8i-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$157(vis);
+}
+function toggleVisibility$158(vis) {
+  var elt = document.getElementById('s1L8j-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$190(vis, env) {
-  var elt = document.getElementById('s1L8j-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$158(vis);
+}
+function toggleVisibility$159(vis) {
+  var elt = document.getElementById('s1L8z-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$191(vis, env) {
-  var elt = document.getElementById('s1L8z-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$159(vis);
+}
+function toggleVisibility$160(vis) {
+  var elt = document.getElementById('s1L8zType-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$192(vis, env) {
-  var elt = document.getElementById('s1L8zType-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$160(vis);
 }
 function updateVisibility$193(vis, env) {
   updateVisibility$192(vis, env);
@@ -5350,53 +5831,89 @@ function updateVisibility$193(vis, env) {
 function updateVisibility$194(vis, env) {
   updateVisibility$193(eve$203(env), env);
 }
-function updateVisibility$195(vis, env) {
+function toggleVisibility$161(vis) {
   var elt = document.getElementById('s1L9-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$195(vis, env) {
+  toggleVisibility$161(vis);
+}
+function toggleVisibility$162(vis) {
+  var elt = document.getElementById('s1L10-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$196(vis, env) {
-  var elt = document.getElementById('s1L10-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$162(vis);
+}
+function toggleVisibility$163(vis) {
+  var elt = document.getElementById('s1L11-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$197(vis, env) {
-  var elt = document.getElementById('s1L11-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$163(vis);
+}
+function toggleVisibility$164(vis) {
+  var elt = document.getElementById('s1L11Ok-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$198(vis, env) {
-  var elt = document.getElementById('s1L11Ok-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$164(vis);
+}
+function toggleVisibility$165(vis) {
+  var elt = document.getElementById('s1L13-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$199(vis, env) {
-  var elt = document.getElementById('s1L13-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$165(vis);
+}
+function toggleVisibility$166(vis) {
+  var elt = document.getElementById('s1L14-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$200(vis, env) {
-  var elt = document.getElementById('s1L14-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$166(vis);
+}
+function toggleVisibility$167(vis) {
+  var elt = document.getElementById('s1L15-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$201(vis, env) {
-  var elt = document.getElementById('s1L15-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$167(vis);
+}
+function toggleVisibility$168(vis) {
+  var elt = document.getElementById('s1L16-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$202(vis, env) {
-  var elt = document.getElementById('s1L16-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$168(vis);
+}
+function toggleVisibility$169(vis) {
+  var elt = document.getElementById('s1L17-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$203(vis, env) {
-  var elt = document.getElementById('s1L17-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$169(vis);
+}
+function toggleVisibility$170(vis) {
+  var elt = document.getElementById('s1L18-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$204(vis, env) {
-  var elt = document.getElementById('s1L18-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$170(vis);
+}
+function toggleVisibility$171(vis) {
+  var elt = document.getElementById('s1L19a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$205(vis, env) {
-  var elt = document.getElementById('s1L19a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$171(vis);
+}
+function toggleVisibility$172(vis) {
+  var elt = document.getElementById('s1L19b-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$206(vis, env) {
-  var elt = document.getElementById('s1L19b-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$172(vis);
 }
 function updateVisibility$207(vis, env) {
   updateVisibility$206(vis, env);
@@ -5404,101 +5921,173 @@ function updateVisibility$207(vis, env) {
 function updateVisibility$208(vis, env) {
   updateVisibility$207(eve$238(env), env);
 }
-function updateVisibility$209(vis, env) {
+function toggleVisibility$173(vis) {
   var elt = document.getElementById('s1L20-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$209(vis, env) {
+  toggleVisibility$173(vis);
+}
+function toggleVisibility$174(vis) {
+  var elt = document.getElementById('s1L20Ok-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$210(vis, env) {
-  var elt = document.getElementById('s1L20Ok-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$174(vis);
+}
+function toggleVisibility$175(vis) {
+  var elt = document.getElementById('s1L21-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$211(vis, env) {
-  var elt = document.getElementById('s1L21-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$175(vis);
+}
+function toggleVisibility$176(vis) {
+  var elt = document.getElementById('s1L21Ok-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$212(vis, env) {
-  var elt = document.getElementById('s1L21Ok-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$176(vis);
+}
+function toggleVisibility$177(vis) {
+  var elt = document.getElementById('s1L26-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$213(vis, env) {
-  var elt = document.getElementById('s1L26-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$177(vis);
+}
+function toggleVisibility$178(vis) {
+  var elt = document.getElementById('f1040L1a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$214(vis, env) {
-  var elt = document.getElementById('f1040L1a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$178(vis);
+}
+function toggleVisibility$179(vis) {
+  var elt = document.getElementById('f1040L1b-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$215(vis, env) {
-  var elt = document.getElementById('f1040L1b-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$179(vis);
+}
+function toggleVisibility$180(vis) {
+  var elt = document.getElementById('f1040L1c-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$216(vis, env) {
-  var elt = document.getElementById('f1040L1c-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$180(vis);
+}
+function toggleVisibility$181(vis) {
+  var elt = document.getElementById('f1040L1e-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$217(vis, env) {
-  var elt = document.getElementById('f1040L1e-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$181(vis);
+}
+function toggleVisibility$182(vis) {
+  var elt = document.getElementById('f1040L1f-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$218(vis, env) {
-  var elt = document.getElementById('f1040L1f-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$182(vis);
+}
+function toggleVisibility$183(vis) {
+  var elt = document.getElementById('f1040L1g-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$219(vis, env) {
-  var elt = document.getElementById('f1040L1g-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$183(vis);
+}
+function toggleVisibility$184(vis) {
+  var elt = document.getElementById('f1040L1h-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$220(vis, env) {
-  var elt = document.getElementById('f1040L1h-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$184(vis);
+}
+function toggleVisibility$185(vis) {
+  var elt = document.getElementById('f1040L1z-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$221(vis, env) {
-  var elt = document.getElementById('f1040L1z-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$185(vis);
+}
+function toggleVisibility$186(vis) {
+  var elt = document.getElementById('f1040L2a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$222(vis, env) {
-  var elt = document.getElementById('f1040L2a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$186(vis);
+}
+function toggleVisibility$187(vis) {
+  var elt = document.getElementById('f1040L2b-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$223(vis, env) {
-  var elt = document.getElementById('f1040L2b-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$187(vis);
+}
+function toggleVisibility$188(vis) {
+  var elt = document.getElementById('f1040L3a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$224(vis, env) {
-  var elt = document.getElementById('f1040L3a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$188(vis);
+}
+function toggleVisibility$189(vis) {
+  var elt = document.getElementById('f1040L3b-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$225(vis, env) {
-  var elt = document.getElementById('f1040L3b-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$189(vis);
+}
+function toggleVisibility$190(vis) {
+  var elt = document.getElementById('f1040L4a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$226(vis, env) {
-  var elt = document.getElementById('f1040L4a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$190(vis);
+}
+function toggleVisibility$191(vis) {
+  var elt = document.getElementById('f1040L4b-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$227(vis, env) {
-  var elt = document.getElementById('f1040L4b-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$191(vis);
+}
+function toggleVisibility$192(vis) {
+  var elt = document.getElementById('f1040L5a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$228(vis, env) {
-  var elt = document.getElementById('f1040L5a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$192(vis);
+}
+function toggleVisibility$193(vis) {
+  var elt = document.getElementById('f1040L5b-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$229(vis, env) {
-  var elt = document.getElementById('f1040L5b-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$193(vis);
+}
+function toggleVisibility$194(vis) {
+  var elt = document.getElementById('f1040L6a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$230(vis, env) {
-  var elt = document.getElementById('f1040L6a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$194(vis);
+}
+function toggleVisibility$195(vis) {
+  var elt = document.getElementById('f1040L6b-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$231(vis, env) {
-  var elt = document.getElementById('f1040L6b-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$195(vis);
+}
+function toggleVisibility$196(vis) {
+  var elt = document.getElementById('f1040L6c-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$232(vis, env) {
-  var elt = document.getElementById('f1040L6c-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$196(vis);
 }
 function updateVisibility$233(vis, env) {
   updateVisibility$232(vis, env);
@@ -5506,93 +6095,159 @@ function updateVisibility$233(vis, env) {
 function updateVisibility$234(vis, env) {
   updateVisibility$233(eve$283(env), env);
 }
-function updateVisibility$235(vis, env) {
+function toggleVisibility$197(vis) {
   var elt = document.getElementById('f1040L7-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$235(vis, env) {
+  toggleVisibility$197(vis);
+}
+function toggleVisibility$198(vis) {
+  var elt = document.getElementById('f1040L7NoSchedD-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$236(vis, env) {
-  var elt = document.getElementById('f1040L7NoSchedD-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$198(vis);
+}
+function toggleVisibility$199(vis) {
+  var elt = document.getElementById('f1040L8-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$237(vis, env) {
-  var elt = document.getElementById('f1040L8-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$199(vis);
+}
+function toggleVisibility$200(vis) {
+  var elt = document.getElementById('f1040L9-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$238(vis, env) {
-  var elt = document.getElementById('f1040L9-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$200(vis);
+}
+function toggleVisibility$201(vis) {
+  var elt = document.getElementById('f1040L10-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$239(vis, env) {
-  var elt = document.getElementById('f1040L10-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$201(vis);
+}
+function toggleVisibility$202(vis) {
+  var elt = document.getElementById('f1040L11-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$240(vis, env) {
-  var elt = document.getElementById('f1040L11-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$202(vis);
+}
+function toggleVisibility$203(vis) {
+  var elt = document.getElementById('itemize-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$241(vis, env) {
-  var elt = document.getElementById('itemize-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$203(vis);
+}
+function toggleVisibility$204(vis) {
+  var elt = document.getElementById('sAL1-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$242(vis, env) {
-  var elt = document.getElementById('sAL1-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$204(vis);
+}
+function toggleVisibility$205(vis) {
+  var elt = document.getElementById('sAL3-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$243(vis, env) {
-  var elt = document.getElementById('sAL3-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$205(vis);
+}
+function toggleVisibility$206(vis) {
+  var elt = document.getElementById('sAMedicalOver-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$244(vis, env) {
-  var elt = document.getElementById('sAMedicalOver-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$206(vis);
+}
+function toggleVisibility$207(vis) {
+  var elt = document.getElementById('sAL4-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$245(vis, env) {
-  var elt = document.getElementById('sAL4-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$207(vis);
+}
+function toggleVisibility$208(vis) {
+  var elt = document.getElementById('sAL5a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$246(vis, env) {
-  var elt = document.getElementById('sAL5a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$208(vis);
+}
+function toggleVisibility$209(vis) {
+  var elt = document.getElementById('sAL5b-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$247(vis, env) {
-  var elt = document.getElementById('sAL5b-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$209(vis);
+}
+function toggleVisibility$210(vis) {
+  var elt = document.getElementById('sAL5c-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$248(vis, env) {
-  var elt = document.getElementById('sAL5c-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$210(vis);
+}
+function toggleVisibility$211(vis) {
+  var elt = document.getElementById('sAL5d-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$249(vis, env) {
-  var elt = document.getElementById('sAL5d-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$211(vis);
+}
+function toggleVisibility$212(vis) {
+  var elt = document.getElementById('sASaltOk-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$250(vis, env) {
-  var elt = document.getElementById('sASaltOk-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$212(vis);
+}
+function toggleVisibility$213(vis) {
+  var elt = document.getElementById('sAL8a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$251(vis, env) {
-  var elt = document.getElementById('sAL8a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$213(vis);
+}
+function toggleVisibility$214(vis) {
+  var elt = document.getElementById('sAL8c-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$252(vis, env) {
-  var elt = document.getElementById('sAL8c-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$214(vis);
+}
+function toggleVisibility$215(vis) {
+  var elt = document.getElementById('sAL10-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$253(vis, env) {
-  var elt = document.getElementById('sAL10-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$215(vis);
+}
+function toggleVisibility$216(vis) {
+  var elt = document.getElementById('sAL11-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$254(vis, env) {
-  var elt = document.getElementById('sAL11-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$216(vis);
+}
+function toggleVisibility$217(vis) {
+  var elt = document.getElementById('sAL12-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$255(vis, env) {
-  var elt = document.getElementById('sAL12-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$217(vis);
+}
+function toggleVisibility$218(vis) {
+  var elt = document.getElementById('sAForm8283-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$256(vis, env) {
-  var elt = document.getElementById('sAForm8283-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$218(vis);
 }
 function updateVisibility$257(vis, env) {
   updateVisibility$256(vis, env);
@@ -5600,287 +6255,473 @@ function updateVisibility$257(vis, env) {
 function updateVisibility$258(vis, env) {
   updateVisibility$257(eve$330(env), env);
 }
-function updateVisibility$259(vis, env) {
+function toggleVisibility$219(vis) {
   var elt = document.getElementById('sAL13-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$259(vis, env) {
+  toggleVisibility$219(vis);
+}
+function toggleVisibility$220(vis) {
+  var elt = document.getElementById('sAL14-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$260(vis, env) {
-  var elt = document.getElementById('sAL14-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$220(vis);
+}
+function toggleVisibility$221(vis) {
+  var elt = document.getElementById('sAL15-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$261(vis, env) {
-  var elt = document.getElementById('sAL15-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$221(vis);
+}
+function toggleVisibility$222(vis) {
+  var elt = document.getElementById('sAL16-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$262(vis, env) {
-  var elt = document.getElementById('sAL16-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$222(vis);
+}
+function toggleVisibility$223(vis) {
+  var elt = document.getElementById('sAL17-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$263(vis, env) {
-  var elt = document.getElementById('sAL17-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$223(vis);
 }
 function updateVisibility$264(vis, env) {
-  updateVisibility$242(vis, env); 
-  updateVisibility$243(vis, env); 
-  updateVisibility$244(vis, env); 
-  updateVisibility$245(vis, env); 
-  updateVisibility$246(vis, env); 
-  updateVisibility$247(vis, env); 
-  updateVisibility$248(vis, env); 
-  updateVisibility$249(vis, env); 
-  updateVisibility$250(vis, env); 
-  updateVisibility$251(vis, env); 
-  updateVisibility$252(vis, env); 
-  updateVisibility$253(vis, env); 
-  updateVisibility$254(vis, env); 
-  updateVisibility$255(vis, env); 
-  updateVisibility$258(vis, env); 
-  updateVisibility$259(vis, env); 
-  updateVisibility$260(vis, env); 
-  updateVisibility$261(vis, env); 
-  updateVisibility$262(vis, env); 
+  updateVisibility$242(vis, env);
+  updateVisibility$243(vis, env);
+  updateVisibility$244(vis, env);
+  updateVisibility$245(vis, env);
+  updateVisibility$246(vis, env);
+  updateVisibility$247(vis, env);
+  updateVisibility$248(vis, env);
+  updateVisibility$249(vis, env);
+  updateVisibility$250(vis, env);
+  updateVisibility$251(vis, env);
+  updateVisibility$252(vis, env);
+  updateVisibility$253(vis, env);
+  updateVisibility$254(vis, env);
+  updateVisibility$255(vis, env);
+  updateVisibility$258(vis, env);
+  updateVisibility$259(vis, env);
+  updateVisibility$260(vis, env);
+  updateVisibility$261(vis, env);
+  updateVisibility$262(vis, env);
   updateVisibility$263(vis, env);
 }
 function updateVisibility$265(vis, env) {
   updateVisibility$264(eve$304(env), env);
 }
-function updateVisibility$266(vis, env) {
+function toggleVisibility$224(vis) {
   var elt = document.getElementById('stdSingle-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$266(vis, env) {
+  toggleVisibility$224(vis);
+}
+function toggleVisibility$225(vis) {
+  var elt = document.getElementById('stdJoint-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$267(vis, env) {
-  var elt = document.getElementById('stdJoint-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$225(vis);
+}
+function toggleVisibility$226(vis) {
+  var elt = document.getElementById('stdHoh-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$268(vis, env) {
-  var elt = document.getElementById('stdHoh-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$226(vis);
+}
+function toggleVisibility$227(vis) {
+  var elt = document.getElementById('extraBoxes-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$269(vis, env) {
-  var elt = document.getElementById('extraBoxes-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$227(vis);
+}
+function toggleVisibility$228(vis) {
+  var elt = document.getElementById('f1040L12-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$270(vis, env) {
-  var elt = document.getElementById('f1040L12-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$228(vis);
+}
+function toggleVisibility$229(vis) {
+  var elt = document.getElementById('f1040L13-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$271(vis, env) {
-  var elt = document.getElementById('f1040L13-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$229(vis);
+}
+function toggleVisibility$230(vis) {
+  var elt = document.getElementById('f1040L14-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$272(vis, env) {
-  var elt = document.getElementById('f1040L14-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$230(vis);
+}
+function toggleVisibility$231(vis) {
+  var elt = document.getElementById('f1040L15-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$273(vis, env) {
-  var elt = document.getElementById('f1040L15-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$231(vis);
+}
+function toggleVisibility$232(vis) {
+  var elt = document.getElementById('f1040L15Positive-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$274(vis, env) {
-  var elt = document.getElementById('f1040L15Positive-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$232(vis);
+}
+function toggleVisibility$233(vis) {
+  var elt = document.getElementById('f1040L16-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$275(vis, env) {
-  var elt = document.getElementById('f1040L16-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$233(vis);
+}
+function toggleVisibility$234(vis) {
+  var elt = document.getElementById('f1040L16Form8814-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$276(vis, env) {
-  var elt = document.getElementById('f1040L16Form8814-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$234(vis);
+}
+function toggleVisibility$235(vis) {
+  var elt = document.getElementById('f1040L16Form4972-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$277(vis, env) {
-  var elt = document.getElementById('f1040L16Form4972-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$235(vis);
+}
+function toggleVisibility$236(vis) {
+  var elt = document.getElementById('s2L1a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$278(vis, env) {
-  var elt = document.getElementById('s2L1a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$236(vis);
+}
+function toggleVisibility$237(vis) {
+  var elt = document.getElementById('s2L2-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$279(vis, env) {
-  var elt = document.getElementById('s2L2-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$237(vis);
+}
+function toggleVisibility$238(vis) {
+  var elt = document.getElementById('s2L3-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$280(vis, env) {
-  var elt = document.getElementById('s2L3-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$238(vis);
+}
+function toggleVisibility$239(vis) {
+  var elt = document.getElementById('f1040L17-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$281(vis, env) {
-  var elt = document.getElementById('f1040L17-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$239(vis);
+}
+function toggleVisibility$240(vis) {
+  var elt = document.getElementById('f1040L18-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$282(vis, env) {
-  var elt = document.getElementById('f1040L18-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$240(vis);
+}
+function toggleVisibility$241(vis) {
+  var elt = document.getElementById('s8812Children-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$283(vis, env) {
-  var elt = document.getElementById('s8812Children-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$241(vis);
+}
+function toggleVisibility$242(vis) {
+  var elt = document.getElementById('s8812Others-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$284(vis, env) {
-  var elt = document.getElementById('s8812Others-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$242(vis);
+}
+function toggleVisibility$243(vis) {
+  var elt = document.getElementById('s8812L5-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$285(vis, env) {
-  var elt = document.getElementById('s8812L5-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$243(vis);
+}
+function toggleVisibility$244(vis) {
+  var elt = document.getElementById('s8812L7-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$286(vis, env) {
-  var elt = document.getElementById('s8812L7-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$244(vis);
+}
+function toggleVisibility$245(vis) {
+  var elt = document.getElementById('s8812L8-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$287(vis, env) {
-  var elt = document.getElementById('s8812L8-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$245(vis);
+}
+function toggleVisibility$246(vis) {
+  var elt = document.getElementById('s8812Threshold-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$288(vis, env) {
-  var elt = document.getElementById('s8812Threshold-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$246(vis);
+}
+function toggleVisibility$247(vis) {
+  var elt = document.getElementById('s8812PhaseOut-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$289(vis, env) {
-  var elt = document.getElementById('s8812PhaseOut-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$247(vis);
+}
+function toggleVisibility$248(vis) {
+  var elt = document.getElementById('s8812Reduction-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$290(vis, env) {
-  var elt = document.getElementById('s8812Reduction-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$248(vis);
+}
+function toggleVisibility$249(vis) {
+  var elt = document.getElementById('f1040L19-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$291(vis, env) {
-  var elt = document.getElementById('f1040L19-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$249(vis);
+}
+function toggleVisibility$250(vis) {
+  var elt = document.getElementById('s3L1-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$292(vis, env) {
-  var elt = document.getElementById('s3L1-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$250(vis);
+}
+function toggleVisibility$251(vis) {
+  var elt = document.getElementById('s3L2-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$293(vis, env) {
-  var elt = document.getElementById('s3L2-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$251(vis);
+}
+function toggleVisibility$252(vis) {
+  var elt = document.getElementById('s3CareProvider-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$294(vis, env) {
-  var elt = document.getElementById('s3CareProvider-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$252(vis);
+}
+function toggleVisibility$253(vis) {
+  var elt = document.getElementById('s3CareProviderId-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$295(vis, env) {
-  var elt = document.getElementById('s3CareProviderId-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$253(vis);
+}
+function toggleVisibility$254(vis) {
+  var elt = document.getElementById('s3CareExpenses-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$296(vis, env) {
-  var elt = document.getElementById('s3CareExpenses-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$254(vis);
+}
+function toggleVisibility$255(vis) {
+  var elt = document.getElementById('s3CareOk-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$297(vis, env) {
-  var elt = document.getElementById('s3CareOk-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$255(vis);
 }
 function updateVisibility$298(vis, env) {
-  updateVisibility$294(vis, env); 
-  updateVisibility$295(vis, env); 
-  updateVisibility$296(vis, env); 
+  updateVisibility$294(vis, env);
+  updateVisibility$295(vis, env);
+  updateVisibility$296(vis, env);
   updateVisibility$297(vis, env);
 }
 function updateVisibility$299(vis, env) {
   updateVisibility$298(eve$386(env), env);
 }
-function updateVisibility$300(vis, env) {
+function toggleVisibility$256(vis) {
   var elt = document.getElementById('s3L3-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$300(vis, env) {
+  toggleVisibility$256(vis);
+}
+function toggleVisibility$257(vis) {
+  var elt = document.getElementById('s3L4-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$301(vis, env) {
-  var elt = document.getElementById('s3L4-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$257(vis);
+}
+function toggleVisibility$258(vis) {
+  var elt = document.getElementById('s3L5a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$302(vis, env) {
-  var elt = document.getElementById('s3L5a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$258(vis);
+}
+function toggleVisibility$259(vis) {
+  var elt = document.getElementById('s3L5b-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$303(vis, env) {
-  var elt = document.getElementById('s3L5b-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$259(vis);
+}
+function toggleVisibility$260(vis) {
+  var elt = document.getElementById('s3L6f-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$304(vis, env) {
-  var elt = document.getElementById('s3L6f-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$260(vis);
+}
+function toggleVisibility$261(vis) {
+  var elt = document.getElementById('s3L8-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$305(vis, env) {
-  var elt = document.getElementById('s3L8-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$261(vis);
+}
+function toggleVisibility$262(vis) {
+  var elt = document.getElementById('f1040L20-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$306(vis, env) {
-  var elt = document.getElementById('f1040L20-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$262(vis);
+}
+function toggleVisibility$263(vis) {
+  var elt = document.getElementById('f1040L21-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$307(vis, env) {
-  var elt = document.getElementById('f1040L21-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$263(vis);
+}
+function toggleVisibility$264(vis) {
+  var elt = document.getElementById('f1040L22-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$308(vis, env) {
-  var elt = document.getElementById('f1040L22-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$264(vis);
+}
+function toggleVisibility$265(vis) {
+  var elt = document.getElementById('creditsExceedTax-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$309(vis, env) {
-  var elt = document.getElementById('creditsExceedTax-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$265(vis);
+}
+function toggleVisibility$266(vis) {
+  var elt = document.getElementById('s2L4-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$310(vis, env) {
-  var elt = document.getElementById('s2L4-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$266(vis);
+}
+function toggleVisibility$267(vis) {
+  var elt = document.getElementById('s2L8-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$311(vis, env) {
-  var elt = document.getElementById('s2L8-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$267(vis);
+}
+function toggleVisibility$268(vis) {
+  var elt = document.getElementById('s2L9-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$312(vis, env) {
-  var elt = document.getElementById('s2L9-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$268(vis);
+}
+function toggleVisibility$269(vis) {
+  var elt = document.getElementById('s2L11-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$313(vis, env) {
-  var elt = document.getElementById('s2L11-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$269(vis);
+}
+function toggleVisibility$270(vis) {
+  var elt = document.getElementById('s2L12-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$314(vis, env) {
-  var elt = document.getElementById('s2L12-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$270(vis);
+}
+function toggleVisibility$271(vis) {
+  var elt = document.getElementById('s2L21-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$315(vis, env) {
-  var elt = document.getElementById('s2L21-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$271(vis);
+}
+function toggleVisibility$272(vis) {
+  var elt = document.getElementById('f1040L23-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$316(vis, env) {
-  var elt = document.getElementById('f1040L23-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$272(vis);
+}
+function toggleVisibility$273(vis) {
+  var elt = document.getElementById('f1040L24-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$317(vis, env) {
-  var elt = document.getElementById('f1040L24-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$273(vis);
+}
+function toggleVisibility$274(vis) {
+  var elt = document.getElementById('f1040L25a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$318(vis, env) {
-  var elt = document.getElementById('f1040L25a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$274(vis);
+}
+function toggleVisibility$275(vis) {
+  var elt = document.getElementById('f1040L25b-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$319(vis, env) {
-  var elt = document.getElementById('f1040L25b-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$275(vis);
+}
+function toggleVisibility$276(vis) {
+  var elt = document.getElementById('f1040L25c-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$320(vis, env) {
-  var elt = document.getElementById('f1040L25c-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$276(vis);
+}
+function toggleVisibility$277(vis) {
+  var elt = document.getElementById('f1040L25d-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$321(vis, env) {
-  var elt = document.getElementById('f1040L25d-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$277(vis);
+}
+function toggleVisibility$278(vis) {
+  var elt = document.getElementById('f1040L26-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$322(vis, env) {
-  var elt = document.getElementById('f1040L26-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$278(vis);
+}
+function toggleVisibility$279(vis) {
+  var elt = document.getElementById('f1040L27-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$323(vis, env) {
-  var elt = document.getElementById('f1040L27-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$279(vis);
+}
+function toggleVisibility$280(vis) {
+  var elt = document.getElementById('f1040L27Ok-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$324(vis, env) {
-  var elt = document.getElementById('f1040L27Ok-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$280(vis);
 }
 function updateVisibility$325(vis, env) {
   updateVisibility$324(vis, env);
@@ -5888,1022 +6729,1142 @@ function updateVisibility$325(vis, env) {
 function updateVisibility$326(vis, env) {
   updateVisibility$325(eve$435(env), env);
 }
-function updateVisibility$327(vis, env) {
+function toggleVisibility$281(vis) {
   var elt = document.getElementById('f1040L28-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$327(vis, env) {
+  toggleVisibility$281(vis);
+}
+function toggleVisibility$282(vis) {
+  var elt = document.getElementById('f1040L29-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$328(vis, env) {
-  var elt = document.getElementById('f1040L29-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$282(vis);
+}
+function toggleVisibility$283(vis) {
+  var elt = document.getElementById('s3L9-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$329(vis, env) {
-  var elt = document.getElementById('s3L9-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$283(vis);
+}
+function toggleVisibility$284(vis) {
+  var elt = document.getElementById('s3L10-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$330(vis, env) {
-  var elt = document.getElementById('s3L10-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$284(vis);
+}
+function toggleVisibility$285(vis) {
+  var elt = document.getElementById('s3L11-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$331(vis, env) {
-  var elt = document.getElementById('s3L11-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$285(vis);
+}
+function toggleVisibility$286(vis) {
+  var elt = document.getElementById('s3L15-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$332(vis, env) {
-  var elt = document.getElementById('s3L15-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$286(vis);
+}
+function toggleVisibility$287(vis) {
+  var elt = document.getElementById('f1040L31-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$333(vis, env) {
-  var elt = document.getElementById('f1040L31-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$287(vis);
+}
+function toggleVisibility$288(vis) {
+  var elt = document.getElementById('f1040L32-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$334(vis, env) {
-  var elt = document.getElementById('f1040L32-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$288(vis);
+}
+function toggleVisibility$289(vis) {
+  var elt = document.getElementById('f1040L33-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$335(vis, env) {
-  var elt = document.getElementById('f1040L33-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$289(vis);
+}
+function toggleVisibility$290(vis) {
+  var elt = document.getElementById('overpaid-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$336(vis, env) {
-  var elt = document.getElementById('overpaid-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$290(vis);
+}
+function toggleVisibility$291(vis) {
+  var elt = document.getElementById('f1040L34-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$337(vis, env) {
-  var elt = document.getElementById('f1040L34-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$291(vis);
+}
+function toggleVisibility$292(vis) {
+  var elt = document.getElementById('f1040L36-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$338(vis, env) {
-  var elt = document.getElementById('f1040L36-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$292(vis);
+}
+function toggleVisibility$293(vis) {
+  var elt = document.getElementById('f1040L35a-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$339(vis, env) {
-  var elt = document.getElementById('f1040L35a-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$293(vis);
+}
+function toggleVisibility$294(vis) {
+  var elt = document.getElementById('directDeposit-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$340(vis, env) {
-  var elt = document.getElementById('directDeposit-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$294(vis);
+}
+function toggleVisibility$295(vis) {
+  var elt = document.getElementById('f1040L35b-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$341(vis, env) {
-  var elt = document.getElementById('f1040L35b-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$295(vis);
+}
+function toggleVisibility$296(vis) {
+  var elt = document.getElementById('f1040L35c-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$342(vis, env) {
-  var elt = document.getElementById('f1040L35c-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$296(vis);
+}
+function toggleVisibility$297(vis) {
+  var elt = document.getElementById('f1040L35d-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$343(vis, env) {
-  var elt = document.getElementById('f1040L35d-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$297(vis);
 }
 function updateVisibility$344(vis, env) {
-  updateVisibility$341(vis, env); 
-  updateVisibility$342(vis, env); 
+  updateVisibility$341(vis, env);
+  updateVisibility$342(vis, env);
   updateVisibility$343(vis, env);
 }
 function updateVisibility$345(vis, env) {
   updateVisibility$344(eve$461(env), env);
 }
 function updateVisibility$346(vis, env) {
-  updateVisibility$337(vis, env); 
-  updateVisibility$338(vis, env); 
-  updateVisibility$339(vis, env); 
-  updateVisibility$340(vis, env); 
+  updateVisibility$337(vis, env);
+  updateVisibility$338(vis, env);
+  updateVisibility$339(vis, env);
+  updateVisibility$340(vis, env);
   updateVisibility$345(vis, env);
 }
-function updateVisibility$347(vis, env) {
+function toggleVisibility$298(vis) {
   var elt = document.getElementById('f1040L37-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$347(vis, env) {
+  toggleVisibility$298(vis);
+}
+function toggleVisibility$299(vis) {
+  var elt = document.getElementById('f1040L38-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$348(vis, env) {
-  var elt = document.getElementById('f1040L38-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$299(vis);
+}
+function toggleVisibility$300(vis) {
+  var elt = document.getElementById('payDirectDebit-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$349(vis, env) {
-  var elt = document.getElementById('payDirectDebit-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$300(vis);
+}
+function toggleVisibility$301(vis) {
+  var elt = document.getElementById('payRouting-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$350(vis, env) {
-  var elt = document.getElementById('payRouting-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$301(vis);
+}
+function toggleVisibility$302(vis) {
+  var elt = document.getElementById('payAccount-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$351(vis, env) {
-  var elt = document.getElementById('payAccount-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$302(vis);
 }
 function updateVisibility$352(vis, env) {
-  updateVisibility$350(vis, env); 
+  updateVisibility$350(vis, env);
   updateVisibility$351(vis, env);
 }
 function updateVisibility$353(vis, env) {
   updateVisibility$352(eve$463(env), env);
 }
 function updateVisibility$354(vis, env) {
-  updateVisibility$347(vis, env); 
-  updateVisibility$348(vis, env); 
-  updateVisibility$349(vis, env); 
+  updateVisibility$347(vis, env);
+  updateVisibility$348(vis, env);
+  updateVisibility$349(vis, env);
   updateVisibility$353(vis, env);
 }
 function updateVisibility$355(vis, env) {
   updateVisibility$346(eve$456(env), env);
-            updateVisibility$354(!eve$456(env), env);
+  updateVisibility$354(!eve$456(env), env);
+}
+function toggleVisibility$303(vis) {
+  var elt = document.getElementById('thirdParty-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$356(vis, env) {
-  var elt = document.getElementById('thirdParty-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$303(vis);
+}
+function toggleVisibility$304(vis) {
+  var elt = document.getElementById('designeeName-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$357(vis, env) {
-  var elt = document.getElementById('designeeName-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$304(vis);
+}
+function toggleVisibility$305(vis) {
+  var elt = document.getElementById('designeePhone-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$358(vis, env) {
-  var elt = document.getElementById('designeePhone-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$305(vis);
+}
+function toggleVisibility$306(vis) {
+  var elt = document.getElementById('designeePin-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$359(vis, env) {
-  var elt = document.getElementById('designeePin-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$306(vis);
 }
 function updateVisibility$360(vis, env) {
-  updateVisibility$357(vis, env); 
-  updateVisibility$358(vis, env); 
+  updateVisibility$357(vis, env);
+  updateVisibility$358(vis, env);
   updateVisibility$359(vis, env);
 }
 function updateVisibility$361(vis, env) {
   updateVisibility$360(eve$464(env), env);
 }
-function updateVisibility$362(vis, env) {
+function toggleVisibility$307(vis) {
   var elt = document.getElementById('occupation-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$362(vis, env) {
+  toggleVisibility$307(vis);
+}
+function toggleVisibility$308(vis) {
+  var elt = document.getElementById('ipPin-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$363(vis, env) {
-  var elt = document.getElementById('ipPin-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$308(vis);
+}
+function toggleVisibility$309(vis) {
+  var elt = document.getElementById('spouseOccupation-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$364(vis, env) {
-  var elt = document.getElementById('spouseOccupation-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$309(vis);
+}
+function toggleVisibility$310(vis) {
+  var elt = document.getElementById('spouseIpPin-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$365(vis, env) {
-  var elt = document.getElementById('spouseIpPin-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$310(vis);
 }
 function updateVisibility$366(vis, env) {
-  updateVisibility$364(vis, env); 
+  updateVisibility$364(vis, env);
   updateVisibility$365(vis, env);
 }
 function updateVisibility$367(vis, env) {
   updateVisibility$366(eve$1(env), env);
 }
-function updateVisibility$368(vis, env) {
+function toggleVisibility$311(vis) {
   var elt = document.getElementById('phone-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$368(vis, env) {
+  toggleVisibility$311(vis);
+}
+function toggleVisibility$312(vis) {
+  var elt = document.getElementById('email-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$369(vis, env) {
-  var elt = document.getElementById('email-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$312(vis);
+}
+function toggleVisibility$313(vis) {
+  var elt = document.getElementById('paidPreparer-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$370(vis, env) {
-  var elt = document.getElementById('paidPreparer-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$313(vis);
+}
+function toggleVisibility$314(vis) {
+  var elt = document.getElementById('preparerName-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$371(vis, env) {
-  var elt = document.getElementById('preparerName-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$314(vis);
+}
+function toggleVisibility$315(vis) {
+  var elt = document.getElementById('preparerPtin-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$372(vis, env) {
-  var elt = document.getElementById('preparerPtin-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$315(vis);
+}
+function toggleVisibility$316(vis) {
+  var elt = document.getElementById('preparerSelfEmployed-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$373(vis, env) {
-  var elt = document.getElementById('preparerSelfEmployed-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$316(vis);
+}
+function toggleVisibility$317(vis) {
+  var elt = document.getElementById('firmName-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$374(vis, env) {
-  var elt = document.getElementById('firmName-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$317(vis);
+}
+function toggleVisibility$318(vis) {
+  var elt = document.getElementById('firmEin-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$375(vis, env) {
-  var elt = document.getElementById('firmEin-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$318(vis);
 }
 function updateVisibility$376(vis, env) {
-  updateVisibility$371(vis, env); 
-  updateVisibility$372(vis, env); 
-  updateVisibility$373(vis, env); 
-  updateVisibility$374(vis, env); 
+  updateVisibility$371(vis, env);
+  updateVisibility$372(vis, env);
+  updateVisibility$373(vis, env);
+  updateVisibility$374(vis, env);
   updateVisibility$375(vis, env);
 }
 function updateVisibility$377(vis, env) {
   updateVisibility$376(eve$465(env), env);
 }
-function updateVisibility$378(vis, env) {
+function toggleVisibility$319(vis) {
   var elt = document.getElementById('declaration-div');
-            elt.style.display = vis ? 'block' : 'none';
+  elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$378(vis, env) {
+  toggleVisibility$319(vis);
+}
+function toggleVisibility$320(vis) {
+  var elt = document.getElementById('readyToFile-div');
+  elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$379(vis, env) {
-  var elt = document.getElementById('readyToFile-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$320(vis);
 }
 function compute$0(env) {
   return function (x, val) {
-  env[x] = val;
-            do {
-  var change = false;
-  change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || computeQuestion$0(env);
-change = change || computeQuestion$2(env);
-change = change || computeQuestion$4(env);
-change = change || false;
-change = change || false;
-change = change || computeQuestion$8(env);
-change = change || computeQuestion$12(env);
-change = change || computeQuestion$16(env);
-change = change || computeQuestion$20(env);
-change = change || false;
-change = change || computeQuestion$22(env);
-change = change || computeQuestion$24(env);
-change = change || computeQuestion$26(env);
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || computeQuestion$27(env);
-change = change || false;
-change = change || computeQuestion$28(env);
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || computeQuestion$29(env);
-change = change || false;
-change = change || computeQuestion$30(env);
-change = change || computeQuestion$31(env);
-change = change || computeQuestion$35(env);
-change = change || false;
-change = change || computeQuestion$52(env);
-change = change || computeQuestion$53(env);
-change = change || computeQuestion$65(env);
-change = change || false;
-change = change || false;
-change = change || computeQuestion$66(env);
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || computeQuestion$68(env);
-change = change || computeQuestion$69(env);
-change = change || computeQuestion$70(env);
-change = change || false;
-change = change || computeQuestion$71(env);
-change = change || false;
-change = change || false;
-change = change || computeQuestion$72(env);
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || computeQuestion$74(env);
-change = change || false;
-change = change || computeQuestion$75(env);
-change = change || false;
-change = change || computeQuestion$76(env);
-change = change || computeQuestion$77(env);
-change = change || computeQuestion$78(env);
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || computeQuestion$79(env);
-change = change || computeQuestion$80(env);
-change = change || computeQuestion$81(env);
-change = change || computeQuestion$82(env);
-change = change || computeQuestion$83(env);
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || computeQuestion$85(env);
-change = change || false;
-change = change || false;
-change = change || computeQuestion$86(env);
-change = change || computeQuestion$87(env);
-change = change || computeQuestion$88(env);
-change = change || computeQuestion$89(env);
-change = change || false;
-change = change || computeQuestion$101(env);
-change = change || computeQuestion$102(env);
-change = change || computeQuestion$103(env);
-change = change || computeQuestion$104(env);
-change = change || computeQuestion$105(env);
-change = change || false;
-change = change || false;
-change = change || computeQuestion$106(env);
-change = change || computeQuestion$107(env);
-change = change || computeQuestion$108(env);
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || computeQuestion$109(env);
-change = change || computeQuestion$110(env);
-change = change || computeQuestion$111(env);
-change = change || false;
-change = change || false;
-change = change || computeQuestion$112(env);
-change = change || computeQuestion$113(env);
-change = change || computeQuestion$114(env);
-change = change || false;
-change = change || computeQuestion$115(env);
-change = change || computeQuestion$116(env);
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || computeQuestion$119(env);
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || computeQuestion$120(env);
-change = change || computeQuestion$121(env);
-change = change || computeQuestion$122(env);
-change = change || computeQuestion$123(env);
-change = change || computeQuestion$124(env);
-change = change || computeQuestion$125(env);
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || computeQuestion$126(env);
-change = change || computeQuestion$127(env);
-change = change || computeQuestion$128(env);
-change = change || computeQuestion$129(env);
-change = change || false;
-change = change || false;
-change = change || computeQuestion$130(env);
-change = change || false;
-change = change || false;
-change = change || computeQuestion$132(env);
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || computeQuestion$133(env);
-change = change || computeQuestion$134(env);
-change = change || computeQuestion$135(env);
-change = change || computeQuestion$136(env);
-change = change || computeQuestion$137(env);
-change = change || computeQuestion$147(env);
-change = change || false;
-change = change || computeQuestion$149(env);
-change = change || false;
-change = change || false;
-change = change || computeQuestion$151(env);
-change = change || false;
-change = change || false;
-change = change || false;
-change = change || computeQuestion$153(env);
-change = change || false;
-change = change || computeQuestion$154(env);
-}
-            while (change);
-            var vis = true; 
-  updateVisibility$0(vis, env); 
-  updateVisibility$1(vis, env); 
-  updateVisibility$2(vis, env); 
-  updateVisibility$3(vis, env); 
-  updateVisibility$4(vis, env); 
-  updateVisibility$5(vis, env); 
-  updateVisibility$6(vis, env); 
-  updateVisibility$7(vis, env); 
-  updateVisibility$8(vis, env); 
-  updateVisibility$9(vis, env); 
-  updateVisibility$10(vis, env); 
-  updateVisibility$11(vis, env); 
-  updateVisibility$12(vis, env); 
-  updateVisibility$13(vis, env); 
-  updateVisibility$14(vis, env); 
-  updateVisibility$22(vis, env); 
-  updateVisibility$25(vis, env); 
-  updateVisibility$26(vis, env); 
-  updateVisibility$27(vis, env); 
-  updateVisibility$36(vis, env); 
-  updateVisibility$45(vis, env); 
-  updateVisibility$54(vis, env); 
-  updateVisibility$63(vis, env); 
-  updateVisibility$64(vis, env); 
-  updateVisibility$71(vis, env); 
-  updateVisibility$78(vis, env); 
-  updateVisibility$85(vis, env); 
-  updateVisibility$86(vis, env); 
-  updateVisibility$87(vis, env); 
-  updateVisibility$88(vis, env); 
-  updateVisibility$89(vis, env); 
-  updateVisibility$90(vis, env); 
-  updateVisibility$91(vis, env); 
-  updateVisibility$92(vis, env); 
-  updateVisibility$93(vis, env); 
-  updateVisibility$94(vis, env); 
-  updateVisibility$95(vis, env); 
-  updateVisibility$96(vis, env); 
-  updateVisibility$97(vis, env); 
-  updateVisibility$98(vis, env); 
-  updateVisibility$99(vis, env); 
-  updateVisibility$100(vis, env); 
-  updateVisibility$101(vis, env); 
-  updateVisibility$102(vis, env); 
-  updateVisibility$103(vis, env); 
-  updateVisibility$111(vis, env); 
-  updateVisibility$112(vis, env); 
-  updateVisibility$165(vis, env); 
-  updateVisibility$166(vis, env); 
-  updateVisibility$178(vis, env); 
-  updateVisibility$179(vis, env); 
-  updateVisibility$180(vis, env); 
-  updateVisibility$181(vis, env); 
-  updateVisibility$182(vis, env); 
-  updateVisibility$183(vis, env); 
-  updateVisibility$184(vis, env); 
-  updateVisibility$185(vis, env); 
-  updateVisibility$186(vis, env); 
-  updateVisibility$187(vis, env); 
-  updateVisibility$188(vis, env); 
-  updateVisibility$189(vis, env); 
-  updateVisibility$190(vis, env); 
-  updateVisibility$191(vis, env); 
-  updateVisibility$194(vis, env); 
-  updateVisibility$195(vis, env); 
-  updateVisibility$196(vis, env); 
-  updateVisibility$197(vis, env); 
-  updateVisibility$198(vis, env); 
-  updateVisibility$199(vis, env); 
-  updateVisibility$200(vis, env); 
-  updateVisibility$201(vis, env); 
-  updateVisibility$202(vis, env); 
-  updateVisibility$203(vis, env); 
-  updateVisibility$204(vis, env); 
-  updateVisibility$205(vis, env); 
-  updateVisibility$208(vis, env); 
-  updateVisibility$209(vis, env); 
-  updateVisibility$210(vis, env); 
-  updateVisibility$211(vis, env); 
-  updateVisibility$212(vis, env); 
-  updateVisibility$213(vis, env); 
-  updateVisibility$214(vis, env); 
-  updateVisibility$215(vis, env); 
-  updateVisibility$216(vis, env); 
-  updateVisibility$217(vis, env); 
-  updateVisibility$218(vis, env); 
-  updateVisibility$219(vis, env); 
-  updateVisibility$220(vis, env); 
-  updateVisibility$221(vis, env); 
-  updateVisibility$222(vis, env); 
-  updateVisibility$223(vis, env); 
-  updateVisibility$224(vis, env); 
-  updateVisibility$225(vis, env); 
-  updateVisibility$226(vis, env); 
-  updateVisibility$227(vis, env); 
-  updateVisibility$228(vis, env); 
-  updateVisibility$229(vis, env); 
-  updateVisibility$230(vis, env); 
-  updateVisibility$231(vis, env); 
-  updateVisibility$234(vis, env); 
-  updateVisibility$235(vis, env); 
-  updateVisibility$236(vis, env); 
-  updateVisibility$237(vis, env); 
-  updateVisibility$238(vis, env); 
-  updateVisibility$239(vis, env); 
-  updateVisibility$240(vis, env); 
-  updateVisibility$241(vis, env); 
-  updateVisibility$265(vis, env); 
-  updateVisibility$266(vis, env); 
-  updateVisibility$267(vis, env); 
-  updateVisibility$268(vis, env); 
-  updateVisibility$269(vis, env); 
-  updateVisibility$270(vis, env); 
-  updateVisibility$271(vis, env); 
-  updateVisibility$272(vis, env); 
-  updateVisibility$273(vis, env); 
-  updateVisibility$274(vis, env); 
-  updateVisibility$275(vis, env); 
-  updateVisibility$276(vis, env); 
-  updateVisibility$277(vis, env); 
-  updateVisibility$278(vis, env); 
-  updateVisibility$279(vis, env); 
-  updateVisibility$280(vis, env); 
-  updateVisibility$281(vis, env); 
-  updateVisibility$282(vis, env); 
-  updateVisibility$283(vis, env); 
-  updateVisibility$284(vis, env); 
-  updateVisibility$285(vis, env); 
-  updateVisibility$286(vis, env); 
-  updateVisibility$287(vis, env); 
-  updateVisibility$288(vis, env); 
-  updateVisibility$289(vis, env); 
-  updateVisibility$290(vis, env); 
-  updateVisibility$291(vis, env); 
-  updateVisibility$292(vis, env); 
-  updateVisibility$293(vis, env); 
-  updateVisibility$299(vis, env); 
-  updateVisibility$300(vis, env); 
-  updateVisibility$301(vis, env); 
-  updateVisibility$302(vis, env); 
-  updateVisibility$303(vis, env); 
-  updateVisibility$304(vis, env); 
-  updateVisibility$305(vis, env); 
-  updateVisibility$306(vis, env); 
-  updateVisibility$307(vis, env); 
-  updateVisibility$308(vis, env); 
-  updateVisibility$309(vis, env); 
-  updateVisibility$310(vis, env); 
-  updateVisibility$311(vis, env); 
-  updateVisibility$312(vis, env); 
-  updateVisibility$313(vis, env); 
-  updateVisibility$314(vis, env); 
-  updateVisibility$315(vis, env); 
-  updateVisibility$316(vis, env); 
-  updateVisibility$317(vis, env); 
-  updateVisibility$318(vis, env); 
-  updateVisibility$319(vis, env); 
-  updateVisibility$320(vis, env); 
-  updateVisibility$321(vis, env); 
-  updateVisibility$322(vis, env); 
-  updateVisibility$323(vis, env); 
-  updateVisibility$326(vis, env); 
-  updateVisibility$327(vis, env); 
-  updateVisibility$328(vis, env); 
-  updateVisibility$329(vis, env); 
-  updateVisibility$330(vis, env); 
-  updateVisibility$331(vis, env); 
-  updateVisibility$332(vis, env); 
-  updateVisibility$333(vis, env); 
-  updateVisibility$334(vis, env); 
-  updateVisibility$335(vis, env); 
-  updateVisibility$336(vis, env); 
-  updateVisibility$355(vis, env); 
-  updateVisibility$356(vis, env); 
-  updateVisibility$361(vis, env); 
-  updateVisibility$362(vis, env); 
-  updateVisibility$363(vis, env); 
-  updateVisibility$367(vis, env); 
-  updateVisibility$368(vis, env); 
-  updateVisibility$369(vis, env); 
-  updateVisibility$370(vis, env); 
-  updateVisibility$377(vis, env); 
-  updateVisibility$378(vis, env); 
-  updateVisibility$379(vis, env);
-};
+    env[x] = val;
+    do {
+      var change = false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$0(env);
+      change = change || computeQuestion$2(env);
+      change = change || computeQuestion$4(env);
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$8(env);
+      change = change || computeQuestion$12(env);
+      change = change || computeQuestion$16(env);
+      change = change || computeQuestion$20(env);
+      change = change || false;
+      change = change || computeQuestion$22(env);
+      change = change || computeQuestion$24(env);
+      change = change || computeQuestion$26(env);
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$27(env);
+      change = change || false;
+      change = change || computeQuestion$28(env);
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$29(env);
+      change = change || false;
+      change = change || computeQuestion$30(env);
+      change = change || computeQuestion$31(env);
+      change = change || computeQuestion$35(env);
+      change = change || false;
+      change = change || computeQuestion$52(env);
+      change = change || computeQuestion$53(env);
+      change = change || computeQuestion$65(env);
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$66(env);
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$68(env);
+      change = change || computeQuestion$69(env);
+      change = change || computeQuestion$70(env);
+      change = change || false;
+      change = change || computeQuestion$71(env);
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$72(env);
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$74(env);
+      change = change || false;
+      change = change || computeQuestion$75(env);
+      change = change || false;
+      change = change || computeQuestion$76(env);
+      change = change || computeQuestion$77(env);
+      change = change || computeQuestion$78(env);
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$79(env);
+      change = change || computeQuestion$80(env);
+      change = change || computeQuestion$81(env);
+      change = change || computeQuestion$82(env);
+      change = change || computeQuestion$83(env);
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$85(env);
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$86(env);
+      change = change || computeQuestion$87(env);
+      change = change || computeQuestion$88(env);
+      change = change || computeQuestion$89(env);
+      change = change || false;
+      change = change || computeQuestion$101(env);
+      change = change || computeQuestion$102(env);
+      change = change || computeQuestion$103(env);
+      change = change || computeQuestion$104(env);
+      change = change || computeQuestion$105(env);
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$106(env);
+      change = change || computeQuestion$107(env);
+      change = change || computeQuestion$108(env);
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$109(env);
+      change = change || computeQuestion$110(env);
+      change = change || computeQuestion$111(env);
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$112(env);
+      change = change || computeQuestion$113(env);
+      change = change || computeQuestion$114(env);
+      change = change || false;
+      change = change || computeQuestion$115(env);
+      change = change || computeQuestion$116(env);
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$119(env);
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$120(env);
+      change = change || computeQuestion$121(env);
+      change = change || computeQuestion$122(env);
+      change = change || computeQuestion$123(env);
+      change = change || computeQuestion$124(env);
+      change = change || computeQuestion$125(env);
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$126(env);
+      change = change || computeQuestion$127(env);
+      change = change || computeQuestion$128(env);
+      change = change || computeQuestion$129(env);
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$130(env);
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$132(env);
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$133(env);
+      change = change || computeQuestion$134(env);
+      change = change || computeQuestion$135(env);
+      change = change || computeQuestion$136(env);
+      change = change || computeQuestion$137(env);
+      change = change || computeQuestion$147(env);
+      change = change || false;
+      change = change || computeQuestion$149(env);
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$151(env);
+      change = change || false;
+      change = change || false;
+      change = change || false;
+      change = change || computeQuestion$153(env);
+      change = change || false;
+      change = change || computeQuestion$154(env);
+    }
+    while (change);
+    var vis = true;
+    updateVisibility$0(vis, env);
+    updateVisibility$1(vis, env);
+    updateVisibility$2(vis, env);
+    updateVisibility$3(vis, env);
+    updateVisibility$4(vis, env);
+    updateVisibility$5(vis, env);
+    updateVisibility$6(vis, env);
+    updateVisibility$7(vis, env);
+    updateVisibility$8(vis, env);
+    updateVisibility$9(vis, env);
+    updateVisibility$10(vis, env);
+    updateVisibility$11(vis, env);
+    updateVisibility$12(vis, env);
+    updateVisibility$13(vis, env);
+    updateVisibility$14(vis, env);
+    updateVisibility$22(vis, env);
+    updateVisibility$25(vis, env);
+    updateVisibility$26(vis, env);
+    updateVisibility$27(vis, env);
+    updateVisibility$36(vis, env);
+    updateVisibility$45(vis, env);
+    updateVisibility$54(vis, env);
+    updateVisibility$63(vis, env);
+    updateVisibility$64(vis, env);
+    updateVisibility$71(vis, env);
+    updateVisibility$78(vis, env);
+    updateVisibility$85(vis, env);
+    updateVisibility$86(vis, env);
+    updateVisibility$87(vis, env);
+    updateVisibility$88(vis, env);
+    updateVisibility$89(vis, env);
+    updateVisibility$90(vis, env);
+    updateVisibility$91(vis, env);
+    updateVisibility$92(vis, env);
+    updateVisibility$93(vis, env);
+    updateVisibility$94(vis, env);
+    updateVisibility$95(vis, env);
+    updateVisibility$96(vis, env);
+    updateVisibility$97(vis, env);
+    updateVisibility$98(vis, env);
+    updateVisibility$99(vis, env);
+    updateVisibility$100(vis, env);
+    updateVisibility$101(vis, env);
+    updateVisibility$102(vis, env);
+    updateVisibility$103(vis, env);
+    updateVisibility$111(vis, env);
+    updateVisibility$112(vis, env);
+    updateVisibility$165(vis, env);
+    updateVisibility$166(vis, env);
+    updateVisibility$178(vis, env);
+    updateVisibility$179(vis, env);
+    updateVisibility$180(vis, env);
+    updateVisibility$181(vis, env);
+    updateVisibility$182(vis, env);
+    updateVisibility$183(vis, env);
+    updateVisibility$184(vis, env);
+    updateVisibility$185(vis, env);
+    updateVisibility$186(vis, env);
+    updateVisibility$187(vis, env);
+    updateVisibility$188(vis, env);
+    updateVisibility$189(vis, env);
+    updateVisibility$190(vis, env);
+    updateVisibility$191(vis, env);
+    updateVisibility$194(vis, env);
+    updateVisibility$195(vis, env);
+    updateVisibility$196(vis, env);
+    updateVisibility$197(vis, env);
+    updateVisibility$198(vis, env);
+    updateVisibility$199(vis, env);
+    updateVisibility$200(vis, env);
+    updateVisibility$201(vis, env);
+    updateVisibility$202(vis, env);
+    updateVisibility$203(vis, env);
+    updateVisibility$204(vis, env);
+    updateVisibility$205(vis, env);
+    updateVisibility$208(vis, env);
+    updateVisibility$209(vis, env);
+    updateVisibility$210(vis, env);
+    updateVisibility$211(vis, env);
+    updateVisibility$212(vis, env);
+    updateVisibility$213(vis, env);
+    updateVisibility$214(vis, env);
+    updateVisibility$215(vis, env);
+    updateVisibility$216(vis, env);
+    updateVisibility$217(vis, env);
+    updateVisibility$218(vis, env);
+    updateVisibility$219(vis, env);
+    updateVisibility$220(vis, env);
+    updateVisibility$221(vis, env);
+    updateVisibility$222(vis, env);
+    updateVisibility$223(vis, env);
+    updateVisibility$224(vis, env);
+    updateVisibility$225(vis, env);
+    updateVisibility$226(vis, env);
+    updateVisibility$227(vis, env);
+    updateVisibility$228(vis, env);
+    updateVisibility$229(vis, env);
+    updateVisibility$230(vis, env);
+    updateVisibility$231(vis, env);
+    updateVisibility$234(vis, env);
+    updateVisibility$235(vis, env);
+    updateVisibility$236(vis, env);
+    updateVisibility$237(vis, env);
+    updateVisibility$238(vis, env);
+    updateVisibility$239(vis, env);
+    updateVisibility$240(vis, env);
+    updateVisibility$241(vis, env);
+    updateVisibility$265(vis, env);
+    updateVisibility$266(vis, env);
+    updateVisibility$267(vis, env);
+    updateVisibility$268(vis, env);
+    updateVisibility$269(vis, env);
+    updateVisibility$270(vis, env);
+    updateVisibility$271(vis, env);
+    updateVisibility$272(vis, env);
+    updateVisibility$273(vis, env);
+    updateVisibility$274(vis, env);
+    updateVisibility$275(vis, env);
+    updateVisibility$276(vis, env);
+    updateVisibility$277(vis, env);
+    updateVisibility$278(vis, env);
+    updateVisibility$279(vis, env);
+    updateVisibility$280(vis, env);
+    updateVisibility$281(vis, env);
+    updateVisibility$282(vis, env);
+    updateVisibility$283(vis, env);
+    updateVisibility$284(vis, env);
+    updateVisibility$285(vis, env);
+    updateVisibility$286(vis, env);
+    updateVisibility$287(vis, env);
+    updateVisibility$288(vis, env);
+    updateVisibility$289(vis, env);
+    updateVisibility$290(vis, env);
+    updateVisibility$291(vis, env);
+    updateVisibility$292(vis, env);
+    updateVisibility$293(vis, env);
+    updateVisibility$299(vis, env);
+    updateVisibility$300(vis, env);
+    updateVisibility$301(vis, env);
+    updateVisibility$302(vis, env);
+    updateVisibility$303(vis, env);
+    updateVisibility$304(vis, env);
+    updateVisibility$305(vis, env);
+    updateVisibility$306(vis, env);
+    updateVisibility$307(vis, env);
+    updateVisibility$308(vis, env);
+    updateVisibility$309(vis, env);
+    updateVisibility$310(vis, env);
+    updateVisibility$311(vis, env);
+    updateVisibility$312(vis, env);
+    updateVisibility$313(vis, env);
+    updateVisibility$314(vis, env);
+    updateVisibility$315(vis, env);
+    updateVisibility$316(vis, env);
+    updateVisibility$317(vis, env);
+    updateVisibility$318(vis, env);
+    updateVisibility$319(vis, env);
+    updateVisibility$320(vis, env);
+    updateVisibility$321(vis, env);
+    updateVisibility$322(vis, env);
+    updateVisibility$323(vis, env);
+    updateVisibility$326(vis, env);
+    updateVisibility$327(vis, env);
+    updateVisibility$328(vis, env);
+    updateVisibility$329(vis, env);
+    updateVisibility$330(vis, env);
+    updateVisibility$331(vis, env);
+    updateVisibility$332(vis, env);
+    updateVisibility$333(vis, env);
+    updateVisibility$334(vis, env);
+    updateVisibility$335(vis, env);
+    updateVisibility$336(vis, env);
+    updateVisibility$355(vis, env);
+    updateVisibility$356(vis, env);
+    updateVisibility$361(vis, env);
+    updateVisibility$362(vis, env);
+    updateVisibility$363(vis, env);
+    updateVisibility$367(vis, env);
+    updateVisibility$368(vis, env);
+    updateVisibility$369(vis, env);
+    updateVisibility$370(vis, env);
+    updateVisibility$377(vis, env);
+    updateVisibility$378(vis, env);
+    updateVisibility$379(vis, env);
+  };
 }
 function updater$0(upd) {
   return function (x) {
-  upd('firstName', x.target.value);
-};
+    upd('firstName', x.target.value);
+  };
 }
 function widget$0(env, func) {
   var div = document.createElement('div');
-    div.id = 'firstName-div';
-    div.appendChild(document.createTextNode('"First name and middle initial:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'firstName-widget'; 
+  div.id = 'firstName-div';
+  div.appendChild(document.createTextNode('"First name and middle initial:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'firstName-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['firstName']; 
-  elt.onchange = func; 
+  elt.value = env['firstName'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$0(env, upd) {
   widget$0(env, updater$0(upd));
 }
 function updater$1(upd) {
   return function (x) {
-  upd('lastName', x.target.value);
-};
+    upd('lastName', x.target.value);
+  };
 }
 function widget$1(env, func) {
   var div = document.createElement('div');
-    div.id = 'lastName-div';
-    div.appendChild(document.createTextNode('"Last name:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'lastName-widget'; 
+  div.id = 'lastName-div';
+  div.appendChild(document.createTextNode('"Last name:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'lastName-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['lastName']; 
-  elt.onchange = func; 
+  elt.value = env['lastName'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$1(env, upd) {
   widget$1(env, updater$1(upd));
 }
 function updater$2(upd) {
   return function (x) {
-  upd('ssn', x.target.value);
-};
+    upd('ssn', x.target.value);
+  };
 }
 function widget$2(env, func) {
   var div = document.createElement('div');
-    div.id = 'ssn-div';
-    div.appendChild(document.createTextNode('"Your social security number:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'ssn-widget'; 
+  div.id = 'ssn-div';
+  div.appendChild(document.createTextNode('"Your social security number:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'ssn-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['ssn']; 
-  elt.onchange = func; 
+  elt.value = env['ssn'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$2(env, upd) {
   widget$2(env, updater$2(upd));
 }
 function updater$3(upd) {
   return function (x) {
-  upd('address', x.target.value);
-};
+    upd('address', x.target.value);
+  };
 }
 function widget$3(env, func) {
   var div = document.createElement('div');
-    div.id = 'address-div';
-    div.appendChild(document.createTextNode('"Home address:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'address-widget'; 
+  div.id = 'address-div';
+  div.appendChild(document.createTextNode('"Home address:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'address-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['address']; 
-  elt.onchange = func; 
+  elt.value = env['address'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$3(env, upd) {
   widget$3(env, updater$3(upd));
 }
 function updater$4(upd) {
   return function (x) {
-  upd('city', x.target.value);
-};
+    upd('city', x.target.value);
+  };
 }
 function widget$4(env, func) {
   var div = document.createElement('div');
-    div.id = 'city-div';
-    div.appendChild(document.createTextNode('"City, town or post office, state and ZIP code:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'city-widget'; 
+  div.id = 'city-div';
+  div.appendChild(document.createTextNode('"City, town or post office, state and ZIP code:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'city-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['city']; 
-  elt.onchange = func; 
+  elt.value = env['city'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$4(env, upd) {
   widget$4(env, updater$4(upd));
 }
 function updater$5(upd) {
   return function (x) {
-  upd('age', parseInt(x.target.value));
-};
+    upd('age', parseInt(x.target.value));
+  };
 }
 function widget$5(env, func) {
   var div = document.createElement('div');
-    div.id = 'age-div';
-    div.appendChild(document.createTextNode('"Your age on 31 December 2023:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'age-widget'; 
+  div.id = 'age-div';
+  div.appendChild(document.createTextNode('"Your age on 31 December 2023:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'age-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['age']; 
-  elt.onchange = func; 
+  elt.value = env['age'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$5(env, upd) {
   widget$5(env, updater$5(upd));
 }
 function updater$6(upd) {
   return function (x) {
-  upd('blind', x.target.checked);
-};
+    upd('blind', x.target.checked);
+  };
 }
 function widget$6(env, func) {
   var div = document.createElement('div');
-    div.id = 'blind-div';
-    div.appendChild(document.createTextNode('"Are you blind?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'blind-widget'; 
+  div.id = 'blind-div';
+  div.appendChild(document.createTextNode('"Are you blind?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'blind-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['blind']; 
-  elt.onchange = func; 
+  elt.checked = env['blind'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$6(env, upd) {
   widget$6(env, updater$6(upd));
 }
 function updater$7(upd) {
   return function (x) {
-  upd('claimedAsDependent', x.target.checked);
-};
+    upd('claimedAsDependent', x.target.checked);
+  };
 }
 function widget$7(env, func) {
   var div = document.createElement('div');
-    div.id = 'claimedAsDependent-div';
-    div.appendChild(document.createTextNode('"Can someone claim you as a dependent?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'claimedAsDependent-widget'; 
+  div.id = 'claimedAsDependent-div';
+  div.appendChild(document.createTextNode('"Can someone claim you as a dependent?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'claimedAsDependent-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['claimedAsDependent']; 
-  elt.onchange = func; 
+  elt.checked = env['claimedAsDependent'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$7(env, upd) {
   widget$7(env, updater$7(upd));
 }
 function updater$8(upd) {
   return function (x) {
-  upd('presidentialFund', x.target.checked);
-};
+    upd('presidentialFund', x.target.checked);
+  };
 }
 function widget$8(env, func) {
   var div = document.createElement('div');
-    div.id = 'presidentialFund-div';
-    div.appendChild(document.createTextNode('"Presidential Election Campaign: give 3 USD to this fund?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'presidentialFund-widget'; 
+  div.id = 'presidentialFund-div';
+  div.appendChild(document.createTextNode('"Presidential Election Campaign: give 3 USD to this fund?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'presidentialFund-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['presidentialFund']; 
-  elt.onchange = func; 
+  elt.checked = env['presidentialFund'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$8(env, upd) {
   widget$8(env, updater$8(upd));
 }
 function updater$9(upd) {
   return function (x) {
-  upd('fsSingle', x.target.checked);
-};
+    upd('fsSingle', x.target.checked);
+  };
 }
 function widget$9(env, func) {
   var div = document.createElement('div');
-    div.id = 'fsSingle-div';
-    div.appendChild(document.createTextNode('"Filing status: Single?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'fsSingle-widget'; 
+  div.id = 'fsSingle-div';
+  div.appendChild(document.createTextNode('"Filing status: Single?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'fsSingle-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['fsSingle']; 
-  elt.onchange = func; 
+  elt.checked = env['fsSingle'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$9(env, upd) {
   widget$9(env, updater$9(upd));
 }
 function updater$10(upd) {
   return function (x) {
-  upd('fsJoint', x.target.checked);
-};
+    upd('fsJoint', x.target.checked);
+  };
 }
 function widget$10(env, func) {
   var div = document.createElement('div');
-    div.id = 'fsJoint-div';
-    div.appendChild(document.createTextNode('"Filing status: Married filing jointly?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'fsJoint-widget'; 
+  div.id = 'fsJoint-div';
+  div.appendChild(document.createTextNode('"Filing status: Married filing jointly?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'fsJoint-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['fsJoint']; 
-  elt.onchange = func; 
+  elt.checked = env['fsJoint'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$10(env, upd) {
   widget$10(env, updater$10(upd));
 }
 function updater$11(upd) {
   return function (x) {
-  upd('fsSeparate', x.target.checked);
-};
+    upd('fsSeparate', x.target.checked);
+  };
 }
 function widget$11(env, func) {
   var div = document.createElement('div');
-    div.id = 'fsSeparate-div';
-    div.appendChild(document.createTextNode('"Filing status: Married filing separately?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'fsSeparate-widget'; 
+  div.id = 'fsSeparate-div';
+  div.appendChild(document.createTextNode('"Filing status: Married filing separately?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'fsSeparate-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['fsSeparate']; 
-  elt.onchange = func; 
+  elt.checked = env['fsSeparate'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$11(env, upd) {
   widget$11(env, updater$11(upd));
 }
 function updater$12(upd) {
   return function (x) {
-  upd('fsHoh', x.target.checked);
-};
+    upd('fsHoh', x.target.checked);
+  };
 }
 function widget$12(env, func) {
   var div = document.createElement('div');
-    div.id = 'fsHoh-div';
-    div.appendChild(document.createTextNode('"Filing status: Head of household?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'fsHoh-widget'; 
+  div.id = 'fsHoh-div';
+  div.appendChild(document.createTextNode('"Filing status: Head of household?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'fsHoh-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['fsHoh']; 
-  elt.onchange = func; 
+  elt.checked = env['fsHoh'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$12(env, upd) {
   widget$12(env, updater$12(upd));
 }
 function updater$13(upd) {
   return function (x) {
-  upd('fsQss', x.target.checked);
-};
+    upd('fsQss', x.target.checked);
+  };
 }
 function widget$13(env, func) {
   var div = document.createElement('div');
-    div.id = 'fsQss-div';
-    div.appendChild(document.createTextNode('"Filing status: Qualifying surviving spouse?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'fsQss-widget'; 
+  div.id = 'fsQss-div';
+  div.appendChild(document.createTextNode('"Filing status: Qualifying surviving spouse?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'fsQss-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['fsQss']; 
-  elt.onchange = func; 
+  elt.checked = env['fsQss'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$13(env, upd) {
   widget$13(env, updater$13(upd));
 }
 function widget$14(env) {
   var div = document.createElement('div');
-    div.id = 'fsValid-div';
-    div.appendChild(document.createTextNode('"Exactly one filing status checked:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'fsValid-widget'; 
+  div.id = 'fsValid-div';
+  div.appendChild(document.createTextNode('"Exactly one filing status checked:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'fsValid-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['fsValid']; 
-  elt.disabled = true; 
+  elt.checked = env['fsValid'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$14(env, upd) {
   widget$14(env);
 }
 function updater$14(upd) {
   return function (x) {
-  upd('spouseFirstName', x.target.value);
-};
+    upd('spouseFirstName', x.target.value);
+  };
 }
 function widget$15(env, func) {
   var div = document.createElement('div');
-    div.id = 'spouseFirstName-div';
-    div.appendChild(document.createTextNode('"Spouse first name and middle initial:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'spouseFirstName-widget'; 
+  div.id = 'spouseFirstName-div';
+  div.appendChild(document.createTextNode('"Spouse first name and middle initial:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'spouseFirstName-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['spouseFirstName']; 
-  elt.onchange = func; 
+  elt.value = env['spouseFirstName'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$15(env, upd) {
   widget$15(env, updater$14(upd));
 }
 function updater$15(upd) {
   return function (x) {
-  upd('spouseLastName', x.target.value);
-};
+    upd('spouseLastName', x.target.value);
+  };
 }
 function widget$16(env, func) {
   var div = document.createElement('div');
-    div.id = 'spouseLastName-div';
-    div.appendChild(document.createTextNode('"Spouse last name:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'spouseLastName-widget'; 
+  div.id = 'spouseLastName-div';
+  div.appendChild(document.createTextNode('"Spouse last name:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'spouseLastName-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['spouseLastName']; 
-  elt.onchange = func; 
+  elt.value = env['spouseLastName'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$16(env, upd) {
   widget$16(env, updater$15(upd));
 }
 function updater$16(upd) {
   return function (x) {
-  upd('spouseSsn', x.target.value);
-};
+    upd('spouseSsn', x.target.value);
+  };
 }
 function widget$17(env, func) {
   var div = document.createElement('div');
-    div.id = 'spouseSsn-div';
-    div.appendChild(document.createTextNode('"Spouse social security number:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'spouseSsn-widget'; 
+  div.id = 'spouseSsn-div';
+  div.appendChild(document.createTextNode('"Spouse social security number:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'spouseSsn-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['spouseSsn']; 
-  elt.onchange = func; 
+  elt.value = env['spouseSsn'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$17(env, upd) {
   widget$17(env, updater$16(upd));
 }
 function updater$17(upd) {
   return function (x) {
-  upd('spouseAge', parseInt(x.target.value));
-};
+    upd('spouseAge', parseInt(x.target.value));
+  };
 }
 function widget$18(env, func) {
   var div = document.createElement('div');
-    div.id = 'spouseAge-div';
-    div.appendChild(document.createTextNode('"Spouse age on 31 December 2023:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'spouseAge-widget'; 
+  div.id = 'spouseAge-div';
+  div.appendChild(document.createTextNode('"Spouse age on 31 December 2023:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'spouseAge-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['spouseAge']; 
-  elt.onchange = func; 
+  elt.value = env['spouseAge'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$18(env, upd) {
   widget$18(env, updater$17(upd));
 }
 function updater$18(upd) {
   return function (x) {
-  upd('spouseBlind', x.target.checked);
-};
+    upd('spouseBlind', x.target.checked);
+  };
 }
 function widget$19(env, func) {
   var div = document.createElement('div');
-    div.id = 'spouseBlind-div';
-    div.appendChild(document.createTextNode('"Is your spouse blind?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'spouseBlind-widget'; 
+  div.id = 'spouseBlind-div';
+  div.appendChild(document.createTextNode('"Is your spouse blind?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'spouseBlind-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['spouseBlind']; 
-  elt.onchange = func; 
+  elt.checked = env['spouseBlind'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$19(env, upd) {
   widget$19(env, updater$18(upd));
 }
 function updater$19(upd) {
   return function (x) {
-  upd('spousePresidentialFund', x.target.checked);
-};
+    upd('spousePresidentialFund', x.target.checked);
+  };
 }
 function widget$20(env, func) {
   var div = document.createElement('div');
-    div.id = 'spousePresidentialFund-div';
-    div.appendChild(document.createTextNode('"Spouse presidential fund?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'spousePresidentialFund-widget'; 
+  div.id = 'spousePresidentialFund-div';
+  div.appendChild(document.createTextNode('"Spouse presidential fund?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'spousePresidentialFund-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['spousePresidentialFund']; 
-  elt.onchange = func; 
+  elt.checked = env['spousePresidentialFund'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$20(env, upd) {
   widget$20(env, updater$19(upd));
 }
 function renderQuestion$21(env, upd) {
-  renderQuestion$15(env, upd); 
-  renderQuestion$16(env, upd); 
-  renderQuestion$17(env, upd); 
-  renderQuestion$18(env, upd); 
-  renderQuestion$19(env, upd); 
+  renderQuestion$15(env, upd);
+  renderQuestion$16(env, upd);
+  renderQuestion$17(env, upd);
+  renderQuestion$18(env, upd);
+  renderQuestion$19(env, upd);
   renderQuestion$20(env, upd);
 }
 function renderQuestion$22(env, upd) {
@@ -6911,20 +7872,20 @@ function renderQuestion$22(env, upd) {
 }
 function updater$20(upd) {
   return function (x) {
-  upd('qualifyingPersonName', x.target.value);
-};
+    upd('qualifyingPersonName', x.target.value);
+  };
 }
 function widget$21(env, func) {
   var div = document.createElement('div');
-    div.id = 'qualifyingPersonName-div';
-    div.appendChild(document.createTextNode('"Name of the qualifying person if not a dependent:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'qualifyingPersonName-widget'; 
+  div.id = 'qualifyingPersonName-div';
+  div.appendChild(document.createTextNode('"Name of the qualifying person if not a dependent:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'qualifyingPersonName-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['qualifyingPersonName']; 
-  elt.onchange = func; 
+  elt.value = env['qualifyingPersonName'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$23(env, upd) {
   widget$21(env, updater$20(upd));
@@ -6937,181 +7898,181 @@ function renderQuestion$25(env, upd) {
 }
 function updater$21(upd) {
   return function (x) {
-  upd('digitalAssets', x.target.checked);
-};
+    upd('digitalAssets', x.target.checked);
+  };
 }
 function widget$22(env, func) {
   var div = document.createElement('div');
-    div.id = 'digitalAssets-div';
-    div.appendChild(document.createTextNode('"At any time during 2023 did you receive, sell, exchange or dispose of a digital asset?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'digitalAssets-widget'; 
+  div.id = 'digitalAssets-div';
+  div.appendChild(document.createTextNode('"At any time during 2023 did you receive, sell, exchange or dispose of a digital asset?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'digitalAssets-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['digitalAssets']; 
-  elt.onchange = func; 
+  elt.checked = env['digitalAssets'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$26(env, upd) {
   widget$22(env, updater$21(upd));
 }
 function updater$22(upd) {
   return function (x) {
-  upd('nDependents', parseInt(x.target.value));
-};
+    upd('nDependents', parseInt(x.target.value));
+  };
 }
 function widget$23(env, func) {
   var div = document.createElement('div');
-    div.id = 'nDependents-div';
-    div.appendChild(document.createTextNode('"Number of dependents (0-4):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'nDependents-widget'; 
+  div.id = 'nDependents-div';
+  div.appendChild(document.createTextNode('"Number of dependents (0-4):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'nDependents-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['nDependents']; 
-  elt.onchange = func; 
+  elt.value = env['nDependents'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$27(env, upd) {
   widget$23(env, updater$22(upd));
 }
 function updater$23(upd) {
   return function (x) {
-  upd('dep1Name', x.target.value);
-};
+    upd('dep1Name', x.target.value);
+  };
 }
 function widget$24(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep1Name-div';
-    div.appendChild(document.createTextNode('"Dependent 1 name:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep1Name-widget'; 
+  div.id = 'dep1Name-div';
+  div.appendChild(document.createTextNode('"Dependent 1 name:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep1Name-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['dep1Name']; 
-  elt.onchange = func; 
+  elt.value = env['dep1Name'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$28(env, upd) {
   widget$24(env, updater$23(upd));
 }
 function updater$24(upd) {
   return function (x) {
-  upd('dep1Ssn', x.target.value);
-};
+    upd('dep1Ssn', x.target.value);
+  };
 }
 function widget$25(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep1Ssn-div';
-    div.appendChild(document.createTextNode('"Dependent 1 SSN:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep1Ssn-widget'; 
+  div.id = 'dep1Ssn-div';
+  div.appendChild(document.createTextNode('"Dependent 1 SSN:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep1Ssn-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['dep1Ssn']; 
-  elt.onchange = func; 
+  elt.value = env['dep1Ssn'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$29(env, upd) {
   widget$25(env, updater$24(upd));
 }
 function updater$25(upd) {
   return function (x) {
-  upd('dep1Relationship', x.target.value);
-};
+    upd('dep1Relationship', x.target.value);
+  };
 }
 function widget$26(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep1Relationship-div';
-    div.appendChild(document.createTextNode('"Dependent 1 relationship:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep1Relationship-widget'; 
+  div.id = 'dep1Relationship-div';
+  div.appendChild(document.createTextNode('"Dependent 1 relationship:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep1Relationship-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['dep1Relationship']; 
-  elt.onchange = func; 
+  elt.value = env['dep1Relationship'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$30(env, upd) {
   widget$26(env, updater$25(upd));
 }
 function updater$26(upd) {
   return function (x) {
-  upd('dep1Age', parseInt(x.target.value));
-};
+    upd('dep1Age', parseInt(x.target.value));
+  };
 }
 function widget$27(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep1Age-div';
-    div.appendChild(document.createTextNode('"Dependent 1 age at end of 2023:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep1Age-widget'; 
+  div.id = 'dep1Age-div';
+  div.appendChild(document.createTextNode('"Dependent 1 age at end of 2023:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep1Age-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['dep1Age']; 
-  elt.onchange = func; 
+  elt.value = env['dep1Age'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$31(env, upd) {
   widget$27(env, updater$26(upd));
 }
 function updater$27(upd) {
   return function (x) {
-  upd('dep1Lived', x.target.checked);
-};
+    upd('dep1Lived', x.target.checked);
+  };
 }
 function widget$28(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep1Lived-div';
-    div.appendChild(document.createTextNode('"Dependent 1 lived with you more than half the year?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep1Lived-widget'; 
+  div.id = 'dep1Lived-div';
+  div.appendChild(document.createTextNode('"Dependent 1 lived with you more than half the year?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep1Lived-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['dep1Lived']; 
-  elt.onchange = func; 
+  elt.checked = env['dep1Lived'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$32(env, upd) {
   widget$28(env, updater$27(upd));
 }
 function widget$29(env) {
   var div = document.createElement('div');
-    div.id = 'dep1Ctc-div';
-    div.appendChild(document.createTextNode('"Dependent 1 qualifies for the child tax credit:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep1Ctc-widget'; 
+  div.id = 'dep1Ctc-div';
+  div.appendChild(document.createTextNode('"Dependent 1 qualifies for the child tax credit:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep1Ctc-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['dep1Ctc']; 
-  elt.disabled = true; 
+  elt.checked = env['dep1Ctc'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$33(env, upd) {
   widget$29(env);
 }
 function widget$30(env) {
   var div = document.createElement('div');
-    div.id = 'dep1Odc-div';
-    div.appendChild(document.createTextNode('"Dependent 1 qualifies for the credit for other dependents:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep1Odc-widget'; 
+  div.id = 'dep1Odc-div';
+  div.appendChild(document.createTextNode('"Dependent 1 qualifies for the credit for other dependents:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep1Odc-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['dep1Odc']; 
-  elt.disabled = true; 
+  elt.checked = env['dep1Odc'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$34(env, upd) {
   widget$30(env);
 }
 function renderQuestion$35(env, upd) {
-  renderQuestion$28(env, upd); 
-  renderQuestion$29(env, upd); 
-  renderQuestion$30(env, upd); 
-  renderQuestion$31(env, upd); 
-  renderQuestion$32(env, upd); 
-  renderQuestion$33(env, upd); 
+  renderQuestion$28(env, upd);
+  renderQuestion$29(env, upd);
+  renderQuestion$30(env, upd);
+  renderQuestion$31(env, upd);
+  renderQuestion$32(env, upd);
+  renderQuestion$33(env, upd);
   renderQuestion$34(env, upd);
 }
 function renderQuestion$36(env, upd) {
@@ -7119,141 +8080,141 @@ function renderQuestion$36(env, upd) {
 }
 function updater$28(upd) {
   return function (x) {
-  upd('dep2Name', x.target.value);
-};
+    upd('dep2Name', x.target.value);
+  };
 }
 function widget$31(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep2Name-div';
-    div.appendChild(document.createTextNode('"Dependent 2 name:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep2Name-widget'; 
+  div.id = 'dep2Name-div';
+  div.appendChild(document.createTextNode('"Dependent 2 name:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep2Name-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['dep2Name']; 
-  elt.onchange = func; 
+  elt.value = env['dep2Name'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$37(env, upd) {
   widget$31(env, updater$28(upd));
 }
 function updater$29(upd) {
   return function (x) {
-  upd('dep2Ssn', x.target.value);
-};
+    upd('dep2Ssn', x.target.value);
+  };
 }
 function widget$32(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep2Ssn-div';
-    div.appendChild(document.createTextNode('"Dependent 2 SSN:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep2Ssn-widget'; 
+  div.id = 'dep2Ssn-div';
+  div.appendChild(document.createTextNode('"Dependent 2 SSN:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep2Ssn-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['dep2Ssn']; 
-  elt.onchange = func; 
+  elt.value = env['dep2Ssn'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$38(env, upd) {
   widget$32(env, updater$29(upd));
 }
 function updater$30(upd) {
   return function (x) {
-  upd('dep2Relationship', x.target.value);
-};
+    upd('dep2Relationship', x.target.value);
+  };
 }
 function widget$33(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep2Relationship-div';
-    div.appendChild(document.createTextNode('"Dependent 2 relationship:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep2Relationship-widget'; 
+  div.id = 'dep2Relationship-div';
+  div.appendChild(document.createTextNode('"Dependent 2 relationship:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep2Relationship-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['dep2Relationship']; 
-  elt.onchange = func; 
+  elt.value = env['dep2Relationship'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$39(env, upd) {
   widget$33(env, updater$30(upd));
 }
 function updater$31(upd) {
   return function (x) {
-  upd('dep2Age', parseInt(x.target.value));
-};
+    upd('dep2Age', parseInt(x.target.value));
+  };
 }
 function widget$34(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep2Age-div';
-    div.appendChild(document.createTextNode('"Dependent 2 age at end of 2023:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep2Age-widget'; 
+  div.id = 'dep2Age-div';
+  div.appendChild(document.createTextNode('"Dependent 2 age at end of 2023:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep2Age-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['dep2Age']; 
-  elt.onchange = func; 
+  elt.value = env['dep2Age'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$40(env, upd) {
   widget$34(env, updater$31(upd));
 }
 function updater$32(upd) {
   return function (x) {
-  upd('dep2Lived', x.target.checked);
-};
+    upd('dep2Lived', x.target.checked);
+  };
 }
 function widget$35(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep2Lived-div';
-    div.appendChild(document.createTextNode('"Dependent 2 lived with you more than half the year?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep2Lived-widget'; 
+  div.id = 'dep2Lived-div';
+  div.appendChild(document.createTextNode('"Dependent 2 lived with you more than half the year?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep2Lived-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['dep2Lived']; 
-  elt.onchange = func; 
+  elt.checked = env['dep2Lived'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$41(env, upd) {
   widget$35(env, updater$32(upd));
 }
 function widget$36(env) {
   var div = document.createElement('div');
-    div.id = 'dep2Ctc-div';
-    div.appendChild(document.createTextNode('"Dependent 2 qualifies for the child tax credit:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep2Ctc-widget'; 
+  div.id = 'dep2Ctc-div';
+  div.appendChild(document.createTextNode('"Dependent 2 qualifies for the child tax credit:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep2Ctc-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['dep2Ctc']; 
-  elt.disabled = true; 
+  elt.checked = env['dep2Ctc'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$42(env, upd) {
   widget$36(env);
 }
 function widget$37(env) {
   var div = document.createElement('div');
-    div.id = 'dep2Odc-div';
-    div.appendChild(document.createTextNode('"Dependent 2 qualifies for the credit for other dependents:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep2Odc-widget'; 
+  div.id = 'dep2Odc-div';
+  div.appendChild(document.createTextNode('"Dependent 2 qualifies for the credit for other dependents:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep2Odc-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['dep2Odc']; 
-  elt.disabled = true; 
+  elt.checked = env['dep2Odc'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$43(env, upd) {
   widget$37(env);
 }
 function renderQuestion$44(env, upd) {
-  renderQuestion$37(env, upd); 
-  renderQuestion$38(env, upd); 
-  renderQuestion$39(env, upd); 
-  renderQuestion$40(env, upd); 
-  renderQuestion$41(env, upd); 
-  renderQuestion$42(env, upd); 
+  renderQuestion$37(env, upd);
+  renderQuestion$38(env, upd);
+  renderQuestion$39(env, upd);
+  renderQuestion$40(env, upd);
+  renderQuestion$41(env, upd);
+  renderQuestion$42(env, upd);
   renderQuestion$43(env, upd);
 }
 function renderQuestion$45(env, upd) {
@@ -7261,141 +8222,141 @@ function renderQuestion$45(env, upd) {
 }
 function updater$33(upd) {
   return function (x) {
-  upd('dep3Name', x.target.value);
-};
+    upd('dep3Name', x.target.value);
+  };
 }
 function widget$38(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep3Name-div';
-    div.appendChild(document.createTextNode('"Dependent 3 name:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep3Name-widget'; 
+  div.id = 'dep3Name-div';
+  div.appendChild(document.createTextNode('"Dependent 3 name:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep3Name-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['dep3Name']; 
-  elt.onchange = func; 
+  elt.value = env['dep3Name'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$46(env, upd) {
   widget$38(env, updater$33(upd));
 }
 function updater$34(upd) {
   return function (x) {
-  upd('dep3Ssn', x.target.value);
-};
+    upd('dep3Ssn', x.target.value);
+  };
 }
 function widget$39(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep3Ssn-div';
-    div.appendChild(document.createTextNode('"Dependent 3 SSN:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep3Ssn-widget'; 
+  div.id = 'dep3Ssn-div';
+  div.appendChild(document.createTextNode('"Dependent 3 SSN:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep3Ssn-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['dep3Ssn']; 
-  elt.onchange = func; 
+  elt.value = env['dep3Ssn'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$47(env, upd) {
   widget$39(env, updater$34(upd));
 }
 function updater$35(upd) {
   return function (x) {
-  upd('dep3Relationship', x.target.value);
-};
+    upd('dep3Relationship', x.target.value);
+  };
 }
 function widget$40(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep3Relationship-div';
-    div.appendChild(document.createTextNode('"Dependent 3 relationship:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep3Relationship-widget'; 
+  div.id = 'dep3Relationship-div';
+  div.appendChild(document.createTextNode('"Dependent 3 relationship:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep3Relationship-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['dep3Relationship']; 
-  elt.onchange = func; 
+  elt.value = env['dep3Relationship'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$48(env, upd) {
   widget$40(env, updater$35(upd));
 }
 function updater$36(upd) {
   return function (x) {
-  upd('dep3Age', parseInt(x.target.value));
-};
+    upd('dep3Age', parseInt(x.target.value));
+  };
 }
 function widget$41(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep3Age-div';
-    div.appendChild(document.createTextNode('"Dependent 3 age at end of 2023:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep3Age-widget'; 
+  div.id = 'dep3Age-div';
+  div.appendChild(document.createTextNode('"Dependent 3 age at end of 2023:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep3Age-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['dep3Age']; 
-  elt.onchange = func; 
+  elt.value = env['dep3Age'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$49(env, upd) {
   widget$41(env, updater$36(upd));
 }
 function updater$37(upd) {
   return function (x) {
-  upd('dep3Lived', x.target.checked);
-};
+    upd('dep3Lived', x.target.checked);
+  };
 }
 function widget$42(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep3Lived-div';
-    div.appendChild(document.createTextNode('"Dependent 3 lived with you more than half the year?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep3Lived-widget'; 
+  div.id = 'dep3Lived-div';
+  div.appendChild(document.createTextNode('"Dependent 3 lived with you more than half the year?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep3Lived-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['dep3Lived']; 
-  elt.onchange = func; 
+  elt.checked = env['dep3Lived'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$50(env, upd) {
   widget$42(env, updater$37(upd));
 }
 function widget$43(env) {
   var div = document.createElement('div');
-    div.id = 'dep3Ctc-div';
-    div.appendChild(document.createTextNode('"Dependent 3 qualifies for the child tax credit:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep3Ctc-widget'; 
+  div.id = 'dep3Ctc-div';
+  div.appendChild(document.createTextNode('"Dependent 3 qualifies for the child tax credit:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep3Ctc-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['dep3Ctc']; 
-  elt.disabled = true; 
+  elt.checked = env['dep3Ctc'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$51(env, upd) {
   widget$43(env);
 }
 function widget$44(env) {
   var div = document.createElement('div');
-    div.id = 'dep3Odc-div';
-    div.appendChild(document.createTextNode('"Dependent 3 qualifies for the credit for other dependents:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep3Odc-widget'; 
+  div.id = 'dep3Odc-div';
+  div.appendChild(document.createTextNode('"Dependent 3 qualifies for the credit for other dependents:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep3Odc-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['dep3Odc']; 
-  elt.disabled = true; 
+  elt.checked = env['dep3Odc'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$52(env, upd) {
   widget$44(env);
 }
 function renderQuestion$53(env, upd) {
-  renderQuestion$46(env, upd); 
-  renderQuestion$47(env, upd); 
-  renderQuestion$48(env, upd); 
-  renderQuestion$49(env, upd); 
-  renderQuestion$50(env, upd); 
-  renderQuestion$51(env, upd); 
+  renderQuestion$46(env, upd);
+  renderQuestion$47(env, upd);
+  renderQuestion$48(env, upd);
+  renderQuestion$49(env, upd);
+  renderQuestion$50(env, upd);
+  renderQuestion$51(env, upd);
   renderQuestion$52(env, upd);
 }
 function renderQuestion$54(env, upd) {
@@ -7403,141 +8364,141 @@ function renderQuestion$54(env, upd) {
 }
 function updater$38(upd) {
   return function (x) {
-  upd('dep4Name', x.target.value);
-};
+    upd('dep4Name', x.target.value);
+  };
 }
 function widget$45(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep4Name-div';
-    div.appendChild(document.createTextNode('"Dependent 4 name:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep4Name-widget'; 
+  div.id = 'dep4Name-div';
+  div.appendChild(document.createTextNode('"Dependent 4 name:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep4Name-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['dep4Name']; 
-  elt.onchange = func; 
+  elt.value = env['dep4Name'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$55(env, upd) {
   widget$45(env, updater$38(upd));
 }
 function updater$39(upd) {
   return function (x) {
-  upd('dep4Ssn', x.target.value);
-};
+    upd('dep4Ssn', x.target.value);
+  };
 }
 function widget$46(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep4Ssn-div';
-    div.appendChild(document.createTextNode('"Dependent 4 SSN:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep4Ssn-widget'; 
+  div.id = 'dep4Ssn-div';
+  div.appendChild(document.createTextNode('"Dependent 4 SSN:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep4Ssn-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['dep4Ssn']; 
-  elt.onchange = func; 
+  elt.value = env['dep4Ssn'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$56(env, upd) {
   widget$46(env, updater$39(upd));
 }
 function updater$40(upd) {
   return function (x) {
-  upd('dep4Relationship', x.target.value);
-};
+    upd('dep4Relationship', x.target.value);
+  };
 }
 function widget$47(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep4Relationship-div';
-    div.appendChild(document.createTextNode('"Dependent 4 relationship:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep4Relationship-widget'; 
+  div.id = 'dep4Relationship-div';
+  div.appendChild(document.createTextNode('"Dependent 4 relationship:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep4Relationship-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['dep4Relationship']; 
-  elt.onchange = func; 
+  elt.value = env['dep4Relationship'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$57(env, upd) {
   widget$47(env, updater$40(upd));
 }
 function updater$41(upd) {
   return function (x) {
-  upd('dep4Age', parseInt(x.target.value));
-};
+    upd('dep4Age', parseInt(x.target.value));
+  };
 }
 function widget$48(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep4Age-div';
-    div.appendChild(document.createTextNode('"Dependent 4 age at end of 2023:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep4Age-widget'; 
+  div.id = 'dep4Age-div';
+  div.appendChild(document.createTextNode('"Dependent 4 age at end of 2023:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep4Age-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['dep4Age']; 
-  elt.onchange = func; 
+  elt.value = env['dep4Age'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$58(env, upd) {
   widget$48(env, updater$41(upd));
 }
 function updater$42(upd) {
   return function (x) {
-  upd('dep4Lived', x.target.checked);
-};
+    upd('dep4Lived', x.target.checked);
+  };
 }
 function widget$49(env, func) {
   var div = document.createElement('div');
-    div.id = 'dep4Lived-div';
-    div.appendChild(document.createTextNode('"Dependent 4 lived with you more than half the year?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep4Lived-widget'; 
+  div.id = 'dep4Lived-div';
+  div.appendChild(document.createTextNode('"Dependent 4 lived with you more than half the year?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep4Lived-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['dep4Lived']; 
-  elt.onchange = func; 
+  elt.checked = env['dep4Lived'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$59(env, upd) {
   widget$49(env, updater$42(upd));
 }
 function widget$50(env) {
   var div = document.createElement('div');
-    div.id = 'dep4Ctc-div';
-    div.appendChild(document.createTextNode('"Dependent 4 qualifies for the child tax credit:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep4Ctc-widget'; 
+  div.id = 'dep4Ctc-div';
+  div.appendChild(document.createTextNode('"Dependent 4 qualifies for the child tax credit:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep4Ctc-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['dep4Ctc']; 
-  elt.disabled = true; 
+  elt.checked = env['dep4Ctc'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$60(env, upd) {
   widget$50(env);
 }
 function widget$51(env) {
   var div = document.createElement('div');
-    div.id = 'dep4Odc-div';
-    div.appendChild(document.createTextNode('"Dependent 4 qualifies for the credit for other dependents:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'dep4Odc-widget'; 
+  div.id = 'dep4Odc-div';
+  div.appendChild(document.createTextNode('"Dependent 4 qualifies for the credit for other dependents:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'dep4Odc-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['dep4Odc']; 
-  elt.disabled = true; 
+  elt.checked = env['dep4Odc'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$61(env, upd) {
   widget$51(env);
 }
 function renderQuestion$62(env, upd) {
-  renderQuestion$55(env, upd); 
-  renderQuestion$56(env, upd); 
-  renderQuestion$57(env, upd); 
-  renderQuestion$58(env, upd); 
-  renderQuestion$59(env, upd); 
-  renderQuestion$60(env, upd); 
+  renderQuestion$55(env, upd);
+  renderQuestion$56(env, upd);
+  renderQuestion$57(env, upd);
+  renderQuestion$58(env, upd);
+  renderQuestion$59(env, upd);
+  renderQuestion$60(env, upd);
   renderQuestion$61(env, upd);
 }
 function renderQuestion$63(env, upd) {
@@ -7545,129 +8506,129 @@ function renderQuestion$63(env, upd) {
 }
 function updater$43(upd) {
   return function (x) {
-  upd('nW2', parseInt(x.target.value));
-};
+    upd('nW2', parseInt(x.target.value));
+  };
 }
 function widget$52(env, func) {
   var div = document.createElement('div');
-    div.id = 'nW2-div';
-    div.appendChild(document.createTextNode('"Number of Forms W-2 (0-3):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'nW2-widget'; 
+  div.id = 'nW2-div';
+  div.appendChild(document.createTextNode('"Number of Forms W-2 (0-3):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'nW2-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['nW2']; 
-  elt.onchange = func; 
+  elt.value = env['nW2'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$64(env, upd) {
   widget$52(env, updater$43(upd));
 }
 function updater$44(upd) {
   return function (x) {
-  upd('w2a', x.target.value);
-};
+    upd('w2a', x.target.value);
+  };
 }
 function widget$53(env, func) {
   var div = document.createElement('div');
-    div.id = 'w2a-div';
-    div.appendChild(document.createTextNode('"W-2 #1 employer name:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'w2a-widget'; 
+  div.id = 'w2a-div';
+  div.appendChild(document.createTextNode('"W-2 #1 employer name:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'w2a-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['w2a']; 
-  elt.onchange = func; 
+  elt.value = env['w2a'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$65(env, upd) {
   widget$53(env, updater$44(upd));
 }
 function updater$45(upd) {
   return function (x) {
-  upd('w2aWages', parseInt(x.target.value));
-};
+    upd('w2aWages', parseInt(x.target.value));
+  };
 }
 function widget$54(env, func) {
   var div = document.createElement('div');
-    div.id = 'w2aWages-div';
-    div.appendChild(document.createTextNode('"W-2 #1 box 1 wages (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'w2aWages-widget'; 
+  div.id = 'w2aWages-div';
+  div.appendChild(document.createTextNode('"W-2 #1 box 1 wages (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'w2aWages-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['w2aWages']; 
-  elt.onchange = func; 
+  elt.value = env['w2aWages'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$66(env, upd) {
   widget$54(env, updater$45(upd));
 }
 function updater$46(upd) {
   return function (x) {
-  upd('w2aWithheld', parseInt(x.target.value));
-};
+    upd('w2aWithheld', parseInt(x.target.value));
+  };
 }
 function widget$55(env, func) {
   var div = document.createElement('div');
-    div.id = 'w2aWithheld-div';
-    div.appendChild(document.createTextNode('"W-2 #1 box 2 federal income tax withheld (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'w2aWithheld-widget'; 
+  div.id = 'w2aWithheld-div';
+  div.appendChild(document.createTextNode('"W-2 #1 box 2 federal income tax withheld (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'w2aWithheld-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['w2aWithheld']; 
-  elt.onchange = func; 
+  elt.value = env['w2aWithheld'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$67(env, upd) {
   widget$55(env, updater$46(upd));
 }
 function updater$47(upd) {
   return function (x) {
-  upd('w2aTips', parseInt(x.target.value));
-};
+    upd('w2aTips', parseInt(x.target.value));
+  };
 }
 function widget$56(env, func) {
   var div = document.createElement('div');
-    div.id = 'w2aTips-div';
-    div.appendChild(document.createTextNode('"W-2 #1 box 8 allocated tips (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'w2aTips-widget'; 
+  div.id = 'w2aTips-div';
+  div.appendChild(document.createTextNode('"W-2 #1 box 8 allocated tips (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'w2aTips-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['w2aTips']; 
-  elt.onchange = func; 
+  elt.value = env['w2aTips'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$68(env, upd) {
   widget$56(env, updater$47(upd));
 }
 function updater$48(upd) {
   return function (x) {
-  upd('w2aCare', parseInt(x.target.value));
-};
+    upd('w2aCare', parseInt(x.target.value));
+  };
 }
 function widget$57(env, func) {
   var div = document.createElement('div');
-    div.id = 'w2aCare-div';
-    div.appendChild(document.createTextNode('"W-2 #1 box 10 dependent care benefits (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'w2aCare-widget'; 
+  div.id = 'w2aCare-div';
+  div.appendChild(document.createTextNode('"W-2 #1 box 10 dependent care benefits (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'w2aCare-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['w2aCare']; 
-  elt.onchange = func; 
+  elt.value = env['w2aCare'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$69(env, upd) {
   widget$57(env, updater$48(upd));
 }
 function renderQuestion$70(env, upd) {
-  renderQuestion$65(env, upd); 
-  renderQuestion$66(env, upd); 
-  renderQuestion$67(env, upd); 
-  renderQuestion$68(env, upd); 
+  renderQuestion$65(env, upd);
+  renderQuestion$66(env, upd);
+  renderQuestion$67(env, upd);
+  renderQuestion$68(env, upd);
   renderQuestion$69(env, upd);
 }
 function renderQuestion$71(env, upd) {
@@ -7675,109 +8636,109 @@ function renderQuestion$71(env, upd) {
 }
 function updater$49(upd) {
   return function (x) {
-  upd('w2b', x.target.value);
-};
+    upd('w2b', x.target.value);
+  };
 }
 function widget$58(env, func) {
   var div = document.createElement('div');
-    div.id = 'w2b-div';
-    div.appendChild(document.createTextNode('"W-2 #2 employer name:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'w2b-widget'; 
+  div.id = 'w2b-div';
+  div.appendChild(document.createTextNode('"W-2 #2 employer name:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'w2b-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['w2b']; 
-  elt.onchange = func; 
+  elt.value = env['w2b'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$72(env, upd) {
   widget$58(env, updater$49(upd));
 }
 function updater$50(upd) {
   return function (x) {
-  upd('w2bWages', parseInt(x.target.value));
-};
+    upd('w2bWages', parseInt(x.target.value));
+  };
 }
 function widget$59(env, func) {
   var div = document.createElement('div');
-    div.id = 'w2bWages-div';
-    div.appendChild(document.createTextNode('"W-2 #2 box 1 wages (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'w2bWages-widget'; 
+  div.id = 'w2bWages-div';
+  div.appendChild(document.createTextNode('"W-2 #2 box 1 wages (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'w2bWages-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['w2bWages']; 
-  elt.onchange = func; 
+  elt.value = env['w2bWages'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$73(env, upd) {
   widget$59(env, updater$50(upd));
 }
 function updater$51(upd) {
   return function (x) {
-  upd('w2bWithheld', parseInt(x.target.value));
-};
+    upd('w2bWithheld', parseInt(x.target.value));
+  };
 }
 function widget$60(env, func) {
   var div = document.createElement('div');
-    div.id = 'w2bWithheld-div';
-    div.appendChild(document.createTextNode('"W-2 #2 box 2 federal income tax withheld (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'w2bWithheld-widget'; 
+  div.id = 'w2bWithheld-div';
+  div.appendChild(document.createTextNode('"W-2 #2 box 2 federal income tax withheld (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'w2bWithheld-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['w2bWithheld']; 
-  elt.onchange = func; 
+  elt.value = env['w2bWithheld'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$74(env, upd) {
   widget$60(env, updater$51(upd));
 }
 function updater$52(upd) {
   return function (x) {
-  upd('w2bTips', parseInt(x.target.value));
-};
+    upd('w2bTips', parseInt(x.target.value));
+  };
 }
 function widget$61(env, func) {
   var div = document.createElement('div');
-    div.id = 'w2bTips-div';
-    div.appendChild(document.createTextNode('"W-2 #2 box 8 allocated tips (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'w2bTips-widget'; 
+  div.id = 'w2bTips-div';
+  div.appendChild(document.createTextNode('"W-2 #2 box 8 allocated tips (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'w2bTips-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['w2bTips']; 
-  elt.onchange = func; 
+  elt.value = env['w2bTips'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$75(env, upd) {
   widget$61(env, updater$52(upd));
 }
 function updater$53(upd) {
   return function (x) {
-  upd('w2bCare', parseInt(x.target.value));
-};
+    upd('w2bCare', parseInt(x.target.value));
+  };
 }
 function widget$62(env, func) {
   var div = document.createElement('div');
-    div.id = 'w2bCare-div';
-    div.appendChild(document.createTextNode('"W-2 #2 box 10 dependent care benefits (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'w2bCare-widget'; 
+  div.id = 'w2bCare-div';
+  div.appendChild(document.createTextNode('"W-2 #2 box 10 dependent care benefits (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'w2bCare-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['w2bCare']; 
-  elt.onchange = func; 
+  elt.value = env['w2bCare'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$76(env, upd) {
   widget$62(env, updater$53(upd));
 }
 function renderQuestion$77(env, upd) {
-  renderQuestion$72(env, upd); 
-  renderQuestion$73(env, upd); 
-  renderQuestion$74(env, upd); 
-  renderQuestion$75(env, upd); 
+  renderQuestion$72(env, upd);
+  renderQuestion$73(env, upd);
+  renderQuestion$74(env, upd);
+  renderQuestion$75(env, upd);
   renderQuestion$76(env, upd);
 }
 function renderQuestion$78(env, upd) {
@@ -7785,109 +8746,109 @@ function renderQuestion$78(env, upd) {
 }
 function updater$54(upd) {
   return function (x) {
-  upd('w2c', x.target.value);
-};
+    upd('w2c', x.target.value);
+  };
 }
 function widget$63(env, func) {
   var div = document.createElement('div');
-    div.id = 'w2c-div';
-    div.appendChild(document.createTextNode('"W-2 #3 employer name:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'w2c-widget'; 
+  div.id = 'w2c-div';
+  div.appendChild(document.createTextNode('"W-2 #3 employer name:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'w2c-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['w2c']; 
-  elt.onchange = func; 
+  elt.value = env['w2c'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$79(env, upd) {
   widget$63(env, updater$54(upd));
 }
 function updater$55(upd) {
   return function (x) {
-  upd('w2cWages', parseInt(x.target.value));
-};
+    upd('w2cWages', parseInt(x.target.value));
+  };
 }
 function widget$64(env, func) {
   var div = document.createElement('div');
-    div.id = 'w2cWages-div';
-    div.appendChild(document.createTextNode('"W-2 #3 box 1 wages (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'w2cWages-widget'; 
+  div.id = 'w2cWages-div';
+  div.appendChild(document.createTextNode('"W-2 #3 box 1 wages (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'w2cWages-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['w2cWages']; 
-  elt.onchange = func; 
+  elt.value = env['w2cWages'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$80(env, upd) {
   widget$64(env, updater$55(upd));
 }
 function updater$56(upd) {
   return function (x) {
-  upd('w2cWithheld', parseInt(x.target.value));
-};
+    upd('w2cWithheld', parseInt(x.target.value));
+  };
 }
 function widget$65(env, func) {
   var div = document.createElement('div');
-    div.id = 'w2cWithheld-div';
-    div.appendChild(document.createTextNode('"W-2 #3 box 2 federal income tax withheld (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'w2cWithheld-widget'; 
+  div.id = 'w2cWithheld-div';
+  div.appendChild(document.createTextNode('"W-2 #3 box 2 federal income tax withheld (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'w2cWithheld-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['w2cWithheld']; 
-  elt.onchange = func; 
+  elt.value = env['w2cWithheld'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$81(env, upd) {
   widget$65(env, updater$56(upd));
 }
 function updater$57(upd) {
   return function (x) {
-  upd('w2cTips', parseInt(x.target.value));
-};
+    upd('w2cTips', parseInt(x.target.value));
+  };
 }
 function widget$66(env, func) {
   var div = document.createElement('div');
-    div.id = 'w2cTips-div';
-    div.appendChild(document.createTextNode('"W-2 #3 box 8 allocated tips (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'w2cTips-widget'; 
+  div.id = 'w2cTips-div';
+  div.appendChild(document.createTextNode('"W-2 #3 box 8 allocated tips (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'w2cTips-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['w2cTips']; 
-  elt.onchange = func; 
+  elt.value = env['w2cTips'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$82(env, upd) {
   widget$66(env, updater$57(upd));
 }
 function updater$58(upd) {
   return function (x) {
-  upd('w2cCare', parseInt(x.target.value));
-};
+    upd('w2cCare', parseInt(x.target.value));
+  };
 }
 function widget$67(env, func) {
   var div = document.createElement('div');
-    div.id = 'w2cCare-div';
-    div.appendChild(document.createTextNode('"W-2 #3 box 10 dependent care benefits (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'w2cCare-widget'; 
+  div.id = 'w2cCare-div';
+  div.appendChild(document.createTextNode('"W-2 #3 box 10 dependent care benefits (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'w2cCare-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['w2cCare']; 
-  elt.onchange = func; 
+  elt.value = env['w2cCare'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$83(env, upd) {
   widget$67(env, updater$58(upd));
 }
 function renderQuestion$84(env, upd) {
-  renderQuestion$79(env, upd); 
-  renderQuestion$80(env, upd); 
-  renderQuestion$81(env, upd); 
-  renderQuestion$82(env, upd); 
+  renderQuestion$79(env, upd);
+  renderQuestion$80(env, upd);
+  renderQuestion$81(env, upd);
+  renderQuestion$82(env, upd);
   renderQuestion$83(env, upd);
 }
 function renderQuestion$85(env, upd) {
@@ -7895,401 +8856,401 @@ function renderQuestion$85(env, upd) {
 }
 function updater$59(upd) {
   return function (x) {
-  upd('sBPayer1', x.target.value);
-};
+    upd('sBPayer1', x.target.value);
+  };
 }
 function widget$68(env, func) {
   var div = document.createElement('div');
-    div.id = 'sBPayer1-div';
-    div.appendChild(document.createTextNode('"Schedule B 1. Interest payer 1:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBPayer1-widget'; 
+  div.id = 'sBPayer1-div';
+  div.appendChild(document.createTextNode('"Schedule B 1. Interest payer 1:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBPayer1-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['sBPayer1']; 
-  elt.onchange = func; 
+  elt.value = env['sBPayer1'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$86(env, upd) {
   widget$68(env, updater$59(upd));
 }
 function updater$60(upd) {
   return function (x) {
-  upd('sBInt1', parseInt(x.target.value));
-};
+    upd('sBInt1', parseInt(x.target.value));
+  };
 }
 function widget$69(env, func) {
   var div = document.createElement('div');
-    div.id = 'sBInt1-div';
-    div.appendChild(document.createTextNode('"Schedule B 1. Interest from payer 1 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBInt1-widget'; 
+  div.id = 'sBInt1-div';
+  div.appendChild(document.createTextNode('"Schedule B 1. Interest from payer 1 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBInt1-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sBInt1']; 
-  elt.onchange = func; 
+  elt.value = env['sBInt1'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$87(env, upd) {
   widget$69(env, updater$60(upd));
 }
 function updater$61(upd) {
   return function (x) {
-  upd('sBPayer2', x.target.value);
-};
+    upd('sBPayer2', x.target.value);
+  };
 }
 function widget$70(env, func) {
   var div = document.createElement('div');
-    div.id = 'sBPayer2-div';
-    div.appendChild(document.createTextNode('"Schedule B 1. Interest payer 2:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBPayer2-widget'; 
+  div.id = 'sBPayer2-div';
+  div.appendChild(document.createTextNode('"Schedule B 1. Interest payer 2:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBPayer2-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['sBPayer2']; 
-  elt.onchange = func; 
+  elt.value = env['sBPayer2'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$88(env, upd) {
   widget$70(env, updater$61(upd));
 }
 function updater$62(upd) {
   return function (x) {
-  upd('sBInt2', parseInt(x.target.value));
-};
+    upd('sBInt2', parseInt(x.target.value));
+  };
 }
 function widget$71(env, func) {
   var div = document.createElement('div');
-    div.id = 'sBInt2-div';
-    div.appendChild(document.createTextNode('"Schedule B 1. Interest from payer 2 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBInt2-widget'; 
+  div.id = 'sBInt2-div';
+  div.appendChild(document.createTextNode('"Schedule B 1. Interest from payer 2 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBInt2-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sBInt2']; 
-  elt.onchange = func; 
+  elt.value = env['sBInt2'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$89(env, upd) {
   widget$71(env, updater$62(upd));
 }
 function updater$63(upd) {
   return function (x) {
-  upd('sBPayer3', x.target.value);
-};
+    upd('sBPayer3', x.target.value);
+  };
 }
 function widget$72(env, func) {
   var div = document.createElement('div');
-    div.id = 'sBPayer3-div';
-    div.appendChild(document.createTextNode('"Schedule B 1. Interest payer 3:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBPayer3-widget'; 
+  div.id = 'sBPayer3-div';
+  div.appendChild(document.createTextNode('"Schedule B 1. Interest payer 3:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBPayer3-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['sBPayer3']; 
-  elt.onchange = func; 
+  elt.value = env['sBPayer3'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$90(env, upd) {
   widget$72(env, updater$63(upd));
 }
 function updater$64(upd) {
   return function (x) {
-  upd('sBInt3', parseInt(x.target.value));
-};
+    upd('sBInt3', parseInt(x.target.value));
+  };
 }
 function widget$73(env, func) {
   var div = document.createElement('div');
-    div.id = 'sBInt3-div';
-    div.appendChild(document.createTextNode('"Schedule B 1. Interest from payer 3 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBInt3-widget'; 
+  div.id = 'sBInt3-div';
+  div.appendChild(document.createTextNode('"Schedule B 1. Interest from payer 3 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBInt3-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sBInt3']; 
-  elt.onchange = func; 
+  elt.value = env['sBInt3'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$91(env, upd) {
   widget$73(env, updater$64(upd));
 }
 function widget$74(env) {
   var div = document.createElement('div');
-    div.id = 'sBL2-div';
-    div.appendChild(document.createTextNode('"Schedule B 2. Total interest (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBL2-widget'; 
+  div.id = 'sBL2-div';
+  div.appendChild(document.createTextNode('"Schedule B 2. Total interest (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBL2-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sBL2']; 
-  elt.disabled = true; 
+  elt.value = env['sBL2'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$92(env, upd) {
   widget$74(env);
 }
 function updater$65(upd) {
   return function (x) {
-  upd('sBL3', parseInt(x.target.value));
-};
+    upd('sBL3', parseInt(x.target.value));
+  };
 }
 function widget$75(env, func) {
   var div = document.createElement('div');
-    div.id = 'sBL3-div';
-    div.appendChild(document.createTextNode('"Schedule B 3. Excludable interest on series EE and I U.S. savings bonds (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBL3-widget'; 
+  div.id = 'sBL3-div';
+  div.appendChild(document.createTextNode('"Schedule B 3. Excludable interest on series EE and I U.S. savings bonds (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBL3-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sBL3']; 
-  elt.onchange = func; 
+  elt.value = env['sBL3'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$93(env, upd) {
   widget$75(env, updater$65(upd));
 }
 function widget$76(env) {
   var div = document.createElement('div');
-    div.id = 'sBL4-div';
-    div.appendChild(document.createTextNode('"Schedule B 4. Taxable interest (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBL4-widget'; 
+  div.id = 'sBL4-div';
+  div.appendChild(document.createTextNode('"Schedule B 4. Taxable interest (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBL4-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sBL4']; 
-  elt.disabled = true; 
+  elt.value = env['sBL4'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$94(env, upd) {
   widget$76(env);
 }
 function updater$66(upd) {
   return function (x) {
-  upd('taxExemptInterest', parseInt(x.target.value));
-};
+    upd('taxExemptInterest', parseInt(x.target.value));
+  };
 }
 function widget$77(env, func) {
   var div = document.createElement('div');
-    div.id = 'taxExemptInterest-div';
-    div.appendChild(document.createTextNode('"Tax-exempt interest (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'taxExemptInterest-widget'; 
+  div.id = 'taxExemptInterest-div';
+  div.appendChild(document.createTextNode('"Tax-exempt interest (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'taxExemptInterest-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['taxExemptInterest']; 
-  elt.onchange = func; 
+  elt.value = env['taxExemptInterest'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$95(env, upd) {
   widget$77(env, updater$66(upd));
 }
 function updater$67(upd) {
   return function (x) {
-  upd('sBDivPayer1', x.target.value);
-};
+    upd('sBDivPayer1', x.target.value);
+  };
 }
 function widget$78(env, func) {
   var div = document.createElement('div');
-    div.id = 'sBDivPayer1-div';
-    div.appendChild(document.createTextNode('"Schedule B 5. Dividend payer 1:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBDivPayer1-widget'; 
+  div.id = 'sBDivPayer1-div';
+  div.appendChild(document.createTextNode('"Schedule B 5. Dividend payer 1:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBDivPayer1-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['sBDivPayer1']; 
-  elt.onchange = func; 
+  elt.value = env['sBDivPayer1'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$96(env, upd) {
   widget$78(env, updater$67(upd));
 }
 function updater$68(upd) {
   return function (x) {
-  upd('sBDiv1', parseInt(x.target.value));
-};
+    upd('sBDiv1', parseInt(x.target.value));
+  };
 }
 function widget$79(env, func) {
   var div = document.createElement('div');
-    div.id = 'sBDiv1-div';
-    div.appendChild(document.createTextNode('"Schedule B 5. Ordinary dividends from payer 1 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBDiv1-widget'; 
+  div.id = 'sBDiv1-div';
+  div.appendChild(document.createTextNode('"Schedule B 5. Ordinary dividends from payer 1 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBDiv1-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sBDiv1']; 
-  elt.onchange = func; 
+  elt.value = env['sBDiv1'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$97(env, upd) {
   widget$79(env, updater$68(upd));
 }
 function updater$69(upd) {
   return function (x) {
-  upd('sBDivPayer2', x.target.value);
-};
+    upd('sBDivPayer2', x.target.value);
+  };
 }
 function widget$80(env, func) {
   var div = document.createElement('div');
-    div.id = 'sBDivPayer2-div';
-    div.appendChild(document.createTextNode('"Schedule B 5. Dividend payer 2:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBDivPayer2-widget'; 
+  div.id = 'sBDivPayer2-div';
+  div.appendChild(document.createTextNode('"Schedule B 5. Dividend payer 2:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBDivPayer2-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['sBDivPayer2']; 
-  elt.onchange = func; 
+  elt.value = env['sBDivPayer2'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$98(env, upd) {
   widget$80(env, updater$69(upd));
 }
 function updater$70(upd) {
   return function (x) {
-  upd('sBDiv2', parseInt(x.target.value));
-};
+    upd('sBDiv2', parseInt(x.target.value));
+  };
 }
 function widget$81(env, func) {
   var div = document.createElement('div');
-    div.id = 'sBDiv2-div';
-    div.appendChild(document.createTextNode('"Schedule B 5. Ordinary dividends from payer 2 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBDiv2-widget'; 
+  div.id = 'sBDiv2-div';
+  div.appendChild(document.createTextNode('"Schedule B 5. Ordinary dividends from payer 2 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBDiv2-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sBDiv2']; 
-  elt.onchange = func; 
+  elt.value = env['sBDiv2'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$99(env, upd) {
   widget$81(env, updater$70(upd));
 }
 function widget$82(env) {
   var div = document.createElement('div');
-    div.id = 'sBL6-div';
-    div.appendChild(document.createTextNode('"Schedule B 6. Total ordinary dividends (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBL6-widget'; 
+  div.id = 'sBL6-div';
+  div.appendChild(document.createTextNode('"Schedule B 6. Total ordinary dividends (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBL6-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sBL6']; 
-  elt.disabled = true; 
+  elt.value = env['sBL6'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$100(env, upd) {
   widget$82(env);
 }
 function updater$71(upd) {
   return function (x) {
-  upd('qualifiedDividends', parseInt(x.target.value));
-};
+    upd('qualifiedDividends', parseInt(x.target.value));
+  };
 }
 function widget$83(env, func) {
   var div = document.createElement('div');
-    div.id = 'qualifiedDividends-div';
-    div.appendChild(document.createTextNode('"Qualified dividends (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'qualifiedDividends-widget'; 
+  div.id = 'qualifiedDividends-div';
+  div.appendChild(document.createTextNode('"Qualified dividends (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'qualifiedDividends-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['qualifiedDividends']; 
-  elt.onchange = func; 
+  elt.value = env['qualifiedDividends'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$101(env, upd) {
   widget$83(env, updater$71(upd));
 }
 function widget$84(env) {
   var div = document.createElement('div');
-    div.id = 'qualifiedOk-div';
-    div.appendChild(document.createTextNode('"Qualified dividends do not exceed ordinary dividends:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'qualifiedOk-widget'; 
+  div.id = 'qualifiedOk-div';
+  div.appendChild(document.createTextNode('"Qualified dividends do not exceed ordinary dividends:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'qualifiedOk-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['qualifiedOk']; 
-  elt.disabled = true; 
+  elt.checked = env['qualifiedOk'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$102(env, upd) {
   widget$84(env);
 }
 function widget$85(env) {
   var div = document.createElement('div');
-    div.id = 'sBPart3Required-div';
-    div.appendChild(document.createTextNode('"Schedule B part III required:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBPart3Required-widget'; 
+  div.id = 'sBPart3Required-div';
+  div.appendChild(document.createTextNode('"Schedule B part III required:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBPart3Required-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['sBPart3Required']; 
-  elt.disabled = true; 
+  elt.checked = env['sBPart3Required'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$103(env, upd) {
   widget$85(env);
 }
 function updater$72(upd) {
   return function (x) {
-  upd('sBL7a', x.target.checked);
-};
+    upd('sBL7a', x.target.checked);
+  };
 }
 function widget$86(env, func) {
   var div = document.createElement('div');
-    div.id = 'sBL7a-div';
-    div.appendChild(document.createTextNode('"Schedule B 7a. Financial interest in a foreign account?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBL7a-widget'; 
+  div.id = 'sBL7a-div';
+  div.appendChild(document.createTextNode('"Schedule B 7a. Financial interest in a foreign account?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBL7a-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['sBL7a']; 
-  elt.onchange = func; 
+  elt.checked = env['sBL7a'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$104(env, upd) {
   widget$86(env, updater$72(upd));
 }
 function updater$73(upd) {
   return function (x) {
-  upd('sBFbar', x.target.checked);
-};
+    upd('sBFbar', x.target.checked);
+  };
 }
 function widget$87(env, func) {
   var div = document.createElement('div');
-    div.id = 'sBFbar-div';
-    div.appendChild(document.createTextNode('"Schedule B 7a. Required to file FinCEN Form 114 (FBAR)?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBFbar-widget'; 
+  div.id = 'sBFbar-div';
+  div.appendChild(document.createTextNode('"Schedule B 7a. Required to file FinCEN Form 114 (FBAR)?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBFbar-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['sBFbar']; 
-  elt.onchange = func; 
+  elt.checked = env['sBFbar'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$105(env, upd) {
   widget$87(env, updater$73(upd));
 }
 function updater$74(upd) {
   return function (x) {
-  upd('sBL7b', x.target.value);
-};
+    upd('sBL7b', x.target.value);
+  };
 }
 function widget$88(env, func) {
   var div = document.createElement('div');
-    div.id = 'sBL7b-div';
-    div.appendChild(document.createTextNode('"Schedule B 7b. Country of the foreign account:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBL7b-widget'; 
+  div.id = 'sBL7b-div';
+  div.appendChild(document.createTextNode('"Schedule B 7b. Country of the foreign account:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBL7b-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['sBL7b']; 
-  elt.onchange = func; 
+  elt.value = env['sBL7b'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$106(env, upd) {
   widget$88(env, updater$74(upd));
 }
 function renderQuestion$107(env, upd) {
-  renderQuestion$105(env, upd); 
+  renderQuestion$105(env, upd);
   renderQuestion$106(env, upd);
 }
 function renderQuestion$108(env, upd) {
@@ -8297,27 +9258,27 @@ function renderQuestion$108(env, upd) {
 }
 function updater$75(upd) {
   return function (x) {
-  upd('sBL8', x.target.checked);
-};
+    upd('sBL8', x.target.checked);
+  };
 }
 function widget$89(env, func) {
   var div = document.createElement('div');
-    div.id = 'sBL8-div';
-    div.appendChild(document.createTextNode('"Schedule B 8. Received a distribution from a foreign trust?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sBL8-widget'; 
+  div.id = 'sBL8-div';
+  div.appendChild(document.createTextNode('"Schedule B 8. Received a distribution from a foreign trust?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sBL8-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['sBL8']; 
-  elt.onchange = func; 
+  elt.checked = env['sBL8'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$109(env, upd) {
   widget$89(env, updater$75(upd));
 }
 function renderQuestion$110(env, upd) {
-  renderQuestion$104(env, upd); 
-  renderQuestion$108(env, upd); 
+  renderQuestion$104(env, upd);
+  renderQuestion$108(env, upd);
   renderQuestion$109(env, upd);
 }
 function renderQuestion$111(env, upd) {
@@ -8325,140 +9286,140 @@ function renderQuestion$111(env, upd) {
 }
 function updater$76(upd) {
   return function (x) {
-  upd('hasBusiness', x.target.checked);
-};
+    upd('hasBusiness', x.target.checked);
+  };
 }
 function widget$90(env, func) {
   var div = document.createElement('div');
-    div.id = 'hasBusiness-div';
-    div.appendChild(document.createTextNode('"Did you operate a business as a sole proprietor?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'hasBusiness-widget'; 
+  div.id = 'hasBusiness-div';
+  div.appendChild(document.createTextNode('"Did you operate a business as a sole proprietor?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'hasBusiness-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['hasBusiness']; 
-  elt.onchange = func; 
+  elt.checked = env['hasBusiness'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$112(env, upd) {
   widget$90(env, updater$76(upd));
 }
 function updater$77(upd) {
   return function (x) {
-  upd('sCA', x.target.value);
-};
+    upd('sCA', x.target.value);
+  };
 }
 function widget$91(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCA-div';
-    div.appendChild(document.createTextNode('"Schedule C A. Principal business or profession:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCA-widget'; 
+  div.id = 'sCA-div';
+  div.appendChild(document.createTextNode('"Schedule C A. Principal business or profession:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCA-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['sCA']; 
-  elt.onchange = func; 
+  elt.value = env['sCA'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$113(env, upd) {
   widget$91(env, updater$77(upd));
 }
 function updater$78(upd) {
   return function (x) {
-  upd('sCB', x.target.value);
-};
+    upd('sCB', x.target.value);
+  };
 }
 function widget$92(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCB-div';
-    div.appendChild(document.createTextNode('"Schedule C B. Principal business code:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCB-widget'; 
+  div.id = 'sCB-div';
+  div.appendChild(document.createTextNode('"Schedule C B. Principal business code:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCB-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['sCB']; 
-  elt.onchange = func; 
+  elt.value = env['sCB'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$114(env, upd) {
   widget$92(env, updater$78(upd));
 }
 function updater$79(upd) {
   return function (x) {
-  upd('sCCash', x.target.checked);
-};
+    upd('sCCash', x.target.checked);
+  };
 }
 function widget$93(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCCash-div';
-    div.appendChild(document.createTextNode('"Schedule C F. Accounting method is cash?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCCash-widget'; 
+  div.id = 'sCCash-div';
+  div.appendChild(document.createTextNode('"Schedule C F. Accounting method is cash?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCCash-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['sCCash']; 
-  elt.onchange = func; 
+  elt.checked = env['sCCash'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$115(env, upd) {
   widget$93(env, updater$79(upd));
 }
 function updater$80(upd) {
   return function (x) {
-  upd('sCG', x.target.checked);
-};
+    upd('sCG', x.target.checked);
+  };
 }
 function widget$94(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCG-div';
-    div.appendChild(document.createTextNode('"Schedule C G. Did you materially participate in the business?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCG-widget'; 
+  div.id = 'sCG-div';
+  div.appendChild(document.createTextNode('"Schedule C G. Did you materially participate in the business?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCG-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['sCG']; 
-  elt.onchange = func; 
+  elt.checked = env['sCG'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$116(env, upd) {
   widget$94(env, updater$80(upd));
 }
 function updater$81(upd) {
   return function (x) {
-  upd('sCI', x.target.checked);
-};
+    upd('sCI', x.target.checked);
+  };
 }
 function widget$95(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCI-div';
-    div.appendChild(document.createTextNode('"Schedule C I. Did you make payments requiring Forms 1099?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCI-widget'; 
+  div.id = 'sCI-div';
+  div.appendChild(document.createTextNode('"Schedule C I. Did you make payments requiring Forms 1099?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCI-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['sCI']; 
-  elt.onchange = func; 
+  elt.checked = env['sCI'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$117(env, upd) {
   widget$95(env, updater$81(upd));
 }
 function updater$82(upd) {
   return function (x) {
-  upd('sCJ', x.target.checked);
-};
+    upd('sCJ', x.target.checked);
+  };
 }
 function widget$96(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCJ-div';
-    div.appendChild(document.createTextNode('"Schedule C J. Did you or will you file the required Forms 1099?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCJ-widget'; 
+  div.id = 'sCJ-div';
+  div.appendChild(document.createTextNode('"Schedule C J. Did you or will you file the required Forms 1099?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCJ-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['sCJ']; 
-  elt.onchange = func; 
+  elt.checked = env['sCJ'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$118(env, upd) {
   widget$96(env, updater$82(upd));
@@ -8471,707 +9432,707 @@ function renderQuestion$120(env, upd) {
 }
 function updater$83(upd) {
   return function (x) {
-  upd('sCL1', parseInt(x.target.value));
-};
+    upd('sCL1', parseInt(x.target.value));
+  };
 }
 function widget$97(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL1-div';
-    div.appendChild(document.createTextNode('"Schedule C 1. Gross receipts or sales (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL1-widget'; 
+  div.id = 'sCL1-div';
+  div.appendChild(document.createTextNode('"Schedule C 1. Gross receipts or sales (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL1-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL1']; 
-  elt.onchange = func; 
+  elt.value = env['sCL1'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$121(env, upd) {
   widget$97(env, updater$83(upd));
 }
 function updater$84(upd) {
   return function (x) {
-  upd('sCL2', parseInt(x.target.value));
-};
+    upd('sCL2', parseInt(x.target.value));
+  };
 }
 function widget$98(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL2-div';
-    div.appendChild(document.createTextNode('"Schedule C 2. Returns and allowances (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL2-widget'; 
+  div.id = 'sCL2-div';
+  div.appendChild(document.createTextNode('"Schedule C 2. Returns and allowances (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL2-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL2']; 
-  elt.onchange = func; 
+  elt.value = env['sCL2'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$122(env, upd) {
   widget$98(env, updater$84(upd));
 }
 function widget$99(env) {
   var div = document.createElement('div');
-    div.id = 'sCL3-div';
-    div.appendChild(document.createTextNode('"Schedule C 3. Net receipts (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL3-widget'; 
+  div.id = 'sCL3-div';
+  div.appendChild(document.createTextNode('"Schedule C 3. Net receipts (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL3-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL3']; 
-  elt.disabled = true; 
+  elt.value = env['sCL3'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$123(env, upd) {
   widget$99(env);
 }
 function updater$85(upd) {
   return function (x) {
-  upd('sCL4', parseInt(x.target.value));
-};
+    upd('sCL4', parseInt(x.target.value));
+  };
 }
 function widget$100(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL4-div';
-    div.appendChild(document.createTextNode('"Schedule C 4. Cost of goods sold (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL4-widget'; 
+  div.id = 'sCL4-div';
+  div.appendChild(document.createTextNode('"Schedule C 4. Cost of goods sold (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL4-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL4']; 
-  elt.onchange = func; 
+  elt.value = env['sCL4'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$124(env, upd) {
   widget$100(env, updater$85(upd));
 }
 function widget$101(env) {
   var div = document.createElement('div');
-    div.id = 'sCL5-div';
-    div.appendChild(document.createTextNode('"Schedule C 5. Gross profit (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL5-widget'; 
+  div.id = 'sCL5-div';
+  div.appendChild(document.createTextNode('"Schedule C 5. Gross profit (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL5-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL5']; 
-  elt.disabled = true; 
+  elt.value = env['sCL5'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$125(env, upd) {
   widget$101(env);
 }
 function updater$86(upd) {
   return function (x) {
-  upd('sCL6', parseInt(x.target.value));
-};
+    upd('sCL6', parseInt(x.target.value));
+  };
 }
 function widget$102(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL6-div';
-    div.appendChild(document.createTextNode('"Schedule C 6. Other income (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL6-widget'; 
+  div.id = 'sCL6-div';
+  div.appendChild(document.createTextNode('"Schedule C 6. Other income (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL6-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL6']; 
-  elt.onchange = func; 
+  elt.value = env['sCL6'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$126(env, upd) {
   widget$102(env, updater$86(upd));
 }
 function widget$103(env) {
   var div = document.createElement('div');
-    div.id = 'sCL7-div';
-    div.appendChild(document.createTextNode('"Schedule C 7. Gross income (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL7-widget'; 
+  div.id = 'sCL7-div';
+  div.appendChild(document.createTextNode('"Schedule C 7. Gross income (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL7-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL7']; 
-  elt.disabled = true; 
+  elt.value = env['sCL7'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$127(env, upd) {
   widget$103(env);
 }
 function updater$87(upd) {
   return function (x) {
-  upd('sCL8', parseInt(x.target.value));
-};
+    upd('sCL8', parseInt(x.target.value));
+  };
 }
 function widget$104(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL8-div';
-    div.appendChild(document.createTextNode('"Schedule C 8. Advertising (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL8-widget'; 
+  div.id = 'sCL8-div';
+  div.appendChild(document.createTextNode('"Schedule C 8. Advertising (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL8-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL8']; 
-  elt.onchange = func; 
+  elt.value = env['sCL8'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$128(env, upd) {
   widget$104(env, updater$87(upd));
 }
 function updater$88(upd) {
   return function (x) {
-  upd('sCL9', parseInt(x.target.value));
-};
+    upd('sCL9', parseInt(x.target.value));
+  };
 }
 function widget$105(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL9-div';
-    div.appendChild(document.createTextNode('"Schedule C 9. Car and truck expenses (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL9-widget'; 
+  div.id = 'sCL9-div';
+  div.appendChild(document.createTextNode('"Schedule C 9. Car and truck expenses (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL9-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL9']; 
-  elt.onchange = func; 
+  elt.value = env['sCL9'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$129(env, upd) {
   widget$105(env, updater$88(upd));
 }
 function updater$89(upd) {
   return function (x) {
-  upd('sCL10', parseInt(x.target.value));
-};
+    upd('sCL10', parseInt(x.target.value));
+  };
 }
 function widget$106(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL10-div';
-    div.appendChild(document.createTextNode('"Schedule C 10. Commissions and fees (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL10-widget'; 
+  div.id = 'sCL10-div';
+  div.appendChild(document.createTextNode('"Schedule C 10. Commissions and fees (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL10-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL10']; 
-  elt.onchange = func; 
+  elt.value = env['sCL10'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$130(env, upd) {
   widget$106(env, updater$89(upd));
 }
 function updater$90(upd) {
   return function (x) {
-  upd('sCL11', parseInt(x.target.value));
-};
+    upd('sCL11', parseInt(x.target.value));
+  };
 }
 function widget$107(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL11-div';
-    div.appendChild(document.createTextNode('"Schedule C 11. Contract labor (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL11-widget'; 
+  div.id = 'sCL11-div';
+  div.appendChild(document.createTextNode('"Schedule C 11. Contract labor (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL11-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL11']; 
-  elt.onchange = func; 
+  elt.value = env['sCL11'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$131(env, upd) {
   widget$107(env, updater$90(upd));
 }
 function updater$91(upd) {
   return function (x) {
-  upd('sCL12', parseInt(x.target.value));
-};
+    upd('sCL12', parseInt(x.target.value));
+  };
 }
 function widget$108(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL12-div';
-    div.appendChild(document.createTextNode('"Schedule C 12. Depletion (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL12-widget'; 
+  div.id = 'sCL12-div';
+  div.appendChild(document.createTextNode('"Schedule C 12. Depletion (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL12-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL12']; 
-  elt.onchange = func; 
+  elt.value = env['sCL12'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$132(env, upd) {
   widget$108(env, updater$91(upd));
 }
 function updater$92(upd) {
   return function (x) {
-  upd('sCL13', parseInt(x.target.value));
-};
+    upd('sCL13', parseInt(x.target.value));
+  };
 }
 function widget$109(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL13-div';
-    div.appendChild(document.createTextNode('"Schedule C 13. Depreciation and section 179 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL13-widget'; 
+  div.id = 'sCL13-div';
+  div.appendChild(document.createTextNode('"Schedule C 13. Depreciation and section 179 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL13-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL13']; 
-  elt.onchange = func; 
+  elt.value = env['sCL13'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$133(env, upd) {
   widget$109(env, updater$92(upd));
 }
 function updater$93(upd) {
   return function (x) {
-  upd('sCL14', parseInt(x.target.value));
-};
+    upd('sCL14', parseInt(x.target.value));
+  };
 }
 function widget$110(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL14-div';
-    div.appendChild(document.createTextNode('"Schedule C 14. Employee benefit programs (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL14-widget'; 
+  div.id = 'sCL14-div';
+  div.appendChild(document.createTextNode('"Schedule C 14. Employee benefit programs (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL14-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL14']; 
-  elt.onchange = func; 
+  elt.value = env['sCL14'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$134(env, upd) {
   widget$110(env, updater$93(upd));
 }
 function updater$94(upd) {
   return function (x) {
-  upd('sCL15', parseInt(x.target.value));
-};
+    upd('sCL15', parseInt(x.target.value));
+  };
 }
 function widget$111(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL15-div';
-    div.appendChild(document.createTextNode('"Schedule C 15. Insurance other than health (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL15-widget'; 
+  div.id = 'sCL15-div';
+  div.appendChild(document.createTextNode('"Schedule C 15. Insurance other than health (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL15-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL15']; 
-  elt.onchange = func; 
+  elt.value = env['sCL15'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$135(env, upd) {
   widget$111(env, updater$94(upd));
 }
 function updater$95(upd) {
   return function (x) {
-  upd('sCL16a', parseInt(x.target.value));
-};
+    upd('sCL16a', parseInt(x.target.value));
+  };
 }
 function widget$112(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL16a-div';
-    div.appendChild(document.createTextNode('"Schedule C 16a. Mortgage interest paid to banks (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL16a-widget'; 
+  div.id = 'sCL16a-div';
+  div.appendChild(document.createTextNode('"Schedule C 16a. Mortgage interest paid to banks (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL16a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL16a']; 
-  elt.onchange = func; 
+  elt.value = env['sCL16a'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$136(env, upd) {
   widget$112(env, updater$95(upd));
 }
 function updater$96(upd) {
   return function (x) {
-  upd('sCL16b', parseInt(x.target.value));
-};
+    upd('sCL16b', parseInt(x.target.value));
+  };
 }
 function widget$113(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL16b-div';
-    div.appendChild(document.createTextNode('"Schedule C 16b. Other interest (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL16b-widget'; 
+  div.id = 'sCL16b-div';
+  div.appendChild(document.createTextNode('"Schedule C 16b. Other interest (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL16b-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL16b']; 
-  elt.onchange = func; 
+  elt.value = env['sCL16b'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$137(env, upd) {
   widget$113(env, updater$96(upd));
 }
 function updater$97(upd) {
   return function (x) {
-  upd('sCL17', parseInt(x.target.value));
-};
+    upd('sCL17', parseInt(x.target.value));
+  };
 }
 function widget$114(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL17-div';
-    div.appendChild(document.createTextNode('"Schedule C 17. Legal and professional services (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL17-widget'; 
+  div.id = 'sCL17-div';
+  div.appendChild(document.createTextNode('"Schedule C 17. Legal and professional services (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL17-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL17']; 
-  elt.onchange = func; 
+  elt.value = env['sCL17'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$138(env, upd) {
   widget$114(env, updater$97(upd));
 }
 function updater$98(upd) {
   return function (x) {
-  upd('sCL18', parseInt(x.target.value));
-};
+    upd('sCL18', parseInt(x.target.value));
+  };
 }
 function widget$115(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL18-div';
-    div.appendChild(document.createTextNode('"Schedule C 18. Office expense (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL18-widget'; 
+  div.id = 'sCL18-div';
+  div.appendChild(document.createTextNode('"Schedule C 18. Office expense (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL18-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL18']; 
-  elt.onchange = func; 
+  elt.value = env['sCL18'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$139(env, upd) {
   widget$115(env, updater$98(upd));
 }
 function updater$99(upd) {
   return function (x) {
-  upd('sCL19', parseInt(x.target.value));
-};
+    upd('sCL19', parseInt(x.target.value));
+  };
 }
 function widget$116(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL19-div';
-    div.appendChild(document.createTextNode('"Schedule C 19. Pension and profit-sharing plans (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL19-widget'; 
+  div.id = 'sCL19-div';
+  div.appendChild(document.createTextNode('"Schedule C 19. Pension and profit-sharing plans (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL19-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL19']; 
-  elt.onchange = func; 
+  elt.value = env['sCL19'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$140(env, upd) {
   widget$116(env, updater$99(upd));
 }
 function updater$100(upd) {
   return function (x) {
-  upd('sCL20a', parseInt(x.target.value));
-};
+    upd('sCL20a', parseInt(x.target.value));
+  };
 }
 function widget$117(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL20a-div';
-    div.appendChild(document.createTextNode('"Schedule C 20a. Rent of vehicles, machinery and equipment (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL20a-widget'; 
+  div.id = 'sCL20a-div';
+  div.appendChild(document.createTextNode('"Schedule C 20a. Rent of vehicles, machinery and equipment (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL20a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL20a']; 
-  elt.onchange = func; 
+  elt.value = env['sCL20a'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$141(env, upd) {
   widget$117(env, updater$100(upd));
 }
 function updater$101(upd) {
   return function (x) {
-  upd('sCL20b', parseInt(x.target.value));
-};
+    upd('sCL20b', parseInt(x.target.value));
+  };
 }
 function widget$118(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL20b-div';
-    div.appendChild(document.createTextNode('"Schedule C 20b. Rent of other business property (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL20b-widget'; 
+  div.id = 'sCL20b-div';
+  div.appendChild(document.createTextNode('"Schedule C 20b. Rent of other business property (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL20b-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL20b']; 
-  elt.onchange = func; 
+  elt.value = env['sCL20b'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$142(env, upd) {
   widget$118(env, updater$101(upd));
 }
 function updater$102(upd) {
   return function (x) {
-  upd('sCL21', parseInt(x.target.value));
-};
+    upd('sCL21', parseInt(x.target.value));
+  };
 }
 function widget$119(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL21-div';
-    div.appendChild(document.createTextNode('"Schedule C 21. Repairs and maintenance (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL21-widget'; 
+  div.id = 'sCL21-div';
+  div.appendChild(document.createTextNode('"Schedule C 21. Repairs and maintenance (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL21-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL21']; 
-  elt.onchange = func; 
+  elt.value = env['sCL21'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$143(env, upd) {
   widget$119(env, updater$102(upd));
 }
 function updater$103(upd) {
   return function (x) {
-  upd('sCL22', parseInt(x.target.value));
-};
+    upd('sCL22', parseInt(x.target.value));
+  };
 }
 function widget$120(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL22-div';
-    div.appendChild(document.createTextNode('"Schedule C 22. Supplies (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL22-widget'; 
+  div.id = 'sCL22-div';
+  div.appendChild(document.createTextNode('"Schedule C 22. Supplies (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL22-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL22']; 
-  elt.onchange = func; 
+  elt.value = env['sCL22'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$144(env, upd) {
   widget$120(env, updater$103(upd));
 }
 function updater$104(upd) {
   return function (x) {
-  upd('sCL23', parseInt(x.target.value));
-};
+    upd('sCL23', parseInt(x.target.value));
+  };
 }
 function widget$121(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL23-div';
-    div.appendChild(document.createTextNode('"Schedule C 23. Taxes and licenses (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL23-widget'; 
+  div.id = 'sCL23-div';
+  div.appendChild(document.createTextNode('"Schedule C 23. Taxes and licenses (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL23-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL23']; 
-  elt.onchange = func; 
+  elt.value = env['sCL23'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$145(env, upd) {
   widget$121(env, updater$104(upd));
 }
 function updater$105(upd) {
   return function (x) {
-  upd('sCL24a', parseInt(x.target.value));
-};
+    upd('sCL24a', parseInt(x.target.value));
+  };
 }
 function widget$122(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL24a-div';
-    div.appendChild(document.createTextNode('"Schedule C 24a. Travel (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL24a-widget'; 
+  div.id = 'sCL24a-div';
+  div.appendChild(document.createTextNode('"Schedule C 24a. Travel (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL24a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL24a']; 
-  elt.onchange = func; 
+  elt.value = env['sCL24a'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$146(env, upd) {
   widget$122(env, updater$105(upd));
 }
 function updater$106(upd) {
   return function (x) {
-  upd('sCMealsTotal', parseInt(x.target.value));
-};
+    upd('sCMealsTotal', parseInt(x.target.value));
+  };
 }
 function widget$123(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCMealsTotal-div';
-    div.appendChild(document.createTextNode('"Schedule C 24b. Business meals, total cost (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCMealsTotal-widget'; 
+  div.id = 'sCMealsTotal-div';
+  div.appendChild(document.createTextNode('"Schedule C 24b. Business meals, total cost (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCMealsTotal-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCMealsTotal']; 
-  elt.onchange = func; 
+  elt.value = env['sCMealsTotal'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$147(env, upd) {
   widget$123(env, updater$106(upd));
 }
 function widget$124(env) {
   var div = document.createElement('div');
-    div.id = 'sCL24b-div';
-    div.appendChild(document.createTextNode('"Schedule C 24b. Deductible meals, 50 percent (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL24b-widget'; 
+  div.id = 'sCL24b-div';
+  div.appendChild(document.createTextNode('"Schedule C 24b. Deductible meals, 50 percent (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL24b-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL24b']; 
-  elt.disabled = true; 
+  elt.value = env['sCL24b'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$148(env, upd) {
   widget$124(env);
 }
 function updater$107(upd) {
   return function (x) {
-  upd('sCL25', parseInt(x.target.value));
-};
+    upd('sCL25', parseInt(x.target.value));
+  };
 }
 function widget$125(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL25-div';
-    div.appendChild(document.createTextNode('"Schedule C 25. Utilities (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL25-widget'; 
+  div.id = 'sCL25-div';
+  div.appendChild(document.createTextNode('"Schedule C 25. Utilities (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL25-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL25']; 
-  elt.onchange = func; 
+  elt.value = env['sCL25'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$149(env, upd) {
   widget$125(env, updater$107(upd));
 }
 function updater$108(upd) {
   return function (x) {
-  upd('sCL26', parseInt(x.target.value));
-};
+    upd('sCL26', parseInt(x.target.value));
+  };
 }
 function widget$126(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL26-div';
-    div.appendChild(document.createTextNode('"Schedule C 26. Wages less employment credits (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL26-widget'; 
+  div.id = 'sCL26-div';
+  div.appendChild(document.createTextNode('"Schedule C 26. Wages less employment credits (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL26-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL26']; 
-  elt.onchange = func; 
+  elt.value = env['sCL26'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$150(env, upd) {
   widget$126(env, updater$108(upd));
 }
 function updater$109(upd) {
   return function (x) {
-  upd('sCL27a', parseInt(x.target.value));
-};
+    upd('sCL27a', parseInt(x.target.value));
+  };
 }
 function widget$127(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL27a-div';
-    div.appendChild(document.createTextNode('"Schedule C 27a. Other expenses (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL27a-widget'; 
+  div.id = 'sCL27a-div';
+  div.appendChild(document.createTextNode('"Schedule C 27a. Other expenses (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL27a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL27a']; 
-  elt.onchange = func; 
+  elt.value = env['sCL27a'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$151(env, upd) {
   widget$127(env, updater$109(upd));
 }
 function widget$128(env) {
   var div = document.createElement('div');
-    div.id = 'sCL28-div';
-    div.appendChild(document.createTextNode('"Schedule C 28. Total expenses (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL28-widget'; 
+  div.id = 'sCL28-div';
+  div.appendChild(document.createTextNode('"Schedule C 28. Total expenses (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL28-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL28']; 
-  elt.disabled = true; 
+  elt.value = env['sCL28'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$152(env, upd) {
   widget$128(env);
 }
 function widget$129(env) {
   var div = document.createElement('div');
-    div.id = 'sCL29-div';
-    div.appendChild(document.createTextNode('"Schedule C 29. Tentative profit or loss (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL29-widget'; 
+  div.id = 'sCL29-div';
+  div.appendChild(document.createTextNode('"Schedule C 29. Tentative profit or loss (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL29-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL29']; 
-  elt.disabled = true; 
+  elt.value = env['sCL29'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$153(env, upd) {
   widget$129(env);
 }
 function updater$110(upd) {
   return function (x) {
-  upd('sCHomeOffice', x.target.checked);
-};
+    upd('sCHomeOffice', x.target.checked);
+  };
 }
 function widget$130(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCHomeOffice-div';
-    div.appendChild(document.createTextNode('"Schedule C 30. Business use of home?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCHomeOffice-widget'; 
+  div.id = 'sCHomeOffice-div';
+  div.appendChild(document.createTextNode('"Schedule C 30. Business use of home?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCHomeOffice-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['sCHomeOffice']; 
-  elt.onchange = func; 
+  elt.checked = env['sCHomeOffice'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$154(env, upd) {
   widget$130(env, updater$110(upd));
 }
 function updater$111(upd) {
   return function (x) {
-  upd('sCHomeSqft', parseInt(x.target.value));
-};
+    upd('sCHomeSqft', parseInt(x.target.value));
+  };
 }
 function widget$131(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCHomeSqft-div';
-    div.appendChild(document.createTextNode('"Schedule C 30. Square footage of home used for business:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCHomeSqft-widget'; 
+  div.id = 'sCHomeSqft-div';
+  div.appendChild(document.createTextNode('"Schedule C 30. Square footage of home used for business:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCHomeSqft-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCHomeSqft']; 
-  elt.onchange = func; 
+  elt.value = env['sCHomeSqft'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$155(env, upd) {
   widget$131(env, updater$111(upd));
 }
 function widget$132(env) {
   var div = document.createElement('div');
-    div.id = 'sCHomeSqftOk-div';
-    div.appendChild(document.createTextNode('"Schedule C 30. Simplified method deduction, 5 USD per sq ft up to 300 sq ft:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCHomeSqftOk-widget'; 
+  div.id = 'sCHomeSqftOk-div';
+  div.appendChild(document.createTextNode('"Schedule C 30. Simplified method deduction, 5 USD per sq ft up to 300 sq ft:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCHomeSqftOk-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['sCHomeSqftOk']; 
-  elt.disabled = true; 
+  elt.checked = env['sCHomeSqftOk'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$156(env, upd) {
   widget$132(env);
 }
 function widget$133(env) {
   var div = document.createElement('div');
-    div.id = 'sCL30-div';
-    div.appendChild(document.createTextNode('"Schedule C 30. Home office deduction (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL30-widget'; 
+  div.id = 'sCL30-div';
+  div.appendChild(document.createTextNode('"Schedule C 30. Home office deduction (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL30-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL30']; 
-  elt.disabled = true; 
+  elt.value = env['sCL30'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$157(env, upd) {
   widget$133(env);
 }
 function renderQuestion$158(env, upd) {
-  renderQuestion$155(env, upd); 
-  renderQuestion$156(env, upd); 
+  renderQuestion$155(env, upd);
+  renderQuestion$156(env, upd);
   renderQuestion$157(env, upd);
 }
 function renderQuestion$159(env, upd) {
@@ -9179,35 +10140,35 @@ function renderQuestion$159(env, upd) {
 }
 function widget$134(env) {
   var div = document.createElement('div');
-    div.id = 'sCL31-div';
-    div.appendChild(document.createTextNode('"Schedule C 31. Net profit or loss (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL31-widget'; 
+  div.id = 'sCL31-div';
+  div.appendChild(document.createTextNode('"Schedule C 31. Net profit or loss (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL31-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sCL31']; 
-  elt.disabled = true; 
+  elt.value = env['sCL31'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$160(env, upd) {
   widget$134(env);
 }
 function updater$112(upd) {
   return function (x) {
-  upd('sCL32a', x.target.checked);
-};
+    upd('sCL32a', x.target.checked);
+  };
 }
 function widget$135(env, func) {
   var div = document.createElement('div');
-    div.id = 'sCL32a-div';
-    div.appendChild(document.createTextNode('"Schedule C 32a. All investment is at risk?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sCL32a-widget'; 
+  div.id = 'sCL32a-div';
+  div.appendChild(document.createTextNode('"Schedule C 32a. All investment is at risk?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sCL32a-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['sCL32a']; 
-  elt.onchange = func; 
+  elt.checked = env['sCL32a'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$161(env, upd) {
   widget$135(env, updater$112(upd));
@@ -9219,48 +10180,48 @@ function renderQuestion$163(env, upd) {
   renderQuestion$162(env, upd);
 }
 function renderQuestion$164(env, upd) {
-  renderQuestion$113(env, upd); 
-  renderQuestion$114(env, upd); 
-  renderQuestion$115(env, upd); 
-  renderQuestion$116(env, upd); 
-  renderQuestion$117(env, upd); 
-  renderQuestion$120(env, upd); 
-  renderQuestion$121(env, upd); 
-  renderQuestion$122(env, upd); 
-  renderQuestion$123(env, upd); 
-  renderQuestion$124(env, upd); 
-  renderQuestion$125(env, upd); 
-  renderQuestion$126(env, upd); 
-  renderQuestion$127(env, upd); 
-  renderQuestion$128(env, upd); 
-  renderQuestion$129(env, upd); 
-  renderQuestion$130(env, upd); 
-  renderQuestion$131(env, upd); 
-  renderQuestion$132(env, upd); 
-  renderQuestion$133(env, upd); 
-  renderQuestion$134(env, upd); 
-  renderQuestion$135(env, upd); 
-  renderQuestion$136(env, upd); 
-  renderQuestion$137(env, upd); 
-  renderQuestion$138(env, upd); 
-  renderQuestion$139(env, upd); 
-  renderQuestion$140(env, upd); 
-  renderQuestion$141(env, upd); 
-  renderQuestion$142(env, upd); 
-  renderQuestion$143(env, upd); 
-  renderQuestion$144(env, upd); 
-  renderQuestion$145(env, upd); 
-  renderQuestion$146(env, upd); 
-  renderQuestion$147(env, upd); 
-  renderQuestion$148(env, upd); 
-  renderQuestion$149(env, upd); 
-  renderQuestion$150(env, upd); 
-  renderQuestion$151(env, upd); 
-  renderQuestion$152(env, upd); 
-  renderQuestion$153(env, upd); 
-  renderQuestion$154(env, upd); 
-  renderQuestion$159(env, upd); 
-  renderQuestion$160(env, upd); 
+  renderQuestion$113(env, upd);
+  renderQuestion$114(env, upd);
+  renderQuestion$115(env, upd);
+  renderQuestion$116(env, upd);
+  renderQuestion$117(env, upd);
+  renderQuestion$120(env, upd);
+  renderQuestion$121(env, upd);
+  renderQuestion$122(env, upd);
+  renderQuestion$123(env, upd);
+  renderQuestion$124(env, upd);
+  renderQuestion$125(env, upd);
+  renderQuestion$126(env, upd);
+  renderQuestion$127(env, upd);
+  renderQuestion$128(env, upd);
+  renderQuestion$129(env, upd);
+  renderQuestion$130(env, upd);
+  renderQuestion$131(env, upd);
+  renderQuestion$132(env, upd);
+  renderQuestion$133(env, upd);
+  renderQuestion$134(env, upd);
+  renderQuestion$135(env, upd);
+  renderQuestion$136(env, upd);
+  renderQuestion$137(env, upd);
+  renderQuestion$138(env, upd);
+  renderQuestion$139(env, upd);
+  renderQuestion$140(env, upd);
+  renderQuestion$141(env, upd);
+  renderQuestion$142(env, upd);
+  renderQuestion$143(env, upd);
+  renderQuestion$144(env, upd);
+  renderQuestion$145(env, upd);
+  renderQuestion$146(env, upd);
+  renderQuestion$147(env, upd);
+  renderQuestion$148(env, upd);
+  renderQuestion$149(env, upd);
+  renderQuestion$150(env, upd);
+  renderQuestion$151(env, upd);
+  renderQuestion$152(env, upd);
+  renderQuestion$153(env, upd);
+  renderQuestion$154(env, upd);
+  renderQuestion$159(env, upd);
+  renderQuestion$160(env, upd);
   renderQuestion$163(env, upd);
 }
 function renderQuestion$165(env, upd) {
@@ -9268,179 +10229,179 @@ function renderQuestion$165(env, upd) {
 }
 function widget$136(env) {
   var div = document.createElement('div');
-    div.id = 'sSERequired-div';
-    div.appendChild(document.createTextNode('"Schedule SE required (net SE earnings 400 USD or more):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sSERequired-widget'; 
+  div.id = 'sSERequired-div';
+  div.appendChild(document.createTextNode('"Schedule SE required (net SE earnings 400 USD or more):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sSERequired-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['sSERequired']; 
-  elt.disabled = true; 
+  elt.checked = env['sSERequired'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$166(env, upd) {
   widget$136(env);
 }
 function widget$137(env) {
   var div = document.createElement('div');
-    div.id = 'sSEL2-div';
-    div.appendChild(document.createTextNode('"Schedule SE 2. Net profit from Schedule C (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sSEL2-widget'; 
+  div.id = 'sSEL2-div';
+  div.appendChild(document.createTextNode('"Schedule SE 2. Net profit from Schedule C (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sSEL2-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sSEL2']; 
-  elt.disabled = true; 
+  elt.value = env['sSEL2'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$167(env, upd) {
   widget$137(env);
 }
 function widget$138(env) {
   var div = document.createElement('div');
-    div.id = 'sSEL4a-div';
-    div.appendChild(document.createTextNode('"Schedule SE 4a. Net earnings, 92.35 percent of line 2 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sSEL4a-widget'; 
+  div.id = 'sSEL4a-div';
+  div.appendChild(document.createTextNode('"Schedule SE 4a. Net earnings, 92.35 percent of line 2 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sSEL4a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sSEL4a']; 
-  elt.disabled = true; 
+  elt.value = env['sSEL4a'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$168(env, upd) {
   widget$138(env);
 }
 function widget$139(env) {
   var div = document.createElement('div');
-    div.id = 'sSEL8a-div';
-    div.appendChild(document.createTextNode('"Schedule SE 8a. Social security wages from W-2 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sSEL8a-widget'; 
+  div.id = 'sSEL8a-div';
+  div.appendChild(document.createTextNode('"Schedule SE 8a. Social security wages from W-2 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sSEL8a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sSEL8a']; 
-  elt.disabled = true; 
+  elt.value = env['sSEL8a'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$169(env, upd) {
   widget$139(env);
 }
 function widget$140(env) {
   var div = document.createElement('div');
-    div.id = 'sSEL7-div';
-    div.appendChild(document.createTextNode('"Schedule SE 7. Maximum earnings subject to social security (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sSEL7-widget'; 
+  div.id = 'sSEL7-div';
+  div.appendChild(document.createTextNode('"Schedule SE 7. Maximum earnings subject to social security (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sSEL7-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sSEL7']; 
-  elt.disabled = true; 
+  elt.value = env['sSEL7'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$170(env, upd) {
   widget$140(env);
 }
 function widget$141(env) {
   var div = document.createElement('div');
-    div.id = 'sSEL9-div';
-    div.appendChild(document.createTextNode('"Schedule SE 9. Remaining room under the social security maximum (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sSEL9-widget'; 
+  div.id = 'sSEL9-div';
+  div.appendChild(document.createTextNode('"Schedule SE 9. Remaining room under the social security maximum (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sSEL9-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sSEL9']; 
-  elt.disabled = true; 
+  elt.value = env['sSEL9'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$171(env, upd) {
   widget$141(env);
 }
 function widget$142(env) {
   var div = document.createElement('div');
-    div.id = 'sSEUnderMax-div';
-    div.appendChild(document.createTextNode('"Schedule SE: all net earnings under the maximum:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sSEUnderMax-widget'; 
+  div.id = 'sSEUnderMax-div';
+  div.appendChild(document.createTextNode('"Schedule SE: all net earnings under the maximum:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sSEUnderMax-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['sSEUnderMax']; 
-  elt.disabled = true; 
+  elt.checked = env['sSEUnderMax'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$172(env, upd) {
   widget$142(env);
 }
 function widget$143(env) {
   var div = document.createElement('div');
-    div.id = 'sSEL10-div';
-    div.appendChild(document.createTextNode('"Schedule SE 10. Social security part, 12.4 percent (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sSEL10-widget'; 
+  div.id = 'sSEL10-div';
+  div.appendChild(document.createTextNode('"Schedule SE 10. Social security part, 12.4 percent (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sSEL10-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sSEL10']; 
-  elt.disabled = true; 
+  elt.value = env['sSEL10'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$173(env, upd) {
   widget$143(env);
 }
 function widget$144(env) {
   var div = document.createElement('div');
-    div.id = 'sSEL11-div';
-    div.appendChild(document.createTextNode('"Schedule SE 11. Medicare part, 2.9 percent (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sSEL11-widget'; 
+  div.id = 'sSEL11-div';
+  div.appendChild(document.createTextNode('"Schedule SE 11. Medicare part, 2.9 percent (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sSEL11-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sSEL11']; 
-  elt.disabled = true; 
+  elt.value = env['sSEL11'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$174(env, upd) {
   widget$144(env);
 }
 function widget$145(env) {
   var div = document.createElement('div');
-    div.id = 'sSEL12-div';
-    div.appendChild(document.createTextNode('"Schedule SE 12. Self-employment tax (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sSEL12-widget'; 
+  div.id = 'sSEL12-div';
+  div.appendChild(document.createTextNode('"Schedule SE 12. Self-employment tax (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sSEL12-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sSEL12']; 
-  elt.disabled = true; 
+  elt.value = env['sSEL12'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$175(env, upd) {
   widget$145(env);
 }
 function widget$146(env) {
   var div = document.createElement('div');
-    div.id = 'sSEL13-div';
-    div.appendChild(document.createTextNode('"Schedule SE 13. Deduction for one-half of SE tax (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sSEL13-widget'; 
+  div.id = 'sSEL13-div';
+  div.appendChild(document.createTextNode('"Schedule SE 13. Deduction for one-half of SE tax (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sSEL13-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sSEL13']; 
-  elt.disabled = true; 
+  elt.value = env['sSEL13'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$176(env, upd) {
   widget$146(env);
 }
 function renderQuestion$177(env, upd) {
-  renderQuestion$167(env, upd); 
-  renderQuestion$168(env, upd); 
-  renderQuestion$169(env, upd); 
-  renderQuestion$170(env, upd); 
-  renderQuestion$171(env, upd); 
-  renderQuestion$172(env, upd); 
-  renderQuestion$173(env, upd); 
-  renderQuestion$174(env, upd); 
-  renderQuestion$175(env, upd); 
+  renderQuestion$167(env, upd);
+  renderQuestion$168(env, upd);
+  renderQuestion$169(env, upd);
+  renderQuestion$170(env, upd);
+  renderQuestion$171(env, upd);
+  renderQuestion$172(env, upd);
+  renderQuestion$173(env, upd);
+  renderQuestion$174(env, upd);
+  renderQuestion$175(env, upd);
   renderQuestion$176(env, upd);
 }
 function renderQuestion$178(env, upd) {
@@ -9448,275 +10409,275 @@ function renderQuestion$178(env, upd) {
 }
 function updater$113(upd) {
   return function (x) {
-  upd('s1L1', parseInt(x.target.value));
-};
+    upd('s1L1', parseInt(x.target.value));
+  };
 }
 function widget$147(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L1-div';
-    div.appendChild(document.createTextNode('"Schedule 1 1. Taxable refunds of state and local income taxes (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L1-widget'; 
+  div.id = 's1L1-div';
+  div.appendChild(document.createTextNode('"Schedule 1 1. Taxable refunds of state and local income taxes (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L1-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L1']; 
-  elt.onchange = func; 
+  elt.value = env['s1L1'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$179(env, upd) {
   widget$147(env, updater$113(upd));
 }
 function updater$114(upd) {
   return function (x) {
-  upd('s1L2a', parseInt(x.target.value));
-};
+    upd('s1L2a', parseInt(x.target.value));
+  };
 }
 function widget$148(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L2a-div';
-    div.appendChild(document.createTextNode('"Schedule 1 2a. Alimony received (divorce before 2019) (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L2a-widget'; 
+  div.id = 's1L2a-div';
+  div.appendChild(document.createTextNode('"Schedule 1 2a. Alimony received (divorce before 2019) (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L2a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L2a']; 
-  elt.onchange = func; 
+  elt.value = env['s1L2a'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$180(env, upd) {
   widget$148(env, updater$114(upd));
 }
 function widget$149(env) {
   var div = document.createElement('div');
-    div.id = 's1L3-div';
-    div.appendChild(document.createTextNode('"Schedule 1 3. Business income or loss, Schedule C (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L3-widget'; 
+  div.id = 's1L3-div';
+  div.appendChild(document.createTextNode('"Schedule 1 3. Business income or loss, Schedule C (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L3-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L3']; 
-  elt.disabled = true; 
+  elt.value = env['s1L3'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$181(env, upd) {
   widget$149(env);
 }
 function updater$115(upd) {
   return function (x) {
-  upd('s1L4', parseInt(x.target.value));
-};
+    upd('s1L4', parseInt(x.target.value));
+  };
 }
 function widget$150(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L4-div';
-    div.appendChild(document.createTextNode('"Schedule 1 4. Other gains or losses, Form 4797 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L4-widget'; 
+  div.id = 's1L4-div';
+  div.appendChild(document.createTextNode('"Schedule 1 4. Other gains or losses, Form 4797 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L4-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L4']; 
-  elt.onchange = func; 
+  elt.value = env['s1L4'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$182(env, upd) {
   widget$150(env, updater$115(upd));
 }
 function updater$116(upd) {
   return function (x) {
-  upd('s1L5', parseInt(x.target.value));
-};
+    upd('s1L5', parseInt(x.target.value));
+  };
 }
 function widget$151(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L5-div';
-    div.appendChild(document.createTextNode('"Schedule 1 5. Rental real estate, royalties, partnerships, Schedule E (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L5-widget'; 
+  div.id = 's1L5-div';
+  div.appendChild(document.createTextNode('"Schedule 1 5. Rental real estate, royalties, partnerships, Schedule E (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L5-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L5']; 
-  elt.onchange = func; 
+  elt.value = env['s1L5'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$183(env, upd) {
   widget$151(env, updater$116(upd));
 }
 function updater$117(upd) {
   return function (x) {
-  upd('s1L6', parseInt(x.target.value));
-};
+    upd('s1L6', parseInt(x.target.value));
+  };
 }
 function widget$152(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L6-div';
-    div.appendChild(document.createTextNode('"Schedule 1 6. Farm income or loss, Schedule F (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L6-widget'; 
+  div.id = 's1L6-div';
+  div.appendChild(document.createTextNode('"Schedule 1 6. Farm income or loss, Schedule F (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L6-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L6']; 
-  elt.onchange = func; 
+  elt.value = env['s1L6'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$184(env, upd) {
   widget$152(env, updater$117(upd));
 }
 function updater$118(upd) {
   return function (x) {
-  upd('s1L7', parseInt(x.target.value));
-};
+    upd('s1L7', parseInt(x.target.value));
+  };
 }
 function widget$153(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L7-div';
-    div.appendChild(document.createTextNode('"Schedule 1 7. Unemployment compensation (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L7-widget'; 
+  div.id = 's1L7-div';
+  div.appendChild(document.createTextNode('"Schedule 1 7. Unemployment compensation (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L7-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L7']; 
-  elt.onchange = func; 
+  elt.value = env['s1L7'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$185(env, upd) {
   widget$153(env, updater$118(upd));
 }
 function updater$119(upd) {
   return function (x) {
-  upd('s1L8a', parseInt(x.target.value));
-};
+    upd('s1L8a', parseInt(x.target.value));
+  };
 }
 function widget$154(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L8a-div';
-    div.appendChild(document.createTextNode('"Schedule 1 8a. Net operating loss (enter as positive) (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L8a-widget'; 
+  div.id = 's1L8a-div';
+  div.appendChild(document.createTextNode('"Schedule 1 8a. Net operating loss (enter as positive) (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L8a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L8a']; 
-  elt.onchange = func; 
+  elt.value = env['s1L8a'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$186(env, upd) {
   widget$154(env, updater$119(upd));
 }
 function updater$120(upd) {
   return function (x) {
-  upd('s1L8b', parseInt(x.target.value));
-};
+    upd('s1L8b', parseInt(x.target.value));
+  };
 }
 function widget$155(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L8b-div';
-    div.appendChild(document.createTextNode('"Schedule 1 8b. Gambling income (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L8b-widget'; 
+  div.id = 's1L8b-div';
+  div.appendChild(document.createTextNode('"Schedule 1 8b. Gambling income (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L8b-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L8b']; 
-  elt.onchange = func; 
+  elt.value = env['s1L8b'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$187(env, upd) {
   widget$155(env, updater$120(upd));
 }
 function updater$121(upd) {
   return function (x) {
-  upd('s1L8c', parseInt(x.target.value));
-};
+    upd('s1L8c', parseInt(x.target.value));
+  };
 }
 function widget$156(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L8c-div';
-    div.appendChild(document.createTextNode('"Schedule 1 8c. Cancellation of debt (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L8c-widget'; 
+  div.id = 's1L8c-div';
+  div.appendChild(document.createTextNode('"Schedule 1 8c. Cancellation of debt (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L8c-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L8c']; 
-  elt.onchange = func; 
+  elt.value = env['s1L8c'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$188(env, upd) {
   widget$156(env, updater$121(upd));
 }
 function updater$122(upd) {
   return function (x) {
-  upd('s1L8i', parseInt(x.target.value));
-};
+    upd('s1L8i', parseInt(x.target.value));
+  };
 }
 function widget$157(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L8i-div';
-    div.appendChild(document.createTextNode('"Schedule 1 8i. Prizes and awards (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L8i-widget'; 
+  div.id = 's1L8i-div';
+  div.appendChild(document.createTextNode('"Schedule 1 8i. Prizes and awards (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L8i-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L8i']; 
-  elt.onchange = func; 
+  elt.value = env['s1L8i'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$189(env, upd) {
   widget$157(env, updater$122(upd));
 }
 function updater$123(upd) {
   return function (x) {
-  upd('s1L8j', parseInt(x.target.value));
-};
+    upd('s1L8j', parseInt(x.target.value));
+  };
 }
 function widget$158(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L8j-div';
-    div.appendChild(document.createTextNode('"Schedule 1 8j. Activity not engaged in for profit (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L8j-widget'; 
+  div.id = 's1L8j-div';
+  div.appendChild(document.createTextNode('"Schedule 1 8j. Activity not engaged in for profit (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L8j-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L8j']; 
-  elt.onchange = func; 
+  elt.value = env['s1L8j'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$190(env, upd) {
   widget$158(env, updater$123(upd));
 }
 function updater$124(upd) {
   return function (x) {
-  upd('s1L8z', parseInt(x.target.value));
-};
+    upd('s1L8z', parseInt(x.target.value));
+  };
 }
 function widget$159(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L8z-div';
-    div.appendChild(document.createTextNode('"Schedule 1 8z. Other income (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L8z-widget'; 
+  div.id = 's1L8z-div';
+  div.appendChild(document.createTextNode('"Schedule 1 8z. Other income (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L8z-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L8z']; 
-  elt.onchange = func; 
+  elt.value = env['s1L8z'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$191(env, upd) {
   widget$159(env, updater$124(upd));
 }
 function updater$125(upd) {
   return function (x) {
-  upd('s1L8zType', x.target.value);
-};
+    upd('s1L8zType', x.target.value);
+  };
 }
 function widget$160(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L8zType-div';
-    div.appendChild(document.createTextNode('"Schedule 1 8z. Type of other income:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L8zType-widget'; 
+  div.id = 's1L8zType-div';
+  div.appendChild(document.createTextNode('"Schedule 1 8z. Type of other income:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L8zType-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['s1L8zType']; 
-  elt.onchange = func; 
+  elt.value = env['s1L8zType'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$192(env, upd) {
   widget$160(env, updater$125(upd));
@@ -9729,220 +10690,220 @@ function renderQuestion$194(env, upd) {
 }
 function widget$161(env) {
   var div = document.createElement('div');
-    div.id = 's1L9-div';
-    div.appendChild(document.createTextNode('"Schedule 1 9. Total other income (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L9-widget'; 
+  div.id = 's1L9-div';
+  div.appendChild(document.createTextNode('"Schedule 1 9. Total other income (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L9-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L9']; 
-  elt.disabled = true; 
+  elt.value = env['s1L9'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$195(env, upd) {
   widget$161(env);
 }
 function widget$162(env) {
   var div = document.createElement('div');
-    div.id = 's1L10-div';
-    div.appendChild(document.createTextNode('"Schedule 1 10. Additional income (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L10-widget'; 
+  div.id = 's1L10-div';
+  div.appendChild(document.createTextNode('"Schedule 1 10. Additional income (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L10-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L10']; 
-  elt.disabled = true; 
+  elt.value = env['s1L10'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$196(env, upd) {
   widget$162(env);
 }
 function updater$126(upd) {
   return function (x) {
-  upd('s1L11', parseInt(x.target.value));
-};
+    upd('s1L11', parseInt(x.target.value));
+  };
 }
 function widget$163(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L11-div';
-    div.appendChild(document.createTextNode('"Schedule 1 11. Educator expenses (USD, max 300):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L11-widget'; 
+  div.id = 's1L11-div';
+  div.appendChild(document.createTextNode('"Schedule 1 11. Educator expenses (USD, max 300):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L11-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L11']; 
-  elt.onchange = func; 
+  elt.value = env['s1L11'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$197(env, upd) {
   widget$163(env, updater$126(upd));
 }
 function widget$164(env) {
   var div = document.createElement('div');
-    div.id = 's1L11Ok-div';
-    div.appendChild(document.createTextNode('"Schedule 1 11. Educator expenses within limit:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L11Ok-widget'; 
+  div.id = 's1L11Ok-div';
+  div.appendChild(document.createTextNode('"Schedule 1 11. Educator expenses within limit:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L11Ok-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['s1L11Ok']; 
-  elt.disabled = true; 
+  elt.checked = env['s1L11Ok'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$198(env, upd) {
   widget$164(env);
 }
 function updater$127(upd) {
   return function (x) {
-  upd('s1L13', parseInt(x.target.value));
-};
+    upd('s1L13', parseInt(x.target.value));
+  };
 }
 function widget$165(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L13-div';
-    div.appendChild(document.createTextNode('"Schedule 1 13. Health savings account deduction (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L13-widget'; 
+  div.id = 's1L13-div';
+  div.appendChild(document.createTextNode('"Schedule 1 13. Health savings account deduction (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L13-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L13']; 
-  elt.onchange = func; 
+  elt.value = env['s1L13'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$199(env, upd) {
   widget$165(env, updater$127(upd));
 }
 function updater$128(upd) {
   return function (x) {
-  upd('s1L14', parseInt(x.target.value));
-};
+    upd('s1L14', parseInt(x.target.value));
+  };
 }
 function widget$166(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L14-div';
-    div.appendChild(document.createTextNode('"Schedule 1 14. Moving expenses for Armed Forces members (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L14-widget'; 
+  div.id = 's1L14-div';
+  div.appendChild(document.createTextNode('"Schedule 1 14. Moving expenses for Armed Forces members (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L14-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L14']; 
-  elt.onchange = func; 
+  elt.value = env['s1L14'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$200(env, upd) {
   widget$166(env, updater$128(upd));
 }
 function widget$167(env) {
   var div = document.createElement('div');
-    div.id = 's1L15-div';
-    div.appendChild(document.createTextNode('"Schedule 1 15. Deductible part of self-employment tax (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L15-widget'; 
+  div.id = 's1L15-div';
+  div.appendChild(document.createTextNode('"Schedule 1 15. Deductible part of self-employment tax (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L15-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L15']; 
-  elt.disabled = true; 
+  elt.value = env['s1L15'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$201(env, upd) {
   widget$167(env);
 }
 function updater$129(upd) {
   return function (x) {
-  upd('s1L16', parseInt(x.target.value));
-};
+    upd('s1L16', parseInt(x.target.value));
+  };
 }
 function widget$168(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L16-div';
-    div.appendChild(document.createTextNode('"Schedule 1 16. Self-employed SEP, SIMPLE and qualified plans (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L16-widget'; 
+  div.id = 's1L16-div';
+  div.appendChild(document.createTextNode('"Schedule 1 16. Self-employed SEP, SIMPLE and qualified plans (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L16-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L16']; 
-  elt.onchange = func; 
+  elt.value = env['s1L16'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$202(env, upd) {
   widget$168(env, updater$129(upd));
 }
 function updater$130(upd) {
   return function (x) {
-  upd('s1L17', parseInt(x.target.value));
-};
+    upd('s1L17', parseInt(x.target.value));
+  };
 }
 function widget$169(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L17-div';
-    div.appendChild(document.createTextNode('"Schedule 1 17. Self-employed health insurance deduction (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L17-widget'; 
+  div.id = 's1L17-div';
+  div.appendChild(document.createTextNode('"Schedule 1 17. Self-employed health insurance deduction (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L17-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L17']; 
-  elt.onchange = func; 
+  elt.value = env['s1L17'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$203(env, upd) {
   widget$169(env, updater$130(upd));
 }
 function updater$131(upd) {
   return function (x) {
-  upd('s1L18', parseInt(x.target.value));
-};
+    upd('s1L18', parseInt(x.target.value));
+  };
 }
 function widget$170(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L18-div';
-    div.appendChild(document.createTextNode('"Schedule 1 18. Penalty on early withdrawal of savings (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L18-widget'; 
+  div.id = 's1L18-div';
+  div.appendChild(document.createTextNode('"Schedule 1 18. Penalty on early withdrawal of savings (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L18-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L18']; 
-  elt.onchange = func; 
+  elt.value = env['s1L18'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$204(env, upd) {
   widget$170(env, updater$131(upd));
 }
 function updater$132(upd) {
   return function (x) {
-  upd('s1L19a', parseInt(x.target.value));
-};
+    upd('s1L19a', parseInt(x.target.value));
+  };
 }
 function widget$171(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L19a-div';
-    div.appendChild(document.createTextNode('"Schedule 1 19a. Alimony paid (divorce before 2019) (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L19a-widget'; 
+  div.id = 's1L19a-div';
+  div.appendChild(document.createTextNode('"Schedule 1 19a. Alimony paid (divorce before 2019) (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L19a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L19a']; 
-  elt.onchange = func; 
+  elt.value = env['s1L19a'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$205(env, upd) {
   widget$171(env, updater$132(upd));
 }
 function updater$133(upd) {
   return function (x) {
-  upd('s1L19b', x.target.value);
-};
+    upd('s1L19b', x.target.value);
+  };
 }
 function widget$172(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L19b-div';
-    div.appendChild(document.createTextNode('"Schedule 1 19b. Recipient SSN:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L19b-widget'; 
+  div.id = 's1L19b-div';
+  div.appendChild(document.createTextNode('"Schedule 1 19b. Recipient SSN:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L19b-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['s1L19b']; 
-  elt.onchange = func; 
+  elt.value = env['s1L19b'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$206(env, upd) {
   widget$172(env, updater$133(upd));
@@ -9955,435 +10916,435 @@ function renderQuestion$208(env, upd) {
 }
 function updater$134(upd) {
   return function (x) {
-  upd('s1L20', parseInt(x.target.value));
-};
+    upd('s1L20', parseInt(x.target.value));
+  };
 }
 function widget$173(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L20-div';
-    div.appendChild(document.createTextNode('"Schedule 1 20. IRA deduction (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L20-widget'; 
+  div.id = 's1L20-div';
+  div.appendChild(document.createTextNode('"Schedule 1 20. IRA deduction (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L20-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L20']; 
-  elt.onchange = func; 
+  elt.value = env['s1L20'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$209(env, upd) {
   widget$173(env, updater$134(upd));
 }
 function widget$174(env) {
   var div = document.createElement('div');
-    div.id = 's1L20Ok-div';
-    div.appendChild(document.createTextNode('"Schedule 1 20. IRA deduction within the 6500 USD limit (7500 if 50 or older):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L20Ok-widget'; 
+  div.id = 's1L20Ok-div';
+  div.appendChild(document.createTextNode('"Schedule 1 20. IRA deduction within the 6500 USD limit (7500 if 50 or older):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L20Ok-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['s1L20Ok']; 
-  elt.disabled = true; 
+  elt.checked = env['s1L20Ok'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$210(env, upd) {
   widget$174(env);
 }
 function updater$135(upd) {
   return function (x) {
-  upd('s1L21', parseInt(x.target.value));
-};
+    upd('s1L21', parseInt(x.target.value));
+  };
 }
 function widget$175(env, func) {
   var div = document.createElement('div');
-    div.id = 's1L21-div';
-    div.appendChild(document.createTextNode('"Schedule 1 21. Student loan interest deduction (USD, max 2500):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L21-widget'; 
+  div.id = 's1L21-div';
+  div.appendChild(document.createTextNode('"Schedule 1 21. Student loan interest deduction (USD, max 2500):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L21-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L21']; 
-  elt.onchange = func; 
+  elt.value = env['s1L21'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$211(env, upd) {
   widget$175(env, updater$135(upd));
 }
 function widget$176(env) {
   var div = document.createElement('div');
-    div.id = 's1L21Ok-div';
-    div.appendChild(document.createTextNode('"Schedule 1 21. Student loan interest within limit:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L21Ok-widget'; 
+  div.id = 's1L21Ok-div';
+  div.appendChild(document.createTextNode('"Schedule 1 21. Student loan interest within limit:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L21Ok-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['s1L21Ok']; 
-  elt.disabled = true; 
+  elt.checked = env['s1L21Ok'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$212(env, upd) {
   widget$176(env);
 }
 function widget$177(env) {
   var div = document.createElement('div');
-    div.id = 's1L26-div';
-    div.appendChild(document.createTextNode('"Schedule 1 26. Total adjustments to income (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's1L26-widget'; 
+  div.id = 's1L26-div';
+  div.appendChild(document.createTextNode('"Schedule 1 26. Total adjustments to income (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's1L26-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s1L26']; 
-  elt.disabled = true; 
+  elt.value = env['s1L26'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$213(env, upd) {
   widget$177(env);
 }
 function widget$178(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L1a-div';
-    div.appendChild(document.createTextNode('"1040 1a. Total amount from Forms W-2, box 1 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L1a-widget'; 
+  div.id = 'f1040L1a-div';
+  div.appendChild(document.createTextNode('"1040 1a. Total amount from Forms W-2, box 1 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L1a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L1a']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L1a'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$214(env, upd) {
   widget$178(env);
 }
 function updater$136(upd) {
   return function (x) {
-  upd('f1040L1b', parseInt(x.target.value));
-};
+    upd('f1040L1b', parseInt(x.target.value));
+  };
 }
 function widget$179(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L1b-div';
-    div.appendChild(document.createTextNode('"1040 1b. Household employee wages not on W-2 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L1b-widget'; 
+  div.id = 'f1040L1b-div';
+  div.appendChild(document.createTextNode('"1040 1b. Household employee wages not on W-2 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L1b-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L1b']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L1b'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$215(env, upd) {
   widget$179(env, updater$136(upd));
 }
 function updater$137(upd) {
   return function (x) {
-  upd('f1040L1c', parseInt(x.target.value));
-};
+    upd('f1040L1c', parseInt(x.target.value));
+  };
 }
 function widget$180(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L1c-div';
-    div.appendChild(document.createTextNode('"1040 1c. Tip income not reported on line 1a (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L1c-widget'; 
+  div.id = 'f1040L1c-div';
+  div.appendChild(document.createTextNode('"1040 1c. Tip income not reported on line 1a (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L1c-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L1c']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L1c'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$216(env, upd) {
   widget$180(env, updater$137(upd));
 }
 function updater$138(upd) {
   return function (x) {
-  upd('f1040L1e', parseInt(x.target.value));
-};
+    upd('f1040L1e', parseInt(x.target.value));
+  };
 }
 function widget$181(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L1e-div';
-    div.appendChild(document.createTextNode('"1040 1e. Taxable dependent care benefits (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L1e-widget'; 
+  div.id = 'f1040L1e-div';
+  div.appendChild(document.createTextNode('"1040 1e. Taxable dependent care benefits (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L1e-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L1e']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L1e'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$217(env, upd) {
   widget$181(env, updater$138(upd));
 }
 function updater$139(upd) {
   return function (x) {
-  upd('f1040L1f', parseInt(x.target.value));
-};
+    upd('f1040L1f', parseInt(x.target.value));
+  };
 }
 function widget$182(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L1f-div';
-    div.appendChild(document.createTextNode('"1040 1f. Employer-provided adoption benefits (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L1f-widget'; 
+  div.id = 'f1040L1f-div';
+  div.appendChild(document.createTextNode('"1040 1f. Employer-provided adoption benefits (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L1f-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L1f']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L1f'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$218(env, upd) {
   widget$182(env, updater$139(upd));
 }
 function updater$140(upd) {
   return function (x) {
-  upd('f1040L1g', parseInt(x.target.value));
-};
+    upd('f1040L1g', parseInt(x.target.value));
+  };
 }
 function widget$183(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L1g-div';
-    div.appendChild(document.createTextNode('"1040 1g. Wages from Form 8919 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L1g-widget'; 
+  div.id = 'f1040L1g-div';
+  div.appendChild(document.createTextNode('"1040 1g. Wages from Form 8919 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L1g-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L1g']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L1g'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$219(env, upd) {
   widget$183(env, updater$140(upd));
 }
 function updater$141(upd) {
   return function (x) {
-  upd('f1040L1h', parseInt(x.target.value));
-};
+    upd('f1040L1h', parseInt(x.target.value));
+  };
 }
 function widget$184(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L1h-div';
-    div.appendChild(document.createTextNode('"1040 1h. Other earned income (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L1h-widget'; 
+  div.id = 'f1040L1h-div';
+  div.appendChild(document.createTextNode('"1040 1h. Other earned income (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L1h-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L1h']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L1h'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$220(env, upd) {
   widget$184(env, updater$141(upd));
 }
 function widget$185(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L1z-div';
-    div.appendChild(document.createTextNode('"1040 1z. Total wages (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L1z-widget'; 
+  div.id = 'f1040L1z-div';
+  div.appendChild(document.createTextNode('"1040 1z. Total wages (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L1z-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L1z']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L1z'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$221(env, upd) {
   widget$185(env);
 }
 function widget$186(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L2a-div';
-    div.appendChild(document.createTextNode('"1040 2a. Tax-exempt interest (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L2a-widget'; 
+  div.id = 'f1040L2a-div';
+  div.appendChild(document.createTextNode('"1040 2a. Tax-exempt interest (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L2a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L2a']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L2a'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$222(env, upd) {
   widget$186(env);
 }
 function widget$187(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L2b-div';
-    div.appendChild(document.createTextNode('"1040 2b. Taxable interest (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L2b-widget'; 
+  div.id = 'f1040L2b-div';
+  div.appendChild(document.createTextNode('"1040 2b. Taxable interest (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L2b-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L2b']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L2b'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$223(env, upd) {
   widget$187(env);
 }
 function widget$188(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L3a-div';
-    div.appendChild(document.createTextNode('"1040 3a. Qualified dividends (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L3a-widget'; 
+  div.id = 'f1040L3a-div';
+  div.appendChild(document.createTextNode('"1040 3a. Qualified dividends (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L3a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L3a']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L3a'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$224(env, upd) {
   widget$188(env);
 }
 function widget$189(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L3b-div';
-    div.appendChild(document.createTextNode('"1040 3b. Ordinary dividends (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L3b-widget'; 
+  div.id = 'f1040L3b-div';
+  div.appendChild(document.createTextNode('"1040 3b. Ordinary dividends (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L3b-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L3b']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L3b'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$225(env, upd) {
   widget$189(env);
 }
 function updater$142(upd) {
   return function (x) {
-  upd('f1040L4a', parseInt(x.target.value));
-};
+    upd('f1040L4a', parseInt(x.target.value));
+  };
 }
 function widget$190(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L4a-div';
-    div.appendChild(document.createTextNode('"1040 4a. IRA distributions (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L4a-widget'; 
+  div.id = 'f1040L4a-div';
+  div.appendChild(document.createTextNode('"1040 4a. IRA distributions (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L4a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L4a']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L4a'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$226(env, upd) {
   widget$190(env, updater$142(upd));
 }
 function updater$143(upd) {
   return function (x) {
-  upd('f1040L4b', parseInt(x.target.value));
-};
+    upd('f1040L4b', parseInt(x.target.value));
+  };
 }
 function widget$191(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L4b-div';
-    div.appendChild(document.createTextNode('"1040 4b. Taxable IRA distributions (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L4b-widget'; 
+  div.id = 'f1040L4b-div';
+  div.appendChild(document.createTextNode('"1040 4b. Taxable IRA distributions (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L4b-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L4b']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L4b'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$227(env, upd) {
   widget$191(env, updater$143(upd));
 }
 function updater$144(upd) {
   return function (x) {
-  upd('f1040L5a', parseInt(x.target.value));
-};
+    upd('f1040L5a', parseInt(x.target.value));
+  };
 }
 function widget$192(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L5a-div';
-    div.appendChild(document.createTextNode('"1040 5a. Pensions and annuities (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L5a-widget'; 
+  div.id = 'f1040L5a-div';
+  div.appendChild(document.createTextNode('"1040 5a. Pensions and annuities (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L5a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L5a']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L5a'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$228(env, upd) {
   widget$192(env, updater$144(upd));
 }
 function updater$145(upd) {
   return function (x) {
-  upd('f1040L5b', parseInt(x.target.value));
-};
+    upd('f1040L5b', parseInt(x.target.value));
+  };
 }
 function widget$193(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L5b-div';
-    div.appendChild(document.createTextNode('"1040 5b. Taxable pensions and annuities (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L5b-widget'; 
+  div.id = 'f1040L5b-div';
+  div.appendChild(document.createTextNode('"1040 5b. Taxable pensions and annuities (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L5b-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L5b']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L5b'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$229(env, upd) {
   widget$193(env, updater$145(upd));
 }
 function updater$146(upd) {
   return function (x) {
-  upd('f1040L6a', parseInt(x.target.value));
-};
+    upd('f1040L6a', parseInt(x.target.value));
+  };
 }
 function widget$194(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L6a-div';
-    div.appendChild(document.createTextNode('"1040 6a. Social security benefits (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L6a-widget'; 
+  div.id = 'f1040L6a-div';
+  div.appendChild(document.createTextNode('"1040 6a. Social security benefits (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L6a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L6a']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L6a'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$230(env, upd) {
   widget$194(env, updater$146(upd));
 }
 function updater$147(upd) {
   return function (x) {
-  upd('f1040L6b', parseInt(x.target.value));
-};
+    upd('f1040L6b', parseInt(x.target.value));
+  };
 }
 function widget$195(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L6b-div';
-    div.appendChild(document.createTextNode('"1040 6b. Taxable social security benefits (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L6b-widget'; 
+  div.id = 'f1040L6b-div';
+  div.appendChild(document.createTextNode('"1040 6b. Taxable social security benefits (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L6b-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L6b']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L6b'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$231(env, upd) {
   widget$195(env, updater$147(upd));
 }
 function updater$148(upd) {
   return function (x) {
-  upd('f1040L6c', x.target.checked);
-};
+    upd('f1040L6c', x.target.checked);
+  };
 }
 function widget$196(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L6c-div';
-    div.appendChild(document.createTextNode('"1040 6c. Electing the lump-sum election method?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L6c-widget'; 
+  div.id = 'f1040L6c-div';
+  div.appendChild(document.createTextNode('"1040 6c. Electing the lump-sum election method?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L6c-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['f1040L6c']; 
-  elt.onchange = func; 
+  elt.checked = env['f1040L6c'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$232(env, upd) {
   widget$196(env, updater$148(upd));
@@ -10396,390 +11357,390 @@ function renderQuestion$234(env, upd) {
 }
 function updater$149(upd) {
   return function (x) {
-  upd('f1040L7', parseInt(x.target.value));
-};
+    upd('f1040L7', parseInt(x.target.value));
+  };
 }
 function widget$197(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L7-div';
-    div.appendChild(document.createTextNode('"1040 7. Capital gain or loss (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L7-widget'; 
+  div.id = 'f1040L7-div';
+  div.appendChild(document.createTextNode('"1040 7. Capital gain or loss (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L7-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L7']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L7'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$235(env, upd) {
   widget$197(env, updater$149(upd));
 }
 function updater$150(upd) {
   return function (x) {
-  upd('f1040L7NoSchedD', x.target.checked);
-};
+    upd('f1040L7NoSchedD', x.target.checked);
+  };
 }
 function widget$198(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L7NoSchedD-div';
-    div.appendChild(document.createTextNode('"1040 7. Schedule D not required (only capital gain distributions)?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L7NoSchedD-widget'; 
+  div.id = 'f1040L7NoSchedD-div';
+  div.appendChild(document.createTextNode('"1040 7. Schedule D not required (only capital gain distributions)?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L7NoSchedD-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['f1040L7NoSchedD']; 
-  elt.onchange = func; 
+  elt.checked = env['f1040L7NoSchedD'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$236(env, upd) {
   widget$198(env, updater$150(upd));
 }
 function widget$199(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L8-div';
-    div.appendChild(document.createTextNode('"1040 8. Additional income from Schedule 1 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L8-widget'; 
+  div.id = 'f1040L8-div';
+  div.appendChild(document.createTextNode('"1040 8. Additional income from Schedule 1 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L8-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L8']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L8'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$237(env, upd) {
   widget$199(env);
 }
 function widget$200(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L9-div';
-    div.appendChild(document.createTextNode('"1040 9. Total income (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L9-widget'; 
+  div.id = 'f1040L9-div';
+  div.appendChild(document.createTextNode('"1040 9. Total income (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L9-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L9']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L9'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$238(env, upd) {
   widget$200(env);
 }
 function widget$201(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L10-div';
-    div.appendChild(document.createTextNode('"1040 10. Adjustments to income from Schedule 1 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L10-widget'; 
+  div.id = 'f1040L10-div';
+  div.appendChild(document.createTextNode('"1040 10. Adjustments to income from Schedule 1 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L10-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L10']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L10'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$239(env, upd) {
   widget$201(env);
 }
 function widget$202(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L11-div';
-    div.appendChild(document.createTextNode('"1040 11. Adjusted gross income (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L11-widget'; 
+  div.id = 'f1040L11-div';
+  div.appendChild(document.createTextNode('"1040 11. Adjusted gross income (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L11-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L11']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L11'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$240(env, upd) {
   widget$202(env);
 }
 function updater$151(upd) {
   return function (x) {
-  upd('itemize', x.target.checked);
-};
+    upd('itemize', x.target.checked);
+  };
 }
 function widget$203(env, func) {
   var div = document.createElement('div');
-    div.id = 'itemize-div';
-    div.appendChild(document.createTextNode('"Itemize deductions (Schedule A) instead of the standard deduction?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'itemize-widget'; 
+  div.id = 'itemize-div';
+  div.appendChild(document.createTextNode('"Itemize deductions (Schedule A) instead of the standard deduction?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'itemize-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['itemize']; 
-  elt.onchange = func; 
+  elt.checked = env['itemize'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$241(env, upd) {
   widget$203(env, updater$151(upd));
 }
 function updater$152(upd) {
   return function (x) {
-  upd('sAL1', parseInt(x.target.value));
-};
+    upd('sAL1', parseInt(x.target.value));
+  };
 }
 function widget$204(env, func) {
   var div = document.createElement('div');
-    div.id = 'sAL1-div';
-    div.appendChild(document.createTextNode('"Schedule A 1. Medical and dental expenses (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAL1-widget'; 
+  div.id = 'sAL1-div';
+  div.appendChild(document.createTextNode('"Schedule A 1. Medical and dental expenses (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAL1-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sAL1']; 
-  elt.onchange = func; 
+  elt.value = env['sAL1'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$242(env, upd) {
   widget$204(env, updater$152(upd));
 }
 function widget$205(env) {
   var div = document.createElement('div');
-    div.id = 'sAL3-div';
-    div.appendChild(document.createTextNode('"Schedule A 3. 7.5 percent of AGI (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAL3-widget'; 
+  div.id = 'sAL3-div';
+  div.appendChild(document.createTextNode('"Schedule A 3. 7.5 percent of AGI (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAL3-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sAL3']; 
-  elt.disabled = true; 
+  elt.value = env['sAL3'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$243(env, upd) {
   widget$205(env);
 }
 function widget$206(env) {
   var div = document.createElement('div');
-    div.id = 'sAMedicalOver-div';
-    div.appendChild(document.createTextNode('"Schedule A: medical expenses exceed the floor:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAMedicalOver-widget'; 
+  div.id = 'sAMedicalOver-div';
+  div.appendChild(document.createTextNode('"Schedule A: medical expenses exceed the floor:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAMedicalOver-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['sAMedicalOver']; 
-  elt.disabled = true; 
+  elt.checked = env['sAMedicalOver'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$244(env, upd) {
   widget$206(env);
 }
 function widget$207(env) {
   var div = document.createElement('div');
-    div.id = 'sAL4-div';
-    div.appendChild(document.createTextNode('"Schedule A 4. Deductible medical expenses, if over the floor (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAL4-widget'; 
+  div.id = 'sAL4-div';
+  div.appendChild(document.createTextNode('"Schedule A 4. Deductible medical expenses, if over the floor (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAL4-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sAL4']; 
-  elt.disabled = true; 
+  elt.value = env['sAL4'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$245(env, upd) {
   widget$207(env);
 }
 function updater$153(upd) {
   return function (x) {
-  upd('sAL5a', parseInt(x.target.value));
-};
+    upd('sAL5a', parseInt(x.target.value));
+  };
 }
 function widget$208(env, func) {
   var div = document.createElement('div');
-    div.id = 'sAL5a-div';
-    div.appendChild(document.createTextNode('"Schedule A 5a. State and local income or sales taxes (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAL5a-widget'; 
+  div.id = 'sAL5a-div';
+  div.appendChild(document.createTextNode('"Schedule A 5a. State and local income or sales taxes (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAL5a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sAL5a']; 
-  elt.onchange = func; 
+  elt.value = env['sAL5a'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$246(env, upd) {
   widget$208(env, updater$153(upd));
 }
 function updater$154(upd) {
   return function (x) {
-  upd('sAL5b', parseInt(x.target.value));
-};
+    upd('sAL5b', parseInt(x.target.value));
+  };
 }
 function widget$209(env, func) {
   var div = document.createElement('div');
-    div.id = 'sAL5b-div';
-    div.appendChild(document.createTextNode('"Schedule A 5b. State and local real estate taxes (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAL5b-widget'; 
+  div.id = 'sAL5b-div';
+  div.appendChild(document.createTextNode('"Schedule A 5b. State and local real estate taxes (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAL5b-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sAL5b']; 
-  elt.onchange = func; 
+  elt.value = env['sAL5b'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$247(env, upd) {
   widget$209(env, updater$154(upd));
 }
 function updater$155(upd) {
   return function (x) {
-  upd('sAL5c', parseInt(x.target.value));
-};
+    upd('sAL5c', parseInt(x.target.value));
+  };
 }
 function widget$210(env, func) {
   var div = document.createElement('div');
-    div.id = 'sAL5c-div';
-    div.appendChild(document.createTextNode('"Schedule A 5c. State and local personal property taxes (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAL5c-widget'; 
+  div.id = 'sAL5c-div';
+  div.appendChild(document.createTextNode('"Schedule A 5c. State and local personal property taxes (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAL5c-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sAL5c']; 
-  elt.onchange = func; 
+  elt.value = env['sAL5c'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$248(env, upd) {
   widget$210(env, updater$155(upd));
 }
 function widget$211(env) {
   var div = document.createElement('div');
-    div.id = 'sAL5d-div';
-    div.appendChild(document.createTextNode('"Schedule A 5d. Total state and local taxes (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAL5d-widget'; 
+  div.id = 'sAL5d-div';
+  div.appendChild(document.createTextNode('"Schedule A 5d. Total state and local taxes (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAL5d-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sAL5d']; 
-  elt.disabled = true; 
+  elt.value = env['sAL5d'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$249(env, upd) {
   widget$211(env);
 }
 function widget$212(env) {
   var div = document.createElement('div');
-    div.id = 'sASaltOk-div';
-    div.appendChild(document.createTextNode('"Schedule A 5e. SALT within the 10000 USD cap (5000 if separate):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sASaltOk-widget'; 
+  div.id = 'sASaltOk-div';
+  div.appendChild(document.createTextNode('"Schedule A 5e. SALT within the 10000 USD cap (5000 if separate):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sASaltOk-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['sASaltOk']; 
-  elt.disabled = true; 
+  elt.checked = env['sASaltOk'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$250(env, upd) {
   widget$212(env);
 }
 function updater$156(upd) {
   return function (x) {
-  upd('sAL8a', parseInt(x.target.value));
-};
+    upd('sAL8a', parseInt(x.target.value));
+  };
 }
 function widget$213(env, func) {
   var div = document.createElement('div');
-    div.id = 'sAL8a-div';
-    div.appendChild(document.createTextNode('"Schedule A 8a. Home mortgage interest from Form 1098 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAL8a-widget'; 
+  div.id = 'sAL8a-div';
+  div.appendChild(document.createTextNode('"Schedule A 8a. Home mortgage interest from Form 1098 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAL8a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sAL8a']; 
-  elt.onchange = func; 
+  elt.value = env['sAL8a'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$251(env, upd) {
   widget$213(env, updater$156(upd));
 }
 function updater$157(upd) {
   return function (x) {
-  upd('sAL8c', parseInt(x.target.value));
-};
+    upd('sAL8c', parseInt(x.target.value));
+  };
 }
 function widget$214(env, func) {
   var div = document.createElement('div');
-    div.id = 'sAL8c-div';
-    div.appendChild(document.createTextNode('"Schedule A 8c. Points not reported on Form 1098 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAL8c-widget'; 
+  div.id = 'sAL8c-div';
+  div.appendChild(document.createTextNode('"Schedule A 8c. Points not reported on Form 1098 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAL8c-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sAL8c']; 
-  elt.onchange = func; 
+  elt.value = env['sAL8c'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$252(env, upd) {
   widget$214(env, updater$157(upd));
 }
 function widget$215(env) {
   var div = document.createElement('div');
-    div.id = 'sAL10-div';
-    div.appendChild(document.createTextNode('"Schedule A 10. Total interest paid (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAL10-widget'; 
+  div.id = 'sAL10-div';
+  div.appendChild(document.createTextNode('"Schedule A 10. Total interest paid (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAL10-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sAL10']; 
-  elt.disabled = true; 
+  elt.value = env['sAL10'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$253(env, upd) {
   widget$215(env);
 }
 function updater$158(upd) {
   return function (x) {
-  upd('sAL11', parseInt(x.target.value));
-};
+    upd('sAL11', parseInt(x.target.value));
+  };
 }
 function widget$216(env, func) {
   var div = document.createElement('div');
-    div.id = 'sAL11-div';
-    div.appendChild(document.createTextNode('"Schedule A 11. Gifts to charity by cash or check (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAL11-widget'; 
+  div.id = 'sAL11-div';
+  div.appendChild(document.createTextNode('"Schedule A 11. Gifts to charity by cash or check (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAL11-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sAL11']; 
-  elt.onchange = func; 
+  elt.value = env['sAL11'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$254(env, upd) {
   widget$216(env, updater$158(upd));
 }
 function updater$159(upd) {
   return function (x) {
-  upd('sAL12', parseInt(x.target.value));
-};
+    upd('sAL12', parseInt(x.target.value));
+  };
 }
 function widget$217(env, func) {
   var div = document.createElement('div');
-    div.id = 'sAL12-div';
-    div.appendChild(document.createTextNode('"Schedule A 12. Other than by cash or check (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAL12-widget'; 
+  div.id = 'sAL12-div';
+  div.appendChild(document.createTextNode('"Schedule A 12. Other than by cash or check (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAL12-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sAL12']; 
-  elt.onchange = func; 
+  elt.value = env['sAL12'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$255(env, upd) {
   widget$217(env, updater$159(upd));
 }
 function updater$160(upd) {
   return function (x) {
-  upd('sAForm8283', x.target.checked);
-};
+    upd('sAForm8283', x.target.checked);
+  };
 }
 function widget$218(env, func) {
   var div = document.createElement('div');
-    div.id = 'sAForm8283-div';
-    div.appendChild(document.createTextNode('"Schedule A 12. Form 8283 attached?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAForm8283-widget'; 
+  div.id = 'sAForm8283-div';
+  div.appendChild(document.createTextNode('"Schedule A 12. Form 8283 attached?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAForm8283-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['sAForm8283']; 
-  elt.onchange = func; 
+  elt.checked = env['sAForm8283'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$256(env, upd) {
   widget$218(env, updater$160(upd));
@@ -10792,114 +11753,114 @@ function renderQuestion$258(env, upd) {
 }
 function updater$161(upd) {
   return function (x) {
-  upd('sAL13', parseInt(x.target.value));
-};
+    upd('sAL13', parseInt(x.target.value));
+  };
 }
 function widget$219(env, func) {
   var div = document.createElement('div');
-    div.id = 'sAL13-div';
-    div.appendChild(document.createTextNode('"Schedule A 13. Carryover from prior year (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAL13-widget'; 
+  div.id = 'sAL13-div';
+  div.appendChild(document.createTextNode('"Schedule A 13. Carryover from prior year (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAL13-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sAL13']; 
-  elt.onchange = func; 
+  elt.value = env['sAL13'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$259(env, upd) {
   widget$219(env, updater$161(upd));
 }
 function widget$220(env) {
   var div = document.createElement('div');
-    div.id = 'sAL14-div';
-    div.appendChild(document.createTextNode('"Schedule A 14. Total gifts to charity (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAL14-widget'; 
+  div.id = 'sAL14-div';
+  div.appendChild(document.createTextNode('"Schedule A 14. Total gifts to charity (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAL14-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sAL14']; 
-  elt.disabled = true; 
+  elt.value = env['sAL14'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$260(env, upd) {
   widget$220(env);
 }
 function updater$162(upd) {
   return function (x) {
-  upd('sAL15', parseInt(x.target.value));
-};
+    upd('sAL15', parseInt(x.target.value));
+  };
 }
 function widget$221(env, func) {
   var div = document.createElement('div');
-    div.id = 'sAL15-div';
-    div.appendChild(document.createTextNode('"Schedule A 15. Casualty and theft losses (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAL15-widget'; 
+  div.id = 'sAL15-div';
+  div.appendChild(document.createTextNode('"Schedule A 15. Casualty and theft losses (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAL15-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sAL15']; 
-  elt.onchange = func; 
+  elt.value = env['sAL15'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$261(env, upd) {
   widget$221(env, updater$162(upd));
 }
 function updater$163(upd) {
   return function (x) {
-  upd('sAL16', parseInt(x.target.value));
-};
+    upd('sAL16', parseInt(x.target.value));
+  };
 }
 function widget$222(env, func) {
   var div = document.createElement('div');
-    div.id = 'sAL16-div';
-    div.appendChild(document.createTextNode('"Schedule A 16. Other itemized deductions (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAL16-widget'; 
+  div.id = 'sAL16-div';
+  div.appendChild(document.createTextNode('"Schedule A 16. Other itemized deductions (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAL16-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sAL16']; 
-  elt.onchange = func; 
+  elt.value = env['sAL16'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$262(env, upd) {
   widget$222(env, updater$163(upd));
 }
 function widget$223(env) {
   var div = document.createElement('div');
-    div.id = 'sAL17-div';
-    div.appendChild(document.createTextNode('"Schedule A 17. Total itemized deductions (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'sAL17-widget'; 
+  div.id = 'sAL17-div';
+  div.appendChild(document.createTextNode('"Schedule A 17. Total itemized deductions (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'sAL17-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['sAL17']; 
-  elt.disabled = true; 
+  elt.value = env['sAL17'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$263(env, upd) {
   widget$223(env);
 }
 function renderQuestion$264(env, upd) {
-  renderQuestion$242(env, upd); 
-  renderQuestion$243(env, upd); 
-  renderQuestion$244(env, upd); 
-  renderQuestion$245(env, upd); 
-  renderQuestion$246(env, upd); 
-  renderQuestion$247(env, upd); 
-  renderQuestion$248(env, upd); 
-  renderQuestion$249(env, upd); 
-  renderQuestion$250(env, upd); 
-  renderQuestion$251(env, upd); 
-  renderQuestion$252(env, upd); 
-  renderQuestion$253(env, upd); 
-  renderQuestion$254(env, upd); 
-  renderQuestion$255(env, upd); 
-  renderQuestion$258(env, upd); 
-  renderQuestion$259(env, upd); 
-  renderQuestion$260(env, upd); 
-  renderQuestion$261(env, upd); 
-  renderQuestion$262(env, upd); 
+  renderQuestion$242(env, upd);
+  renderQuestion$243(env, upd);
+  renderQuestion$244(env, upd);
+  renderQuestion$245(env, upd);
+  renderQuestion$246(env, upd);
+  renderQuestion$247(env, upd);
+  renderQuestion$248(env, upd);
+  renderQuestion$249(env, upd);
+  renderQuestion$250(env, upd);
+  renderQuestion$251(env, upd);
+  renderQuestion$252(env, upd);
+  renderQuestion$253(env, upd);
+  renderQuestion$254(env, upd);
+  renderQuestion$255(env, upd);
+  renderQuestion$258(env, upd);
+  renderQuestion$259(env, upd);
+  renderQuestion$260(env, upd);
+  renderQuestion$261(env, upd);
+  renderQuestion$262(env, upd);
   renderQuestion$263(env, upd);
 }
 function renderQuestion$265(env, upd) {
@@ -10907,568 +11868,568 @@ function renderQuestion$265(env, upd) {
 }
 function widget$224(env) {
   var div = document.createElement('div');
-    div.id = 'stdSingle-div';
-    div.appendChild(document.createTextNode('"Standard deduction for single or married filing separately (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'stdSingle-widget'; 
+  div.id = 'stdSingle-div';
+  div.appendChild(document.createTextNode('"Standard deduction for single or married filing separately (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'stdSingle-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['stdSingle']; 
-  elt.disabled = true; 
+  elt.value = env['stdSingle'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$266(env, upd) {
   widget$224(env);
 }
 function widget$225(env) {
   var div = document.createElement('div');
-    div.id = 'stdJoint-div';
-    div.appendChild(document.createTextNode('"Standard deduction for married filing jointly or surviving spouse (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'stdJoint-widget'; 
+  div.id = 'stdJoint-div';
+  div.appendChild(document.createTextNode('"Standard deduction for married filing jointly or surviving spouse (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'stdJoint-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['stdJoint']; 
-  elt.disabled = true; 
+  elt.value = env['stdJoint'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$267(env, upd) {
   widget$225(env);
 }
 function widget$226(env) {
   var div = document.createElement('div');
-    div.id = 'stdHoh-div';
-    div.appendChild(document.createTextNode('"Standard deduction for head of household (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'stdHoh-widget'; 
+  div.id = 'stdHoh-div';
+  div.appendChild(document.createTextNode('"Standard deduction for head of household (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'stdHoh-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['stdHoh']; 
-  elt.disabled = true; 
+  elt.value = env['stdHoh'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$268(env, upd) {
   widget$226(env);
 }
 function widget$227(env) {
   var div = document.createElement('div');
-    div.id = 'extraBoxes-div';
-    div.appendChild(document.createTextNode('"Additional standard deduction boxes checked (65 or older, blind):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'extraBoxes-widget'; 
+  div.id = 'extraBoxes-div';
+  div.appendChild(document.createTextNode('"Additional standard deduction boxes checked (65 or older, blind):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'extraBoxes-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['extraBoxes']; 
-  elt.disabled = true; 
+  elt.checked = env['extraBoxes'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$269(env, upd) {
   widget$227(env);
 }
 function updater$164(upd) {
   return function (x) {
-  upd('f1040L12', parseInt(x.target.value));
-};
+    upd('f1040L12', parseInt(x.target.value));
+  };
 }
 function widget$228(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L12-div';
-    div.appendChild(document.createTextNode('"1040 12. Standard deduction or itemized deductions (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L12-widget'; 
+  div.id = 'f1040L12-div';
+  div.appendChild(document.createTextNode('"1040 12. Standard deduction or itemized deductions (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L12-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L12']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L12'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$270(env, upd) {
   widget$228(env, updater$164(upd));
 }
 function updater$165(upd) {
   return function (x) {
-  upd('f1040L13', parseInt(x.target.value));
-};
+    upd('f1040L13', parseInt(x.target.value));
+  };
 }
 function widget$229(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L13-div';
-    div.appendChild(document.createTextNode('"1040 13. Qualified business income deduction (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L13-widget'; 
+  div.id = 'f1040L13-div';
+  div.appendChild(document.createTextNode('"1040 13. Qualified business income deduction (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L13-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L13']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L13'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$271(env, upd) {
   widget$229(env, updater$165(upd));
 }
 function widget$230(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L14-div';
-    div.appendChild(document.createTextNode('"1040 14. Total deductions (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L14-widget'; 
+  div.id = 'f1040L14-div';
+  div.appendChild(document.createTextNode('"1040 14. Total deductions (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L14-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L14']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L14'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$272(env, upd) {
   widget$230(env);
 }
 function widget$231(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L15-div';
-    div.appendChild(document.createTextNode('"1040 15. Taxable income (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L15-widget'; 
+  div.id = 'f1040L15-div';
+  div.appendChild(document.createTextNode('"1040 15. Taxable income (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L15-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L15']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L15'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$273(env, upd) {
   widget$231(env);
 }
 function widget$232(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L15Positive-div';
-    div.appendChild(document.createTextNode('"Taxable income is positive:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L15Positive-widget'; 
+  div.id = 'f1040L15Positive-div';
+  div.appendChild(document.createTextNode('"Taxable income is positive:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L15Positive-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['f1040L15Positive']; 
-  elt.disabled = true; 
+  elt.checked = env['f1040L15Positive'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$274(env, upd) {
   widget$232(env);
 }
 function updater$166(upd) {
   return function (x) {
-  upd('f1040L16', parseInt(x.target.value));
-};
+    upd('f1040L16', parseInt(x.target.value));
+  };
 }
 function widget$233(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L16-div';
-    div.appendChild(document.createTextNode('"1040 16. Tax from the tax table or worksheet (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L16-widget'; 
+  div.id = 'f1040L16-div';
+  div.appendChild(document.createTextNode('"1040 16. Tax from the tax table or worksheet (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L16-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L16']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L16'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$275(env, upd) {
   widget$233(env, updater$166(upd));
 }
 function updater$167(upd) {
   return function (x) {
-  upd('f1040L16Form8814', x.target.checked);
-};
+    upd('f1040L16Form8814', x.target.checked);
+  };
 }
 function widget$234(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L16Form8814-div';
-    div.appendChild(document.createTextNode('"1040 16. Tax includes Form 8814 (child interest)?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L16Form8814-widget'; 
+  div.id = 'f1040L16Form8814-div';
+  div.appendChild(document.createTextNode('"1040 16. Tax includes Form 8814 (child interest)?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L16Form8814-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['f1040L16Form8814']; 
-  elt.onchange = func; 
+  elt.checked = env['f1040L16Form8814'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$276(env, upd) {
   widget$234(env, updater$167(upd));
 }
 function updater$168(upd) {
   return function (x) {
-  upd('f1040L16Form4972', x.target.checked);
-};
+    upd('f1040L16Form4972', x.target.checked);
+  };
 }
 function widget$235(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L16Form4972-div';
-    div.appendChild(document.createTextNode('"1040 16. Tax includes Form 4972 (lump-sum distributions)?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L16Form4972-widget'; 
+  div.id = 'f1040L16Form4972-div';
+  div.appendChild(document.createTextNode('"1040 16. Tax includes Form 4972 (lump-sum distributions)?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L16Form4972-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['f1040L16Form4972']; 
-  elt.onchange = func; 
+  elt.checked = env['f1040L16Form4972'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$277(env, upd) {
   widget$235(env, updater$168(upd));
 }
 function updater$169(upd) {
   return function (x) {
-  upd('s2L1a', parseInt(x.target.value));
-};
+    upd('s2L1a', parseInt(x.target.value));
+  };
 }
 function widget$236(env, func) {
   var div = document.createElement('div');
-    div.id = 's2L1a-div';
-    div.appendChild(document.createTextNode('"Schedule 2 1a. Excess advance premium tax credit repayment (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's2L1a-widget'; 
+  div.id = 's2L1a-div';
+  div.appendChild(document.createTextNode('"Schedule 2 1a. Excess advance premium tax credit repayment (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's2L1a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s2L1a']; 
-  elt.onchange = func; 
+  elt.value = env['s2L1a'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$278(env, upd) {
   widget$236(env, updater$169(upd));
 }
 function updater$170(upd) {
   return function (x) {
-  upd('s2L2', parseInt(x.target.value));
-};
+    upd('s2L2', parseInt(x.target.value));
+  };
 }
 function widget$237(env, func) {
   var div = document.createElement('div');
-    div.id = 's2L2-div';
-    div.appendChild(document.createTextNode('"Schedule 2 2. Alternative minimum tax, Form 6251 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's2L2-widget'; 
+  div.id = 's2L2-div';
+  div.appendChild(document.createTextNode('"Schedule 2 2. Alternative minimum tax, Form 6251 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's2L2-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s2L2']; 
-  elt.onchange = func; 
+  elt.value = env['s2L2'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$279(env, upd) {
   widget$237(env, updater$170(upd));
 }
 function widget$238(env) {
   var div = document.createElement('div');
-    div.id = 's2L3-div';
-    div.appendChild(document.createTextNode('"Schedule 2 3. Total part I (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's2L3-widget'; 
+  div.id = 's2L3-div';
+  div.appendChild(document.createTextNode('"Schedule 2 3. Total part I (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's2L3-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s2L3']; 
-  elt.disabled = true; 
+  elt.value = env['s2L3'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$280(env, upd) {
   widget$238(env);
 }
 function widget$239(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L17-div';
-    div.appendChild(document.createTextNode('"1040 17. Amount from Schedule 2, line 3 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L17-widget'; 
+  div.id = 'f1040L17-div';
+  div.appendChild(document.createTextNode('"1040 17. Amount from Schedule 2, line 3 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L17-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L17']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L17'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$281(env, upd) {
   widget$239(env);
 }
 function widget$240(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L18-div';
-    div.appendChild(document.createTextNode('"1040 18. Tax before credits (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L18-widget'; 
+  div.id = 'f1040L18-div';
+  div.appendChild(document.createTextNode('"1040 18. Tax before credits (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L18-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L18']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L18'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$282(env, upd) {
   widget$240(env);
 }
 function updater$171(upd) {
   return function (x) {
-  upd('s8812Children', parseInt(x.target.value));
-};
+    upd('s8812Children', parseInt(x.target.value));
+  };
 }
 function widget$241(env, func) {
   var div = document.createElement('div');
-    div.id = 's8812Children-div';
-    div.appendChild(document.createTextNode('"Schedule 8812: number of qualifying children (computed from the dependent rows):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's8812Children-widget'; 
+  div.id = 's8812Children-div';
+  div.appendChild(document.createTextNode('"Schedule 8812: number of qualifying children (computed from the dependent rows):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's8812Children-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s8812Children']; 
-  elt.onchange = func; 
+  elt.value = env['s8812Children'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$283(env, upd) {
   widget$241(env, updater$171(upd));
 }
 function updater$172(upd) {
   return function (x) {
-  upd('s8812Others', parseInt(x.target.value));
-};
+    upd('s8812Others', parseInt(x.target.value));
+  };
 }
 function widget$242(env, func) {
   var div = document.createElement('div');
-    div.id = 's8812Others-div';
-    div.appendChild(document.createTextNode('"Schedule 8812: number of other dependents (computed from the dependent rows):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's8812Others-widget'; 
+  div.id = 's8812Others-div';
+  div.appendChild(document.createTextNode('"Schedule 8812: number of other dependents (computed from the dependent rows):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's8812Others-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s8812Others']; 
-  elt.onchange = func; 
+  elt.value = env['s8812Others'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$284(env, upd) {
   widget$242(env, updater$172(upd));
 }
 function widget$243(env) {
   var div = document.createElement('div');
-    div.id = 's8812L5-div';
-    div.appendChild(document.createTextNode('"Schedule 8812 5. Children times 2000 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's8812L5-widget'; 
+  div.id = 's8812L5-div';
+  div.appendChild(document.createTextNode('"Schedule 8812 5. Children times 2000 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's8812L5-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s8812L5']; 
-  elt.disabled = true; 
+  elt.value = env['s8812L5'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$285(env, upd) {
   widget$243(env);
 }
 function widget$244(env) {
   var div = document.createElement('div');
-    div.id = 's8812L7-div';
-    div.appendChild(document.createTextNode('"Schedule 8812 7. Other dependents times 500 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's8812L7-widget'; 
+  div.id = 's8812L7-div';
+  div.appendChild(document.createTextNode('"Schedule 8812 7. Other dependents times 500 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's8812L7-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s8812L7']; 
-  elt.disabled = true; 
+  elt.value = env['s8812L7'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$286(env, upd) {
   widget$244(env);
 }
 function widget$245(env) {
   var div = document.createElement('div');
-    div.id = 's8812L8-div';
-    div.appendChild(document.createTextNode('"Schedule 8812 8. Total credit before phase-out (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's8812L8-widget'; 
+  div.id = 's8812L8-div';
+  div.appendChild(document.createTextNode('"Schedule 8812 8. Total credit before phase-out (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's8812L8-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s8812L8']; 
-  elt.disabled = true; 
+  elt.value = env['s8812L8'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$287(env, upd) {
   widget$245(env);
 }
 function updater$173(upd) {
   return function (x) {
-  upd('s8812Threshold', parseInt(x.target.value));
-};
+    upd('s8812Threshold', parseInt(x.target.value));
+  };
 }
 function widget$246(env, func) {
   var div = document.createElement('div');
-    div.id = 's8812Threshold-div';
-    div.appendChild(document.createTextNode('"Schedule 8812: AGI threshold (400000 joint, 200000 otherwise):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's8812Threshold-widget'; 
+  div.id = 's8812Threshold-div';
+  div.appendChild(document.createTextNode('"Schedule 8812: AGI threshold (400000 joint, 200000 otherwise):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's8812Threshold-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s8812Threshold']; 
-  elt.onchange = func; 
+  elt.value = env['s8812Threshold'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$288(env, upd) {
   widget$246(env, updater$173(upd));
 }
 function widget$247(env) {
   var div = document.createElement('div');
-    div.id = 's8812PhaseOut-div';
-    div.appendChild(document.createTextNode('"Schedule 8812: AGI above the threshold (phase-out applies):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's8812PhaseOut-widget'; 
+  div.id = 's8812PhaseOut-div';
+  div.appendChild(document.createTextNode('"Schedule 8812: AGI above the threshold (phase-out applies):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's8812PhaseOut-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['s8812PhaseOut']; 
-  elt.disabled = true; 
+  elt.checked = env['s8812PhaseOut'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$289(env, upd) {
   widget$247(env);
 }
 function widget$248(env) {
   var div = document.createElement('div');
-    div.id = 's8812Reduction-div';
-    div.appendChild(document.createTextNode('"Schedule 8812: credit reduction, 50 USD per 1000 over threshold (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's8812Reduction-widget'; 
+  div.id = 's8812Reduction-div';
+  div.appendChild(document.createTextNode('"Schedule 8812: credit reduction, 50 USD per 1000 over threshold (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's8812Reduction-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s8812Reduction']; 
-  elt.disabled = true; 
+  elt.value = env['s8812Reduction'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$290(env, upd) {
   widget$248(env);
 }
 function updater$174(upd) {
   return function (x) {
-  upd('f1040L19', parseInt(x.target.value));
-};
+    upd('f1040L19', parseInt(x.target.value));
+  };
 }
 function widget$249(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L19-div';
-    div.appendChild(document.createTextNode('"1040 19. Child tax credit and credit for other dependents (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L19-widget'; 
+  div.id = 'f1040L19-div';
+  div.appendChild(document.createTextNode('"1040 19. Child tax credit and credit for other dependents (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L19-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L19']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L19'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$291(env, upd) {
   widget$249(env, updater$174(upd));
 }
 function updater$175(upd) {
   return function (x) {
-  upd('s3L1', parseInt(x.target.value));
-};
+    upd('s3L1', parseInt(x.target.value));
+  };
 }
 function widget$250(env, func) {
   var div = document.createElement('div');
-    div.id = 's3L1-div';
-    div.appendChild(document.createTextNode('"Schedule 3 1. Foreign tax credit (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's3L1-widget'; 
+  div.id = 's3L1-div';
+  div.appendChild(document.createTextNode('"Schedule 3 1. Foreign tax credit (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's3L1-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s3L1']; 
-  elt.onchange = func; 
+  elt.value = env['s3L1'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$292(env, upd) {
   widget$250(env, updater$175(upd));
 }
 function updater$176(upd) {
   return function (x) {
-  upd('s3L2', parseInt(x.target.value));
-};
+    upd('s3L2', parseInt(x.target.value));
+  };
 }
 function widget$251(env, func) {
   var div = document.createElement('div');
-    div.id = 's3L2-div';
-    div.appendChild(document.createTextNode('"Schedule 3 2. Child and dependent care credit, Form 2441 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's3L2-widget'; 
+  div.id = 's3L2-div';
+  div.appendChild(document.createTextNode('"Schedule 3 2. Child and dependent care credit, Form 2441 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's3L2-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s3L2']; 
-  elt.onchange = func; 
+  elt.value = env['s3L2'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$293(env, upd) {
   widget$251(env, updater$176(upd));
 }
 function updater$177(upd) {
   return function (x) {
-  upd('s3CareProvider', x.target.value);
-};
+    upd('s3CareProvider', x.target.value);
+  };
 }
 function widget$252(env, func) {
   var div = document.createElement('div');
-    div.id = 's3CareProvider-div';
-    div.appendChild(document.createTextNode('"Schedule 3 2. Care provider name:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's3CareProvider-widget'; 
+  div.id = 's3CareProvider-div';
+  div.appendChild(document.createTextNode('"Schedule 3 2. Care provider name:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's3CareProvider-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['s3CareProvider']; 
-  elt.onchange = func; 
+  elt.value = env['s3CareProvider'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$294(env, upd) {
   widget$252(env, updater$177(upd));
 }
 function updater$178(upd) {
   return function (x) {
-  upd('s3CareProviderId', x.target.value);
-};
+    upd('s3CareProviderId', x.target.value);
+  };
 }
 function widget$253(env, func) {
   var div = document.createElement('div');
-    div.id = 's3CareProviderId-div';
-    div.appendChild(document.createTextNode('"Schedule 3 2. Care provider identification number:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's3CareProviderId-widget'; 
+  div.id = 's3CareProviderId-div';
+  div.appendChild(document.createTextNode('"Schedule 3 2. Care provider identification number:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's3CareProviderId-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['s3CareProviderId']; 
-  elt.onchange = func; 
+  elt.value = env['s3CareProviderId'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$295(env, upd) {
   widget$253(env, updater$178(upd));
 }
 function updater$179(upd) {
   return function (x) {
-  upd('s3CareExpenses', parseInt(x.target.value));
-};
+    upd('s3CareExpenses', parseInt(x.target.value));
+  };
 }
 function widget$254(env, func) {
   var div = document.createElement('div');
-    div.id = 's3CareExpenses-div';
-    div.appendChild(document.createTextNode('"Schedule 3 2. Qualifying care expenses (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's3CareExpenses-widget'; 
+  div.id = 's3CareExpenses-div';
+  div.appendChild(document.createTextNode('"Schedule 3 2. Qualifying care expenses (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's3CareExpenses-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s3CareExpenses']; 
-  elt.onchange = func; 
+  elt.value = env['s3CareExpenses'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$296(env, upd) {
   widget$254(env, updater$179(upd));
 }
 function widget$255(env) {
   var div = document.createElement('div');
-    div.id = 's3CareOk-div';
-    div.appendChild(document.createTextNode('"Schedule 3 2. Expenses within the 3000 USD per person limit:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's3CareOk-widget'; 
+  div.id = 's3CareOk-div';
+  div.appendChild(document.createTextNode('"Schedule 3 2. Expenses within the 3000 USD per person limit:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's3CareOk-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['s3CareOk']; 
-  elt.disabled = true; 
+  elt.checked = env['s3CareOk'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$297(env, upd) {
   widget$255(env);
 }
 function renderQuestion$298(env, upd) {
-  renderQuestion$294(env, upd); 
-  renderQuestion$295(env, upd); 
-  renderQuestion$296(env, upd); 
+  renderQuestion$294(env, upd);
+  renderQuestion$295(env, upd);
+  renderQuestion$296(env, upd);
   renderQuestion$297(env, upd);
 }
 function renderQuestion$299(env, upd) {
@@ -11476,445 +12437,445 @@ function renderQuestion$299(env, upd) {
 }
 function updater$180(upd) {
   return function (x) {
-  upd('s3L3', parseInt(x.target.value));
-};
+    upd('s3L3', parseInt(x.target.value));
+  };
 }
 function widget$256(env, func) {
   var div = document.createElement('div');
-    div.id = 's3L3-div';
-    div.appendChild(document.createTextNode('"Schedule 3 3. Education credits, Form 8863 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's3L3-widget'; 
+  div.id = 's3L3-div';
+  div.appendChild(document.createTextNode('"Schedule 3 3. Education credits, Form 8863 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's3L3-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s3L3']; 
-  elt.onchange = func; 
+  elt.value = env['s3L3'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$300(env, upd) {
   widget$256(env, updater$180(upd));
 }
 function updater$181(upd) {
   return function (x) {
-  upd('s3L4', parseInt(x.target.value));
-};
+    upd('s3L4', parseInt(x.target.value));
+  };
 }
 function widget$257(env, func) {
   var div = document.createElement('div');
-    div.id = 's3L4-div';
-    div.appendChild(document.createTextNode('"Schedule 3 4. Retirement savings contributions credit (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's3L4-widget'; 
+  div.id = 's3L4-div';
+  div.appendChild(document.createTextNode('"Schedule 3 4. Retirement savings contributions credit (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's3L4-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s3L4']; 
-  elt.onchange = func; 
+  elt.value = env['s3L4'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$301(env, upd) {
   widget$257(env, updater$181(upd));
 }
 function updater$182(upd) {
   return function (x) {
-  upd('s3L5a', parseInt(x.target.value));
-};
+    upd('s3L5a', parseInt(x.target.value));
+  };
 }
 function widget$258(env, func) {
   var div = document.createElement('div');
-    div.id = 's3L5a-div';
-    div.appendChild(document.createTextNode('"Schedule 3 5a. Residential clean energy credit (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's3L5a-widget'; 
+  div.id = 's3L5a-div';
+  div.appendChild(document.createTextNode('"Schedule 3 5a. Residential clean energy credit (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's3L5a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s3L5a']; 
-  elt.onchange = func; 
+  elt.value = env['s3L5a'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$302(env, upd) {
   widget$258(env, updater$182(upd));
 }
 function updater$183(upd) {
   return function (x) {
-  upd('s3L5b', parseInt(x.target.value));
-};
+    upd('s3L5b', parseInt(x.target.value));
+  };
 }
 function widget$259(env, func) {
   var div = document.createElement('div');
-    div.id = 's3L5b-div';
-    div.appendChild(document.createTextNode('"Schedule 3 5b. Energy efficient home improvement credit (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's3L5b-widget'; 
+  div.id = 's3L5b-div';
+  div.appendChild(document.createTextNode('"Schedule 3 5b. Energy efficient home improvement credit (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's3L5b-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s3L5b']; 
-  elt.onchange = func; 
+  elt.value = env['s3L5b'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$303(env, upd) {
   widget$259(env, updater$183(upd));
 }
 function updater$184(upd) {
   return function (x) {
-  upd('s3L6f', parseInt(x.target.value));
-};
+    upd('s3L6f', parseInt(x.target.value));
+  };
 }
 function widget$260(env, func) {
   var div = document.createElement('div');
-    div.id = 's3L6f-div';
-    div.appendChild(document.createTextNode('"Schedule 3 6f. Clean vehicle credit (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's3L6f-widget'; 
+  div.id = 's3L6f-div';
+  div.appendChild(document.createTextNode('"Schedule 3 6f. Clean vehicle credit (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's3L6f-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s3L6f']; 
-  elt.onchange = func; 
+  elt.value = env['s3L6f'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$304(env, upd) {
   widget$260(env, updater$184(upd));
 }
 function widget$261(env) {
   var div = document.createElement('div');
-    div.id = 's3L8-div';
-    div.appendChild(document.createTextNode('"Schedule 3 8. Total nonrefundable credits (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's3L8-widget'; 
+  div.id = 's3L8-div';
+  div.appendChild(document.createTextNode('"Schedule 3 8. Total nonrefundable credits (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's3L8-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s3L8']; 
-  elt.disabled = true; 
+  elt.value = env['s3L8'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$305(env, upd) {
   widget$261(env);
 }
 function widget$262(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L20-div';
-    div.appendChild(document.createTextNode('"1040 20. Amount from Schedule 3, line 8 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L20-widget'; 
+  div.id = 'f1040L20-div';
+  div.appendChild(document.createTextNode('"1040 20. Amount from Schedule 3, line 8 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L20-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L20']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L20'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$306(env, upd) {
   widget$262(env);
 }
 function widget$263(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L21-div';
-    div.appendChild(document.createTextNode('"1040 21. Total credits (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L21-widget'; 
+  div.id = 'f1040L21-div';
+  div.appendChild(document.createTextNode('"1040 21. Total credits (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L21-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L21']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L21'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$307(env, upd) {
   widget$263(env);
 }
 function widget$264(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L22-div';
-    div.appendChild(document.createTextNode('"1040 22. Tax after credits (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L22-widget'; 
+  div.id = 'f1040L22-div';
+  div.appendChild(document.createTextNode('"1040 22. Tax after credits (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L22-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L22']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L22'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$308(env, upd) {
   widget$264(env);
 }
 function widget$265(env) {
   var div = document.createElement('div');
-    div.id = 'creditsExceedTax-div';
-    div.appendChild(document.createTextNode('"Credits exceed tax (line 22 must be zero):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'creditsExceedTax-widget'; 
+  div.id = 'creditsExceedTax-div';
+  div.appendChild(document.createTextNode('"Credits exceed tax (line 22 must be zero):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'creditsExceedTax-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['creditsExceedTax']; 
-  elt.disabled = true; 
+  elt.checked = env['creditsExceedTax'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$309(env, upd) {
   widget$265(env);
 }
 function widget$266(env) {
   var div = document.createElement('div');
-    div.id = 's2L4-div';
-    div.appendChild(document.createTextNode('"Schedule 2 4. Self-employment tax (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's2L4-widget'; 
+  div.id = 's2L4-div';
+  div.appendChild(document.createTextNode('"Schedule 2 4. Self-employment tax (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's2L4-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s2L4']; 
-  elt.disabled = true; 
+  elt.value = env['s2L4'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$310(env, upd) {
   widget$266(env);
 }
 function updater$185(upd) {
   return function (x) {
-  upd('s2L8', parseInt(x.target.value));
-};
+    upd('s2L8', parseInt(x.target.value));
+  };
 }
 function widget$267(env, func) {
   var div = document.createElement('div');
-    div.id = 's2L8-div';
-    div.appendChild(document.createTextNode('"Schedule 2 8. Additional tax on IRAs and retirement plans (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's2L8-widget'; 
+  div.id = 's2L8-div';
+  div.appendChild(document.createTextNode('"Schedule 2 8. Additional tax on IRAs and retirement plans (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's2L8-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s2L8']; 
-  elt.onchange = func; 
+  elt.value = env['s2L8'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$311(env, upd) {
   widget$267(env, updater$185(upd));
 }
 function updater$186(upd) {
   return function (x) {
-  upd('s2L9', parseInt(x.target.value));
-};
+    upd('s2L9', parseInt(x.target.value));
+  };
 }
 function widget$268(env, func) {
   var div = document.createElement('div');
-    div.id = 's2L9-div';
-    div.appendChild(document.createTextNode('"Schedule 2 9. Household employment taxes (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's2L9-widget'; 
+  div.id = 's2L9-div';
+  div.appendChild(document.createTextNode('"Schedule 2 9. Household employment taxes (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's2L9-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s2L9']; 
-  elt.onchange = func; 
+  elt.value = env['s2L9'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$312(env, upd) {
   widget$268(env, updater$186(upd));
 }
 function updater$187(upd) {
   return function (x) {
-  upd('s2L11', parseInt(x.target.value));
-};
+    upd('s2L11', parseInt(x.target.value));
+  };
 }
 function widget$269(env, func) {
   var div = document.createElement('div');
-    div.id = 's2L11-div';
-    div.appendChild(document.createTextNode('"Schedule 2 11. Additional Medicare tax, Form 8959 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's2L11-widget'; 
+  div.id = 's2L11-div';
+  div.appendChild(document.createTextNode('"Schedule 2 11. Additional Medicare tax, Form 8959 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's2L11-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s2L11']; 
-  elt.onchange = func; 
+  elt.value = env['s2L11'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$313(env, upd) {
   widget$269(env, updater$187(upd));
 }
 function updater$188(upd) {
   return function (x) {
-  upd('s2L12', parseInt(x.target.value));
-};
+    upd('s2L12', parseInt(x.target.value));
+  };
 }
 function widget$270(env, func) {
   var div = document.createElement('div');
-    div.id = 's2L12-div';
-    div.appendChild(document.createTextNode('"Schedule 2 12. Net investment income tax, Form 8960 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's2L12-widget'; 
+  div.id = 's2L12-div';
+  div.appendChild(document.createTextNode('"Schedule 2 12. Net investment income tax, Form 8960 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's2L12-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s2L12']; 
-  elt.onchange = func; 
+  elt.value = env['s2L12'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$314(env, upd) {
   widget$270(env, updater$188(upd));
 }
 function widget$271(env) {
   var div = document.createElement('div');
-    div.id = 's2L21-div';
-    div.appendChild(document.createTextNode('"Schedule 2 21. Total other taxes (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's2L21-widget'; 
+  div.id = 's2L21-div';
+  div.appendChild(document.createTextNode('"Schedule 2 21. Total other taxes (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's2L21-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s2L21']; 
-  elt.disabled = true; 
+  elt.value = env['s2L21'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$315(env, upd) {
   widget$271(env);
 }
 function widget$272(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L23-div';
-    div.appendChild(document.createTextNode('"1040 23. Other taxes from Schedule 2 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L23-widget'; 
+  div.id = 'f1040L23-div';
+  div.appendChild(document.createTextNode('"1040 23. Other taxes from Schedule 2 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L23-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L23']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L23'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$316(env, upd) {
   widget$272(env);
 }
 function widget$273(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L24-div';
-    div.appendChild(document.createTextNode('"1040 24. Total tax (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L24-widget'; 
+  div.id = 'f1040L24-div';
+  div.appendChild(document.createTextNode('"1040 24. Total tax (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L24-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L24']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L24'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$317(env, upd) {
   widget$273(env);
 }
 function widget$274(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L25a-div';
-    div.appendChild(document.createTextNode('"1040 25a. Federal income tax withheld from Forms W-2 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L25a-widget'; 
+  div.id = 'f1040L25a-div';
+  div.appendChild(document.createTextNode('"1040 25a. Federal income tax withheld from Forms W-2 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L25a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L25a']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L25a'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$318(env, upd) {
   widget$274(env);
 }
 function updater$189(upd) {
   return function (x) {
-  upd('f1040L25b', parseInt(x.target.value));
-};
+    upd('f1040L25b', parseInt(x.target.value));
+  };
 }
 function widget$275(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L25b-div';
-    div.appendChild(document.createTextNode('"1040 25b. Withheld from Forms 1099 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L25b-widget'; 
+  div.id = 'f1040L25b-div';
+  div.appendChild(document.createTextNode('"1040 25b. Withheld from Forms 1099 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L25b-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L25b']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L25b'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$319(env, upd) {
   widget$275(env, updater$189(upd));
 }
 function updater$190(upd) {
   return function (x) {
-  upd('f1040L25c', parseInt(x.target.value));
-};
+    upd('f1040L25c', parseInt(x.target.value));
+  };
 }
 function widget$276(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L25c-div';
-    div.appendChild(document.createTextNode('"1040 25c. Withheld from other forms (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L25c-widget'; 
+  div.id = 'f1040L25c-div';
+  div.appendChild(document.createTextNode('"1040 25c. Withheld from other forms (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L25c-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L25c']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L25c'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$320(env, upd) {
   widget$276(env, updater$190(upd));
 }
 function widget$277(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L25d-div';
-    div.appendChild(document.createTextNode('"1040 25d. Total withholding (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L25d-widget'; 
+  div.id = 'f1040L25d-div';
+  div.appendChild(document.createTextNode('"1040 25d. Total withholding (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L25d-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L25d']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L25d'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$321(env, upd) {
   widget$277(env);
 }
 function updater$191(upd) {
   return function (x) {
-  upd('f1040L26', parseInt(x.target.value));
-};
+    upd('f1040L26', parseInt(x.target.value));
+  };
 }
 function widget$278(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L26-div';
-    div.appendChild(document.createTextNode('"1040 26. Estimated tax payments and amount applied from 2022 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L26-widget'; 
+  div.id = 'f1040L26-div';
+  div.appendChild(document.createTextNode('"1040 26. Estimated tax payments and amount applied from 2022 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L26-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L26']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L26'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$322(env, upd) {
   widget$278(env, updater$191(upd));
 }
 function updater$192(upd) {
   return function (x) {
-  upd('f1040L27', parseInt(x.target.value));
-};
+    upd('f1040L27', parseInt(x.target.value));
+  };
 }
 function widget$279(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L27-div';
-    div.appendChild(document.createTextNode('"1040 27. Earned income credit (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L27-widget'; 
+  div.id = 'f1040L27-div';
+  div.appendChild(document.createTextNode('"1040 27. Earned income credit (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L27-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L27']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L27'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$323(env, upd) {
   widget$279(env, updater$192(upd));
 }
 function updater$193(upd) {
   return function (x) {
-  upd('f1040L27Ok', x.target.checked);
-};
+    upd('f1040L27Ok', x.target.checked);
+  };
 }
 function widget$280(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L27Ok-div';
-    div.appendChild(document.createTextNode('"1040 27. Earned income within the EIC limit for your family size?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L27Ok-widget'; 
+  div.id = 'f1040L27Ok-div';
+  div.appendChild(document.createTextNode('"1040 27. Earned income within the EIC limit for your family size?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L27Ok-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['f1040L27Ok']; 
-  elt.onchange = func; 
+  elt.checked = env['f1040L27Ok'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$324(env, upd) {
   widget$280(env, updater$193(upd));
@@ -11927,519 +12888,519 @@ function renderQuestion$326(env, upd) {
 }
 function updater$194(upd) {
   return function (x) {
-  upd('f1040L28', parseInt(x.target.value));
-};
+    upd('f1040L28', parseInt(x.target.value));
+  };
 }
 function widget$281(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L28-div';
-    div.appendChild(document.createTextNode('"1040 28. Additional child tax credit, Schedule 8812 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L28-widget'; 
+  div.id = 'f1040L28-div';
+  div.appendChild(document.createTextNode('"1040 28. Additional child tax credit, Schedule 8812 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L28-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L28']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L28'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$327(env, upd) {
   widget$281(env, updater$194(upd));
 }
 function updater$195(upd) {
   return function (x) {
-  upd('f1040L29', parseInt(x.target.value));
-};
+    upd('f1040L29', parseInt(x.target.value));
+  };
 }
 function widget$282(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L29-div';
-    div.appendChild(document.createTextNode('"1040 29. American opportunity credit, Form 8863 line 8 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L29-widget'; 
+  div.id = 'f1040L29-div';
+  div.appendChild(document.createTextNode('"1040 29. American opportunity credit, Form 8863 line 8 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L29-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L29']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L29'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$328(env, upd) {
   widget$282(env, updater$195(upd));
 }
 function updater$196(upd) {
   return function (x) {
-  upd('s3L9', parseInt(x.target.value));
-};
+    upd('s3L9', parseInt(x.target.value));
+  };
 }
 function widget$283(env, func) {
   var div = document.createElement('div');
-    div.id = 's3L9-div';
-    div.appendChild(document.createTextNode('"Schedule 3 9. Net premium tax credit (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's3L9-widget'; 
+  div.id = 's3L9-div';
+  div.appendChild(document.createTextNode('"Schedule 3 9. Net premium tax credit (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's3L9-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s3L9']; 
-  elt.onchange = func; 
+  elt.value = env['s3L9'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$329(env, upd) {
   widget$283(env, updater$196(upd));
 }
 function updater$197(upd) {
   return function (x) {
-  upd('s3L10', parseInt(x.target.value));
-};
+    upd('s3L10', parseInt(x.target.value));
+  };
 }
 function widget$284(env, func) {
   var div = document.createElement('div');
-    div.id = 's3L10-div';
-    div.appendChild(document.createTextNode('"Schedule 3 10. Amount paid with request for extension (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's3L10-widget'; 
+  div.id = 's3L10-div';
+  div.appendChild(document.createTextNode('"Schedule 3 10. Amount paid with request for extension (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's3L10-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s3L10']; 
-  elt.onchange = func; 
+  elt.value = env['s3L10'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$330(env, upd) {
   widget$284(env, updater$197(upd));
 }
 function updater$198(upd) {
   return function (x) {
-  upd('s3L11', parseInt(x.target.value));
-};
+    upd('s3L11', parseInt(x.target.value));
+  };
 }
 function widget$285(env, func) {
   var div = document.createElement('div');
-    div.id = 's3L11-div';
-    div.appendChild(document.createTextNode('"Schedule 3 11. Excess social security tax withheld (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's3L11-widget'; 
+  div.id = 's3L11-div';
+  div.appendChild(document.createTextNode('"Schedule 3 11. Excess social security tax withheld (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's3L11-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s3L11']; 
-  elt.onchange = func; 
+  elt.value = env['s3L11'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$331(env, upd) {
   widget$285(env, updater$198(upd));
 }
 function widget$286(env) {
   var div = document.createElement('div');
-    div.id = 's3L15-div';
-    div.appendChild(document.createTextNode('"Schedule 3 15. Total other payments and refundable credits (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 's3L15-widget'; 
+  div.id = 's3L15-div';
+  div.appendChild(document.createTextNode('"Schedule 3 15. Total other payments and refundable credits (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 's3L15-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['s3L15']; 
-  elt.disabled = true; 
+  elt.value = env['s3L15'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$332(env, upd) {
   widget$286(env);
 }
 function widget$287(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L31-div';
-    div.appendChild(document.createTextNode('"1040 31. Amount from Schedule 3, line 15 (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L31-widget'; 
+  div.id = 'f1040L31-div';
+  div.appendChild(document.createTextNode('"1040 31. Amount from Schedule 3, line 15 (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L31-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L31']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L31'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$333(env, upd) {
   widget$287(env);
 }
 function widget$288(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L32-div';
-    div.appendChild(document.createTextNode('"1040 32. Total other payments and refundable credits (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L32-widget'; 
+  div.id = 'f1040L32-div';
+  div.appendChild(document.createTextNode('"1040 32. Total other payments and refundable credits (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L32-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L32']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L32'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$334(env, upd) {
   widget$288(env);
 }
 function widget$289(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L33-div';
-    div.appendChild(document.createTextNode('"1040 33. Total payments (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L33-widget'; 
+  div.id = 'f1040L33-div';
+  div.appendChild(document.createTextNode('"1040 33. Total payments (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L33-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L33']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L33'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$335(env, upd) {
   widget$289(env);
 }
 function widget$290(env) {
   var div = document.createElement('div');
-    div.id = 'overpaid-div';
-    div.appendChild(document.createTextNode('"Overpaid:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'overpaid-widget'; 
+  div.id = 'overpaid-div';
+  div.appendChild(document.createTextNode('"Overpaid:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'overpaid-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['overpaid']; 
-  elt.disabled = true; 
+  elt.checked = env['overpaid'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$336(env, upd) {
   widget$290(env);
 }
 function widget$291(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L34-div';
-    div.appendChild(document.createTextNode('"1040 34. Amount overpaid (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L34-widget'; 
+  div.id = 'f1040L34-div';
+  div.appendChild(document.createTextNode('"1040 34. Amount overpaid (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L34-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L34']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L34'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$337(env, upd) {
   widget$291(env);
 }
 function updater$199(upd) {
   return function (x) {
-  upd('f1040L36', parseInt(x.target.value));
-};
+    upd('f1040L36', parseInt(x.target.value));
+  };
 }
 function widget$292(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L36-div';
-    div.appendChild(document.createTextNode('"1040 36. Amount of line 34 applied to 2024 estimated tax (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L36-widget'; 
+  div.id = 'f1040L36-div';
+  div.appendChild(document.createTextNode('"1040 36. Amount of line 34 applied to 2024 estimated tax (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L36-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L36']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L36'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$338(env, upd) {
   widget$292(env, updater$199(upd));
 }
 function widget$293(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L35a-div';
-    div.appendChild(document.createTextNode('"1040 35a. Amount refunded to you (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L35a-widget'; 
+  div.id = 'f1040L35a-div';
+  div.appendChild(document.createTextNode('"1040 35a. Amount refunded to you (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L35a-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L35a']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L35a'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$339(env, upd) {
   widget$293(env);
 }
 function updater$200(upd) {
   return function (x) {
-  upd('directDeposit', x.target.checked);
-};
+    upd('directDeposit', x.target.checked);
+  };
 }
 function widget$294(env, func) {
   var div = document.createElement('div');
-    div.id = 'directDeposit-div';
-    div.appendChild(document.createTextNode('"1040 35a. Direct deposit?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'directDeposit-widget'; 
+  div.id = 'directDeposit-div';
+  div.appendChild(document.createTextNode('"1040 35a. Direct deposit?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'directDeposit-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['directDeposit']; 
-  elt.onchange = func; 
+  elt.checked = env['directDeposit'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$340(env, upd) {
   widget$294(env, updater$200(upd));
 }
 function updater$201(upd) {
   return function (x) {
-  upd('f1040L35b', x.target.value);
-};
+    upd('f1040L35b', x.target.value);
+  };
 }
 function widget$295(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L35b-div';
-    div.appendChild(document.createTextNode('"1040 35b. Routing number:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L35b-widget'; 
+  div.id = 'f1040L35b-div';
+  div.appendChild(document.createTextNode('"1040 35b. Routing number:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L35b-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['f1040L35b']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L35b'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$341(env, upd) {
   widget$295(env, updater$201(upd));
 }
 function updater$202(upd) {
   return function (x) {
-  upd('f1040L35c', x.target.checked);
-};
+    upd('f1040L35c', x.target.checked);
+  };
 }
 function widget$296(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L35c-div';
-    div.appendChild(document.createTextNode('"1040 35c. Account type is checking (otherwise savings)?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L35c-widget'; 
+  div.id = 'f1040L35c-div';
+  div.appendChild(document.createTextNode('"1040 35c. Account type is checking (otherwise savings)?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L35c-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['f1040L35c']; 
-  elt.onchange = func; 
+  elt.checked = env['f1040L35c'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$342(env, upd) {
   widget$296(env, updater$202(upd));
 }
 function updater$203(upd) {
   return function (x) {
-  upd('f1040L35d', x.target.value);
-};
+    upd('f1040L35d', x.target.value);
+  };
 }
 function widget$297(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L35d-div';
-    div.appendChild(document.createTextNode('"1040 35d. Account number:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L35d-widget'; 
+  div.id = 'f1040L35d-div';
+  div.appendChild(document.createTextNode('"1040 35d. Account number:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L35d-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['f1040L35d']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L35d'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$343(env, upd) {
   widget$297(env, updater$203(upd));
 }
 function renderQuestion$344(env, upd) {
-  renderQuestion$341(env, upd); 
-  renderQuestion$342(env, upd); 
+  renderQuestion$341(env, upd);
+  renderQuestion$342(env, upd);
   renderQuestion$343(env, upd);
 }
 function renderQuestion$345(env, upd) {
   renderQuestion$344(env, upd);
 }
 function renderQuestion$346(env, upd) {
-  renderQuestion$337(env, upd); 
-  renderQuestion$338(env, upd); 
-  renderQuestion$339(env, upd); 
-  renderQuestion$340(env, upd); 
+  renderQuestion$337(env, upd);
+  renderQuestion$338(env, upd);
+  renderQuestion$339(env, upd);
+  renderQuestion$340(env, upd);
   renderQuestion$345(env, upd);
 }
 function widget$298(env) {
   var div = document.createElement('div');
-    div.id = 'f1040L37-div';
-    div.appendChild(document.createTextNode('"1040 37. Amount you owe (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L37-widget'; 
+  div.id = 'f1040L37-div';
+  div.appendChild(document.createTextNode('"1040 37. Amount you owe (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L37-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L37']; 
-  elt.disabled = true; 
+  elt.value = env['f1040L37'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$347(env, upd) {
   widget$298(env);
 }
 function updater$204(upd) {
   return function (x) {
-  upd('f1040L38', parseInt(x.target.value));
-};
+    upd('f1040L38', parseInt(x.target.value));
+  };
 }
 function widget$299(env, func) {
   var div = document.createElement('div');
-    div.id = 'f1040L38-div';
-    div.appendChild(document.createTextNode('"1040 38. Estimated tax penalty (USD):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'f1040L38-widget'; 
+  div.id = 'f1040L38-div';
+  div.appendChild(document.createTextNode('"1040 38. Estimated tax penalty (USD):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'f1040L38-widget';
   elt.setAttribute('type', 'number');
-            elt.value = env['f1040L38']; 
-  elt.onchange = func; 
+  elt.value = env['f1040L38'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$348(env, upd) {
   widget$299(env, updater$204(upd));
 }
 function updater$205(upd) {
   return function (x) {
-  upd('payDirectDebit', x.target.checked);
-};
+    upd('payDirectDebit', x.target.checked);
+  };
 }
 function widget$300(env, func) {
   var div = document.createElement('div');
-    div.id = 'payDirectDebit-div';
-    div.appendChild(document.createTextNode('"Pay by direct debit?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'payDirectDebit-widget'; 
+  div.id = 'payDirectDebit-div';
+  div.appendChild(document.createTextNode('"Pay by direct debit?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'payDirectDebit-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['payDirectDebit']; 
-  elt.onchange = func; 
+  elt.checked = env['payDirectDebit'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$349(env, upd) {
   widget$300(env, updater$205(upd));
 }
 function updater$206(upd) {
   return function (x) {
-  upd('payRouting', x.target.value);
-};
+    upd('payRouting', x.target.value);
+  };
 }
 function widget$301(env, func) {
   var div = document.createElement('div');
-    div.id = 'payRouting-div';
-    div.appendChild(document.createTextNode('"Bank routing number for payment:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'payRouting-widget'; 
+  div.id = 'payRouting-div';
+  div.appendChild(document.createTextNode('"Bank routing number for payment:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'payRouting-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['payRouting']; 
-  elt.onchange = func; 
+  elt.value = env['payRouting'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$350(env, upd) {
   widget$301(env, updater$206(upd));
 }
 function updater$207(upd) {
   return function (x) {
-  upd('payAccount', x.target.value);
-};
+    upd('payAccount', x.target.value);
+  };
 }
 function widget$302(env, func) {
   var div = document.createElement('div');
-    div.id = 'payAccount-div';
-    div.appendChild(document.createTextNode('"Bank account number for payment:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'payAccount-widget'; 
+  div.id = 'payAccount-div';
+  div.appendChild(document.createTextNode('"Bank account number for payment:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'payAccount-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['payAccount']; 
-  elt.onchange = func; 
+  elt.value = env['payAccount'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$351(env, upd) {
   widget$302(env, updater$207(upd));
 }
 function renderQuestion$352(env, upd) {
-  renderQuestion$350(env, upd); 
+  renderQuestion$350(env, upd);
   renderQuestion$351(env, upd);
 }
 function renderQuestion$353(env, upd) {
   renderQuestion$352(env, upd);
 }
 function renderQuestion$354(env, upd) {
-  renderQuestion$347(env, upd); 
-  renderQuestion$348(env, upd); 
-  renderQuestion$349(env, upd); 
+  renderQuestion$347(env, upd);
+  renderQuestion$348(env, upd);
+  renderQuestion$349(env, upd);
   renderQuestion$353(env, upd);
 }
 function renderQuestion$355(env, upd) {
   renderQuestion$346(env, upd);
-            renderQuestion$354(env, upd);
+  renderQuestion$354(env, upd);
 }
 function updater$208(upd) {
   return function (x) {
-  upd('thirdParty', x.target.checked);
-};
+    upd('thirdParty', x.target.checked);
+  };
 }
 function widget$303(env, func) {
   var div = document.createElement('div');
-    div.id = 'thirdParty-div';
-    div.appendChild(document.createTextNode('"Allow another person to discuss this return with the IRS?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'thirdParty-widget'; 
+  div.id = 'thirdParty-div';
+  div.appendChild(document.createTextNode('"Allow another person to discuss this return with the IRS?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'thirdParty-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['thirdParty']; 
-  elt.onchange = func; 
+  elt.checked = env['thirdParty'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$356(env, upd) {
   widget$303(env, updater$208(upd));
 }
 function updater$209(upd) {
   return function (x) {
-  upd('designeeName', x.target.value);
-};
+    upd('designeeName', x.target.value);
+  };
 }
 function widget$304(env, func) {
   var div = document.createElement('div');
-    div.id = 'designeeName-div';
-    div.appendChild(document.createTextNode('"Designee name:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'designeeName-widget'; 
+  div.id = 'designeeName-div';
+  div.appendChild(document.createTextNode('"Designee name:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'designeeName-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['designeeName']; 
-  elt.onchange = func; 
+  elt.value = env['designeeName'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$357(env, upd) {
   widget$304(env, updater$209(upd));
 }
 function updater$210(upd) {
   return function (x) {
-  upd('designeePhone', x.target.value);
-};
+    upd('designeePhone', x.target.value);
+  };
 }
 function widget$305(env, func) {
   var div = document.createElement('div');
-    div.id = 'designeePhone-div';
-    div.appendChild(document.createTextNode('"Designee phone:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'designeePhone-widget'; 
+  div.id = 'designeePhone-div';
+  div.appendChild(document.createTextNode('"Designee phone:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'designeePhone-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['designeePhone']; 
-  elt.onchange = func; 
+  elt.value = env['designeePhone'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$358(env, upd) {
   widget$305(env, updater$210(upd));
 }
 function updater$211(upd) {
   return function (x) {
-  upd('designeePin', x.target.value);
-};
+    upd('designeePin', x.target.value);
+  };
 }
 function widget$306(env, func) {
   var div = document.createElement('div');
-    div.id = 'designeePin-div';
-    div.appendChild(document.createTextNode('"Designee personal identification number:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'designeePin-widget'; 
+  div.id = 'designeePin-div';
+  div.appendChild(document.createTextNode('"Designee personal identification number:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'designeePin-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['designeePin']; 
-  elt.onchange = func; 
+  elt.value = env['designeePin'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$359(env, upd) {
   widget$306(env, updater$211(upd));
 }
 function renderQuestion$360(env, upd) {
-  renderQuestion$357(env, upd); 
-  renderQuestion$358(env, upd); 
+  renderQuestion$357(env, upd);
+  renderQuestion$358(env, upd);
   renderQuestion$359(env, upd);
 }
 function renderQuestion$361(env, upd) {
@@ -12447,86 +13408,86 @@ function renderQuestion$361(env, upd) {
 }
 function updater$212(upd) {
   return function (x) {
-  upd('occupation', x.target.value);
-};
+    upd('occupation', x.target.value);
+  };
 }
 function widget$307(env, func) {
   var div = document.createElement('div');
-    div.id = 'occupation-div';
-    div.appendChild(document.createTextNode('"Your occupation:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'occupation-widget'; 
+  div.id = 'occupation-div';
+  div.appendChild(document.createTextNode('"Your occupation:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'occupation-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['occupation']; 
-  elt.onchange = func; 
+  elt.value = env['occupation'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$362(env, upd) {
   widget$307(env, updater$212(upd));
 }
 function updater$213(upd) {
   return function (x) {
-  upd('ipPin', x.target.value);
-};
+    upd('ipPin', x.target.value);
+  };
 }
 function widget$308(env, func) {
   var div = document.createElement('div');
-    div.id = 'ipPin-div';
-    div.appendChild(document.createTextNode('"Identity protection PIN (if issued):"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'ipPin-widget'; 
+  div.id = 'ipPin-div';
+  div.appendChild(document.createTextNode('"Identity protection PIN (if issued):"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'ipPin-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['ipPin']; 
-  elt.onchange = func; 
+  elt.value = env['ipPin'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$363(env, upd) {
   widget$308(env, updater$213(upd));
 }
 function updater$214(upd) {
   return function (x) {
-  upd('spouseOccupation', x.target.value);
-};
+    upd('spouseOccupation', x.target.value);
+  };
 }
 function widget$309(env, func) {
   var div = document.createElement('div');
-    div.id = 'spouseOccupation-div';
-    div.appendChild(document.createTextNode('"Spouse occupation:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'spouseOccupation-widget'; 
+  div.id = 'spouseOccupation-div';
+  div.appendChild(document.createTextNode('"Spouse occupation:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'spouseOccupation-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['spouseOccupation']; 
-  elt.onchange = func; 
+  elt.value = env['spouseOccupation'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$364(env, upd) {
   widget$309(env, updater$214(upd));
 }
 function updater$215(upd) {
   return function (x) {
-  upd('spouseIpPin', x.target.value);
-};
+    upd('spouseIpPin', x.target.value);
+  };
 }
 function widget$310(env, func) {
   var div = document.createElement('div');
-    div.id = 'spouseIpPin-div';
-    div.appendChild(document.createTextNode('"Spouse identity protection PIN:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'spouseIpPin-widget'; 
+  div.id = 'spouseIpPin-div';
+  div.appendChild(document.createTextNode('"Spouse identity protection PIN:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'spouseIpPin-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['spouseIpPin']; 
-  elt.onchange = func; 
+  elt.value = env['spouseIpPin'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$365(env, upd) {
   widget$310(env, updater$215(upd));
 }
 function renderQuestion$366(env, upd) {
-  renderQuestion$364(env, upd); 
+  renderQuestion$364(env, upd);
   renderQuestion$365(env, upd);
 }
 function renderQuestion$367(env, upd) {
@@ -12534,169 +13495,169 @@ function renderQuestion$367(env, upd) {
 }
 function updater$216(upd) {
   return function (x) {
-  upd('phone', x.target.value);
-};
+    upd('phone', x.target.value);
+  };
 }
 function widget$311(env, func) {
   var div = document.createElement('div');
-    div.id = 'phone-div';
-    div.appendChild(document.createTextNode('"Phone number:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'phone-widget'; 
+  div.id = 'phone-div';
+  div.appendChild(document.createTextNode('"Phone number:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'phone-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['phone']; 
-  elt.onchange = func; 
+  elt.value = env['phone'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$368(env, upd) {
   widget$311(env, updater$216(upd));
 }
 function updater$217(upd) {
   return function (x) {
-  upd('email', x.target.value);
-};
+    upd('email', x.target.value);
+  };
 }
 function widget$312(env, func) {
   var div = document.createElement('div');
-    div.id = 'email-div';
-    div.appendChild(document.createTextNode('"Email address:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'email-widget'; 
+  div.id = 'email-div';
+  div.appendChild(document.createTextNode('"Email address:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'email-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['email']; 
-  elt.onchange = func; 
+  elt.value = env['email'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$369(env, upd) {
   widget$312(env, updater$217(upd));
 }
 function updater$218(upd) {
   return function (x) {
-  upd('paidPreparer', x.target.checked);
-};
+    upd('paidPreparer', x.target.checked);
+  };
 }
 function widget$313(env, func) {
   var div = document.createElement('div');
-    div.id = 'paidPreparer-div';
-    div.appendChild(document.createTextNode('"Paid preparer used?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'paidPreparer-widget'; 
+  div.id = 'paidPreparer-div';
+  div.appendChild(document.createTextNode('"Paid preparer used?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'paidPreparer-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['paidPreparer']; 
-  elt.onchange = func; 
+  elt.checked = env['paidPreparer'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$370(env, upd) {
   widget$313(env, updater$218(upd));
 }
 function updater$219(upd) {
   return function (x) {
-  upd('preparerName', x.target.value);
-};
+    upd('preparerName', x.target.value);
+  };
 }
 function widget$314(env, func) {
   var div = document.createElement('div');
-    div.id = 'preparerName-div';
-    div.appendChild(document.createTextNode('"Preparer name:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'preparerName-widget'; 
+  div.id = 'preparerName-div';
+  div.appendChild(document.createTextNode('"Preparer name:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'preparerName-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['preparerName']; 
-  elt.onchange = func; 
+  elt.value = env['preparerName'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$371(env, upd) {
   widget$314(env, updater$219(upd));
 }
 function updater$220(upd) {
   return function (x) {
-  upd('preparerPtin', x.target.value);
-};
+    upd('preparerPtin', x.target.value);
+  };
 }
 function widget$315(env, func) {
   var div = document.createElement('div');
-    div.id = 'preparerPtin-div';
-    div.appendChild(document.createTextNode('"Preparer PTIN:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'preparerPtin-widget'; 
+  div.id = 'preparerPtin-div';
+  div.appendChild(document.createTextNode('"Preparer PTIN:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'preparerPtin-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['preparerPtin']; 
-  elt.onchange = func; 
+  elt.value = env['preparerPtin'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$372(env, upd) {
   widget$315(env, updater$220(upd));
 }
 function updater$221(upd) {
   return function (x) {
-  upd('preparerSelfEmployed', x.target.checked);
-};
+    upd('preparerSelfEmployed', x.target.checked);
+  };
 }
 function widget$316(env, func) {
   var div = document.createElement('div');
-    div.id = 'preparerSelfEmployed-div';
-    div.appendChild(document.createTextNode('"Preparer is self-employed?"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'preparerSelfEmployed-widget'; 
+  div.id = 'preparerSelfEmployed-div';
+  div.appendChild(document.createTextNode('"Preparer is self-employed?"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'preparerSelfEmployed-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['preparerSelfEmployed']; 
-  elt.onchange = func; 
+  elt.checked = env['preparerSelfEmployed'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$373(env, upd) {
   widget$316(env, updater$221(upd));
 }
 function updater$222(upd) {
   return function (x) {
-  upd('firmName', x.target.value);
-};
+    upd('firmName', x.target.value);
+  };
 }
 function widget$317(env, func) {
   var div = document.createElement('div');
-    div.id = 'firmName-div';
-    div.appendChild(document.createTextNode('"Firm name:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'firmName-widget'; 
+  div.id = 'firmName-div';
+  div.appendChild(document.createTextNode('"Firm name:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'firmName-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['firmName']; 
-  elt.onchange = func; 
+  elt.value = env['firmName'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$374(env, upd) {
   widget$317(env, updater$222(upd));
 }
 function updater$223(upd) {
   return function (x) {
-  upd('firmEin', x.target.value);
-};
+    upd('firmEin', x.target.value);
+  };
 }
 function widget$318(env, func) {
   var div = document.createElement('div');
-    div.id = 'firmEin-div';
-    div.appendChild(document.createTextNode('"Firm EIN:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'firmEin-widget'; 
+  div.id = 'firmEin-div';
+  div.appendChild(document.createTextNode('"Firm EIN:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'firmEin-widget';
   elt.setAttribute('type', 'text');
-            elt.value = env['firmEin']; 
-  elt.onchange = func; 
+  elt.value = env['firmEin'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$375(env, upd) {
   widget$318(env, updater$223(upd));
 }
 function renderQuestion$376(env, upd) {
-  renderQuestion$371(env, upd); 
-  renderQuestion$372(env, upd); 
-  renderQuestion$373(env, upd); 
-  renderQuestion$374(env, upd); 
+  renderQuestion$371(env, upd);
+  renderQuestion$372(env, upd);
+  renderQuestion$373(env, upd);
+  renderQuestion$374(env, upd);
   renderQuestion$375(env, upd);
 }
 function renderQuestion$377(env, upd) {
@@ -12704,414 +13665,414 @@ function renderQuestion$377(env, upd) {
 }
 function updater$224(upd) {
   return function (x) {
-  upd('declaration', x.target.checked);
-};
+    upd('declaration', x.target.checked);
+  };
 }
 function widget$319(env, func) {
   var div = document.createElement('div');
-    div.id = 'declaration-div';
-    div.appendChild(document.createTextNode('"Under penalties of perjury, I declare this return is true, correct and complete:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'declaration-widget'; 
+  div.id = 'declaration-div';
+  div.appendChild(document.createTextNode('"Under penalties of perjury, I declare this return is true, correct and complete:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'declaration-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['declaration']; 
-  elt.onchange = func; 
+  elt.checked = env['declaration'];
+  elt.onchange = func;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$378(env, upd) {
   widget$319(env, updater$224(upd));
 }
 function widget$320(env) {
   var div = document.createElement('div');
-    div.id = 'readyToFile-div';
-    div.appendChild(document.createTextNode('"Ready to file:"'.slice(1, -1)));
-    var elt = document.createElement('input'); 
-    elt.id = 'readyToFile-widget'; 
+  div.id = 'readyToFile-div';
+  div.appendChild(document.createTextNode('"Ready to file:"'.slice(1, -1)));
+  var elt = document.createElement('input');
+  elt.id = 'readyToFile-widget';
   elt.setAttribute('type', 'checkbox');
-            elt.checked = env['readyToFile']; 
-  elt.disabled = true; 
+  elt.checked = env['readyToFile'];
+  elt.disabled = true;
   div.appendChild(elt);
-    document.body.appendChild(div);
+  document.body.appendChild(div);
 }
 function renderQuestion$379(env, upd) {
   widget$320(env);
 }
 function render$0(env, upd) {
   renderQuestion$0(env, upd);
-renderQuestion$1(env, upd);
-renderQuestion$2(env, upd);
-renderQuestion$3(env, upd);
-renderQuestion$4(env, upd);
-renderQuestion$5(env, upd);
-renderQuestion$6(env, upd);
-renderQuestion$7(env, upd);
-renderQuestion$8(env, upd);
-renderQuestion$9(env, upd);
-renderQuestion$10(env, upd);
-renderQuestion$11(env, upd);
-renderQuestion$12(env, upd);
-renderQuestion$13(env, upd);
-renderQuestion$14(env, upd);
-renderQuestion$22(env, upd);
-renderQuestion$25(env, upd);
-renderQuestion$26(env, upd);
-renderQuestion$27(env, upd);
-renderQuestion$36(env, upd);
-renderQuestion$45(env, upd);
-renderQuestion$54(env, upd);
-renderQuestion$63(env, upd);
-renderQuestion$64(env, upd);
-renderQuestion$71(env, upd);
-renderQuestion$78(env, upd);
-renderQuestion$85(env, upd);
-renderQuestion$86(env, upd);
-renderQuestion$87(env, upd);
-renderQuestion$88(env, upd);
-renderQuestion$89(env, upd);
-renderQuestion$90(env, upd);
-renderQuestion$91(env, upd);
-renderQuestion$92(env, upd);
-renderQuestion$93(env, upd);
-renderQuestion$94(env, upd);
-renderQuestion$95(env, upd);
-renderQuestion$96(env, upd);
-renderQuestion$97(env, upd);
-renderQuestion$98(env, upd);
-renderQuestion$99(env, upd);
-renderQuestion$100(env, upd);
-renderQuestion$101(env, upd);
-renderQuestion$102(env, upd);
-renderQuestion$103(env, upd);
-renderQuestion$111(env, upd);
-renderQuestion$112(env, upd);
-renderQuestion$165(env, upd);
-renderQuestion$166(env, upd);
-renderQuestion$178(env, upd);
-renderQuestion$179(env, upd);
-renderQuestion$180(env, upd);
-renderQuestion$181(env, upd);
-renderQuestion$182(env, upd);
-renderQuestion$183(env, upd);
-renderQuestion$184(env, upd);
-renderQuestion$185(env, upd);
-renderQuestion$186(env, upd);
-renderQuestion$187(env, upd);
-renderQuestion$188(env, upd);
-renderQuestion$189(env, upd);
-renderQuestion$190(env, upd);
-renderQuestion$191(env, upd);
-renderQuestion$194(env, upd);
-renderQuestion$195(env, upd);
-renderQuestion$196(env, upd);
-renderQuestion$197(env, upd);
-renderQuestion$198(env, upd);
-renderQuestion$199(env, upd);
-renderQuestion$200(env, upd);
-renderQuestion$201(env, upd);
-renderQuestion$202(env, upd);
-renderQuestion$203(env, upd);
-renderQuestion$204(env, upd);
-renderQuestion$205(env, upd);
-renderQuestion$208(env, upd);
-renderQuestion$209(env, upd);
-renderQuestion$210(env, upd);
-renderQuestion$211(env, upd);
-renderQuestion$212(env, upd);
-renderQuestion$213(env, upd);
-renderQuestion$214(env, upd);
-renderQuestion$215(env, upd);
-renderQuestion$216(env, upd);
-renderQuestion$217(env, upd);
-renderQuestion$218(env, upd);
-renderQuestion$219(env, upd);
-renderQuestion$220(env, upd);
-renderQuestion$221(env, upd);
-renderQuestion$222(env, upd);
-renderQuestion$223(env, upd);
-renderQuestion$224(env, upd);
-renderQuestion$225(env, upd);
-renderQuestion$226(env, upd);
-renderQuestion$227(env, upd);
-renderQuestion$228(env, upd);
-renderQuestion$229(env, upd);
-renderQuestion$230(env, upd);
-renderQuestion$231(env, upd);
-renderQuestion$234(env, upd);
-renderQuestion$235(env, upd);
-renderQuestion$236(env, upd);
-renderQuestion$237(env, upd);
-renderQuestion$238(env, upd);
-renderQuestion$239(env, upd);
-renderQuestion$240(env, upd);
-renderQuestion$241(env, upd);
-renderQuestion$265(env, upd);
-renderQuestion$266(env, upd);
-renderQuestion$267(env, upd);
-renderQuestion$268(env, upd);
-renderQuestion$269(env, upd);
-renderQuestion$270(env, upd);
-renderQuestion$271(env, upd);
-renderQuestion$272(env, upd);
-renderQuestion$273(env, upd);
-renderQuestion$274(env, upd);
-renderQuestion$275(env, upd);
-renderQuestion$276(env, upd);
-renderQuestion$277(env, upd);
-renderQuestion$278(env, upd);
-renderQuestion$279(env, upd);
-renderQuestion$280(env, upd);
-renderQuestion$281(env, upd);
-renderQuestion$282(env, upd);
-renderQuestion$283(env, upd);
-renderQuestion$284(env, upd);
-renderQuestion$285(env, upd);
-renderQuestion$286(env, upd);
-renderQuestion$287(env, upd);
-renderQuestion$288(env, upd);
-renderQuestion$289(env, upd);
-renderQuestion$290(env, upd);
-renderQuestion$291(env, upd);
-renderQuestion$292(env, upd);
-renderQuestion$293(env, upd);
-renderQuestion$299(env, upd);
-renderQuestion$300(env, upd);
-renderQuestion$301(env, upd);
-renderQuestion$302(env, upd);
-renderQuestion$303(env, upd);
-renderQuestion$304(env, upd);
-renderQuestion$305(env, upd);
-renderQuestion$306(env, upd);
-renderQuestion$307(env, upd);
-renderQuestion$308(env, upd);
-renderQuestion$309(env, upd);
-renderQuestion$310(env, upd);
-renderQuestion$311(env, upd);
-renderQuestion$312(env, upd);
-renderQuestion$313(env, upd);
-renderQuestion$314(env, upd);
-renderQuestion$315(env, upd);
-renderQuestion$316(env, upd);
-renderQuestion$317(env, upd);
-renderQuestion$318(env, upd);
-renderQuestion$319(env, upd);
-renderQuestion$320(env, upd);
-renderQuestion$321(env, upd);
-renderQuestion$322(env, upd);
-renderQuestion$323(env, upd);
-renderQuestion$326(env, upd);
-renderQuestion$327(env, upd);
-renderQuestion$328(env, upd);
-renderQuestion$329(env, upd);
-renderQuestion$330(env, upd);
-renderQuestion$331(env, upd);
-renderQuestion$332(env, upd);
-renderQuestion$333(env, upd);
-renderQuestion$334(env, upd);
-renderQuestion$335(env, upd);
-renderQuestion$336(env, upd);
-renderQuestion$355(env, upd);
-renderQuestion$356(env, upd);
-renderQuestion$361(env, upd);
-renderQuestion$362(env, upd);
-renderQuestion$363(env, upd);
-renderQuestion$367(env, upd);
-renderQuestion$368(env, upd);
-renderQuestion$369(env, upd);
-renderQuestion$370(env, upd);
-renderQuestion$377(env, upd);
-renderQuestion$378(env, upd);
-renderQuestion$379(env, upd);
+  renderQuestion$1(env, upd);
+  renderQuestion$2(env, upd);
+  renderQuestion$3(env, upd);
+  renderQuestion$4(env, upd);
+  renderQuestion$5(env, upd);
+  renderQuestion$6(env, upd);
+  renderQuestion$7(env, upd);
+  renderQuestion$8(env, upd);
+  renderQuestion$9(env, upd);
+  renderQuestion$10(env, upd);
+  renderQuestion$11(env, upd);
+  renderQuestion$12(env, upd);
+  renderQuestion$13(env, upd);
+  renderQuestion$14(env, upd);
+  renderQuestion$22(env, upd);
+  renderQuestion$25(env, upd);
+  renderQuestion$26(env, upd);
+  renderQuestion$27(env, upd);
+  renderQuestion$36(env, upd);
+  renderQuestion$45(env, upd);
+  renderQuestion$54(env, upd);
+  renderQuestion$63(env, upd);
+  renderQuestion$64(env, upd);
+  renderQuestion$71(env, upd);
+  renderQuestion$78(env, upd);
+  renderQuestion$85(env, upd);
+  renderQuestion$86(env, upd);
+  renderQuestion$87(env, upd);
+  renderQuestion$88(env, upd);
+  renderQuestion$89(env, upd);
+  renderQuestion$90(env, upd);
+  renderQuestion$91(env, upd);
+  renderQuestion$92(env, upd);
+  renderQuestion$93(env, upd);
+  renderQuestion$94(env, upd);
+  renderQuestion$95(env, upd);
+  renderQuestion$96(env, upd);
+  renderQuestion$97(env, upd);
+  renderQuestion$98(env, upd);
+  renderQuestion$99(env, upd);
+  renderQuestion$100(env, upd);
+  renderQuestion$101(env, upd);
+  renderQuestion$102(env, upd);
+  renderQuestion$103(env, upd);
+  renderQuestion$111(env, upd);
+  renderQuestion$112(env, upd);
+  renderQuestion$165(env, upd);
+  renderQuestion$166(env, upd);
+  renderQuestion$178(env, upd);
+  renderQuestion$179(env, upd);
+  renderQuestion$180(env, upd);
+  renderQuestion$181(env, upd);
+  renderQuestion$182(env, upd);
+  renderQuestion$183(env, upd);
+  renderQuestion$184(env, upd);
+  renderQuestion$185(env, upd);
+  renderQuestion$186(env, upd);
+  renderQuestion$187(env, upd);
+  renderQuestion$188(env, upd);
+  renderQuestion$189(env, upd);
+  renderQuestion$190(env, upd);
+  renderQuestion$191(env, upd);
+  renderQuestion$194(env, upd);
+  renderQuestion$195(env, upd);
+  renderQuestion$196(env, upd);
+  renderQuestion$197(env, upd);
+  renderQuestion$198(env, upd);
+  renderQuestion$199(env, upd);
+  renderQuestion$200(env, upd);
+  renderQuestion$201(env, upd);
+  renderQuestion$202(env, upd);
+  renderQuestion$203(env, upd);
+  renderQuestion$204(env, upd);
+  renderQuestion$205(env, upd);
+  renderQuestion$208(env, upd);
+  renderQuestion$209(env, upd);
+  renderQuestion$210(env, upd);
+  renderQuestion$211(env, upd);
+  renderQuestion$212(env, upd);
+  renderQuestion$213(env, upd);
+  renderQuestion$214(env, upd);
+  renderQuestion$215(env, upd);
+  renderQuestion$216(env, upd);
+  renderQuestion$217(env, upd);
+  renderQuestion$218(env, upd);
+  renderQuestion$219(env, upd);
+  renderQuestion$220(env, upd);
+  renderQuestion$221(env, upd);
+  renderQuestion$222(env, upd);
+  renderQuestion$223(env, upd);
+  renderQuestion$224(env, upd);
+  renderQuestion$225(env, upd);
+  renderQuestion$226(env, upd);
+  renderQuestion$227(env, upd);
+  renderQuestion$228(env, upd);
+  renderQuestion$229(env, upd);
+  renderQuestion$230(env, upd);
+  renderQuestion$231(env, upd);
+  renderQuestion$234(env, upd);
+  renderQuestion$235(env, upd);
+  renderQuestion$236(env, upd);
+  renderQuestion$237(env, upd);
+  renderQuestion$238(env, upd);
+  renderQuestion$239(env, upd);
+  renderQuestion$240(env, upd);
+  renderQuestion$241(env, upd);
+  renderQuestion$265(env, upd);
+  renderQuestion$266(env, upd);
+  renderQuestion$267(env, upd);
+  renderQuestion$268(env, upd);
+  renderQuestion$269(env, upd);
+  renderQuestion$270(env, upd);
+  renderQuestion$271(env, upd);
+  renderQuestion$272(env, upd);
+  renderQuestion$273(env, upd);
+  renderQuestion$274(env, upd);
+  renderQuestion$275(env, upd);
+  renderQuestion$276(env, upd);
+  renderQuestion$277(env, upd);
+  renderQuestion$278(env, upd);
+  renderQuestion$279(env, upd);
+  renderQuestion$280(env, upd);
+  renderQuestion$281(env, upd);
+  renderQuestion$282(env, upd);
+  renderQuestion$283(env, upd);
+  renderQuestion$284(env, upd);
+  renderQuestion$285(env, upd);
+  renderQuestion$286(env, upd);
+  renderQuestion$287(env, upd);
+  renderQuestion$288(env, upd);
+  renderQuestion$289(env, upd);
+  renderQuestion$290(env, upd);
+  renderQuestion$291(env, upd);
+  renderQuestion$292(env, upd);
+  renderQuestion$293(env, upd);
+  renderQuestion$299(env, upd);
+  renderQuestion$300(env, upd);
+  renderQuestion$301(env, upd);
+  renderQuestion$302(env, upd);
+  renderQuestion$303(env, upd);
+  renderQuestion$304(env, upd);
+  renderQuestion$305(env, upd);
+  renderQuestion$306(env, upd);
+  renderQuestion$307(env, upd);
+  renderQuestion$308(env, upd);
+  renderQuestion$309(env, upd);
+  renderQuestion$310(env, upd);
+  renderQuestion$311(env, upd);
+  renderQuestion$312(env, upd);
+  renderQuestion$313(env, upd);
+  renderQuestion$314(env, upd);
+  renderQuestion$315(env, upd);
+  renderQuestion$316(env, upd);
+  renderQuestion$317(env, upd);
+  renderQuestion$318(env, upd);
+  renderQuestion$319(env, upd);
+  renderQuestion$320(env, upd);
+  renderQuestion$321(env, upd);
+  renderQuestion$322(env, upd);
+  renderQuestion$323(env, upd);
+  renderQuestion$326(env, upd);
+  renderQuestion$327(env, upd);
+  renderQuestion$328(env, upd);
+  renderQuestion$329(env, upd);
+  renderQuestion$330(env, upd);
+  renderQuestion$331(env, upd);
+  renderQuestion$332(env, upd);
+  renderQuestion$333(env, upd);
+  renderQuestion$334(env, upd);
+  renderQuestion$335(env, upd);
+  renderQuestion$336(env, upd);
+  renderQuestion$355(env, upd);
+  renderQuestion$356(env, upd);
+  renderQuestion$361(env, upd);
+  renderQuestion$362(env, upd);
+  renderQuestion$363(env, upd);
+  renderQuestion$367(env, upd);
+  renderQuestion$368(env, upd);
+  renderQuestion$369(env, upd);
+  renderQuestion$370(env, upd);
+  renderQuestion$377(env, upd);
+  renderQuestion$378(env, upd);
+  renderQuestion$379(env, upd);
 }
 function run$0() {
   var env = {};
-    initialize$0(env);
+  initialize$0(env);
 
-    var update = compute$0(env);
-    render$0(env, update);
-    var vis = true; 
-  updateVisibility$0(vis, env); 
-  updateVisibility$1(vis, env); 
-  updateVisibility$2(vis, env); 
-  updateVisibility$3(vis, env); 
-  updateVisibility$4(vis, env); 
-  updateVisibility$5(vis, env); 
-  updateVisibility$6(vis, env); 
-  updateVisibility$7(vis, env); 
-  updateVisibility$8(vis, env); 
-  updateVisibility$9(vis, env); 
-  updateVisibility$10(vis, env); 
-  updateVisibility$11(vis, env); 
-  updateVisibility$12(vis, env); 
-  updateVisibility$13(vis, env); 
-  updateVisibility$14(vis, env); 
-  updateVisibility$22(vis, env); 
-  updateVisibility$25(vis, env); 
-  updateVisibility$26(vis, env); 
-  updateVisibility$27(vis, env); 
-  updateVisibility$36(vis, env); 
-  updateVisibility$45(vis, env); 
-  updateVisibility$54(vis, env); 
-  updateVisibility$63(vis, env); 
-  updateVisibility$64(vis, env); 
-  updateVisibility$71(vis, env); 
-  updateVisibility$78(vis, env); 
-  updateVisibility$85(vis, env); 
-  updateVisibility$86(vis, env); 
-  updateVisibility$87(vis, env); 
-  updateVisibility$88(vis, env); 
-  updateVisibility$89(vis, env); 
-  updateVisibility$90(vis, env); 
-  updateVisibility$91(vis, env); 
-  updateVisibility$92(vis, env); 
-  updateVisibility$93(vis, env); 
-  updateVisibility$94(vis, env); 
-  updateVisibility$95(vis, env); 
-  updateVisibility$96(vis, env); 
-  updateVisibility$97(vis, env); 
-  updateVisibility$98(vis, env); 
-  updateVisibility$99(vis, env); 
-  updateVisibility$100(vis, env); 
-  updateVisibility$101(vis, env); 
-  updateVisibility$102(vis, env); 
-  updateVisibility$103(vis, env); 
-  updateVisibility$111(vis, env); 
-  updateVisibility$112(vis, env); 
-  updateVisibility$165(vis, env); 
-  updateVisibility$166(vis, env); 
-  updateVisibility$178(vis, env); 
-  updateVisibility$179(vis, env); 
-  updateVisibility$180(vis, env); 
-  updateVisibility$181(vis, env); 
-  updateVisibility$182(vis, env); 
-  updateVisibility$183(vis, env); 
-  updateVisibility$184(vis, env); 
-  updateVisibility$185(vis, env); 
-  updateVisibility$186(vis, env); 
-  updateVisibility$187(vis, env); 
-  updateVisibility$188(vis, env); 
-  updateVisibility$189(vis, env); 
-  updateVisibility$190(vis, env); 
-  updateVisibility$191(vis, env); 
-  updateVisibility$194(vis, env); 
-  updateVisibility$195(vis, env); 
-  updateVisibility$196(vis, env); 
-  updateVisibility$197(vis, env); 
-  updateVisibility$198(vis, env); 
-  updateVisibility$199(vis, env); 
-  updateVisibility$200(vis, env); 
-  updateVisibility$201(vis, env); 
-  updateVisibility$202(vis, env); 
-  updateVisibility$203(vis, env); 
-  updateVisibility$204(vis, env); 
-  updateVisibility$205(vis, env); 
-  updateVisibility$208(vis, env); 
-  updateVisibility$209(vis, env); 
-  updateVisibility$210(vis, env); 
-  updateVisibility$211(vis, env); 
-  updateVisibility$212(vis, env); 
-  updateVisibility$213(vis, env); 
-  updateVisibility$214(vis, env); 
-  updateVisibility$215(vis, env); 
-  updateVisibility$216(vis, env); 
-  updateVisibility$217(vis, env); 
-  updateVisibility$218(vis, env); 
-  updateVisibility$219(vis, env); 
-  updateVisibility$220(vis, env); 
-  updateVisibility$221(vis, env); 
-  updateVisibility$222(vis, env); 
-  updateVisibility$223(vis, env); 
-  updateVisibility$224(vis, env); 
-  updateVisibility$225(vis, env); 
-  updateVisibility$226(vis, env); 
-  updateVisibility$227(vis, env); 
-  updateVisibility$228(vis, env); 
-  updateVisibility$229(vis, env); 
-  updateVisibility$230(vis, env); 
-  updateVisibility$231(vis, env); 
-  updateVisibility$234(vis, env); 
-  updateVisibility$235(vis, env); 
-  updateVisibility$236(vis, env); 
-  updateVisibility$237(vis, env); 
-  updateVisibility$238(vis, env); 
-  updateVisibility$239(vis, env); 
-  updateVisibility$240(vis, env); 
-  updateVisibility$241(vis, env); 
-  updateVisibility$265(vis, env); 
-  updateVisibility$266(vis, env); 
-  updateVisibility$267(vis, env); 
-  updateVisibility$268(vis, env); 
-  updateVisibility$269(vis, env); 
-  updateVisibility$270(vis, env); 
-  updateVisibility$271(vis, env); 
-  updateVisibility$272(vis, env); 
-  updateVisibility$273(vis, env); 
-  updateVisibility$274(vis, env); 
-  updateVisibility$275(vis, env); 
-  updateVisibility$276(vis, env); 
-  updateVisibility$277(vis, env); 
-  updateVisibility$278(vis, env); 
-  updateVisibility$279(vis, env); 
-  updateVisibility$280(vis, env); 
-  updateVisibility$281(vis, env); 
-  updateVisibility$282(vis, env); 
-  updateVisibility$283(vis, env); 
-  updateVisibility$284(vis, env); 
-  updateVisibility$285(vis, env); 
-  updateVisibility$286(vis, env); 
-  updateVisibility$287(vis, env); 
-  updateVisibility$288(vis, env); 
-  updateVisibility$289(vis, env); 
-  updateVisibility$290(vis, env); 
-  updateVisibility$291(vis, env); 
-  updateVisibility$292(vis, env); 
-  updateVisibility$293(vis, env); 
-  updateVisibility$299(vis, env); 
-  updateVisibility$300(vis, env); 
-  updateVisibility$301(vis, env); 
-  updateVisibility$302(vis, env); 
-  updateVisibility$303(vis, env); 
-  updateVisibility$304(vis, env); 
-  updateVisibility$305(vis, env); 
-  updateVisibility$306(vis, env); 
-  updateVisibility$307(vis, env); 
-  updateVisibility$308(vis, env); 
-  updateVisibility$309(vis, env); 
-  updateVisibility$310(vis, env); 
-  updateVisibility$311(vis, env); 
-  updateVisibility$312(vis, env); 
-  updateVisibility$313(vis, env); 
-  updateVisibility$314(vis, env); 
-  updateVisibility$315(vis, env); 
-  updateVisibility$316(vis, env); 
-  updateVisibility$317(vis, env); 
-  updateVisibility$318(vis, env); 
-  updateVisibility$319(vis, env); 
-  updateVisibility$320(vis, env); 
-  updateVisibility$321(vis, env); 
-  updateVisibility$322(vis, env); 
-  updateVisibility$323(vis, env); 
-  updateVisibility$326(vis, env); 
-  updateVisibility$327(vis, env); 
-  updateVisibility$328(vis, env); 
-  updateVisibility$329(vis, env); 
-  updateVisibility$330(vis, env); 
-  updateVisibility$331(vis, env); 
-  updateVisibility$332(vis, env); 
-  updateVisibility$333(vis, env); 
-  updateVisibility$334(vis, env); 
-  updateVisibility$335(vis, env); 
-  updateVisibility$336(vis, env); 
-  updateVisibility$355(vis, env); 
-  updateVisibility$356(vis, env); 
-  updateVisibility$361(vis, env); 
-  updateVisibility$362(vis, env); 
-  updateVisibility$363(vis, env); 
-  updateVisibility$367(vis, env); 
-  updateVisibility$368(vis, env); 
-  updateVisibility$369(vis, env); 
-  updateVisibility$370(vis, env); 
-  updateVisibility$377(vis, env); 
-  updateVisibility$378(vis, env); 
+  var update = compute$0(env);
+  render$0(env, update);
+  var vis = true;
+  updateVisibility$0(vis, env);
+  updateVisibility$1(vis, env);
+  updateVisibility$2(vis, env);
+  updateVisibility$3(vis, env);
+  updateVisibility$4(vis, env);
+  updateVisibility$5(vis, env);
+  updateVisibility$6(vis, env);
+  updateVisibility$7(vis, env);
+  updateVisibility$8(vis, env);
+  updateVisibility$9(vis, env);
+  updateVisibility$10(vis, env);
+  updateVisibility$11(vis, env);
+  updateVisibility$12(vis, env);
+  updateVisibility$13(vis, env);
+  updateVisibility$14(vis, env);
+  updateVisibility$22(vis, env);
+  updateVisibility$25(vis, env);
+  updateVisibility$26(vis, env);
+  updateVisibility$27(vis, env);
+  updateVisibility$36(vis, env);
+  updateVisibility$45(vis, env);
+  updateVisibility$54(vis, env);
+  updateVisibility$63(vis, env);
+  updateVisibility$64(vis, env);
+  updateVisibility$71(vis, env);
+  updateVisibility$78(vis, env);
+  updateVisibility$85(vis, env);
+  updateVisibility$86(vis, env);
+  updateVisibility$87(vis, env);
+  updateVisibility$88(vis, env);
+  updateVisibility$89(vis, env);
+  updateVisibility$90(vis, env);
+  updateVisibility$91(vis, env);
+  updateVisibility$92(vis, env);
+  updateVisibility$93(vis, env);
+  updateVisibility$94(vis, env);
+  updateVisibility$95(vis, env);
+  updateVisibility$96(vis, env);
+  updateVisibility$97(vis, env);
+  updateVisibility$98(vis, env);
+  updateVisibility$99(vis, env);
+  updateVisibility$100(vis, env);
+  updateVisibility$101(vis, env);
+  updateVisibility$102(vis, env);
+  updateVisibility$103(vis, env);
+  updateVisibility$111(vis, env);
+  updateVisibility$112(vis, env);
+  updateVisibility$165(vis, env);
+  updateVisibility$166(vis, env);
+  updateVisibility$178(vis, env);
+  updateVisibility$179(vis, env);
+  updateVisibility$180(vis, env);
+  updateVisibility$181(vis, env);
+  updateVisibility$182(vis, env);
+  updateVisibility$183(vis, env);
+  updateVisibility$184(vis, env);
+  updateVisibility$185(vis, env);
+  updateVisibility$186(vis, env);
+  updateVisibility$187(vis, env);
+  updateVisibility$188(vis, env);
+  updateVisibility$189(vis, env);
+  updateVisibility$190(vis, env);
+  updateVisibility$191(vis, env);
+  updateVisibility$194(vis, env);
+  updateVisibility$195(vis, env);
+  updateVisibility$196(vis, env);
+  updateVisibility$197(vis, env);
+  updateVisibility$198(vis, env);
+  updateVisibility$199(vis, env);
+  updateVisibility$200(vis, env);
+  updateVisibility$201(vis, env);
+  updateVisibility$202(vis, env);
+  updateVisibility$203(vis, env);
+  updateVisibility$204(vis, env);
+  updateVisibility$205(vis, env);
+  updateVisibility$208(vis, env);
+  updateVisibility$209(vis, env);
+  updateVisibility$210(vis, env);
+  updateVisibility$211(vis, env);
+  updateVisibility$212(vis, env);
+  updateVisibility$213(vis, env);
+  updateVisibility$214(vis, env);
+  updateVisibility$215(vis, env);
+  updateVisibility$216(vis, env);
+  updateVisibility$217(vis, env);
+  updateVisibility$218(vis, env);
+  updateVisibility$219(vis, env);
+  updateVisibility$220(vis, env);
+  updateVisibility$221(vis, env);
+  updateVisibility$222(vis, env);
+  updateVisibility$223(vis, env);
+  updateVisibility$224(vis, env);
+  updateVisibility$225(vis, env);
+  updateVisibility$226(vis, env);
+  updateVisibility$227(vis, env);
+  updateVisibility$228(vis, env);
+  updateVisibility$229(vis, env);
+  updateVisibility$230(vis, env);
+  updateVisibility$231(vis, env);
+  updateVisibility$234(vis, env);
+  updateVisibility$235(vis, env);
+  updateVisibility$236(vis, env);
+  updateVisibility$237(vis, env);
+  updateVisibility$238(vis, env);
+  updateVisibility$239(vis, env);
+  updateVisibility$240(vis, env);
+  updateVisibility$241(vis, env);
+  updateVisibility$265(vis, env);
+  updateVisibility$266(vis, env);
+  updateVisibility$267(vis, env);
+  updateVisibility$268(vis, env);
+  updateVisibility$269(vis, env);
+  updateVisibility$270(vis, env);
+  updateVisibility$271(vis, env);
+  updateVisibility$272(vis, env);
+  updateVisibility$273(vis, env);
+  updateVisibility$274(vis, env);
+  updateVisibility$275(vis, env);
+  updateVisibility$276(vis, env);
+  updateVisibility$277(vis, env);
+  updateVisibility$278(vis, env);
+  updateVisibility$279(vis, env);
+  updateVisibility$280(vis, env);
+  updateVisibility$281(vis, env);
+  updateVisibility$282(vis, env);
+  updateVisibility$283(vis, env);
+  updateVisibility$284(vis, env);
+  updateVisibility$285(vis, env);
+  updateVisibility$286(vis, env);
+  updateVisibility$287(vis, env);
+  updateVisibility$288(vis, env);
+  updateVisibility$289(vis, env);
+  updateVisibility$290(vis, env);
+  updateVisibility$291(vis, env);
+  updateVisibility$292(vis, env);
+  updateVisibility$293(vis, env);
+  updateVisibility$299(vis, env);
+  updateVisibility$300(vis, env);
+  updateVisibility$301(vis, env);
+  updateVisibility$302(vis, env);
+  updateVisibility$303(vis, env);
+  updateVisibility$304(vis, env);
+  updateVisibility$305(vis, env);
+  updateVisibility$306(vis, env);
+  updateVisibility$307(vis, env);
+  updateVisibility$308(vis, env);
+  updateVisibility$309(vis, env);
+  updateVisibility$310(vis, env);
+  updateVisibility$311(vis, env);
+  updateVisibility$312(vis, env);
+  updateVisibility$313(vis, env);
+  updateVisibility$314(vis, env);
+  updateVisibility$315(vis, env);
+  updateVisibility$316(vis, env);
+  updateVisibility$317(vis, env);
+  updateVisibility$318(vis, env);
+  updateVisibility$319(vis, env);
+  updateVisibility$320(vis, env);
+  updateVisibility$321(vis, env);
+  updateVisibility$322(vis, env);
+  updateVisibility$323(vis, env);
+  updateVisibility$326(vis, env);
+  updateVisibility$327(vis, env);
+  updateVisibility$328(vis, env);
+  updateVisibility$329(vis, env);
+  updateVisibility$330(vis, env);
+  updateVisibility$331(vis, env);
+  updateVisibility$332(vis, env);
+  updateVisibility$333(vis, env);
+  updateVisibility$334(vis, env);
+  updateVisibility$335(vis, env);
+  updateVisibility$336(vis, env);
+  updateVisibility$355(vis, env);
+  updateVisibility$356(vis, env);
+  updateVisibility$361(vis, env);
+  updateVisibility$362(vis, env);
+  updateVisibility$363(vis, env);
+  updateVisibility$367(vis, env);
+  updateVisibility$368(vis, env);
+  updateVisibility$369(vis, env);
+  updateVisibility$370(vis, env);
+  updateVisibility$377(vis, env);
+  updateVisibility$378(vis, env);
   updateVisibility$379(vis, env);
 }

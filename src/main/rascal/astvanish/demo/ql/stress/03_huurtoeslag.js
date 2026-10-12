@@ -829,41 +829,68 @@ else
    return computeQuestion$30(env);
 }
 }
-function updateVisibility$0(vis, env) {
+function toggleVisibility$0(vis) {
   var elt = document.getElementById('bsn-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$0(vis, env) {
+  toggleVisibility$0(vis);
+}
+function toggleVisibility$1(vis) {
+  var elt = document.getElementById('age-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$1(vis, env) {
-  var elt = document.getElementById('age-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$1(vis);
+}
+function toggleVisibility$2(vis) {
+  var elt = document.getElementById('legalResidence-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$2(vis, env) {
-  var elt = document.getElementById('legalResidence-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$2(vis);
+}
+function toggleVisibility$3(vis) {
+  var elt = document.getElementById('registeredAtAddress-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$3(vis, env) {
-  var elt = document.getElementById('registeredAtAddress-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$3(vis);
+}
+function toggleVisibility$4(vis) {
+  var elt = document.getElementById('hasPartner-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$4(vis, env) {
-  var elt = document.getElementById('hasPartner-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$4(vis);
+}
+function toggleVisibility$5(vis) {
+  var elt = document.getElementById('partnerBsn-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$5(vis, env) {
-  var elt = document.getElementById('partnerBsn-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$5(vis);
+}
+function toggleVisibility$6(vis) {
+  var elt = document.getElementById('partnerAge-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$6(vis, env) {
-  var elt = document.getElementById('partnerAge-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$6(vis);
+}
+function toggleVisibility$7(vis) {
+  var elt = document.getElementById('partnerIncome-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$7(vis, env) {
-  var elt = document.getElementById('partnerIncome-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$7(vis);
+}
+function toggleVisibility$8(vis) {
+  var elt = document.getElementById('partnerAssets-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$8(vis, env) {
-  var elt = document.getElementById('partnerAssets-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$8(vis);
 }
 function updateVisibility$9(vis, env) {
   updateVisibility$5(vis, env); 
@@ -874,21 +901,33 @@ function updateVisibility$9(vis, env) {
 function updateVisibility$10(vis, env) {
   updateVisibility$9(eve$0(env), env);
 }
-function updateVisibility$11(vis, env) {
+function toggleVisibility$9(vis) {
   var elt = document.getElementById('nChildren-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$11(vis, env) {
+  toggleVisibility$9(vis);
+}
+function toggleVisibility$10(vis) {
+  var elt = document.getElementById('nCoResidents-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$12(vis, env) {
-  var elt = document.getElementById('nCoResidents-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$10(vis);
+}
+function toggleVisibility$11(vis) {
+  var elt = document.getElementById('coResidentIncome-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$13(vis, env) {
-  var elt = document.getElementById('coResidentIncome-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$11(vis);
+}
+function toggleVisibility$12(vis) {
+  var elt = document.getElementById('coResidentsYoung-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$14(vis, env) {
-  var elt = document.getElementById('coResidentsYoung-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$12(vis);
 }
 function updateVisibility$15(vis, env) {
   updateVisibility$13(vis, env); 
@@ -897,13 +936,19 @@ function updateVisibility$15(vis, env) {
 function updateVisibility$16(vis, env) {
   updateVisibility$15(eve$3(env), env);
 }
-function updateVisibility$17(vis, env) {
+function toggleVisibility$13(vis) {
   var elt = document.getElementById('selfContained-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$17(vis, env) {
+  toggleVisibility$13(vis);
+}
+function toggleVisibility$14(vis) {
+  var elt = document.getElementById('recognisedRoom-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$18(vis, env) {
-  var elt = document.getElementById('recognisedRoom-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$14(vis);
 }
 function updateVisibility$19(vis, env) {
   updateVisibility$18(vis, env);
@@ -911,57 +956,96 @@ function updateVisibility$19(vis, env) {
 function updateVisibility$20(vis, env) {
   updateVisibility$19(eve$5(env), env);
 }
-function updateVisibility$21(vis, env) {
+function toggleVisibility$15(vis) {
   var elt = document.getElementById('corporationLandlord-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$21(vis, env) {
+  toggleVisibility$15(vis);
+}
+function toggleVisibility$16(vis) {
+  var elt = document.getElementById('bareRent-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$22(vis, env) {
-  var elt = document.getElementById('bareRent-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$16(vis);
+}
+function toggleVisibility$17(vis) {
+  var elt = document.getElementById('hasServiceCosts-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$23(vis, env) {
-  var elt = document.getElementById('hasServiceCosts-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$17(vis);
+}
+function toggleVisibility$18(vis) {
+  var elt = document.getElementById('svcEnergy-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$24(vis, env) {
-  var elt = document.getElementById('svcEnergy-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$18(vis);
+}
+function toggleVisibility$19(vis) {
+  var elt = document.getElementById('svcCleaning-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$25(vis, env) {
-  var elt = document.getElementById('svcCleaning-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$19(vis);
+}
+function toggleVisibility$20(vis) {
+  var elt = document.getElementById('svcCaretaker-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$26(vis, env) {
-  var elt = document.getElementById('svcCaretaker-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$20(vis);
+}
+function toggleVisibility$21(vis) {
+  var elt = document.getElementById('svcShared-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$27(vis, env) {
-  var elt = document.getElementById('svcShared-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$21(vis);
+}
+function toggleVisibility$22(vis) {
+  var elt = document.getElementById('svcEnergyOk-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$28(vis, env) {
-  var elt = document.getElementById('svcEnergyOk-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$22(vis);
+}
+function toggleVisibility$23(vis) {
+  var elt = document.getElementById('svcCleaningOk-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$29(vis, env) {
-  var elt = document.getElementById('svcCleaningOk-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$23(vis);
+}
+function toggleVisibility$24(vis) {
+  var elt = document.getElementById('svcCaretakerOk-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$30(vis, env) {
-  var elt = document.getElementById('svcCaretakerOk-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$24(vis);
+}
+function toggleVisibility$25(vis) {
+  var elt = document.getElementById('svcSharedOk-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$31(vis, env) {
-  var elt = document.getElementById('svcSharedOk-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$25(vis);
+}
+function toggleVisibility$26(vis) {
+  var elt = document.getElementById('svcAllOk-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$32(vis, env) {
-  var elt = document.getElementById('svcAllOk-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$26(vis);
+}
+function toggleVisibility$27(vis) {
+  var elt = document.getElementById('svcTotal-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$33(vis, env) {
-  var elt = document.getElementById('svcTotal-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$27(vis);
 }
 function updateVisibility$34(vis, env) {
   updateVisibility$24(vis, env); 
@@ -978,77 +1062,131 @@ function updateVisibility$34(vis, env) {
 function updateVisibility$35(vis, env) {
   updateVisibility$34(eve$6(env), env);
 }
-function updateVisibility$36(vis, env) {
+function toggleVisibility$28(vis) {
   var elt = document.getElementById('eligibleRent-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$36(vis, env) {
+  toggleVisibility$28(vis);
+}
+function toggleVisibility$29(vis) {
+  var elt = document.getElementById('income-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$37(vis, env) {
-  var elt = document.getElementById('income-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$29(vis);
+}
+function toggleVisibility$30(vis) {
+  var elt = document.getElementById('assets-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$38(vis, env) {
-  var elt = document.getElementById('assets-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$30(vis);
+}
+function toggleVisibility$31(vis) {
+  var elt = document.getElementById('householdIncome-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$39(vis, env) {
-  var elt = document.getElementById('householdIncome-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$31(vis);
+}
+function toggleVisibility$32(vis) {
+  var elt = document.getElementById('householdAssets-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$40(vis, env) {
-  var elt = document.getElementById('householdAssets-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$32(vis);
+}
+function toggleVisibility$33(vis) {
+  var elt = document.getElementById('under23-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$41(vis, env) {
-  var elt = document.getElementById('under23-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$33(vis);
+}
+function toggleVisibility$34(vis) {
+  var elt = document.getElementById('youngException-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$42(vis, env) {
-  var elt = document.getElementById('youngException-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$34(vis);
+}
+function toggleVisibility$35(vis) {
+  var elt = document.getElementById('belowYouthLimit-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$43(vis, env) {
-  var elt = document.getElementById('belowYouthLimit-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$35(vis);
+}
+function toggleVisibility$36(vis) {
+  var elt = document.getElementById('belowMaxLimit-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$44(vis, env) {
-  var elt = document.getElementById('belowMaxLimit-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$36(vis);
+}
+function toggleVisibility$37(vis) {
+  var elt = document.getElementById('rentOk-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$45(vis, env) {
-  var elt = document.getElementById('rentOk-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$37(vis);
+}
+function toggleVisibility$38(vis) {
+  var elt = document.getElementById('assetsOk-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$46(vis, env) {
-  var elt = document.getElementById('assetsOk-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$38(vis);
+}
+function toggleVisibility$39(vis) {
+  var elt = document.getElementById('propertyOk-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$47(vis, env) {
-  var elt = document.getElementById('propertyOk-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$39(vis);
+}
+function toggleVisibility$40(vis) {
+  var elt = document.getElementById('basicOk-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$48(vis, env) {
-  var elt = document.getElementById('basicOk-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$40(vis);
+}
+function toggleVisibility$41(vis) {
+  var elt = document.getElementById('eligible-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$49(vis, env) {
-  var elt = document.getElementById('eligible-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$41(vis);
+}
+function toggleVisibility$42(vis) {
+  var elt = document.getElementById('iban-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$50(vis, env) {
-  var elt = document.getElementById('iban-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$42(vis);
+}
+function toggleVisibility$43(vis) {
+  var elt = document.getElementById('startMonth-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$51(vis, env) {
-  var elt = document.getElementById('startMonth-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$43(vis);
+}
+function toggleVisibility$44(vis) {
+  var elt = document.getElementById('monthsOfBenefit-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$52(vis, env) {
-  var elt = document.getElementById('monthsOfBenefit-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$44(vis);
+}
+function toggleVisibility$45(vis) {
+  var elt = document.getElementById('agreeReport-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$53(vis, env) {
-  var elt = document.getElementById('agreeReport-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$45(vis);
 }
 function updateVisibility$54(vis, env) {
   updateVisibility$50(vis, env); 
@@ -1056,13 +1194,19 @@ function updateVisibility$54(vis, env) {
   updateVisibility$52(vis, env); 
   updateVisibility$53(vis, env);
 }
-function updateVisibility$55(vis, env) {
+function toggleVisibility$46(vis) {
   var elt = document.getElementById('wantsInfo-div');
-            elt.style.display = vis ? 'block' : 'none';
+    elt.style.display = vis ? 'block' : 'none';
+}
+function updateVisibility$55(vis, env) {
+  toggleVisibility$46(vis);
+}
+function toggleVisibility$47(vis) {
+  var elt = document.getElementById('infoEmail-div');
+    elt.style.display = vis ? 'block' : 'none';
 }
 function updateVisibility$56(vis, env) {
-  var elt = document.getElementById('infoEmail-div');
-            elt.style.display = vis ? 'block' : 'none';
+  toggleVisibility$47(vis);
 }
 function updateVisibility$57(vis, env) {
   updateVisibility$56(vis, env);
