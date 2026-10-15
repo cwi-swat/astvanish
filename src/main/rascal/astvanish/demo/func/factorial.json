@@ -85,7 +85,7 @@
           "rhs": {
             "_tag": "number",
             "_src": {"offset": 181, "length": 1},
-            "number": "1"
+            "number": "0"
           }
         },
         "then": {
@@ -124,9 +124,9 @@
           }
         },
         "els": {
-          "_tag": "var",
+          "_tag": "number",
           "_src": {"offset": 226, "length": 1},
-          "name": "n"
+          "number": "1"
         }
       }
     }

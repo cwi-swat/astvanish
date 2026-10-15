@@ -36,8 +36,8 @@ import { readFile } from 'fs/promises';
 const ast = JSON.parse(await readFile('factorial.json', 'utf8'));
 
 console.log('input, interpreted, compiled');
-for (var i = 0; i < 450; i++) {
-    const timings = doRun(run, run2, ast, [2, i]);
+for (var i = 0; i < 1000; i++) {
+    const timings = doRun(run, run2, ast, [2, 500]);
     //console.log('"' + i + '", "' + timings.interpreted.user + '", "' + timings.compiled.user + '"');
     console.log(i + ', ' + timings.interpreted.user + ', ' + timings.compiled.user);
 }

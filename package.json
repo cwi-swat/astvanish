@@ -1,6 +1,10 @@
 {
   "dependencies": {
     "serve": "^14.2.6",
-    "tachometer": "^0.7.2"
+    "tachometer": "^0.7.2",
+    "terser": "^5.51.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
   }
 }

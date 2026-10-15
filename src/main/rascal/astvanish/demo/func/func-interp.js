@@ -1,5 +1,8 @@
 
 export { run as run };
+import ast from './factorial.json' with {type: 'json'};
+
+//console.log(run(ast, [2,8]));
 
 function run($prog, args) {
     var env = {};
