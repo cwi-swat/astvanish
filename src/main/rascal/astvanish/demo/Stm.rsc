@@ -47,10 +47,15 @@ void dumpStmEval(loc root=|project://astvanish/src/main/rascal/astvanish/demo/st
 }
 
 str events2json(start[Machine] m)
-    = "{\"events\": [<intercalate(",\n", [ "\"<e>\"" | str e <- eventsOf(m) ])>]}";
+    = "{
+      '  <intercalate(",\n", [ "\"<s>\" : [<intercalate(",", [ "\"<e>\"" | str e <- mm[s] ])>]"  | str s <- mm ])>
+      '}"
+       when  map[str, set[str]] mm := eventsOf(m);
 
-set[str] eventsOf(start[Machine] m) 
-    = { "<e>" | /(Trans)`<Id e> =\> <Id _>` := m };
+
+
+map[str, set[str]] eventsOf(start[Machine] m) 
+    = ( "<s.name>" : { "<e>" | (Trans)`<Id e> =\> <Id _>` <- s.trans  } | State s <- m.top.states );
 
 
 data AState = state(str name, lrel[str, str] trans);

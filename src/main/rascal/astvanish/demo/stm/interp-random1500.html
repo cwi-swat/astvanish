@@ -1,15 +1,23 @@
 <html>
 <head>
 <script type="module">
-  import * as bench from '/bench.js';
+  //import * as bench from '/bench.js';
   import { run, initialState } from './stm-interp.js';
   import ast from './random1500.json' with {type: 'json'};
   import events from './random1500-events.json' with {type: 'json'};
   
-  bench.start();
+  var allStates = Object.keys(events);
+
+  //bench.start();
   var state = {current: initialState(ast)};
-  for (let i = 0; i < 50; i++) {
-    for (const e of events.events) {
+  for (let i = 0; i < 10000; i++) {
+    let myEvents = events[state.current]; 
+    if (myEvents.length == 0) {
+      state.current = allStates[Math.floor(Math.random() * allStates.length)];
+    }
+    else {
+      let pick = Math.floor(Math.random() * myEvents.length);
+      let e = myEvents[pick];
       console.log('event: ' + e);
       run(ast, state, e);
       console.log('state = ' + state.current);
@@ -18,7 +26,7 @@
       document.body.appendChild(elt);
     }
   }
-  bench.stop();
+  //bench.stop();
 </script>
 </head>
 <body>

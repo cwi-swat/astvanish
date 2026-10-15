@@ -38,9 +38,9 @@ lexical TokenChar
     ;
 
 lexical Token
-    = TokenChar+ !>> ![_:\\@\ \t\n]
-    | "_"
-    | "_@" Id
+    = @category="string" TokenChar+ !>> ![_:\\@\ \t\n]
+    | @category="regexp" "_"
+    | @category="regexp" "_@" Id
     ;
 
 /*
@@ -116,8 +116,8 @@ str kindOf(conditional(Symbol s, _)) = kindOf(s);
 default str kindOf(Symbol s) = s has name ? s.name : "";
 
 str unescapeToken(str tok) 
-    = ( tok | replaceAll(it, x, m[x]) | str x <- m )
-    when map[str, str] m := ("\\:": ":", "\\\\": "\\", "\\@": "@");
+    = ( tok | replaceAll(it, x, y) | <str x, str y> <- m )
+    when lrel[str, str] m := [ <"\\\\", "\\">, <"\\:", ":">,  <"\\@", "@"> ];
 
 test bool matchTest() 
     = matchTree((Pattern)`case _ \\: _`, (MatchCase)`case _ : `) is success;
