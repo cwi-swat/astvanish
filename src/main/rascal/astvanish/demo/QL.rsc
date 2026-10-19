@@ -7,6 +7,7 @@ extend lang::std::Id;
 import ParseTree;
 import IO;
 import String;
+import util::FileSystem;
 
 import astvanish::Eval;
 import astvanish::PEval;
@@ -138,4 +139,27 @@ void stressTestPrep(bool json=false, bool doPeval=false, bool genPevalHtml=false
             writeFile(l[file="interp-" + l.file][extension="html"], h);
         }
     }
+}
+
+void sizeMetrics() {
+    println("filename,source,json,peval");
+
+    set[loc] qls = { l | loc l <- files(|project://astvanish/src|), l.extension == "ql" || l.extension == "myql" };
+
+    for (loc l <- qls) {
+        str filename = l.file;
+        str s = readFile(l);
+        int source = size(s);
+        s = readFile(l[extension="json"]);
+        int json = size(s);
+        list[str] comps = split(".", l.file);
+        loc pevaled = l[file=comps[0] + "-run"][extension="js"];
+        if (!exists(pevaled)) {
+            pevaled = l[extension="js"];
+        }
+        s = readFile(pevaled);
+        int peval = size(s);
+        println("<filename>,<source>,<json>,<peval>");
+    }
+        
 }
