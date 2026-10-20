@@ -10,16 +10,16 @@ import java.util.function.Function;
 public class Func {
     
     @SuppressWarnings("unchecked")
-    public static Object run(Tree $prog, Object[] args) {
+    public static Object run($ prog, List<Object> args) {
         Map<String,Object> env = new HashMap<String,Object>();
-        with (_ _ : $prog) {
-            for (Tree d : $1) {
+        with (_ _ : prog) {
+            for ($ d : $1) {
                 with (def _ ( _ ) _ ; : d) {
-                    env.put($1.toString(), new Function<Object[], Object>() {
-                        public Object apply(Object[] args) {
+                    env.put($1.toString(), new Function<List<Object>, Object>() {
+                        public Object apply(List<Object> args) {
                             Map<String,Object> myEnv = new HashMap<String,Object>(env);
-                            List<Object> argsList = Arrays.asList(args);
-                            for (Tree f: $2) {
+                            List<Object> argsList = new ArrayList<Object>(args);
+                            for ($ f: $2) {
                                 myEnv.put(f.toString(), argsList.remove(0));
                             }
                             return eve($1, myEnv);
@@ -27,13 +27,13 @@ public class Func {
                     });
                 }
             }
-            return ((Function<Object[], Object>)env.get($2.toString())).apply(args);
+            return ((Function<List<Object>, Object>)env.get($2.toString())).apply(args);
         }
     }
 
     @SuppressWarnings("unchecked")
-    public static Object eve(Tree $exp, Map<String,Object> env) {
-        match ($exp) {
+    public static Object eve($ exp, Map<String,Object> env) {
+        match (exp) {
             case _@Id : 
                 return env.get($1.toString());
 
@@ -68,10 +68,10 @@ public class Func {
             
             case _ ( _ ): {
                 List<Object> args = new ArrayList<Object>();
-                for (Tree a: $2) {
+                for ($ a: $2) {
                     args.add(eve(a, env));
                 }
-                return ((Function<Object[], Object>)env.get($1.toString())).apply(args.toArray());
+                return ((Function<List<Object>, Object>)env.get($1.toString())).apply(args);
             }
 
         }
