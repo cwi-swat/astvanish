@@ -5,6 +5,7 @@ import astvanish::java::MatchJava;
 import util::LanguageServer;
 import util::Reflective;
 
+
 import ParseTree;
 
 
@@ -20,8 +21,8 @@ void main() {
     registerLanguage(
         language(
             pathConfig(srcs = [|std:///|, |project://astvanish/src/main/rascal|]),
-            "ASTVanish-Java",
-            {"java.av"},
+            "ASTVanish (Java)",
+            {"javaa"},
             "astvanish::java::IDE",
             "myContributor"
         )

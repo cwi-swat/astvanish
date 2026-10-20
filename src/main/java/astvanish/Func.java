@@ -1,6 +1,7 @@
 package astvanish;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,10 +18,9 @@ public class Func {
             env.put(d.get("name").toString(), new Function<Object[], Object>() {
                 public Object apply(Object[] args) {
                     Map<String,Object> myEnv = new HashMap<>(env);
-                    int i = 0;
+                    List<Object> argsList = Arrays.asList(args);
                     for (Tree f: (List<Tree>)d.get("params")) {
-                        myEnv.put(f.toString(), args[i]);
-                        i++;
+                        myEnv.put(f.toString(), argsList.remove(0));
                     }
                     return eve((Tree) d.get("body"), myEnv);
                 }

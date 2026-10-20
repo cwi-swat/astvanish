@@ -8,12 +8,12 @@ import List;
 import String;
 import IO;
 
-syntax Statement
+syntax Stm
     = "match" "(" Expr ")" "{" MatchCase* "}"
-    | "with" "(" Pattern ":" Expr ")" Statement
+    | "with" "(" Pattern ":" Expr ")" Stm
     ;
 
 syntax MatchCase
-    = "case" Pattern ":" Statement*;
+    = "case" Pattern ":" Stm*;
 
 start[CompilationUnit] parseAVJava(loc l) = parse(#start[CompilationUnit], l, allowAmbiguity=true);
