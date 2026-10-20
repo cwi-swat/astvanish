@@ -10,18 +10,17 @@ import java.util.Map;
 
 import com.google.gson.Gson;
 
-public interface Factory {
+public abstract class Factory {
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
     public static void main(String[] args) throws IOException {
-        String ast = readMyJson();
-
-        //System.out.println(ast);
-
+        String src = readMyJson();
         Gson gson = new Gson();
-        Map obj = gson.fromJson(ast, Map.class);
+        Map ast = gson.fromJson(src, Map.class);
 
-        Factory f = factory(obj);
+        Factory f = factory(ast);
+
+        System.out.println(f.schemaName());
 
         IObject aPerson = f.create("Person");
         aPerson.set("name", "Jurgen");
@@ -29,14 +28,6 @@ public interface Factory {
         System.out.println(aPerson.get("age"));
         aPerson.set("age", 40);
         System.out.println(aPerson.get("age"));
-        
-
-
-        // System.out.println(obj);
-        // System.out.println(obj.get("_tag"));
-        // System.out.println(obj.get("defs"));
-        // System.out.println(obj.get("defs").getClass());
-        //System.out.println(run(obj, List.of(2, 8)));
     }
 
 
@@ -45,8 +36,8 @@ public interface Factory {
     }
 
 
-    public String schemaName();
-    public IObject create(String className);
+    public abstract String schemaName();
+    public abstract IObject create(String className);
 
     public interface IObject {
         void set(String field, Object value);
@@ -115,6 +106,7 @@ public interface Factory {
                             return new IObject() {
 
                                 private Map<String,Object> data = new HashMap<>();
+
                                 {
                                     for (Map<String,Object> f: (List<Map<String,Object>>)c.get("fields")) {
                                         initialize(data, f.get("name").toString(), (Map<String,Object>)f.get("typ"));
