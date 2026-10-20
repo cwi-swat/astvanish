@@ -1,6 +1,6 @@
 module astvanish::Eval
 
-import astvanish::Match;
+import astvanish::MatchJS;
 import ParseTree;
 import lang::json::IO;
 import List;

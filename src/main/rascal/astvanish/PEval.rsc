@@ -1,6 +1,6 @@
 module astvanish::PEval
 
-import astvanish::Match;
+import astvanish::MatchJS;
 
 import IO;
 import ParseTree;

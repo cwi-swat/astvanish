@@ -1,6 +1,6 @@
 module astvanish::IDE
 
-import astvanish::Match;
+import astvanish::MatchJS;
 import astvanish::Check;
 
 import util::LanguageServer;

@@ -1,46 +1,23 @@
-module astvanish::Match
-
-extend lang::javascript::saner::Syntax;
+module astvanish::Pattern
 
 import ParseTree;
 import List;
 import String;
 import IO;
 
-syntax Statement
-    = "match" "(" Expression ")" "{" MatchCase* "}"
-    | "for" "(" "const" Id "of" Expression ")" Statement body
-    | "for" "(" "let" Id "of" Expression ")" Statement body
-    | "with" "(" Pattern ":" Expression ")" Statement
-    | "yield" Expression ";"
-    | "export" "{" {Export ","}* "}"
-    ;
-
-syntax Export
-    = Id "as" Id
-    ;
-
-
-syntax Function
-    = "function" "*" "(" {Id ","}* ")" "{" Statement* "}"
-    | "function" "*" Id "(" {Id ","}* ")" "{" Statement* "}"
-    ;
-
-syntax MatchCase
-    = "case" Pattern ":" Statement*;
-
 syntax Pattern = Token+ tokens;
-
 
 lexical TokenChar
     = ![_:\\@\ \t\n]
     | "\\" [_:\\@]
     ;
 
+lexical PatternId = [a-zA-Z][a-zA-Z_0-9]* !>> [a-zA-Z_0-9];
+
 lexical Token
     = @category="string" TokenChar+ !>> ![_:\\@\ \t\n]
     | @category="regexp" "_"
-    | @category="regexp" "_@" Id
+    | @category="regexp" "_@" PatternId
     ;
 
 /*
@@ -78,7 +55,7 @@ MatchResult matchTree(Pattern p, Tree t) {
                 }
             }
             
-            case (Token)`_@<Id x>`: {
+            case (Token)`_@<PatternId x>`: {
                 Tree kid = t.args[i];
                 //rprintln(kid);
                 if (kindOf(kid) == "<x>") {
@@ -119,13 +96,6 @@ str unescapeToken(str tok)
     = ( tok | replaceAll(it, x, y) | <str x, str y> <- m )
     when lrel[str, str] m := [ <"\\\\", "\\">, <"\\:", ":">,  <"\\@", "@"> ];
 
-test bool matchTest() 
-    = matchTree((Pattern)`case _ \\: _`, (MatchCase)`case _ : `) is success;
-
-test bool matchType()
-    = matchTree((Pattern)`_@Id`, (Expression)`x`) is success;
-
-start[Source] parseAV(loc l) = parse(#start[Source], l);
 
 /*
  * Abstract matching / against grammar prods 
@@ -161,7 +131,7 @@ MatchResult matchProd(Pattern p, prod(label(str cons, Symbol _), list[Symbol] ss
                 }
             }
             
-            case (Token)`_@<Id x>`: 
+            case (Token)`_@<PatternId x>`: 
                 if (kindOf(ss[i]) == "<x>") {
                     bindings += [ss[i]];
                     i += 2;

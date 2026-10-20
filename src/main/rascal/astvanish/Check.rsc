@@ -1,6 +1,6 @@
 module astvanish::Check
 
-import astvanish::Match;
+import astvanish::MatchJS;
 import Message;
 import List;
 import ParseTree;
