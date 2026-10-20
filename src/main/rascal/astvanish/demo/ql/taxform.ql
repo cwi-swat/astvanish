@@ -1,4 +1,4 @@
-//@@ src/main/rascal/astvanish/demo/ql/ql.av: run($ql)
+//@@ src/main/rascal/astvanish/demo/ql/ql.js.av: run($ql)
 
 form "Tax Office example" { 
   "Did you buy a house in 2010?"

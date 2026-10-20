@@ -28,7 +28,7 @@ void main() {
         language(
             pathConfig(srcs = [|std:///|, |project://astvanish/src/main/rascal|]),
             "ASTVanish",
-            {"av"},
+            {"js.av"},
             "astvanish::IDE",
             "myContributor"
         )

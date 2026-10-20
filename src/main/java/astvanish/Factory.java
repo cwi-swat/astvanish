@@ -4,12 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-interface Tree {
-    String tag();
-    Object get(String name);
-}
-
-public interface IFactory {
+public interface Factory {
 
     public String schemaName();
     public IObject create(String className);
@@ -55,8 +50,8 @@ public interface IFactory {
     }
 
     @SuppressWarnings("unchecked")
-    public static IFactory factory(Tree $schema) {
-        return new IFactory() {
+    public static Factory factory(Tree $schema) {
+        return new Factory() {
             public String schemaName() {
                 return $schema.get("name").toString();
             }

@@ -5,20 +5,23 @@ import List;
 import String;
 import IO;
 
-syntax Pattern = Token+ tokens;
+// ugly workaround because layout merging seems not to work
+syntax Pattern = {Token " "}+ tokens;
 
 lexical TokenChar
     = ![_:\\@\ \t\n]
     | "\\" [_:\\@]
     ;
 
-lexical PatternId = [a-zA-Z][a-zA-Z_0-9]* !>> [a-zA-Z_0-9];
+lexical PatternId = [a-z A-Z 0-9 _] !<< [a-z A-Z][a-z A-Z 0-9 _]* !>> [a-z A-Z 0-9 _];
+
 
 lexical Token
     = @category="string" TokenChar+ !>> ![_:\\@\ \t\n]
     | @category="regexp" "_"
     | @category="regexp" "_@" PatternId
     ;
+
 
 /*
  * Concrete matching, against parse trees

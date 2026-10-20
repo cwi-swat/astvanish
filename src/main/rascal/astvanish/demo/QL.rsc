@@ -80,7 +80,7 @@ void dumpQlEval(loc root=|project://astvanish/src/main/rascal/astvanish/demo/ql/
     writeFile(root + "taxform.json", pt2json(aForm()));
     writeFile(root + "loanapproval.json", pt2json(loanApproval()));
     writeFile(root + "ql-interp.js", 
-        toEval(root + "ql.av", (
+        toEval(root + "ql.js.av", (
             "run": ("$ql": sort("Form")),
             "initialize": ("$ql": sort("Form")),
             "defaultFor": ("$type": sort("Type")),
@@ -106,7 +106,7 @@ void stressTestPrep(bool json=false, bool doPeval=false, bool genPevalHtml=false
             writeFile(l[extension="json"], pt2json(f));
         }
         if (doPeval) {
-            js = peval(|project://astvanish/src/main/rascal/astvanish/demo/ql/ql.av|, 
+            js = peval(|project://astvanish/src/main/rascal/astvanish/demo/ql/ql.js.av|, 
                 ("$ql": code(f.top)), "run", false); 
             writeFile(l[extension="js"], js);
         }

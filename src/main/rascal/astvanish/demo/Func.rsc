@@ -35,7 +35,7 @@ void dumpFuncEval(loc root = |project://astvanish/src/main/rascal/astvanish/demo
     peval(aProg());
     writeFile(root + "factorial.json", pt2json(aProg()));
     writeFile(root + "func-interp.js", 
-        toEval(root + "func.av", (
+        toEval(root + "func.js.av", (
             "run": ("$prog": sort("Prog")),
             "eve": ("$exp": sort("Expr")),
             "format": ("$prog": sort("Prog")),

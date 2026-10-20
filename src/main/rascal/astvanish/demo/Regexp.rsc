@@ -29,7 +29,7 @@ void dumpRegexpEval(loc root = |project://astvanish/src/main/rascal/astvanish/de
     writeFile(root + "example.json", pt2json(aRegexp()));
     peval(aRegexp());
     writeFile(root + "regexp-interp.js", 
-        toEval(root + "regexp.av", (
+        toEval(root + "regexp.js.av", (
             "match": ("$re": sort("RE")),
             "match_": ("$re": sort("Regexp"))
         ), #start[RE]));

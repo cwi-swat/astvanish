@@ -136,7 +136,7 @@ set[Message] check(Statement s, Env env, Sig bt, FEnv fenv) {
 
 @synopsis{Determine if a token is variable placeholder}
 bool isVar((Token)`_`) = true;
-bool isVar((Token)`_@<Id _>`) = true;
+bool isVar((Token)`_@<PatternId _>`) = true;
 default bool isVar(Token _) = false;
 
 @synopsis{Check a case-clause, bringing the matched variables in as statics to the statements}

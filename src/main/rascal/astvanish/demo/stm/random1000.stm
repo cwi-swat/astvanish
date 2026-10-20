@@ -1,5 +1,5 @@
-//@@ src/main/rascal/astvanish/demo/stm/stm-no-actions.av: run($m)
-//@@ src/main/rascal/astvanish/demo/stm/stm-no-actions.av: initialState($m)
+//@@ src/main/rascal/astvanish/demo/stm/stm-no-actions.js.av: run($m)
+//@@ src/main/rascal/astvanish/demo/stm/stm-no-actions.js.av: initialState($m)
 
 machine
   state feminine

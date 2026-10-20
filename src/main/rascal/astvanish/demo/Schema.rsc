@@ -25,7 +25,7 @@ start[Schema] aSchema()
 
 void dumpSchemaEval() {
     writeFile(|project://astvanish/src/main/rascal/astvanish/demo/schema-interp.js|, 
-        toEval(|project://astvanish/src/classes.av|, (
+        toEval(|project://astvanish/src/classes.js.av|, (
             "factory": ("$schema": sort("Schema")),
             "checkType": ("$type": sort("Type")),
             "sql": ("$schema": sort("Schema")),
