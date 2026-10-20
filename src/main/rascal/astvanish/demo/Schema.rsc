@@ -6,6 +6,7 @@ extend lang::std::Id;
 import ParseTree;
 import IO;
 import astvanish::Eval;
+import astvanish::PT2JSON;
 
 start syntax Schema
     = schema: "schema" Id name Class* classes;
@@ -24,6 +25,7 @@ start[Schema] aSchema()
     = parse(#start[Schema], |project://astvanish/src/main/rascal/astvanish/demo/persons.schema|);
 
 void dumpSchemaEval() {
+    writeFile(|project://astvanish/src/main/rascal/astvanish/demo/persons.json|, pt2json(aSchema()));
     writeFile(|project://astvanish/src/main/rascal/astvanish/demo/schema-interp.js|, 
         toEval(|project://astvanish/src/classes.js.av|, (
             "factory": ("$schema": sort("Schema")),

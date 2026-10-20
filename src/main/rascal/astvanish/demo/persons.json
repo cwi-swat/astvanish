@@ -1,0 +1,66 @@
+{
+  "_tag": "schema",
+  "_src": {"offset": 79, "length": 123},
+  "name": "Example",
+  "classes": [
+    {
+      "_tag": "class",
+      "_src": {"offset": 94, "length": 45},
+      "name": "Person",
+      "fields": [
+        {
+          "_tag": "field",
+          "_src": {"offset": 112, "length": 9},
+          "name": "name",
+          "typ": {
+            "_tag": "string",
+            "_src": {"offset": 118, "length": 3}
+          }
+        },
+        {
+          "_tag": "field",
+          "_src": {"offset": 126, "length": 8},
+          "name": "age",
+          "typ": {
+            "_tag": "integer",
+            "_src": {"offset": 131, "length": 3}
+          }
+        }
+      ]
+    },
+    {
+      "_tag": "class",
+      "_src": {"offset": 141, "length": 61},
+      "name": "Address",
+      "fields": [
+        {
+          "_tag": "field",
+          "_src": {"offset": 159, "length": 11},
+          "name": "street",
+          "typ": {
+            "_tag": "string",
+            "_src": {"offset": 167, "length": 3}
+          }
+        },
+        {
+          "_tag": "field",
+          "_src": {"offset": 173, "length": 11},
+          "name": "number",
+          "typ": {
+            "_tag": "integer",
+            "_src": {"offset": 181, "length": 3}
+          }
+        },
+        {
+          "_tag": "field",
+          "_src": {"offset": 187, "length": 13},
+          "name": "central",
+          "typ": {
+            "_tag": "boolean",
+            "_src": {"offset": 196, "length": 4}
+          }
+        }
+      ]
+    }
+  ]
+}

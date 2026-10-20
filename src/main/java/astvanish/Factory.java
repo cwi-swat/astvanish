@@ -1,10 +1,49 @@
 package astvanish;
 
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.google.gson.Gson;
+
 public interface Factory {
+
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+    public static void main(String[] args) throws IOException {
+        String ast = readMyJson();
+
+        //System.out.println(ast);
+
+        Gson gson = new Gson();
+        Map obj = gson.fromJson(ast, Map.class);
+
+        Factory f = factory(obj);
+
+        IObject aPerson = f.create("Person");
+        aPerson.set("name", "Jurgen");
+        System.out.println(aPerson.get("name"));
+        System.out.println(aPerson.get("age"));
+        aPerson.set("age", 40);
+        System.out.println(aPerson.get("age"));
+        
+
+
+        // System.out.println(obj);
+        // System.out.println(obj.get("_tag"));
+        // System.out.println(obj.get("defs"));
+        // System.out.println(obj.get("defs").getClass());
+        //System.out.println(run(obj, List.of(2, 8)));
+    }
+
+
+     public static String readMyJson() throws IOException {
+        return new String(Files.readAllBytes(Paths.get("src/main/rascal/astvanish/demo/persons.json")));
+    }
+
 
     public String schemaName();
     public IObject create(String className);
@@ -18,39 +57,43 @@ public interface Factory {
         IObject make();
     }
 
-    private static void initialize(Map<String,Object> data, String fld, Tree type) {
-        switch (type.tag()) {
-            case "int":
+    private static void initialize(Map<String,Object> data, String fld, Map<String,Object> type) {
+        System.out.println(type);
+        switch ((String)type.get("_tag")) {
+            case "integer":
                 data.put(fld, 0); 
                 break;
-            case "bool":
+            case "boolean":
                 data.put(fld, false);
                 break;
-            case "str":
+            case "string":
                 data.put(fld, "");
                 break;
         }
     }
 
-    private static void checkType(Object value, Tree type) {
-        switch (type.tag()) {
-            case "int":
+    private static void checkType(Object value, Map<String,Object> type) {
+        switch ((String)type.get("_tag")) {
+            case "integer":
                 if (!(value instanceof Integer)) {
                     throw new RuntimeException("type error");
                 }
-            case "bool":
+                break;
+            case "boolean":
                 if (!(value instanceof Boolean)) {
                     throw new RuntimeException("type error");
                 }
-            case "str":
+                break;
+            case "string":
                 if (!(value instanceof String)) {
                     throw new RuntimeException("type error");
                 }
+                break;
         }
     }
 
     @SuppressWarnings("unchecked")
-    public static Factory factory(Tree $schema) {
+    public static Factory factory(Map<String,Object> $schema) {
         return new Factory() {
             public String schemaName() {
                 return $schema.get("name").toString();
@@ -66,25 +109,25 @@ public interface Factory {
             }
 
             { 
-                for (Tree c: (List<Tree>)$schema.get("classes")) {
+                for (Map<String,Object> c: (List<Map<String,Object>>)$schema.get("classes")) {
                     classes.put(c.get("name").toString(), new IClass() {
                         public IObject make() {
                             return new IObject() {
 
                                 private Map<String,Object> data = new HashMap<>();
                                 {
-                                    for (Tree f: (List<Tree>)c.get("fields")) {
-                                        initialize(data, f.get("name").toString(), (Tree)f.get("type"));
+                                    for (Map<String,Object> f: (List<Map<String,Object>>)c.get("fields")) {
+                                        initialize(data, f.get("name").toString(), (Map<String,Object>)f.get("typ"));
                                     }
                                 }
 
                                 public void set(String field, Object value) {
                                     if (!data.containsKey(field)) {
-                                        throw new RuntimeException("no such field");
+                                        throw new RuntimeException("no such field " + field);
                                     }
-                                    for (Tree f: (List<Tree>)c.get("fields")) {
+                                    for (Map<String,Object> f: (List<Map<String,Object>>)c.get("fields")) {
                                         if (f.get("name").toString().equals(field)) {
-                                            checkType(value, (Tree)f.get("type"));
+                                            checkType(value, (Map<String,Object>)f.get("typ"));
                                         }
                                     }
                                     data.put(field, value);
@@ -92,7 +135,7 @@ public interface Factory {
 
                                 public Object get(String field) {
                                     if (!data.containsKey(field)) {
-                                        throw new RuntimeException("no such field");
+                                        throw new RuntimeException("no such field " + field);
                                     }
                                     return data.get(field);
                                 }
