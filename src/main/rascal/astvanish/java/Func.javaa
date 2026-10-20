@@ -34,23 +34,30 @@ public class Func {
     @SuppressWarnings("unchecked")
     public static Object eve(Tree $exp, Map<String,Object> env) {
         match ($exp) {
-            case _@Id : return env.get($1.toString());
-            case _@Num : return Integer.parseInt($1.toString());
+            case _@Id : 
+                return env.get($1.toString());
+
+            case _@Num : 
+                return Integer.parseInt($1.toString());
+            
             case _ * _ : { 
                 int lhs = (int) eve($1, env);
                 int rhs = (int) eve($2, env);
                 return lhs * rhs;
             }
+            
             case _ - _: { 
                 int lhs = (int) eve($1, env);
                 int rhs = (int) eve($2, env);
                 return lhs - rhs;
             }
+            
             case _ > _: { 
                 int lhs = (int) eve($1, env);
                 int rhs = (int) eve($2, env);
                 return lhs > rhs;
             }
+            
             case if _ then _ else _ fi : {
                 boolean cond = (boolean) eve($1, env);
                 if (cond) {
