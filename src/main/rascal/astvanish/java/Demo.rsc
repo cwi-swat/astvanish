@@ -1,10 +1,13 @@
 module astvanish::java::Demo
 
 import astvanish::java::PEvalJava;
+import astvanish::java::EvalJava;
 import astvanish::demo::Func;
 import astvanish::demo::Schema;
+import astvanish::PT2JSON;
 
 import ParseTree;
+import IO;
 
 loc javaInterp(str name) = |project://astvanish/src/main/rascal/astvanish/java/| + name;
 
@@ -15,4 +18,24 @@ void dumpJava(bool logging=false) {
 
     start[Schema] schema = aSchema();
     pevalJavaTo(javaInterp("Factory.javaa"), "factory", ("schema": code(schema.top)), [schema.src], logging=logging);
+}
+
+@synopsis{Desugar the Java interpreters for the Func and Schema demos to vanilla Java (over JSON ASTs)}
+void dumpJavaInterp() {
+    loc func = |project://astvanish/src/main/rascal/astvanish/demo/func/|;
+    writeFile(func + "factorial.json", pt2json(aProg()));
+    writeFile(func + "FuncInterp.java",
+        toEvalJava(javaInterp("Func.javaa"), (
+            "run": ("prog": sort("Prog")),
+            "eve": ("exp": sort("Expr"))
+        ), #start[Prog], "FuncInterp"));
+
+    loc demo = |project://astvanish/src/main/rascal/astvanish/demo/|;
+    writeFile(demo + "persons.json", pt2json(aSchema()));
+    writeFile(demo + "FactoryInterp.java",
+        toEvalJava(javaInterp("Factory.javaa"), (
+            "factory": ("schema": sort("Schema")),
+            "initialize": ("type": sort("Type")),
+            "checkType": ("type": sort("Type"))
+        ), #start[Schema], "FactoryInterp"));
 }
