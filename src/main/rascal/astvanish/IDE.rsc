@@ -26,7 +26,7 @@ Summary avCheck(loc l, start[Source] input) {
 void main() {
     registerLanguage(
         language(
-            pathConfig(srcs = [|std:///|, |project://astvanish/src/main/rascal|]),
+            getProjectPathConfig(|project://astvanish|),
             "ASTVanish",
             {"js.av"},
             "astvanish::IDE",

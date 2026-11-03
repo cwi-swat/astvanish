@@ -4,6 +4,7 @@ import astvanish::java::PEvalJava;
 import astvanish::java::EvalJava;
 import astvanish::demo::Func;
 import astvanish::demo::Schema;
+import astvanish::demo::Regexp;
 import astvanish::PT2JSON;
 
 import ParseTree;
@@ -22,7 +23,7 @@ void dumpJava(bool logging=false) {
 
 @synopsis{Desugar the Java interpreters for the Func and Schema demos to vanilla Java (over JSON ASTs)}
 void dumpJavaInterp() {
-    loc func = |project://astvanish/src/main/rascal/astvanish/demo/func/|;
+    loc func = |project://astvanish/src/main/java/astvanish/demo/func/|;
     writeFile(func + "factorial.json", pt2json(aProg()));
     writeFile(func + "FuncInterp.java",
         toEvalJava(javaInterp("Func.javaa"), (
@@ -30,7 +31,15 @@ void dumpJavaInterp() {
             "eve": ("exp": sort("Expr"))
         ), #start[Prog], "FuncInterp"));
 
-    loc demo = |project://astvanish/src/main/rascal/astvanish/demo/|;
+    loc regexp = |project://astvanish/src/main/java/astvanish/demo/regexp/|;
+    writeFile(regexp + "example.json", pt2json(aRegexp()));
+    writeFile(regexp + "RegexpInterp.java",
+        toEvalJava(javaInterp("Regexp.javaa"), (
+            "match": ("re": sort("RE")),
+            "match_": ("re": sort("Regexp"))
+        ), #start[RE], "RegexpInterp"));
+
+    loc demo = |project://astvanish/src/main/java/astvanish/demo/schema|;
     writeFile(demo + "persons.json", pt2json(aSchema()));
     writeFile(demo + "FactoryInterp.java",
         toEvalJava(javaInterp("Factory.javaa"), (

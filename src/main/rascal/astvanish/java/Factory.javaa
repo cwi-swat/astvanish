@@ -1,4 +1,4 @@
-package astvanish;
+package astvanish.demo.schema;
 
 
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package astvanish;
+package astvanish.demo.func;
 
 import java.util.ArrayList;
 import java.util.HashMap;

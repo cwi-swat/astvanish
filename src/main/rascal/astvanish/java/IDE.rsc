@@ -6,6 +6,8 @@ import util::LanguageServer;
 import util::Reflective;
 
 
+
+
 import ParseTree;
 
 
@@ -20,7 +22,7 @@ Tree (str, loc) avjavaParser() = ParseTree::parser(#start[CompilationUnit], allo
 void main() {
     registerLanguage(
         language(
-            pathConfig(srcs = [|std:///|, |project://astvanish/src/main/rascal|]),
+            getProjectPathConfig(|project://astvanish|),
             "ASTVanish (Java)",
             {"javaa"},
             "astvanish::java::IDE",

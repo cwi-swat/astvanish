@@ -44,12 +44,11 @@ public abstract class Factory {
         Object get(String field);
     }
 
-    public interface IClass {
-        IObject make();
+    private abstract class Klass {
+        abstract IObject make();
     }
 
     private static void initialize(Map<String,Object> data, String fld, Map<String,Object> type) {
-        System.out.println(type);
         switch ((String)type.get("_tag")) {
             case "integer":
                 data.put(fld, 0); 
@@ -84,13 +83,13 @@ public abstract class Factory {
     }
 
     @SuppressWarnings("unchecked")
-    public static Factory factory(Map<String,Object> $schema) {
+    public static Factory factory(Map<String,Object> schema) {
         return new Factory() {
             public String schemaName() {
-                return $schema.get("name").toString();
+                return schema.get("name").toString();
             }
 
-            private Map<String, IClass> classes = new HashMap<>();
+            private Map<String, Klass> classes = new HashMap<>();
 
             public IObject create(String className) {
                 if (!classes.containsKey(className)) {
@@ -100,8 +99,8 @@ public abstract class Factory {
             }
 
             { 
-                for (Map<String,Object> c: (List<Map<String,Object>>)$schema.get("classes")) {
-                    classes.put(c.get("name").toString(), new IClass() {
+                for (Map<String,Object> c: (List<Map<String,Object>>)schema.get("classes")) {
+                    classes.put(c.get("name").toString(), new Klass() {
                         public IObject make() {
                             return new IObject() {
 

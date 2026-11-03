@@ -1,0 +1,73 @@
+package astvanish.demo.regexp;
+
+import java.util.Map;
+import java.util.function.BiConsumer;
+
+
+public class Regexp {
+    
+    private static class Success extends RuntimeException {
+
+    }
+
+    @SuppressWarnings("unchecked")
+    public static boolean match($ re, String input) {
+        int i = 0;
+        try {
+            with (_: re) {
+                match_($1, i, input, new BiConsumer<Integer, String>() {
+                    public void accept(Integer j, String input) {
+                        if (j == input.length()) {
+                            throw new Success();
+                        }
+                    }
+                });
+            }
+        }
+        catch (Success e) {
+            return true;
+        }
+        return false;
+    }
+
+    @SuppressWarnings("unchecked")
+    public static void match_($ re, int i, String input, BiConsumer<Integer,String> k) {
+        match (re) {
+            case _@Char : 
+                if (input.substring(i, i + 1) == $1.toString()) {
+                    k.accept(i+1, input);
+                }
+
+            case ( _ ) : 
+                match_($1, i, input, k);
+            
+            case _ _ : 
+                match_($1, i, input, new BiConsumer<Integer,String>() {
+                    public void accept(Integer i, String input) {
+                        match_($2, i, input, k);
+                    }
+                });
+            
+            case _ | _: { 
+                match_($1, i, input, k);
+                match_($1, i, input, k);
+            }
+            
+            case _ ? : { 
+                match_($1, i, input, k);
+                k.accept(i, input);
+            }
+            
+            case _ * : {
+                (new BiConsumer<Integer,String>() {
+                    public void accept(Integer i, String input) {
+                        match_($1, i, input, this);
+                        k.accept(i, input);
+                    }
+                }).accept(i, input);
+            }
+            
+        }
+    }
+ 
+}
