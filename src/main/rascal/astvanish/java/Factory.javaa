@@ -44,12 +44,12 @@ public abstract class Factory {
         Object get(String field);
     }
 
-    public interface IClass {
-        IObject make();
+    private abstract class Klass {
+        abstract IObject make();
     }
 
     private static void initialize(Map<String,Object> data, String fld, $ type) {
-        System.out.println(type);
+        //System.out.println(type);
         match (type) {
             case int:
                 data.put(fld, 0); 
@@ -92,7 +92,7 @@ public abstract class Factory {
                 }
             }
 
-            private Map<String, IClass> classes = new HashMap<String,IClass>();
+            private Map<String, Klass> classes = new HashMap<String,Klass>();
 
             public IObject create(String className) {
                 if (!classes.containsKey(className)) {
@@ -105,7 +105,7 @@ public abstract class Factory {
                 with (schema _ _ : schema) {
                     for ($ c: $2) {
                         with (class _ { _ }: c) {
-                            classes.put($1.toString(), new IClass() {
+                            classes.put($1.toString(), new Klass() {
                                 public IObject make() {
                                     return new IObject() {
 
