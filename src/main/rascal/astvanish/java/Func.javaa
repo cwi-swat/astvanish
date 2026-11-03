@@ -14,7 +14,7 @@ public class Func {
         Map<String,Object> env = new HashMap<String,Object>();
         with (_ _ : prog) {
             for ($ d : $1) {
-                with (def _ ( _ ) _ ; : d) {
+                with (def _ ( _ ) = _ ; : d) {
                     env.put($1.toString(), new Function<List<Object>, Object>() {
                         public Object apply(List<Object> args) {
                             Map<String,Object> myEnv = new HashMap<String,Object>(env);
@@ -22,7 +22,7 @@ public class Func {
                             for ($ f: $2) {
                                 myEnv.put(f.toString(), argsList.remove(0));
                             }
-                            return eve($1, myEnv);
+                            return eve($3, myEnv);
                         }
                     });
                 }
