@@ -14,19 +14,20 @@ import IO;
 
 @synopsis{Partially evaluate the Java interpreters for the Func and Schema demos}
 void dumpJava(bool logging=false) {
-    start[Prog] prog = aProg();
     loc func = |project://astvanish/src/main/java/astvanish/demo/func/|;
+    start[Prog] prog = parse(#start[Prog], func + "factorial.func");
     
     pevalJavaTo(func + "Func.javaa", "run", ("prog": code(prog.top)), [prog.src], logging=logging);
 
     
-    start[RE] re = aRegexp();
     loc regexp = |project://astvanish/src/main/java/astvanish/demo/regexp/|;
+    start[RE] re = parse(#start[RE], regexp + "example.regexp");
     
     pevalJavaTo(regexp + "Regexp.javaa", "match", ("re": code(re.top)), [re.src], logging=logging);
 
-    start[Schema] schema = aSchema();
     loc demo = |project://astvanish/src/main/java/astvanish/demo/schema|;
+    start[Schema] schema = parse(#start[Schema], demo + "persons.schema");
+    
     
     pevalJavaTo(demo + "Factory.javaa", "factory", ("schema": code(schema.top)), [schema.src], logging=logging);
 }

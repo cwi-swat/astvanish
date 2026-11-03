@@ -1,0 +1,14 @@
+//@@ src/classes.js.av: factory($schema)
+//@@ src/classes.js.av: sql($schema)
+
+schema Example
+class Person {
+   name: str 
+   age: int   
+}
+
+class Address {
+  street: str
+  number: int
+  central: bool
+}

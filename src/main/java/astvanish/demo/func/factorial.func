@@ -1,0 +1,18 @@
+//@@ src/main/rascal/astvanish/demo/func/func.js.av: run($prog)
+
+def factorial(n) =
+   if n > 1 then
+        n * factorial(n - 1)
+   else
+        1
+   fi;
+
+
+def power(x, n) =
+  if n > 0 then
+     x * power(x, n - 1)
+  else 
+     1
+  fi ;
+
+power
