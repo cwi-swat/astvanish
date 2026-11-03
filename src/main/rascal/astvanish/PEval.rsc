@@ -6,6 +6,7 @@ import IO;
 import ParseTree;
 import String;
 import Set;
+import List;
 import Message;
 
 @synopsis{A `Value` represent a statically known value: either code, or a (constant) expression}
@@ -244,7 +245,7 @@ Admin newAdmin(start[Source] code, str func, bool logging) {
 tuple[Env, lrel[Id, Expression]] partition({Id ","}* params, {Expression ","}* args, Env env, Admin admin) {
     lrel[Id, Expression] paired = zip2([ p | Id p <- params ], [ e | Expression e <- args ]);
     
-    Env staticEnv = ( "<p>" : eval(a, env) | <Id p, Expression a> <- paired, isStatic(a, env) );
+    Env staticEnv = ( "<p>" : v | <Id p, Expression a> <- paired, [Value v] := tryEval(a, env) );
 
     lrel[Id, Expression] dynArgs = [ <x, peval(a, env, admin)> | <Id x, Expression a> <- paired, !isStatic(a, env)];
 
@@ -291,7 +292,7 @@ Expression peval((Function)`function <Id f>(<{Id ","}* fs>) {<Statement* body>}`
 
     Statement* newBody = peval(body, newEnv, admin);
 
-    if ([Expression e] := isInlineable(newBody, env)) {
+    if ([Expression e] := isInlineable(newBody, newEnv)) {
         admin.log("Inlining <e>");
         return e;
     }
@@ -365,8 +366,9 @@ Expression peval(Expression e, Env env, Admin admin) {
             insert (Expression)`<Function f>`;
         }
             
-        case Expression e => eval(e, env).expr
-            when isStatic(e, env), !isCode(e, env)
+        // static expressions are folded, unless they evaluate to code
+        case Expression e => v
+            when [expr(Expression v)] := tryEval(e, env)
 
         // catch-all clause: if not dealt with by earlier cases, it's an error
         // because static data (code) is leaking into the dynamic world.
@@ -385,7 +387,7 @@ Statement peval(Statement s, Env env, Admin admin) {
 
         case (Statement)`if (<Expression cond>) <Statement s>` 
             => truthy(val) ? peval(s, env, admin) : (Statement)`;`
-            when isStatic(cond, env), expr(Expression val) := eval(cond, env)
+            when [expr(Expression val)] := tryEval(cond, env)
 
         case (Statement)`if (<Expression cond>) <Statement s>` 
             => (Statement)`if (<Expression cond2>) <Statement s2>`
@@ -395,7 +397,7 @@ Statement peval(Statement s, Env env, Admin admin) {
 
         case (Statement)`if (<Expression cond>) <Statement s1> else <Statement s2>` 
             => truthy(val) ? peval(s1, env, admin) : peval(s2, env, admin)
-            when isStatic(cond, env), expr(Expression val) := eval(cond, env)
+            when [expr(Expression val)] := tryEval(cond, env)
 
 
         case (Statement)`if (<Expression cond>) <Statement s1> else <Statement s2>` 
@@ -421,7 +423,7 @@ Statement peval(Statement s, Env env, Admin admin) {
                 if (success(list[Tree] bs) := matchTree(p, env["<x>"].code)) {
                     insert peval(s, env + ( "$<i+1>": code(bs[i]) | int i <- [0..size(bs)] ), admin);
                 }
-                admin.alert(error("pattern did not match `<env["<x>"].code>`", p.src));;   
+                admin.alert(error("pattern did not match `<env["<x>"].code>`", p.src));
             }
             else {
                 throw "only static variables are allowed in match conditions (not `<e>`)";
@@ -485,239 +487,383 @@ str toObj(loc l) = "{offset: <l.offset>, length: <l.length>}";
 
 
 
-@synopsis{Determine if an expression is statically known (and assumed to have no side-effects)}
-bool isStatic((Expression)`<Expression e>.toString()`, Env env) = isStatic(e, env);
 
-bool isStatic((Expression)`<Expression e>.length`, Env env) = isStatic(e, env);
+@synopsis{Thrown by `eval` when an expression cannot be (faithfully) evaluated statically}
+data NotStatic = notStatic(Expression e);
 
-bool isStatic((Expression)`<Id x>.src`, Env env) = isStatic((Expression)`<Id x>`, env);
-
-bool isStatic((Expression)`<Id x>`, Env env) = "<x>" in env;
-
-bool isStatic((Expression)`<Literal _>`, Env _) = true;
-
-bool isStatic((Expression)`[<{Expression ","}* es>]`, Env env) 
-    = ( true | it && isStatic(e, env) | Expression e <- es );
-
-bool isStatic((Expression)`<Expression arr>[<Expression idx>]`, Env env)
-    = isStatic(arr, env) && isStatic(idx, env);
-
-bool isStatic((Expression)`(<Expression e>)`, Env env) = isStatic(e, env);
-
-bool isStatic((Expression)`+<Expression e>`, Env env) = isStatic(e, env);
-
-bool isStatic((Expression)`-<Expression e>`, Env env) = isStatic(e, env);
-
-bool isStatic((Expression)`<Expression lhs> + <Expression rhs>`, Env env) =
-    isStatic(lhs, env) && isStatic(rhs, env);
-
-bool isStatic((Expression)`<Expression lhs> - <Expression rhs>`, Env env) =
-    isStatic(lhs, env) && isStatic(rhs, env);
-
-bool isStatic((Expression)`<Expression lhs> * <Expression rhs>`, Env env) =
-    isStatic(lhs, env) && isStatic(rhs, env);
-
-bool isStatic((Expression)`<Expression lhs> / <Expression rhs>`, Env env) =
-    isStatic(lhs, env) && isStatic(rhs, env);
-
-bool isStatic((Expression)`<Expression lhs> % <Expression rhs>`, Env env) =
-    isStatic(lhs, env) && isStatic(rhs, env);
-
-bool isStatic((Expression)`!<Expression e>`, Env env) = isStatic(e, env);
-
-bool isStatic((Expression)`<Expression lhs> && <Expression rhs>`, Env env) =
-    isStatic(lhs, env) && isStatic(rhs, env);
-
-bool isStatic((Expression)`<Expression lhs> || <Expression rhs>`, Env env) =
-    isStatic(lhs, env) && isStatic(rhs, env);
-
-bool isStatic((Expression)`<Expression cond> ? <Expression then> : <Expression els>`, Env env) {
-    // this is funky: if the condition is static, we can evaluate it
-    // and depending on the result, only one of the branches has to be static
-    // and the other one doesn't have to be... (same as with if-statements)
-    if (isStatic(cond, env), expr(Expression e) := eval(cond, env)) {
-        return truthy(e) ? isStatic(then, env) : isStatic(els, env);
+@synopsis{Evaluate an expression if it is static (the list encodes optionality)}
+list[Value] tryEval(Expression e, Env env) {
+    try {
+        return [eval(e, env)];
     }
-    return false;
+    catch notStatic(_): {
+        return [];
+    }
 }
 
-
-bool isStatic((Expression)`<Expression lhs> == <Expression rhs>`, Env env) =
-    isStatic(lhs, env) && isStatic(rhs, env);
-
-bool isStatic((Expression)`<Expression lhs> === <Expression rhs>`, Env env) =
-    isStatic(lhs, env) && isStatic(rhs, env);
-
-bool isStatic((Expression)`<Expression lhs> != <Expression rhs>`, Env env) =
-    isStatic(lhs, env) && isStatic(rhs, env);
-
-bool isStatic((Expression)`<Expression lhs> !== <Expression rhs>`, Env env) =
-    isStatic(lhs, env) && isStatic(rhs, env);
-    
-bool isStatic((Expression)`<Expression lhs> \>= <Expression rhs>`, Env env) =
-    isStatic(lhs, env) && isStatic(rhs, env);
-
-bool isStatic((Expression)`<Expression lhs> \> <Expression rhs>`, Env env) =
-    isStatic(lhs, env) && isStatic(rhs, env);
-
-bool isStatic((Expression)`<Expression lhs> \<= <Expression rhs>`, Env env) =
-    isStatic(lhs, env) && isStatic(rhs, env);
-
-bool isStatic((Expression)`<Expression lhs> \< <Expression rhs>`, Env env) =
-    isStatic(lhs, env) && isStatic(rhs, env);
+@synopsis{Determine if an expression is statically known (and assumed to have no side-effects)}
+@description{
+An expression is static precisely when `eval` succeeds on it, so the two can never disagree.
+Whenever `eval` cannot compute a result that is faithful to Javascript's semantics,
+it throws `notStatic`, and the expression is residualized instead.
+}
+bool isStatic(Expression e, Env env) = tryEval(e, env) != [];
 
 
-// all other expressions are not static
-default bool isStatic(Expression _, Env _) = false;
-
-
-@synopsis{Evaluate an expression (assuming `isStatic` holds)}
-Value eval((Expression)`<Expression e>.toString()`, Env env) = expr([Expression]"\'<txt>\'") 
-    when code(Tree t) := eval(e, env),
-        str txt := escape("<t>");
-
-str escape(str s) = (s | replaceAll(it, a, b) | <str a, str b>  <- m )
-    when lrel[str, str] m := [<"\\", "\\\\">, <"\n", "\\n">, <"\'", "\\\'">, <"\t", "\\t">];
-
-
-Value eval((Expression)`<Id x>.src`, Env env) = expr([Expression]toObj(t.src))
-    when code(Tree t) := eval((Expression)`<Id x>`, env);
-
-Value eval((Expression)`<Expression e>.length`, Env env) = expr(fromVal(size([ e | Expression e <- es ])))
-    when expr((Expression)`[<{Expression ","}* es>]`) := eval(e, env);
+@synopsis{Evaluate an expression, throws `notStatic` if it is not static}
 
 Value eval((Expression)`<Id x>`, Env env) = env["<x>"]
     when "<x>" in env;
 
 Value eval(e:(Expression)`<Literal _>`, Env _) = expr(e);
 
-Value eval(e:(Expression)`[<{Expression ","}* es>]`, Env env)
-    = expr(fromVal([toVal(v.expr) | Value v <- vs]))
-    when list[Value] vs := [ eval(e, env) | Expression e <- es ];
-
 Value eval((Expression)`(<Expression e>)`, Env env) = eval(e, env);
 
-Value eval((Expression)`+<Expression e>`, Env env) = expr(fromVal(n))
-    when int n := toVal(eval(e, env).expr);
+Value eval(e:(Expression)`[<{Expression ","}* es>]`, Env env)
+    = expr((Expression)`[<{Expression ","}* args>]`)
+    when {Expression ","}* args := makeArgs([ evalExpr(x, env) | Expression x <- es ]);
 
-Value eval((Expression)`-<Expression e>`, Env env) = expr(fromVal(-n))
-    when int n := toVal(eval(e, env).expr);
-
-Value eval((Expression)`<Expression lhs> + <Expression rhs>`, Env env) = expr(fromVal(a + b))
-    when int a := toVal(eval(lhs, env).expr),
-        int b := toVal(eval(rhs, env).expr);
-
-Value eval((Expression)`<Expression lhs> + <Expression rhs>`, Env env) = expr(fromVal(a + b))
-    when str a := toVal(eval(lhs, env).expr),
-        str b := toVal(eval(rhs, env).expr);
-
-
-Value eval((Expression)`<Expression lhs> - <Expression rhs>`, Env env) = expr(fromVal(a - b))
-    when int a := toVal(eval(lhs, env).expr),
-        int b := toVal(eval(rhs, env).expr);
-
-Value eval((Expression)`<Expression lhs> * <Expression rhs>`, Env env) = expr(fromVal(a * b))
-    when int a := toVal(eval(lhs, env).expr),
-        int b := toVal(eval(rhs, env).expr);
-
-Value eval((Expression)`<Expression lhs> / <Expression rhs>`, Env env) = expr(fromVal(a / b))
-    when int a := toVal(eval(lhs, env).expr),
-        int b := toVal(eval(rhs, env).expr);
-
-Value eval((Expression)`<Expression lhs> % <Expression rhs>`, Env env) = expr(fromVal(a % b))
-    when int a := toVal(eval(lhs, env).expr),
-        int b := toVal(eval(rhs, env).expr);
-
-Value eval((Expression)`!<Expression e>`, Env env) = expr(fromVal(!b))
-    when bool b := toVal(eval(e, env).expr);
-
-Value eval((Expression)`<Expression lhs> && <Expression rhs>`, Env env) = expr(fromVal(a && b))
-    when bool a := toVal(eval(lhs, env).expr),
-        bool b := toVal(eval(rhs, env).expr);
-
-Value eval((Expression)`<Expression lhs> || <Expression rhs>`, Env env) = expr(fromVal(a || b))
-    when bool a := toVal(eval(lhs, env).expr),
-        bool b := toVal(eval(rhs, env).expr);
-
-Value eval((Expression)`<Expression cond> ? <Expression then> : <Expression els>`, Env env) {
-    Value v = eval(cond, env);
-    if (truthy(v.expr)) {
-        return eval(then, env);
+Value eval(e:(Expression)`<Expression obj>.toString()`, Env env) {
+    switch (eval(obj, env)) {
+        case code(Tree t): return expr(fromVal("<t>"));
+        case expr(Expression v): return expr(fromVal(toStr(toVal(v), e)));
     }
-    return eval(els, env);
+    throw notStatic(e);
 }
 
-Value eval((Expression)`<Expression lhs> == <Expression rhs>`, Env env) = expr(fromVal(a == b))
-    when value a := toVal(eval(lhs, env).expr),
-        value b := toVal(eval(rhs, env).expr);
+Value eval((Expression)`<Id x>.src`, Env env) = expr([Expression]toObj(t.src))
+    when code(Tree t) := eval((Expression)`<Id x>`, env);
 
-Value eval((Expression)`<Expression lhs> != <Expression rhs>`, Env env) = expr(fromVal(a != b))
-    when value a := toVal(eval(lhs, env).expr),
-        value b := toVal(eval(rhs, env).expr);
+Value eval(e:(Expression)`<Expression obj>.length`, Env env) {
+    Expression v = evalExpr(obj, env);
+    if ((Expression)`[<{Expression ","}* es>]` := v) {
+        return expr(fromVal(size([ x | Expression x <- es ])));
+    }
+    if (str s := toVal(v), bmp(s)) {
+        return expr(fromVal(size(s)));
+    }
+    throw notStatic(e);
+}
 
-Value eval((Expression)`<Expression lhs> === <Expression rhs>`, Env env) = expr(fromVal(a == b))
-    when value a := toVal(eval(lhs, env).expr),
-        value b := toVal(eval(rhs, env).expr);
+Value eval(e:(Expression)`<Expression arr>[<Expression idx>]`, Env env) {
+    if ((Expression)`[<{Expression ","}* es>]` := evalExpr(arr, env), int i := val(idx, env)) {
+        list[Expression] elts = [ x | Expression x <- es ];
+        if (i >= 0, i < size(elts)) {
+            return expr(elts[i]);
+        }
+    }
+    throw notStatic(e);
+}
 
-Value eval((Expression)`<Expression lhs> !== <Expression rhs>`, Env env) = expr(fromVal(a != b))
-    when value a := toVal(eval(lhs, env).expr),
-        value b := toVal(eval(rhs, env).expr);
+Value eval(e:(Expression)`+<Expression arg>`, Env env)
+    = expr(fromVal(toNumber(val(arg, env), e)));
 
-Value eval((Expression)`<Expression lhs> \<= <Expression rhs>`, Env env) = expr(fromVal(a <= b))
-    when int a := toVal(eval(lhs, env).expr),
-        int b := toVal(eval(rhs, env).expr);
+Value eval(e:(Expression)`-<Expression arg>`, Env env) {
+    int n = toNumber(val(arg, env), e);
+    if (n == 0) { // -0 is not representable
+        throw notStatic(e);
+    }
+    return expr(fromVal(-n));
+}
 
-Value eval((Expression)`<Expression lhs> \< <Expression rhs>`, Env env) = expr(fromVal(a < b))
-    when int a := toVal(eval(lhs, env).expr),
-        int b := toVal(eval(rhs, env).expr);
+Value eval((Expression)`!<Expression arg>`, Env env)
+    = expr(fromVal(falsy(val(arg, env))));
 
-Value eval((Expression)`<Expression lhs> \>= <Expression rhs>`, Env env) = expr(fromVal(a >= b))
-    when int a := toVal(eval(lhs, env).expr),
-        int b := toVal(eval(rhs, env).expr);
+Value eval(e:(Expression)`<Expression lhs> + <Expression rhs>`, Env env) {
+    value a = val(lhs, env);
+    value b = val(rhs, env);
+    if (str _ := a || str _ := b) {
+        return expr(fromVal(toStr(a, e) + toStr(b, e)));
+    }
+    return expr(fromVal(safe(toNumber(a, e) + toNumber(b, e), e)));
+}
 
-Value eval((Expression)`<Expression lhs> \> <Expression rhs>`, Env env) = expr(fromVal(a > b))
-    when int a := toVal(eval(lhs, env).expr),
-        int b := toVal(eval(rhs, env).expr);
+Value eval(e:(Expression)`<Expression lhs> - <Expression rhs>`, Env env)
+    = expr(fromVal(safe(toNumber(val(lhs, env), e) - toNumber(val(rhs, env), e), e)));
 
+Value eval(e:(Expression)`<Expression lhs> * <Expression rhs>`, Env env) {
+    int a = toNumber(val(lhs, env), e);
+    int b = toNumber(val(rhs, env), e);
+    if (a * b == 0, a < 0 || b < 0) { // -0
+        throw notStatic(e);
+    }
+    return expr(fromVal(safe(a * b, e)));
+}
 
-// the contract is: eval *must* eval if isStatic returns true;
-// and eval should only be called if isStatic holds.
-default Value eval(Expression e, Env env) {
-    throw "expected `<e>` to be static, but could not evaluate (env was: <env>)";
+Value eval(e:(Expression)`<Expression lhs> / <Expression rhs>`, Env env) {
+    int a = toNumber(val(lhs, env), e);
+    int b = toNumber(val(rhs, env), e);
+    // only exact integer division; no Infinity, NaN, -0 or fractions
+    if (b == 0 || rem(a, b) != 0 || (a == 0 && b < 0)) {
+        throw notStatic(e);
+    }
+    return expr(fromVal((a - rem(a, b)) / b));
+}
+
+Value eval(e:(Expression)`<Expression lhs> % <Expression rhs>`, Env env) {
+    int a = toNumber(val(lhs, env), e);
+    int b = toNumber(val(rhs, env), e);
+    if (b == 0 || (a < 0 && rem(a, b) == 0)) { // NaN or -0
+        throw notStatic(e);
+    }
+    return expr(fromVal(rem(a, b)));
+}
+
+// && and || short-circuit, and return one of their operands (like in JS)
+Value eval((Expression)`<Expression lhs> && <Expression rhs>`, Env env) {
+    Expression a = evalExpr(lhs, env);
+    return falsy(toVal(a)) ? expr(a) : eval(rhs, env);
+}
+
+Value eval((Expression)`<Expression lhs> || <Expression rhs>`, Env env) {
+    Expression a = evalExpr(lhs, env);
+    return falsy(toVal(a)) ? eval(rhs, env) : expr(a);
+}
+
+// the ternary is static if the condition is, and the branch that is selected
+Value eval((Expression)`<Expression cond> ? <Expression then> : <Expression els>`, Env env)
+    = falsy(val(cond, env)) ? eval(els, env) : eval(then, env);
+
+Value eval(e:(Expression)`<Expression lhs> == <Expression rhs>`, Env env)
+    = expr(fromVal(looseEq(val(lhs, env), val(rhs, env), e)));
+
+Value eval(e:(Expression)`<Expression lhs> != <Expression rhs>`, Env env)
+    = expr(fromVal(!looseEq(val(lhs, env), val(rhs, env), e)));
+
+Value eval(e:(Expression)`<Expression lhs> === <Expression rhs>`, Env env)
+    = expr(fromVal(strictEq(val(lhs, env), val(rhs, env), e)));
+
+Value eval(e:(Expression)`<Expression lhs> !== <Expression rhs>`, Env env)
+    = expr(fromVal(!strictEq(val(lhs, env), val(rhs, env), e)));
+
+Value eval(e:(Expression)`<Expression lhs> \<= <Expression rhs>`, Env env)
+    = expr(fromVal(compare(val(lhs, env), val(rhs, env), e) <= 0));
+
+Value eval(e:(Expression)`<Expression lhs> \< <Expression rhs>`, Env env)
+    = expr(fromVal(compare(val(lhs, env), val(rhs, env), e) < 0));
+
+Value eval(e:(Expression)`<Expression lhs> \>= <Expression rhs>`, Env env)
+    = expr(fromVal(compare(val(lhs, env), val(rhs, env), e) >= 0));
+
+Value eval(e:(Expression)`<Expression lhs> \> <Expression rhs>`, Env env)
+    = expr(fromVal(compare(val(lhs, env), val(rhs, env), e) > 0));
+
+// all other expressions are not static
+default Value eval(Expression e, Env _) {
+    throw notStatic(e);
 }
 
 
+@synopsis{Evaluate to a (literal) Javascript expression; code values are not JS values}
+Expression evalExpr(Expression e, Env env) {
+    if (expr(Expression v) := eval(e, env)) {
+        return v;
+    }
+    throw notStatic(e);
+}
+
+@synopsis{Evaluate to the Rascal representation of a Javascript value}
+value val(Expression e, Env env) = toVal(evalExpr(e, env));
 
 
-@synopsis{Convert a Javascript literal expression to a Rascal value}
+@synopsis{Javascript values that have no direct Rascal counterpart}
+@description{
+Next to these, booleans are represented as `bool`, integers as `int`, and strings as `str`.
+Non-integer numbers are kept opaque, since we do not want to compute with doubles.
+Arrays, objects and regular expressions are opaque too, since they have reference semantics.
+}
+data JSValue
+    = jsnull()
+    | jsundefined()
+    | jsnum(str src)
+    | jsobject()
+    ;
+
+@synopsis{Convert a Javascript literal expression (the result of `eval`) to a Rascal value}
 value toVal((Expression)`<Boolean b>`) = (Boolean)`true` := b;
-value toVal((Expression)`<Numeric n>`) = toInt("<n>"); // for now only ints
-value toVal((Expression)`<String s>`) = "<"<s>"[1..-1]>"; // todo: unescaping
-value toVal((Expression)`[<{Expression ","}* es>]`)
-    = [ toVal(e) | Expression e <- es ];
+value toVal((Expression)`<Numeric n>`) = toNum("<n>");
+value toVal((Expression)`<String s>`) = unescape("<s>"[1..-1]);
+value toVal((Expression)`null`) = jsnull();
+value toVal((Expression)`undefined`) = jsundefined();
+value toVal((Expression)`-<Expression e>`) = -n
+    when int n := toVal(e);
+value toVal(Expression e) = jsobject()
+    when e is array || e is objectDefinition || (e is literal && e.literal is regexp);
+
+default value toVal(Expression e) {
+    throw "internal error: `<e>` is not a value";
+}
+
+value toNum(str s) {
+    if (/^0[xX]<hex:[0-9a-fA-F]+>$/ := s) {
+        return toInt(hex, 16);
+    }
+    if (/^[0-9]+$/ := s) {
+        return toInt(s);
+    }
+    return jsnum(s);
+}
 
 @synopsis{Convert a Rascal value to a Javascript literal expression}
 Expression fromVal(int x) = [Expression]"<x>";
-Expression fromVal(str x) = [Expression]"\'<x>\'"; // todo: escaping
+Expression fromVal(str x) = [Expression]"\'<escape(x)>\'";
 Expression fromVal(bool x) = [Expression]"<x>";
-Expression fromVal(list[value] vs) = (Expression)`[<{Expression ","}* args>]`
-    when list[Expression] es := [ fromVal(v) | value v <- vs ],
-        {Expression ","}* args := makeArgs(es);
 
-
-@synopsis{Javascript's truthiness}
-bool truthy(Expression e) = !falsy(e);
 
 @synopsis{Javascript's falsiness}
-bool falsy((Expression)`false`) = true;
-bool falsy((Expression)`0`) = true;
-bool falsy((Expression)`-0`) = true;
-bool falsy((Expression)`""`) = true;
-bool falsy((Expression)`''`) = true;
-bool falsy((Expression)`null`) = true;
-bool falsy((Expression)`undefined`) = true;
-bool falsy((Expression)`NaN`) = true;
-default bool falsy(Expression _) = false;
+bool falsy(false) = true;
+bool falsy(0) = true;
+bool falsy("") = true;
+bool falsy(jsnull()) = true;
+bool falsy(jsundefined()) = true;
+bool falsy(jsnum(str s)) = toReal(s) == 0.0;
+default bool falsy(value _) = false;
 
+@synopsis{Javascript's truthiness of a (literal) expression}
+bool truthy(Expression e) = !falsy(toVal(e));
 
-//bool falsy((Expression)`0n`) = true;
+@synopsis{Javascript's ToNumber, restricted to integers}
+int toNumber(value v, Expression e) {
+    switch (v) {
+        case int n: return n;
+        case bool b: return b ? 1 : 0;
+        case jsnull(): return 0;
+    }
+    throw notStatic(e);
+}
+
+@synopsis{Javascript's ToString, restricted to primitives (except non-integer numbers)}
+str toStr(value v, Expression e) {
+    switch (v) {
+        case str s: return s;
+        case int n: return "<n>";
+        case bool b: return "<b>";
+        case jsnull(): return "null";
+        case jsundefined(): return "undefined";
+    }
+    throw notStatic(e);
+}
+
+@synopsis{Javascript's typeof, restricted to the primitives we can compare}
+str jsType(value v, Expression e) {
+    switch (v) {
+        case str _: return "string";
+        case int _: return "number";
+        case bool _: return "boolean";
+        case jsnull(): return "null";
+        case jsundefined(): return "undefined";
+    }
+    throw notStatic(e);
+}
+
+@synopsis{Javascript's ===}
+bool strictEq(value a, value b, Expression e)
+    = jsType(a, e) == jsType(b, e) && a == b;
+
+@synopsis{Javascript's ==, except where it involves type coercion}
+bool looseEq(value a, value b, Expression e) {
+    str ta = jsType(a, e);
+    str tb = jsType(b, e);
+    if (ta == tb) {
+        return a == b;
+    }
+    set[str] nullish = {"null", "undefined"};
+    if (ta in nullish || tb in nullish) {
+        return ta in nullish && tb in nullish;
+    }
+    throw notStatic(e);
+}
+
+@synopsis{Javascript's relational comparison, for numbers and strings (without coercion)}
+int compare(int a, int b, Expression _) = a < b ? -1 : (a == b ? 0 : 1);
+int compare(str a, str b, Expression _) = a < b ? -1 : (a == b ? 0 : 1)
+    when bmp(a), bmp(b);
+default int compare(value _, value _, Expression e) {
+    throw notStatic(e);
+}
+
+@synopsis{Integer remainder with the sign of the dividend (like JS's %)}
+int rem(int a, int b) {
+    int r = abs(a) % abs(b);
+    return a < 0 ? -r : r;
+}
+
+int abs(int n) = n < 0 ? -n : n;
+
+@synopsis{Integers beyond 2^53 are not exactly representable as JS numbers}
+int safe(int n, Expression e) {
+    if (n > 9007199254740991 || n < -9007199254740991) {
+        throw notStatic(e);
+    }
+    return n;
+}
+
+@synopsis{Is a string within the Basic Multilingual Plane (so length and order agree with UTF-16)}
+bool bmp(str s) = all(int c <- chars(s), c < 0x10000);
+
+@synopsis{Escape a string for use in a single-quoted JS string literal}
+str escape(str s) = (s | replaceAll(it, a, b) | <str a, str b>  <- m )
+    when lrel[str, str] m := [<"\\", "\\\\">, <"\n", "\\n">, <"\r", "\\r">, <"\'", "\\\'">, <"\t", "\\t">];
+
+@synopsis{Unescape the contents of a JS string literal}
+@description{
+Returns `jsobject()` (i.e., an opaque, but truthy, value) for escapes we do not support
+(legacy octal escapes, `\u{...}`, and lone surrogates).
+}
+value unescape(str s) {
+    str r = "";
+    int i = 0;
+    int n = size(s);
+    while (i < n) {
+        str c = s[i];
+        if (c != "\\" || i + 1 == n) {
+            r += c;
+            i += 1;
+            continue;
+        }
+        str d = s[i + 1];
+        i += 2;
+        switch (d) {
+            case "n": r += "\n";
+            case "t": r += "\t";
+            case "r": r += "\r";
+            case "b": r += stringChar(8);
+            case "f": r += stringChar(12);
+            case "v": r += stringChar(11);
+            case "\n": ; // line continuation
+            case "\r": {
+                if (i < n, s[i] == "\n") {
+                    i += 1;
+                }
+            }
+            case "x": {
+                r += stringChar(toInt(substring(s, i, i + 2), 16));
+                i += 2;
+            }
+            case "u": {
+                if (i + 4 > n || /^[0-9a-fA-F]{4}$/ !:= substring(s, i, i + 4)) {
+                    return jsobject();
+                }
+                int cp = toInt(substring(s, i, i + 4), 16);
+                if (cp >= 0xD800, cp <= 0xDFFF) {
+                    return jsobject();
+                }
+                r += stringChar(cp);
+                i += 4;
+            }
+            case "0": {
+                if (i < n, /[0-9]/ := s[i]) {
+                    return jsobject();
+                }
+                r += stringChar(0);
+            }
+            default: {
+                if (/[1-9]/ := d) {
+                    return jsobject();
+                }
+                r += d;
+            }
+        }
+    }
+    return r;
+}
