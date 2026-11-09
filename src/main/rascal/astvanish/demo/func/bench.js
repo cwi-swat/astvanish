@@ -30,14 +30,17 @@ function doRun(interp, compiled, ast, args) {
 }
 
 import { run } from './func-interp.js';
-import { run as run2 } from './factorial-run.js';
+import { run as run2 } from './benchmark-run.js';
 
 import { readFile } from 'fs/promises';
-const ast = JSON.parse(await readFile('factorial.json', 'utf8'));
+const ast = JSON.parse(await readFile('benchmark.json', 'utf8'));
+
+// workload size for bench(n); can be overridden on the command line: node bench.js <n>
+const N = parseInt(process.argv[2] ?? '10');
 
 console.log('input, interpreted, compiled');
 for (var i = 0; i < 1000; i++) {
-    const timings = doRun(run, run2, ast, [2, 500]);
+    const timings = doRun(run, run2, ast, [N]);
     //console.log('"' + i + '", "' + timings.interpreted.user + '", "' + timings.compiled.user + '"');
     console.log(i + ', ' + timings.interpreted.user + ', ' + timings.compiled.user);
 }
