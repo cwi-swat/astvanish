@@ -20,6 +20,8 @@ void dumpJava(bool logging=false) {
     pevalJavaTo(func + "Func.javaa", "run", ("prog": code(prog.top)), [prog.src], logging=logging);
     start[Prog] exprs = parse(#start[Prog], func + "exprs.func");
     pevalJavaTo(func + "Func.javaa", "run", ("prog": code(exprs.top)), [exprs.src], logging=logging);
+    start[Prog] benchmark = parse(#start[Prog], func + "benchmark.func");
+    pevalJavaTo(func + "Func.javaa", "run", ("prog": code(benchmark.top)), [benchmark.src], logging=logging);
 
     
     loc regexp = |project://astvanish/src/main/java/astvanish/demo/regexp/|;
@@ -39,6 +41,7 @@ void dumpJavaInterp() {
     loc func = |project://astvanish/src/main/java/astvanish/demo/func/|;
     writeFile(func + "factorial.json", pt2json(aProg()));
     writeFile(func + "exprs.json", pt2json(parse(#start[Prog], func + "exprs.func")));
+    writeFile(func + "benchmark.json", pt2json(parse(#start[Prog], func + "benchmark.func")));
     writeFile(func + "FuncInterp.java",
         toEvalJava(func + "Func.javaa", (
             "run": ("prog": sort("Prog")),

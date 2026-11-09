@@ -1,0 +1,971 @@
+{
+  "_tag": "prog",
+  "_src": {"offset": 454, "length": 986},
+  "defs": [
+    {
+      "_tag": "def",
+      "_src": {"offset": 454, "length": 61},
+      "name": "fib",
+      "params": [
+        "n"
+      ],
+      "body": {
+        "_tag": "ifThenElse",
+        "_src": {"offset": 467, "length": 47},
+        "cond": {
+          "_tag": "lt",
+          "_src": {"offset": 470, "length": 5},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 470, "length": 1},
+            "name": "n"
+          },
+          "rhs": {
+            "_tag": "number",
+            "_src": {"offset": 474, "length": 1},
+            "number": "2"
+          }
+        },
+        "then": {
+          "_tag": "var",
+          "_src": {"offset": 481, "length": 1},
+          "name": "n"
+        },
+        "els": {
+          "_tag": "add",
+          "_src": {"offset": 488, "length": 23},
+          "lhs": {
+            "_tag": "call",
+            "_src": {"offset": 488, "length": 10},
+            "name": "fib",
+            "actuals": [
+              {
+                "_tag": "sub",
+                "_src": {"offset": 492, "length": 5},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 492, "length": 1},
+                  "name": "n"
+                },
+                "rhs": {
+                  "_tag": "number",
+                  "_src": {"offset": 496, "length": 1},
+                  "number": "1"
+                }
+              }
+            ]
+          },
+          "rhs": {
+            "_tag": "call",
+            "_src": {"offset": 501, "length": 10},
+            "name": "fib",
+            "actuals": [
+              {
+                "_tag": "sub",
+                "_src": {"offset": 505, "length": 5},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 505, "length": 1},
+                  "name": "n"
+                },
+                "rhs": {
+                  "_tag": "number",
+                  "_src": {"offset": 509, "length": 1},
+                  "number": "2"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "_tag": "def",
+      "_src": {"offset": 517, "length": 108},
+      "name": "tak",
+      "params": [
+        "x",
+        "y",
+        "z"
+      ],
+      "body": {
+        "_tag": "ifThenElse",
+        "_src": {"offset": 538, "length": 86},
+        "cond": {
+          "_tag": "not",
+          "_src": {"offset": 541, "length": 8},
+          "arg": {
+            "_tag": "paren",
+            "_src": {"offset": 542, "length": 7},
+            "arg": {
+              "_tag": "lt",
+              "_src": {"offset": 543, "length": 5},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 543, "length": 1},
+                "name": "y"
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 547, "length": 1},
+                "name": "x"
+              }
+            }
+          }
+        },
+        "then": {
+          "_tag": "var",
+          "_src": {"offset": 555, "length": 1},
+          "name": "z"
+        },
+        "els": {
+          "_tag": "call",
+          "_src": {"offset": 564, "length": 57},
+          "name": "tak",
+          "actuals": [
+            {
+              "_tag": "call",
+              "_src": {"offset": 568, "length": 16},
+              "name": "tak",
+              "actuals": [
+                {
+                  "_tag": "sub",
+                  "_src": {"offset": 572, "length": 5},
+                  "lhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 572, "length": 1},
+                    "name": "x"
+                  },
+                  "rhs": {
+                    "_tag": "number",
+                    "_src": {"offset": 576, "length": 1},
+                    "number": "1"
+                  }
+                },
+                {
+                  "_tag": "var",
+                  "_src": {"offset": 579, "length": 1},
+                  "name": "y"
+                },
+                {
+                  "_tag": "var",
+                  "_src": {"offset": 582, "length": 1},
+                  "name": "z"
+                }
+              ]
+            },
+            {
+              "_tag": "call",
+              "_src": {"offset": 586, "length": 16},
+              "name": "tak",
+              "actuals": [
+                {
+                  "_tag": "sub",
+                  "_src": {"offset": 590, "length": 5},
+                  "lhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 590, "length": 1},
+                    "name": "y"
+                  },
+                  "rhs": {
+                    "_tag": "number",
+                    "_src": {"offset": 594, "length": 1},
+                    "number": "1"
+                  }
+                },
+                {
+                  "_tag": "var",
+                  "_src": {"offset": 597, "length": 1},
+                  "name": "z"
+                },
+                {
+                  "_tag": "var",
+                  "_src": {"offset": 600, "length": 1},
+                  "name": "x"
+                }
+              ]
+            },
+            {
+              "_tag": "call",
+              "_src": {"offset": 604, "length": 16},
+              "name": "tak",
+              "actuals": [
+                {
+                  "_tag": "sub",
+                  "_src": {"offset": 608, "length": 5},
+                  "lhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 608, "length": 1},
+                    "name": "z"
+                  },
+                  "rhs": {
+                    "_tag": "number",
+                    "_src": {"offset": 612, "length": 1},
+                    "number": "1"
+                  }
+                },
+                {
+                  "_tag": "var",
+                  "_src": {"offset": 615, "length": 1},
+                  "name": "x"
+                },
+                {
+                  "_tag": "var",
+                  "_src": {"offset": 618, "length": 1},
+                  "name": "y"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_tag": "def",
+      "_src": {"offset": 627, "length": 142},
+      "name": "collatz",
+      "params": [
+        "n",
+        "steps"
+      ],
+      "body": {
+        "_tag": "ifThenElse",
+        "_src": {"offset": 653, "length": 115},
+        "cond": {
+          "_tag": "eq",
+          "_src": {"offset": 656, "length": 6},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 656, "length": 1},
+            "name": "n"
+          },
+          "rhs": {
+            "_tag": "number",
+            "_src": {"offset": 661, "length": 1},
+            "number": "1"
+          }
+        },
+        "then": {
+          "_tag": "var",
+          "_src": {"offset": 668, "length": 5},
+          "name": "steps"
+        },
+        "els": {
+          "_tag": "ifThenElse",
+          "_src": {"offset": 681, "length": 84},
+          "cond": {
+            "_tag": "eq",
+            "_src": {"offset": 684, "length": 10},
+            "lhs": {
+              "_tag": "mod",
+              "_src": {"offset": 684, "length": 5},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 684, "length": 1},
+                "name": "n"
+              },
+              "rhs": {
+                "_tag": "number",
+                "_src": {"offset": 688, "length": 1},
+                "number": "2"
+              }
+            },
+            "rhs": {
+              "_tag": "number",
+              "_src": {"offset": 693, "length": 1},
+              "number": "0"
+            }
+          },
+          "then": {
+            "_tag": "call",
+            "_src": {"offset": 700, "length": 25},
+            "name": "collatz",
+            "actuals": [
+              {
+                "_tag": "div",
+                "_src": {"offset": 708, "length": 5},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 708, "length": 1},
+                  "name": "n"
+                },
+                "rhs": {
+                  "_tag": "number",
+                  "_src": {"offset": 712, "length": 1},
+                  "number": "2"
+                }
+              },
+              {
+                "_tag": "add",
+                "_src": {"offset": 715, "length": 9},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 715, "length": 5},
+                  "name": "steps"
+                },
+                "rhs": {
+                  "_tag": "number",
+                  "_src": {"offset": 723, "length": 1},
+                  "number": "1"
+                }
+              }
+            ]
+          },
+          "els": {
+            "_tag": "call",
+            "_src": {"offset": 733, "length": 29},
+            "name": "collatz",
+            "actuals": [
+              {
+                "_tag": "add",
+                "_src": {"offset": 741, "length": 9},
+                "lhs": {
+                  "_tag": "mul",
+                  "_src": {"offset": 741, "length": 5},
+                  "lhs": {
+                    "_tag": "number",
+                    "_src": {"offset": 741, "length": 1},
+                    "number": "3"
+                  },
+                  "rhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 745, "length": 1},
+                    "name": "n"
+                  }
+                },
+                "rhs": {
+                  "_tag": "number",
+                  "_src": {"offset": 749, "length": 1},
+                  "number": "1"
+                }
+              },
+              {
+                "_tag": "add",
+                "_src": {"offset": 752, "length": 9},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 752, "length": 5},
+                  "name": "steps"
+                },
+                "rhs": {
+                  "_tag": "number",
+                  "_src": {"offset": 760, "length": 1},
+                  "number": "1"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "_tag": "def",
+      "_src": {"offset": 771, "length": 69},
+      "name": "noDivisor",
+      "params": [
+        "n",
+        "d"
+      ],
+      "body": {
+        "_tag": "or",
+        "_src": {"offset": 793, "length": 46},
+        "lhs": {
+          "_tag": "gt",
+          "_src": {"offset": 793, "length": 9},
+          "lhs": {
+            "_tag": "mul",
+            "_src": {"offset": 793, "length": 5},
+            "lhs": {
+              "_tag": "var",
+              "_src": {"offset": 793, "length": 1},
+              "name": "d"
+            },
+            "rhs": {
+              "_tag": "var",
+              "_src": {"offset": 797, "length": 1},
+              "name": "d"
+            }
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 801, "length": 1},
+            "name": "n"
+          }
+        },
+        "rhs": {
+          "_tag": "and",
+          "_src": {"offset": 806, "length": 33},
+          "lhs": {
+            "_tag": "neq",
+            "_src": {"offset": 806, "length": 10},
+            "lhs": {
+              "_tag": "mod",
+              "_src": {"offset": 806, "length": 5},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 806, "length": 1},
+                "name": "n"
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 810, "length": 1},
+                "name": "d"
+              }
+            },
+            "rhs": {
+              "_tag": "number",
+              "_src": {"offset": 815, "length": 1},
+              "number": "0"
+            }
+          },
+          "rhs": {
+            "_tag": "call",
+            "_src": {"offset": 820, "length": 19},
+            "name": "noDivisor",
+            "actuals": [
+              {
+                "_tag": "var",
+                "_src": {"offset": 830, "length": 1},
+                "name": "n"
+              },
+              {
+                "_tag": "add",
+                "_src": {"offset": 833, "length": 5},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 833, "length": 1},
+                  "name": "d"
+                },
+                "rhs": {
+                  "_tag": "number",
+                  "_src": {"offset": 837, "length": 1},
+                  "number": "1"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "_tag": "def",
+      "_src": {"offset": 842, "length": 43},
+      "name": "isPrime",
+      "params": [
+        "n"
+      ],
+      "body": {
+        "_tag": "and",
+        "_src": {"offset": 859, "length": 25},
+        "lhs": {
+          "_tag": "geq",
+          "_src": {"offset": 859, "length": 6},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 859, "length": 1},
+            "name": "n"
+          },
+          "rhs": {
+            "_tag": "number",
+            "_src": {"offset": 864, "length": 1},
+            "number": "2"
+          }
+        },
+        "rhs": {
+          "_tag": "call",
+          "_src": {"offset": 869, "length": 15},
+          "name": "noDivisor",
+          "actuals": [
+            {
+              "_tag": "var",
+              "_src": {"offset": 879, "length": 1},
+              "name": "n"
+            },
+            {
+              "_tag": "number",
+              "_src": {"offset": 882, "length": 1},
+              "number": "2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_tag": "def",
+      "_src": {"offset": 887, "length": 146},
+      "name": "sumCollatz",
+      "params": [
+        "lo",
+        "hi"
+      ],
+      "body": {
+        "_tag": "ifThenElse",
+        "_src": {"offset": 914, "length": 118},
+        "cond": {
+          "_tag": "geq",
+          "_src": {"offset": 917, "length": 8},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 917, "length": 2},
+            "name": "lo"
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 923, "length": 2},
+            "name": "hi"
+          }
+        },
+        "then": {
+          "_tag": "call",
+          "_src": {"offset": 931, "length": 14},
+          "name": "collatz",
+          "actuals": [
+            {
+              "_tag": "var",
+              "_src": {"offset": 939, "length": 2},
+              "name": "lo"
+            },
+            {
+              "_tag": "number",
+              "_src": {"offset": 943, "length": 1},
+              "number": "0"
+            }
+          ]
+        },
+        "els": {
+          "_tag": "let",
+          "_src": {"offset": 953, "length": 76},
+          "name": "mid",
+          "exp": {
+            "_tag": "div",
+            "_src": {"offset": 963, "length": 13},
+            "lhs": {
+              "_tag": "paren",
+              "_src": {"offset": 963, "length": 9},
+              "arg": {
+                "_tag": "add",
+                "_src": {"offset": 964, "length": 7},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 964, "length": 2},
+                  "name": "lo"
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 969, "length": 2},
+                  "name": "hi"
+                }
+              }
+            },
+            "rhs": {
+              "_tag": "number",
+              "_src": {"offset": 975, "length": 1},
+              "number": "2"
+            }
+          },
+          "body": {
+            "_tag": "add",
+            "_src": {"offset": 980, "length": 45},
+            "lhs": {
+              "_tag": "call",
+              "_src": {"offset": 980, "length": 19},
+              "name": "sumCollatz",
+              "actuals": [
+                {
+                  "_tag": "var",
+                  "_src": {"offset": 991, "length": 2},
+                  "name": "lo"
+                },
+                {
+                  "_tag": "var",
+                  "_src": {"offset": 995, "length": 3},
+                  "name": "mid"
+                }
+              ]
+            },
+            "rhs": {
+              "_tag": "call",
+              "_src": {"offset": 1002, "length": 23},
+              "name": "sumCollatz",
+              "actuals": [
+                {
+                  "_tag": "add",
+                  "_src": {"offset": 1013, "length": 7},
+                  "lhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 1013, "length": 3},
+                    "name": "mid"
+                  },
+                  "rhs": {
+                    "_tag": "number",
+                    "_src": {"offset": 1019, "length": 1},
+                    "number": "1"
+                  }
+                },
+                {
+                  "_tag": "var",
+                  "_src": {"offset": 1022, "length": 2},
+                  "name": "hi"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "_tag": "def",
+      "_src": {"offset": 1035, "length": 176},
+      "name": "countPrimes",
+      "params": [
+        "lo",
+        "hi"
+      ],
+      "body": {
+        "_tag": "ifThenElse",
+        "_src": {"offset": 1063, "length": 147},
+        "cond": {
+          "_tag": "geq",
+          "_src": {"offset": 1066, "length": 8},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 1066, "length": 2},
+            "name": "lo"
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 1072, "length": 2},
+            "name": "hi"
+          }
+        },
+        "then": {
+          "_tag": "paren",
+          "_src": {"offset": 1080, "length": 41},
+          "arg": {
+            "_tag": "ifThenElse",
+            "_src": {"offset": 1081, "length": 39},
+            "cond": {
+              "_tag": "eq",
+              "_src": {"offset": 1084, "length": 19},
+              "lhs": {
+                "_tag": "call",
+                "_src": {"offset": 1084, "length": 11},
+                "name": "isPrime",
+                "actuals": [
+                  {
+                    "_tag": "var",
+                    "_src": {"offset": 1092, "length": 2},
+                    "name": "lo"
+                  }
+                ]
+              },
+              "rhs": {
+                "_tag": "true",
+                "_src": {"offset": 1099, "length": 4}
+              }
+            },
+            "then": {
+              "_tag": "number",
+              "_src": {"offset": 1109, "length": 1},
+              "number": "1"
+            },
+            "els": {
+              "_tag": "number",
+              "_src": {"offset": 1116, "length": 1},
+              "number": "0"
+            }
+          }
+        },
+        "els": {
+          "_tag": "let",
+          "_src": {"offset": 1129, "length": 78},
+          "name": "mid",
+          "exp": {
+            "_tag": "div",
+            "_src": {"offset": 1139, "length": 13},
+            "lhs": {
+              "_tag": "paren",
+              "_src": {"offset": 1139, "length": 9},
+              "arg": {
+                "_tag": "add",
+                "_src": {"offset": 1140, "length": 7},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 1140, "length": 2},
+                  "name": "lo"
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 1145, "length": 2},
+                  "name": "hi"
+                }
+              }
+            },
+            "rhs": {
+              "_tag": "number",
+              "_src": {"offset": 1151, "length": 1},
+              "number": "2"
+            }
+          },
+          "body": {
+            "_tag": "add",
+            "_src": {"offset": 1156, "length": 47},
+            "lhs": {
+              "_tag": "call",
+              "_src": {"offset": 1156, "length": 20},
+              "name": "countPrimes",
+              "actuals": [
+                {
+                  "_tag": "var",
+                  "_src": {"offset": 1168, "length": 2},
+                  "name": "lo"
+                },
+                {
+                  "_tag": "var",
+                  "_src": {"offset": 1172, "length": 3},
+                  "name": "mid"
+                }
+              ]
+            },
+            "rhs": {
+              "_tag": "call",
+              "_src": {"offset": 1179, "length": 24},
+              "name": "countPrimes",
+              "actuals": [
+                {
+                  "_tag": "add",
+                  "_src": {"offset": 1191, "length": 7},
+                  "lhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 1191, "length": 3},
+                    "name": "mid"
+                  },
+                  "rhs": {
+                    "_tag": "number",
+                    "_src": {"offset": 1197, "length": 1},
+                    "number": "1"
+                  }
+                },
+                {
+                  "_tag": "var",
+                  "_src": {"offset": 1200, "length": 2},
+                  "name": "hi"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "_tag": "def",
+      "_src": {"offset": 1213, "length": 41},
+      "name": "abs",
+      "params": [
+        "x"
+      ],
+      "body": {
+        "_tag": "ifThenElse",
+        "_src": {"offset": 1226, "length": 27},
+        "cond": {
+          "_tag": "leq",
+          "_src": {"offset": 1229, "length": 6},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 1229, "length": 1},
+            "name": "x"
+          },
+          "rhs": {
+            "_tag": "number",
+            "_src": {"offset": 1234, "length": 1},
+            "number": "0"
+          }
+        },
+        "then": {
+          "_tag": "neg",
+          "_src": {"offset": 1241, "length": 2},
+          "arg": {
+            "_tag": "var",
+            "_src": {"offset": 1242, "length": 1},
+            "name": "x"
+          }
+        },
+        "els": {
+          "_tag": "var",
+          "_src": {"offset": 1249, "length": 1},
+          "name": "x"
+        }
+      }
+    },
+    {
+      "_tag": "def",
+      "_src": {"offset": 1256, "length": 177},
+      "name": "bench",
+      "params": [
+        "n"
+      ],
+      "body": {
+        "_tag": "let",
+        "_src": {"offset": 1273, "length": 159},
+        "name": "calls",
+        "exp": {
+          "_tag": "add",
+          "_src": {"offset": 1285, "length": 33},
+          "lhs": {
+            "_tag": "call",
+            "_src": {"offset": 1285, "length": 6},
+            "name": "fib",
+            "actuals": [
+              {
+                "_tag": "var",
+                "_src": {"offset": 1289, "length": 1},
+                "name": "n"
+              }
+            ]
+          },
+          "rhs": {
+            "_tag": "call",
+            "_src": {"offset": 1294, "length": 24},
+            "name": "tak",
+            "actuals": [
+              {
+                "_tag": "div",
+                "_src": {"offset": 1298, "length": 5},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 1298, "length": 1},
+                  "name": "n"
+                },
+                "rhs": {
+                  "_tag": "number",
+                  "_src": {"offset": 1302, "length": 1},
+                  "number": "2"
+                }
+              },
+              {
+                "_tag": "div",
+                "_src": {"offset": 1305, "length": 5},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 1305, "length": 1},
+                  "name": "n"
+                },
+                "rhs": {
+                  "_tag": "number",
+                  "_src": {"offset": 1309, "length": 1},
+                  "number": "3"
+                }
+              },
+              {
+                "_tag": "div",
+                "_src": {"offset": 1312, "length": 5},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 1312, "length": 1},
+                  "name": "n"
+                },
+                "rhs": {
+                  "_tag": "number",
+                  "_src": {"offset": 1316, "length": 1},
+                  "number": "6"
+                }
+              }
+            ]
+          }
+        },
+        "body": {
+          "_tag": "let",
+          "_src": {"offset": 1324, "length": 102},
+          "name": "arith",
+          "exp": {
+            "_tag": "sub",
+            "_src": {"offset": 1336, "length": 48},
+            "lhs": {
+              "_tag": "call",
+              "_src": {"offset": 1336, "length": 22},
+              "name": "sumCollatz",
+              "actuals": [
+                {
+                  "_tag": "number",
+                  "_src": {"offset": 1347, "length": 1},
+                  "number": "1"
+                },
+                {
+                  "_tag": "mul",
+                  "_src": {"offset": 1350, "length": 7},
+                  "lhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 1350, "length": 1},
+                    "name": "n"
+                  },
+                  "rhs": {
+                    "_tag": "number",
+                    "_src": {"offset": 1354, "length": 3},
+                    "number": "100"
+                  }
+                }
+              ]
+            },
+            "rhs": {
+              "_tag": "call",
+              "_src": {"offset": 1361, "length": 23},
+              "name": "countPrimes",
+              "actuals": [
+                {
+                  "_tag": "number",
+                  "_src": {"offset": 1373, "length": 1},
+                  "number": "1"
+                },
+                {
+                  "_tag": "mul",
+                  "_src": {"offset": 1376, "length": 7},
+                  "lhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 1376, "length": 1},
+                    "name": "n"
+                  },
+                  "rhs": {
+                    "_tag": "number",
+                    "_src": {"offset": 1380, "length": 3},
+                    "number": "100"
+                  }
+                }
+              ]
+            }
+          },
+          "body": {
+            "_tag": "mod",
+            "_src": {"offset": 1392, "length": 28},
+            "lhs": {
+              "_tag": "call",
+              "_src": {"offset": 1392, "length": 18},
+              "name": "abs",
+              "actuals": [
+                {
+                  "_tag": "sub",
+                  "_src": {"offset": 1396, "length": 13},
+                  "lhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 1396, "length": 5},
+                    "name": "arith"
+                  },
+                  "rhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 1404, "length": 5},
+                    "name": "calls"
+                  }
+                }
+              ]
+            },
+            "rhs": {
+              "_tag": "number",
+              "_src": {"offset": 1413, "length": 7},
+              "number": "1000000"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "main": "bench"
+}

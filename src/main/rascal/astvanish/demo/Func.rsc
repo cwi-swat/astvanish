@@ -57,6 +57,9 @@ start[Prog] aProg()
 start[Prog] anExprsProg() 
     = parse(#start[Prog], |project://astvanish/src/main/rascal/astvanish/demo/func/exprs.func|);
 
+start[Prog] aBenchmarkProg() 
+    = parse(#start[Prog], |project://astvanish/src/main/rascal/astvanish/demo/func/benchmark.func|);
+
 
 
 
@@ -65,6 +68,8 @@ void dumpFuncEval(loc root = |project://astvanish/src/main/rascal/astvanish/demo
     writeFile(root + "factorial.json", pt2json(aProg()));
     peval(anExprsProg());
     writeFile(root + "exprs.json", pt2json(anExprsProg()));
+    peval(aBenchmarkProg());
+    writeFile(root + "benchmark.json", pt2json(aBenchmarkProg()));
     writeFile(root + "func-interp.js", 
         toEval(root + "func.js.av", (
             "run": ("$prog": sort("Prog")),
