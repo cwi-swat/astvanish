@@ -1,0 +1,18 @@
+//@@ src/main/rascal/astvanish/demo/func/func.js.av: run($prog)
+
+def fact(n) = if n <= 1 then 1 else n * fact(n - 1) fi;
+
+def gcd(a, b) = if b == 0 then a else gcd(b, a % b) fi;
+
+def test(x, y) =
+  let s = x + y in
+  let d = (x - y) / 2 in
+    if !(s >= 10) || x != y && -x < -3 + 0 then s * d - x % 3 else gcd(x, y) + fact(5) fi
+  end
+  end;
+
+def bools(a) = if a > 0 == true && false != (a < 0) then 1 else 0 fi;
+
+def main(x, y) = test(x, y) * 1000 + bools(x) * 100 + gcd(x * 7, y * 7) - (x / y) - (-x % y);
+
+main
