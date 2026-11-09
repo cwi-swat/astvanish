@@ -14,14 +14,40 @@ start syntax Prog = prog: Def* defs Id main;
 syntax Def = def: "def" Id name "(" {Id ","}* params ")" "=" Expr body ";";
 
 syntax Expr
-    = var: Id name
+    = var: Id name \ Reserved
     | number: Num number
-    | left mul: Expr lhs "*" Expr rhs
-    > left sub: Expr lhs "-" Expr rhs
-    > non-assoc gt: Expr lhs "\>" Expr rhs
-    | ifThenElse: "if" Expr cond "then" Expr then "else" Expr els "fi"
+    | \true: "true"
+    | \false: "false"
     | call: Id name "(" {Expr ","}* actuals ")"
+    | ifThenElse: "if" Expr cond "then" Expr then "else" Expr els "fi"
+    | let: "let" Id name "=" Expr exp "in" Expr body "end"
+    | bracket paren: "(" Expr arg ")"
+    > neg: "-" Expr arg
+    | not: "!" Expr arg
+    > left (
+          mul: Expr lhs "*" Expr rhs
+        | div: Expr lhs "/" Expr rhs
+        | \mod: Expr lhs "%" Expr rhs
+    )
+    > left (
+          add: Expr lhs "+" Expr rhs
+        | sub: Expr lhs "-" Expr rhs
+    )
+    > non-assoc (
+          lt: Expr lhs "\<" Expr rhs
+        | leq: Expr lhs "\<=" Expr rhs
+        | gt: Expr lhs "\>" Expr rhs
+        | geq: Expr lhs "\>=" Expr rhs
+    )
+    > non-assoc (
+          eq: Expr lhs "==" Expr rhs
+        | neq: Expr lhs "!=" Expr rhs
+    )
+    > left and: Expr lhs "&&" Expr rhs
+    > left or: Expr lhs "||" Expr rhs
     ;
+
+keyword Reserved = "def" | "if" | "then" | "else" | "fi" | "let" | "in" | "end" | "true" | "false";
 
 lexical Num = [0-9]+;
 

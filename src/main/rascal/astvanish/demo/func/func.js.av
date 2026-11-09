@@ -22,11 +22,30 @@ function eve($exp, env) {
     match ($exp) {
         case _@Id : return env[$1.toString()];
         case _@Num : return parseInt($1.toString());
+        case true : return true;
+        case false : return false;
+        case ( _ ) : return eve($1, env);
+        case - _ : return -eve($1, env);
+        case ! _ : return !eve($1, env);
         case _ * _ : return eve($1, env) * eve($2, env);
+        case _ / _ : return Math.trunc(eve($1, env) / eve($2, env));
+        case _ % _ : return eve($1, env) % eve($2, env);
+        case _ + _ : return eve($1, env) + eve($2, env);
         case _ - _ : return eve($1, env) - eve($2, env);
+        case _ < _ : return eve($1, env) < eve($2, env);
+        case _ <= _ : return eve($1, env) <= eve($2, env);
         case _ > _ : return eve($1, env) > eve($2, env);
+        case _ >= _ : return eve($1, env) >= eve($2, env);
+        case _ == _ : return eve($1, env) === eve($2, env);
+        case _ != _ : return eve($1, env) !== eve($2, env);
+        case _ && _ : return eve($1, env) && eve($2, env);
+        case _ || _ : return eve($1, env) || eve($2, env);
         case if _ then _ else _ fi :
             return eve($1, env) ? eve($2, env) : eve($3, env);
+        case let _ = _ in _ end :
+            var letEnv = Object.assign({}, env);
+            letEnv[$1.toString()] = eve($2, env);
+            return eve($3, letEnv);
         case _ ( _ ) : 
             var args = [];
             for (const a of $2) 

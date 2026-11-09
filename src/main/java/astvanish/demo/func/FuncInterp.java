@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.function.Function;
 
 public class FuncInterp {
@@ -35,20 +36,81 @@ public class FuncInterp {
             case "number": {
                 return Integer.parseInt(exp.get("number").toString());
             }
+            case "true": {
+                return true;
+            }
+            case "false": {
+                return false;
+            }
+            case "paren": {
+                return eve(((Map<String,Object>) exp.get("arg")), env);
+            }
+            case "neg": {
+                int arg = (int) eve(((Map<String,Object>) exp.get("arg")), env);
+                return -arg;
+            }
+            case "not": {
+                boolean arg = (boolean) eve(((Map<String,Object>) exp.get("arg")), env);
+                return !arg;
+            }
             case "mul": {
                 int lhs = (int) eve(((Map<String,Object>) exp.get("lhs")), env);
                 int rhs = (int) eve(((Map<String,Object>) exp.get("rhs")), env);
                 return lhs * rhs;
+            }
+            case "div": {
+                int lhs = (int) eve(((Map<String,Object>) exp.get("lhs")), env);
+                int rhs = (int) eve(((Map<String,Object>) exp.get("rhs")), env);
+                return lhs / rhs;
+            }
+            case "mod": {
+                int lhs = (int) eve(((Map<String,Object>) exp.get("lhs")), env);
+                int rhs = (int) eve(((Map<String,Object>) exp.get("rhs")), env);
+                return lhs % rhs;
+            }
+            case "add": {
+                int lhs = (int) eve(((Map<String,Object>) exp.get("lhs")), env);
+                int rhs = (int) eve(((Map<String,Object>) exp.get("rhs")), env);
+                return lhs + rhs;
             }
             case "sub": {
                 int lhs = (int) eve(((Map<String,Object>) exp.get("lhs")), env);
                 int rhs = (int) eve(((Map<String,Object>) exp.get("rhs")), env);
                 return lhs - rhs;
             }
+            case "lt": {
+                int lhs = (int) eve(((Map<String,Object>) exp.get("lhs")), env);
+                int rhs = (int) eve(((Map<String,Object>) exp.get("rhs")), env);
+                return lhs < rhs;
+            }
+            case "leq": {
+                int lhs = (int) eve(((Map<String,Object>) exp.get("lhs")), env);
+                int rhs = (int) eve(((Map<String,Object>) exp.get("rhs")), env);
+                return lhs <= rhs;
+            }
             case "gt": {
                 int lhs = (int) eve(((Map<String,Object>) exp.get("lhs")), env);
                 int rhs = (int) eve(((Map<String,Object>) exp.get("rhs")), env);
                 return lhs > rhs;
+            }
+            case "geq": {
+                int lhs = (int) eve(((Map<String,Object>) exp.get("lhs")), env);
+                int rhs = (int) eve(((Map<String,Object>) exp.get("rhs")), env);
+                return lhs >= rhs;
+            }
+            case "eq": {
+                return Objects.equals(eve(((Map<String,Object>) exp.get("lhs")), env), eve(((Map<String,Object>) exp.get("rhs")), env));
+            }
+            case "neq": {
+                return !Objects.equals(eve(((Map<String,Object>) exp.get("lhs")), env), eve(((Map<String,Object>) exp.get("rhs")), env));
+            }
+            case "and": {
+                boolean lhs = (boolean) eve(((Map<String,Object>) exp.get("lhs")), env);
+                return lhs && (boolean) eve(((Map<String,Object>) exp.get("rhs")), env);
+            }
+            case "or": {
+                boolean lhs = (boolean) eve(((Map<String,Object>) exp.get("lhs")), env);
+                return lhs || (boolean) eve(((Map<String,Object>) exp.get("rhs")), env);
             }
             case "ifThenElse": {
                 boolean cond = (boolean) eve(((Map<String,Object>) exp.get("cond")), env);
@@ -56,6 +118,11 @@ public class FuncInterp {
                     return eve(((Map<String,Object>) exp.get("then")), env);
                 }
                 return eve(((Map<String,Object>) exp.get("els")), env);
+            }
+            case "let": {
+                Map<String,Object> letEnv = new HashMap<String,Object>(env);
+                letEnv.put(exp.get("name").toString(), eve(((Map<String,Object>) exp.get("exp")), env));
+                return eve(((Map<String,Object>) exp.get("body")), letEnv);
             }
             case "call": {
                 List<Object> args = new ArrayList<Object>();
