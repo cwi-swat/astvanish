@@ -1,0 +1,551 @@
+{
+  "_tag": "prog",
+  "_src": {"offset": 62, "length": 449},
+  "defs": [
+    {
+      "_tag": "def",
+      "_src": {"offset": 62, "length": 55},
+      "name": "fact",
+      "params": [
+        "n"
+      ],
+      "body": {
+        "_tag": "ifThenElse",
+        "_src": {"offset": 76, "length": 40},
+        "cond": {
+          "_tag": "leq",
+          "_src": {"offset": 79, "length": 6},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 79, "length": 1},
+            "name": "n"
+          },
+          "rhs": {
+            "_tag": "number",
+            "_src": {"offset": 84, "length": 1},
+            "number": "1"
+          }
+        },
+        "then": {
+          "_tag": "number",
+          "_src": {"offset": 91, "length": 1},
+          "number": "1"
+        },
+        "els": {
+          "_tag": "mul",
+          "_src": {"offset": 98, "length": 15},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 98, "length": 1},
+            "name": "n"
+          },
+          "rhs": {
+            "_tag": "call",
+            "_src": {"offset": 102, "length": 11},
+            "name": "fact",
+            "actuals": [
+              {
+                "_tag": "sub",
+                "_src": {"offset": 107, "length": 5},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 107, "length": 1},
+                  "name": "n"
+                },
+                "rhs": {
+                  "_tag": "number",
+                  "_src": {"offset": 111, "length": 1},
+                  "number": "1"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "_tag": "def",
+      "_src": {"offset": 119, "length": 55},
+      "name": "gcd",
+      "params": [
+        "a",
+        "b"
+      ],
+      "body": {
+        "_tag": "ifThenElse",
+        "_src": {"offset": 135, "length": 38},
+        "cond": {
+          "_tag": "eq",
+          "_src": {"offset": 138, "length": 6},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 138, "length": 1},
+            "name": "b"
+          },
+          "rhs": {
+            "_tag": "number",
+            "_src": {"offset": 143, "length": 1},
+            "number": "0"
+          }
+        },
+        "then": {
+          "_tag": "var",
+          "_src": {"offset": 150, "length": 1},
+          "name": "a"
+        },
+        "els": {
+          "_tag": "call",
+          "_src": {"offset": 157, "length": 13},
+          "name": "gcd",
+          "actuals": [
+            {
+              "_tag": "var",
+              "_src": {"offset": 161, "length": 1},
+              "name": "b"
+            },
+            {
+              "_tag": "mod",
+              "_src": {"offset": 164, "length": 5},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 164, "length": 1},
+                "name": "a"
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 168, "length": 1},
+                "name": "b"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_tag": "def",
+      "_src": {"offset": 176, "length": 163},
+      "name": "test",
+      "params": [
+        "x",
+        "y"
+      ],
+      "body": {
+        "_tag": "let",
+        "_src": {"offset": 195, "length": 143},
+        "name": "s",
+        "exp": {
+          "_tag": "add",
+          "_src": {"offset": 203, "length": 5},
+          "lhs": {
+            "_tag": "var",
+            "_src": {"offset": 203, "length": 1},
+            "name": "x"
+          },
+          "rhs": {
+            "_tag": "var",
+            "_src": {"offset": 207, "length": 1},
+            "name": "y"
+          }
+        },
+        "body": {
+          "_tag": "let",
+          "_src": {"offset": 214, "length": 118},
+          "name": "d",
+          "exp": {
+            "_tag": "div",
+            "_src": {"offset": 222, "length": 11},
+            "lhs": {
+              "_tag": "paren",
+              "_src": {"offset": 222, "length": 7},
+              "arg": {
+                "_tag": "sub",
+                "_src": {"offset": 223, "length": 5},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 223, "length": 1},
+                  "name": "x"
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 227, "length": 1},
+                  "name": "y"
+                }
+              }
+            },
+            "rhs": {
+              "_tag": "number",
+              "_src": {"offset": 232, "length": 1},
+              "number": "2"
+            }
+          },
+          "body": {
+            "_tag": "ifThenElse",
+            "_src": {"offset": 241, "length": 85},
+            "cond": {
+              "_tag": "or",
+              "_src": {"offset": 244, "length": 35},
+              "lhs": {
+                "_tag": "not",
+                "_src": {"offset": 244, "length": 10},
+                "arg": {
+                  "_tag": "paren",
+                  "_src": {"offset": 245, "length": 9},
+                  "arg": {
+                    "_tag": "geq",
+                    "_src": {"offset": 246, "length": 7},
+                    "lhs": {
+                      "_tag": "var",
+                      "_src": {"offset": 246, "length": 1},
+                      "name": "s"
+                    },
+                    "rhs": {
+                      "_tag": "number",
+                      "_src": {"offset": 251, "length": 2},
+                      "number": "10"
+                    }
+                  }
+                }
+              },
+              "rhs": {
+                "_tag": "and",
+                "_src": {"offset": 258, "length": 21},
+                "lhs": {
+                  "_tag": "neq",
+                  "_src": {"offset": 258, "length": 6},
+                  "lhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 258, "length": 1},
+                    "name": "x"
+                  },
+                  "rhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 263, "length": 1},
+                    "name": "y"
+                  }
+                },
+                "rhs": {
+                  "_tag": "lt",
+                  "_src": {"offset": 268, "length": 11},
+                  "lhs": {
+                    "_tag": "neg",
+                    "_src": {"offset": 268, "length": 2},
+                    "arg": {
+                      "_tag": "var",
+                      "_src": {"offset": 269, "length": 1},
+                      "name": "x"
+                    }
+                  },
+                  "rhs": {
+                    "_tag": "add",
+                    "_src": {"offset": 273, "length": 6},
+                    "lhs": {
+                      "_tag": "neg",
+                      "_src": {"offset": 273, "length": 2},
+                      "arg": {
+                        "_tag": "number",
+                        "_src": {"offset": 274, "length": 1},
+                        "number": "3"
+                      }
+                    },
+                    "rhs": {
+                      "_tag": "number",
+                      "_src": {"offset": 278, "length": 1},
+                      "number": "0"
+                    }
+                  }
+                }
+              }
+            },
+            "then": {
+              "_tag": "sub",
+              "_src": {"offset": 285, "length": 13},
+              "lhs": {
+                "_tag": "mul",
+                "_src": {"offset": 285, "length": 5},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 285, "length": 1},
+                  "name": "s"
+                },
+                "rhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 289, "length": 1},
+                  "name": "d"
+                }
+              },
+              "rhs": {
+                "_tag": "mod",
+                "_src": {"offset": 293, "length": 5},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 293, "length": 1},
+                  "name": "x"
+                },
+                "rhs": {
+                  "_tag": "number",
+                  "_src": {"offset": 297, "length": 1},
+                  "number": "3"
+                }
+              }
+            },
+            "els": {
+              "_tag": "add",
+              "_src": {"offset": 304, "length": 19},
+              "lhs": {
+                "_tag": "call",
+                "_src": {"offset": 304, "length": 9},
+                "name": "gcd",
+                "actuals": [
+                  {
+                    "_tag": "var",
+                    "_src": {"offset": 308, "length": 1},
+                    "name": "x"
+                  },
+                  {
+                    "_tag": "var",
+                    "_src": {"offset": 311, "length": 1},
+                    "name": "y"
+                  }
+                ]
+              },
+              "rhs": {
+                "_tag": "call",
+                "_src": {"offset": 316, "length": 7},
+                "name": "fact",
+                "actuals": [
+                  {
+                    "_tag": "number",
+                    "_src": {"offset": 321, "length": 1},
+                    "number": "5"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "_tag": "def",
+      "_src": {"offset": 341, "length": 69},
+      "name": "bools",
+      "params": [
+        "a"
+      ],
+      "body": {
+        "_tag": "ifThenElse",
+        "_src": {"offset": 356, "length": 53},
+        "cond": {
+          "_tag": "and",
+          "_src": {"offset": 359, "length": 33},
+          "lhs": {
+            "_tag": "eq",
+            "_src": {"offset": 359, "length": 13},
+            "lhs": {
+              "_tag": "gt",
+              "_src": {"offset": 359, "length": 5},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 359, "length": 1},
+                "name": "a"
+              },
+              "rhs": {
+                "_tag": "number",
+                "_src": {"offset": 363, "length": 1},
+                "number": "0"
+              }
+            },
+            "rhs": {
+              "_tag": "true",
+              "_src": {"offset": 368, "length": 4}
+            }
+          },
+          "rhs": {
+            "_tag": "neq",
+            "_src": {"offset": 376, "length": 16},
+            "lhs": {
+              "_tag": "false",
+              "_src": {"offset": 376, "length": 5}
+            },
+            "rhs": {
+              "_tag": "paren",
+              "_src": {"offset": 385, "length": 7},
+              "arg": {
+                "_tag": "lt",
+                "_src": {"offset": 386, "length": 5},
+                "lhs": {
+                  "_tag": "var",
+                  "_src": {"offset": 386, "length": 1},
+                  "name": "a"
+                },
+                "rhs": {
+                  "_tag": "number",
+                  "_src": {"offset": 390, "length": 1},
+                  "number": "0"
+                }
+              }
+            }
+          }
+        },
+        "then": {
+          "_tag": "number",
+          "_src": {"offset": 398, "length": 1},
+          "number": "1"
+        },
+        "els": {
+          "_tag": "number",
+          "_src": {"offset": 405, "length": 1},
+          "number": "0"
+        }
+      }
+    },
+    {
+      "_tag": "def",
+      "_src": {"offset": 412, "length": 93},
+      "name": "main",
+      "params": [
+        "x",
+        "y"
+      ],
+      "body": {
+        "_tag": "sub",
+        "_src": {"offset": 429, "length": 75},
+        "lhs": {
+          "_tag": "sub",
+          "_src": {"offset": 429, "length": 64},
+          "lhs": {
+            "_tag": "add",
+            "_src": {"offset": 429, "length": 54},
+            "lhs": {
+              "_tag": "add",
+              "_src": {"offset": 429, "length": 34},
+              "lhs": {
+                "_tag": "mul",
+                "_src": {"offset": 429, "length": 17},
+                "lhs": {
+                  "_tag": "call",
+                  "_src": {"offset": 429, "length": 10},
+                  "name": "test",
+                  "actuals": [
+                    {
+                      "_tag": "var",
+                      "_src": {"offset": 434, "length": 1},
+                      "name": "x"
+                    },
+                    {
+                      "_tag": "var",
+                      "_src": {"offset": 437, "length": 1},
+                      "name": "y"
+                    }
+                  ]
+                },
+                "rhs": {
+                  "_tag": "number",
+                  "_src": {"offset": 442, "length": 4},
+                  "number": "1000"
+                }
+              },
+              "rhs": {
+                "_tag": "mul",
+                "_src": {"offset": 449, "length": 14},
+                "lhs": {
+                  "_tag": "call",
+                  "_src": {"offset": 449, "length": 8},
+                  "name": "bools",
+                  "actuals": [
+                    {
+                      "_tag": "var",
+                      "_src": {"offset": 455, "length": 1},
+                      "name": "x"
+                    }
+                  ]
+                },
+                "rhs": {
+                  "_tag": "number",
+                  "_src": {"offset": 460, "length": 3},
+                  "number": "100"
+                }
+              }
+            },
+            "rhs": {
+              "_tag": "call",
+              "_src": {"offset": 466, "length": 17},
+              "name": "gcd",
+              "actuals": [
+                {
+                  "_tag": "mul",
+                  "_src": {"offset": 470, "length": 5},
+                  "lhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 470, "length": 1},
+                    "name": "x"
+                  },
+                  "rhs": {
+                    "_tag": "number",
+                    "_src": {"offset": 474, "length": 1},
+                    "number": "7"
+                  }
+                },
+                {
+                  "_tag": "mul",
+                  "_src": {"offset": 477, "length": 5},
+                  "lhs": {
+                    "_tag": "var",
+                    "_src": {"offset": 477, "length": 1},
+                    "name": "y"
+                  },
+                  "rhs": {
+                    "_tag": "number",
+                    "_src": {"offset": 481, "length": 1},
+                    "number": "7"
+                  }
+                }
+              ]
+            }
+          },
+          "rhs": {
+            "_tag": "paren",
+            "_src": {"offset": 486, "length": 7},
+            "arg": {
+              "_tag": "div",
+              "_src": {"offset": 487, "length": 5},
+              "lhs": {
+                "_tag": "var",
+                "_src": {"offset": 487, "length": 1},
+                "name": "x"
+              },
+              "rhs": {
+                "_tag": "var",
+                "_src": {"offset": 491, "length": 1},
+                "name": "y"
+              }
+            }
+          }
+        },
+        "rhs": {
+          "_tag": "paren",
+          "_src": {"offset": 496, "length": 8},
+          "arg": {
+            "_tag": "mod",
+            "_src": {"offset": 497, "length": 6},
+            "lhs": {
+              "_tag": "neg",
+              "_src": {"offset": 497, "length": 2},
+              "arg": {
+                "_tag": "var",
+                "_src": {"offset": 498, "length": 1},
+                "name": "x"
+              }
+            },
+            "rhs": {
+              "_tag": "var",
+              "_src": {"offset": 502, "length": 1},
+              "name": "y"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "main": "main"
+}

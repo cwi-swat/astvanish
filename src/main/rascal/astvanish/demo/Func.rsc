@@ -54,12 +54,17 @@ lexical Num = [0-9]+;
 start[Prog] aProg() 
     = parse(#start[Prog], |project://astvanish/src/main/rascal/astvanish/demo/func/factorial.func|);
 
+start[Prog] anExprsProg() 
+    = parse(#start[Prog], |project://astvanish/src/main/rascal/astvanish/demo/func/exprs.func|);
+
 
 
 
 void dumpFuncEval(loc root = |project://astvanish/src/main/rascal/astvanish/demo/func/|) {
     peval(aProg());
     writeFile(root + "factorial.json", pt2json(aProg()));
+    peval(anExprsProg());
+    writeFile(root + "exprs.json", pt2json(anExprsProg()));
     writeFile(root + "func-interp.js", 
         toEval(root + "func.js.av", (
             "run": ("$prog": sort("Prog")),
